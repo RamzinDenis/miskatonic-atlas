@@ -1,0 +1,22 @@
+{
+  "slug": "providence",
+  "name": "Providence",
+  "type": "city",
+  "summary": "The Rhode Island city where the investigation begins and ends: home of Professor George Gammell Angell, whose posthumous papers frame the story, and of the sculptor Henry Anthony Wilcox, whose fevered dreams first hint at R'lyeh.",
+  "description": "Providence anchors the entire narrative. Professor George Gammell Angell, Emeritus of Semitic languages at Brown University, dies here in the winter of 1926–27, and the locked box of notes he leaves behind — the manuscript headed \"CTHULHU CULT\" — sets his grand-nephew on the trail.\n\nIt is also the home of Henry Anthony Wilcox, a young sculptor at the Rhode Island School of Design living alone at the Fleur-de-Lys Building on Thomas Street. During the earthquake tremors of March 1925 his dreams of a damp Cyclopean city produced the bas-relief that first connected the artist's nightmares to the cult chant recorded decades earlier. The narrator later returns to Providence to question Wilcox in those same rooms.",
+  "realWorld": "Providence, Rhode Island, USA",
+  "appearsIn": ["the-call-of-cthulhu"],
+  "connectedTo": ["rlyeh"],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "My knowledge of the thing began in the winter of 1926-27 with the death of my grand-uncle, George Gammell Angell, Professor Emeritus of Semitic languages in Brown University, Providence, Rhode Island.",
+      "context": "Chapter 1, The Horror in Clay"
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "His card bore the name of Henry Anthony Wilcox, and my uncle had recognized him as the youngest son of an excellent family slightly known to him, who had latterly been studying sculpture at the Rhode Island School of Design and living alone at the Fleur-de-Lys Building near that institution.",
+      "context": "Chapter 1, The Horror in Clay"
+    }
+  ]
+}

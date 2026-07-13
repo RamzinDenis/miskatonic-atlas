@@ -1,0 +1,22 @@
+{
+  "slug": "sydney",
+  "name": "Sydney",
+  "type": "city",
+  "summary": "The Australian port where the freighter Vigilant towed the derelict yacht Alert with its lone survivor, and where the narrator later inspected the vessel and questioned the vice-admiralty court.",
+  "description": "Sydney enters the story through a clipping from the Sydney Bulletin of April 18, 1925: the Morrison Co.'s freighter Vigilant arrived in Darling Harbour towing the battered, heavily armed steam yacht Alert of Dunedin, found adrift with one dead man and one half-delirious survivor aboard — Gustaf Johansen, second mate of the lost schooner Emma. The stone idol he clutched baffled the authorities at Sydney University, the Royal Society, and the College Street museum alike.\n\nRetracing his grand-uncle's inquiry, the narrator later travelled to Sydney himself, talked fruitlessly with seamen and members of the vice-admiralty court, and saw the Alert — sold into commercial use — lying at Circular Quay in Sydney Cove.",
+  "realWorld": "Sydney, New South Wales, Australia",
+  "appearsIn": ["the-call-of-cthulhu"],
+  "connectedTo": ["rlyeh"],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "The Morrison Co.'s freighter Vigilant, bound from Valparaiso, arrived this morning at its wharf in Darling Harbour, having in tow the battled and disabled but heavily armed steam yacht Alert of Dunedin, N. Z., which was sighted April 12th in S. Latitude 34° 21', W. Longitude 152° 17', with one living and one dead man aboard.",
+      "context": "Chapter 3, The Madness from the Sea — Sydney Bulletin, April 18, 1925"
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "After that I went to Sydney and talked profitlessly with seamen and members of the vice-admiralty court. I saw the Alert, now sold and in commercial use, at Circular Quay in Sydney Cove, but gained nothing from its non-committal bulk.",
+      "context": "Chapter 3, The Madness from the Sea"
+    }
+  ]
+}
