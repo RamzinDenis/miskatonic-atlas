@@ -25,3 +25,102 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
+
+/* --- World map widget ------------------------------------------------- */
+
+.world-map .leaflet-container {
+  background: #0e0c08;
+  font: inherit;
+}
+
+/* The Lovecraft tint lives on the site, not in the PD scan itself. */
+.world-map .leaflet-image-layer {
+  filter: sepia(0.5) saturate(0.62) brightness(0.8) contrast(1.07);
+}
+
+.world-map-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 800; /* above map panes (≤700), below controls and panels */
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 80% 75% at 50% 45%,
+    transparent 55%,
+    rgba(8, 6, 2, 0.5) 100%
+  );
+}
+
+.world-map .leaflet-bar {
+  border-color: var(--line);
+}
+
+.world-map .leaflet-bar a {
+  background: var(--surface);
+  color: var(--foreground);
+  border-bottom-color: var(--line);
+}
+
+.world-map .leaflet-bar a:hover,
+.world-map .leaflet-bar a:focus {
+  background: var(--line);
+  color: var(--accent);
+}
+
+.world-map .leaflet-bar a.leaflet-disabled {
+  background: var(--surface);
+  color: var(--muted);
+  opacity: 0.5;
+}
+
+/* Location pins: a brass ring with a permanent small-caps label. */
+.atlas-pin-wrap {
+  background: none;
+  border: none;
+}
+
+.atlas-pin {
+  position: relative;
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+
+.atlas-pin-dot {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  background: rgba(19, 16, 9, 0.55);
+  box-shadow:
+    0 0 0 1px rgba(8, 6, 2, 0.8),
+    0 0 10px rgba(195, 158, 102, 0.55);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.atlas-pin:hover .atlas-pin-dot {
+  transform: scale(1.35);
+  box-shadow:
+    0 0 0 1px rgba(8, 6, 2, 0.8),
+    0 0 16px rgba(195, 158, 102, 0.85);
+}
+
+.atlas-pin-label {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--foreground);
+  text-shadow:
+    0 1px 3px rgba(8, 6, 2, 0.9),
+    0 0 8px rgba(8, 6, 2, 0.7);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atlas-pin-dot {
+    transition: none;
+  }
+}

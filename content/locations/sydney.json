@@ -2,6 +2,7 @@
   "slug": "sydney",
   "name": "Sydney",
   "type": "city",
+  "map": { "x": 1189, "y": 2066 },
   "summary": "The Australian port where the freighter Vigilant towed the derelict yacht Alert with its lone survivor, and where the narrator later inspected the vessel and questioned the vice-admiralty court.",
   "description": "Sydney enters the story through a clipping from the Sydney Bulletin of April 18, 1925: the Morrison Co.'s freighter Vigilant arrived in Darling Harbour towing the battered, heavily armed steam yacht Alert of Dunedin, found adrift with one dead man and one half-delirious survivor aboard — Gustaf Johansen, second mate of the lost schooner Emma. The stone idol he clutched baffled the authorities at Sydney University, the Royal Society, and the College Street museum alike.\n\nRetracing his grand-uncle's inquiry, the narrator later travelled to Sydney himself, talked fruitlessly with seamen and members of the vice-admiralty court, and saw the Alert — sold into commercial use — lying at Circular Quay in Sydney Cove.",
   "realWorld": "Sydney, New South Wales, Australia",

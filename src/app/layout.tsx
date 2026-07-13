@@ -41,7 +41,7 @@ export default function RootLayout({
             <span className="text-xs uppercase tracking-widest text-muted">MVP</span>
           </div>
         </header>
-        <main className="flex-1">{children}</main>
+        <main className="flex flex-1 flex-col">{children}</main>
         <footer className="border-t border-line">
           <div className="mx-auto w-full max-w-3xl px-6 py-6 text-sm text-muted">
             Based on stories by H. P. Lovecraft published through 1929 — public

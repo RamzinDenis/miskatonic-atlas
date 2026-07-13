@@ -2,6 +2,7 @@
   "slug": "rlyeh",
   "name": "R'lyeh",
   "type": "ruin",
+  "map": { "x": 1989, "y": 2232 },
   "summary": "The nightmare corpse-city risen from the Pacific, where dead Cthulhu lies dreaming in his house. Johansen's crew made landfall on it in April 1925 at S. Latitude 47° 9', W. Longitude 126° 43'.",
   "description": "R'lyeh is the sunken citadel of the Great Old Ones, built in eons behind history by the shapes that came down from the dark stars, and the prison-tomb of great Cthulhu. When the stars came right in the spring of 1925 the city rose from the Pacific floor, and its emergence broadcast the dreams that drove sensitive men across the world to madness.\n\nThe crew of the captured yacht Alert, under second mate Gustaf Johansen, sighted its monolith-crowned citadel and went ashore. Its geometry was wrong by every earthly standard — surfaces convex and concave at once, angles behaving like other angles — and when the sailors pried open the great carved door, what lay dreaming inside came out. The city sank again beneath them; of the whole crew only Johansen survived to write it down.",
   "appearsIn": ["the-call-of-cthulhu"],

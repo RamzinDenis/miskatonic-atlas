@@ -11,6 +11,7 @@ import {
   type Location,
   type Story,
 } from "@/shared/schemas";
+import type { MapLocation } from "@/widgets/world-map/geometry";
 
 /**
  * The only gateway to atlas content. Pages and widgets must never read
@@ -153,4 +154,22 @@ export function getLocations(): Location[] {
 
 export function getLocation(slug: string): Location | undefined {
   return loadContent().locations.find((l) => l.slug === slug);
+}
+
+/** Locations that have map coordinates, shaped for the WorldMap widget. */
+export function getMapLocations(): MapLocation[] {
+  return loadContent().locations.flatMap((location) =>
+    location.map
+      ? [
+          {
+            slug: location.slug,
+            name: location.name,
+            type: location.type,
+            summary: location.summary,
+            x: location.map.x,
+            y: location.map.y,
+          },
+        ]
+      : [],
+  );
 }

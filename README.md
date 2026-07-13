@@ -37,3 +37,7 @@ The code in this repository is MIT-licensed (see `LICENSE`). The story texts thi
 Later works (*At the Mountains of Madness*, *The Shadow over Innsmouth*, posthumous publications) are intentionally excluded.
 
 Source texts: [Project Gutenberg](https://www.gutenberg.org/).
+
+## Basemap
+
+The world map (`public/maps/world.jpg`) is Colton's *Map of the World on Mercator's Projection* (1852 pocket-map issue), scanned by Geographicus and released into the public domain via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:1852_Colton%27s_Map_of_the_World_on_Mercator%27s_Projection_(_Pocket_Map_)_-_Geographicus_-_World-colton-1852.jpg), downscaled to 4096 px. Location markers are stored as pixel coordinates of that image; the degree-grid calibration used to place them from coordinates given in the stories is documented in `src/widgets/world-map/geometry.ts`.

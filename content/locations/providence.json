@@ -2,6 +2,7 @@
   "slug": "providence",
   "name": "Providence",
   "type": "city",
+  "map": { "x": 2522, "y": 1270 },
   "summary": "The Rhode Island city where the investigation begins and ends: home of Professor George Gammell Angell, whose posthumous papers frame the story, and of the sculptor Henry Anthony Wilcox, whose fevered dreams first hint at R'lyeh.",
   "description": "Providence anchors the entire narrative. Professor George Gammell Angell, Emeritus of Semitic languages at Brown University, dies here in the winter of 1926–27, and the locked box of notes he leaves behind — the manuscript headed \"CTHULHU CULT\" — sets his grand-nephew on the trail.\n\nIt is also the home of Henry Anthony Wilcox, a young sculptor at the Rhode Island School of Design living alone at the Fleur-de-Lys Building on Thomas Street. During the earthquake tremors of March 1925 his dreams of a damp Cyclopean city produced the bas-relief that first connected the artist's nightmares to the cult chant recorded decades earlier. The narrator later returns to Providence to question Wilcox in those same rooms.",
   "realWorld": "Providence, Rhode Island, USA",
