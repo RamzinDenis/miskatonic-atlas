@@ -1,0 +1,46 @@
+{
+  "slug": "oslo",
+  "name": "Oslo",
+  "type": "city",
+  "map": {
+    "x": 3313,
+    "y": 990
+  },
+  "summary": "The Norwegian capital to which Gustaf Johansen retired with his wife after the Alert affair; the narrator landed at its trim wharves in the shadow of the Egeberg to seek the mate at his address in the Old Town.",
+  "description": "After the affair of the Alert, Johansen sold his cottage in Auckland and sailed with his wife to his old home in Oslo. Of his stirring experience he would tell his friends no more than he had told the admiralty officials, and all they could do was give the narrator his Oslo address; his long voyage back from the nightmare ended at the old house by the Egeberg.\n\nResolving to visit the mate, the narrator sailed for London, re-embarked at once for the Norwegian capital, and one autumn day landed at the trim wharves in the shadow of the Egeberg. Johansen's address, he discovered, lay in the Old Town of King Harold Haardrada, which kept alive the name of Oslo during all the centuries that the greater city masqueraded as \"Christiania.\" It was here, during a walk through a narrow lane near the Gothenburg dock, that a bundle of papers falling from an attic window knocked Johansen down.",
+  "realWorld": "Oslo, Norway",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [
+    "london",
+    "auckland",
+    "norway"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "sailed with his wife to his old home in Oslo. Of his stirring experience he would tell his friends no more than he had told the admiralty officials, and all they could do was to give me his Oslo address.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 90
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Shaken with such a mental revolution as I had never before known, I now resolved to visit Mate Johansen in Oslo. Sailing for London, I re-embarked at once for the Norwegian capital; and one autumn day landed at the trim wharves in the shadow of the Egeberg.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 92
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Johansen's address, I discovered, lay in the Old Town of King Harold Haardrada, which kept alive the name of Oslo during all the centuries that the greater city masqueraded as \"Christiania.\"",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 93
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "During a walk through a narrow lane near the Gothenburg dock, a bundle of papers falling from an attic window had knocked him down.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 94
+    }
+  ]
+}

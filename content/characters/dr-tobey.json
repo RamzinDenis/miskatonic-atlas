@@ -1,0 +1,33 @@
+{
+  "slug": "dr-tobey",
+  "name": "Dr. Tobey",
+  "role": "other",
+  "summary": "The Providence physician in charge of young Wilcox's strange fever of March–April 1925, at whose Thayer Street office Professor Angell called often for word of the delirium.",
+  "description": "Dr. Tobey was the physician in charge of Henry Wilcox's case during the obscure fever of 1925, with an office in Thayer Street at which Professor Angell, keeping close watch of the matter, called often.\n\nThe youth's febrile mind was dwelling on strange things, and the doctor shuddered now and then as he spoke of them. His repetitions of Wilcox's occasional frantic words convinced the professor that the object of the delirium was identical with the nameless monstrosity of the dream-sculpture, and he added that reference to this object was invariably a prelude to the young man's subsidence into lethargy.",
+  "locations": [
+    "providence"
+  ],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "calling often at the Thayer Street office of Dr. Tobey, whom he learned to be in charge",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 15
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "The youth's febrile mind, apparently, was dwelling on strange things; and the doctor shuddered now and then as he spoke of them.",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 15
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "He at no time fully described this object, but occasional frantic words, as repeated by Dr. Tobey, convinced the professor that it must be identical with the nameless monstrosity he had sought to depict in his dream-sculpture.",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 15
+    }
+  ]
+}

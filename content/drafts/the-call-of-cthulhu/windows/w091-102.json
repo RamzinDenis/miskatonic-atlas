@@ -1,0 +1,645 @@
+[
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "Went to Sydney and talked profitlessly with seamen and members of the vice-admiralty court.",
+      "Saw the Alert, now sold and in commercial use, at Circular Quay in Sydney Cove, but gained nothing from its non-committal bulk.",
+      "Studied the crouching image preserved in the Museum at Hyde Park long and well, noting the same utter mystery, terrible antiquity, and unearthly strangeness of material he had noted in Legrasse's smaller specimen.",
+      "Shaken by a mental revolution, resolved to visit Mate Johansen in Oslo.",
+      "Sailed for London, re-embarked at once for the Norwegian capital, and landed one autumn day at the trim wharves in the shadow of the Egeberg.",
+      "Made the brief trip to Johansen's address by taxicab and knocked at the door of a neat and ancient building with plastered front.",
+      "Feels a gnawing dark terror that will never leave him till he, too, is at rest, \"accidentally\" or otherwise.",
+      "Persuaded the widow to hand over Johansen's manuscript and began to read it on the London boat.",
+      "Stopped his ears with cotton because the sound of water against a vessel's sides became unendurable to him.",
+      "Almost wishes to kill himself when he thinks of the extent of all that may be brooding beneath the waters."
+    ],
+    "typeGuess": "protagonist",
+    "relatedNames": ["Gustaf Johansen", "the widow", "Legrasse", "Wilcox", "Sydney", "Oslo"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "After that I went to Sydney and talked profitlessly with seamen and members of the vice-admiralty court. I saw the Alert, now sold and in commercial use, at Circular Quay in Sydney Cove, but gained nothing from its non-committal bulk.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "The crouching image with its cuttlefish head, dragon body, scaly wings, and hieroglyphed pedestal, was preserved in the Museum at Hyde Park; and I studied it long and well, finding it a thing of balefully exquisite workmanship, and with the same utter mystery, terrible antiquity, and unearthly strangeness of material which I had noted in Legrasse's smaller specimen.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 92,
+        "quote": "Shaken with such a mental revolution as I had never before known, I now resolved to visit Mate Johansen in Oslo. Sailing for London, I re-embarked at once for the Norwegian capital; and one autumn day landed at the trim wharves in the shadow of the Egeberg.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 93,
+        "quote": "I made the brief trip by taxicab, and knocked with palpitant heart at the door of a neat and ancient building with plastered front.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 95,
+        "quote": "I now felt gnawing at my vitals that dark terror which will never leave me till I, too, am at rest; \"accidentally\" or otherwise.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 95,
+        "quote": "Persuading the widow that my connection with her husband's \"technical matters\" was sufficient to entitle me to his manuscript, I bore the document away and began to read it on the London boat.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 96,
+        "quote": "I will tell its gist enough to show why the sound of the water against the vessel's sides became so unendurable to me that I stopped my ears with cotton.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 100,
+        "quote": "When I think of the extent of all that may be brooding down there I almost wish to kill myself forthwith.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Sydney",
+    "aliases": [],
+    "facts": [
+      "The narrator went to Sydney and talked profitlessly with seamen and members of the vice-admiralty court there.",
+      "The Alert, sold and in commercial use, lay at Circular Quay in Sydney Cove."
+    ],
+    "typeGuess": "city",
+    "realWorld": "Sydney",
+    "relatedNames": ["The Narrator", "Circular Quay", "Sydney Cove"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "After that I went to Sydney and talked profitlessly with seamen and members of the vice-admiralty court. I saw the Alert, now sold and in commercial use, at Circular Quay in Sydney Cove, but gained nothing from its non-committal bulk.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Circular Quay",
+    "aliases": [],
+    "facts": [
+      "The Alert, now sold and in commercial use, lay at Circular Quay.",
+      "Circular Quay is in Sydney Cove."
+    ],
+    "typeGuess": "other",
+    "realWorld": "Circular Quay, Sydney",
+    "relatedNames": ["Sydney", "Sydney Cove"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "I saw the Alert, now sold and in commercial use, at Circular Quay in Sydney Cove, but gained nothing from its non-committal bulk.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Sydney Cove",
+    "aliases": [],
+    "facts": [
+      "Contains Circular Quay, where the narrator saw the Alert."
+    ],
+    "typeGuess": "sea",
+    "realWorld": "Sydney Cove, Sydney",
+    "relatedNames": ["Sydney", "Circular Quay"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "I saw the Alert, now sold and in commercial use, at Circular Quay in Sydney Cove, but gained nothing from its non-committal bulk.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Museum at Hyde Park",
+    "aliases": [],
+    "facts": [
+      "Preserved the crouching image with its cuttlefish head, dragon body, scaly wings, and hieroglyphed pedestal.",
+      "The narrator studied the image there long and well, finding it a thing of balefully exquisite workmanship.",
+      "Its curator reported that geologists had found the image a monstrous puzzle, vowing that the world held no rock like it."
+    ],
+    "typeGuess": "building",
+    "realWorld": "Museum at Hyde Park, Sydney",
+    "relatedNames": ["Sydney", "The Narrator", "Legrasse"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "The crouching image with its cuttlefish head, dragon body, scaly wings, and hieroglyphed pedestal, was preserved in the Museum at Hyde Park; and I studied it long and well, finding it a thing of balefully exquisite workmanship, and with the same utter mystery, terrible antiquity, and unearthly strangeness of material which I had noted in Legrasse's smaller specimen.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "Geologists, the curator told me, had found it a monstrous puzzle; for they vowed that the world held no rock like it.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Legrasse",
+    "aliases": [],
+    "facts": [
+      "Possessed a smaller specimen of the image, in which the narrator had noted the same utter mystery, terrible antiquity, and unearthly strangeness of material as in the Sydney image.",
+      "Had been told by old Castro about the primal Great Ones."
+    ],
+    "typeGuess": null,
+    "relatedNames": ["Castro", "Great Ones", "The Narrator"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "finding it a thing of balefully exquisite workmanship, and with the same utter mystery, terrible antiquity, and unearthly strangeness of material which I had noted in Legrasse's smaller specimen",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "Then I thought with a shudder of what old Castro had told Legrasse about the primal Great Ones: \"They had come from the stars, and had brought Their images with Them.\"",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Castro",
+    "aliases": ["old Castro"],
+    "facts": [
+      "Had told Legrasse about the primal Great Ones.",
+      "According to his account, the Great Ones had come from the stars and had brought Their images with Them."
+    ],
+    "typeGuess": null,
+    "relatedNames": ["Legrasse", "Great Ones"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "Then I thought with a shudder of what old Castro had told Legrasse about the primal Great Ones: \"They had come from the stars, and had brought Their images with Them.\"",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Great Ones",
+    "aliases": ["the primal Great Ones"],
+    "facts": [
+      "Old Castro had told Legrasse about them.",
+      "They had come from the stars and had brought Their images with Them."
+    ],
+    "typeGuess": "great-old-one",
+    "relatedNames": ["Castro", "Legrasse"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "Then I thought with a shudder of what old Castro had told Legrasse about the primal Great Ones: \"They had come from the stars, and had brought Their images with Them.\"",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Gustaf Johansen",
+    "aliases": ["Mate Johansen", "Johansen"],
+    "facts": [
+      "Was a mate whom the narrator resolved to visit in Oslo.",
+      "His address lay in the Old Town of King Harold Haardrada.",
+      "His wife told the narrator in halting English that Gustaf Johansen was no more.",
+      "Had not long survived his return, for the doings at sea in 1925 had broken him.",
+      "Told his wife no more than he had told the public, but left a long manuscript of \"technical matters\" written in English.",
+      "Was knocked down in a narrow lane near the Gothenburg dock by a bundle of papers falling from an attic window, and was dead before the ambulance could reach him.",
+      "Physicians found no adequate cause for his death and laid it to heart trouble and a weakened constitution.",
+      "Saw the city and the Thing, though he did not know quite all.",
+      "His voyage began on the Emma, which cleared Auckland in ballast on February 20th.",
+      "Commanded the captured yacht in which the men sighted a great stone pillar sticking out of the sea.",
+      "Showed ingenuous wonder at the charge of ruthlessness brought against his party during the proceedings of the court of inquiry.",
+      "With his men, was awed by the cosmic majesty of the city and must have guessed it was nothing of this or of any sane planet.",
+      "Spoke of the city only in broad impressions of vast angles and stone surfaces, achieving something close to futurism.",
+      "Landed with his men at a sloping mud-bank and clambered slipperily up over titan oozy blocks."
+    ],
+    "typeGuess": "witness",
+    "fate": "Dead: knocked down by a bundle of papers falling from an attic window near the Gothenburg dock and dead before the ambulance arrived; physicians laid it to heart trouble and a weakened constitution.",
+    "relatedNames": ["The Narrator", "the widow", "Oslo", "Old Town of King Harold Haardrada", "Gothenburg dock", "two Lascar sailors", "swarthy cult-fiends", "R'lyeh", "the Thing"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 92,
+        "quote": "Shaken with such a mental revolution as I had never before known, I now resolved to visit Mate Johansen in Oslo.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 93,
+        "quote": "Johansen's address, I discovered, lay in the Old Town of King Harold Haardrada, which kept alive the name of Oslo during all the centuries that the greater city masqueraded as \"Christiania.\"",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 93,
+        "quote": "A sad-faced woman in black answered my summons, and I was stung with disappointment when she told me in halting English that Gustaf Johansen was no more.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 94,
+        "quote": "He had not long survived his return, said his wife, for the doings at sea in 1925 had broken him. He had told her no more than he had told the public, but had left a long manuscript—of \"technical matters\" as he said—written in English, evidently in order to safeguard her from the peril of casual perusal.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 94,
+        "quote": "During a walk through a narrow lane near the Gothenburg dock, a bundle of papers falling from an attic window had knocked him down. Two Lascar sailors at once helped him to his feet, but before the ambulance could reach him he was dead. Physicians found no adequate cause for the end, and laid it to heart trouble and a weakened constitution.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 97,
+        "quote": "Johansen, thank God, did not know quite all, even though he saw the city and the Thing",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 99,
+        "quote": "Johansen's voyage had begun just as he told it to the vice-admiralty. The Emma, in ballast, had cleared Auckland on February 20th, and had felt the full force of that earthquake-born tempest which must have heaved up from the sea-bottom the horrors that filled men's dreams.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 99,
+        "quote": "Then, driven ahead by curiosity in their captured yacht under Johansen's command, the men sight a great stone pillar sticking out of the sea",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 99,
+        "quote": "Johansen shows ingenuous wonder at the charge of ruthlessness brought against his party during the proceedings of the court of inquiry",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 100,
+        "quote": "Johansen and his men were awed by the cosmic majesty of this dripping Babylon of elder demons, and must have guessed without guidance that it was nothing of this or of any sane planet.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 101,
+        "quote": "Without knowing what futurism is like, Johansen achieved something very close to it when he spoke of the city; for instead of describing any definite structure or building, he dwells only on the broad impressions of vast angles and stone surfaces—surfaces too great to belong to anything right or proper for this earth, and impious with horrible images and hieroglyphs.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 102,
+        "quote": "Johansen and his men landed at a sloping mud-bank on this monstrous Acropolis, and clambered slipperily up over titan oozy blocks which could have been no mortal staircase.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "the widow",
+    "aliases": ["a sad-faced woman in black", "his wife"],
+    "facts": [
+      "A sad-faced woman in black who answered the narrator's summons at Johansen's address.",
+      "Told the narrator in halting English that Gustaf Johansen was no more.",
+      "Said her husband had not long survived his return, for the doings at sea in 1925 had broken him.",
+      "Was persuaded by the narrator to let him take her husband's manuscript."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["Gustaf Johansen", "The Narrator"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 93,
+        "quote": "A sad-faced woman in black answered my summons, and I was stung with disappointment when she told me in halting English that Gustaf Johansen was no more.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 94,
+        "quote": "He had not long survived his return, said his wife, for the doings at sea in 1925 had broken him.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 95,
+        "quote": "Persuading the widow that my connection with her husband's \"technical matters\" was sufficient to entitle me to his manuscript, I bore the document away and began to read it on the London boat.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Oslo",
+    "aliases": ["the Norwegian capital", "Christiania"],
+    "facts": [
+      "The narrator resolved to visit Mate Johansen there.",
+      "Is the Norwegian capital, with trim wharves in the shadow of the Egeberg.",
+      "The greater city masqueraded as \"Christiania\" for centuries while the Old Town of King Harold Haardrada kept alive the name of Oslo."
+    ],
+    "typeGuess": "city",
+    "realWorld": "Oslo, the Norwegian capital, formerly called Christiania",
+    "relatedNames": ["Gustaf Johansen", "The Narrator", "Egeberg", "Old Town of King Harold Haardrada"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 92,
+        "quote": "Shaken with such a mental revolution as I had never before known, I now resolved to visit Mate Johansen in Oslo. Sailing for London, I re-embarked at once for the Norwegian capital; and one autumn day landed at the trim wharves in the shadow of the Egeberg.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 93,
+        "quote": "Johansen's address, I discovered, lay in the Old Town of King Harold Haardrada, which kept alive the name of Oslo during all the centuries that the greater city masqueraded as \"Christiania.\"",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Egeberg",
+    "aliases": [],
+    "facts": [
+      "The trim wharves where the narrator landed in the Norwegian capital lay in the shadow of the Egeberg."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["Oslo"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 92,
+        "quote": "Sailing for London, I re-embarked at once for the Norwegian capital; and one autumn day landed at the trim wharves in the shadow of the Egeberg.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "London",
+    "aliases": [],
+    "facts": [
+      "The narrator sailed for London and there re-embarked at once for the Norwegian capital.",
+      "The narrator began reading Johansen's manuscript on the London boat."
+    ],
+    "typeGuess": "city",
+    "realWorld": "London",
+    "relatedNames": ["The Narrator", "Oslo"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 92,
+        "quote": "Sailing for London, I re-embarked at once for the Norwegian capital; and one autumn day landed at the trim wharves in the shadow of the Egeberg.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 95,
+        "quote": "Persuading the widow that my connection with her husband's \"technical matters\" was sufficient to entitle me to his manuscript, I bore the document away and began to read it on the London boat.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Old Town of King Harold Haardrada",
+    "aliases": [],
+    "facts": [
+      "Johansen's address lay there.",
+      "Kept alive the name of Oslo during all the centuries that the greater city masqueraded as \"Christiania.\""
+    ],
+    "typeGuess": "region",
+    "realWorld": "the Old Town of Oslo",
+    "relatedNames": ["Oslo", "Gustaf Johansen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 93,
+        "quote": "Johansen's address, I discovered, lay in the Old Town of King Harold Haardrada, which kept alive the name of Oslo during all the centuries that the greater city masqueraded as \"Christiania.\"",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Gothenburg dock",
+    "aliases": [],
+    "facts": [
+      "Johansen was knocked down by a bundle of papers falling from an attic window during a walk through a narrow lane near the Gothenburg dock."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["Gustaf Johansen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 94,
+        "quote": "During a walk through a narrow lane near the Gothenburg dock, a bundle of papers falling from an attic window had knocked him down.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "two Lascar sailors",
+    "aliases": [],
+    "facts": [
+      "At once helped Johansen to his feet after the falling bundle of papers knocked him down."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["Gustaf Johansen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 94,
+        "quote": "Two Lascar sailors at once helped him to his feet, but before the ambulance could reach him he was dead.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "the Thing",
+    "aliases": [],
+    "facts": [
+      "Johansen saw the city and the Thing, even though he did not know quite all."
+    ],
+    "typeGuess": "entity",
+    "relatedNames": ["Gustaf Johansen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 97,
+        "quote": "Johansen, thank God, did not know quite all, even though he saw the city and the Thing",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Auckland",
+    "aliases": [],
+    "facts": [
+      "The Emma, in ballast, cleared Auckland on February 20th."
+    ],
+    "typeGuess": "city",
+    "realWorld": "Auckland",
+    "relatedNames": ["Gustaf Johansen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 99,
+        "quote": "The Emma, in ballast, had cleared Auckland on February 20th, and had felt the full force of that earthquake-born tempest which must have heaved up from the sea-bottom the horrors that filled men's dreams.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "swarthy cult-fiends",
+    "aliases": [],
+    "facts": [
+      "Were aboard the Alert.",
+      "Johansen speaks of them with significant horror.",
+      "There was some peculiarly abominable quality about them which made their destruction seem almost a duty."
+    ],
+    "typeGuess": "cultist",
+    "fate": "Destroyed; the charge of ruthlessness for it was brought against Johansen's party at the court of inquiry.",
+    "relatedNames": ["Gustaf Johansen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 99,
+        "quote": "Of the swarthy cult-fiends on the Alert he speaks with significant horror. There was some peculiarly abominable quality about them which made their destruction seem almost a duty, and Johansen shows ingenuous wonder at the charge of ruthlessness brought against his party during the proceedings of the court of inquiry.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "R'lyeh",
+    "aliases": ["the nightmare corpse-city of R'lyeh", "this dripping Babylon of elder demons", "this monstrous Acropolis"],
+    "facts": [
+      "Lies at S. Latitude 47° 9', W. Longitude 126° 43'.",
+      "Is the nightmare corpse-city, the tangible substance of earth's supreme terror.",
+      "Presents a coastline of mingled mud, ooze, and weedy Cyclopean masonry.",
+      "Was built in measureless eons behind history by the vast, loathsome shapes that seeped down from the dark stars.",
+      "Great Cthulhu and his hordes lay there, hidden in green slimy vaults.",
+      "Only a single mountain-top — the hideous monolith-crowned citadel whereon great Cthulhu was buried — actually emerged from the waters.",
+      "Has greenish stone blocks of unbelievable size, a great carven monolith of dizzying height, and colossal statues and bas-reliefs identical with the queer image found in the shrine on the Alert.",
+      "Shows only vast angles and stone surfaces too great to belong to anything right or proper for this earth, impious with horrible images and hieroglyphs.",
+      "Johansen and his men landed at a sloping mud-bank there and clambered up over titan oozy blocks which could have been no mortal staircase.",
+      "Its crazily elusive angles of carven rock showed concavity at a second glance where the first showed convexity."
+    ],
+    "typeGuess": "city",
+    "realWorld": "placed by the text at S. Latitude 47° 9', W. Longitude 126° 43'",
+    "relatedNames": ["Cthulhu", "Gustaf Johansen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 99,
+        "quote": "in S. Latitude 47° 9', W. Longitude 126° 43' come upon a coastline of mingled mud, ooze, and weedy Cyclopean masonry which can be nothing less than the tangible substance of earth's supreme terror—the nightmare corpse-city of R'lyeh, that was built in measureless eons behind history by the vast, loathsome shapes that seeped down from the dark stars.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 99,
+        "quote": "There lay great Cthulhu and his hordes, hidden in green slimy vaults and sending out at last, after cycles incalculable, the thoughts that spread fear to the dreams of the sensitive and called imperiously to the faithful to come on a pilgrimage of liberation and restoration.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 100,
+        "quote": "I suppose that only a single mountain-top, the hideous monolith-crowned citadel whereon great Cthulhu was buried, actually emerged from the waters.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 100,
+        "quote": "Awe at the unbelievable size of the greenish stone blocks, at the dizzying height of the great carven monolith, and at the stupefying identity of the colossal statues and bas-reliefs with the queer image found in the shrine on the Alert, is poignantly visible in every line of the mate's frightened description.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 101,
+        "quote": "he dwells only on the broad impressions of vast angles and stone surfaces—surfaces too great to belong to anything right or proper for this earth, and impious with horrible images and hieroglyphs",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 102,
+        "quote": "Johansen and his men landed at a sloping mud-bank on this monstrous Acropolis, and clambered slipperily up over titan oozy blocks which could have been no mortal staircase.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 102,
+        "quote": "twisted menace and suspense lurked leeringly in those crazily elusive angles of carven rock where a second glance showed concavity after the first showed convexity.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Cthulhu",
+    "aliases": ["great Cthulhu"],
+    "facts": [
+      "Lay with his hordes in the corpse-city, hidden in green slimy vaults.",
+      "After cycles incalculable, sent out the thoughts that spread fear to the dreams of the sensitive and called imperiously to the faithful to come on a pilgrimage of liberation and restoration.",
+      "Was buried in the hideous monolith-crowned citadel on the single mountain-top that actually emerged from the waters."
+    ],
+    "typeGuess": "great-old-one",
+    "relatedNames": ["R'lyeh", "Gustaf Johansen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 99,
+        "quote": "There lay great Cthulhu and his hordes, hidden in green slimy vaults and sending out at last, after cycles incalculable, the thoughts that spread fear to the dreams of the sensitive and called imperiously to the faithful to come on a pilgrimage of liberation and restoration.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 100,
+        "quote": "I suppose that only a single mountain-top, the hideous monolith-crowned citadel whereon great Cthulhu was buried, actually emerged from the waters.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Wilcox",
+    "aliases": [],
+    "facts": [
+      "Had told the narrator of his awful dreams.",
+      "Had said that the geometry of the dream-place he saw was abnormal, non-Euclidean, and loathsomely redolent of spheres and dimensions apart from ours."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": ["The Narrator", "Gustaf Johansen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 101,
+        "quote": "I mention his talk about angles because it suggests something Wilcox had told me of his awful dreams. He had said that the geometry of the dream-place he saw was abnormal, non-Euclidean, and loathsomely redolent of spheres and dimensions apart from ours.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  }
+]

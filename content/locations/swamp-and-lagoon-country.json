@@ -1,0 +1,40 @@
+{
+  "slug": "swamp-and-lagoon-country",
+  "name": "swamp and lagoon country",
+  "type": "region",
+  "map": {
+    "x": 2339,
+    "y": 1420
+  },
+  "summary": "The swamp and lagoon country south of New Orleans, home of the squatters whose women and children vanished, and scene of Legrasse's November 1907 raid on the cult's voodoo orgy.",
+  "description": "The region lies to the south of New Orleans. Its squatters, mostly primitive but good-natured descendants of Lafitte's men, were in the grip of stark terror from an unknown thing which had stolen upon them in the night: some of their women and children had disappeared after a malevolent tom-tom began its incessant beating far within the black haunted woods where no dweller ventured. On November 1st, 1907, their frantic summons reached the New Orleans police.\n\nLegrasse's raid on the supposed voodoo meeting followed. Past the squatter settlement — a miserable huddle of huts whose hysterical dwellers ran out to cluster around the bobbing lanterns, the muffled beat of tom-toms faintly audible far ahead — the party pressed on into the swamps. The rites they stumbled upon were so singular and hideous that the police realized they had found a dark cult totally unknown to them; the statuette was captured there, and an oral ritual was noted and copied among the arrested swamp cult-worshipers.\n\nThe orgy itself raged on a grassy island of perhaps an acre's extent, standing in a natural glade of the swamp: worshipers writhing about a ring-shaped bonfire around an eight-foot granite monolith topped by the carven statuette, with the oddly marred bodies of the disappeared squatters hanging head downward from a circle of ten scaffolds.",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [
+    "new-orleans",
+    "louisiana",
+    "black-haunted-woods",
+    "grassy-island"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "The statuette, idol, fetish, or whatever it was, had been captured some months before in the wooded swamps south of New Orleans during a raid on a supposed voodoo meeting; and so singular and hideous were the rites connected with it, that the police could not but realize that they had stumbled on a dark cult totally unknown to them",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 24
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "The squatters there, mostly primitive but good-natured descendants of Lafitte's men, were in the grip of stark terror from an unknown thing which had stolen upon them in the night.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 36
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "At length the squatter settlement, a miserable huddle of huts, hove in sight; and hysterical dwellers ran out to cluster around the group of bobbing lanterns. The muffled beat of tom-toms was now faintly audible far, far ahead; and a curdling shriek came at infrequent intervals when the wind shifted.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 37
+    }
+  ]
+}

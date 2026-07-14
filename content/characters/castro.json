@@ -1,0 +1,35 @@
+{
+  "slug": "castro",
+  "name": "Castro",
+  "role": "cultist",
+  "summary": "The immensely aged mestizo taken in Legrasse's swamp raid, from whom the police extracted most of what they learned: whispered legend of the Great Old Ones, their coming resurrection, and the wholly secret cult whose center he placed amid the deserts of Arabia where Irem dreams.",
+  "description": "Castro was an immensely aged mestizo among the prisoners of the swamp raid, and it was mainly from him that the police extracted the meaning of the ritual. He claimed to have sailed to strange ports and talked with undying leaders of the cult in the mountains of China — the deathless Chinamen, who told him that remains of the Things were still to be found as Cyclopean stones on islands in the Pacific.\n\nOld Castro remembered bits of hideous legend that paled the speculations of theosophists and made man and the world seem recent and transient. He whispered of the Great Old Ones, who were not composed altogether of flesh and blood — the sunken, star-born Old Ones, their coming reign and resurrection, their faithful cult and mastery of dreams: they had come from the stars and brought their images with them, and the first men formed the cult around small idols which the Great Ones showed them. Of the cult he said he thought the center lay amid the pathless deserts of Arabia, where Irem, the City of Pillars, dreams hidden and untouched; it was not allied to the European witch-cult and was virtually unknown beyond its members — wholly secret, as he apparently said truly. But of the black spirits of earth he dared not speak much, cutting himself off hurriedly, and no amount of persuasion or subtlety could elicit more; the size of the Old Ones, too, he curiously declined to mention.\n\nWhen the narrator came to question such of the prisoners as still survived, old Castro had been dead for some years.",
+  "locations": [
+    "swamp-and-lagoon-country",
+    "china"
+  ],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "fate": "Dead for some years by the time the narrator questioned the surviving prisoners.",
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "What the police did extract came mainly from an immensely aged mestizo named Castro, who claimed to have sailed to strange ports and talked with undying leaders of the cult in the mountains of China.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 49
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "But of them old Castro dared not speak much. He cut himself off hurriedly, and no amount of persuasion or subtlety could elicit more in this direction. The size of the Old Ones, too, he curiously declined to mention. Of the cult, he said that he thought the center lay amid the pathless deserts of Arabia, where Irem, the City of Pillars, dreams hidden and untouched. It was not allied to the European witch-cult, and was virtually unknown beyond its members.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 53
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "I visited New Orleans, talked with Legrasse and others of that old-time raiding-party, saw the frightful image, and even questioned such of the mongrel prisoners as still survived. Old Castro, unfortunately, had been dead for some years.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 64
+    }
+  ]
+}

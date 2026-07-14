@@ -1,0 +1,19 @@
+{
+  "slug": "bat-winged-devils",
+  "name": "bat-winged devils",
+  "classification": "race",
+  "summary": "Devils which squatters whispered flew up out of caverns in inner earth to worship the white polypous thing at midnight.",
+  "description": "Squatters whispered that bat-winged devils flew up out of caverns in inner earth to worship the huge white polypous thing of the hidden lake at midnight.\n\nBeyond those whispers no account of them is given; they belong to the same legend-cycle as the thing they worship.",
+  "locations": [],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "squatters whispered that bat-winged devils flew up out of caverns in inner earth to worship it at midnight",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 38
+    }
+  ]
+}

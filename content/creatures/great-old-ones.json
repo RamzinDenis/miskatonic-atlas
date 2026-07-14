@@ -1,0 +1,35 @@
+{
+  "slug": "great-old-ones",
+  "name": "Great Old Ones",
+  "classification": "race",
+  "summary": "Star-born beings who ruled the earth in eons before man, of whose great cities Cyclopean stones remain on islands in the Pacific. No longer living yet never really dead, they lie in stone houses in their great city of R'lyeh, preserved by the spells of mighty Cthulhu against the time when the stars come right.",
+  "description": "The Great Old Ones lived ages before there were any men, and came to the young world out of the sky. In eons before man they ruled on the earth and had great cities, whose remains are still to be found as Cyclopean stones on islands in the Pacific; they came themselves from the stars, and brought their images with them. They are gone now, inside the earth and under the sea, and no man has ever seen them — old Castro, who told of them, curiously declined even to mention their size.\n\nThey are not composed altogether of flesh and blood: they have shape, but that shape is not made of matter. When the stars are right they can plunge from world to world through the sky, and when the stars are wrong they cannot live — yet although they no longer live, they will never really die. They all lie in stone houses in their great city of R'lyeh, preserved by the spells of mighty Cthulhu for a glorious resurrection; the spells that preserve them likewise prevent them from making an initial move, so that some force from outside must serve to liberate their bodies. They know all that occurs in the universe, for their mode of speech is transmitted thought, and even now they talk in their tombs.\n\nTheir dead bodies told their secrets in dreams to the first man, who formed a cult which has never died; the first men shaped it around small idols which the Great Ones showed them, brought in dim eras from dark stars, and in the elder time chosen men talked with the entombed Old Ones in dreams. There are arts which can revive them when the stars have come round again to the right positions in the cycle of eternity, and the liberated Old Ones would then teach mankind new ways to shout and kill and revel; Castro spoke of the sunken, star-born Old Ones and their coming reign, their faithful cult and their mastery of dreams.",
+  "locations": [
+    "rlyeh",
+    "pacific"
+  ],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "fate": "No longer living yet never really dead — they lie in stone houses in their great city of R'lyeh, preserved by the spells of mighty Cthulhu, awaiting an outside force to liberate their bodies for a glorious resurrection when the stars come right.",
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "They worshiped, so they said, the Great Old Ones who lived ages before there were any men, and who came to the young world out of the sky. Those Old Ones were gone now, inside the earth and under the sea; but their dead bodies had told their secrets in dreams to the first man, who formed a cult which had never died.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 46
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "These Great Old Ones, Castro continued, were not composed altogether of flesh and blood. They had shape—for did not this star-fashioned image prove it?—but that shape was not made of matter. When the stars were right, They could plunge from world to world through the sky; but when the stars were wrong, They could not live. But although They no longer lived, They would never really die.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 51
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "They all lay in stone houses in Their great city of R'lyeh, preserved by the spells of mighty Cthulhu for a glorious resurrection when the stars and the earth might once more be ready for Them. But at that time some force from outside must serve to liberate Their bodies. The spells that preserved Them intact likewise prevented Them from making an initial move, and They could only lie awake in the dark and think whilst uncounted millions of years rolled by.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 51
+    }
+  ]
+}

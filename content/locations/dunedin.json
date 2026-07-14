@@ -1,0 +1,38 @@
+{
+  "slug": "dunedin",
+  "name": "Dunedin",
+  "type": "city",
+  "map": {
+    "x": 1385,
+    "y": 2213
+  },
+  "summary": "The New Zealand home port of the Alert — an island trader of evil waterfront reputation, owned by a curious group of half-castes, which set sail in great haste just after the storm and earth tremors of March 1st.",
+  "description": "Dunedin, N. Z., was the home port of the heavily armed steam yacht Alert. Cable advices reported the vessel well known there as an island trader, bearing an evil reputation along the waterfront; it was owned by a curious group of half-castes whose frequent meetings and night trips to the woods attracted no little curiosity, and it set sail in great haste just after the storm and earth tremors of March 1st — darting eagerly forth, as the narrator later put it, as if imperiously summoned.\n\nIn less than a month after leaving Paterson the narrator was in Dunedin himself, but found that little was known of the strange cult-members who had lingered in the old sea taverns: waterfront scum was far too common for special mention, though there was vague talk of one inland trip these mongrels had made, during which faint drumming and red flame were noted on the distant hills.\n\nFor Johansen, the streets of Dunedin were a stage of his rescue — the passage out of the nightmare that led through the Vigilant and the vice-admiralty court to the long voyage home.",
+  "realWorld": "Dunedin, New Zealand",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [
+    "sydney"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Cable advices from Dunedin report that the Alert was well known there as an island trader, and bore an evil reputation along the waterfront. It was owned by a curious group of half-castes whose frequent meetings and night trips to the woods attracted no little curiosity; and it had set sail in great haste just after the storm and earth tremors of March 1st.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 82
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "From Dunedin the Alert and her noisome crew had darted eagerly forth as if imperiously summoned",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 87
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "In less than a month I was in Dunedin; where, however, I found that little was known of the strange cult-members who had lingered in the old sea taverns. Waterfront scum was far too common for special mention; though there was vague talk about one inland trip these mongrels had made, during which faint drumming and red flame were noted on the distant hills.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 89
+    }
+  ]
+}

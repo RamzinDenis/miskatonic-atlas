@@ -1,0 +1,24 @@
+{
+  "slug": "california",
+  "name": "California",
+  "type": "region",
+  "map": {
+    "x": 2056,
+    "y": 1333
+  },
+  "summary": "The state where, during the 1925 disturbances, a dispatch described a theosophist colony donning white robes en masse for some 'glorious fulfilment' which never arrived.",
+  "description": "California appears among Professor Angell's press cuttings from the period of the 1925 disturbances: a dispatch described a theosophist colony there donning white robes en masse for some \"glorious fulfilment\" which never arrived.\n\nThe item stands in the record beside the other scattered cases of the same period gathered from around the world.",
+  "realWorld": "California, United States",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "A dispatch from California describes a theosophist colony as donning white robes en masse for some \"glorious fulfilment\" which never arrives, whilst items from India speak guardedly of serious native unrest toward the end of March.",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 20
+    }
+  ]
+}

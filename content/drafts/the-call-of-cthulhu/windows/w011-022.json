@@ -1,0 +1,661 @@
+[
+  {
+    "kind": "character",
+    "name": "Henry Anthony Wilcox",
+    "aliases": ["Wilcox", "young Wilcox", "the sculptor", "the artist"],
+    "facts": [
+      "A thin, dark young man of neurotic and excited aspect who called upon Professor Angell on March 1st, 1925, bearing the singular clay bas-relief, then exceedingly damp and fresh.",
+      "His card bore the name of Henry Anthony Wilcox; Professor Angell recognized him as the youngest son of an excellent family slightly known to him.",
+      "Had latterly been studying sculpture at the Rhode Island School of Design and lived alone at the Fleur-de-Lys Building near that institution.",
+      "A precocious youth of known genius but great eccentricity, who from childhood excited attention through strange stories and odd dreams.",
+      "Called himself \"psychically hypersensitive\", but the staid folk of the ancient commercial city dismissed him as merely \"queer\".",
+      "Said he made the bas-relief the night before in a dream of strange cities.",
+      "Had an unprecedented dream of great Cyclopean cities of Titan blocks and sky-flung monoliths, all dripping with green ooze and sinister with latent horror.",
+      "After the first interview, made daily calls on Professor Angell, relating startling fragments of nocturnal imagery whose burden was always some terrible Cyclopean vista of dark and dripping stone.",
+      "On March 23rd failed to appear, having been stricken with an obscure sort of fever and taken to the home of his family in Waterman Street.",
+      "Cried out in the night, arousing several other artists in the building, and thereafter manifested only alternations of unconsciousness and delirium.",
+      "On April 2nd at about 3 p. m. every trace of his malady suddenly ceased, and he was completely ignorant of what had happened since the night of March 22nd.",
+      "Pronounced well by his physician, he returned to his quarters in three days but was of no further assistance to Professor Angell."
+    ],
+    "typeGuess": "witness",
+    "fate": "Recovered suddenly on April 2nd; all traces of strange dreaming vanished with his recovery.",
+    "relatedNames": ["Professor Angell", "The Narrator", "Dr. Tobey", "Rhode Island School of Design", "Fleur-de-Lys Building", "Waterman Street", "Cthulhu", "R'lyeh", "the nameless monstrosity"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 11,
+        "quote": "It appears that on March 1st, 1925, a thin, dark young man of neurotic and excited aspect had called upon Professor Angell bearing the singular clay bas-relief, which was then exceedingly damp and fresh. His card bore the name of Henry Anthony Wilcox, and my uncle had recognized him as the youngest son of an excellent family slightly known to him, who had latterly been studying sculpture at the Rhode Island School of Design and living alone at the Fleur-de-Lys Building near that institution.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 11,
+        "quote": "Wilcox was a precocious youth of known genius but great eccentricity, and had from childhood excited attention through the strange stories and odd dreams he was in the habit of relating. He called himself \"psychically hypersensitive\", but the staid folk of the ancient commercial city dismissed him as merely \"queer\".",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 12,
+        "quote": "He said, \"It is new, indeed, for I made it last night in a dream of strange cities; and dreams are older than brooding Tyre, or the contemplative Sphinx, or garden-girdled Babylon.\"",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 13,
+        "quote": "Upon retiring, he had had an unprecedented dream of great Cyclopean cities of Titan blocks and sky-flung monoliths, all dripping with green ooze and sinister with latent horror.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 14,
+        "quote": "This bore regular fruit, for after the first interview the manuscript records daily calls of the young man, during which he related startling fragments of nocturnal imagery whose burden was always some terrible Cyclopean vista of dark and dripping stone, with a subterrene voice or intelligence shouting monotonously in enigmatical sense-impacts uninscribable save as gibberish.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 15,
+        "quote": "On March 23rd, the manuscript continued, Wilcox failed to appear; and inquiries at his quarters revealed that he had been stricken with an obscure sort of fever and taken to the home of his family in Waterman Street. He had cried out in the night, arousing several other artists in the building, and had manifested since then only alternations of unconsciousness and delirium.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 16,
+        "quote": "On April 2nd at about 3 p. m. every trace of Wilcox's malady suddenly ceased. He sat upright in bed, astonished to find himself at home and completely ignorant of what had happened in dream or reality since the night of March 22nd. Pronounced well by his physician, he returned to his quarters in three days; but to Professor Angell he was of no further assistance. All traces of strange dreaming had vanished with his recovery, and my uncle kept no record of his night-thoughts after a week of pointless and irrelevant accounts of thoroughly usual visions.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Professor Angell",
+    "aliases": ["my uncle", "the professor"],
+    "facts": [
+      "The narrator's uncle.",
+      "Was called upon on March 1st, 1925, by Henry Anthony Wilcox bearing the singular clay bas-relief, and recognized him as the youngest son of an excellent family slightly known to him.",
+      "Questioned the sculptor with scientific minuteness and studied the bas-relief with almost frantic intensity.",
+      "Asked many questions that tried to connect Wilcox with strange cults or societies, offering repeated promises of silence in exchange for an admission of membership.",
+      "Once convinced that Wilcox was ignorant of any cult or system of cryptic lore, besieged him with demands for future reports of dreams.",
+      "Telephoned Wilcox's family at once when the youth fell ill and kept close watch of the case, calling often at the Thayer Street office of Dr. Tobey.",
+      "Quickly instituted a prodigiously far-flung body of inquiries amongst nearly all the friends he could question without impertinence, asking for nightly reports of their dreams.",
+      "Must have employed a cutting bureau, for the number of press extracts was tremendous and their sources scattered throughout the globe.",
+      "Had once before seen the hellish outlines of the nameless monstrosity, puzzled over the unknown hieroglyphics, and heard the ominous syllables which can be rendered only as \"Cthulhu\".",
+      "Pursued young Wilcox with queries and demands for data because of that earlier stirring and horrible connection.",
+      "In 1908 had a prominent part in all the deliberations of the American Archeological Society's annual meeting in St. Louis.",
+      "Was one of the first to be approached by the several outsiders who took advantage of that convocation to offer questions and problems."
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": ["Henry Anthony Wilcox", "The Narrator", "Dr. Tobey", "Thayer Street", "Cthulhu", "the nameless monstrosity", "St. Louis"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 11,
+        "quote": "It appears that on March 1st, 1925, a thin, dark young man of neurotic and excited aspect had called upon Professor Angell bearing the singular clay bas-relief, which was then exceedingly damp and fresh. His card bore the name of Henry Anthony Wilcox, and my uncle had recognized him as the youngest son of an excellent family slightly known to him, who had latterly been studying sculpture at the Rhode Island School of Design and living alone at the Fleur-de-Lys Building near that institution.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 14,
+        "quote": "He questioned the sculptor with scientific minuteness; and studied with almost frantic intensity the bas-relief on which the youth had found himself working, chilled and clad only in his nightclothes, when waking had stolen bewilderingly over him.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 14,
+        "quote": "Many of his questions seemed highly out of place to his visitor, especially those which tried to connect the latter with strange cults or societies; and Wilcox could not understand the repeated promises of silence which he was offered in exchange for an admission of membership in some widespread mystical or paganly religious body.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 14,
+        "quote": "When Professor Angell became convinced that the sculptor was indeed ignorant of any cult or system of cryptic lore, he besieged his visitor with demands for future reports of dreams.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 15,
+        "quote": "My uncle at once telephoned the family, and from that time forward kept close watch of the case; calling often at the Thayer Street office of Dr. Tobey, whom he learned to be in charge.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 18,
+        "quote": "My uncle, it seems, had quickly instituted a prodigiously far-flung body of inquiries amongst nearly all the friends whom he could question without impertinence, asking for nightly reports of their dreams, and the dates of any notable visions for some time past.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 20,
+        "quote": "Professor Angell must have employed a cutting bureau, for the number of extracts was tremendous, and the sources scattered throughout the globe.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 21,
+        "quote": "Once before, it appears, Professor Angell had seen the hellish outlines of the nameless monstrosity, puzzled over the unknown hieroglyphics, and heard the ominous syllables which can be rendered only as \"Cthulhu\"; and all this in so stirring and horrible a connection that it is small wonder he pursued young Wilcox with queries and demands for data.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 22,
+        "quote": "This earlier experience had come in 1908, seventeen years before, when the American Archeological Society held its annual meeting in St. Louis. Professor Angell, as befitted one of his authority and attainments, had had a prominent part in all the deliberations; and was one of the first to be approached by the several outsiders who took advantage of the convocation to offer questions for correct answering and problems for expert solution.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "Professor Angell was his uncle.",
+      "References to the scattered notes gave him much material for thought.",
+      "Only his ingrained skepticism, then forming his philosophy, accounted for his continued distrust of the artist.",
+      "Half suspected the compiler of having asked leading questions or of having edited the correspondence to corroborate what he had latently resolved to see.",
+      "Continued to feel that Wilcox, somehow cognizant of the old data his uncle had possessed, had been imposing on the veteran scientist.",
+      "Succeeded in tracing down only a few of the dream cases, all of which bore out the notes in full.",
+      "Was then convinced that young Wilcox had known of the older matters mentioned by the professor."
+    ],
+    "typeGuess": "protagonist",
+    "relatedNames": ["Professor Angell", "Henry Anthony Wilcox"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 11,
+        "quote": "His card bore the name of Henry Anthony Wilcox, and my uncle had recognized him as the youngest son of an excellent family slightly known to him",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 18,
+        "quote": "Here the first part of the manuscript ended, but references to certain of the scattered notes gave me much material for thought—so much, in fact, that only the ingrained skepticism then forming my philosophy can account for my continued distrust of the artist.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 19,
+        "quote": "As it was, lacking their original letters, I half suspected the compiler of having asked leading questions, or of having edited the correspondence in corroboration of what he had latently resolved to see.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 19,
+        "quote": "That is why I continued to feel that Wilcox, somehow cognizant of the old data which my uncle had possessed, had been imposing on the veteran scientist.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 19,
+        "quote": "Had my uncle referred to these cases by name instead of merely by number, I should have attempted some corroboration and personal investigation; but as it was, I succeeded in tracing down only a few. All of these, however, bore out the notes in full.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 20,
+        "quote": "But I was then convinced that young Wilcox had known of the older matters mentioned by the professor.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Rhode Island School of Design",
+    "aliases": [],
+    "facts": [
+      "Henry Anthony Wilcox had latterly been studying sculpture at the Rhode Island School of Design.",
+      "The Fleur-de-Lys Building where Wilcox lived stood near the institution."
+    ],
+    "typeGuess": "building",
+    "realWorld": "Rhode Island School of Design",
+    "relatedNames": ["Henry Anthony Wilcox", "Fleur-de-Lys Building"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 11,
+        "quote": "who had latterly been studying sculpture at the Rhode Island School of Design and living alone at the Fleur-de-Lys Building near that institution",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Fleur-de-Lys Building",
+    "aliases": [],
+    "facts": [
+      "Henry Anthony Wilcox lived alone at the Fleur-de-Lys Building, near the Rhode Island School of Design."
+    ],
+    "typeGuess": "building",
+    "relatedNames": ["Henry Anthony Wilcox", "Rhode Island School of Design"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 11,
+        "quote": "who had latterly been studying sculpture at the Rhode Island School of Design and living alone at the Fleur-de-Lys Building near that institution",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Cthulhu",
+    "aliases": [],
+    "facts": [
+      "In Wilcox's dream a voice that was not a voice came from some undetermined point below; he attempted to render it by the almost unpronounceable jumble of letters \"Cthulhu fhtagn\".",
+      "\"Cthulhu\" was one of the two sounds most frequently repeated in Wilcox's accounts of a subterrene voice or intelligence shouting monotonously in his dreams.",
+      "Professor Angell had heard the ominous syllables which can be rendered only as \"Cthulhu\" once before, in a stirring and horrible connection."
+    ],
+    "typeGuess": null,
+    "relatedNames": ["Henry Anthony Wilcox", "Professor Angell", "R'lyeh"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 13,
+        "quote": "Hieroglyphics had covered the walls and pillars, and from some undetermined point below had come a voice that was not a voice; a chaotic sensation which only fancy could transmute into sound, but which he attempted to render by the almost unpronounceable jumble of letters, \"Cthulhu fhtagn\".",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 14,
+        "quote": "with a subterrene voice or intelligence shouting monotonously in enigmatical sense-impacts uninscribable save as gibberish. The two sounds most frequently repeated are those rendered by the letters \"Cthulhu\" and \"R'lyeh\".",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 21,
+        "quote": "Once before, it appears, Professor Angell had seen the hellish outlines of the nameless monstrosity, puzzled over the unknown hieroglyphics, and heard the ominous syllables which can be rendered only as \"Cthulhu\"; and all this in so stirring and horrible a connection that it is small wonder he pursued young Wilcox with queries and demands for data.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "R'lyeh",
+    "aliases": [],
+    "facts": [
+      "\"R'lyeh\" was one of the two sounds most frequently repeated by the subterrene voice or intelligence in Wilcox's dreams of terrible Cyclopean vistas of dark and dripping stone."
+    ],
+    "typeGuess": null,
+    "relatedNames": ["Cthulhu", "Henry Anthony Wilcox"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 14,
+        "quote": "during which he related startling fragments of nocturnal imagery whose burden was always some terrible Cyclopean vista of dark and dripping stone, with a subterrene voice or intelligence shouting monotonously in enigmatical sense-impacts uninscribable save as gibberish. The two sounds most frequently repeated are those rendered by the letters \"Cthulhu\" and \"R'lyeh\".",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "New England",
+    "aliases": [],
+    "facts": [
+      "A slight earthquake tremor the night before Wilcox's dream was the most considerable felt in New England for some years.",
+      "Average people in society and business—New England's traditional \"salt of the earth\"—gave an almost completely negative result to the dream inquiries."
+    ],
+    "typeGuess": "region",
+    "realWorld": "New England, United States",
+    "relatedNames": ["Henry Anthony Wilcox"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 13,
+        "quote": "There had been a slight earthquake tremor the night before, the most considerable felt in New England for some years; and Wilcox's imagination had been keenly affected.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 18,
+        "quote": "Average people in society and business—New England's traditional \"salt of the earth\"—gave an almost completely negative result, though scattered cases of uneasy but formless nocturnal impressions appear here and there, always between March 23rd and April 2nd—the period of young Wilcox's delirium.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Waterman Street",
+    "aliases": [],
+    "facts": [
+      "The home of Wilcox's family was in Waterman Street.",
+      "Wilcox was taken there after being stricken with an obscure sort of fever."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["Henry Anthony Wilcox"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 15,
+        "quote": "inquiries at his quarters revealed that he had been stricken with an obscure sort of fever and taken to the home of his family in Waterman Street",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Thayer Street",
+    "aliases": [],
+    "facts": [
+      "Dr. Tobey's office was in Thayer Street.",
+      "Professor Angell called often at the Thayer Street office while keeping close watch of the Wilcox case."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["Dr. Tobey", "Professor Angell"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 15,
+        "quote": "My uncle at once telephoned the family, and from that time forward kept close watch of the case; calling often at the Thayer Street office of Dr. Tobey, whom he learned to be in charge.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Dr. Tobey",
+    "aliases": ["the doctor"],
+    "facts": [
+      "The physician in charge of Wilcox's case, with an office in Thayer Street.",
+      "Shuddered now and then as he spoke of the strange things on which Wilcox's febrile mind was dwelling.",
+      "His repetitions of Wilcox's occasional frantic words convinced Professor Angell that the object of the delirium was identical with the nameless monstrosity of the dream-sculpture.",
+      "Added that reference to the object was invariably a prelude to the young man's subsidence into lethargy."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["Henry Anthony Wilcox", "Professor Angell", "Thayer Street", "the nameless monstrosity"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 15,
+        "quote": "calling often at the Thayer Street office of Dr. Tobey, whom he learned to be in charge",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 15,
+        "quote": "The youth's febrile mind, apparently, was dwelling on strange things; and the doctor shuddered now and then as he spoke of them.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 15,
+        "quote": "He at no time fully described this object, but occasional frantic words, as repeated by Dr. Tobey, convinced the professor that it must be identical with the nameless monstrosity he had sought to depict in his dream-sculpture.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 15,
+        "quote": "Reference to this object, the doctor added, was invariably a prelude to the young man's subsidence into lethargy.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "the nameless monstrosity",
+    "aliases": ["a gigantic thing \"miles high\"", "the gigantic nameless thing"],
+    "facts": [
+      "Wilcox's delirium touched wildly on a gigantic thing \"miles high\" which walked or lumbered about.",
+      "Wilcox at no time fully described the object, but Professor Angell became convinced it must be identical with the nameless monstrosity Wilcox had sought to depict in his dream-sculpture.",
+      "Reference to the object was invariably a prelude to Wilcox's subsidence into lethargy.",
+      "Some of the dreamers among the esthetes confessed acute fear of the gigantic nameless thing visible toward the last.",
+      "Professor Angell had seen the hellish outlines of the nameless monstrosity once before."
+    ],
+    "typeGuess": "entity",
+    "relatedNames": ["Henry Anthony Wilcox", "Professor Angell", "Dr. Tobey"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 15,
+        "quote": "They included not only a repetition of what he had formerly dreamed, but touched wildly on a gigantic thing \"miles high\" which walked or lumbered about. He at no time fully described this object, but occasional frantic words, as repeated by Dr. Tobey, convinced the professor that it must be identical with the nameless monstrosity he had sought to depict in his dream-sculpture.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 15,
+        "quote": "Reference to this object, the doctor added, was invariably a prelude to the young man's subsidence into lethargy.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 19,
+        "quote": "Over a fourth of those who reported anything, reported scenes and half-sounds not unlike those which Wilcox had described; and some of the dreamers confessed acute fear of the gigantic nameless thing visible toward the last.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 21,
+        "quote": "Once before, it appears, Professor Angell had seen the hellish outlines of the nameless monstrosity, puzzled over the unknown hieroglyphics, and heard the ominous syllables which can be rendered only as \"Cthulhu\"; and all this in so stirring and horrible a connection that it is small wonder he pursued young Wilcox with queries and demands for data.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "a widely known architect",
+    "aliases": [],
+    "facts": [
+      "A widely known architect with leanings toward theosophy and occultism.",
+      "Went violently insane on the date of young Wilcox's seizure.",
+      "Expired several months later after incessant screamings to be saved from some escaped denizen of hell."
+    ],
+    "typeGuess": "other",
+    "fate": "Went violently insane on the date of Wilcox's seizure and died several months later.",
+    "relatedNames": ["Henry Anthony Wilcox"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 19,
+        "quote": "The subject, a widely known architect with leanings toward theosophy and occultism, went violently insane on the date of young Wilcox's seizure, and expired several months later after incessant screamings to be saved from some escaped denizen of hell.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "London",
+    "aliases": [],
+    "facts": [
+      "The press cuttings recorded a nocturnal suicide in London, where a lone sleeper had leaped from a window after a shocking cry."
+    ],
+    "typeGuess": "city",
+    "realWorld": "London, England",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 20,
+        "quote": "Here was a nocturnal suicide in London, where a lone sleeper had leaped from a window after a shocking cry.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "South America",
+    "aliases": [],
+    "facts": [
+      "A fanatic in South America wrote a rambling letter to the editor of a paper, deducing a dire future from visions he had seen."
+    ],
+    "typeGuess": "region",
+    "realWorld": "South America",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 20,
+        "quote": "Here likewise a rambling letter to the editor of a paper in South America, where a fanatic deduces a dire future from visions he has seen.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "California",
+    "aliases": [],
+    "facts": [
+      "A dispatch from California described a theosophist colony donning white robes en masse for some \"glorious fulfilment\" which never arrived."
+    ],
+    "typeGuess": "region",
+    "realWorld": "California, United States",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 20,
+        "quote": "A dispatch from California describes a theosophist colony as donning white robes en masse for some \"glorious fulfilment\" which never arrives, whilst items from India speak guardedly of serious native unrest toward the end of March.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "India",
+    "aliases": [],
+    "facts": [
+      "Items from India spoke guardedly of serious native unrest toward the end of March."
+    ],
+    "typeGuess": "region",
+    "realWorld": "India",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 20,
+        "quote": "A dispatch from California describes a theosophist colony as donning white robes en masse for some \"glorious fulfilment\" which never arrives, whilst items from India speak guardedly of serious native unrest toward the end of March.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Haiti",
+    "aliases": [],
+    "facts": [
+      "Voodoo orgies multiplied in Haiti during the period covered by the press cuttings."
+    ],
+    "typeGuess": "region",
+    "realWorld": "Haiti",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 20,
+        "quote": "Voodoo orgies multiply in Haiti, and African outposts report ominous mutterings.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the Philippines",
+    "aliases": [],
+    "facts": [
+      "American officers in the Philippines found certain tribes bothersome about this time."
+    ],
+    "typeGuess": "region",
+    "realWorld": "the Philippines",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 20,
+        "quote": "American officers in the Philippines find certain tribes bothersome about this time, and New York policemen are mobbed by hysterical Levantines on the night of March 22-23.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "New York",
+    "aliases": [],
+    "facts": [
+      "New York policemen were mobbed by hysterical Levantines on the night of March 22-23."
+    ],
+    "typeGuess": "city",
+    "realWorld": "New York, United States",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 20,
+        "quote": "American officers in the Philippines find certain tribes bothersome about this time, and New York policemen are mobbed by hysterical Levantines on the night of March 22-23.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Ireland",
+    "aliases": [],
+    "facts": [
+      "The west of Ireland was full of wild rumor and legendry."
+    ],
+    "typeGuess": "region",
+    "realWorld": "Ireland",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 20,
+        "quote": "The west of Ireland, too, is full of wild rumor and legendry, and a fantastic painter named Ardois-Bonnot hangs a blasphemous Dream Landscape in the Paris spring salon of 1926.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Paris",
+    "aliases": [],
+    "facts": [
+      "A fantastic painter named Ardois-Bonnot hung a blasphemous Dream Landscape in the Paris spring salon of 1926."
+    ],
+    "typeGuess": "city",
+    "realWorld": "Paris, France",
+    "relatedNames": ["Ardois-Bonnot"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 20,
+        "quote": "The west of Ireland, too, is full of wild rumor and legendry, and a fantastic painter named Ardois-Bonnot hangs a blasphemous Dream Landscape in the Paris spring salon of 1926.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Ardois-Bonnot",
+    "aliases": [],
+    "facts": [
+      "A fantastic painter.",
+      "Hung a blasphemous Dream Landscape in the Paris spring salon of 1926."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["Paris"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 20,
+        "quote": "a fantastic painter named Ardois-Bonnot hangs a blasphemous Dream Landscape in the Paris spring salon of 1926",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "St. Louis",
+    "aliases": [],
+    "facts": [
+      "The American Archeological Society held its annual meeting in St. Louis in 1908.",
+      "Professor Angell had a prominent part in all the deliberations of that meeting."
+    ],
+    "typeGuess": "city",
+    "realWorld": "St. Louis, United States",
+    "relatedNames": ["Professor Angell"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 22,
+        "quote": "This earlier experience had come in 1908, seventeen years before, when the American Archeological Society held its annual meeting in St. Louis. Professor Angell, as befitted one of his authority and attainments, had had a prominent part in all the deliberations; and was one of the first to be approached by the several outsiders who took advantage of the convocation to offer questions for correct answering and problems for expert solution.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  }
+]

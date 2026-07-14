@@ -1,0 +1,364 @@
+[
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "His uncle's long manuscript devoted its second half to the older matters which had made the sculptor's dream and bas-relief so significant to the uncle."
+    ],
+    "typeGuess": "protagonist",
+    "relatedNames": ["Professor Angell"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 21,
+        "quote": "The older matters which had made the sculptor's dream and bas-relief so significant to my uncle formed the subject of the second half of his long manuscript.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Professor Angell",
+    "aliases": ["my uncle"],
+    "facts": [
+      "The second half of his long manuscript dealt with an earlier experience connected to the sculptor's dream and bas-relief.",
+      "Once before, he had seen the hellish outlines of the nameless monstrosity, puzzled over the unknown hieroglyphics, and heard the ominous syllables which can be rendered only as 'Cthulhu'.",
+      "He pursued young Wilcox with queries and demands for data.",
+      "His earlier experience came in 1908, seventeen years before, when the American Archeological Society held its annual meeting in St. Louis.",
+      "He had a prominent part in the deliberations of that meeting and was one of the first to be approached by outsiders offering questions for expert solution."
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": ["The Narrator", "Wilcox", "Cthulhu", "St. Louis", "John Raymond Legrasse"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 21,
+        "quote": "Once before, it appears, Professor Angell had seen the hellish outlines of the nameless monstrosity, puzzled over the unknown hieroglyphics, and heard the ominous syllables which can be rendered only as \"Cthulhu\"; and all this in so stirring and horrible a connection that it is small wonder he pursued young Wilcox with queries and demands for data.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 21,
+        "quote": "The older matters which had made the sculptor's dream and bas-relief so significant to my uncle formed the subject of the second half of his long manuscript.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 22,
+        "quote": "This earlier experience had come in 1908, seventeen years before, when the American Archeological Society held its annual meeting in St. Louis. Professor Angell, as befitted one of his authority and attainments, had had a prominent part in all the deliberations; and was one of the first to be approached by the several outsiders who took advantage of the convocation to offer questions for correct answering and problems for expert solution.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Wilcox",
+    "aliases": [],
+    "facts": [
+      "Professor Angell pursued young Wilcox with queries and demands for data."
+    ],
+    "typeGuess": null,
+    "relatedNames": ["Professor Angell"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 21,
+        "quote": "it is small wonder he pursued young Wilcox with queries and demands for data.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Cthulhu",
+    "aliases": [],
+    "facts": [
+      "Professor Angell had once heard ominous syllables which can be rendered only as 'Cthulhu', in connection with the hellish outlines of the nameless monstrosity and unknown hieroglyphics.",
+      "The word 'Cthulhu' occurs in the phrase chanted by both the Eskimo wizards and the Louisiana swamp-priests to their kindred idols: 'Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.'"
+    ],
+    "typeGuess": null,
+    "relatedNames": ["Professor Angell", "Louisiana"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 21,
+        "quote": "heard the ominous syllables which can be rendered only as \"Cthulhu\"; and all this in so stirring and horrible a connection",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 30,
+        "quote": "What, in substance, both the Eskimo wizards and the Louisiana swamp-priests had chanted to their kindred idols was something very like this",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 31,
+        "quote": "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "St. Louis",
+    "aliases": [],
+    "facts": [
+      "The American Archeological Society held its annual meeting in St. Louis in 1908."
+    ],
+    "typeGuess": "city",
+    "realWorld": "St. Louis, USA",
+    "relatedNames": ["Professor Angell", "John Raymond Legrasse"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 22,
+        "quote": "This earlier experience had come in 1908, seventeen years before, when the American Archeological Society held its annual meeting in St. Louis.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "John Raymond Legrasse",
+    "aliases": ["Inspector Legrasse", "Legrasse", "the inspector"],
+    "facts": [
+      "He was a commonplace-looking middle-aged man who had traveled all the way from New Orleans for certain special information unobtainable from any local source.",
+      "He was by profession an inspector of police.",
+      "He brought a grotesque, repulsive, and apparently very ancient stone statuette whose origin he was at a loss to determine.",
+      "The statuette had been captured some months before in the wooded swamps south of New Orleans during a raid on a supposed voodoo meeting.",
+      "The police realized they had stumbled on a dark cult totally unknown to them, infinitely more diabolic than even the blackest of the African voodoo circles.",
+      "One sight of his statuette threw the assembled men of science into a state of tense excitement.",
+      "The statuette he brought, between seven and eight inches in height, represented a monster of vaguely anthropoid outline with an octopuslike head whose face was a mass of feelers, a scaly rubbery-looking body, prodigious claws on hind and fore feet, and long narrow wings behind.",
+      "He had noted and copied an oral ritual among the swamp cult-worshipers his men had arrested.",
+      "He and the scientist agreed on the virtual identity of the phrase common to the two hellish rituals.",
+      "Several among his mongrel prisoners had repeated to him what older celebrants had told them the chanted words meant."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["New Orleans", "wooded swamps south of New Orleans", "William Channing Webb", "St. Louis", "Professor Angell"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 23,
+        "quote": "The chief of these outsiders, and in a short time the focus of interest for the entire meeting, was a commonplace-looking middle-aged man who had traveled all the way from New Orleans for certain special information unobtainable from any local source. His name was John Raymond Legrasse, and he was by profession an inspector of police. With him he bore the subject of his visit, a grotesque, repulsive, and apparently very ancient stone statuette whose origin he was at a loss to determine.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 24,
+        "quote": "The statuette, idol, fetish, or whatever it was, had been captured some months before in the wooded swamps south of New Orleans during a raid on a supposed voodoo meeting; and so singular and hideous were the rites connected with it, that the police could not but realize that they had stumbled on a dark cult totally unknown to them, and infinitely more diabolic than even the blackest of the African voodoo circles.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 25,
+        "quote": "Inspector Legrasse was scarcely prepared for the sensation which his offering created. One sight of the thing had been enough to throw the assembled men of science into a state of tense excitement",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 26,
+        "quote": "The figure, which was finally passed slowly from man to man for close and careful study, was between seven and eight inches in height, and of exquisitely artistic workmanship. It represented a monster of vaguely anthropoid outline, but with an octopuslike head whose face was a mass of feelers, a scaly, rubbery-looking body, prodigious claws on hind and fore feet, and long, narrow wings behind.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 30,
+        "quote": "Having noted and copied an oral ritual among the swamp cult-worshipers his men had arrested, he besought the professor to remember as best he might the syllables taken down amongst the diabolist Eskimos. There then followed an exhaustive comparison of details, and a moment of really awed silence when both detective and scientist agreed on the virtual identity of the phrase common to two hellish rituals so many worlds of distance apart.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 32,
+        "quote": "Legrasse had one point in advance of Professor Webb, for several among his mongrel prisoners had repeated to him what older celebrants had told them the words meant.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "New Orleans",
+    "aliases": [],
+    "facts": [
+      "John Raymond Legrasse traveled all the way from New Orleans for certain special information.",
+      "The statuette had been captured in the wooded swamps south of New Orleans."
+    ],
+    "typeGuess": "city",
+    "realWorld": "New Orleans, Louisiana, USA",
+    "relatedNames": ["John Raymond Legrasse", "wooded swamps south of New Orleans"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 23,
+        "quote": "a commonplace-looking middle-aged man who had traveled all the way from New Orleans for certain special information unobtainable from any local source",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 24,
+        "quote": "had been captured some months before in the wooded swamps south of New Orleans during a raid on a supposed voodoo meeting",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "wooded swamps south of New Orleans",
+    "aliases": [],
+    "facts": [
+      "The statuette was captured there some months before during a police raid on a supposed voodoo meeting.",
+      "The rites connected with the statuette there were so singular and hideous that the police realized they had stumbled on a dark cult totally unknown to them.",
+      "Legrasse's men arrested swamp cult-worshipers, among whom an oral ritual was noted and copied."
+    ],
+    "typeGuess": "region",
+    "relatedNames": ["New Orleans", "John Raymond Legrasse", "Louisiana"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 24,
+        "quote": "The statuette, idol, fetish, or whatever it was, had been captured some months before in the wooded swamps south of New Orleans during a raid on a supposed voodoo meeting; and so singular and hideous were the rites connected with it, that the police could not but realize that they had stumbled on a dark cult totally unknown to them",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 30,
+        "quote": "Having noted and copied an oral ritual among the swamp cult-worshipers his men had arrested",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "William Channing Webb",
+    "aliases": ["Professor Webb"],
+    "facts": [
+      "He was professor of anthropology in Princeton University and an explorer of no slight note.",
+      "He suspected a touch of bizarre familiarity in the monstrous shape and writing and told with some diffidence of the odd trifle he knew.",
+      "Forty-eight years before, he had toured Greenland and Iceland in search of Runic inscriptions which he failed to unearth.",
+      "High up on the West Greenland coast he had encountered a singular tribe or cult of degenerate Eskimos whose religion, a curious form of devil-worship, chilled him with its bloodthirstiness and repulsiveness.",
+      "He took a careful phonetic copy of a ritual from an aged angekok or wizard-priest, expressing the sounds in Roman letters as best he knew how.",
+      "He stated that the Eskimo cult's fetish was a very crude bas-relief of stone with a hideous picture and cryptic writing, a rough parallel in all essential features of the statuette before the meeting.",
+      "He and the detective agreed on the virtual identity of the phrase common to the two hellish rituals."
+    ],
+    "typeGuess": "scholar",
+    "fate": "Deceased by the time of the narrative (referred to as 'the late William Channing Webb').",
+    "relatedNames": ["John Raymond Legrasse", "Greenland", "Iceland", "tornasuk"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 28,
+        "quote": "there was one man in that gathering who suspected a touch of bizarre familiarity in the monstrous shape and writing, and who presently told with some diffidence of the odd trifle he knew. This person was the late William Channing Webb, professor of anthropology in Princeton University, and an explorer of no slight note.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 29,
+        "quote": "Professor Webb had been engaged, forty-eight years before, in a tour of Greenland and Iceland in search of some Runic inscriptions which he failed to unearth; and whilst high up on the West Greenland coast had encountered a singular tribe or cult of degenerate Eskimos whose religion, a curious form of devil-worship, chilled him with its deliberate bloodthirstiness and repulsiveness.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 29,
+        "quote": "of this Professor Webb had taken a careful phonetic copy from an aged angekok or wizard-priest, expressing the sounds in Roman letters as best he knew how",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 29,
+        "quote": "It was, the professor stated, a very crude bas-relief of stone, comprising a hideous picture and some cryptic writing. And as far as he could tell, it was a rough parallel in all essential features of the bestial thing now lying before the meeting.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 30,
+        "quote": "a moment of really awed silence when both detective and scientist agreed on the virtual identity of the phrase common to two hellish rituals so many worlds of distance apart",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Greenland",
+    "aliases": [],
+    "facts": [
+      "Professor Webb toured Greenland and Iceland forty-eight years before in search of Runic inscriptions.",
+      "High up on the West Greenland coast lived a singular tribe or cult of degenerate Eskimos whose religion was a curious form of devil-worship.",
+      "The Eskimo cult danced around its fetish when the aurora leaped high over the ice cliffs."
+    ],
+    "typeGuess": "region",
+    "realWorld": "Greenland",
+    "relatedNames": ["William Channing Webb", "Iceland", "tornasuk"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 29,
+        "quote": "Professor Webb had been engaged, forty-eight years before, in a tour of Greenland and Iceland in search of some Runic inscriptions which he failed to unearth; and whilst high up on the West Greenland coast had encountered a singular tribe or cult of degenerate Eskimos whose religion, a curious form of devil-worship, chilled him with its deliberate bloodthirstiness and repulsiveness.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 29,
+        "quote": "But just now of prime significance was the fetish which this cult had cherished, and around which they danced when the aurora leaped high over the ice cliffs.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Iceland",
+    "aliases": [],
+    "facts": [
+      "Professor Webb's tour forty-eight years before in search of Runic inscriptions included Iceland."
+    ],
+    "typeGuess": "region",
+    "realWorld": "Iceland",
+    "relatedNames": ["William Channing Webb", "Greenland"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 29,
+        "quote": "Professor Webb had been engaged, forty-eight years before, in a tour of Greenland and Iceland in search of some Runic inscriptions which he failed to unearth",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "tornasuk",
+    "aliases": ["supreme elder devil"],
+    "facts": [
+      "Certain queer hereditary rituals of the degenerate Eskimo cult were addressed to a supreme elder devil or tornasuk.",
+      "Professor Webb took a careful phonetic copy of such a ritual from an aged angekok or wizard-priest."
+    ],
+    "typeGuess": "deity",
+    "relatedNames": ["William Channing Webb", "Greenland"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 29,
+        "quote": "Besides nameless rites and human sacrifices there were certain queer hereditary rituals addressed to a supreme elder devil or tornasuk; and of this Professor Webb had taken a careful phonetic copy from an aged angekok or wizard-priest, expressing the sounds in Roman letters as best he knew how.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Louisiana",
+    "aliases": [],
+    "facts": [
+      "The swamp-priests who chanted the ritual phrase to their kindred idols were of Louisiana."
+    ],
+    "typeGuess": "region",
+    "realWorld": "Louisiana, USA",
+    "relatedNames": ["Cthulhu", "wooded swamps south of New Orleans"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 30,
+        "quote": "What, in substance, both the Eskimo wizards and the Louisiana swamp-priests had chanted to their kindred idols was something very like this",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  }
+]

@@ -1,0 +1,215 @@
+[
+  {
+    "kind": "character",
+    "name": "Johansen",
+    "aliases": [],
+    "facts": [
+      "A Norwegian, called 'the brave Norwegian'.",
+      "Set the Alert's engine for full speed, ran on deck, reversed the wheel, and drove the yacht head on against the pursuing Thing.",
+      "Afterward he only brooded over the idol in the cabin and attended to a few matters of food for himself and the laughing maniac by his side.",
+      "Did not try to navigate after the first bold flight, for the reaction had taken something out of his soul.",
+      "The storm of April 2nd brought a gathering of the clouds about his consciousness.",
+      "Rescue came as the Vigilant, the vice-admiralty court, the streets of Dunedin, and the long voyage back home to the old house by the Egeberg.",
+      "Could not tell what he knew — they would think him mad; he resolved to write of it before death came, but his wife must not guess.",
+      "Felt death would be a boon if only it could blot out the memories."
+    ],
+    "typeGuess": "witness",
+    "fate": "Has died — the narrator says 'as poor Johansen went, so I shall go'.",
+    "relatedNames": ["Cthulhu", "The Narrator", "Dunedin", "Egeberg"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 111,
+        "quote": "Knowing that the Thing could surely overtake the Alert until steam was fully up, he resolved on a desperate chance; and, setting the engine for full speed, ran lightning-like on deck and reversed the wheel. There was a mighty eddying and foaming in the noisome brine, and as the steam mounted higher and higher the brave Norwegian drove his vessel head on against the pursuing jelly which rose above the unclean froth like the stern of a demon galleon.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 114,
+        "quote": "After that Johansen only brooded over the idol in the cabin and attended to a few matters of food for himself and the laughing maniac by his side. He did not try to navigate after the first bold flight, for the reaction had taken something out of his soul. Then came the storm of April 2nd, and a gathering of the clouds about his consciousness.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 115,
+        "quote": "Out of that dream came rescue—the Vigilant, the vice-admiralty court, the streets of Dunedin, and the long voyage back home to the old house by the Egeberg. He could not tell—they would think him mad. He would write of what he knew before death came, but his wife must not guess. Death would be a boon if only it could blot out the memories.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 116,
+        "quote": "As my uncle went, as poor Johansen went, so I shall go.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Cthulhu",
+    "aliases": ["the Thing", "nameless sky-spawn"],
+    "facts": [
+      "Pursued the Alert as a jelly-like mass that rose above the unclean froth like the stern of a demon galleon.",
+      "Its awful squid-head with writhing feelers came nearly up to the bowsprit of the yacht before Johansen rammed it.",
+      "When rammed it burst as of an exploding bladder, with a slushy nastiness, a stench as of a thousand opened graves, and an acrid, blinding green cloud that befouled the ship.",
+      "Its scattered plasticity was nebulously recombining in its hateful original form astern as the Alert drew away.",
+      "Still lives, again in a chasm of stone which has shielded him since the sun was young.",
+      "His accursed city is sunken once more; the Vigilant sailed over the spot after the April storm.",
+      "His ministers on earth still bellow and prance and slay around idol-capped monoliths in lonely places.",
+      "The narrator supposes he was trapped by the sinking whilst within his black abyss, or else the world would by now be screaming with fright and frenzy."
+    ],
+    "typeGuess": "deity",
+    "fate": "Still lives, sunken once more in his chasm of stone; presumed trapped by the sinking whilst within his black abyss.",
+    "relatedNames": ["Johansen", "The Narrator"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 111,
+        "quote": "the brave Norwegian drove his vessel head on against the pursuing jelly which rose above the unclean froth like the stern of a demon galleon. The awful squid-head with writhing feelers came nearly up to the bowsprit of the sturdy yacht, but Johansen drove on relentlessly.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 112,
+        "quote": "There was a bursting as of an exploding bladder, a slushy nastiness as of a cloven sunfish, a stench as of a thousand opened graves, and a sound that the chronicler would not put on paper. For an instant the ship was befouled by an acrid and blinding green cloud, and then there was only a venomous seething astern; where—God in heaven!—the scattered plasticity of that nameless sky-spawn was nebulously recombining in its hateful original form, whilst its distance widened every second as the Alert gained impetus from its mounting steam.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 117,
+        "quote": "Cthulhu still lives, too, I suppose, again in that chasm of stone which has shielded him since the sun was young. His accursed city is sunken once more, for the Vigilant sailed over the spot after the April storm; but his ministers on earth still bellow and prance and slay around idol-capped monoliths in lonely places.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 117,
+        "quote": "He must have been trapped by the sinking whilst within his black abyss, or else the world would by now be screaming with fright and frenzy.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "elder gods",
+    "aliases": [],
+    "facts": [
+      "A cachinnating chorus of the distorted, hilarious elder gods livens the dream-sense of whirling through liquid gulfs that follows the storm of April 2nd."
+    ],
+    "typeGuess": "deity",
+    "relatedNames": ["Johansen", "imps of Tartarus"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 114,
+        "quote": "There is a sense of spectral whirling through liquid gulfs of infinity, of dizzying rides through reeling universes on a comet's tail, and of hysterical plunges from the pit to the moon and from the moon back again to the pit, all livened by a cachinnating chorus of the distorted, hilarious elder gods and the green, bat-winged mocking imps of Tartarus.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "imps of Tartarus",
+    "aliases": [],
+    "facts": [
+      "Green, bat-winged and mocking, they join the cachinnating chorus that livens the dream-sense following the storm of April 2nd."
+    ],
+    "typeGuess": "race",
+    "relatedNames": ["Johansen", "elder gods"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 114,
+        "quote": "all livened by a cachinnating chorus of the distorted, hilarious elder gods and the green, bat-winged mocking imps of Tartarus.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Dunedin",
+    "aliases": [],
+    "facts": [
+      "Johansen's rescue led through the Vigilant, the vice-admiralty court, and the streets of Dunedin."
+    ],
+    "typeGuess": "city",
+    "relatedNames": ["Johansen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 115,
+        "quote": "Out of that dream came rescue—the Vigilant, the vice-admiralty court, the streets of Dunedin, and the long voyage back home to the old house by the Egeberg.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Egeberg",
+    "aliases": ["the Egeberg"],
+    "facts": [
+      "Johansen's long voyage back home ended at the old house by the Egeberg."
+    ],
+    "typeGuess": null,
+    "relatedNames": ["Johansen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 115,
+        "quote": "Out of that dream came rescue—the Vigilant, the vice-admiralty court, the streets of Dunedin, and the long voyage back home to the old house by the Egeberg.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "Read Johansen's document and placed it in the tin box beside the bas-relief and the papers of Professor Angell.",
+      "Is writing his own record — a test of his own sanity — to go with the document, piecing together what he hopes may never be pieced together again.",
+      "Has looked upon all that the universe has to hold of horror, so that even the skies of spring and the flowers of summer must ever afterward be poison to him.",
+      "Does not think his life will be long; he knows too much, and the cult still lives.",
+      "Expects to go as his uncle and Johansen went.",
+      "Prays that if he does not survive the manuscript, his executors will put caution before audacity and see that it meets no other eye."
+    ],
+    "typeGuess": "protagonist",
+    "relatedNames": ["Johansen", "Professor Angell", "Cthulhu"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 116,
+        "quote": "That was the document I read, and now I have placed it in the tin box beside the bas-relief and the papers of Professor Angell. With it shall go this record of mine—this test of my own sanity, wherein is pieced together that which I hope may never be pieced together again.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 116,
+        "quote": "I have looked upon all that the universe has to hold of horror, and even the skies of spring and the flowers of summer must ever afterward be poison to me. But I do not think my life will be long. As my uncle went, as poor Johansen went, so I shall go. I know too much, and the cult still lives.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 117,
+        "quote": "Let me pray that, if I do not survive this manuscript, my executors may put caution before audacity and see that it meets no other eye.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Professor Angell",
+    "aliases": [],
+    "facts": [
+      "His papers lie in the tin box beside the bas-relief, where the narrator also placed Johansen's document."
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": ["The Narrator"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 116,
+        "quote": "That was the document I read, and now I have placed it in the tin box beside the bas-relief and the papers of Professor Angell.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  }
+]

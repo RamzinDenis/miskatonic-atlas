@@ -1,0 +1,29 @@
+{
+  "slug": "boston",
+  "name": "Boston",
+  "type": "city",
+  "map": {
+    "x": 2525,
+    "y": 1264
+  },
+  "summary": "The Massachusetts city named at the head of the account as home of the late Francis Wayland Thurston, and the place to which Professor Angell's files and boxes were moved for study.",
+  "description": "Boston stands at the very head of the record: the account itself was found among the papers of the late Francis Wayland Thurston, of Boston.\n\nIt was also the working seat of the investigation. As his grand-uncle's heir and executor, the narrator was expected to go over Professor Angell's papers with some thoroughness, and for that purpose moved the professor's entire set of files and boxes to his quarters in Boston.",
+  "realWorld": "Boston, Massachusetts, USA",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Found among the papers of the late Francis Wayland Thurston, of Boston.",
+      "paragraph": 2
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "As my granduncle's heir and executor, for he died a childless widower, I was expected to go over his papers with some thoroughness; and for that purpose moved his entire set of files and boxes to my quarters in Boston.",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 6
+    }
+  ]
+}

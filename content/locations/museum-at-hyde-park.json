@@ -1,0 +1,28 @@
+{
+  "slug": "museum-at-hyde-park",
+  "name": "Museum at Hyde Park",
+  "type": "building",
+  "summary": "The Sydney museum preserving the crouching image taken from the Alert — cuttlefish head, dragon body, scaly wings, and hieroglyphed pedestal — which geologists found a monstrous puzzle.",
+  "description": "The crouching image with its cuttlefish head, dragon body, scaly wings, and hieroglyphed pedestal was preserved in the Museum at Hyde Park. The narrator studied it long and well, finding it a thing of balefully exquisite workmanship, with the same utter mystery, terrible antiquity, and unearthly strangeness of material he had noted in Legrasse's smaller specimen.\n\nGeologists, the curator told him, had found it a monstrous puzzle, for they vowed that the world held no rock like it. Possibly the same institution as the \"Museum in College Street\" whose bafflement the Sydney Bulletin clipping reports — the text never says.",
+  "realWorld": "Museum at Hyde Park, Sydney",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [
+    "sydney"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "The crouching image with its cuttlefish head, dragon body, scaly wings, and hieroglyphed pedestal, was preserved in the Museum at Hyde Park; and I studied it long and well, finding it a thing of balefully exquisite workmanship, and with the same utter mystery, terrible antiquity, and unearthly strangeness of material which I had noted in Legrasse's smaller specimen.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 91
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Geologists, the curator told me, had found it a monstrous puzzle; for they vowed that the world held no rock like it.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 91
+    }
+  ]
+}

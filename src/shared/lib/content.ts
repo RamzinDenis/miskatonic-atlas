@@ -10,7 +10,7 @@ import {
   type Creature,
   type Location,
   type Story,
-} from "@/shared/schemas";
+} from "../schemas.ts"; // relative + extension so Node can run this file directly (scripts/validate.mts)
 import type { MapLocation } from "@/widgets/world-map/geometry";
 
 /**
@@ -154,6 +154,44 @@ export function getLocations(): Location[] {
 
 export function getLocation(slug: string): Location | undefined {
   return loadContent().locations.find((l) => l.slug === slug);
+}
+
+export function getCharacters(): Character[] {
+  return loadContent().characters;
+}
+
+export function getCharacter(slug: string): Character | undefined {
+  return loadContent().characters.find((c) => c.slug === slug);
+}
+
+export function getCreatures(): Creature[] {
+  return loadContent().creatures;
+}
+
+export function getCreature(slug: string): Creature | undefined {
+  return loadContent().creatures.find((c) => c.slug === slug);
+}
+
+/** Everything that appears in one story — the story page's table of contents. */
+export function getStoryEntities(storySlug: string): {
+  locations: Location[];
+  characters: Character[];
+  creatures: Creature[];
+} {
+  const content = loadContent();
+  return {
+    locations: content.locations.filter((l) => l.appearsIn.includes(storySlug)),
+    characters: content.characters.filter((c) => c.appearsIn.includes(storySlug)),
+    creatures: content.creatures.filter((c) => c.appearsIn.includes(storySlug)),
+  };
+}
+
+export function getCharactersAt(locationSlug: string): Character[] {
+  return loadContent().characters.filter((c) => c.locations.includes(locationSlug));
+}
+
+export function getCreaturesAt(locationSlug: string): Creature[] {
+  return loadContent().creatures.filter((c) => c.locations.includes(locationSlug));
 }
 
 /** Locations that have map coordinates, shaped for the WorldMap widget. */

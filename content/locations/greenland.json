@@ -1,0 +1,32 @@
+{
+  "slug": "greenland",
+  "name": "Greenland",
+  "type": "region",
+  "map": {
+    "x": 2704,
+    "y": 798
+  },
+  "summary": "The arctic land where Professor Webb, touring in search of Runic inscriptions, encountered high on the West Greenland coast a singular tribe of degenerate Eskimos whose religion was a curious form of devil-worship.",
+  "description": "Professor Webb had been engaged, forty-eight years before the 1908 meeting, in a tour of Greenland and Iceland in search of Runic inscriptions which he failed to unearth. High up on the West Greenland coast he encountered a singular tribe or cult of degenerate Eskimos whose religion, a curious form of devil-worship, chilled him with its deliberate bloodthirstiness and repulsiveness.\n\nOf prime significance was the fetish this cult cherished, around which they danced when the aurora leaped high over the ice cliffs.",
+  "realWorld": "Greenland",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [
+    "iceland"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Professor Webb had been engaged, forty-eight years before, in a tour of Greenland and Iceland in search of some Runic inscriptions which he failed to unearth; and whilst high up on the West Greenland coast had encountered a singular tribe or cult of degenerate Eskimos whose religion, a curious form of devil-worship, chilled him with its deliberate bloodthirstiness and repulsiveness.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 29
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "But just now of prime significance was the fetish which this cult had cherished, and around which they danced when the aurora leaped high over the ice cliffs.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 29
+    }
+  ]
+}

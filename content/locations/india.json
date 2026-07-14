@@ -1,0 +1,24 @@
+{
+  "slug": "india",
+  "name": "India",
+  "type": "region",
+  "map": {
+    "x": 494,
+    "y": 1508
+  },
+  "summary": "Items from India in the press cuttings spoke guardedly of serious native unrest toward the end of March.",
+  "description": "India appears among Professor Angell's press cuttings from the period of the 1925 disturbances: items from the country spoke guardedly of serious native unrest toward the end of March.\n\nThe item stands in the record beside the other scattered cases of the same period gathered from around the world.",
+  "realWorld": "India",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "A dispatch from California describes a theosophist colony as donning white robes en masse for some \"glorious fulfilment\" which never arrives, whilst items from India speak guardedly of serious native unrest toward the end of March.",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 20
+    }
+  ]
+}

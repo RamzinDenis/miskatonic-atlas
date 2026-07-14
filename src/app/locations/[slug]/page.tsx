@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getLocation, getLocations, getStory } from "@/shared/lib/content";
+import {
+  getCharactersAt,
+  getCreaturesAt,
+  getLocation,
+  getLocations,
+  getStory,
+} from "@/shared/lib/content";
+import { ChipSection, SourcesSection } from "@/shared/ui/sections";
 
 export const dynamicParams = false;
 
@@ -26,6 +33,8 @@ export default async function LocationPage({
 
   const connected = location.connectedTo.flatMap((s) => getLocation(s) ?? []);
   const appearsIn = location.appearsIn.flatMap((s) => getStory(s) ?? []);
+  const characters = getCharactersAt(slug);
+  const creatures = getCreaturesAt(slug);
 
   return (
     <article className="mx-auto w-full max-w-3xl px-6 py-16">
@@ -53,54 +62,43 @@ export default async function LocationPage({
         ))}
       </div>
 
-      {connected.length > 0 && (
-        <section className="mt-10">
-          <h2 className="font-serif text-2xl">Connected locations</h2>
-          <ul className="mt-4 flex flex-wrap gap-3">
-            {connected.map((c) => (
-              <li key={c.slug}>
-                <Link
-                  href={`/locations/${c.slug}`}
-                  className="inline-block rounded-md border border-line bg-surface px-4 py-2 text-sm transition-colors hover:border-accent"
-                >
-                  {c.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+      <ChipSection
+        title="Connected locations"
+        items={connected.map((c) => ({ href: `/locations/${c.slug}`, label: c.name }))}
+      />
+      <ChipSection
+        title="Characters"
+        items={characters.map((c) => ({ href: `/characters/${c.slug}`, label: c.name }))}
+      />
+      <ChipSection
+        title="Creatures"
+        items={creatures.map((c) => ({ href: `/creatures/${c.slug}`, label: c.name }))}
+      />
 
-      <section className="mt-10">
-        <h2 className="font-serif text-2xl">Sources</h2>
-        <p className="mt-2 text-sm text-muted">
-          Every fact above traces back to the text.
-        </p>
-        <ul className="mt-4 space-y-6">
-          {location.sources.map((source, i) => {
-            const story = getStory(source.storySlug);
-            return (
-              <li key={i}>
-                <blockquote className="border-l-2 border-accent pl-4 font-serif italic leading-relaxed">
-                  “{source.quote}”
-                </blockquote>
-                <p className="mt-2 pl-4 text-sm text-muted">
-                  {story ? `${story.title} (${story.year})` : source.storySlug}
-                  {source.context && ` — ${source.context}`}
-                </p>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
+      <SourcesSection
+        sources={location.sources.map((source) => {
+          const story = getStory(source.storySlug);
+          return {
+            quote: source.quote,
+            attribution:
+              (story ? `${story.title} (${story.year})` : source.storySlug) +
+              (source.context ? ` — ${source.context}` : ""),
+          };
+        })}
+      />
 
       {appearsIn.length > 0 && (
         <section className="mt-10">
           <h2 className="font-serif text-2xl">Appears in</h2>
-          <ul className="mt-4 space-y-1 text-muted">
+          <ul className="mt-4 space-y-1">
             {appearsIn.map((story) => (
               <li key={story.slug}>
-                {story.title} ({story.year})
+                <Link
+                  href={`/stories/${story.slug}`}
+                  className="text-muted transition-colors hover:text-accent"
+                >
+                  {story.title} ({story.year})
+                </Link>
               </li>
             ))}
           </ul>

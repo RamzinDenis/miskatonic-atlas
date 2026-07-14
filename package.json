@@ -2,11 +2,20 @@
   "name": "miskatonic-atlas",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npm run validate",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "normalize": "node scripts/normalize.mts",
+    "verify-quotes": "node scripts/verify-quotes.mts",
+    "check-drafts": "node scripts/check-drafts.mts",
+    "validate": "node scripts/validate.mts"
+  },
+  "engines": {
+    "node": ">=22.18"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

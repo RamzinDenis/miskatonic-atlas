@@ -1,0 +1,27 @@
+{
+  "slug": "fleur-de-lys-building",
+  "name": "Fleur-de-Lys Building",
+  "type": "building",
+  "summary": "Henry Anthony Wilcox's residence in Thomas Street, Providence — a hideous Victorian imitation of Seventeenth Century Breton architecture among the Colonial houses of the ancient hill.",
+  "description": "The Fleur-de-Lys Building was where the young sculptor Henry Anthony Wilcox lived alone, near the Rhode Island School of Design at which he had latterly been studying sculpture.\n\nWhen the narrator called on Wilcox years after the professor's inquiry, the sculptor still lived alone there. The building stands in Thomas Street — a hideous Victorian imitation of Seventeenth Century Breton architecture which flaunts its stuccoed front amidst the lovely Colonial houses on the ancient hill, under the very shadow of the finest Georgian steeple in America.",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [
+    "providence"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "who had latterly been studying sculpture at the Rhode Island School of Design and living alone at the Fleur-de-Lys Building near that institution",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 11
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Wilcox still lived alone in the Fleur-de-Lys Building in Thomas Street, a hideous Victorian imitation of Seventeenth Century Breton architecture which flaunts its stuccoed front amidst the lovely Colonial houses on the ancient hill, and under the very shadow of the finest Georgian steeple in America.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 59
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "china",
+  "name": "China",
+  "type": "region",
+  "map": {
+    "x": 735,
+    "y": 1361
+  },
+  "summary": "Old Castro claimed to have sailed to strange ports and talked with undying leaders of the cult in the mountains of China.",
+  "description": "China enters the record through the prisoner Castro, who claimed to have sailed to strange ports and talked with undying leaders of the cult in the mountains of China.",
+  "realWorld": "China",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "who claimed to have sailed to strange ports and talked with undying leaders of the cult in the mountains of China",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 49
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "slug": "tornasuk",
+  "name": "tornasuk",
+  "classification": "deity",
+  "summary": "The supreme elder devil to whom the degenerate Eskimo cult of Greenland addressed queer hereditary rituals, besides nameless rites and human sacrifices.",
+  "description": "Among the degenerate Eskimos of Greenland there were, besides nameless rites and human sacrifices, certain queer hereditary rituals addressed to a supreme elder devil or tornasuk.\n\nProfessor Webb took a careful phonetic copy of such a ritual from an aged angekok or wizard-priest, expressing the sounds in Roman letters as best he knew how.",
+  "locations": [
+    "greenland"
+  ],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Besides nameless rites and human sacrifices there were certain queer hereditary rituals addressed to a supreme elder devil or tornasuk; and of this Professor Webb had taken a careful phonetic copy from an aged angekok or wizard-priest, expressing the sounds in Roman letters as best he knew how.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 29
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { getMapLocations, getStories } from "@/shared/lib/content";
 import { WorldMap } from "@/widgets/world-map";
 
@@ -14,7 +15,17 @@ export default function Home() {
           {points.length} location{points.length === 1 ? "" : "s"} charted
         </p>
         <p className="mt-1 text-sm text-foreground/90">
-          {stories.map((s) => `${s.title} (${s.year})`).join(" · ")}
+          {stories.map((s, i) => (
+            <span key={s.slug}>
+              {i > 0 && " · "}
+              <Link
+                href={`/stories/${s.slug}`}
+                className="pointer-events-auto transition-colors hover:text-accent"
+              >
+                {s.title} ({s.year})
+              </Link>
+            </span>
+          ))}
         </p>
       </div>
 

@@ -1,0 +1,27 @@
+{
+  "slug": "white-polypous-thing",
+  "name": "white polypous thing",
+  "classification": "entity",
+  "summary": "A huge, formless white polypous thing with luminous eyes, said in legend to dwell in a hidden lake unglimpsed by mortal sight. It was nightmare itself, and to see it was to die.",
+  "description": "Legend told of a hidden lake unglimpsed by mortal sight, deep in the black haunted woods, in which dwelt a huge, formless white polypous thing with luminous eyes. It was said to have been there before D'Iberville, before La Salle, before the Indians, and before even the wholesome beasts and birds of the woods.\n\nSquatters whispered that bat-winged devils flew up out of caverns in inner earth to worship it at midnight. It was nightmare itself, and to see it was to die; but it made men dream, and so they knew enough to keep away.",
+  "locations": [
+    "black-haunted-woods"
+  ],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "There were legends of a hidden lake unglimpsed by mortal sight, in which dwelt a huge, formless white polypous thing with luminous eyes; and squatters whispered that bat-winged devils flew up out of caverns in inner earth to worship it at midnight.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 38
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "They said it had been there before D'Iberville, before La Salle, before the Indians, and before even the wholesome beasts and birds of the woods. It was nightmare itself, and to see it was to die. But it made men dream, and so they knew enough to keep away.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 38
+    }
+  ]
+}

@@ -1,0 +1,357 @@
+[
+  {
+    "kind": "creature",
+    "name": "Cthulhu",
+    "aliases": [],
+    "facts": [
+      "He is named in the ritual phrase 'Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.'",
+      "He is dead and waits dreaming.",
+      "His house is at R'lyeh.",
+      "The phrase naming him rose in singsong chant from a chorus of hoarse voices at the swamp worship."
+    ],
+    "typeGuess": "deity",
+    "fate": "dead — waits dreaming in his house at R'lyeh, according to the translated ritual phrase",
+    "relatedNames": ["R'lyeh"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 31,
+        "quote": "\"Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.\"",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 33,
+        "quote": "\"In his house at R'lyeh dead Cthulhu waits dreaming.\"",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 39,
+        "quote": "from what seemed a well-drilled chorus of hoarse voices would rise in singsong chant that hideous phrase or ritual",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 40,
+        "quote": "\"Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.\"",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "R'lyeh",
+    "aliases": [],
+    "facts": [
+      "It is named in the ritual phrase 'Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.'",
+      "Dead Cthulhu's house is at R'lyeh, where he waits dreaming."
+    ],
+    "typeGuess": null,
+    "relatedNames": ["Cthulhu"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 31,
+        "quote": "\"Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.\"",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 33,
+        "quote": "\"In his house at R'lyeh dead Cthulhu waits dreaming.\"",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Legrasse",
+    "aliases": ["Inspector Legrasse"],
+    "facts": [
+      "Several among his mongrel prisoners repeated to him what older celebrants had told them the ritual words meant.",
+      "This knowledge gave him one point in advance of Professor Webb.",
+      "In response to a general urgent demand, he related as fully as possible his experience with the swamp worshipers.",
+      "After the cowed squatters refused to advance, he and his nineteen colleagues plunged on unguided into the woods toward the scene of worship.",
+      "He dashed swamp water on the face of a policeman who fainted at the sight of the rite."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": ["Professor Webb", "The Narrator"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 32,
+        "quote": "Legrasse had one point in advance of Professor Webb, for several among his mongrel prisoners had repeated to him what older celebrants had told them the words meant.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 35,
+        "quote": "And now, in response to a general urgent demand, Inspector Legrasse related as fully as possible his experience with the swamp worshipers; telling a story to which I could see my uncle attached profound significance.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 37,
+        "quote": "Reluctant even to be left alone again, each one of the cowed squatters refused point-blank to advance another inch toward the scene of unholy worship, so Inspector Legrasse and his nineteen colleagues plunged on unguided into black arcades of horror that none of them had ever trod before.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 41,
+        "quote": "Legrasse dashed swamp water on the face of the fainting man, and all stood trembling and nearly hypnotized with horror.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Professor Webb",
+    "aliases": [],
+    "facts": [
+      "Legrasse had one point in advance of him — the reported meaning of the ritual words."
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": ["Legrasse"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 32,
+        "quote": "Legrasse had one point in advance of Professor Webb, for several among his mongrel prisoners had repeated to him what older celebrants had told them the words meant.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "He was present when Inspector Legrasse related his experience with the swamp worshipers.",
+      "He could see that his uncle attached profound significance to Legrasse's story."
+    ],
+    "typeGuess": "protagonist",
+    "relatedNames": ["Legrasse"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 35,
+        "quote": "And now, in response to a general urgent demand, Inspector Legrasse related as fully as possible his experience with the swamp worshipers; telling a story to which I could see my uncle attached profound significance.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "New Orleans",
+    "aliases": [],
+    "facts": [
+      "On November 1st, 1907, a frantic summons reached the New Orleans police from the swamp and lagoon country to the south."
+    ],
+    "typeGuess": "city",
+    "realWorld": "New Orleans, Louisiana, USA",
+    "relatedNames": ["swamp and lagoon country"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 36,
+        "quote": "On November 1st, 1907, there had come to New Orleans police a frantic summons from the swamp and lagoon country to the south.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "swamp and lagoon country",
+    "aliases": [],
+    "facts": [
+      "It lies to the south of New Orleans.",
+      "Its squatters were mostly primitive but good-natured descendants of Lafitte's men.",
+      "The squatters were in the grip of stark terror from an unknown thing which had stolen upon them in the night.",
+      "Some of the squatters' women and children disappeared after a malevolent tom-tom began its incessant beating within the black haunted woods."
+    ],
+    "typeGuess": "region",
+    "relatedNames": ["New Orleans", "the black haunted woods", "squatter settlement"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 36,
+        "quote": "On November 1st, 1907, there had come to New Orleans police a frantic summons from the swamp and lagoon country to the south.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 36,
+        "quote": "The squatters there, mostly primitive but good-natured descendants of Lafitte's men, were in the grip of stark terror from an unknown thing which had stolen upon them in the night.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 36,
+        "quote": "some of their women and children had disappeared since the malevolent tom-tom had begun its incessant beating far within the black haunted woods where no dweller ventured",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the black haunted woods",
+    "aliases": ["cypress woods"],
+    "facts": [
+      "No dweller of the swamp country ventured into them.",
+      "The police splashed for miles in silence through the cypress woods, where day never came.",
+      "Piles of dank stones and fragments of rotting walls there hinted at morbid habitation.",
+      "The region entered by the police was of traditionally evil repute, substantially unknown and untraversed by white men.",
+      "Legends placed within it a hidden lake unglimpsed by mortal sight, in which dwelt a huge, formless white polypous thing.",
+      "The voodoo orgy took place on the merest fringe of this abhorred area."
+    ],
+    "typeGuess": "region",
+    "relatedNames": ["swamp and lagoon country", "white polypous thing", "bat-winged devils"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 36,
+        "quote": "some of their women and children had disappeared since the malevolent tom-tom had begun its incessant beating far within the black haunted woods where no dweller ventured",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 37,
+        "quote": "At the end of the passable road they alighted, and for miles splashed on in silence through the terrible cypress woods where day never came.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 37,
+        "quote": "Ugly roots and malignant hanging nooses of Spanish moss beset them, and now and then a pile of dank stones or fragments of a rotting wall intensified by its hint of morbid habitation a depression which every malformed tree and every fungous islet combined to create.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 38,
+        "quote": "The region now entered by the police was one of traditionally evil repute, substantially unknown and untraversed by white men.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 38,
+        "quote": "There were legends of a hidden lake unglimpsed by mortal sight, in which dwelt a huge, formless white polypous thing with luminous eyes",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 38,
+        "quote": "The present voodoo orgy was, indeed, on the merest fringe of this abhorred area, but that location was bad enough; hence perhaps the very place of the worship had terrified the squatters more than the shocking sounds and incidents.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "squatter settlement",
+    "aliases": [],
+    "facts": [
+      "It was a miserable huddle of huts.",
+      "Hysterical dwellers ran out of it to cluster around the lanterns of the police.",
+      "From the settlement the muffled beat of tom-toms was faintly audible far ahead."
+    ],
+    "typeGuess": "town",
+    "relatedNames": ["swamp and lagoon country"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 37,
+        "quote": "At length the squatter settlement, a miserable huddle of huts, hove in sight; and hysterical dwellers ran out to cluster around the group of bobbing lanterns. The muffled beat of tom-toms was now faintly audible far, far ahead; and a curdling shriek came at infrequent intervals when the wind shifted.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "white polypous thing",
+    "aliases": [],
+    "facts": [
+      "It was huge, formless, white and polypous, with luminous eyes.",
+      "According to legend it dwelt in a hidden lake unglimpsed by mortal sight.",
+      "Squatters whispered that bat-winged devils flew up out of caverns in inner earth to worship it at midnight.",
+      "It was said to have been there before D'Iberville, before La Salle, before the Indians, and before even the wholesome beasts and birds of the woods.",
+      "To see it was to die.",
+      "It made men dream, and so they knew enough to keep away."
+    ],
+    "typeGuess": "entity",
+    "relatedNames": ["bat-winged devils", "the black haunted woods"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 38,
+        "quote": "There were legends of a hidden lake unglimpsed by mortal sight, in which dwelt a huge, formless white polypous thing with luminous eyes; and squatters whispered that bat-winged devils flew up out of caverns in inner earth to worship it at midnight.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 38,
+        "quote": "They said it had been there before D'Iberville, before La Salle, before the Indians, and before even the wholesome beasts and birds of the woods. It was nightmare itself, and to see it was to die. But it made men dream, and so they knew enough to keep away.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "bat-winged devils",
+    "aliases": [],
+    "facts": [
+      "Squatters whispered that they flew up out of caverns in inner earth to worship the white polypous thing at midnight."
+    ],
+    "typeGuess": "race",
+    "relatedNames": ["white polypous thing"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 38,
+        "quote": "squatters whispered that bat-winged devils flew up out of caverns in inner earth to worship it at midnight",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "grassy island",
+    "aliases": [],
+    "facts": [
+      "It stood in a natural glade of the swamp.",
+      "It was perhaps an acre in extent, clear of trees and tolerably dry.",
+      "A monstrous ring-shaped bonfire burned on it, with a great granite monolith some eight feet in height at the center.",
+      "The noxious carven statuette rested on top of the monolith.",
+      "From a wide circle of ten scaffolds set at regular intervals around the monolith hung, head downward, the oddly marred bodies of the squatters who had disappeared.",
+      "The ring of worshipers jumped and roared between the ring of bodies and the ring of fire, moving from left to right in endless bacchanale."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["swamp and lagoon country", "the black haunted woods"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 42,
+        "quote": "In a natural glade of the swamp stood a grassy island of perhaps an acre's extent, clear of trees and tolerably dry.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 42,
+        "quote": "Void of clothing, this hybrid spawn were braying, bellowing and writhing about a monstrous ring-shaped bonfire; in the center of which, revealed by occasional rifts in the curtain of flame, stood a great granite monolith some eight feet in height; on top of which, incongruous in its diminutiveness, rested the noxious carven statuette.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 42,
+        "quote": "From a wide circle of ten scaffolds set up at regular intervals with the flame-girt monolith as a center hung, head downward, the oddly marred bodies of the helpless squatters who had disappeared.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 42,
+        "quote": "It was inside this circle that the ring of worshipers jumped and roared, the general direction of the mass motion being from left to right in endless bacchanale between the ring of bodies and the ring of fire.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  }
+]

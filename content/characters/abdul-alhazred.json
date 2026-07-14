@@ -1,0 +1,19 @@
+{
+  "slug": "abdul-alhazred",
+  "name": "Abdul Alhazred",
+  "role": "other",
+  "summary": "The mad Arab, author of the Necronomicon, in which — according to the deathless Chinamen — there are double meanings the initiated might read as they choose.",
+  "description": "Abdul Alhazred is called the mad Arab. The deathless Chinamen said that there were double meanings in his Necronomicon which the initiated might read as they chose.\n\nHe enters the record only at second hand, through what the deathless Chinamen were said to have told Castro of the cult's lore.",
+  "locations": [],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "though the deathless Chinamen said that there were double meanings in the Necronomicon of the mad Arab Abdul Alhazred which the initiated might read as they chose",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 53
+    }
+  ]
+}

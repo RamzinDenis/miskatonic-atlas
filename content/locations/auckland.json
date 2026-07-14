@@ -1,0 +1,39 @@
+{
+  "slug": "auckland",
+  "name": "Auckland",
+  "type": "city",
+  "map": {
+    "x": 1426,
+    "y": 2097
+  },
+  "summary": "The home port of the two-masted schooner Emma, which cleared for Callao on February 20th with eleven men; Johansen returned here with yellow hair turned white before selling his cottage and sailing to Oslo.",
+  "description": "Auckland was the home port of the two-masted schooner Emma, which sailed for Callao on February 20th with a complement of eleven men. The Emma cleared in ballast, and felt the full force of the earthquake-born tempest which must have heaved up from the sea-bottom the horrors that filled men's dreams.\n\nThe Auckland correspondent of the Sydney Bulletin gave the Emma and her crew an excellent reputation, and described Johansen as a sober and worthy man.\n\nIt was to Auckland that Johansen returned, his yellow hair turned white, after a perfunctory and inconclusive questioning at Sydney; there he sold his cottage in West Street and sailed with his wife to his old home in Oslo — which is what the narrator learned when his own search brought him to the city.",
+  "realWorld": "Auckland",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [
+    "callao",
+    "oslo"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "had been second mate of the two-masted schooner Emma of Auckland, which sailed for Callao February 20th, with a complement of eleven men",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 75
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Our Auckland correspondent gives the Emma and her crew an excellent reputation, and Johansen is described as a sober and worthy man.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 83
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "In Auckland I learned that Johansen had returned with yellow hair turned white after a perfunctory and inconclusive questioning at Sydney, and had thereafter sold his cottage in West Street and sailed with his wife to his old home in Oslo.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 90
+    }
+  ]
+}

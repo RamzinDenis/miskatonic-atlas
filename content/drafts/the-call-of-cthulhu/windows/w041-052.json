@@ -1,0 +1,433 @@
+[
+  {
+    "kind": "character",
+    "name": "Legrasse",
+    "aliases": [],
+    "facts": [
+      "Legrasse dashed swamp water on the face of a man who fainted at the sight of the cult ceremony.",
+      "After the raid he counted some forty-seven sullen prisoners and forced them to dress in haste and fall into line between two rows of policemen.",
+      "He carefully removed the image from the monolith and carried it back."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["the swamp"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 41,
+        "quote": "Legrasse dashed swamp water on the face of the fainting man, and all stood trembling and nearly hypnotized with horror.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 44,
+        "quote": "but in the end Legrasse was able to count some forty-seven sullen prisoners, whom he forced to dress in haste and fall into line between two rows of policemen.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 44,
+        "quote": "The image on the monolith, of course, was carefully removed and carried back by Legrasse.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the swamp",
+    "aliases": [],
+    "facts": [
+      "In a natural glade of the swamp stood a grassy island of perhaps an acre's extent, clear of trees and tolerably dry.",
+      "On the island worshipers writhed about a monstrous ring-shaped bonfire, in the center of which stood a great granite monolith some eight feet in height topped by the carven statuette.",
+      "From a wide circle of ten scaffolds set around the monolith hung, head downward, the oddly marred bodies of the helpless squatters who had disappeared."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["Legrasse"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 42,
+        "quote": "In a natural glade of the swamp stood a grassy island of perhaps an acre's extent, clear of trees and tolerably dry.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 42,
+        "quote": "Void of clothing, this hybrid spawn were braying, bellowing and writhing about a monstrous ring-shaped bonfire; in the center of which, revealed by occasional rifts in the curtain of flame, stood a great granite monolith some eight feet in height; on top of which, incongruous in its diminutiveness, rested the noxious carven statuette.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 42,
+        "quote": "From a wide circle of ten scaffolds set up at regular intervals with the flame-girt monolith as a center hung, head downward, the oddly marred bodies of the helpless squatters who had disappeared.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Joseph D. Galvez",
+    "aliases": [],
+    "facts": [
+      "An excitable Spaniard, one of the men at the raid on the swamp ritual.",
+      "He fancied he heard antiphonal responses to the ritual from some far and unillumined spot deeper within the wood.",
+      "He hinted of the faint beating of great wings and of a glimpse of shining eyes and a mountainous white bulk beyond the remotest trees.",
+      "The narrator later met and questioned him, and he proved distractingly imaginative."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": ["The Narrator", "the haunted wood"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 43,
+        "quote": "It may have been only imagination and it may have been only echoes which induced one of the men, an excitable Spaniard, to fancy he heard antiphonal responses to the ritual from some far and unillumined spot deeper within the wood of ancient legendry and horror. This man, Joseph D. Galvez, I later met and questioned; and he proved distractingly imaginative.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 43,
+        "quote": "He indeed went so far as to hint of the faint beating of great wings, and of a glimpse of shining eyes and a mountainous white bulk beyond the remotest trees—but I suppose he had been hearing too much native superstition.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "The narrator later met and questioned Joseph D. Galvez.",
+      "He supposed Galvez had been hearing too much native superstition."
+    ],
+    "typeGuess": "protagonist",
+    "relatedNames": ["Joseph D. Galvez"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 43,
+        "quote": "This man, Joseph D. Galvez, I later met and questioned; and he proved distractingly imaginative.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 43,
+        "quote": "He indeed went so far as to hint of the faint beating of great wings, and of a glimpse of shining eyes and a mountainous white bulk beyond the remotest trees—but I suppose he had been hearing too much native superstition.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the haunted wood",
+    "aliases": ["the wood of ancient legendry and horror"],
+    "facts": [
+      "Joseph D. Galvez fancied he heard antiphonal responses to the ritual from some far and unillumined spot deeper within the wood of ancient legendry and horror.",
+      "The prisoners said the Black-winged Ones came to them from their immemorial meeting-place in the haunted wood."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["Joseph D. Galvez", "Black-winged Ones"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 43,
+        "quote": "to fancy he heard antiphonal responses to the ritual from some far and unillumined spot deeper within the wood of ancient legendry and horror",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 49,
+        "quote": "averred that the killing had been done by Black-winged Ones which had come to them from their immemorial meeting-place in the haunted wood",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Cape Verde Islands",
+    "aliases": [],
+    "facts": [
+      "A sprinkling of the prisoners were largely West Indians or Brava Portuguese from the Cape Verde Islands, which gave a coloring of voodooism to the heterogeneous cult."
+    ],
+    "typeGuess": "region",
+    "realWorld": "Cape Verde Islands",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 45,
+        "quote": "Most were seamen, and a sprinkling of negroes and mulattoes, largely West Indians or Brava Portuguese from the Cape Verde Islands, gave a coloring of voodooism to the heterogeneous cult.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Great Old Ones",
+    "aliases": ["Old Ones", "the Great Ones", "Things"],
+    "facts": [
+      "The cult worshiped the Great Old Ones, who lived ages before there were any men and came to the young world out of the sky.",
+      "The Old Ones were gone now, inside the earth and under the sea.",
+      "Their dead bodies had told their secrets in dreams to the first man, who formed a cult which had never died.",
+      "No man had ever seen the Old Ones.",
+      "In eons before man they ruled on the earth and had great cities; their remains were still to be found as Cyclopean stones on islands in the Pacific.",
+      "They came themselves from the stars and brought their images with them.",
+      "There were arts which could revive them when the stars had come round again to the right positions in the cycle of eternity.",
+      "They were not composed altogether of flesh and blood; they had shape, but that shape was not made of matter.",
+      "When the stars were right they could plunge from world to world through the sky; when the stars were wrong they could not live.",
+      "Although they no longer lived, they would never really die.",
+      "They all lay in stone houses in their great city of R'lyeh, preserved by the spells of mighty Cthulhu, and some force from outside must serve to liberate their bodies.",
+      "They knew all that was occurring in the universe, for their mode of speech was transmitted thought.",
+      "They spoke to the sensitive among the first men by molding their dreams.",
+      "The first men formed the cult around small idols which the Great Ones showed them, brought in dim eras from dark stars.",
+      "Once liberated, the Old Ones would teach mankind new ways to shout and kill and revel."
+    ],
+    "typeGuess": "race",
+    "fate": "No longer alive yet never really dead — lying preserved in stone houses in R'lyeh awaiting resurrection when the stars come right",
+    "relatedNames": ["Cthulhu", "R'lyeh", "Castro", "the Pacific"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 46,
+        "quote": "They worshiped, so they said, the Great Old Ones who lived ages before there were any men, and who came to the young world out of the sky. Those Old Ones were gone now, inside the earth and under the sea; but their dead bodies had told their secrets in dreams to the first man, who formed a cult which had never died.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 47,
+        "quote": "But these were not the Great Old Ones. No man had ever seen the Old Ones.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 50,
+        "quote": "There had been eons when other Things ruled on the earth, and They had had great cities. Remains of Them, he said the deathless Chinamen had told him, were still to be found as Cyclopean stones on islands in the Pacific. They all died vast epochs of time before man came, but there were arts which could revive Them when the stars had come round again to the right positions in the cycle of eternity. They had, indeed, come themselves from the stars, and brought Their images with Them.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 51,
+        "quote": "These Great Old Ones, Castro continued, were not composed altogether of flesh and blood. They had shape—for did not this star-fashioned image prove it?—but that shape was not made of matter. When the stars were right, They could plunge from world to world through the sky; but when the stars were wrong, They could not live. But although They no longer lived, They would never really die.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 51,
+        "quote": "They all lay in stone houses in Their great city of R'lyeh, preserved by the spells of mighty Cthulhu for a glorious resurrection when the stars and the earth might once more be ready for Them. But at that time some force from outside must serve to liberate Their bodies. The spells that preserved Them intact likewise prevented Them from making an initial move, and They could only lie awake in the dark and think whilst uncounted millions of years rolled by. They knew all that was occurring in the universe, for Their mode of speech was transmitted thought.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 51,
+        "quote": "When, after infinities of chaos, the first men came, the Great Old Ones spoke to the sensitive among them by molding their dreams; for only thus could Their language reach the fleshly minds of mammals.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 52,
+        "quote": "Then, whispered Castro, those first men formed the cult around small idols which the Great Ones showed them; idols brought in dim eras from dark stars.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 52,
+        "quote": "Then the liberated Old Ones would teach them new ways to shout and kill and revel and enjoy themselves, and all the earth would flame with a holocaust of ecstasy and freedom.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Cthulhu",
+    "aliases": ["the great priest Cthulhu", "great Cthulhu", "mighty Cthulhu"],
+    "facts": [
+      "The great priest Cthulhu dwelt in his dark house in the mighty city of R'lyeh under the waters.",
+      "He should rise and bring the earth again beneath his sway; some day he would call, when the stars were ready, and the secret cult would always be waiting to liberate him.",
+      "The carven idol was great Cthulhu, but none might say whether or not the others were precisely like him.",
+      "The cult's chant meant: 'In his house at R'lyeh dead Cthulhu waits dreaming.'",
+      "His spells preserved the Great Old Ones in their stone houses in R'lyeh for a glorious resurrection.",
+      "When the stars came right again, the secret priests would take great Cthulhu from his tomb to revive his subjects and resume his rule of earth."
+    ],
+    "typeGuess": "great-old-one",
+    "fate": "Dead but dreaming in his house at R'lyeh, awaiting the time when the stars are ready and the cult liberates him",
+    "relatedNames": ["R'lyeh", "Great Old Ones"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 46,
+        "quote": "the great priest Cthulhu, from his dark house in the mighty city of R'lyeh under the waters, should rise and bring the earth again beneath his sway. Some day he would call, when the stars were ready, and the secret cult would always be waiting to liberate him.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 47,
+        "quote": "The carven idol was great Cthulhu, but none might say whether or not the others were precisely like him.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 47,
+        "quote": "The chant meant only this: \"In his house at R'lyeh dead Cthulhu waits dreaming.\"",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 51,
+        "quote": "They all lay in stone houses in Their great city of R'lyeh, preserved by the spells of mighty Cthulhu for a glorious resurrection when the stars and the earth might once more be ready for Them.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 52,
+        "quote": "That cult would never die till the stars came right again, and the secret priests would take great Cthulhu from His tomb to revive His subjects and resume His rule of earth.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "R'lyeh",
+    "aliases": [],
+    "facts": [
+      "A mighty city under the waters, holding the dark house of the great priest Cthulhu.",
+      "According to the cult's chant, in his house at R'lyeh dead Cthulhu waits dreaming.",
+      "The Great Old Ones all lay in stone houses in their great city of R'lyeh, preserved by the spells of mighty Cthulhu."
+    ],
+    "typeGuess": "city",
+    "relatedNames": ["Cthulhu", "Great Old Ones"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 46,
+        "quote": "the great priest Cthulhu, from his dark house in the mighty city of R'lyeh under the waters, should rise and bring the earth again beneath his sway",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 47,
+        "quote": "The chant meant only this: \"In his house at R'lyeh dead Cthulhu waits dreaming.\"",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 51,
+        "quote": "They all lay in stone houses in Their great city of R'lyeh, preserved by the spells of mighty Cthulhu for a glorious resurrection when the stars and the earth might once more be ready for Them.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Black-winged Ones",
+    "aliases": [],
+    "facts": [
+      "The prisoners all denied a part in the ritual murders and averred that the killing had been done by Black-winged Ones.",
+      "They had come to the worshipers from their immemorial meeting-place in the haunted wood.",
+      "No coherent account of these mysterious allies could ever be gained."
+    ],
+    "typeGuess": "entity",
+    "relatedNames": ["the haunted wood"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 49,
+        "quote": "All denied a part in the ritual murders, and averred that the killing had been done by Black-winged Ones which had come to them from their immemorial meeting-place in the haunted wood. But of those mysterious allies no coherent account could ever be gained.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Castro",
+    "aliases": ["Old Castro"],
+    "facts": [
+      "An immensely aged mestizo prisoner from whom the police extracted most of their information.",
+      "He claimed to have sailed to strange ports and talked with undying leaders of the cult in the mountains of China.",
+      "Old Castro remembered bits of hideous legend that paled the speculations of theosophists and made man and the world seem recent and transient.",
+      "He whispered the account of how the first men formed the cult around small idols which the Great Ones showed them."
+    ],
+    "typeGuess": "cultist",
+    "relatedNames": ["the deathless Chinamen", "China", "Great Old Ones", "Cthulhu"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 49,
+        "quote": "What the police did extract came mainly from an immensely aged mestizo named Castro, who claimed to have sailed to strange ports and talked with undying leaders of the cult in the mountains of China.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 50,
+        "quote": "Old Castro remembered bits of hideous legend that paled the speculations of theosophists and made man and the world seem recent and transient indeed.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 52,
+        "quote": "Then, whispered Castro, those first men formed the cult around small idols which the Great Ones showed them; idols brought in dim eras from dark stars.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "the deathless Chinamen",
+    "aliases": ["undying leaders of the cult"],
+    "facts": [
+      "Undying leaders of the cult dwelling in the mountains of China, with whom Castro claimed to have talked.",
+      "They told Castro that remains of the Things were still to be found as Cyclopean stones on islands in the Pacific."
+    ],
+    "typeGuess": "cultist",
+    "relatedNames": ["Castro", "China", "the Pacific"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 49,
+        "quote": "an immensely aged mestizo named Castro, who claimed to have sailed to strange ports and talked with undying leaders of the cult in the mountains of China",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 50,
+        "quote": "Remains of Them, he said the deathless Chinamen had told him, were still to be found as Cyclopean stones on islands in the Pacific.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "China",
+    "aliases": [],
+    "facts": [
+      "Castro claimed to have talked with undying leaders of the cult in the mountains of China."
+    ],
+    "typeGuess": "region",
+    "realWorld": "China",
+    "relatedNames": ["Castro", "the deathless Chinamen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 49,
+        "quote": "who claimed to have sailed to strange ports and talked with undying leaders of the cult in the mountains of China",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the Pacific",
+    "aliases": [],
+    "facts": [
+      "Remains of the Things that once ruled the earth were still to be found as Cyclopean stones on islands in the Pacific."
+    ],
+    "typeGuess": "sea",
+    "realWorld": "Pacific Ocean",
+    "relatedNames": ["Great Old Ones", "the deathless Chinamen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 50,
+        "quote": "Remains of Them, he said the deathless Chinamen had told him, were still to be found as Cyclopean stones on islands in the Pacific.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  }
+]

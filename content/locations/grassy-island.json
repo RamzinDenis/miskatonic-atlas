@@ -1,0 +1,34 @@
+{
+  "slug": "grassy-island",
+  "name": "grassy island",
+  "type": "other",
+  "summary": "A grassy island of perhaps an acre's extent in a natural glade of the swamp — site of the cult's orgy, with its ring-shaped bonfire, eight-foot granite monolith, and circle of ten scaffolds.",
+  "description": "In a natural glade of the swamp stood a grassy island of perhaps an acre in extent, clear of trees and tolerably dry. On it burned a monstrous ring-shaped bonfire, and at the center of the flames stood a great granite monolith some eight feet in height, on top of which — incongruous in its diminutiveness — rested the noxious carven statuette.\n\nFrom a wide circle of ten scaffolds set at regular intervals around the flame-girt monolith hung, head downward, the oddly marred bodies of the squatters who had disappeared. Inside that circle the ring of worshipers jumped and roared, the mass moving from left to right in endless bacchanale between the ring of bodies and the ring of fire.",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [
+    "swamp-and-lagoon-country",
+    "black-haunted-woods"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "In a natural glade of the swamp stood a grassy island of perhaps an acre's extent, clear of trees and tolerably dry.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 42
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Void of clothing, this hybrid spawn were braying, bellowing and writhing about a monstrous ring-shaped bonfire; in the center of which, revealed by occasional rifts in the curtain of flame, stood a great granite monolith some eight feet in height; on top of which, incongruous in its diminutiveness, rested the noxious carven statuette.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 42
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "From a wide circle of ten scaffolds set up at regular intervals with the flame-girt monolith as a center hung, head downward, the oddly marred bodies of the helpless squatters who had disappeared.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 42
+    }
+  ]
+}

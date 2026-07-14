@@ -1,0 +1,437 @@
+[
+  {
+    "kind": "character",
+    "name": "Johansen",
+    "aliases": ["the brave Norwegian"],
+    "facts": [
+      "Spoke of the city by dwelling only on broad impressions of vast angles and stone surfaces instead of describing any definite structure or building.",
+      "An unlettered seaman who felt the same abnormal geometry whilst gazing at the terrible reality.",
+      "Landed with his men at a sloping mud-bank on the monstrous Acropolis and clambered up over titan oozy blocks.",
+      "Said the immense carved door was like a great barn-door.",
+      "His handwriting almost gave out when he wrote of the Thing's emergence.",
+      "Thinks two of the six men who never reached the ship perished of pure fright.",
+      "Reached the boat with Briden and pulled desperately for the Alert.",
+      "Was wandering deliriously when death found Briden in the cabin.",
+      "Resolved on a desperate chance: set the engine for full speed, ran on deck and reversed the wheel.",
+      "Is Norwegian.",
+      "Drove his vessel head on against the pursuing jelly."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": ["Wilcox", "the city", "Briden", "Parker", "Cthulhu"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 101,
+        "quote": "Without knowing what futurism is like, Johansen achieved something very close to it when he spoke of the city; for instead of describing any definite structure or building, he dwells only on the broad impressions of vast angles and stone surfaces—surfaces too great to belong to anything right or proper for this earth, and impious with horrible images and hieroglyphs.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 101,
+        "quote": "Now an unlettered seaman felt the same thing whilst gazing at the terrible reality.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 102,
+        "quote": "Johansen and his men landed at a sloping mud-bank on this monstrous Acropolis, and clambered slipperily up over titan oozy blocks which could have been no mortal staircase.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 104,
+        "quote": "It was, Johansen said, like a great barn-door; and they all felt that it was a door because of the ornate lintel, threshold, and jambs around it, though they could not decide whether it lay flat like a trap-door or slantwise like an outside cellar-door.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 108,
+        "quote": "Poor Johansen's handwriting almost gave out when he wrote of this. Of the six men who never reached the ship, he thinks two perished of pure fright in that accursed instant.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 109,
+        "quote": "So only Briden and Johansen reached the boat, and pulled desperately for the Alert as the mountainous monstrosity flopped down the slimy stones and hesitated floundering at the edge of the water.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 110,
+        "quote": "Briden looked back and went mad, laughing shrilly as he kept on laughing at intervals till death found him one night in the cabin whilst Johansen was wandering deliriously.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 111,
+        "quote": "But Johansen had not given out yet. Knowing that the Thing could surely overtake the Alert until steam was fully up, he resolved on a desperate chance; and, setting the engine for full speed, ran lightning-like on deck and reversed the wheel.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 111,
+        "quote": "There was a mighty eddying and foaming in the noisome brine, and as the steam mounted higher and higher the brave Norwegian drove his vessel head on against the pursuing jelly which rose above the unclean froth like the stern of a demon galleon.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Wilcox",
+    "aliases": [],
+    "facts": [
+      "Had told the narrator of his awful dreams.",
+      "Said the geometry of the dream-place he saw was abnormal, non-Euclidean, and loathsomely redolent of spheres and dimensions apart from ours.",
+      "Raved with fever in the telepathic instant of the Thing's emergence."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": ["The Narrator", "Johansen", "Cthulhu"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 101,
+        "quote": "I mention his talk about angles because it suggests something Wilcox had told me of his awful dreams. He had said that the geometry of the dream-place he saw was abnormal, non-Euclidean, and loathsomely redolent of spheres and dimensions apart from ours.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 108,
+        "quote": "A mountain walked or stumbled. God! What wonder that across the earth a great architect went mad, and poor Wilcox raved with fever in that telepathic instant?",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "Had been told by Wilcox of Wilcox's awful dreams.",
+      "Compares Johansen's talk about the city's angles with what Wilcox had told him."
+    ],
+    "typeGuess": "protagonist",
+    "relatedNames": ["Wilcox", "Johansen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 101,
+        "quote": "I mention his talk about angles because it suggests something Wilcox had told me of his awful dreams.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the city",
+    "aliases": ["this monstrous Acropolis", "that poison city of madness"],
+    "facts": [
+      "Composed of vast angles and stone surfaces too great to belong to anything right or proper for this earth.",
+      "Impious with horrible images and hieroglyphs.",
+      "Sea-soaked; a polarizing miasma welling out from it made the very sun of heaven seem distorted.",
+      "Its crazily elusive angles of carven rock showed concavity on a second glance after a first glance showed convexity.",
+      "Johansen and his men landed there at a sloping mud-bank and climbed titan oozy blocks that could have been no mortal staircase.",
+      "Contains a monolith with an immense carved door bearing a squid-dragon bas-relief.",
+      "One could not be sure that the sea and the ground were horizontal there, so the relative position of everything seemed fantasmally variable.",
+      "Its rocks are green-crusted.",
+      "The masonry of its charnel shore was not of earth."
+    ],
+    "typeGuess": "city",
+    "relatedNames": ["Johansen", "Rodriguez", "Cthulhu"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 101,
+        "quote": "Without knowing what futurism is like, Johansen achieved something very close to it when he spoke of the city; for instead of describing any definite structure or building, he dwells only on the broad impressions of vast angles and stone surfaces—surfaces too great to belong to anything right or proper for this earth, and impious with horrible images and hieroglyphs.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 102,
+        "quote": "Johansen and his men landed at a sloping mud-bank on this monstrous Acropolis, and clambered slipperily up over titan oozy blocks which could have been no mortal staircase.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 102,
+        "quote": "The very sun of heaven seemed distorted when viewed through the polarizing miasma welling out from this sea-soaked perversion, and twisted menace and suspense lurked leeringly in those crazily elusive angles of carven rock where a second glance showed concavity after the first showed convexity.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 104,
+        "quote": "It was Rodriguez the Portuguese who climbed up the foot of the monolith and shouted of what he had found. The rest followed him, and looked curiously at the immense carved door with the now familiar squid-dragon bas-relief.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 104,
+        "quote": "As Wilcox would have said, the geometry of the place was all wrong. One could not be sure that the sea and the ground were horizontal, hence the relative position of everything else seemed fantasmally variable.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 107,
+        "quote": "Everyone listened, and everyone was listening still when It lumbered slobberingly into sight and gropingly squeezed Its gelatinous green immensity through the black doorway into the tainted outside air of that poison city of madness.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 109,
+        "quote": "Parker slipped as the other three were plunging frenziedly over endless vistas of green-crusted rock to the boat, and Johansen swears he was swallowed up by an angle of masonry which shouldn't have been there; an angle which was acute, but behaved as if it were obtuse.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 110,
+        "quote": "whilst on the masonry of that charnel shore that was not of earth the titan Thing from the stars slavered and gibbered like Polypheme cursing the fleeing ship of Odysseus.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Rodriguez",
+    "aliases": ["Rodriguez the Portuguese"],
+    "facts": [
+      "Portuguese.",
+      "Climbed up the foot of the monolith and shouted of what he had found.",
+      "His find was the immense carved door with the now familiar squid-dragon bas-relief."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["Johansen", "the city"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 104,
+        "quote": "It was Rodriguez the Portuguese who climbed up the foot of the monolith and shouted of what he had found. The rest followed him, and looked curiously at the immense carved door with the now familiar squid-dragon bas-relief.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Briden",
+    "aliases": [],
+    "facts": [
+      "Pushed at the stone door in several places without result.",
+      "One of only two men, with Johansen, to reach the boat and pull for the Alert.",
+      "Looked back at the pursuer and went mad, laughing shrilly at intervals.",
+      "Death found him one night in the cabin whilst Johansen was wandering deliriously."
+    ],
+    "typeGuess": "other",
+    "fate": "Went mad after looking back; death found him one night in the cabin.",
+    "relatedNames": ["Johansen", "Cthulhu"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 105,
+        "quote": "Briden pushed at the stone in several places without result.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 109,
+        "quote": "So only Briden and Johansen reached the boat, and pulled desperately for the Alert as the mountainous monstrosity flopped down the slimy stones and hesitated floundering at the edge of the water.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 110,
+        "quote": "Briden looked back and went mad, laughing shrilly as he kept on laughing at intervals till death found him one night in the cabin whilst Johansen was wandering deliriously.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Donovan",
+    "aliases": [],
+    "facts": [
+      "Felt over the stone door delicately around the edge, pressing each point separately.",
+      "Climbed interminably along the grotesque stone molding until the acre-great panel began to give inward at the top.",
+      "Slid or somehow propelled himself down or along the jamb and rejoined his fellows.",
+      "One of three men swept up by the flabby claws before anybody turned."
+    ],
+    "typeGuess": "other",
+    "fate": "Swept up by the flabby claws.",
+    "relatedNames": ["Briden", "Guerrera", "Angstrom", "Cthulhu"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 105,
+        "quote": "Then Donovan felt over it delicately around the edge, pressing each point separately as he went. He climbed interminably along the grotesque stone molding—that is, one would call it climbing if the thing was not after all horizontal—and the men wondered how any door in the universe could be so vast. Then, very softly and slowly, the acre-great panel began to give inward at the top; and they saw that it was balanced.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 106,
+        "quote": "Donovan slid or somehow propelled himself down or along the jamb and rejoined his fellows, and everyone watched the queer recession of the monstrously carven portal.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 109,
+        "quote": "Three men were swept up by the flabby claws before anybody turned. God rest them, if there be any rest in the universe. They were Donovan, Guerrera and Angstrom.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Hawkins",
+    "aliases": [],
+    "facts": [
+      "Quick-eared.",
+      "Thought he heard a nasty, slopping sound down in the newly opened depths."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 107,
+        "quote": "The odor arising from the newly opened depths was intolerable, and at length the quick-eared Hawkins thought he heard a nasty, slopping sound down there.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Cthulhu",
+    "aliases": [
+      "It",
+      "The Thing",
+      "The Thing of the idols",
+      "the green, sticky spawn of the stars",
+      "the mountainous monstrosity",
+      "the titan Thing from the stars",
+      "that nameless sky-spawn"
+    ],
+    "facts": [
+      "Lumbered slobberingly into sight and gropingly squeezed Its gelatinous green immensity through the black doorway.",
+      "Can not be described; there is no language for such eldritch contradictions of all matter, force, and cosmic order.",
+      "Its movement was that of a mountain walking or stumbling.",
+      "Is the Thing of the idols, the green, sticky spawn of the stars, awaked to claim his own.",
+      "The stars were right again at its awakening.",
+      "Was set loose by accident by a band of innocent sailors, where an age-old cult had failed to do it by design.",
+      "Was loose again after vigintillions of years, ravening for delight.",
+      "Its flabby claws swept up three men — Donovan, Guerrera and Angstrom.",
+      "Slavered and gibbered on the masonry of the charnel shore as the ship got away.",
+      "Slid greasily into the water and pursued with vast wave-raising strokes of cosmic potency.",
+      "Has an awful squid-head with writhing feelers.",
+      "Burst like an exploding bladder when the vessel drove into it, befouling the ship with an acrid and blinding green cloud.",
+      "Its scattered plasticity was nebulously recombining in its hateful original form after bursting."
+    ],
+    "typeGuess": "entity",
+    "fate": "Rammed head on by the Alert and burst, but its scattered plasticity was nebulously recombining in its hateful original form as the ship drew away.",
+    "relatedNames": ["Johansen", "Briden", "Donovan", "Guerrera", "Angstrom", "Wilcox", "the city"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 107,
+        "quote": "Everyone listened, and everyone was listening still when It lumbered slobberingly into sight and gropingly squeezed Its gelatinous green immensity through the black doorway into the tainted outside air of that poison city of madness.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 108,
+        "quote": "The Thing can not be described—there is no language for such abysms of shrieking and immemorial lunacy, such eldritch contradictions of all matter, force, and cosmic order. A mountain walked or stumbled.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 108,
+        "quote": "The Thing of the idols, the green, sticky spawn of the stars, had awaked to claim his own. The stars were right again, and what an age-old cult had failed to do by design, a band of innocent sailors had done by accident. After vigintillions of years great Cthulhu was loose again, and ravening for delight.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 109,
+        "quote": "Three men were swept up by the flabby claws before anybody turned. God rest them, if there be any rest in the universe. They were Donovan, Guerrera and Angstrom.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 110,
+        "quote": "whilst on the masonry of that charnel shore that was not of earth the titan Thing from the stars slavered and gibbered like Polypheme cursing the fleeing ship of Odysseus.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 110,
+        "quote": "Then, bolder than the storied Cyclops, great Cthulhu slid greasily into the water and began to pursue with vast wave-raising strokes of cosmic potency.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 111,
+        "quote": "The awful squid-head with writhing feelers came nearly up to the bowsprit of the sturdy yacht, but Johansen drove on relentlessly.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 112,
+        "quote": "There was a bursting as of an exploding bladder, a slushy nastiness as of a cloven sunfish, a stench as of a thousand opened graves, and a sound that the chronicler would not put on paper. For an instant the ship was befouled by an acrid and blinding green cloud, and then there was only a venomous seething astern; where—God in heaven!—the scattered plasticity of that nameless sky-spawn was nebulously recombining in its hateful original form, whilst its distance widened every second as the Alert gained impetus from its mounting steam.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Guerrera",
+    "aliases": [],
+    "facts": [
+      "One of three men swept up by the flabby claws before anybody turned."
+    ],
+    "typeGuess": "other",
+    "fate": "Swept up by the flabby claws.",
+    "relatedNames": ["Donovan", "Angstrom", "Cthulhu"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 109,
+        "quote": "Three men were swept up by the flabby claws before anybody turned. God rest them, if there be any rest in the universe. They were Donovan, Guerrera and Angstrom.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Angstrom",
+    "aliases": [],
+    "facts": [
+      "One of three men swept up by the flabby claws before anybody turned."
+    ],
+    "typeGuess": "other",
+    "fate": "Swept up by the flabby claws.",
+    "relatedNames": ["Donovan", "Guerrera", "Cthulhu"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 109,
+        "quote": "Three men were swept up by the flabby claws before anybody turned. God rest them, if there be any rest in the universe. They were Donovan, Guerrera and Angstrom.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Parker",
+    "aliases": [],
+    "facts": [
+      "Slipped as the other three men were plunging frenziedly over endless vistas of green-crusted rock to the boat.",
+      "Johansen swears he was swallowed up by an angle of masonry which shouldn't have been there — an angle which was acute, but behaved as if it were obtuse."
+    ],
+    "typeGuess": "other",
+    "fate": "Swallowed up by an angle of masonry, as Johansen swears.",
+    "relatedNames": ["Johansen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 109,
+        "quote": "Parker slipped as the other three were plunging frenziedly over endless vistas of green-crusted rock to the boat, and Johansen swears he was swallowed up by an angle of masonry which shouldn't have been there; an angle which was acute, but behaved as if it were obtuse.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  }
+]

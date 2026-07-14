@@ -1,0 +1,24 @@
+{
+  "slug": "ireland",
+  "name": "Ireland",
+  "type": "region",
+  "map": {
+    "x": 3118,
+    "y": 1104
+  },
+  "summary": "The west of Ireland was full of wild rumor and legendry during the period covered by Professor Angell's press cuttings.",
+  "description": "Ireland appears among Professor Angell's press cuttings from the period of the disturbances: the west of the country was full of wild rumor and legendry.\n\nThe cutting places it in the same catalogue as Ardois-Bonnot's blasphemous Dream Landscape of the Paris spring salon — signs of the same worldwide unease.",
+  "realWorld": "Ireland",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "The west of Ireland, too, is full of wild rumor and legendry, and a fantastic painter named Ardois-Bonnot hangs a blasphemous Dream Landscape in the Paris spring salon of 1926.",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 20
+    }
+  ]
+}

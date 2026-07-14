@@ -2,12 +2,20 @@
   "slug": "providence",
   "name": "Providence",
   "type": "city",
-  "map": { "x": 2522, "y": 1270 },
+  "map": {
+    "x": 2522,
+    "y": 1270
+  },
   "summary": "The Rhode Island city where the investigation begins and ends: home of Professor George Gammell Angell, whose posthumous papers frame the story, and of the sculptor Henry Anthony Wilcox, whose fevered dreams first hint at R'lyeh.",
-  "description": "Providence anchors the entire narrative. Professor George Gammell Angell, Emeritus of Semitic languages at Brown University, dies here in the winter of 1926–27, and the locked box of notes he leaves behind — the manuscript headed \"CTHULHU CULT\" — sets his grand-nephew on the trail.\n\nIt is also the home of Henry Anthony Wilcox, a young sculptor at the Rhode Island School of Design living alone at the Fleur-de-Lys Building on Thomas Street. During the earthquake tremors of March 1925 his dreams of a damp Cyclopean city produced the bas-relief that first connected the artist's nightmares to the cult chant recorded decades earlier. The narrator later returns to Providence to question Wilcox in those same rooms.",
+  "description": "Providence anchors the entire narrative. Professor George Gammell Angell, Emeritus of Semitic languages at Brown University, dies here in the winter of 1926–27, and the locked box of notes he leaves behind — the manuscript headed \"CTHULHU CULT\" — sets his grand-nephew on the trail.\n\nIt is also the home of Henry Anthony Wilcox, a young sculptor at the Rhode Island School of Design living alone at the Fleur-de-Lys Building on Thomas Street. During the earthquake tremors of March 1925 his dreams of a damp Cyclopean city produced the bas-relief that first connected the artist's nightmares to the cult chant recorded decades earlier. The narrator later returns to Providence to question Wilcox in those same rooms.\n\nAngell's death itself belongs to the city's streets: he was stricken whilst returning from the Newport boat, falling after being jostled by a nautical-looking negro from one of the queer dark courts on the precipitous hillside that formed a short cut from the waterfront to his home in Williams Street. The Wilcox case likewise unfolds address by address — the manuscript heading places the dreamer at 7 Thomas Street; during his strange fever of March 1925 he was taken to his family's home in Waterman Street, and Professor Angell called often at the Thayer Street office of Dr. Tobey, the physician in charge.",
   "realWorld": "Providence, Rhode Island, USA",
-  "appearsIn": ["the-call-of-cthulhu"],
-  "connectedTo": ["rlyeh"],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [
+    "rlyeh",
+    "fleur-de-lys-building"
+  ],
   "sources": [
     {
       "storySlug": "the-call-of-cthulhu",
@@ -18,6 +26,18 @@
       "storySlug": "the-call-of-cthulhu",
       "quote": "His card bore the name of Henry Anthony Wilcox, and my uncle had recognized him as the youngest son of an excellent family slightly known to him, who had latterly been studying sculpture at the Rhode Island School of Design and living alone at the Fleur-de-Lys Building near that institution.",
       "context": "Chapter 1, The Horror in Clay"
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "The professor had been stricken whilst returning from the Newport boat; falling suddenly, as witnesses said, after having been jostled by a nautical-looking negro who had come from one of the queer dark courts on the precipitous hillside which formed a short cut from the waterfront to the deceased's home in Williams Street.",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 5
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "inquiries at his quarters revealed that he had been stricken with an obscure sort of fever and taken to the home of his family in Waterman Street",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 15
     }
   ]
 }

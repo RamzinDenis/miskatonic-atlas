@@ -1,0 +1,21 @@
+{
+  "slug": "hawkins",
+  "name": "Hawkins",
+  "role": "other",
+  "summary": "The quick-eared sailor of the landing party who first thought he heard the nasty, slopping sound down in the newly opened depths.",
+  "description": "When the acre-great door had swung and the odor arising from the newly opened depths grew intolerable, it was the quick-eared Hawkins who thought he heard a nasty, slopping sound down there.\n\nThe manuscript records nothing further of him individually.",
+  "locations": [
+    "rlyeh"
+  ],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "The odor arising from the newly opened depths was intolerable, and at length the quick-eared Hawkins thought he heard a nasty, slopping sound down there.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 107
+    }
+  ]
+}

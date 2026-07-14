@@ -1,0 +1,23 @@
+{
+  "slug": "san-francisco",
+  "name": "San Francisco",
+  "type": "city",
+  "map": {
+    "x": 2031,
+    "y": 1322
+  },
+  "summary": "The city for which the narrator took a train after a day of hurried cabling and arranging, setting out on the trail of the Alert's story.",
+  "description": "After a day of hurried cabling and arranging, the narrator bade his host adieu and took a train for San Francisco.",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "That evening, after a day of hurried cabling and arranging, I bade my host adieu and took a train for San Francisco.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 89
+    }
+  ]
+}

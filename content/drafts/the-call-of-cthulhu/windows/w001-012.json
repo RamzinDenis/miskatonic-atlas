@@ -1,0 +1,539 @@
+[
+  {
+    "kind": "character",
+    "name": "Francis Wayland Thurston",
+    "aliases": [],
+    "facts": [
+      "The account was found among his papers; he is called \"the late\" Francis Wayland Thurston.",
+      "He was of Boston.",
+      "George Gammell Angell, who died in the winter of 1926-27, was his grand-uncle.",
+      "His knowledge of the matter began in the winter of 1926-27 with Professor Angell's death.",
+      "He was his grand-uncle's heir and executor.",
+      "He moved Professor Angell's entire set of files and boxes to his quarters in Boston.",
+      "Among the papers he found a puzzling locked box, whose key was on the personal ring the professor always carried in his pocket.",
+      "The box contained a queer clay bas-relief and disjointed jottings, ramblings, and cuttings.",
+      "He resolved to search out the eccentric sculptor responsible for the bas-relief.",
+      "His single glimpse of forbidden eons flashed out from an accidental piecing together of an old newspaper item and the notes of a dead professor.",
+      "He hoped no one else would accomplish this piecing together, and vowed never to knowingly supply a link in so hideous a chain."
+    ],
+    "typeGuess": "protagonist",
+    "fate": "Deceased — the account is presented as found among the papers of \"the late\" Francis Wayland Thurston.",
+    "relatedNames": ["George Gammell Angell", "Boston"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 2,
+        "quote": "Found among the papers of the late Francis Wayland Thurston, of Boston."
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 4,
+        "quote": "That glimpse, like all dread glimpses of truth, flashed out from an accidental piecing together of separated things—in this case an old newspaper item and the notes of a dead professor.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 4,
+        "quote": "I hope that no one else will accomplish this piecing out; certainly, if I live, I shall never knowingly supply a link in so hideous a chain.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 5,
+        "quote": "My knowledge of the thing began in the winter of 1926-27 with the death of my grand-uncle, George Gammell Angell, Professor Emeritus of Semitic languages in Brown University, Providence, Rhode Island.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 6,
+        "quote": "As my granduncle's heir and executor, for he died a childless widower, I was expected to go over his papers with some thoroughness; and for that purpose moved his entire set of files and boxes to my quarters in Boston.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 6,
+        "quote": "It had been locked, and I did not find the key till it occurred to me to examine the personal ring which the professor carried always in his pocket.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 6,
+        "quote": "For what could be the meaning of the queer clay bas-relief and the disjointed jottings, ramblings, and cuttings which I found?",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 6,
+        "quote": "I resolved to search out the eccentric sculptor responsible for this apparent disturbance of an old man's peace of mind.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Boston",
+    "aliases": [],
+    "facts": [
+      "Francis Wayland Thurston, among whose papers the account was found, was of Boston.",
+      "The narrator's quarters, to which he moved Professor Angell's files and boxes, were in Boston."
+    ],
+    "typeGuess": "city",
+    "realWorld": "Boston, Massachusetts, USA",
+    "relatedNames": ["Francis Wayland Thurston"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 2,
+        "quote": "Found among the papers of the late Francis Wayland Thurston, of Boston."
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 6,
+        "quote": "As my granduncle's heir and executor, for he died a childless widower, I was expected to go over his papers with some thoroughness; and for that purpose moved his entire set of files and boxes to my quarters in Boston.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "George Gammell Angell",
+    "aliases": ["Professor Angell", "the professor"],
+    "facts": [
+      "He was the narrator's grand-uncle.",
+      "He was Professor Emeritus of Semitic languages in Brown University, Providence, Rhode Island.",
+      "He died in the winter of 1926-27.",
+      "He was widely known as an authority on ancient inscriptions and was frequently resorted to by the heads of prominent museums.",
+      "He died at the age of ninety-two, and local interest was intensified by the obscurity of the cause of death.",
+      "He was stricken whilst returning from the Newport boat, falling suddenly after having been jostled by a nautical-looking negro.",
+      "Physicians found no visible disorder and concluded that an obscure lesion of the heart, induced by the brisk ascent of a steep hill, was responsible for the end.",
+      "His home was in Williams Street, reached by a short cut from the waterfront through queer dark courts on a precipitous hillside.",
+      "He died a childless widower.",
+      "The narrator believed the professor intended to keep silent regarding what he knew and would have destroyed his notes had sudden death not seized him.",
+      "The writing accompanying the bas-relief was in his most recent hand and made no pretense to literary style.",
+      "His main document was headed \"CTHULHU CULT\" in painstakingly printed characters.",
+      "His manuscript was divided into two sections: the 1925 dream and dream work of H. A. Wilcox, and the narrative of Inspector John R. Legrasse with notes on it and Prof. Webb's account.",
+      "On March 1st, 1925, a thin, dark young man — Henry Anthony Wilcox — called upon him bearing the singular clay bas-relief, then exceedingly damp and fresh.",
+      "He recognized Wilcox as the youngest son of an excellent family slightly known to him.",
+      "Wilcox's rejoinder impressed him enough to make him recall and record it verbatim."
+    ],
+    "typeGuess": "scholar",
+    "fate": "Died in the winter of 1926-27, aged ninety-two, stricken after being jostled by a nautical-looking negro; physicians blamed an obscure lesion of the heart, and the cause of death remained obscure.",
+    "relatedNames": [
+      "Francis Wayland Thurston",
+      "Henry Anthony Wilcox",
+      "John R. Legrasse",
+      "Prof. Webb",
+      "Brown University",
+      "Providence",
+      "Williams Street"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 5,
+        "quote": "My knowledge of the thing began in the winter of 1926-27 with the death of my grand-uncle, George Gammell Angell, Professor Emeritus of Semitic languages in Brown University, Providence, Rhode Island.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 5,
+        "quote": "Professor Angell was widely known as an authority on ancient inscriptions, and had frequently been resorted to by the heads of prominent museums; so that his passing at the age of ninety-two may be recalled by many.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 5,
+        "quote": "Locally, interest was intensified by the obscurity of the cause of death.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 5,
+        "quote": "The professor had been stricken whilst returning from the Newport boat; falling suddenly, as witnesses said, after having been jostled by a nautical-looking negro who had come from one of the queer dark courts on the precipitous hillside which formed a short cut from the waterfront to the deceased's home in Williams Street.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 5,
+        "quote": "Physicians were unable to find any visible disorder, but concluded after perplexed debate that some obscure lesion of the heart, induced by the brisk ascent of so steep a hill by so elderly a man, was responsible for the end.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 6,
+        "quote": "As my granduncle's heir and executor, for he died a childless widower, I was expected to go over his papers with some thoroughness",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 4,
+        "quote": "I think that the professor, too, intended to keep silent regarding the part he knew, and that he would have destroyed his notes had not sudden death seized him.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 9,
+        "quote": "The writing accompanying this oddity was, aside from a stack of press cuttings, in Professor Angell's most recent hand; and made no pretense to literary style.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 9,
+        "quote": "What seemed to be the main document was headed \"CTHULHU CULT\" in characters painstakingly printed to avoid the erroneous reading of a word so unheard-of.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 9,
+        "quote": "This manuscript was divided into two sections, the first of which was headed \"1925—Dream and Dream Work of H. A. Wilcox, 7 Thomas St., Providence, R. I.,\" and the second, \"Narrative of Inspector John R. Legrasse, 121 Bienville St., New Orleans, La., at 1908 A. A. S. Mtg—Notes on Same, & Prof. Webb's Acct.\"",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 11,
+        "quote": "It appears that on March 1st, 1925, a thin, dark young man of neurotic and excited aspect had called upon Professor Angell bearing the singular clay bas-relief, which was then exceedingly damp and fresh.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 11,
+        "quote": "His card bore the name of Henry Anthony Wilcox, and my uncle had recognized him as the youngest son of an excellent family slightly known to him",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 12,
+        "quote": "Young Wilcox's rejoinder, which impressed my uncle enough to make him recall and record it verbatim, was of a fantastically poetic cast which must have typified his whole conversation, and which I have since found highly characteristic of him.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Providence",
+    "aliases": [],
+    "facts": [
+      "Brown University, where George Gammell Angell was Professor Emeritus, is in Providence, Rhode Island.",
+      "H. A. Wilcox's address, per the heading of Professor Angell's manuscript, was 7 Thomas St., Providence, R. I."
+    ],
+    "typeGuess": "city",
+    "realWorld": "Providence, Rhode Island, USA",
+    "relatedNames": ["Brown University", "Thomas St.", "George Gammell Angell", "Henry Anthony Wilcox"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 5,
+        "quote": "My knowledge of the thing began in the winter of 1926-27 with the death of my grand-uncle, George Gammell Angell, Professor Emeritus of Semitic languages in Brown University, Providence, Rhode Island.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 9,
+        "quote": "the first of which was headed \"1925—Dream and Dream Work of H. A. Wilcox, 7 Thomas St., Providence, R. I.,\"",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Brown University",
+    "aliases": [],
+    "facts": [
+      "George Gammell Angell was Professor Emeritus of Semitic languages in Brown University.",
+      "It is in Providence, Rhode Island."
+    ],
+    "typeGuess": "building",
+    "realWorld": "Brown University, Providence, Rhode Island, USA",
+    "relatedNames": ["George Gammell Angell", "Providence"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 5,
+        "quote": "My knowledge of the thing began in the winter of 1926-27 with the death of my grand-uncle, George Gammell Angell, Professor Emeritus of Semitic languages in Brown University, Providence, Rhode Island.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Williams Street",
+    "aliases": [],
+    "facts": [
+      "The home of the deceased Professor Angell was in Williams Street.",
+      "A short cut from the waterfront, through queer dark courts on a precipitous hillside, led to Williams Street."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["George Gammell Angell"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 5,
+        "quote": "The professor had been stricken whilst returning from the Newport boat; falling suddenly, as witnesses said, after having been jostled by a nautical-looking negro who had come from one of the queer dark courts on the precipitous hillside which formed a short cut from the waterfront to the deceased's home in Williams Street.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "monster",
+    "aliases": [],
+    "facts": [
+      "A figure of evidently pictorial intent was depicted above apparent hieroglyphics on the clay bas-relief.",
+      "The figure seemed to be a sort of monster, or a symbol representing a monster, of a form which only a diseased fancy could conceive.",
+      "To the narrator's imagination it yielded simultaneous pictures of an octopus, a dragon, and a human caricature.",
+      "A pulpy, tentacled head surmounted a grotesque and scaly body with rudimentary wings.",
+      "The general outline of the whole made it most shockingly frightful.",
+      "Behind the figure was a vague suggestion of a Cyclopean architectural background."
+    ],
+    "typeGuess": null,
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 8,
+        "quote": "Above these apparent hieroglyphics was a figure of evidently pictorial intent, though its impressionistic execution forbade a very clear idea of its nature.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 8,
+        "quote": "It seemed to be a sort of monster, or symbol representing a monster, of a form which only a diseased fancy could conceive.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 8,
+        "quote": "If I say that my somewhat extravagant imagination yielded simultaneous pictures of an octopus, a dragon, and a human caricature, I shall not be unfaithful to the spirit of the thing.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 8,
+        "quote": "A pulpy, tentacled head surmounted a grotesque and scaly body with rudimentary wings; but it was the general outline of the whole which made it most shockingly frightful.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 8,
+        "quote": "Behind the figure was a vague suggestion of a Cyclopean architectural background.",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Henry Anthony Wilcox",
+    "aliases": ["H. A. Wilcox", "Wilcox"],
+    "facts": [
+      "The first section of Professor Angell's manuscript was headed \"1925—Dream and Dream Work of H. A. Wilcox, 7 Thomas St., Providence, R. I.\"",
+      "On March 1st, 1925, he called upon Professor Angell bearing the singular clay bas-relief, which was then exceedingly damp and fresh.",
+      "He was a thin, dark young man of neurotic and excited aspect.",
+      "His card bore the name of Henry Anthony Wilcox.",
+      "He was the youngest son of an excellent family slightly known to Professor Angell.",
+      "He had latterly been studying sculpture at the Rhode Island School of Design.",
+      "He lived alone at the Fleur-de-Lys Building near the Rhode Island School of Design.",
+      "He was a precocious youth of known genius but great eccentricity, and from childhood excited attention through the strange stories and odd dreams he related.",
+      "He called himself \"psychically hypersensitive\"; the staid folk of the ancient commercial city dismissed him as merely \"queer\".",
+      "Never mingling much with his kind, he had dropped gradually from social visibility and was known only to a small group of esthetes from other towns.",
+      "Even the Providence Art Club, anxious to preserve its conservatism, had found him quite hopeless.",
+      "On his visit he abruptly asked Professor Angell to identify the hieroglyphics on the bas-relief, speaking in a dreamy, stilted manner.",
+      "He said he made the bas-relief the night before in a dream of strange cities, and that dreams are older than brooding Tyre, the contemplative Sphinx, or garden-girdled Babylon."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "George Gammell Angell",
+      "Rhode Island School of Design",
+      "Fleur-de-Lys Building",
+      "Providence",
+      "Thomas St."
+    ],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 9,
+        "quote": "the first of which was headed \"1925—Dream and Dream Work of H. A. Wilcox, 7 Thomas St., Providence, R. I.,\"",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 11,
+        "quote": "It appears that on March 1st, 1925, a thin, dark young man of neurotic and excited aspect had called upon Professor Angell bearing the singular clay bas-relief, which was then exceedingly damp and fresh.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 11,
+        "quote": "His card bore the name of Henry Anthony Wilcox, and my uncle had recognized him as the youngest son of an excellent family slightly known to him, who had latterly been studying sculpture at the Rhode Island School of Design and living alone at the Fleur-de-Lys Building near that institution.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 11,
+        "quote": "Wilcox was a precocious youth of known genius but great eccentricity, and had from childhood excited attention through the strange stories and odd dreams he was in the habit of relating.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 11,
+        "quote": "He called himself \"psychically hypersensitive\", but the staid folk of the ancient commercial city dismissed him as merely \"queer\".",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 11,
+        "quote": "Never mingling much with his kind, he had dropped gradually from social visibility, and was now known only to a small group of esthetes from other towns.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 11,
+        "quote": "Even the Providence Art Club, anxious to preserve its conservatism, had found him quite hopeless.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 12,
+        "quote": "On the occasion of the visit, ran the professor's manuscript, the sculptor abruptly asked for the benefit of his host's archeological knowledge in identifying the hieroglyphics on the bas-relief.",
+        "context": "Chapter 1, The Horror in Clay"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 12,
+        "quote": "He said, \"It is new, indeed, for I made it last night in a dream of strange cities; and dreams are older than brooding Tyre, or the contemplative Sphinx, or garden-girdled Babylon.\"",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "John R. Legrasse",
+    "aliases": ["Inspector John R. Legrasse"],
+    "facts": [
+      "He was an Inspector.",
+      "His address was given as 121 Bienville St., New Orleans, La.",
+      "The second section of Professor Angell's manuscript was headed with his narrative, given at the 1908 A. A. S. meeting, together with notes on it and Prof. Webb's account."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": ["George Gammell Angell", "Prof. Webb", "New Orleans", "Bienville St."],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 9,
+        "quote": "and the second, \"Narrative of Inspector John R. Legrasse, 121 Bienville St., New Orleans, La., at 1908 A. A. S. Mtg—Notes on Same, & Prof. Webb's Acct.\"",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Prof. Webb",
+    "aliases": [],
+    "facts": [
+      "He was a professor.",
+      "An account by him (\"Prof. Webb's Acct.\") was named in the heading of the second section of Professor Angell's manuscript, alongside Inspector Legrasse's narrative."
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": ["George Gammell Angell", "John R. Legrasse"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 9,
+        "quote": "and the second, \"Narrative of Inspector John R. Legrasse, 121 Bienville St., New Orleans, La., at 1908 A. A. S. Mtg—Notes on Same, & Prof. Webb's Acct.\"",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Thomas St.",
+    "aliases": [],
+    "facts": [
+      "H. A. Wilcox's address, per the heading of Professor Angell's manuscript, was 7 Thomas St., Providence, R. I."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["Henry Anthony Wilcox", "Providence"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 9,
+        "quote": "the first of which was headed \"1925—Dream and Dream Work of H. A. Wilcox, 7 Thomas St., Providence, R. I.,\"",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "New Orleans",
+    "aliases": [],
+    "facts": [
+      "Inspector John R. Legrasse's address was given as 121 Bienville St., New Orleans, La."
+    ],
+    "typeGuess": "city",
+    "realWorld": "New Orleans, Louisiana, USA",
+    "relatedNames": ["John R. Legrasse", "Bienville St."],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 9,
+        "quote": "and the second, \"Narrative of Inspector John R. Legrasse, 121 Bienville St., New Orleans, La., at 1908 A. A. S. Mtg—Notes on Same, & Prof. Webb's Acct.\"",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Bienville St.",
+    "aliases": [],
+    "facts": [
+      "Inspector John R. Legrasse's address was 121 Bienville St., New Orleans, La."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["John R. Legrasse", "New Orleans"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 9,
+        "quote": "and the second, \"Narrative of Inspector John R. Legrasse, 121 Bienville St., New Orleans, La., at 1908 A. A. S. Mtg—Notes on Same, & Prof. Webb's Acct.\"",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Rhode Island School of Design",
+    "aliases": [],
+    "facts": [
+      "Henry Anthony Wilcox had latterly been studying sculpture at the Rhode Island School of Design.",
+      "The Fleur-de-Lys Building, where Wilcox lived alone, is near the institution."
+    ],
+    "typeGuess": "building",
+    "relatedNames": ["Henry Anthony Wilcox", "Fleur-de-Lys Building"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 11,
+        "quote": "who had latterly been studying sculpture at the Rhode Island School of Design and living alone at the Fleur-de-Lys Building near that institution",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Fleur-de-Lys Building",
+    "aliases": [],
+    "facts": [
+      "Henry Anthony Wilcox lived alone at the Fleur-de-Lys Building.",
+      "It is near the Rhode Island School of Design."
+    ],
+    "typeGuess": "building",
+    "relatedNames": ["Henry Anthony Wilcox", "Rhode Island School of Design"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 11,
+        "quote": "who had latterly been studying sculpture at the Rhode Island School of Design and living alone at the Fleur-de-Lys Building near that institution",
+        "context": "Chapter 1, The Horror in Clay"
+      }
+    ]
+  }
+]

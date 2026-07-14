@@ -2,12 +2,22 @@
   "slug": "sydney",
   "name": "Sydney",
   "type": "city",
-  "map": { "x": 1189, "y": 2066 },
+  "map": {
+    "x": 1189,
+    "y": 2066
+  },
   "summary": "The Australian port where the freighter Vigilant towed the derelict yacht Alert with its lone survivor, and where the narrator later inspected the vessel and questioned the vice-admiralty court.",
-  "description": "Sydney enters the story through a clipping from the Sydney Bulletin of April 18, 1925: the Morrison Co.'s freighter Vigilant arrived in Darling Harbour towing the battered, heavily armed steam yacht Alert of Dunedin, found adrift with one dead man and one half-delirious survivor aboard — Gustaf Johansen, second mate of the lost schooner Emma. The stone idol he clutched baffled the authorities at Sydney University, the Royal Society, and the College Street museum alike.\n\nRetracing his grand-uncle's inquiry, the narrator later travelled to Sydney himself, talked fruitlessly with seamen and members of the vice-admiralty court, and saw the Alert — sold into commercial use — lying at Circular Quay in Sydney Cove.",
+  "description": "Sydney enters the story through a clipping from the Sydney Bulletin of April 18, 1925: the Morrison Co.'s freighter Vigilant arrived in Darling Harbour towing the battered, heavily armed steam yacht Alert of Dunedin, found adrift with one dead man and one half-delirious survivor aboard — Gustaf Johansen, second mate of the lost schooner Emma. The stone idol he clutched baffled the authorities at Sydney University, the Royal Society, and the College Street museum alike.\n\nRetracing his grand-uncle's inquiry, the narrator later travelled to Sydney himself, talked fruitlessly with seamen and members of the vice-admiralty court, and saw the Alert — sold into commercial use — lying at Circular Quay in Sydney Cove.\n\nIt was at Sydney, too, that Johansen underwent a perfunctory and inconclusive questioning before returning to Auckland with his yellow hair turned white. And the idol taken from the Alert stayed in the city: the crouching image with its cuttlefish head, dragon body, scaly wings and hieroglyphed pedestal was preserved in the Museum at Hyde Park, where the narrator studied it long and well.",
   "realWorld": "Sydney, New South Wales, Australia",
-  "appearsIn": ["the-call-of-cthulhu"],
-  "connectedTo": ["rlyeh"],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [
+    "rlyeh",
+    "dunedin",
+    "valparaiso",
+    "museum-at-hyde-park"
+  ],
   "sources": [
     {
       "storySlug": "the-call-of-cthulhu",
@@ -18,6 +28,12 @@
       "storySlug": "the-call-of-cthulhu",
       "quote": "After that I went to Sydney and talked profitlessly with seamen and members of the vice-admiralty court. I saw the Alert, now sold and in commercial use, at Circular Quay in Sydney Cove, but gained nothing from its non-committal bulk.",
       "context": "Chapter 3, The Madness from the Sea"
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "In Auckland I learned that Johansen had returned with yellow hair turned white after a perfunctory and inconclusive questioning at Sydney",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 90
     }
   ]
 }

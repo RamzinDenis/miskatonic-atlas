@@ -1,0 +1,24 @@
+{
+  "slug": "haiti",
+  "name": "Haiti",
+  "type": "region",
+  "map": {
+    "x": 2509,
+    "y": 1529
+  },
+  "summary": "During the period covered by the press cuttings, voodoo orgies multiplied in Haiti.",
+  "description": "Haiti appears among Professor Angell's press cuttings from the period of the 1925 disturbances: voodoo orgies multiplied there.\n\nThe cutting notes it in the same breath as the ominous mutterings reported from African outposts — part of the worldwide pattern the professor's collection traced.",
+  "realWorld": "Haiti",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Voodoo orgies multiply in Haiti, and African outposts report ominous mutterings.",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 20
+    }
+  ]
+}

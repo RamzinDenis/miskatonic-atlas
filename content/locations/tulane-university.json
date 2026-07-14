@@ -1,0 +1,20 @@
+{
+  "slug": "tulane-university",
+  "name": "Tulane University",
+  "type": "building",
+  "summary": "The university whose authorities, consulted by Inspector Legrasse, could shed no light upon either the cult or the image.",
+  "description": "The authorities at Tulane University could shed no light upon either the cult or the image when Legrasse sought answers about his swamp-caught statuette.\n\nThe fruitless consultation belongs to the inspector's hunt for the idol's meaning, recounted in the Tale of Inspector Legrasse — the failure that eventually carried him to the archaeologists.",
+  "realWorld": "Tulane University",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "The authorities at Tulane University could shed no light upon either cult or image",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 55
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "slug": "cthulhu",
+  "name": "Cthulhu",
+  "classification": "great-old-one",
+  "summary": "The great priest Cthulhu lies dead but dreaming in his dark house in the mighty city of R'lyeh under the waters, preserving the Great Old Ones by his spells and speaking to the sensitive through their dreams. When the stars came right again, a band of innocent sailors set him loose by accident where an age-old cult had failed by design.",
+  "description": "Cthulhu is the great priest who dwells in his dark house in the mighty city of R'lyeh under the waters, where he lies with his hordes hidden in green slimy vaults. His spells preserve the Great Old Ones in their stone houses for a glorious resurrection, and some day, when the stars are ready, he will call, and his secret cult — always waiting to liberate him — will take him from his tomb to revive his subjects and resume his rule of earth. The chant of that cult, heard alike from Eskimo wizards and Louisiana swamp-priests as 'Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn', means: in his house at R'lyeh dead Cthulhu waits dreaming. The carven idol seized at the swamp worship was great Cthulhu himself, though none might say whether or not the others were precisely like him.\n\nThough dead, he is not silent. From the corpse-city, after cycles incalculable, came the thoughts that spread fear to the dreams of the sensitive and called imperiously to the faithful on a pilgrimage of liberation and restoration. In Wilcox's dreams the calling sounded as a ceaseless, half-mental voice from underground — 'Cthulhu fhtagn' — syllables Professor Angell had heard once before in a stirring and horrible connection; and the young sculptor molded in his sleep the form of the dreaded Cthulhu: a figure yielding simultaneous pictures of an octopus, a dragon, and a human caricature, a pulpy, tentacled head surmounting a grotesque and scaly body with rudimentary wings, set against a vague suggestion of a Cyclopean architectural background. In his fever the same object walked or lumbered as a gigantic thing 'miles high', and dreamers elsewhere confessed acute fear of the gigantic nameless thing visible toward the last.\n\nWhen the stars came right again, what an age-old cult had failed to do by design a band of innocent sailors did by accident. The Thing of the idols, the green, sticky spawn of the stars, gropingly squeezed its gelatinous green immensity through the black doorway of the monolith-crowned citadel where it lay buried — a mountain that walked or stumbled, beyond description in any language for such eldritch contradictions of all matter, force, and cosmic order. Its flabby claws swept up three of Johansen's men; it slid greasily into the water and pursued the fleeing Alert with vast wave-raising strokes of cosmic potency, the awful squid-head with writhing feelers coming nearly up to the bowsprit before Johansen rammed it. It burst like an exploding bladder, befouling the ship in an acrid and blinding green cloud, yet astern the scattered plasticity was nebulously recombining in its hateful original form. Cthulhu still lives, again in the chasm of stone which has shielded him since the sun was young; his accursed city is sunken once more, he presumably trapped by the sinking whilst within his black abyss, while his ministers on earth still bellow and prance and slay around idol-capped monoliths in lonely places.",
+  "locations": [
+    "rlyeh"
+  ],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "fate": "Sunken with R'lyeh once more; dead but dreaming — presumably trapped by the sinking whilst within his black abyss.",
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "\"In his house at R'lyeh dead Cthulhu waits dreaming.\"",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 33
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "the great priest Cthulhu, from his dark house in the mighty city of R'lyeh under the waters, should rise and bring the earth again beneath his sway. Some day he would call, when the stars were ready, and the secret cult would always be waiting to liberate him.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 46
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "The Thing of the idols, the green, sticky spawn of the stars, had awaked to claim his own. The stars were right again, and what an age-old cult had failed to do by design, a band of innocent sailors had done by accident. After vigintillions of years great Cthulhu was loose again, and ravening for delight.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 108
+    }
+  ]
+}

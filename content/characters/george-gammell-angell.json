@@ -1,0 +1,35 @@
+{
+  "slug": "george-gammell-angell",
+  "name": "George Gammell Angell",
+  "role": "scholar",
+  "summary": "Professor Emeritus of Semitic languages at Brown University and an authority on ancient inscriptions, whose locked box — the clay bas-relief and the manuscript headed \"CTHULHU CULT\" — sets the whole record in motion; he died obscurely in the winter of 1926-27, aged ninety-two.",
+  "description": "George Gammell Angell, Professor Emeritus of Semitic languages in Brown University, Providence, Rhode Island, was widely known as an authority on ancient inscriptions and frequently resorted to by the heads of prominent museums. He died a childless widower in the winter of 1926-27, at the age of ninety-two: stricken whilst returning from the Newport boat, falling suddenly after having been jostled by a nautical-looking negro come from one of the queer dark courts on the precipitous hillside that formed a short cut from the waterfront to his home in Williams Street. Physicians, finding no visible disorder, concluded that an obscure lesion of the heart was responsible; the narrator came to think the professor died because he knew too much, or because he was likely to learn too much, and believed he would have destroyed his notes had sudden death not seized him.\n\nAmong his papers lay a locked box, its key on the personal ring he always carried, holding a queer clay bas-relief and a manuscript in his most recent hand headed \"CTHULHU CULT\" in painstakingly printed characters, divided into two sections: the 1925 dream and dream work of H. A. Wilcox, and the narrative of Inspector John R. Legrasse at the 1908 A. A. S. meeting, with notes on it and Professor Webb's account. When young Wilcox brought him the fresh bas-relief on March 1st, 1925, Angell questioned the sculptor with scientific minuteness and studied the piece with almost frantic intensity, first trying to connect his visitor with strange cults or societies under repeated promises of silence, then — once convinced of the youth's ignorance of any cryptic lore — besieging him with demands for future reports of dreams. Through Wilcox's fever he kept close watch of the case, calling often at the Thayer Street office of Dr. Tobey; he instituted a prodigiously far-flung body of inquiries amongst nearly all the friends he could question without impertinence, asking for nightly reports of their dreams, and must have employed a cutting bureau, for the number of press extracts was tremendous and their sources scattered throughout the globe.\n\nThe urgency had an older root. At the American Archeological Society's 1908 annual meeting in St. Louis, where he had a prominent part in all the deliberations and was among the first approached by outsiders with questions and problems, he had once before seen the hellish outlines of the nameless monstrosity, puzzled over the unknown hieroglyphics, and heard the ominous syllables which can be rendered only as \"Cthulhu\" — a connection stirring and horrible enough to explain his pursuit of young Wilcox with queries and demands for data. His papers now lie in the tin box beside the bas-relief, where the narrator also placed Johansen's document.",
+  "locations": [
+    "providence",
+    "st-louis"
+  ],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "fate": "Died in the winter of 1926-27, aged ninety-two, stricken after being jostled by a nautical-looking negro while returning from the Newport boat; physicians laid it to an obscure lesion of the heart, but the narrator thinks he died because he knew too much, or because he was likely to learn too much.",
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "My knowledge of the thing began in the winter of 1926-27 with the death of my grand-uncle, George Gammell Angell, Professor Emeritus of Semitic languages in Brown University, Providence, Rhode Island.",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 5
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "This manuscript was divided into two sections, the first of which was headed \"1925—Dream and Dream Work of H. A. Wilcox, 7 Thomas St., Providence, R. I.,\" and the second, \"Narrative of Inspector John R. Legrasse, 121 Bienville St., New Orleans, La., at 1908 A. A. S. Mtg—Notes on Same, & Prof. Webb's Acct.\"",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 9
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "I think Professor Angell died because he knew too much, or because he was likely to learn too much.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 65
+    }
+  ]
+}

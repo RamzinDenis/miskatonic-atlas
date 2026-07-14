@@ -1,0 +1,32 @@
+{
+  "slug": "imps-of-tartarus",
+  "name": "imps of Tartarus",
+  "classification": "race",
+  "summary": "Green, bat-winged, mocking imps that join the cachinnating chorus of the elder gods in the dream-sense following the storm of April 2nd.",
+  "description": "In the dream-sense of spectral whirling through liquid gulfs that follows the storm of April 2nd in Johansen's record, the cachinnating chorus of the distorted, hilarious elder gods is livened also by the green, bat-winged mocking imps of Tartarus.\n\nThey are green, bat-winged and mocking; nothing else is told of them outside this delirious interval.",
+  "locations": [],
+  "appearsIn": ["the-call-of-cthulhu"],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "all livened by a cachinnating chorus of the distorted, hilarious elder gods and the green, bat-winged mocking imps of Tartarus.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 114
+    }
+  ],
+  "_draft": {
+    "aliases": [],
+    "occurrences": 1,
+    "windows": ["w111-117"],
+    "facts": [
+      "Green, bat-winged and mocking, they join the cachinnating chorus that livens the dream-sense following the storm of April 2nd."
+    ],
+    "needsReview": [
+      {
+        "field": "identity",
+        "reason": "Figures of the dream-delirium after the storm of April 2nd; the epithet 'bat-winged' echoes the bat-winged devils of the swamp legend (w031-042), but no record connects them — possibly figurative rather than distinct beings.",
+        "candidates": ["separate entity (current)", "junk (figurative)"]
+      }
+    ]
+  }
+}

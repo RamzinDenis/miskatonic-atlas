@@ -1,0 +1,38 @@
+{
+  "slug": "london",
+  "name": "London",
+  "type": "city",
+  "map": {
+    "x": 3208,
+    "y": 1134
+  },
+  "summary": "Site of a nocturnal suicide among the press cuttings of spring 1925 — a lone sleeper leaping from a window after a shocking cry — and later the narrator's port of call en route to Oslo.",
+  "description": "London first appears among Professor Angell's press cuttings from the period of Wilcox's delirium: a nocturnal suicide in which a lone sleeper leaped from a window after a shocking cry.\n\nThe city returns near the end of the investigation as a waypoint: resolving to visit Mate Johansen, the narrator sailed for London and re-embarked at once for the Norwegian capital, and it was on the London boat, homeward bound, that he began to read the manuscript Johansen's widow had surrendered.",
+  "realWorld": "London, England",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [
+    "oslo"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Here was a nocturnal suicide in London, where a lone sleeper had leaped from a window after a shocking cry.",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 20
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Sailing for London, I re-embarked at once for the Norwegian capital",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 92
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Persuading the widow that my connection with her husband's \"technical matters\" was sufficient to entitle me to his manuscript, I bore the document away and began to read it on the London boat.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 95
+    }
+  ]
+}

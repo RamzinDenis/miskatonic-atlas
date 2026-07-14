@@ -1,0 +1,34 @@
+{
+  "slug": "henry-anthony-wilcox",
+  "name": "Henry Anthony Wilcox",
+  "role": "witness",
+  "summary": "The young Providence sculptor whose fevered dreams of a damp Cyclopean city produced the clay bas-relief that opened Professor Angell's inquiry; he emerged unharmed from his strange fever on April 2nd, 1925, the date on which all dreams of the dank city ceased.",
+  "description": "Henry Anthony Wilcox was a thin, dark young man of neurotic and excited aspect, the youngest son of an excellent family slightly known to Professor Angell, who had latterly been studying sculpture at the Rhode Island School of Design and lived alone at the Fleur-de-Lys Building in Thomas Street. A precocious youth of known genius but great eccentricity, he had from childhood excited attention through the strange stories and odd dreams he related; he called himself \"psychically hypersensitive\", the staid folk of the ancient commercial city dismissed him as merely \"queer\", and even the Providence Art Club had found him quite hopeless. On March 1st, 1925, he called upon Professor Angell bearing a singular clay bas-relief, then exceedingly damp and fresh, abruptly asking help with its hieroglyphics: he had made it the night before in a dream of strange cities, for dreams, he said, are older than brooding Tyre, the contemplative Sphinx, or garden-girdled Babylon.\n\nAfter that first interview he called daily, relating startling fragments of nocturnal imagery whose burden was always some terrible Cyclopean vista of dark and dripping stone. On March 23rd he failed to appear: stricken with an obscure sort of fever, he had been taken to the home of his family in Waterman Street, where he cried out in the night, arousing several other artists in the building, and thereafter showed only alternations of unconsciousness and delirium. On April 2nd at about 3 p. m. every trace of the malady suddenly ceased — the date on which all dreams of the dank city ceased, and the telepathic instant of the Thing's emergence in which he raved with fever, the same date on which a widely known architect with leanings toward theosophy and occultism went violently insane, expiring several months later after incessant screamings to be saved from some escaped denizen of hell. Pronounced well by his physician, Wilcox returned to his quarters in three days, completely ignorant of what had happened since the night of March 22nd, and was of no further assistance to the professor.\n\nWhen the narrator later sought him out — still in the Fleur-de-Lys Building; dark, frail, and somewhat unkempt, turning languidly at the knock — the visit dispelled all suspicion of imposture. He spoke of the dreams in a manner none could mistake, showed a morbid statue whose outlines had formed themselves insensibly under his hands, and talked in a strangely poetic fashion of the damp Cyclopean city of slimy green stone whose geometry was all wrong — abnormal, non-Euclidean, loathsomely redolent of spheres and dimensions apart from ours — and of the ceaseless, half-mental calling from underground: \"Cthulhu fhtagn.\" He really knew nothing of the hidden cult save what Professor Angell's relentless catechism had let fall; the narrator concluded that he had heard of it in some casual way and soon forgotten it, so that his imposture upon the old man had been a very innocent one, and admitted both his genius and his honesty.",
+  "locations": [
+    "providence"
+  ],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "fate": "Recovered suddenly on April 2nd, 1925, emerging unharmed from the bondage of strange fever; all traces of strange dreaming vanished with his recovery.",
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "It appears that on March 1st, 1925, a thin, dark young man of neurotic and excited aspect had called upon Professor Angell bearing the singular clay bas-relief, which was then exceedingly damp and fresh. His card bore the name of Henry Anthony Wilcox, and my uncle had recognized him as the youngest son of an excellent family slightly known to him, who had latterly been studying sculpture at the Rhode Island School of Design and living alone at the Fleur-de-Lys Building near that institution.",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 11
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "On April 2nd at about 3 p. m. every trace of Wilcox's malady suddenly ceased. He sat upright in bed, astonished to find himself at home and completely ignorant of what had happened in dream or reality since the night of March 22nd. Pronounced well by his physician, he returned to his quarters in three days; but to Professor Angell he was of no further assistance. All traces of strange dreaming had vanished with his recovery, and my uncle kept no record of his night-thoughts after a week of pointless and irrelevant accounts of thoroughly usual visions.",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 16
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "He talked of his dreams in a strangely poetic fashion; making me see with terrible vividness the damp Cyclopean city of slimy green stone—whose geometry, he oddly said, was all wrong—and hear with frightened expectancy the ceaseless, half-mental calling from underground: \"Cthulhu fhtagn,\" \"Cthulhu fhtagn.\"",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 62
+    }
+  ]
+}

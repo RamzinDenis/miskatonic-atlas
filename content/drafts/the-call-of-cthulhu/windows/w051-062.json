@@ -1,0 +1,543 @@
+[
+  {
+    "kind": "creature",
+    "name": "Great Old Ones",
+    "aliases": ["Great Ones", "Old Ones"],
+    "facts": [
+      "They were not composed altogether of flesh and blood; They had shape, but that shape was not made of matter.",
+      "When the stars were right, They could plunge from world to world through the sky; when the stars were wrong, They could not live.",
+      "Although They no longer lived, They would never really die.",
+      "They all lay in stone houses in Their great city of R'lyeh, preserved by the spells of mighty Cthulhu for a glorious resurrection.",
+      "Some force from outside had to liberate Their bodies, for the preserving spells prevented Them from making an initial move.",
+      "Their mode of speech was transmitted thought; They knew all that was occurring in the universe and still talked in Their tombs.",
+      "They spoke to the sensitive among the first men by molding their dreams.",
+      "They showed the first men small idols, brought in dim eras from dark stars, around which the cult formed.",
+      "Once liberated, the Old Ones would teach mankind new ways to shout and kill and revel and enjoy themselves.",
+      "In the elder time chosen men had talked with the entombed Old Ones in dreams.",
+      "Castro curiously declined to mention the size of the Old Ones."
+    ],
+    "typeGuess": "race",
+    "fate": "Lie preserved in stone houses in R'lyeh — no longer living yet never really dying — awaiting a glorious resurrection when the stars and the earth are once more ready.",
+    "relatedNames": ["Cthulhu", "R'lyeh", "Castro"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 51,
+        "quote": "These Great Old Ones, Castro continued, were not composed altogether of flesh and blood. They had shape—for did not this star-fashioned image prove it?—but that shape was not made of matter. When the stars were right, They could plunge from world to world through the sky; but when the stars were wrong, They could not live. But although They no longer lived, They would never really die.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 51,
+        "quote": "They all lay in stone houses in Their great city of R'lyeh, preserved by the spells of mighty Cthulhu for a glorious resurrection when the stars and the earth might once more be ready for Them. But at that time some force from outside must serve to liberate Their bodies. The spells that preserved Them intact likewise prevented Them from making an initial move, and They could only lie awake in the dark and think whilst uncounted millions of years rolled by.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 51,
+        "quote": "They knew all that was occurring in the universe, for Their mode of speech was transmitted thought. Even now They talked in Their tombs. When, after infinities of chaos, the first men came, the Great Old Ones spoke to the sensitive among them by molding their dreams; for only thus could Their language reach the fleshly minds of mammals.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 52,
+        "quote": "Then, whispered Castro, those first men formed the cult around small idols which the Great Ones showed them; idols brought in dim eras from dark stars.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 52,
+        "quote": "Then the liberated Old Ones would teach them new ways to shout and kill and revel and enjoy themselves, and all the earth would flame with a holocaust of ecstasy and freedom.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 53,
+        "quote": "In the elder time chosen men had talked with the entombed Old Ones in dreams, but then something had happened.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 53,
+        "quote": "The size of the Old Ones, too, he curiously declined to mention.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Castro",
+    "aliases": ["old Castro"],
+    "facts": [
+      "Continued the account of the Great Old Ones — their immaterial shape, their city, and their coming resurrection.",
+      "Whispered that the first men formed the cult around small idols which the Great Ones showed them.",
+      "Dared not speak much of the black spirits of earth; he cut himself off hurriedly, and no amount of persuasion or subtlety could elicit more.",
+      "Curiously declined to mention the size of the Old Ones.",
+      "Said he thought the center of the cult lay amid the pathless deserts of Arabia, where Irem, the City of Pillars, dreams hidden and untouched.",
+      "Said the cult was not allied to the European witch-cult and was virtually unknown beyond its members.",
+      "Apparently told the truth when he said the cult was wholly secret."
+    ],
+    "typeGuess": "cultist",
+    "relatedNames": ["Great Old Ones", "black spirits of earth", "Irem", "Legrasse"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 51,
+        "quote": "These Great Old Ones, Castro continued, were not composed altogether of flesh and blood.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 52,
+        "quote": "Then, whispered Castro, those first men formed the cult around small idols which the Great Ones showed them",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 53,
+        "quote": "But of them old Castro dared not speak much. He cut himself off hurriedly, and no amount of persuasion or subtlety could elicit more in this direction. The size of the Old Ones, too, he curiously declined to mention. Of the cult, he said that he thought the center lay amid the pathless deserts of Arabia, where Irem, the City of Pillars, dreams hidden and untouched. It was not allied to the European witch-cult, and was virtually unknown beyond its members.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 55,
+        "quote": "Castro, apparently, had told the truth when he said that it was wholly secret.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "R'lyeh",
+    "aliases": [],
+    "facts": [
+      "The great city of the Great Old Ones, where They all lay in stone houses preserved by the spells of mighty Cthulhu.",
+      "A great stone city with monoliths and sepulchers.",
+      "It sank beneath the waves, and the deep waters cut off the spectral intercourse.",
+      "High priests said the city would rise again when the stars were right."
+    ],
+    "typeGuess": "city",
+    "relatedNames": ["Great Old Ones", "Cthulhu"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 51,
+        "quote": "They all lay in stone houses in Their great city of R'lyeh, preserved by the spells of mighty Cthulhu for a glorious resurrection when the stars and the earth might once more be ready for Them.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 53,
+        "quote": "The great stone city R'lyeh, with its monoliths and sepulchers, had sunk beneath the waves; and the deep waters, full of the one primal mystery through which not even thought can pass, had cut off the spectral intercourse. But memory never died, and high priests said that the city would rise again when the stars were right.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Cthulhu",
+    "aliases": ["mighty Cthulhu", "great Cthulhu"],
+    "facts": [
+      "The spells of mighty Cthulhu preserved the Great Old Ones in Their stone houses in R'lyeh.",
+      "The cult's secret priests would take great Cthulhu from His tomb to revive His subjects and resume His rule of earth when the stars came right.",
+      "In Wilcox's dreams a ceaseless, half-mental calling sounded from underground: \"Cthulhu fhtagn.\""
+    ],
+    "typeGuess": "great-old-one",
+    "fate": "Lies in His tomb; the cult holds that its secret priests will take Him out to revive His subjects and resume His rule of earth when the stars come right.",
+    "relatedNames": ["Great Old Ones", "R'lyeh", "Wilcox"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 51,
+        "quote": "They all lay in stone houses in Their great city of R'lyeh, preserved by the spells of mighty Cthulhu for a glorious resurrection when the stars and the earth might once more be ready for Them.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 52,
+        "quote": "That cult would never die till the stars came right again, and the secret priests would take great Cthulhu from His tomb to revive His subjects and resume His rule of earth.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 62,
+        "quote": "hear with frightened expectancy the ceaseless, half-mental calling from underground: \"Cthulhu fhtagn,\" \"Cthulhu fhtagn.\"",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "black spirits of earth",
+    "aliases": [],
+    "facts": [
+      "They came out of the earth, moldy and shadowy.",
+      "They were full of dim rumors picked up in caverns beneath forgotten sea-bottoms.",
+      "Old Castro dared not speak much of them and cut himself off hurriedly."
+    ],
+    "typeGuess": "race",
+    "relatedNames": ["Castro"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 53,
+        "quote": "Then came out of the earth the black spirits of earth, moldy and shadowy, and full of dim rumors picked up in caverns beneath forgotten sea-bottoms. But of them old Castro dared not speak much. He cut himself off hurriedly, and no amount of persuasion or subtlety could elicit more in this direction.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Arabia",
+    "aliases": [],
+    "facts": [
+      "Castro thought the center of the cult lay amid the pathless deserts of Arabia.",
+      "Irem, the City of Pillars, dreams hidden and untouched there."
+    ],
+    "typeGuess": "region",
+    "realWorld": "Arabia",
+    "relatedNames": ["Irem", "Castro"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 53,
+        "quote": "Of the cult, he said that he thought the center lay amid the pathless deserts of Arabia, where Irem, the City of Pillars, dreams hidden and untouched.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Irem",
+    "aliases": ["the City of Pillars"],
+    "facts": [
+      "Dreams hidden and untouched amid the pathless deserts of Arabia.",
+      "Castro located the center of the cult amid the pathless deserts of Arabia, where Irem dreams."
+    ],
+    "typeGuess": "city",
+    "relatedNames": ["Arabia", "Castro"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 53,
+        "quote": "Of the cult, he said that he thought the center lay amid the pathless deserts of Arabia, where Irem, the City of Pillars, dreams hidden and untouched.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Abdul Alhazred",
+    "aliases": ["the mad Arab"],
+    "facts": [
+      "Called the mad Arab.",
+      "The deathless Chinamen said there were double meanings in the Necronomicon of the mad Arab Abdul Alhazred which the initiated might read as they chose."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 53,
+        "quote": "though the deathless Chinamen said that there were double meanings in the Necronomicon of the mad Arab Abdul Alhazred which the initiated might read as they chose",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Legrasse",
+    "aliases": ["the detective"],
+    "facts": [
+      "Deeply impressed and not a little bewildered, he inquired in vain concerning the historic affiliations of the cult.",
+      "He came to the highest authorities in the country and met with no more than the Greenland tale of Professor Webb.",
+      "His tale at the meeting, corroborated by the statuette, aroused feverish interest echoed in the subsequent correspondence of those who attended.",
+      "He lent the image to Professor Webb for some time; at Webb's death it was returned to him and remains in his possession."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": ["Castro", "Professor Webb", "Tulane University", "The Narrator"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 55,
+        "quote": "Legrasse, deeply impressed and not a little bewildered, had inquired in vain concerning the historic affiliations of the cult.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 55,
+        "quote": "now the detective had come to the highest authorities in the country and met with no more than the Greenland tale of Professor Webb.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 57,
+        "quote": "The feverish interest aroused at the meeting by Legrasse's tale, corroborated as it was by the statuette, is echoed in the subsequent correspondence of those who attended, although scant mention occurs in the formal publication of the society.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 57,
+        "quote": "Legrasse for some time lent the image to Professor Webb, but at the latter's death it was returned to him and remains in his possession, where I viewed it not long ago.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Tulane University",
+    "aliases": [],
+    "facts": [
+      "The authorities at Tulane University could shed no light upon either the cult or the image."
+    ],
+    "typeGuess": "other",
+    "realWorld": "Tulane University",
+    "relatedNames": ["Legrasse"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 55,
+        "quote": "The authorities at Tulane University could shed no light upon either cult or image",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Professor Webb",
+    "aliases": [],
+    "facts": [
+      "The detective, seeking the highest authorities in the country, met with no more than the Greenland tale of Professor Webb.",
+      "Legrasse lent him the image for some time.",
+      "At his death the image was returned to Legrasse."
+    ],
+    "typeGuess": "scholar",
+    "fate": "Died; upon his death the image Legrasse had lent him was returned.",
+    "relatedNames": ["Legrasse"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 55,
+        "quote": "now the detective had come to the highest authorities in the country and met with no more than the Greenland tale of Professor Webb.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 57,
+        "quote": "Legrasse for some time lent the image to Professor Webb, but at the latter's death it was returned to him and remains in his possession",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "He viewed the image, which remains in Legrasse's possession, not long ago.",
+      "He privately suspected young Wilcox of having heard of the cult in some indirect way and of having invented a series of dreams at his uncle's expense.",
+      "After studying the manuscript again and correlating the theosophical and anthropological notes with the cult narrative of Legrasse, he made a trip to Providence to see the sculptor and rebuke him.",
+      "He did not tell Wilcox the reason for the study, but sought with some subtlety to draw him out.",
+      "In a short time he became convinced of Wilcox's absolute sincerity.",
+      "Wilcox showed him a morbid statue whose contours almost made him shake with the potency of its black suggestion."
+    ],
+    "typeGuess": "protagonist",
+    "relatedNames": ["Professor Angell", "Wilcox", "Legrasse", "Providence"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 57,
+        "quote": "at the latter's death it was returned to him and remains in his possession, where I viewed it not long ago.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 58,
+        "quote": "privately I suspected young Wilcox of having heard of the cult in some indirect way, and of having invented a series of dreams to heighten and continue the mystery at my uncle's expense",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 58,
+        "quote": "So, after thoroughly studying the manuscript again and correlating the theosophical and anthropological notes with the cult narrative of Legrasse, I made a trip to Providence to see the sculptor and give him the rebuke I thought proper for so boldly imposing upon a learned and aged man.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 60,
+        "quote": "I did not enlarge his knowledge in this regard, but sought with some subtlety to draw him out.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 61,
+        "quote": "In a short time I became convinced of his absolute sincerity, for he spoke of the dreams in a manner none could mistake.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 61,
+        "quote": "he showed me a morbid statue whose contours almost made me shake with the potency of its black suggestion.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Wilcox",
+    "aliases": ["young Wilcox", "the sculptor"],
+    "facts": [
+      "The image in Legrasse's possession is unmistakably akin to the dream-sculpture of young Wilcox.",
+      "A sensitive young man who had dreamed the figure and exact hieroglyphics of the swamp-found image and the Greenland devil tablet.",
+      "In his dreams he came upon at least three of the precise words of the formula uttered alike by Eskimo diabolists and mongrel Louisianans.",
+      "He still lived alone in the Fleur-de-Lys Building in Thomas Street.",
+      "The narrator conceded from the specimens scattered about his rooms that his genius is profound and authentic.",
+      "Dark, frail, and somewhat unkempt in aspect, he turned languidly at the narrator's knock and asked his business without rising.",
+      "The narrator's uncle had excited his curiosity in probing his strange dreams, yet had never explained the reason for the study.",
+      "He spoke of the dreams in a manner none could mistake, convincing the narrator of his absolute sincerity.",
+      "The dreams and their subconscious residuum had influenced his art profoundly.",
+      "He showed a morbid statue whose original he could not recall having seen except in his own dream bas-relief; the outlines had formed themselves insensibly under his hands.",
+      "The statue was, no doubt, the giant shape he had raved of in delirium.",
+      "He really knew nothing of the hidden cult save what the uncle's relentless catechism had let fall.",
+      "He talked of his dreams in a strangely poetic fashion, evoking the damp Cyclopean city of slimy green stone whose geometry was all wrong, and the ceaseless, half-mental calling from underground: \"Cthulhu fhtagn.\""
+    ],
+    "typeGuess": "witness",
+    "relatedNames": ["The Narrator", "Professor Angell", "Legrasse", "Fleur-de-Lys Building", "Cthulhu"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 57,
+        "quote": "It is truly a terrible thing, and unmistakably akin to the dream-sculpture of young Wilcox.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 58,
+        "quote": "a sensitive young man who had dreamed not only the figure and exact hieroglyphics of the swamp-found image and the Greenland devil tablet, but had come in his dreams upon at least three of the precise words of the formula uttered alike by Eskimo diabolists and mongrel Louisianans?",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 59,
+        "quote": "Wilcox still lived alone in the Fleur-de-Lys Building in Thomas Street",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 59,
+        "quote": "I found him at work in his rooms, and at once conceded from the specimens scattered about that his genius is indeed profound and authentic.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 60,
+        "quote": "Dark, frail, and somewhat unkempt in aspect, he turned languidly at my knock and asked me my business without rising. When I told him who I was, he displayed some interest; for my uncle had excited his curiosity in probing his strange dreams, yet had never explained the reason for the study.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 61,
+        "quote": "In a short time I became convinced of his absolute sincerity, for he spoke of the dreams in a manner none could mistake. They and their subconscious residuum had influenced his art profoundly, and he showed me a morbid statue whose contours almost made me shake with the potency of its black suggestion.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 61,
+        "quote": "He could not recall having seen the original of this thing except in his own dream bas-relief, but the outlines had formed themselves insensibly under his hands. It was, no doubt, the giant shape he had raved of in delirium. That he really knew nothing of the hidden cult, save from what my uncle's relentless catechism had let fall, he soon made clear",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 62,
+        "quote": "He talked of his dreams in a strangely poetic fashion; making me see with terrible vividness the damp Cyclopean city of slimy green stone—whose geometry, he oddly said, was all wrong—and hear with frightened expectancy the ceaseless, half-mental calling from underground: \"Cthulhu fhtagn,\" \"Cthulhu fhtagn.\"",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Professor Angell",
+    "aliases": ["my uncle", "the professor"],
+    "facts": [
+      "He is the narrator's uncle.",
+      "He was excited by the tale of the sculptor.",
+      "His instant start on an investigation of the utmost thoroughness struck the narrator as eminently natural.",
+      "The dream-narratives and cuttings he collected were strong corroboration.",
+      "He had excited Wilcox's curiosity in probing his strange dreams, yet never explained the reason for the study.",
+      "His relentless catechism was the only source of what little Wilcox knew of the hidden cult."
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": ["The Narrator", "Wilcox"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 58,
+        "quote": "That my uncle was excited by the tale of the sculptor I did not wonder",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 58,
+        "quote": "Professor Angell's instant start on an investigation of the utmost thoroughness was eminently natural",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 58,
+        "quote": "The dream-narratives and cuttings collected by the professor were, of course, strong corroboration",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 60,
+        "quote": "for my uncle had excited his curiosity in probing his strange dreams, yet had never explained the reason for the study.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 61,
+        "quote": "That he really knew nothing of the hidden cult, save from what my uncle's relentless catechism had let fall, he soon made clear",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Providence",
+    "aliases": [],
+    "facts": [
+      "The narrator made a trip to Providence to see the sculptor."
+    ],
+    "typeGuess": "city",
+    "realWorld": "Providence",
+    "relatedNames": ["The Narrator", "Wilcox"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 58,
+        "quote": "I made a trip to Providence to see the sculptor and give him the rebuke I thought proper for so boldly imposing upon a learned and aged man.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Fleur-de-Lys Building",
+    "aliases": [],
+    "facts": [
+      "Wilcox still lived alone there; it stands in Thomas Street.",
+      "A hideous Victorian imitation of Seventeenth Century Breton architecture.",
+      "It flaunts its stuccoed front amidst the lovely Colonial houses on the ancient hill, under the very shadow of the finest Georgian steeple in America."
+    ],
+    "typeGuess": "building",
+    "relatedNames": ["Wilcox"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 59,
+        "quote": "Wilcox still lived alone in the Fleur-de-Lys Building in Thomas Street, a hideous Victorian imitation of Seventeenth Century Breton architecture which flaunts its stuccoed front amidst the lovely Colonial houses on the ancient hill, and under the very shadow of the finest Georgian steeple in America.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  }
+]

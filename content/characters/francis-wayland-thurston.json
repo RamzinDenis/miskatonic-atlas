@@ -1,0 +1,42 @@
+{
+  "slug": "francis-wayland-thurston",
+  "name": "Francis Wayland Thurston",
+  "role": "protagonist",
+  "summary": "The Boston grand-nephew, heir and executor of Professor George Gammell Angell, who pieces the professor's notes, Inspector Legrasse's cult narrative, and Johansen's sea manuscript into the account of the Cthulhu cult. The account itself is presented as found among the papers of \"the late\" Francis Wayland Thurston.",
+  "description": "The account is presented as found among the papers of the late Francis Wayland Thurston of Boston, grand-nephew of George Gammell Angell, Professor Emeritus of Semitic languages at Brown University. His knowledge of the thing began in the winter of 1926-27 with the professor's death: as heir and executor he moved the old man's entire set of files and boxes to his quarters in Boston, found a puzzling locked box whose key hung on the personal ring the professor always carried, and inside it the queer clay bas-relief and the disjointed jottings, ramblings, and cuttings that set the inquiry in motion. He resolved to search out the eccentric sculptor responsible for this apparent disturbance of an old man's peace of mind.\n\nHis ingrained skepticism gave way by degrees. At first he distrusted the artist, half suspecting the compiler of leading questions and Wilcox of an imposture at his uncle's expense; but the dream cases he traced bore out the notes in full, a visit to the sculptor's rooms in Providence convinced him of the young man's absolute sincerity, and in New Orleans he talked with Legrasse and others of the old raiding-party, viewed the frightful image, and questioned the surviving prisoners. An old Sydney Bulletin cutting, caught by chance beneath museum specimens in Paterson, New Jersey, revived the flagging quest and sent him by way of San Francisco to Dunedin, Auckland, and Sydney — where he studied the crouching image in the Museum at Hyde Park — and at last through London to Oslo, only to find Gustaf Johansen dead and to bear the mate's manuscript away from his widow.\n\nHe read the document on the London boat, stopping his ears with cotton against the sound of water on the vessel's sides, and placed it in the tin box beside the bas-relief and the papers of Professor Angell. With it goes his own record — a test of his own sanity, wherein is pieced together that which he hopes may never be pieced together again. Believing his uncle's death far from natural, he does not think his own life will be long: he knows too much, and the cult still lives; as his uncle went, as poor Johansen went, so he expects to go, praying that his executors will put caution before audacity and see that the manuscript meets no other eye.",
+  "locations": [
+    "boston",
+    "providence",
+    "new-orleans",
+    "paterson",
+    "san-francisco",
+    "dunedin",
+    "auckland",
+    "sydney",
+    "london",
+    "oslo"
+  ],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "fate": "Deceased — the account is presented as found among the papers of \"the late\" Francis Wayland Thurston; he expected to go as his uncle and Johansen went, knowing too much of a cult that still lives.",
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Found among the papers of the late Francis Wayland Thurston, of Boston.",
+      "paragraph": 2
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "My knowledge of the thing began in the winter of 1926-27 with the death of my grand-uncle, George Gammell Angell, Professor Emeritus of Semitic languages in Brown University, Providence, Rhode Island.",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 5
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "I have looked upon all that the universe has to hold of horror, and even the skies of spring and the flowers of summer must ever afterward be poison to me. But I do not think my life will be long. As my uncle went, as poor Johansen went, so I shall go. I know too much, and the cult still lives.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 116
+    }
+  ]
+}

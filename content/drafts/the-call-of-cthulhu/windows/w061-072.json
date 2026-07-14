@@ -1,0 +1,436 @@
+[
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "Became convinced of Wilcox's absolute sincerity after hearing him speak of his dreams.",
+      "Was shown by Wilcox a morbid statue whose contours almost made him shake.",
+      "Visited New Orleans and talked with Legrasse and others of the old-time raiding-party.",
+      "Saw the frightful image and questioned such of the prisoners as still survived.",
+      "Kept an attitude of absolute materialism and discounted the coincidence of the dream notes and odd cuttings collected by Professor Angell.",
+      "Began to suspect that the death of his uncle was far from natural.",
+      "Had largely given over his inquiries into what Professor Angell called the \"Cthulhu Cult\".",
+      "Was visiting a learned friend of Paterson, New Jersey, the curator of a local museum, when his eye was caught by the Sydney Bulletin picture.",
+      "Carefully tore the newspaper item out for immediate action."
+    ],
+    "typeGuess": "protagonist",
+    "relatedNames": ["Wilcox", "Professor Angell", "Legrasse", "New Orleans", "Paterson"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 61,
+        "quote": "In a short time I became convinced of his absolute sincerity, for he spoke of the dreams in a manner none could mistake. They and their subconscious residuum had influenced his art profoundly, and he showed me a morbid statue whose contours almost made me shake with the potency of its black suggestion.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 64,
+        "quote": "I visited New Orleans, talked with Legrasse and others of that old-time raiding-party, saw the frightful image, and even questioned such of the mongrel prisoners as still survived.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 64,
+        "quote": "My attitude was still one of absolute materialism, as I wish it still were, and I discounted with almost inexplicable perversity the coincidence of the dream notes and odd cuttings collected by Professor Angell.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 65,
+        "quote": "One thing which I began to suspect, and which I now fear I know, is that my uncle's death was far from natural.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 67,
+        "quote": "I had largely given over my inquiries into what Professor Angell called the \"Cthulhu Cult,\" and was visiting a learned friend of Paterson, New Jersey, the curator of a local museum and a mineralogist of note.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 67,
+        "quote": "Examining one day the reserve specimens roughly set on the storage shelves in a rear room of the museum, my eye was caught by an odd picture in one of the old papers spread beneath the stones.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 68,
+        "quote": "What it suggested, however, was of portentous significance to my flagging quest; and I carefully tore it out for immediate action.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Wilcox",
+    "aliases": ["the sculptor"],
+    "facts": [
+      "Spoke of his dreams in a manner that convinced the narrator of his absolute sincerity.",
+      "His dreams and their subconscious residuum had profoundly influenced his art.",
+      "Could not recall having seen the original of his morbid statue except in his own dream bas-relief; the outlines had formed themselves insensibly under his hands.",
+      "The statue was, no doubt, the giant shape he had raved of in delirium.",
+      "Really knew nothing of the hidden cult save what the narrator's uncle's relentless catechism had let fall.",
+      "Talked of his dreams poetically, describing a damp Cyclopean city of slimy green stone and a ceaseless, half-mental calling from underground: \"Cthulhu fhtagn\".",
+      "The narrator was sure he had heard of the cult in some casual way and had soon forgotten it amidst his weird reading and imagining.",
+      "The cult later found subconscious expression in his dreams, in the bas-relief, and in the terrible statue.",
+      "His imposture upon the narrator's uncle had been a very innocent one.",
+      "Was a youth, slightly affected and slightly ill-mannered, whose genius and honesty the narrator admitted."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": ["The Narrator", "Professor Angell", "Cyclopean city", "Cthulhu"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 61,
+        "quote": "In a short time I became convinced of his absolute sincerity, for he spoke of the dreams in a manner none could mistake. They and their subconscious residuum had influenced his art profoundly, and he showed me a morbid statue whose contours almost made me shake with the potency of its black suggestion.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 61,
+        "quote": "He could not recall having seen the original of this thing except in his own dream bas-relief, but the outlines had formed themselves insensibly under his hands. It was, no doubt, the giant shape he had raved of in delirium.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 61,
+        "quote": "That he really knew nothing of the hidden cult, save from what my uncle's relentless catechism had let fall, he soon made clear",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 62,
+        "quote": "He talked of his dreams in a strangely poetic fashion; making me see with terrible vividness the damp Cyclopean city of slimy green stone—whose geometry, he oddly said, was all wrong—and hear with frightened expectancy the ceaseless, half-mental calling from underground: \"Cthulhu fhtagn,\" \"Cthulhu fhtagn.\"",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 63,
+        "quote": "Wilcox, I was sure, had heard of the cult in some casual way, and had soon forgotten it amidst the mass of his equally weird reading and imagining.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 63,
+        "quote": "Later, by virtue of its sheer impressiveness, it had found subconscious expression in dreams, in the bas-relief, and in the terrible statue I now beheld; so that his imposture upon my uncle had been a very innocent one.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 63,
+        "quote": "The youth was of a type, at once slightly affected and slightly ill-mannered, which I could never like; but I was willing enough now to admit both his genius and his honesty.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Professor Angell",
+    "aliases": ["my uncle"],
+    "facts": [
+      "His relentless catechism was the only source of Wilcox's knowledge of the hidden cult.",
+      "Collected the dream notes and odd cuttings whose coincidence the narrator discounted.",
+      "Fell on a narrow hill street leading up from an ancient waterfront, after a careless push from a negro sailor.",
+      "The narrator thinks he died because he knew too much, or because he was likely to learn too much.",
+      "A cutting bureau had been avidly collecting material for his research at the time the Sydney Bulletin issue appeared.",
+      "Called the cult the \"Cthulhu Cult\"."
+    ],
+    "typeGuess": "scholar",
+    "fate": "Dead — fell on a hill street after a careless push from a sailor; the narrator suspects the death was far from natural.",
+    "relatedNames": ["The Narrator", "Wilcox"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 61,
+        "quote": "That he really knew nothing of the hidden cult, save from what my uncle's relentless catechism had let fall, he soon made clear",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 64,
+        "quote": "I discounted with almost inexplicable perversity the coincidence of the dream notes and odd cuttings collected by Professor Angell.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 65,
+        "quote": "He fell on a narrow hill street leading up from an ancient waterfront swarming with foreign mongrels, after a careless push from a negro sailor.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 65,
+        "quote": "I think Professor Angell died because he knew too much, or because he was likely to learn too much.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 66,
+        "quote": "It had escaped even the cutting bureau which had at the time of its issuance been avidly collecting material for my uncle's research.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 67,
+        "quote": "I had largely given over my inquiries into what Professor Angell called the \"Cthulhu Cult,\"",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Legrasse",
+    "aliases": [],
+    "facts": [
+      "One of the old-time raiding-party; the narrator talked with him in New Orleans.",
+      "He and his men have been let alone.",
+      "Had found a stone image in the swamp, almost identical with the hideous image pictured in the Sydney Bulletin."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["The Narrator", "New Orleans"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 64,
+        "quote": "I visited New Orleans, talked with Legrasse and others of that old-time raiding-party, saw the frightful image, and even questioned such of the mongrel prisoners as still survived.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 65,
+        "quote": "Legrasse and his men, it is true, have been let alone; but in Norway a certain seaman who saw things is dead.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 67,
+        "quote": "the picture was a half-tone cut of a hideous stone image almost identical with that which Legrasse had found in the swamp.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Old Castro",
+    "aliases": [],
+    "facts": [
+      "Had been dead for some years by the time the narrator questioned the surviving prisoners."
+    ],
+    "typeGuess": "cultist",
+    "fate": "Dead for some years.",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 64,
+        "quote": "I visited New Orleans, talked with Legrasse and others of that old-time raiding-party, saw the frightful image, and even questioned such of the mongrel prisoners as still survived. Old Castro, unfortunately, had been dead for some years.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Cthulhu",
+    "aliases": [],
+    "facts": [
+      "The ceaseless, half-mental calling heard from underground in the dream city was \"Cthulhu fhtagn\".",
+      "The dread ritual told of dead Cthulhu's dream-vigil in his stone vault at R'lyeh."
+    ],
+    "typeGuess": "entity",
+    "fate": "Described as dead, keeping a dream-vigil in his stone vault at R'lyeh.",
+    "relatedNames": ["R'lyeh", "Cyclopean city", "Wilcox"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 62,
+        "quote": "hear with frightened expectancy the ceaseless, half-mental calling from underground: \"Cthulhu fhtagn,\" \"Cthulhu fhtagn.\"",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 63,
+        "quote": "These words had formed part of that dread ritual which told of dead Cthulhu's dream-vigil in his stone vault at R'lyeh",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Cyclopean city",
+    "aliases": ["the damp Cyclopean city of slimy green stone"],
+    "facts": [
+      "Appeared in Wilcox's dreams as damp and built of slimy green stone.",
+      "Its geometry, Wilcox oddly said, was all wrong.",
+      "A ceaseless, half-mental calling of \"Cthulhu fhtagn\" came from underground there."
+    ],
+    "typeGuess": "city",
+    "relatedNames": ["Wilcox", "Cthulhu"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 62,
+        "quote": "making me see with terrible vividness the damp Cyclopean city of slimy green stone—whose geometry, he oddly said, was all wrong—and hear with frightened expectancy the ceaseless, half-mental calling from underground: \"Cthulhu fhtagn,\" \"Cthulhu fhtagn.\"",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "R'lyeh",
+    "aliases": [],
+    "facts": [
+      "Holds the stone vault in which dead Cthulhu keeps his dream-vigil, according to the dread ritual."
+    ],
+    "typeGuess": null,
+    "relatedNames": ["Cthulhu"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 63,
+        "quote": "These words had formed part of that dread ritual which told of dead Cthulhu's dream-vigil in his stone vault at R'lyeh",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "New Orleans",
+    "aliases": [],
+    "facts": [
+      "The narrator visited it and talked there with Legrasse and others of the old-time raiding-party."
+    ],
+    "typeGuess": "city",
+    "realWorld": "New Orleans, Louisiana, USA",
+    "relatedNames": ["The Narrator", "Legrasse"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 64,
+        "quote": "I visited New Orleans, talked with Legrasse and others of that old-time raiding-party, saw the frightful image, and even questioned such of the mongrel prisoners as still survived.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Louisiana",
+    "aliases": [],
+    "facts": [
+      "The cult-members there were of mixed blood and marine pursuits."
+    ],
+    "typeGuess": "region",
+    "realWorld": "Louisiana, USA",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 65,
+        "quote": "I did not forget the mixed blood and marine pursuits of the cult-members in Louisiana, and would not be surprized to learn of secret methods and poison needles as ruthless and as anciently known as the cryptic rites and beliefs.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Norway",
+    "aliases": [],
+    "facts": [
+      "A certain seaman there who saw things is dead."
+    ],
+    "typeGuess": "region",
+    "realWorld": "Norway",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 65,
+        "quote": "Legrasse and his men, it is true, have been let alone; but in Norway a certain seaman who saw things is dead.",
+        "context": "Chapter 2, The Tale of Inspector Legrasse"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Paterson",
+    "aliases": ["Paterson, New Jersey"],
+    "facts": [
+      "Home of the narrator's learned friend, the curator of a local museum and a mineralogist of note.",
+      "In a rear room of the museum there, the narrator's eye was caught by the Sydney Bulletin picture among old papers spread beneath stored specimens."
+    ],
+    "typeGuess": "city",
+    "realWorld": "Paterson, New Jersey, USA",
+    "relatedNames": ["The Narrator"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 67,
+        "quote": "I had largely given over my inquiries into what Professor Angell called the \"Cthulhu Cult,\" and was visiting a learned friend of Paterson, New Jersey, the curator of a local museum and a mineralogist of note.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 67,
+        "quote": "Examining one day the reserve specimens roughly set on the storage shelves in a rear room of the museum, my eye was caught by an odd picture in one of the old papers spread beneath the stones.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Darling Harbour",
+    "aliases": [],
+    "facts": [
+      "The Morrison Co.'s freighter Vigilant arrived at its wharf there, having the disabled steam yacht Alert in tow."
+    ],
+    "typeGuess": "other",
+    "realWorld": "Darling Harbour, Sydney, Australia",
+    "relatedNames": ["Valparaiso", "Dunedin"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 72,
+        "quote": "The Morrison Co.'s freighter Vigilant, bound from Valparaiso, arrived this morning at its wharf in Darling Harbour, having in tow the battled and disabled but heavily armed steam yacht Alert of Dunedin, N. Z., which was sighted April 12th in S. Latitude 34° 21', W. Longitude 152° 17', with one living and one dead man aboard.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Valparaiso",
+    "aliases": [],
+    "facts": [
+      "Port from which the freighter Vigilant was bound."
+    ],
+    "typeGuess": "city",
+    "realWorld": "Valparaiso, Chile",
+    "relatedNames": ["Darling Harbour"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 72,
+        "quote": "The Morrison Co.'s freighter Vigilant, bound from Valparaiso, arrived this morning at its wharf in Darling Harbour",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Dunedin",
+    "aliases": ["Dunedin, N. Z."],
+    "facts": [
+      "Home port of the heavily armed steam yacht Alert."
+    ],
+    "typeGuess": "city",
+    "realWorld": "Dunedin, New Zealand",
+    "relatedNames": ["Darling Harbour"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 72,
+        "quote": "having in tow the battled and disabled but heavily armed steam yacht Alert of Dunedin, N. Z.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "slug": "capt-collins",
+  "name": "Capt. Collins",
+  "role": "other",
+  "summary": "Captain of the schooner Emma; ordered peremptorily by the Alert's crew to turn back, he refused, and was among the three of the Emma's men killed in the fight that followed.",
+  "description": "Ordered peremptorily by the Alert's crew to turn back, Capt. Collins refused; whereupon the strange crew began to fire savagely and without warning upon the schooner with a peculiarly heavy battery of brass cannon forming part of the yacht's equipment.\n\nHe was among the three of the Emma's men killed, together with First Mate Green.",
+  "locations": [],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "fate": "Killed — among the three of the Emma's men who died in the fight with the Alert's crew.",
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Being ordered peremptorily to turn back, Capt. Collins refused; whereupon the strange crew began to fire savagely and without warning upon the schooner with a peculiarly heavy battery of brass cannon forming part of the yacht's equipment.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 76
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Three of the Emma's men, including Capt. Collins and First Mate Green, were killed",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 78
+    }
+  ]
+}

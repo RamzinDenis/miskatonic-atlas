@@ -1,0 +1,38 @@
+{
+  "slug": "gustaf-johansen",
+  "name": "Gustaf Johansen",
+  "role": "witness",
+  "summary": "Second mate of the Auckland schooner Emma and sole survivor of the crew that landed on the risen island city, whose posthumous manuscript of \"technical matters\" records the emergence of the Thing; he did not long survive his return, dying obscurely in Oslo.",
+  "description": "Gustaf Johansen, a Norwegian of some intelligence described as a sober and worthy man, was second mate of the two-masted schooner Emma of Auckland, which cleared that port in ballast on February 20th. Delayed and thrown widely south of her course by the great storm of March 1st, the Emma on March 22d encountered the Alert, manned by a queer and evil-looking crew of Kanakas and half-castes; ordered peremptorily back and fired upon, her men heaved alongside, boarded, and were forced to kill all of the savage crew — swarthy cult-fiends of whom Johansen speaks with significant horror, some peculiarly abominable quality about them making their destruction seem almost a duty, so that he showed ingenuous wonder at the charge of ruthlessness brought against his party during the court of inquiry. As second mate he led the remaining eight men in the captured yacht, going ahead in their original direction.\n\nUnder his command the men sighted a great stone pillar sticking out of the sea and landed at a sloping mud-bank, clambering slipperily up over titan oozy blocks; awed by the cosmic majesty of the place, they must have guessed without guidance that it was nothing of this or of any sane planet. An unlettered seaman, Johansen achieved something very close to futurism when he spoke of the city, dwelling only on broad impressions of vast angles and stone surfaces; of the immense carved door he said it was like a great barn-door, and his handwriting almost gave out when he wrote of the Thing's emergence. Of the six men who never reached the ship he thinks two perished of pure fright, though before the authorities he was queerly reticent, speaking only of their falling into a rock chasm. Only he and Briden reached the boat; knowing the Thing could surely overtake the Alert until steam was fully up, he resolved on a desperate chance, set the engine for full speed, ran on deck, reversed the wheel, and drove his vessel head on against the pursuing jelly. Afterward he only brooded over the idol in the cabin and attended to a few matters of food for himself and the laughing maniac by his side; the storm of April 2nd brought a gathering of clouds about his consciousness, and on April 12th he was found half-delirious aboard the derelict, clutching a horrible stone idol about a foot in height which he had found in a small carved shrine in the yacht's cabin.\n\nRescue came as the Vigilant, the vice-admiralty court, the streets of Dunedin, and the long voyage home. After a perfunctory and inconclusive questioning at Sydney he returned with his yellow hair turned white, sold his cottage in West Street, and sailed with his wife to his old home in Oslo, in the Old Town of King Harold Haardrada. He could not tell what he knew — they would think him mad — so he resolved to write of it before death came, in English, as a manuscript of \"technical matters\", that his wife must not guess; of his experience he told his friends no more than he had told the admiralty officials. The doings at sea in 1925 had broken him, and he did not long survive the return: during a walk through a narrow lane near the Gothenburg dock a bundle of papers falling from an attic window knocked him down, and though two Lascar sailors at once helped him to his feet, he was dead before the ambulance could reach him. Physicians found no adequate cause and laid it to heart trouble and a weakened constitution; his widow, a sad-faced woman in black, told the narrator in halting English that Gustaf Johansen was no more, and was persuaded to yield up the manuscript.",
+  "locations": [
+    "auckland",
+    "sydney",
+    "dunedin",
+    "oslo",
+    "rlyeh"
+  ],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "fate": "Dead — knocked down in a narrow lane near the Gothenburg dock by a bundle of papers falling from an attic window, and dead before the ambulance could reach him; physicians found no adequate cause and laid it to heart trouble and a weakened constitution.",
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "This man, after recovering his senses, told an exceedingly strange story of piracy and slaughter. He is Gustaf Johansen, a Norwegian of some intelligence, and had been second mate of the two-masted schooner Emma of Auckland, which sailed for Callao February 20th, with a complement of eleven men.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 75
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Knowing that the Thing could surely overtake the Alert until steam was fully up, he resolved on a desperate chance; and, setting the engine for full speed, ran lightning-like on deck and reversed the wheel. There was a mighty eddying and foaming in the noisome brine, and as the steam mounted higher and higher the brave Norwegian drove his vessel head on against the pursuing jelly which rose above the unclean froth like the stern of a demon galleon.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 111
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "During a walk through a narrow lane near the Gothenburg dock, a bundle of papers falling from an attic window had knocked him down. Two Lascar sailors at once helped him to his feet, but before the ambulance could reach him he was dead. Physicians found no adequate cause for the end, and laid it to heart trouble and a weakened constitution.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 94
+    }
+  ]
+}

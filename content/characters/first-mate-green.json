@@ -1,0 +1,20 @@
+{
+  "slug": "first-mate-green",
+  "name": "First Mate Green",
+  "role": "other",
+  "summary": "First mate of the Emma, among the three of her men killed in the fight with the Alert's crew.",
+  "description": "First Mate Green served aboard the Emma on her last voyage.\n\nHe was among the three of the Emma's men killed in the fight with the Alert's crew, together with Capt. Collins.",
+  "locations": [],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "fate": "Killed — among the three of the Emma's men who died in the fight with the Alert's crew.",
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Three of the Emma's men, including Capt. Collins and First Mate Green, were killed",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 78
+    }
+  ]
+}

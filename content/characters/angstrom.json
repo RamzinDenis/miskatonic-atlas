@@ -1,0 +1,22 @@
+{
+  "slug": "angstrom",
+  "name": "Angstrom",
+  "role": "other",
+  "summary": "One of the three men of the landing party swept up by the flabby claws before anybody turned, with Donovan and Guerrera.",
+  "description": "Angstrom was of the party overtaken on the risen island: one of the three men swept up by the flabby claws before anybody turned, with Donovan and Guerrera.\n\nOf the three the record says only: God rest them, if there be any rest in the universe.",
+  "locations": [
+    "rlyeh"
+  ],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "fate": "Swept up by the flabby claws, with Donovan and Guerrera.",
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Three men were swept up by the flabby claws before anybody turned. God rest them, if there be any rest in the universe. They were Donovan, Guerrera and Angstrom.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 109
+    }
+  ]
+}

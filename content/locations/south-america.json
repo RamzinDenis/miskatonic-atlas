@@ -1,0 +1,24 @@
+{
+  "slug": "south-america",
+  "name": "South America",
+  "type": "region",
+  "map": {
+    "x": 2632,
+    "y": 1861
+  },
+  "summary": "The continent from which a fanatic wrote a rambling letter to a newspaper editor, deducing a dire future from visions he had seen.",
+  "description": "South America appears among Professor Angell's press cuttings from the period of the 1925 disturbances: a rambling letter to the editor of a paper there, in which a fanatic deduced a dire future from visions he had seen.\n\nThe item stands in the record beside the other scattered cases of the same period — suicides, unrest, and mass excitements gathered from around the world.",
+  "realWorld": "South America",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Here likewise a rambling letter to the editor of a paper in South America, where a fanatic deduces a dire future from visions he has seen.",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 20
+    }
+  ]
+}

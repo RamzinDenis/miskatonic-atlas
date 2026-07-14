@@ -1,0 +1,24 @@
+{
+  "slug": "philippines",
+  "name": "the Philippines",
+  "type": "region",
+  "map": {
+    "x": 918,
+    "y": 1599
+  },
+  "summary": "The islands where American officers found certain tribes bothersome about the time of the 1925 disturbances.",
+  "description": "The Philippines appear among Professor Angell's press cuttings from the period of the 1925 disturbances: American officers there found certain tribes bothersome about that time.\n\nThe item stands in the record beside the other scattered cases of the same period gathered from around the world.",
+  "realWorld": "the Philippines",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "American officers in the Philippines find certain tribes bothersome about this time, and New York policemen are mobbed by hysterical Levantines on the night of March 22-23.",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 20
+    }
+  ]
+}

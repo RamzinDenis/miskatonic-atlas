@@ -1,0 +1,32 @@
+{
+  "slug": "elder-gods",
+  "name": "elder gods",
+  "classification": "deity",
+  "summary": "Distorted, hilarious beings whose cachinnating chorus livens the dream-sense of spectral whirling through liquid gulfs that followed the storm of April 2nd.",
+  "description": "In the dream-sense that follows the storm of April 2nd in Johansen's record — a spectral whirling through liquid gulfs of infinity, dizzying rides through reeling universes on a comet's tail, hysterical plunges from the pit to the moon and back again — everything is livened by a cachinnating chorus of the distorted, hilarious elder gods.\n\nThe green, bat-winged mocking imps of Tartarus share that chorus with them; nothing else is told of the elder gods outside this delirious interval.",
+  "locations": [],
+  "appearsIn": ["the-call-of-cthulhu"],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "There is a sense of spectral whirling through liquid gulfs of infinity, of dizzying rides through reeling universes on a comet's tail, and of hysterical plunges from the pit to the moon and from the moon back again to the pit, all livened by a cachinnating chorus of the distorted, hilarious elder gods and the green, bat-winged mocking imps of Tartarus.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 114
+    }
+  ],
+  "_draft": {
+    "aliases": [],
+    "occurrences": 1,
+    "windows": ["w111-117"],
+    "facts": [
+      "A cachinnating chorus of the distorted, hilarious elder gods livens the dream-sense of whirling through liquid gulfs that follows the storm of April 2nd."
+    ],
+    "needsReview": [
+      {
+        "field": "identity",
+        "reason": "Figures of the dream-delirium after the storm of April 2nd; possibly a rhetorical flourish rather than distinct beings, and possibly the Great Old Ones under another epithet — no record links them to anything else.",
+        "candidates": ["separate entity (current)", "fold into great-old-ones", "junk (figurative)"]
+      }
+    ]
+  }
+}

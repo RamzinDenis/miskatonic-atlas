@@ -1,0 +1,554 @@
+[
+  {
+    "kind": "character",
+    "name": "William Briden",
+    "aliases": ["Briden"],
+    "facts": [
+      "He was the companion of the rescued man.",
+      "The rescued man does not recall when Briden died.",
+      "Briden's death revealed no apparent cause and was probably due to excitement or exposure."
+    ],
+    "typeGuess": "other",
+    "fate": "died of no apparent cause, probably due to excitement or exposure",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 81,
+        "quote": "From that time till his rescue on the 12th, the man remembers little, and he does not even recall when William Briden, his companion, died. Briden's death reveals no apparent cause, and was probably due to excitement or exposure.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Dunedin",
+    "aliases": [],
+    "facts": [
+      "The Alert was well known in Dunedin as an island trader and bore an evil reputation along the waterfront.",
+      "The Alert was owned by a curious group of half-castes whose frequent meetings and night trips to the woods attracted curiosity.",
+      "The Alert set sail from Dunedin in great haste just after the storm and earth tremors of March 1st.",
+      "The narrator wondered what was known of the noxious cult in Dunedin.",
+      "The Alert and her noisome crew darted eagerly forth from Dunedin as if imperiously summoned.",
+      "Little was known in Dunedin of the strange cult-members who had lingered in the old sea taverns.",
+      "There was vague talk of one inland trip made by the cult-members, during which faint drumming and red flame were noted on the distant hills."
+    ],
+    "typeGuess": "city",
+    "relatedNames": ["The Narrator"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 82,
+        "quote": "Cable advices from Dunedin report that the Alert was well known there as an island trader, and bore an evil reputation along the waterfront. It was owned by a curious group of half-castes whose frequent meetings and night trips to the woods attracted no little curiosity; and it had set sail in great haste just after the storm and earth tremors of March 1st.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 86,
+        "quote": "What had the vice-admiralty's investigation brought out, and what was known of the noxious cult in Dunedin?",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 87,
+        "quote": "From Dunedin the Alert and her noisome crew had darted eagerly forth as if imperiously summoned",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 89,
+        "quote": "In less than a month I was in Dunedin; where, however, I found that little was known of the strange cult-members who had lingered in the old sea taverns. Waterfront scum was far too common for special mention; though there was vague talk about one inland trip these mongrels had made, during which faint drumming and red flame were noted on the distant hills.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Auckland",
+    "aliases": [],
+    "facts": [
+      "An Auckland correspondent gave the Emma and her crew an excellent reputation.",
+      "The narrator learned in Auckland that Johansen had returned and had sailed to his old home in Oslo."
+    ],
+    "typeGuess": "city",
+    "relatedNames": ["Johansen", "The Narrator"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 83,
+        "quote": "Our Auckland correspondent gives the Emma and her crew an excellent reputation, and Johansen is described as a sober and worthy man.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 90,
+        "quote": "In Auckland I learned that Johansen had returned with yellow hair turned white after a perfunctory and inconclusive questioning at Sydney, and had thereafter sold his cottage in West Street and sailed with his wife to his old home in Oslo.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Johansen",
+    "aliases": ["Mate Johansen"],
+    "facts": [
+      "Johansen was described as a sober and worthy man.",
+      "The admiralty planned an inquiry at which every effort would be made to induce Johansen to speak more freely than he had done hitherto.",
+      "Johansen was the mate and was secretive about the unknown island on which six of the Emma's crew had died.",
+      "Johansen returned with his yellow hair turned white after a perfunctory and inconclusive questioning at Sydney.",
+      "Johansen sold his cottage in West Street and sailed with his wife to his old home in Oslo.",
+      "Of his experience Johansen would tell his friends no more than he had told the admiralty officials.",
+      "Johansen's friends gave the narrator his Oslo address."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": ["The Narrator", "Auckland", "Sydney", "Oslo", "West Street", "unknown island"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 83,
+        "quote": "Our Auckland correspondent gives the Emma and her crew an excellent reputation, and Johansen is described as a sober and worthy man.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 84,
+        "quote": "The admiralty will institute an inquiry on the whole matter beginning tomorrow, at which every effort will be made to induce Johansen to speak more freely than he has done hitherto.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 86,
+        "quote": "What was the unknown island on which six of the Emma's crew had died, and about which the mate Johansen was so secretive?",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 90,
+        "quote": "In Auckland I learned that Johansen had returned with yellow hair turned white after a perfunctory and inconclusive questioning at Sydney, and had thereafter sold his cottage in West Street and sailed with his wife to his old home in Oslo. Of his stirring experience he would tell his friends no more than he had told the admiralty officials, and all they could do was to give me his Oslo address.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 92,
+        "quote": "Shaken with such a mental revolution as I had never before known, I now resolved to visit Mate Johansen in Oslo.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "The newspaper account and the picture of the hellish image started a train of ideas in his mind.",
+      "He saw in the account new treasuries of data on the Cthulhu Cult and evidence that it had strange interests at sea as well as on land.",
+      "His uncle carefully noted the various turns of events.",
+      "After a day of hurried cabling and arranging he bade his host adieu and took a train for San Francisco.",
+      "In less than a month he was in Dunedin.",
+      "He went to Sydney and talked profitlessly with seamen and members of the vice-admiralty court.",
+      "He studied the crouching image long and well, noting the same utter mystery, terrible antiquity, and unearthly strangeness of material as in Legrasse's smaller specimen.",
+      "He resolved to visit Mate Johansen in Oslo.",
+      "Sailing for London, he re-embarked at once for the Norwegian capital and landed there one autumn day."
+    ],
+    "typeGuess": "protagonist",
+    "relatedNames": ["Johansen", "Legrasse", "Dunedin", "Auckland", "Sydney", "Oslo", "London", "San Francisco"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 86,
+        "quote": "This was all, together with the picture of the hellish image; but what a train of ideas it started in my mind! Here were new treasuries of data on the Cthulhu Cult, and evidence that it had strange interests at sea as well as on land.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 86,
+        "quote": "what deep and more than natural linkage of dates was this which gave a malign and now undeniable significance to the various turns of events so carefully noted by my uncle?",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 89,
+        "quote": "That evening, after a day of hurried cabling and arranging, I bade my host adieu and took a train for San Francisco. In less than a month I was in Dunedin",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "After that I went to Sydney and talked profitlessly with seamen and members of the vice-admiralty court. I saw the Alert, now sold and in commercial use, at Circular Quay in Sydney Cove, but gained nothing from its non-committal bulk.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "I studied it long and well, finding it a thing of balefully exquisite workmanship, and with the same utter mystery, terrible antiquity, and unearthly strangeness of material which I had noted in Legrasse's smaller specimen.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 92,
+        "quote": "Shaken with such a mental revolution as I had never before known, I now resolved to visit Mate Johansen in Oslo. Sailing for London, I re-embarked at once for the Norwegian capital; and one autumn day landed at the trim wharves in the shadow of the Egeberg.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Cthulhu",
+    "aliases": [],
+    "facts": [
+      "A young sculptor molded in his sleep the form of the dreaded Cthulhu.",
+      "A cult called the Cthulhu Cult had strange interests at sea as well as on land."
+    ],
+    "typeGuess": "entity",
+    "relatedNames": ["Cyclopean city"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 87,
+        "quote": "on the other side of the earth poets and artists had begun to dream of a strange, dank Cyclopean city whilst a young sculptor had molded in his sleep the form of the dreaded Cthulhu",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 86,
+        "quote": "Here were new treasuries of data on the Cthulhu Cult, and evidence that it had strange interests at sea as well as on land.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "unknown island",
+    "aliases": [],
+    "facts": [
+      "Six of the Emma's crew died on the unknown island.",
+      "The mate Johansen was secretive about the island.",
+      "The crew of the Emma landed on the unknown island on March 23rd and left six men dead."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["Johansen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 86,
+        "quote": "What was the unknown island on which six of the Emma's crew had died, and about which the mate Johansen was so secretive?",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 87,
+        "quote": "March 23rd the crew of the Emma landed on an unknown island and left six men dead",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Cyclopean city",
+    "aliases": ["the dank city"],
+    "facts": [
+      "Poets and artists on the other side of the earth began to dream of a strange, dank Cyclopean city.",
+      "All dreams of the dank city ceased on April 2nd."
+    ],
+    "typeGuess": "city",
+    "relatedNames": ["Cthulhu", "Wilcox"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 87,
+        "quote": "on the other side of the earth poets and artists had begun to dream of a strange, dank Cyclopean city",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 87,
+        "quote": "And what of this storm of April 2nd—the date on which all dreams of the dank city ceased",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Wilcox",
+    "aliases": [],
+    "facts": [
+      "Wilcox emerged unharmed from the bondage of strange fever on April 2nd, the date on which all dreams of the dank city ceased."
+    ],
+    "typeGuess": null,
+    "fate": "emerged unharmed from the bondage of strange fever",
+    "relatedNames": ["Cyclopean city"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 87,
+        "quote": "And what of this storm of April 2nd—the date on which all dreams of the dank city ceased, and Wilcox emerged unharmed from the bondage of strange fever?",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Castro",
+    "aliases": ["old Castro"],
+    "facts": [
+      "Old Castro gave hints about the sunken, star-born Old Ones and their coming reign.",
+      "His hints concerned the Old Ones' faithful cult and their mastery of dreams.",
+      "Old Castro told Legrasse that the primal Great Ones had come from the stars and had brought their images with them."
+    ],
+    "typeGuess": null,
+    "relatedNames": ["Old Ones", "Legrasse"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 87,
+        "quote": "What of all this—and of those hints of old Castro about the sunken, star-born Old Ones and their coming reign; their faithful cult and their mastery of dreams?",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "Then I thought with a shudder of what old Castro had told Legrasse about the primal Great Ones: \"They had come from the stars, and had brought Their images with Them.\"",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Old Ones",
+    "aliases": ["Great Ones"],
+    "facts": [
+      "The Old Ones were described by old Castro as sunken and star-born, with a coming reign.",
+      "The Old Ones had a faithful cult and a mastery of dreams.",
+      "According to what old Castro told Legrasse, they had come from the stars and had brought their images with them."
+    ],
+    "typeGuess": "race",
+    "fate": "sunken, their reign yet to come",
+    "relatedNames": ["Castro", "Legrasse"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 87,
+        "quote": "What of all this—and of those hints of old Castro about the sunken, star-born Old Ones and their coming reign; their faithful cult and their mastery of dreams?",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "Then I thought with a shudder of what old Castro had told Legrasse about the primal Great Ones: \"They had come from the stars, and had brought Their images with Them.\"",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "San Francisco",
+    "aliases": [],
+    "facts": [
+      "The narrator took a train for San Francisco after a day of hurried cabling and arranging."
+    ],
+    "typeGuess": "city",
+    "relatedNames": ["The Narrator"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 89,
+        "quote": "That evening, after a day of hurried cabling and arranging, I bade my host adieu and took a train for San Francisco.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Sydney",
+    "aliases": [],
+    "facts": [
+      "Johansen underwent a perfunctory and inconclusive questioning at Sydney.",
+      "The narrator talked profitlessly in Sydney with seamen and members of the vice-admiralty court.",
+      "The Alert, now sold and in commercial use, lay at Circular Quay in Sydney Cove."
+    ],
+    "typeGuess": "city",
+    "relatedNames": ["Johansen", "The Narrator", "Circular Quay", "Sydney Cove"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 90,
+        "quote": "In Auckland I learned that Johansen had returned with yellow hair turned white after a perfunctory and inconclusive questioning at Sydney",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "After that I went to Sydney and talked profitlessly with seamen and members of the vice-admiralty court. I saw the Alert, now sold and in commercial use, at Circular Quay in Sydney Cove, but gained nothing from its non-committal bulk.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "West Street",
+    "aliases": [],
+    "facts": [
+      "Johansen sold his cottage in West Street."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["Johansen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 90,
+        "quote": "sold his cottage in West Street and sailed with his wife to his old home in Oslo",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Oslo",
+    "aliases": [],
+    "facts": [
+      "Johansen sailed with his wife to his old home in Oslo.",
+      "Johansen's friends gave the narrator his Oslo address.",
+      "Oslo is the Norwegian capital.",
+      "The narrator landed one autumn day at the trim wharves in the shadow of the Egeberg."
+    ],
+    "typeGuess": "city",
+    "realWorld": "Oslo, the Norwegian capital",
+    "relatedNames": ["Johansen", "The Narrator", "Egeberg"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 90,
+        "quote": "sailed with his wife to his old home in Oslo. Of his stirring experience he would tell his friends no more than he had told the admiralty officials, and all they could do was to give me his Oslo address.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 92,
+        "quote": "Shaken with such a mental revolution as I had never before known, I now resolved to visit Mate Johansen in Oslo. Sailing for London, I re-embarked at once for the Norwegian capital; and one autumn day landed at the trim wharves in the shadow of the Egeberg.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Circular Quay",
+    "aliases": [],
+    "facts": [
+      "The Alert, now sold and in commercial use, lay at Circular Quay in Sydney Cove."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["Sydney Cove", "Sydney"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "I saw the Alert, now sold and in commercial use, at Circular Quay in Sydney Cove, but gained nothing from its non-committal bulk.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Sydney Cove",
+    "aliases": [],
+    "facts": [
+      "Circular Quay lies in Sydney Cove."
+    ],
+    "typeGuess": "sea",
+    "relatedNames": ["Circular Quay", "Sydney"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "I saw the Alert, now sold and in commercial use, at Circular Quay in Sydney Cove, but gained nothing from its non-committal bulk.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Museum at Hyde Park",
+    "aliases": [],
+    "facts": [
+      "The crouching image with its cuttlefish head, dragon body, scaly wings, and hieroglyphed pedestal was preserved in the Museum at Hyde Park.",
+      "The museum's curator reported that geologists had found the image a monstrous puzzle, vowing that the world held no rock like it."
+    ],
+    "typeGuess": "building",
+    "relatedNames": ["The Narrator"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "The crouching image with its cuttlefish head, dragon body, scaly wings, and hieroglyphed pedestal, was preserved in the Museum at Hyde Park",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "Geologists, the curator told me, had found it a monstrous puzzle; for they vowed that the world held no rock like it.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Legrasse",
+    "aliases": [],
+    "facts": [
+      "Old Castro told Legrasse about the primal Great Ones.",
+      "Legrasse possessed a smaller specimen in which the narrator had noted utter mystery, terrible antiquity, and unearthly strangeness of material."
+    ],
+    "typeGuess": null,
+    "relatedNames": ["Castro", "The Narrator"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "Then I thought with a shudder of what old Castro had told Legrasse about the primal Great Ones",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 91,
+        "quote": "with the same utter mystery, terrible antiquity, and unearthly strangeness of material which I had noted in Legrasse's smaller specimen",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "London",
+    "aliases": [],
+    "facts": [
+      "The narrator sailed for London and re-embarked at once for the Norwegian capital."
+    ],
+    "typeGuess": "city",
+    "relatedNames": ["The Narrator", "Oslo"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 92,
+        "quote": "Sailing for London, I re-embarked at once for the Norwegian capital",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Egeberg",
+    "aliases": [],
+    "facts": [
+      "The trim wharves of the Norwegian capital lie in the shadow of the Egeberg."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["Oslo"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 92,
+        "quote": "I re-embarked at once for the Norwegian capital; and one autumn day landed at the trim wharves in the shadow of the Egeberg.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  }
+]

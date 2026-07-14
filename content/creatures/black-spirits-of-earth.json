@@ -1,0 +1,19 @@
+{
+  "slug": "black-spirits-of-earth",
+  "name": "black spirits of earth",
+  "classification": "race",
+  "summary": "Moldy, shadowy spirits that came out of the earth, full of dim rumors picked up in caverns beneath forgotten sea-bottoms; of them old Castro dared not speak much.",
+  "description": "In Castro's account of the elder time, the black spirits of earth came out of the earth, moldy and shadowy, and full of dim rumors picked up in caverns beneath forgotten sea-bottoms.\n\nOf them old Castro dared not speak much: he cut himself off hurriedly, and no amount of persuasion or subtlety could elicit more in this direction.",
+  "locations": [],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Then came out of the earth the black spirits of earth, moldy and shadowy, and full of dim rumors picked up in caverns beneath forgotten sea-bottoms. But of them old Castro dared not speak much. He cut himself off hurriedly, and no amount of persuasion or subtlety could elicit more in this direction.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 53
+    }
+  ]
+}

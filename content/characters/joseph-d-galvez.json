@@ -1,0 +1,28 @@
+{
+  "slug": "joseph-d-galvez",
+  "name": "Joseph D. Galvez",
+  "role": "witness",
+  "summary": "An excitable Spaniard of Legrasse's raiding party who fancied he heard antiphonal responses to the swamp ritual from deeper within the haunted wood, and hinted at great wings and a mountainous white bulk beyond the trees.",
+  "description": "Joseph D. Galvez, an excitable Spaniard, was one of the men on the raid against the swamp ritual. It may have been only imagination or echoes, but he fancied he heard antiphonal responses to the chant from some far and unillumined spot deeper within that wood of ancient legendry and horror, and went so far as to hint of the faint beating of great wings, and of a glimpse of shining eyes and a mountainous white bulk beyond the remotest trees.\n\nThe narrator later met and questioned him; he proved distractingly imaginative, and the narrator supposed he had been hearing too much native superstition.",
+  "locations": [
+    "swamp-and-lagoon-country",
+    "black-haunted-woods"
+  ],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "It may have been only imagination and it may have been only echoes which induced one of the men, an excitable Spaniard, to fancy he heard antiphonal responses to the ritual from some far and unillumined spot deeper within the wood of ancient legendry and horror. This man, Joseph D. Galvez, I later met and questioned; and he proved distractingly imaginative.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 43
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "He indeed went so far as to hint of the faint beating of great wings, and of a glimpse of shining eyes and a mountainous white bulk beyond the remotest trees—but I suppose he had been hearing too much native superstition.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 43
+    }
+  ]
+}

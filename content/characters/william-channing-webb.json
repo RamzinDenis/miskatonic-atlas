@@ -1,0 +1,36 @@
+{
+  "slug": "william-channing-webb",
+  "name": "William Channing Webb",
+  "role": "scholar",
+  "summary": "Professor of anthropology in Princeton University and an explorer of no slight note, whose record of a devil-worshiping Eskimo cult on the West Greenland coast supplied the ritual that matched Legrasse's swamp chant word for word at the 1908 St. Louis meeting.",
+  "description": "William Channing Webb, professor of anthropology in Princeton University and an explorer of no slight note, was present in the St. Louis gathering of 1908 when Inspector Legrasse produced the swamp statuette. Alone of that company he suspected a touch of bizarre familiarity in the monstrous shape and writing, and told with some diffidence of the odd trifle he knew; his account was set beside Legrasse's narrative in the heading of the second section of Professor Angell's manuscript.\n\nForty-eight years before, engaged in a tour of Greenland and Iceland in search of Runic inscriptions which he failed to unearth, he had encountered high up on the West Greenland coast a singular tribe or cult of degenerate Eskimos whose religion, a curious form of devil-worship, chilled him with its deliberate bloodthirstiness and repulsiveness. Of their ritual he had taken a careful phonetic copy from an aged angekok or wizard-priest, expressing the sounds in Roman letters as best he knew how, and their fetish — a very crude bas-relief of stone with a hideous picture and cryptic writing — was a rough parallel in all essential features of the thing lying before the meeting. An exhaustive comparison brought a moment of really awed silence when detective and scientist agreed on the virtual identity of the phrase common to two hellish rituals so many worlds of distance apart; only in the reported meaning of the words did Legrasse hold one point in advance of him.\n\nLegrasse for some time lent him the swamp image; at his death — the record names him \"the late William Channing Webb\" — it was returned to the inspector, in whose possession it remains.",
+  "locations": [
+    "st-louis",
+    "greenland",
+    "iceland"
+  ],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "fate": "Deceased — named \"the late William Channing Webb\"; at his death the image Legrasse had lent him was returned.",
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "there was one man in that gathering who suspected a touch of bizarre familiarity in the monstrous shape and writing, and who presently told with some diffidence of the odd trifle he knew. This person was the late William Channing Webb, professor of anthropology in Princeton University, and an explorer of no slight note.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 28
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Professor Webb had been engaged, forty-eight years before, in a tour of Greenland and Iceland in search of some Runic inscriptions which he failed to unearth; and whilst high up on the West Greenland coast had encountered a singular tribe or cult of degenerate Eskimos whose religion, a curious form of devil-worship, chilled him with its deliberate bloodthirstiness and repulsiveness.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 29
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "a moment of really awed silence when both detective and scientist agreed on the virtual identity of the phrase common to two hellish rituals so many worlds of distance apart",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 30
+    }
+  ]
+}

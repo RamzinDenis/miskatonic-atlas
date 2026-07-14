@@ -1,0 +1,24 @@
+{
+  "slug": "paris",
+  "name": "Paris",
+  "type": "city",
+  "map": {
+    "x": 3232,
+    "y": 1174
+  },
+  "summary": "The city where the fantastic painter Ardois-Bonnot hung a blasphemous Dream Landscape in the spring salon of 1926.",
+  "description": "Paris appears among Professor Angell's press cuttings: a fantastic painter named Ardois-Bonnot hung a blasphemous Dream Landscape in the Paris spring salon of 1926.\n\nThe item stands in the record beside the other scattered cases of the period gathered from around the world.",
+  "realWorld": "Paris, France",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "The west of Ireland, too, is full of wild rumor and legendry, and a fantastic painter named Ardois-Bonnot hangs a blasphemous Dream Landscape in the Paris spring salon of 1926.",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 20
+    }
+  ]
+}

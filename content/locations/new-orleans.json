@@ -1,0 +1,38 @@
+{
+  "slug": "new-orleans",
+  "name": "New Orleans",
+  "type": "city",
+  "map": {
+    "x": 2342,
+    "y": 1412
+  },
+  "summary": "The Louisiana city of Inspector John Raymond Legrasse, whose men captured the cult statuette in the swamps to the south; the narrator later came here to question Legrasse and the surviving prisoners.",
+  "description": "New Orleans enters the record through Inspector John R. Legrasse, whose address Professor Angell's manuscript gives as 121 Bienville St., New Orleans, La. It was Legrasse who traveled all the way from New Orleans to the 1908 archaeological meeting for certain special information unobtainable from any local source.\n\nThe city was the base of the affair that produced his statuette: on November 1st, 1907, a frantic summons reached the New Orleans police from the swamp and lagoon country to the south, and the idol was captured some months before the meeting in the wooded swamps south of the city during a raid on a supposed voodoo meeting.\n\nRetracing his grand-uncle's inquiry, the narrator visited New Orleans himself, talked with Legrasse and others of that old-time raiding-party, saw the frightful image, and questioned such of the mongrel prisoners as still survived.",
+  "realWorld": "New Orleans, Louisiana, USA",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [
+    "swamp-and-lagoon-country"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "and the second, \"Narrative of Inspector John R. Legrasse, 121 Bienville St., New Orleans, La., at 1908 A. A. S. Mtg—Notes on Same, & Prof. Webb's Acct.\"",
+      "context": "Chapter 1, The Horror in Clay",
+      "paragraph": 9
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "On November 1st, 1907, there had come to New Orleans police a frantic summons from the swamp and lagoon country to the south.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 36
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "I visited New Orleans, talked with Legrasse and others of that old-time raiding-party, saw the frightful image, and even questioned such of the mongrel prisoners as still survived.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 64
+    }
+  ]
+}

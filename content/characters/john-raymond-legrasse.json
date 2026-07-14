@@ -1,0 +1,37 @@
+{
+  "slug": "john-raymond-legrasse",
+  "name": "John Raymond Legrasse",
+  "role": "witness",
+  "summary": "The New Orleans police inspector whose 1908 raid on the swamp cult south of the city seized the crouching stone idol and forty-seven prisoners, and whose narrative before the American Archeological Society in St. Louis fills the second half of Professor Angell's manuscript.",
+  "description": "John Raymond Legrasse, a commonplace-looking middle-aged man, was by profession an inspector of police, his address given as 121 Bienville St., New Orleans. In 1908 he traveled to the annual meeting of the American Archeological Society in St. Louis for certain special information unobtainable from any local source, bearing a grotesque, repulsive, and apparently very ancient stone statuette whose origin he was at a loss to determine: between seven and eight inches in height, a monster of vaguely anthropoid outline with an octopuslike head whose face was a mass of feelers, a scaly rubbery-looking body, prodigious claws on hind and fore feet, and long narrow wings behind. One sight of the thing threw the assembled men of science into tense excitement, and his narrative — with notes on it and Professor Webb's account — became the second section of Professor Angell's manuscript.\n\nThe statuette had been captured some months before in the wooded swamps south of New Orleans during a raid on a supposed voodoo meeting, whose rites were so singular and hideous that the police realized they had stumbled on a dark cult totally unknown to them, infinitely more diabolic than even the blackest of the African voodoo circles. When each of the cowed squatters refused point-blank to advance toward the scene of unholy worship, Legrasse and his nineteen colleagues plunged on unguided into black arcades of horror none of them had ever trod; he dashed swamp water on the face of a policeman who fainted at the sight of the rite, counted some forty-seven sullen prisoners, and carefully removed the image from its monolith. He had noted and copied the worshipers' oral ritual, and several among his prisoners repeated what older celebrants had told them the words meant — one point in advance of Professor Webb, with whom he agreed, after exhaustive comparison, on the virtual identity of the phrase common to two hellish rituals worlds apart.\n\nDeeply impressed and not a little bewildered, he inquired in vain concerning the historic affiliations of the cult, coming to the highest authorities in the country and meeting with no more than the Greenland tale of Professor Webb. He lent the image to Webb for some time; at the latter's death it was returned, and it remains in his possession, where the narrator viewed it not long ago and later talked with him and others of the old-time raiding-party in New Orleans. Legrasse and his men have been let alone.",
+  "locations": [
+    "new-orleans",
+    "st-louis",
+    "swamp-and-lagoon-country",
+    "black-haunted-woods"
+  ],
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "fate": "Unharmed as of the narrator's record — \"Legrasse and his men, it is true, have been let alone\"; the swamp image remains in his possession.",
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "The chief of these outsiders, and in a short time the focus of interest for the entire meeting, was a commonplace-looking middle-aged man who had traveled all the way from New Orleans for certain special information unobtainable from any local source. His name was John Raymond Legrasse, and he was by profession an inspector of police. With him he bore the subject of his visit, a grotesque, repulsive, and apparently very ancient stone statuette whose origin he was at a loss to determine.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 23
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Reluctant even to be left alone again, each one of the cowed squatters refused point-blank to advance another inch toward the scene of unholy worship, so Inspector Legrasse and his nineteen colleagues plunged on unguided into black arcades of horror that none of them had ever trod before.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 37
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Legrasse for some time lent the image to Professor Webb, but at the latter's death it was returned to him and remains in his possession, where I viewed it not long ago.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 57
+    }
+  ]
+}

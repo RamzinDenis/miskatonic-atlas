@@ -1,0 +1,30 @@
+{
+  "slug": "paterson",
+  "name": "Paterson",
+  "type": "city",
+  "map": {
+    "x": 2495,
+    "y": 1282
+  },
+  "summary": "The New Jersey city where the narrator, visiting a learned friend — curator of a local museum and a mineralogist of note — stumbled on the Sydney Bulletin picture in a rear room of the museum.",
+  "description": "Paterson, New Jersey, was home to a learned friend of the narrator, the curator of a local museum and a mineralogist of note, whom he was visiting after having largely given over his inquiries into what Professor Angell called the \"Cthulhu Cult\".\n\nExamining reserve specimens roughly set on the storage shelves in a rear room of the museum there, the narrator's eye was caught by an odd picture in one of the old papers spread beneath the stones — the Sydney Bulletin clipping that reopened the whole investigation.",
+  "realWorld": "Paterson, New Jersey, USA",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "I had largely given over my inquiries into what Professor Angell called the \"Cthulhu Cult,\" and was visiting a learned friend of Paterson, New Jersey, the curator of a local museum and a mineralogist of note.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 67
+    },
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Examining one day the reserve specimens roughly set on the storage shelves in a rear room of the museum, my eye was caught by an odd picture in one of the old papers spread beneath the stones.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 67
+    }
+  ]
+}

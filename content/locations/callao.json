@@ -1,0 +1,25 @@
+{
+  "slug": "callao",
+  "name": "Callao",
+  "type": "city",
+  "map": {
+    "x": 2467,
+    "y": 1832
+  },
+  "summary": "The port for which the schooner Emma of Auckland sailed on February 20th with a complement of eleven men.",
+  "description": "Callao was the destination of the two-masted schooner Emma of Auckland, which sailed for it on February 20th with a complement of eleven men.",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [
+    "auckland"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "had been second mate of the two-masted schooner Emma of Auckland, which sailed for Callao February 20th, with a complement of eleven men",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 75
+    }
+  ]
+}

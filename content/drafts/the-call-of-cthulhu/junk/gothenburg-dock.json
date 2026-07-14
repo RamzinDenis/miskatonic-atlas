@@ -1,0 +1,37 @@
+{
+  "slug": "gothenburg-dock",
+  "name": "Gothenburg dock",
+  "type": "other",
+  "summary": "The dock near which, in a narrow lane, a bundle of papers falling from an attic window knocked Gustaf Johansen down during a walk.",
+  "description": "During a walk through a narrow lane near the Gothenburg dock, a bundle of papers falling from an attic window knocked Johansen down.\n\nThe incident is recounted by his widow in the closing chapter, The Madness from the Sea, among the circumstances of the mate's sudden death.",
+  "appearsIn": ["the-call-of-cthulhu"],
+  "connectedTo": [],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "During a walk through a narrow lane near the Gothenburg dock, a bundle of papers falling from an attic window had knocked him down.",
+      "context": "Chapter 3, The Madness from the Sea",
+      "paragraph": 94
+    }
+  ],
+  "_draft": {
+    "aliases": [],
+    "occurrences": 1,
+    "windows": ["w091-102"],
+    "facts": [
+      "Johansen was knocked down by a bundle of papers falling from an attic window during a walk through a narrow lane near the Gothenburg dock."
+    ],
+    "needsReview": [
+      {
+        "field": "connectedTo",
+        "reason": "Likely lies within Oslo (the walk belongs to Johansen's residence there), but no occurrence places it; left unlinked and not folded.",
+        "candidates": ["oslo"]
+      },
+      {
+        "field": "description",
+        "reason": "'recounted by his widow... among the circumstances of the mate's sudden death' draws on the surrounding paragraph's context, not on this record's fact; trim if too inferential.",
+        "candidates": []
+      }
+    ]
+  }
+}

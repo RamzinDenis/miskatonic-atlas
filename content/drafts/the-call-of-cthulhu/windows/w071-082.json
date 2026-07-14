@@ -1,0 +1,317 @@
+[
+  {
+    "kind": "location",
+    "name": "Valparaiso",
+    "aliases": [],
+    "facts": [
+      "The Morrison Co.'s freighter Vigilant was bound from Valparaiso.",
+      "The Vigilant left Valparaiso March 25th."
+    ],
+    "typeGuess": "city",
+    "relatedNames": ["Darling Harbour"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 72,
+        "quote": "The Morrison Co.'s freighter Vigilant, bound from Valparaiso, arrived this morning at its wharf in Darling Harbour",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 73,
+        "quote": "The Vigilant left Valparaiso March 25th, and on April 2d was driven considerably south of her course by exceptionally heavy storms and monster waves.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Darling Harbour",
+    "aliases": [],
+    "facts": [
+      "The freighter Vigilant arrived at its wharf in Darling Harbour, having in tow the battled and disabled steam yacht Alert."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["Valparaiso"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 72,
+        "quote": "arrived this morning at its wharf in Darling Harbour, having in tow the battled and disabled but heavily armed steam yacht Alert of Dunedin, N. Z.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Dunedin",
+    "aliases": ["Dunedin, N. Z."],
+    "facts": [
+      "Dunedin, N. Z., was the home port of the heavily armed steam yacht Alert.",
+      "The Alert was well known in Dunedin as an island trader and bore an evil reputation along the waterfront.",
+      "The Alert was owned by a curious group of half-castes whose frequent meetings and night trips to the woods attracted no little curiosity.",
+      "The Alert had set sail in great haste just after the storm and earth tremors of March 1st."
+    ],
+    "typeGuess": "city",
+    "realWorld": "Dunedin, New Zealand",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 72,
+        "quote": "having in tow the battled and disabled but heavily armed steam yacht Alert of Dunedin, N. Z.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 82,
+        "quote": "Cable advices from Dunedin report that the Alert was well known there as an island trader, and bore an evil reputation along the waterfront. It was owned by a curious group of half-castes whose frequent meetings and night trips to the woods attracted no little curiosity; and it had set sail in great haste just after the storm and earth tremors of March 1st.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Sydney University",
+    "aliases": [],
+    "facts": [
+      "Authorities at Sydney University profess complete bafflement regarding the nature of the stone idol found with the Alert's survivor."
+    ],
+    "typeGuess": "building",
+    "relatedNames": ["Museum in College Street"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 74,
+        "quote": "regarding whose nature authorities at Sydney University, the Royal Society, and the Museum in College Street all profess complete bafflement",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Museum in College Street",
+    "aliases": [],
+    "facts": [
+      "Authorities at the Museum in College Street profess complete bafflement regarding the nature of the stone idol found with the Alert's survivor."
+    ],
+    "typeGuess": "building",
+    "relatedNames": ["Sydney University"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 74,
+        "quote": "regarding whose nature authorities at Sydney University, the Royal Society, and the Museum in College Street all profess complete bafflement",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Gustaf Johansen",
+    "aliases": ["Johansen", "Second Mate Johansen"],
+    "facts": [
+      "He was the one survivor found in a half-delirious condition when the derelict was boarded after being sighted on April 12th.",
+      "When found he was clutching a horrible stone idol of unknown origin, about a foot in height.",
+      "He says he found the idol in the cabin of the yacht, in a small carved shrine of common pattern.",
+      "He is a Norwegian of some intelligence.",
+      "He had been second mate of the two-masted schooner Emma of Auckland.",
+      "After recovering his senses he told an exceedingly strange story of piracy and slaughter.",
+      "He says the Emma was thrown widely south of her course by the great storm of March 1st and on March 22d encountered the Alert, manned by a queer and evil-looking crew of Kanakas and half-castes.",
+      "He says the Emma's men boarded the Alert and were forced to kill all of its savage crew.",
+      "As Second Mate he led the remaining eight men in navigating the captured yacht ahead in their original direction.",
+      "He is queerly reticent about how six of the men died ashore on the island, speaking only of their falling into a rock chasm.",
+      "He and one companion boarded the yacht and tried to manage her, but were beaten about by the storm of April 2nd.",
+      "From that time till his rescue on the 12th he remembers little, and does not recall when his companion William Briden died."
+    ],
+    "typeGuess": "witness",
+    "fate": "Survived; found half-delirious aboard the derelict Alert and rescued on the 12th",
+    "relatedNames": ["Capt. Collins", "First Mate Green", "William Briden", "small island"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 73,
+        "quote": "On April 12th the derelict was sighted; and though apparently deserted, was found upon boarding to contain one survivor in a half-delirious condition and one man who had evidently been dead for more than a week.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 74,
+        "quote": "The living man was clutching a horrible stone idol of unknown origin, about a foot in height, regarding whose nature authorities at Sydney University, the Royal Society, and the Museum in College Street all profess complete bafflement, and which the survivor says he found in the cabin of the yacht, in a small carved shrine of common pattern.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 75,
+        "quote": "This man, after recovering his senses, told an exceedingly strange story of piracy and slaughter. He is Gustaf Johansen, a Norwegian of some intelligence, and had been second mate of the two-masted schooner Emma of Auckland, which sailed for Callao February 20th, with a complement of eleven men.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 76,
+        "quote": "The Emma, he says, was delayed and thrown widely south of her course by the great storm of March 1st, and on March 22d, in S. Latitude 49° 51´, W. Longitude 128° 34´, encountered the Alert, manned by a queer and evil-looking crew of Kanakas and half-castes.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 77,
+        "quote": "The Emma's men showed fight, says the survivor, and though the schooner began to sink from shots beneath the waterline they managed to heave alongside their enemy and board her, grappling with the savage crew on the yacht's deck, and being forced to kill them all",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 78,
+        "quote": "the remaining eight under Second Mate Johansen proceeded to navigate the captured yacht, going ahead in their original direction to see if any reason for their ordering back had existed",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 79,
+        "quote": "though Johansen is queerly reticent about this part of his story and speaks only of their falling into a rock chasm",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 80,
+        "quote": "Later, it seems, he and one companion boarded the yacht and tried to manage her, but were beaten about by the storm of April 2nd.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 81,
+        "quote": "From that time till his rescue on the 12th, the man remembers little, and he does not even recall when William Briden, his companion, died.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Auckland",
+    "aliases": [],
+    "facts": [
+      "Auckland was the home port of the two-masted schooner Emma."
+    ],
+    "typeGuess": "city",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 75,
+        "quote": "had been second mate of the two-masted schooner Emma of Auckland, which sailed for Callao February 20th, with a complement of eleven men",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Callao",
+    "aliases": [],
+    "facts": [
+      "The schooner Emma sailed for Callao February 20th, with a complement of eleven men."
+    ],
+    "typeGuess": "city",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 75,
+        "quote": "had been second mate of the two-masted schooner Emma of Auckland, which sailed for Callao February 20th, with a complement of eleven men",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Capt. Collins",
+    "aliases": [],
+    "facts": [
+      "Capt. Collins, ordered peremptorily by the Alert's crew to turn back, refused, whereupon the strange crew fired on the schooner without warning.",
+      "Capt. Collins was among the three of the Emma's men killed."
+    ],
+    "typeGuess": "other",
+    "fate": "Killed in the fight with the Alert's crew",
+    "relatedNames": ["First Mate Green", "Gustaf Johansen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 76,
+        "quote": "Being ordered peremptorily to turn back, Capt. Collins refused; whereupon the strange crew began to fire savagely and without warning upon the schooner with a peculiarly heavy battery of brass cannon forming part of the yacht's equipment.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 78,
+        "quote": "Three of the Emma's men, including Capt. Collins and First Mate Green, were killed",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "First Mate Green",
+    "aliases": [],
+    "facts": [
+      "First Mate Green was among the three of the Emma's men killed."
+    ],
+    "typeGuess": "other",
+    "fate": "Killed in the fight with the Alert's crew",
+    "relatedNames": ["Capt. Collins", "Gustaf Johansen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 78,
+        "quote": "Three of the Emma's men, including Capt. Collins and First Mate Green, were killed",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "small island",
+    "aliases": [],
+    "facts": [
+      "The Emma's surviving crew raised and landed on a small island the day after capturing the Alert.",
+      "No island is known to exist in that part of the ocean.",
+      "Six of the men somehow died ashore on the island.",
+      "Johansen speaks only of the men falling into a rock chasm."
+    ],
+    "typeGuess": "other",
+    "relatedNames": ["Gustaf Johansen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 79,
+        "quote": "The next day, it appears, they raised and landed on a small island, although none is known to exist in that part of the ocean; and six of the men somehow died ashore, though Johansen is queerly reticent about this part of his story and speaks only of their falling into a rock chasm.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "William Briden",
+    "aliases": ["Briden"],
+    "facts": [
+      "William Briden was Johansen's companion.",
+      "He boarded the captured yacht with Johansen and was beaten about by the storm of April 2nd.",
+      "Johansen does not recall when Briden died.",
+      "Briden's death reveals no apparent cause and was probably due to excitement or exposure."
+    ],
+    "typeGuess": "other",
+    "fate": "Died of no apparent cause, probably due to excitement or exposure",
+    "relatedNames": ["Gustaf Johansen"],
+    "sources": [
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 80,
+        "quote": "Later, it seems, he and one companion boarded the yacht and tried to manage her, but were beaten about by the storm of April 2nd.",
+        "context": "Chapter 3, The Madness from the Sea"
+      },
+      {
+        "storySlug": "the-call-of-cthulhu",
+        "paragraph": 81,
+        "quote": "From that time till his rescue on the 12th, the man remembers little, and he does not even recall when William Briden, his companion, died. Briden's death reveals no apparent cause, and was probably due to excitement or exposure.",
+        "context": "Chapter 3, The Madness from the Sea"
+      }
+    ]
+  }
+]

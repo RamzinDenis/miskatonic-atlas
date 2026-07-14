@@ -1,0 +1,25 @@
+{
+  "slug": "irem",
+  "name": "Irem",
+  "type": "city",
+  "map": {
+    "x": 3691,
+    "y": 1518
+  },
+  "summary": "The City of Pillars, dreaming hidden and untouched amid the pathless deserts of Arabia, where old Castro placed the center of the cult.",
+  "description": "Irem, the City of Pillars, dreams hidden and untouched amid the pathless deserts of Arabia.\n\nIt owes its place in the record to Castro's confession: asked of the cult, he said he thought its center lay in those deserts where Irem dreams.",
+  "appearsIn": [
+    "the-call-of-cthulhu"
+  ],
+  "connectedTo": [
+    "arabia"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-call-of-cthulhu",
+      "quote": "Of the cult, he said that he thought the center lay amid the pathless deserts of Arabia, where Irem, the City of Pillars, dreams hidden and untouched.",
+      "context": "Chapter 2, The Tale of Inspector Legrasse",
+      "paragraph": 53
+    }
+  ]
+}
