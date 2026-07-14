@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { ChipSection, SourcesSection, type SourceItem } from "@/shared/ui/sections";
 
 /**
@@ -11,6 +12,8 @@ export interface EntityArticleProps {
   name: string;
   badge: string;
   summary: string;
+  /** Editorial engraving between summary and description (CONTEXT.md: «Вклейка»). */
+  plate?: ReactNode;
   description: string;
   fate?: string;
   locations: { slug: string; name: string }[];
@@ -22,6 +25,7 @@ export function EntityArticle({
   name,
   badge,
   summary,
+  plate,
   description,
   fate,
   locations,
@@ -42,6 +46,8 @@ export function EntityArticle({
       </header>
 
       <p className="mt-6 text-lg leading-relaxed">{summary}</p>
+
+      {plate}
 
       <div className="mt-6 space-y-4 leading-relaxed text-foreground/90">
         {description.split("\n\n").map((paragraph, i) => (

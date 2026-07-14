@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getCreature, getCreatures, getLocation, getStory } from "@/shared/lib/content";
+import { getCreaturePlate } from "@/widgets/creature-plate";
 import { EntityArticle } from "@/widgets/entity-article";
 
 export const dynamicParams = false;
@@ -27,6 +28,7 @@ export default async function CreaturePage({ params }: PageProps<"/creatures/[sl
       name={creature.name}
       badge={creature.classification}
       summary={creature.summary}
+      plate={getCreaturePlate(creature.slug)}
       description={creature.description}
       fate={creature.fate}
       locations={creature.locations.flatMap((s) => getLocation(s) ?? [])}
