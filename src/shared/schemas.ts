@@ -12,6 +12,13 @@ export const MapPoint = z.object({
   y: z.number(),
 });
 
+/**
+ * Editorial weight of an entity in the atlas presentation (see CONTEXT.md).
+ * Minor entities keep their pages but stay off the map, indexes and menus.
+ * An editorial decision, never set by the extraction pipeline.
+ */
+export const Prominence = z.enum(["major", "minor"]).default("major");
+
 export const StorySchema = z.object({
   slug: z.string(),
   title: z.string(),
@@ -24,6 +31,7 @@ export const LocationSchema = z.object({
   name: z.string(),
   nameRu: z.string().optional(),
   type: z.enum(["city", "town", "building", "region", "ruin", "sea", "other"]),
+  prominence: Prominence,
   summary: z.string(),
   description: z.string(),
   map: MapPoint.optional(),
@@ -38,6 +46,7 @@ export const CharacterSchema = z.object({
   slug: z.string(),
   name: z.string(),
   role: z.enum(["protagonist", "witness", "cultist", "scholar", "other"]),
+  prominence: Prominence,
   summary: z.string(),
   description: z.string(),
   locations: z.array(z.string()),

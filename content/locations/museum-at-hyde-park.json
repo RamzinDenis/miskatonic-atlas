@@ -2,6 +2,7 @@
   "slug": "museum-at-hyde-park",
   "name": "Museum at Hyde Park",
   "type": "building",
+  "prominence": "minor",
   "summary": "The Sydney museum preserving the crouching image taken from the Alert — cuttlefish head, dragon body, scaly wings, and hieroglyphed pedestal — which geologists found a monstrous puzzle.",
   "description": "The crouching image with its cuttlefish head, dragon body, scaly wings, and hieroglyphed pedestal was preserved in the Museum at Hyde Park. The narrator studied it long and well, finding it a thing of balefully exquisite workmanship, with the same utter mystery, terrible antiquity, and unearthly strangeness of material he had noted in Legrasse's smaller specimen.\n\nGeologists, the curator told him, had found it a monstrous puzzle, for they vowed that the world held no rock like it. Possibly the same institution as the \"Museum in College Street\" whose bafflement the Sydney Bulletin clipping reports — the text never says.",
   "realWorld": "Museum at Hyde Park, Sydney",

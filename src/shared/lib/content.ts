@@ -140,6 +140,17 @@ export function loadContent(): AtlasContent {
   return content;
 }
 
+/**
+ * Visibility filter for the atlas presentation: the map, the Index and menus
+ * show only major entities. Minor ones keep their pages and are reachable
+ * through cross-links — the world is deeper than the map.
+ */
+export function majorOnly<T extends { prominence: "major" | "minor" }>(
+  entities: T[],
+): T[] {
+  return entities.filter((e) => e.prominence === "major");
+}
+
 export function getStories(): Story[] {
   return loadContent().stories;
 }
@@ -194,9 +205,9 @@ export function getCreaturesAt(locationSlug: string): Creature[] {
   return loadContent().creatures.filter((c) => c.locations.includes(locationSlug));
 }
 
-/** Locations that have map coordinates, shaped for the WorldMap widget. */
+/** Major locations that have map coordinates, shaped for the WorldMap widget. */
 export function getMapLocations(): MapLocation[] {
-  return loadContent().locations.flatMap((location) =>
+  return majorOnly(loadContent().locations).flatMap((location) =>
     location.map
       ? [
           {
