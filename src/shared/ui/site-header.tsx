@@ -29,7 +29,7 @@ export function SiteHeader({ floating = false }: { floating?: boolean }) {
             Map
           </Link>
           <Link
-            href="/index"
+            href="/contents"
             className="text-muted transition-colors hover:text-accent"
           >
             Index
