@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getStories, getStory, getStoryEntities } from "@/shared/lib/content";
 import { ChipSection } from "@/shared/ui/sections";
+import { getPlate } from "@/widgets/plates";
 
 export const dynamicParams = false;
 
@@ -41,6 +42,8 @@ export default async function StoryPage({ params }: PageProps<"/stories/[slug]">
       </header>
 
       <p className="mt-6 text-lg leading-relaxed">{story.summary}</p>
+
+      {getPlate("stories", story.slug)}
 
       <ChipSection
         title="Locations"

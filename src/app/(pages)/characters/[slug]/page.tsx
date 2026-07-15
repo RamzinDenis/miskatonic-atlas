@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getCharacter, getCharacters, getLocation, getStory } from "@/shared/lib/content";
 import { EntityArticle } from "@/widgets/entity-article";
+import { getPlate } from "@/widgets/plates";
 
 export const dynamicParams = false;
 
@@ -27,6 +28,7 @@ export default async function CharacterPage({ params }: PageProps<"/characters/[
       name={character.name}
       badge={character.role}
       summary={character.summary}
+      plate={getPlate("characters", character.slug)}
       description={character.description}
       fate={character.fate}
       locations={character.locations.flatMap((s) => getLocation(s) ?? [])}

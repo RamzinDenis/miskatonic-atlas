@@ -9,6 +9,7 @@ import {
   getStory,
 } from "@/shared/lib/content";
 import { ChipSection, SourcesSection } from "@/shared/ui/sections";
+import { getPlate } from "@/widgets/plates";
 
 export const dynamicParams = false;
 
@@ -57,6 +58,8 @@ export default async function LocationPage({
       </header>
 
       <p className="mt-6 text-lg leading-relaxed">{location.summary}</p>
+
+      {getPlate("locations", location.slug)}
 
       <div className="mt-6 space-y-4 text-[17px] leading-relaxed">
         {location.description.split("\n\n").map((paragraph, i) => (
