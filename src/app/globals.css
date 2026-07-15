@@ -166,7 +166,11 @@ body {
     0 0 16px rgba(195, 158, 102, 0.85);
 }
 
-/* Feature lettering on XIX-century charts is italic — so are the labels. */
+/*
+ * Feature lettering on XIX-century charts is italic ink on paper — so the
+ * labels are dark with a paper-colored halo, standing off the etched texture
+ * the way the scan's own names do (light text was lost on the bright map).
+ */
 .atlas-pin-label {
   position: absolute;
   left: 20px;
@@ -175,16 +179,29 @@ body {
   white-space: nowrap;
   font-family: var(--font-old-standard), Georgia, "Times New Roman", serif;
   font-style: italic;
+  font-weight: 700;
   font-size: 13px;
-  letter-spacing: 0.1em;
-  color: var(--foreground);
+  letter-spacing: 0.08em;
+  color: #2b1e08;
   text-shadow:
-    0 1px 3px rgba(8, 6, 2, 0.9),
-    0 0 8px rgba(8, 6, 2, 0.7);
+    -1px -1px 0 rgba(238, 226, 197, 0.9),
+    1px -1px 0 rgba(238, 226, 197, 0.9),
+    -1px 1px 0 rgba(238, 226, 197, 0.9),
+    1px 1px 0 rgba(238, 226, 197, 0.9),
+    0 0 5px rgba(238, 226, 197, 0.9),
+    0 0 10px rgba(238, 226, 197, 0.7);
 }
 
+.atlas-pin:hover .atlas-pin-label,
 .atlas-pin--active .atlas-pin-label {
-  color: var(--accent);
+  color: #75371a;
+  text-shadow:
+    -1px -1px 0 rgba(243, 233, 207, 0.95),
+    1px -1px 0 rgba(243, 233, 207, 0.95),
+    -1px 1px 0 rgba(243, 233, 207, 0.95),
+    1px 1px 0 rgba(243, 233, 207, 0.95),
+    0 0 5px rgba(243, 233, 207, 0.95),
+    0 0 12px rgba(243, 233, 207, 0.8);
 }
 
 @media (prefers-reduced-motion: reduce) {
