@@ -34,6 +34,14 @@ export interface MapLocation extends PixelPoint {
   summary: string;
 }
 
+/** One story's section of the map legend panel. */
+export interface MapLegendGroup {
+  slug: string;
+  title: string;
+  year: number;
+  locations: MapLocation[];
+}
+
 /**
  * Image pixels → Leaflet CRS.Simple coordinates. The image overlay spans
  * [[0, 0], [height, width]], so "lat" grows upwards while y grows downwards.

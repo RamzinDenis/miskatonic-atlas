@@ -58,7 +58,7 @@ export default async function LocationPage({
 
       <p className="mt-6 text-lg leading-relaxed">{location.summary}</p>
 
-      <div className="mt-6 space-y-4 leading-relaxed text-foreground/90">
+      <div className="mt-6 space-y-4 text-[17px] leading-relaxed">
         {location.description.split("\n\n").map((paragraph, i) => (
           <p key={i}>{paragraph}</p>
         ))}

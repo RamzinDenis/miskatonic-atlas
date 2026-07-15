@@ -11,7 +11,7 @@ import {
   type Location,
   type Story,
 } from "../schemas.ts"; // relative + extension so Node can run this file directly (scripts/validate.mts)
-import type { MapLocation } from "@/widgets/world-map/geometry";
+import type { MapLegendGroup, MapLocation } from "@/widgets/world-map/geometry";
 
 /**
  * The only gateway to atlas content. Pages and widgets must never read
@@ -205,20 +205,36 @@ export function getCreaturesAt(locationSlug: string): Creature[] {
   return loadContent().creatures.filter((c) => c.locations.includes(locationSlug));
 }
 
+function toMapLocation(location: Location): MapLocation[] {
+  return location.map
+    ? [
+        {
+          slug: location.slug,
+          name: location.name,
+          type: location.type,
+          summary: location.summary,
+          x: location.map.x,
+          y: location.map.y,
+        },
+      ]
+    : [];
+}
+
 /** Major locations that have map coordinates, shaped for the WorldMap widget. */
 export function getMapLocations(): MapLocation[] {
-  return majorOnly(loadContent().locations).flatMap((location) =>
-    location.map
-      ? [
-          {
-            slug: location.slug,
-            name: location.name,
-            type: location.type,
-            summary: location.summary,
-            x: location.map.x,
-            y: location.map.y,
-          },
-        ]
-      : [],
-  );
+  return majorOnly(loadContent().locations).flatMap(toMapLocation);
+}
+
+/** The legend panel: each story with its charted major locations, A→Z. */
+export function getMapLegend(): MapLegendGroup[] {
+  const content = loadContent();
+  return content.stories.map((story) => ({
+    slug: story.slug,
+    title: story.title,
+    year: story.year,
+    locations: majorOnly(content.locations)
+      .filter((l) => l.appearsIn.includes(story.slug))
+      .flatMap(toMapLocation)
+      .sort((a, b) => a.name.localeCompare(b.name, "en")),
+  }));
 }

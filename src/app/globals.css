@@ -9,13 +9,15 @@
   --surface: #1c1810;
   --line: #322b1e;
 
-  /* The paper the content is printed on (used inside .parchment). */
-  --paper: #e6d8b7;
+  /* The paper the content is printed on (used inside .parchment).
+     Old Standard's hairlines are thin: body ink stays near-black and the
+     muted tone is kept dark enough for running text, not just labels. */
+  --paper: #e9dcbf;
   --paper-soft: #dbc99e;
   --paper-line: #b39d6e;
-  --ink: #2a2110;
-  --ink-muted: #66542f;
-  --ink-accent: #7c3d1e;
+  --ink: #211906;
+  --ink-muted: #54431d;
+  --ink-accent: #75371a;
 }
 
 @theme inline {
@@ -59,7 +61,7 @@ body {
   box-shadow:
     0 0 0 1px rgba(8, 6, 2, 0.7),
     0 14px 40px rgba(0, 0, 0, 0.5),
-    inset 0 0 70px rgba(90, 65, 25, 0.22);
+    inset 0 0 55px rgba(90, 65, 25, 0.13);
 }
 
 /* Double hairline under a page title — a XIX-century title-page rule. */
@@ -69,7 +71,23 @@ body {
   border-bottom: 1px solid var(--paper-line);
 }
 
+/* --- Floating masthead over the full-bleed map ------------------------- */
+
+.site-header-floating {
+  background: linear-gradient(
+    to bottom,
+    rgba(8, 6, 2, 0.88),
+    rgba(8, 6, 2, 0.55) 60%,
+    transparent
+  );
+}
+
 /* --- World map widget ------------------------------------------------- */
+
+/* Keep leaflet's top-anchored controls clear of the floating masthead. */
+.world-map .leaflet-top {
+  top: 3.25rem;
+}
 
 .world-map .leaflet-container {
   background: #0e0c08;
@@ -140,13 +158,15 @@ body {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.atlas-pin:hover .atlas-pin-dot {
+.atlas-pin:hover .atlas-pin-dot,
+.atlas-pin--active .atlas-pin-dot {
   transform: scale(1.35);
   box-shadow:
     0 0 0 1px rgba(8, 6, 2, 0.8),
     0 0 16px rgba(195, 158, 102, 0.85);
 }
 
+/* Feature lettering on XIX-century charts is italic — so are the labels. */
 .atlas-pin-label {
   position: absolute;
   left: 20px;
@@ -154,12 +174,17 @@ body {
   transform: translateY(-50%);
   white-space: nowrap;
   font-family: var(--font-old-standard), Georgia, "Times New Roman", serif;
-  font-size: 12px;
-  letter-spacing: 0.08em;
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 0.1em;
   color: var(--foreground);
   text-shadow:
     0 1px 3px rgba(8, 6, 2, 0.9),
     0 0 8px rgba(8, 6, 2, 0.7);
+}
+
+.atlas-pin--active .atlas-pin-label {
+  color: var(--accent);
 }
 
 @media (prefers-reduced-motion: reduce) {

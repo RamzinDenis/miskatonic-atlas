@@ -51,14 +51,14 @@ export function EntityArticle({
 
       {plate}
 
-      <div className="mt-6 space-y-4 leading-relaxed text-foreground/90">
+      <div className="mt-6 space-y-4 text-[17px] leading-relaxed">
         {description.split("\n\n").map((paragraph, i) => (
           <p key={i}>{paragraph}</p>
         ))}
       </div>
 
       {fate && (
-        <p className="mt-6 border-l-2 border-line pl-4 text-foreground/90">
+        <p className="mt-6 border-l-2 border-line pl-4 text-[17px]">
           <span className="text-xs uppercase tracking-widest text-muted">Fate — </span>
           {fate}
         </p>

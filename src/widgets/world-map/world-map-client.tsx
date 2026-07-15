@@ -8,12 +8,19 @@ import {
   type Map as LeafletMap,
 } from "leaflet";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { ImageOverlay, MapContainer, Marker, useMapEvents } from "react-leaflet";
+import { useEffect, useRef, useState } from "react";
+import {
+  ImageOverlay,
+  MapContainer,
+  Marker,
+  ZoomControl,
+  useMapEvents,
+} from "react-leaflet";
 import {
   WORLD_MAP,
   latLngToPixel,
   pixelToLatLng,
+  type MapLegendGroup,
   type MapLocation,
   type PixelPoint,
 } from "./geometry";
@@ -22,6 +29,9 @@ const IMAGE_BOUNDS: LatLngBoundsExpression = [
   [0, 0],
   [WORLD_MAP.height, WORLD_MAP.width],
 ];
+
+/** Zoom the legend flies to — close enough to read the chart around a pin. */
+const FOCUS_ZOOM = -0.5;
 
 /**
  * Panning must stay within the chart: zooming out stops at "whole map
@@ -45,10 +55,10 @@ function FitZoomLimit() {
   return null;
 }
 
-function locationIcon(name: string) {
+function locationIcon(name: string, active: boolean) {
   return divIcon({
     className: "atlas-pin-wrap",
-    html: `<span class="atlas-pin"><span class="atlas-pin-dot"></span><span class="atlas-pin-label">${name}</span></span>`,
+    html: `<span class="atlas-pin${active ? " atlas-pin--active" : ""}"><span class="atlas-pin-dot"></span><span class="atlas-pin-label">${name}</span></span>`,
     iconSize: [14, 14],
     iconAnchor: [7, 7],
   });
@@ -77,14 +87,26 @@ function MapClicks({
 
 interface Props {
   locations: MapLocation[];
+  /** Story sections of the legend panel; omit to render the bare chart. */
+  legend?: MapLegendGroup[];
   /** Dev-only coordinate picker mode: click → pixel coords + JSON snippet. */
   picker?: boolean;
 }
 
-export default function WorldMapClient({ locations, picker = false }: Props) {
+export default function WorldMapClient({
+  locations,
+  legend,
+  picker = false,
+}: Props) {
+  const mapRef = useRef<LeafletMap | null>(null);
   const [selected, setSelected] = useState<MapLocation | null>(null);
   const [picked, setPicked] = useState<PixelPoint | null>(null);
   const [copied, setCopied] = useState(false);
+  // This component only renders client-side (ssr: false), so the viewport
+  // is known on first render: the legend starts open except on phones.
+  const [legendOpen, setLegendOpen] = useState(
+    () => window.matchMedia("(min-width: 640px)").matches,
+  );
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -121,9 +143,25 @@ export default function WorldMapClient({ locations, picker = false }: Props) {
     }
   };
 
+  const focusLocation = (location: MapLocation) => {
+    setSelected(location);
+    const map = mapRef.current;
+    if (!map) return;
+    map.flyTo(
+      pixelToLatLng(location),
+      Math.max(map.getZoom(), FOCUS_ZOOM),
+      { duration: 1.1 },
+    );
+    // On a phone the open legend covers the pin the user just chose.
+    if (!window.matchMedia("(min-width: 640px)").matches) {
+      setLegendOpen(false);
+    }
+  };
+
   return (
     <div className="world-map absolute inset-0">
       <MapContainer
+        ref={mapRef}
         crs={CRS.Simple}
         bounds={IMAGE_BOUNDS}
         maxBounds={IMAGE_BOUNDS}
@@ -132,17 +170,19 @@ export default function WorldMapClient({ locations, picker = false }: Props) {
         maxZoom={1}
         zoomSnap={0.25}
         zoomDelta={0.5}
+        zoomControl={false}
         attributionControl={false}
         className="h-full w-full"
       >
         <ImageOverlay url={WORLD_MAP.url} bounds={IMAGE_BOUNDS} />
+        <ZoomControl position="topright" />
         <FitZoomLimit />
         <MapClicks onClick={handleMapClick} />
         {locations.map((location) => (
           <Marker
             key={location.slug}
             position={pixelToLatLng(location)}
-            icon={locationIcon(location.name)}
+            icon={locationIcon(location.name, selected?.slug === location.slug)}
             alt={location.name}
             eventHandlers={{ click: () => setSelected(location) }}
           />
@@ -154,8 +194,61 @@ export default function WorldMapClient({ locations, picker = false }: Props) {
 
       <div className="world-map-vignette" aria-hidden="true" />
 
+      {legend && !picker && (
+        <div className="absolute left-4 top-16 z-[1000] flex max-h-[calc(100%-8rem)] flex-col items-start">
+          <button
+            type="button"
+            onClick={() => setLegendOpen((open) => !open)}
+            aria-expanded={legendOpen}
+            className="parchment rounded-sm px-3 py-1.5 text-xs uppercase tracking-widest text-muted transition-colors hover:text-accent"
+          >
+            Legend {legendOpen ? "−" : "+"}
+          </button>
+          {legendOpen && (
+            <nav
+              aria-label="Map legend"
+              className="parchment mt-2 min-h-0 w-64 overflow-y-auto rounded-sm p-5"
+            >
+              {legend.map((story) => (
+                <section key={story.slug} className="mt-6 first:mt-0">
+                  <h2 className="font-display text-lg italic leading-snug">
+                    <Link
+                      href={`/stories/${story.slug}`}
+                      className="transition-colors hover:text-accent"
+                    >
+                      {story.title}
+                    </Link>
+                  </h2>
+                  <p className="text-xs tracking-widest text-muted">
+                    {story.year}
+                  </p>
+                  <div className="parchment-rule mt-2" />
+                  <ul className="mt-3 space-y-1.5">
+                    {story.locations.map((location) => (
+                      <li key={location.slug}>
+                        <button
+                          type="button"
+                          onClick={() => focusLocation(location)}
+                          className={`w-full text-left text-sm transition-colors hover:text-accent ${
+                            selected?.slug === location.slug
+                              ? "text-accent"
+                              : ""
+                          }`}
+                        >
+                          {location.name}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              ))}
+            </nav>
+          )}
+        </div>
+      )}
+
       {!picker && selected && (
-        <aside className="absolute bottom-4 left-4 right-4 z-[1000] max-w-sm rounded-lg border border-line bg-surface/95 p-5 shadow-xl shadow-black/40 backdrop-blur sm:right-auto">
+        <aside className="parchment absolute bottom-6 left-4 right-4 z-[1000] max-w-sm rounded-sm p-5 sm:right-auto">
           <div className="flex items-baseline justify-between gap-3">
             <span className="text-xs uppercase tracking-widest text-muted">
               {selected.type}
@@ -169,13 +262,12 @@ export default function WorldMapClient({ locations, picker = false }: Props) {
               ✕
             </button>
           </div>
-          <h2 className="mt-1 font-serif text-2xl">{selected.name}</h2>
-          <p className="mt-2 text-sm leading-relaxed text-muted">
-            {selected.summary}
-          </p>
+          <h2 className="mt-1 font-display text-2xl">{selected.name}</h2>
+          <div className="parchment-rule mt-2" />
+          <p className="mt-3 text-sm leading-relaxed">{selected.summary}</p>
           <Link
             href={`/locations/${selected.slug}`}
-            className="mt-4 inline-block text-sm text-accent transition-colors hover:text-foreground"
+            className="mt-4 inline-block text-sm italic text-accent transition-colors hover:text-foreground"
           >
             Open location →
           </Link>

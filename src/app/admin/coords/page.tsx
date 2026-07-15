@@ -16,7 +16,7 @@ export default function CoordsPage() {
   if (process.env.NODE_ENV === "production") notFound();
 
   return (
-    <div className="relative flex-1">
+    <div className="relative h-dvh">
       <WorldMap locations={getMapLocations()} picker />
     </div>
   );
