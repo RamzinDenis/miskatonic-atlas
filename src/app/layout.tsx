@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Old_Standard_TT, Playfair_Display } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Period faces: Old Standard follows the "modern" text types of XIX-century
+// book printing; Playfair covers title pages and headings.
+const oldStandard = Old_Standard_TT({
+  variable: "--font-old-standard",
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  style: ["normal", "italic"],
   subsets: ["latin"],
 });
 
@@ -30,15 +35,28 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${oldStandard.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <header className="border-b border-line">
           <div className="mx-auto flex w-full max-w-3xl items-baseline justify-between px-6 py-4">
-            <Link href="/" className="font-serif text-lg tracking-wide text-accent">
+            <Link
+              href="/"
+              className="font-display text-lg tracking-wide text-accent"
+            >
               Miskatonic Atlas
             </Link>
-            <span className="text-xs uppercase tracking-widest text-muted">MVP</span>
+            <nav className="flex gap-6 text-xs uppercase tracking-widest">
+              <Link href="/" className="text-muted transition-colors hover:text-accent">
+                Map
+              </Link>
+              <Link
+                href="/index"
+                className="text-muted transition-colors hover:text-accent"
+              >
+                Index
+              </Link>
+            </nav>
           </div>
         </header>
         <main className="flex flex-1 flex-col">{children}</main>

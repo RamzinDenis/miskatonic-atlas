@@ -37,14 +37,15 @@ export default async function LocationPage({
   const creatures = getCreaturesAt(slug);
 
   return (
-    <article className="mx-auto w-full max-w-3xl px-6 py-16">
+    <div className="mx-auto w-full max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
       <Link href="/" className="text-sm text-muted transition-colors hover:text-accent">
         ← Atlas
       </Link>
 
-      <header className="mt-6">
-        <div className="flex items-baseline gap-4">
-          <h1 className="font-serif text-4xl">{location.name}</h1>
+      <article className="parchment mt-4 px-6 py-10 sm:px-12 sm:py-12">
+      <header>
+        <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+          <h1 className="font-display text-4xl">{location.name}</h1>
           <span className="text-xs uppercase tracking-widest text-muted">
             {location.type}
           </span>
@@ -52,6 +53,7 @@ export default async function LocationPage({
         {location.realWorld && (
           <p className="mt-2 text-sm text-muted">Real-world: {location.realWorld}</p>
         )}
+        <div className="parchment-rule mt-5" />
       </header>
 
       <p className="mt-6 text-lg leading-relaxed">{location.summary}</p>
@@ -89,7 +91,7 @@ export default async function LocationPage({
 
       {appearsIn.length > 0 && (
         <section className="mt-10">
-          <h2 className="font-serif text-2xl">Appears in</h2>
+          <h2 className="font-display text-2xl">Appears in</h2>
           <ul className="mt-4 space-y-1">
             {appearsIn.map((story) => (
               <li key={story.slug}>
@@ -104,6 +106,7 @@ export default async function LocationPage({
           </ul>
         </section>
       )}
-    </article>
+      </article>
+    </div>
   );
 }

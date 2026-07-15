@@ -26,16 +26,18 @@ export default async function StoryPage({ params }: PageProps<"/stories/[slug]">
   const { locations, characters, creatures } = getStoryEntities(slug);
 
   return (
-    <article className="mx-auto w-full max-w-3xl px-6 py-16">
+    <div className="mx-auto w-full max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
       <Link href="/" className="text-sm text-muted transition-colors hover:text-accent">
         ← Atlas
       </Link>
 
-      <header className="mt-6">
-        <div className="flex items-baseline gap-4">
-          <h1 className="font-serif text-4xl">{story.title}</h1>
+      <article className="parchment mt-4 px-6 py-10 sm:px-12 sm:py-12">
+      <header>
+        <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+          <h1 className="font-display text-4xl">{story.title}</h1>
           <span className="text-xs uppercase tracking-widest text-muted">{story.year}</span>
         </div>
+        <div className="parchment-rule mt-5" />
       </header>
 
       <p className="mt-6 text-lg leading-relaxed">{story.summary}</p>
@@ -52,6 +54,7 @@ export default async function StoryPage({ params }: PageProps<"/stories/[slug]">
         title="Creatures"
         items={creatures.map((c) => ({ href: `/creatures/${c.slug}`, label: c.name }))}
       />
-    </article>
+      </article>
+    </div>
   );
 }

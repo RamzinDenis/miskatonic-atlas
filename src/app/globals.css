@@ -1,12 +1,21 @@
 @import "tailwindcss";
 
 :root {
+  /* The dark binding of the book. */
   --background: #131009;
   --foreground: #ded4bd;
   --muted: #94896f;
   --accent: #c39e66;
   --surface: #1c1810;
   --line: #322b1e;
+
+  /* The paper the content is printed on (used inside .parchment). */
+  --paper: #e6d8b7;
+  --paper-soft: #dbc99e;
+  --paper-line: #b39d6e;
+  --ink: #2a2110;
+  --ink-muted: #66542f;
+  --ink-accent: #7c3d1e;
 }
 
 @theme inline {
@@ -16,14 +25,48 @@
   --color-accent: var(--accent);
   --color-surface: var(--surface);
   --color-line: var(--line);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-old-standard);
+  --font-serif: var(--font-old-standard);
+  --font-display: var(--font-playfair);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-old-standard), Georgia, "Times New Roman", serif;
+}
+
+/* --- Parchment sheets -------------------------------------------------- */
+
+/*
+ * A sheet of aged paper for page content: remaps the semantic palette to ink
+ * tones, so every utility (text-muted, border-line, bg-surface…) used inside
+ * automatically switches from the dark binding to the printed page.
+ */
+.parchment {
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --muted: var(--ink-muted);
+  --accent: var(--ink-accent);
+  --surface: var(--paper-soft);
+  --line: var(--paper-line);
+  color: var(--ink);
+  background:
+    radial-gradient(ellipse at 18% -2%, rgba(255, 250, 230, 0.45), transparent 55%),
+    radial-gradient(ellipse at 100% 100%, rgba(112, 82, 40, 0.16), transparent 55%),
+    radial-gradient(ellipse at 0% 100%, rgba(112, 82, 40, 0.1), transparent 45%),
+    var(--paper);
+  box-shadow:
+    0 0 0 1px rgba(8, 6, 2, 0.7),
+    0 14px 40px rgba(0, 0, 0, 0.5),
+    inset 0 0 70px rgba(90, 65, 25, 0.22);
+}
+
+/* Double hairline under a page title — a XIX-century title-page rule. */
+.parchment-rule {
+  height: 4px;
+  border-top: 1px solid var(--paper-line);
+  border-bottom: 1px solid var(--paper-line);
 }
 
 /* --- World map widget ------------------------------------------------- */
@@ -110,7 +153,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   white-space: nowrap;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-old-standard), Georgia, "Times New Roman", serif;
   font-size: 12px;
   letter-spacing: 0.08em;
   color: var(--foreground);

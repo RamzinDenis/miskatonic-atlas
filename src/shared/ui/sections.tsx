@@ -11,7 +11,7 @@ export function ChipSection({ title, items }: { title: string; items: ChipItem[]
   if (items.length === 0) return null;
   return (
     <section className="mt-10">
-      <h2 className="font-serif text-2xl">{title}</h2>
+      <h2 className="font-display text-2xl">{title}</h2>
       <ul className="mt-4 flex flex-wrap gap-3">
         {items.map((item) => (
           <li key={item.href}>
@@ -37,7 +37,7 @@ export function SourcesSection({ sources }: { sources: SourceItem[] }) {
   if (sources.length === 0) return null;
   return (
     <section className="mt-10">
-      <h2 className="font-serif text-2xl">Sources</h2>
+      <h2 className="font-display text-2xl">Sources</h2>
       <p className="mt-2 text-sm text-muted">Every fact above traces back to the text.</p>
       <ul className="mt-4 space-y-6">
         {sources.map((source, i) => (
@@ -45,7 +45,9 @@ export function SourcesSection({ sources }: { sources: SourceItem[] }) {
             <blockquote className="border-l-2 border-accent pl-4 font-serif italic leading-relaxed">
               “{source.quote}”
             </blockquote>
-            <p className="mt-2 pl-4 text-sm text-muted">{source.attribution}</p>
+            <p className="mt-2 pl-4 text-xs uppercase tracking-widest text-muted">
+              {source.attribution}
+            </p>
           </li>
         ))}
       </ul>
