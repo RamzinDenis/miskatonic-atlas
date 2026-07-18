@@ -246,6 +246,29 @@ body {
 }
 
 /*
+ * The legend as a chart cartouche: an engraved double frame drawn inside
+ * the parchment sheet, ink symbols keyed to the pins, a dashed swatch for
+ * voyage tracks.
+ */
+.legend-cartouche {
+  border: 3px double var(--paper-line);
+}
+
+.legend-glyph {
+  flex: none;
+  width: 11px;
+  height: 11px;
+  opacity: 0.75;
+}
+
+.legend-dash {
+  flex: none;
+  width: 20px;
+  border-top: 2px dashed currentColor;
+  opacity: 0.8;
+}
+
+/*
  * Chart excerpt on a location page: the same tint as the live map, a pin
  * fixed at the center, and a soft inner shadow instead of the vignette.
  */

@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import {
   CRS,
   divIcon,
+  latLngBounds,
   type LatLngBoundsExpression,
   type Map as LeafletMap,
 } from "leaflet";
@@ -29,7 +30,12 @@ import {
   type MapLocation,
   type PixelPoint,
 } from "./geometry";
-import { ROUTE_LEGS, legLabelPlacement, type RouteLeg } from "./routes";
+import {
+  ROUTE_LEGS,
+  ROUTE_STORY_SLUG,
+  legLabelPlacement,
+  type RouteLeg,
+} from "./routes";
 
 const IMAGE_BOUNDS: LatLngBoundsExpression = [
   [0, 0],
@@ -122,6 +128,69 @@ function routeLabelIcon(leg: RouteLeg, angleDeg: number, active: boolean) {
     iconSize: [0, 0],
     iconAnchor: [0, 0],
   });
+}
+
+/** The chart symbol of a location type, in ink — the legend's key column. */
+function LegendGlyph({ type }: { type: string }) {
+  const props = {
+    className: "legend-glyph",
+    viewBox: "0 0 14 14",
+    "aria-hidden": true,
+  } as const;
+  switch (type) {
+    case "ruin":
+      return (
+        <svg {...props}>
+          <path
+            d="M2 11.5 L7 2.5 L12 11.5 Z"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
+    case "sea":
+      return (
+        <svg {...props}>
+          <path
+            d="M1.5 5.5 q2.75 -3 5.5 0 t5.5 0 M1.5 9.5 q2.75 -3 5.5 0 t5.5 0"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+          />
+        </svg>
+      );
+    case "region":
+      return (
+        <svg {...props}>
+          <rect
+            x="3.5"
+            y="3.5"
+            width="7"
+            height="7"
+            transform="rotate(45 7 7)"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+          />
+        </svg>
+      );
+    default:
+      return (
+        <svg {...props}>
+          <circle
+            cx="7"
+            cy="7"
+            r="4.5"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+          />
+        </svg>
+      );
+  }
 }
 
 /**
@@ -234,6 +303,21 @@ export default function WorldMapClient({
     setSelectedLeg(leg);
   };
 
+  /** Legend click on a vessel: fly to its whole track and open its preview. */
+  const focusLeg = (leg: RouteLeg) => {
+    selectLeg(leg);
+    const map = mapRef.current;
+    if (!map) return;
+    map.flyToBounds(latLngBounds(leg.points.map((p) => pixelToLatLng(p))), {
+      padding: [70, 70],
+      maxZoom: 0,
+      duration: 1.1,
+    });
+    if (!window.matchMedia("(min-width: 640px)").matches) {
+      setLegendOpen(false);
+    }
+  };
+
   const focusLocation = (location: MapLocation) => {
     setSelectedLeg(null);
     setSelected(location);
@@ -337,41 +421,82 @@ export default function WorldMapClient({
           {legendOpen && (
             <nav
               aria-label="Map legend"
-              className="parchment mt-2 min-h-0 w-64 overflow-y-auto rounded-sm p-5"
+              className="parchment mt-2 min-h-0 w-64 overflow-y-auto rounded-sm p-2"
             >
-              {legend.map((story) => (
-                <section key={story.slug} className="mt-6 first:mt-0">
-                  <h2 className="font-display text-lg italic leading-snug">
-                    <Link
-                      href={`/stories/${story.slug}`}
-                      className="transition-colors hover:text-accent"
+              <div className="legend-cartouche px-4 pb-4 pt-3">
+                {legend.map((story) => (
+                  <section key={story.slug} className="mt-6 first:mt-0">
+                    <div
+                      className="text-center text-base leading-none text-muted"
+                      aria-hidden="true"
                     >
-                      {story.title}
-                    </Link>
-                  </h2>
-                  <p className="text-xs tracking-widest text-muted">
-                    {story.year}
-                  </p>
-                  <div className="parchment-rule mt-2" />
-                  <ul className="mt-3 space-y-1.5">
-                    {story.locations.map((location) => (
-                      <li key={location.slug}>
-                        <button
-                          type="button"
-                          onClick={() => focusLocation(location)}
-                          className={`w-full text-left text-sm transition-colors hover:text-accent ${
-                            selected?.slug === location.slug
-                              ? "text-accent"
-                              : ""
-                          }`}
-                        >
-                          {location.name}
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              ))}
+                      ❧
+                    </div>
+                    <h2 className="mt-1.5 text-center font-display text-lg italic leading-snug">
+                      <Link
+                        href={`/stories/${story.slug}`}
+                        className="transition-colors hover:text-accent"
+                      >
+                        {story.title}
+                      </Link>
+                    </h2>
+                    <p className="text-center text-xs tracking-widest text-muted">
+                      {story.year}
+                    </p>
+                    <div className="parchment-rule mt-2" />
+                    <ul className="mt-3 space-y-1.5">
+                      {story.locations.map((location) => (
+                        <li key={location.slug}>
+                          <button
+                            type="button"
+                            onClick={() => focusLocation(location)}
+                            className={`flex w-full items-center gap-2.5 text-left text-sm transition-colors hover:text-accent ${
+                              selected?.slug === location.slug
+                                ? "text-accent"
+                                : ""
+                            }`}
+                          >
+                            <LegendGlyph type={location.type} />
+                            <span>{location.name}</span>
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                ))}
+
+                {legend.some((story) => story.slug === ROUTE_STORY_SLUG) && (
+                  <section className="mt-6">
+                    <h2 className="text-center text-xs uppercase tracking-widest text-muted">
+                      Voyage tracks
+                    </h2>
+                    <div className="parchment-rule mt-2" />
+                    <ul className="mt-3 space-y-1.5">
+                      {ROUTE_LEGS.map((leg) => (
+                        <li key={leg.id}>
+                          <button
+                            type="button"
+                            onClick={() => focusLeg(leg)}
+                            className={`flex w-full items-center gap-2.5 text-left text-sm italic transition-colors hover:text-accent ${
+                              selectedLeg?.id === leg.id ? "text-accent" : ""
+                            }`}
+                          >
+                            <span className="legend-dash" aria-hidden="true" />
+                            <span>{leg.vessel}</span>
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                <div
+                  className="mt-5 text-center text-sm leading-none text-muted"
+                  aria-hidden="true"
+                >
+                  ❦
+                </div>
+              </div>
             </nav>
           )}
         </div>
