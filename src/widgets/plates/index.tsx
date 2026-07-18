@@ -112,3 +112,20 @@ export function getPlate(
   const def = plates[`${kind}/${slug}`];
   return def && def.image ? <Plate def={def} /> : null;
 }
+
+export interface PlateThumb {
+  numeral: string;
+  image: StaticImageData;
+  alt: string;
+}
+
+/** A published plate as a thumbnail (map preview panel, story galleries). */
+export function getPlateThumb(
+  kind: "locations" | "characters" | "creatures" | "stories",
+  slug: string,
+): PlateThumb | null {
+  const def = plates[`${kind}/${slug}`];
+  return def && def.image
+    ? { numeral: def.numeral, image: def.image, alt: def.alt }
+    : null;
+}

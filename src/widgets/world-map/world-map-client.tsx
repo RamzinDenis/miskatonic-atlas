@@ -7,6 +7,7 @@ import {
   type LatLngBoundsExpression,
   type Map as LeafletMap,
 } from "leaflet";
+import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useEffect, useRef, useState } from "react";
 import {
@@ -18,8 +19,10 @@ import {
   useMap,
   useMapEvents,
 } from "react-leaflet";
+import { getPlateThumb } from "@/widgets/plates";
 import {
   WORLD_MAP,
+  formatDegrees,
   latLngToPixel,
   pixelToLatLng,
   type MapLegendGroup,
@@ -361,7 +364,7 @@ export default function WorldMapClient({
       )}
 
       {!picker && selected && (
-        <aside className="parchment absolute bottom-6 left-4 right-4 z-[1000] max-w-sm rounded-sm p-5 sm:right-auto">
+        <aside className="parchment absolute bottom-6 left-4 right-4 z-[1000] max-h-[55%] max-w-sm overflow-y-auto rounded-sm p-5 sm:right-auto">
           <div className="flex items-baseline justify-between gap-3">
             <span className="text-xs uppercase tracking-widest text-muted">
               {selected.type}
@@ -376,8 +379,46 @@ export default function WorldMapClient({
             </button>
           </div>
           <h2 className="mt-1 font-display text-2xl">{selected.name}</h2>
+          <p className="mt-0.5 text-xs tracking-widest text-muted">
+            {formatDegrees(selected)}
+          </p>
           <div className="parchment-rule mt-2" />
-          <p className="mt-3 text-sm leading-relaxed">{selected.summary}</p>
+          {(() => {
+            const thumb = getPlateThumb("locations", selected.slug);
+            return (
+              <div className="mt-3 flex items-start gap-3">
+                <p className="min-w-0 flex-1 text-sm leading-relaxed">
+                  {selected.summary}
+                </p>
+                {thumb && (
+                  <Image
+                    src={thumb.image}
+                    alt={thumb.alt}
+                    width={80}
+                    className="mt-1 h-auto w-20 shrink-0 border border-line"
+                  />
+                )}
+              </div>
+            );
+          })()}
+          {selected.figures.length > 0 && (
+            <p className="mt-3 text-sm leading-relaxed">
+              <span className="text-xs uppercase tracking-widest text-muted">
+                Encountered here —{" "}
+              </span>
+              {selected.figures.map((figure, i) => (
+                <Fragment key={`${figure.kind}/${figure.slug}`}>
+                  {i > 0 && ", "}
+                  <Link
+                    href={`/${figure.kind}/${figure.slug}`}
+                    className="italic transition-colors hover:text-accent"
+                  >
+                    {figure.name}
+                  </Link>
+                </Fragment>
+              ))}
+            </p>
+          )}
           <Link
             href={`/locations/${selected.slug}`}
             className="mt-4 inline-block text-sm italic text-accent transition-colors hover:text-foreground"

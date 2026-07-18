@@ -11,7 +11,11 @@ import {
   type Location,
   type Story,
 } from "../schemas.ts"; // relative + extension so Node can run this file directly (scripts/validate.mts)
-import type { MapLegendGroup, MapLocation } from "@/widgets/world-map/geometry";
+import type {
+  MapFigure,
+  MapLegendGroup,
+  MapLocation,
+} from "@/widgets/world-map/geometry";
 
 /**
  * The only gateway to atlas content. Pages and widgets must never read
@@ -205,24 +209,37 @@ export function getCreaturesAt(locationSlug: string): Creature[] {
   return loadContent().creatures.filter((c) => c.locations.includes(locationSlug));
 }
 
-function toMapLocation(location: Location): MapLocation[] {
-  return location.map
-    ? [
-        {
-          slug: location.slug,
-          name: location.name,
-          type: location.type,
-          summary: location.summary,
-          x: location.map.x,
-          y: location.map.y,
-        },
-      ]
-    : [];
+function toMapLocation(content: AtlasContent) {
+  return (location: Location): MapLocation[] => {
+    if (!location.map) return [];
+    // The preview panel is map navigation, so it follows the prominence rule:
+    // only major figures are listed (minor ones stay on the location page).
+    const figures: MapFigure[] = [
+      ...majorOnly(content.characters)
+        .filter((c) => c.locations.includes(location.slug))
+        .map((c) => ({ slug: c.slug, name: c.name, kind: "characters" as const })),
+      ...majorOnly(content.creatures)
+        .filter((c) => c.locations.includes(location.slug))
+        .map((c) => ({ slug: c.slug, name: c.name, kind: "creatures" as const })),
+    ];
+    return [
+      {
+        slug: location.slug,
+        name: location.name,
+        type: location.type,
+        summary: location.summary,
+        figures,
+        x: location.map.x,
+        y: location.map.y,
+      },
+    ];
+  };
 }
 
 /** Major locations that have map coordinates, shaped for the WorldMap widget. */
 export function getMapLocations(): MapLocation[] {
-  return majorOnly(loadContent().locations).flatMap(toMapLocation);
+  const content = loadContent();
+  return majorOnly(content.locations).flatMap(toMapLocation(content));
 }
 
 /** The legend panel: each story with its charted major locations, A→Z. */
@@ -234,7 +251,7 @@ export function getMapLegend(): MapLegendGroup[] {
     year: story.year,
     locations: majorOnly(content.locations)
       .filter((l) => l.appearsIn.includes(story.slug))
-      .flatMap(toMapLocation)
+      .flatMap(toMapLocation(content))
       .sort((a, b) => a.name.localeCompare(b.name, "en")),
   }));
 }

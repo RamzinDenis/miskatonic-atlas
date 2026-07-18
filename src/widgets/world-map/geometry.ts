@@ -26,12 +26,20 @@ export interface PixelPoint {
   y: number;
 }
 
+/** A major character or creature to meet at a charted location. */
+export interface MapFigure {
+  slug: string;
+  name: string;
+  kind: "characters" | "creatures";
+}
+
 /** A location as the map widget needs it — plain and serializable. */
 export interface MapLocation extends PixelPoint {
   slug: string;
   name: string;
   type: string;
   summary: string;
+  figures: MapFigure[];
 }
 
 /** One story's section of the map legend panel. */
