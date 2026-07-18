@@ -20,6 +20,8 @@ import swampRitual from "./swamp-ritual.png";
 interface PlateDef {
   /** Roman numeral of the plate, in order of appearance in the atlas. */
   numeral: string;
+  /** The story whose passage the engraving illustrates. */
+  storySlug: string;
   image: StaticImageData | null;
   alt: string;
   /** Caption line after the numeral: what the engraving shows. */
@@ -33,6 +35,7 @@ interface PlateDef {
 const plates: Record<string, PlateDef> = {
   "creatures/cthulhu": {
     numeral: "I",
+    storySlug: "the-call-of-cthulhu",
     image: legrasseIdol,
     alt: "Engraved plate of the Cthulhu idol: a winged anthropoid monster with a tentacled head bent forward, crouching on a hieroglyphed stone pedestal",
     caption:
@@ -43,6 +46,7 @@ const plates: Record<string, PlateDef> = {
   },
   "locations/rlyeh": {
     numeral: "II",
+    storySlug: "the-call-of-cthulhu",
     image: rlyeh,
     alt: "Engraved plate of R'lyeh risen from the sea: sailors landing at a mud-bank beneath tilted Cyclopean blocks and a monolith-crowned citadel of impossible angles",
     caption: "Johansen's landfall on the risen city, drawn after the text:",
@@ -52,6 +56,7 @@ const plates: Record<string, PlateDef> = {
   },
   "locations/swamp-and-lagoon-country": {
     numeral: "III",
+    storySlug: "the-call-of-cthulhu",
     image: swampRitual,
     alt: "Engraved plate of the swamp ritual: worshipers writhing around a ring-shaped bonfire and an eight-foot monolith on a grassy island, bodies hanging from a circle of scaffolds",
     caption: "The rite Legrasse's men stumbled upon in the swamps, drawn after the text:",
@@ -61,6 +66,7 @@ const plates: Record<string, PlateDef> = {
   },
   "stories/the-call-of-cthulhu": {
     numeral: "IV",
+    storySlug: "the-call-of-cthulhu",
     image: alert,
     alt: "Engraved plate of the yacht Alert driven head-on against rising Cthulhu, the squid-head with writhing feelers towering over the bowsprit in a stormy sea",
     caption: "The Alert against the risen thing, drawn after the text:",
@@ -70,6 +76,7 @@ const plates: Record<string, PlateDef> = {
   },
   "characters/henry-anthony-wilcox": {
     numeral: "V",
+    storySlug: "the-call-of-cthulhu",
     image: null,
     alt: "Engraved plate of the Wilcox bas-relief: a clay tablet bearing a pulpy tentacled head on a scaly winged body over rows of unknown hieroglyphics",
     caption: "The clay bas-relief Wilcox brought to Professor Angell, drawn after the text:",
@@ -128,4 +135,27 @@ export function getPlateThumb(
   return def && def.image
     ? { numeral: def.numeral, image: def.image, alt: def.alt }
     : null;
+}
+
+/**
+ * All published plates of one story, in numeral order, linking to the pages
+ * they live on. The story's own plate is excluded — the story page already
+ * shows it in full.
+ */
+export function getStoryPlates(
+  storySlug: string,
+): (PlateThumb & { href: string })[] {
+  return Object.entries(plates)
+    .filter(
+      ([key, def]) =>
+        def.storySlug === storySlug &&
+        def.image &&
+        key !== `stories/${storySlug}`,
+    )
+    .map(([key, def]) => ({
+      numeral: def.numeral,
+      image: def.image as StaticImageData,
+      alt: def.alt,
+      href: `/${key}`,
+    }));
 }

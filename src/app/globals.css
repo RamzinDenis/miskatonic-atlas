@@ -71,6 +71,26 @@ body {
   border-bottom: 1px solid var(--paper-line);
 }
 
+/* Drop cap opening an article's body, set in the display face. */
+.drop-cap > p:first-child::first-letter,
+.drop-cap-p::first-letter {
+  float: left;
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 3.3em;
+  line-height: 0.83;
+  padding-right: 0.09em;
+  color: var(--accent);
+}
+
+/* The printer's flower closing a chapter. */
+.fleuron {
+  margin-top: 2.75rem;
+  text-align: center;
+  font-size: 1.35rem;
+  line-height: 1;
+  color: var(--muted);
+}
+
 /* --- Floating masthead over the full-bleed map ------------------------- */
 
 .site-header-floating {
@@ -248,6 +268,24 @@ body {
   inset: 0;
   background-repeat: no-repeat;
   filter: sepia(0.5) saturate(0.62) brightness(0.85) contrast(1.07);
+}
+
+/* The voyage inset: same tint on the SVG's scan, ink lettering along tracks. */
+.route-inset-scan {
+  filter: sepia(0.5) saturate(0.62) brightness(0.85) contrast(1.07);
+}
+
+.route-inset-label {
+  font-family: var(--font-old-standard), Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  fill: #2b1e08;
+  stroke: rgba(238, 226, 197, 0.9);
+  stroke-width: 5px;
+  paint-order: stroke;
 }
 
 .map-inset-pin {

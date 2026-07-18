@@ -62,7 +62,7 @@ export default async function LocationPage({
 
       {getPlate("locations", location.slug)}
 
-      <div className="mt-6 space-y-4 text-[17px] leading-relaxed">
+      <div className="drop-cap mt-6 space-y-4 text-[17px] leading-relaxed">
         {location.description.split("\n\n").map((paragraph, i) => (
           <p key={i}>{paragraph}</p>
         ))}
@@ -121,6 +121,10 @@ export default async function LocationPage({
           </ul>
         </section>
       )}
+
+      <div className="fleuron" aria-hidden="true">
+        ❦
+      </div>
       </article>
     </div>
   );

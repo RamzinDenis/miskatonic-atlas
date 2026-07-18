@@ -51,7 +51,7 @@ export function EntityArticle({
 
       {plate}
 
-      <div className="mt-6 space-y-4 text-[17px] leading-relaxed">
+      <div className="drop-cap mt-6 space-y-4 text-[17px] leading-relaxed">
         {description.split("\n\n").map((paragraph, i) => (
           <p key={i}>{paragraph}</p>
         ))}
@@ -88,6 +88,10 @@ export function EntityArticle({
           </ul>
         </section>
       )}
+
+      <div className="fleuron" aria-hidden="true">
+        ❦
+      </div>
       </article>
     </div>
   );

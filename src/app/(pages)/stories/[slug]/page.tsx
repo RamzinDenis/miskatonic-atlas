@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getStories, getStory, getStoryEntities } from "@/shared/lib/content";
 import { ChipSection } from "@/shared/ui/sections";
-import { getPlate } from "@/widgets/plates";
+import { getPlate, getStoryPlates } from "@/widgets/plates";
+import { RouteInset } from "@/widgets/world-map/route-inset";
 
 export const dynamicParams = false;
 
@@ -25,6 +27,7 @@ export default async function StoryPage({ params }: PageProps<"/stories/[slug]">
   if (!story) notFound();
 
   const { locations, characters, creatures } = getStoryEntities(slug);
+  const storyPlates = getStoryPlates(slug);
 
   return (
     <div className="mx-auto w-full max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
@@ -41,9 +44,38 @@ export default async function StoryPage({ params }: PageProps<"/stories/[slug]">
         <div className="parchment-rule mt-5" />
       </header>
 
-      <p className="mt-6 text-lg leading-relaxed">{story.summary}</p>
+      <p className="drop-cap-p mt-6 text-lg leading-relaxed">{story.summary}</p>
 
       {getPlate("stories", story.slug)}
+
+      <RouteInset storySlug={story.slug} />
+
+      {storyPlates.length > 0 && (
+        <section className="mt-10">
+          <h2 className="font-display text-2xl">Plates of this story</h2>
+          <ul className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
+            {storyPlates.map((plate) => (
+              <li key={plate.numeral}>
+                <Link
+                  href={plate.href}
+                  className="block border border-line bg-surface p-2 transition-colors hover:border-accent"
+                >
+                  <Image
+                    src={plate.image}
+                    alt={plate.alt}
+                    placeholder="blur"
+                    sizes="(max-width: 640px) 50vw, 224px"
+                    className="block h-auto w-full"
+                  />
+                  <span className="mt-2 block text-center text-xs uppercase tracking-widest text-muted">
+                    Plate {plate.numeral}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <ChipSection
         title="Locations"
@@ -57,6 +89,10 @@ export default async function StoryPage({ params }: PageProps<"/stories/[slug]">
         title="Creatures"
         items={creatures.map((c) => ({ href: `/creatures/${c.slug}`, label: c.name }))}
       />
+
+      <div className="fleuron" aria-hidden="true">
+        ❦
+      </div>
       </article>
     </div>
   );

@@ -29,6 +29,9 @@ export interface RouteLeg {
   attribution: string;
 }
 
+/** The story whose voyage the tracks below chart. */
+export const ROUTE_STORY_SLUG = "the-call-of-cthulhu";
+
 /** The voyage of the Emma and the Alert — the one route of the atlas so far. */
 export const ROUTE_LEGS: RouteLeg[] = [
   {
