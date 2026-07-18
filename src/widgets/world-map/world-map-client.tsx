@@ -34,6 +34,7 @@ import {
   ROUTE_LEGS,
   ROUTE_STORY_SLUG,
   legLabelPlacement,
+  segmentDirection,
   type RouteLeg,
 } from "./routes";
 
@@ -98,36 +99,78 @@ const pickedIcon = divIcon({
 });
 
 /**
- * Voyage tracks: each dashed ink line is drawn over a slightly wider
- * paper-colored twin with the same dash pattern, so every dash gets the
- * light halo that keeps chart lettering legible on the etched scan.
+ * Voyage tracks: each vessel keeps its own dash pattern and ink (defined in
+ * routes.ts), drawn over a slightly wider paper-colored twin with the same
+ * pattern, so every dash gets the light halo that keeps chart lettering
+ * legible on the etched scan. Selection thickens the line instead of
+ * recoloring it — the ink IS the vessel's identity.
  */
-const ROUTE_HALO = {
-  color: "rgba(238, 226, 197, 0.85)",
-  weight: 5,
-  dashArray: "7 7",
-  lineCap: "butt",
-  interactive: false,
-} as const;
-
-function routeInk(active: boolean) {
+function routeHalo(leg: RouteLeg) {
   return {
-    color: active ? "#75371a" : "#2b1e08",
-    weight: 2,
-    opacity: 0.9,
-    dashArray: "7 7",
-    lineCap: "butt",
+    color: "rgba(238, 226, 197, 0.85)",
+    weight: 5,
+    dashArray: leg.dash,
+    lineCap: leg.cap,
+    interactive: false,
+  } as const;
+}
+
+function routeInk(leg: RouteLeg, active: boolean) {
+  return {
+    color: leg.color,
+    weight: active ? 3.4 : 2,
+    opacity: active ? 1 : 0.9,
+    dashArray: leg.dash,
+    lineCap: leg.cap,
     bubblingMouseEvents: false,
   } as const;
+}
+
+/** Direction arrow at a segment midpoint — points where the vessel sailed. */
+function routeArrowIcon(leg: RouteLeg, angleDeg: number) {
+  return divIcon({
+    className: "atlas-route-arrow-wrap",
+    html: `<svg class="atlas-route-arrow" viewBox="0 0 10 10" style="transform:translate(-50%,-50%) rotate(${angleDeg}deg)" aria-hidden="true"><path d="M1 1 L9.5 5 L1 9 Z" fill="${leg.color}"/></svg>`,
+    iconSize: [0, 0],
+    iconAnchor: [0, 0],
+  });
+}
+
+/** A dated position beside the track — "Mch. 22", the way charts log fixes. */
+function routeDateIcon(date: { label: string; dx: number; dy: number }) {
+  return divIcon({
+    className: "atlas-route-date-wrap",
+    html: `<span class="atlas-route-date" style="left:${date.dx}px;top:${date.dy}px">${date.label}</span>`,
+    iconSize: [0, 0],
+    iconAnchor: [0, 0],
+  });
 }
 
 function routeLabelIcon(leg: RouteLeg, angleDeg: number, active: boolean) {
   return divIcon({
     className: "atlas-route-label-wrap",
-    html: `<span class="atlas-route-label${active ? " atlas-route-label--active" : ""}" style="transform:translate(-50%,-50%) rotate(${angleDeg}deg) translateY(-11px)">${leg.vessel}</span>`,
+    html: `<span class="atlas-route-label${active ? " atlas-route-label--active" : ""}" style="color:${leg.color};transform:translate(-50%,-50%) rotate(${angleDeg}deg) translateY(-11px)">${leg.vessel}</span>`,
     iconSize: [0, 0],
     iconAnchor: [0, 0],
   });
+}
+
+/** The vessel's line style as a legend swatch. */
+function LegendDash({ leg }: { leg: RouteLeg }) {
+  return (
+    <svg className="legend-dash" viewBox="0 0 26 6" aria-hidden="true">
+      <line
+        x1="0"
+        y1="3"
+        x2="26"
+        y2="3"
+        stroke={leg.color}
+        strokeWidth="2"
+        strokeDasharray={leg.dash}
+        strokeLinecap={leg.cap}
+      />
+    </svg>
+  );
 }
 
 /** The chart symbol of a location type, in ink — the legend's key column. */
@@ -386,12 +429,33 @@ export default function WorldMapClient({
             const active = selectedLeg?.id === leg.id;
             return (
               <Fragment key={leg.id}>
-                <Polyline positions={positions} pathOptions={ROUTE_HALO} />
+                <Polyline positions={positions} pathOptions={routeHalo(leg)} />
                 <Polyline
                   positions={positions}
-                  pathOptions={routeInk(active)}
+                  pathOptions={routeInk(leg, active)}
                   eventHandlers={{ click: () => selectLeg(leg) }}
                 />
+                {leg.arrowSegments.map((segment) => {
+                  const direction = segmentDirection(leg, segment);
+                  return (
+                    <Marker
+                      key={`arrow-${segment}`}
+                      position={pixelToLatLng(direction.at)}
+                      icon={routeArrowIcon(leg, direction.angleDeg)}
+                      interactive={false}
+                      keyboard={false}
+                    />
+                  );
+                })}
+                {leg.dates.map((date) => (
+                  <Marker
+                    key={date.label}
+                    position={pixelToLatLng(date)}
+                    icon={routeDateIcon(date)}
+                    interactive={false}
+                    keyboard={false}
+                  />
+                ))}
                 <Marker
                   position={pixelToLatLng(label.at)}
                   icon={routeLabelIcon(leg, label.angleDeg, active)}
@@ -481,7 +545,7 @@ export default function WorldMapClient({
                               selectedLeg?.id === leg.id ? "text-accent" : ""
                             }`}
                           >
-                            <span className="legend-dash" aria-hidden="true" />
+                            <LegendDash leg={leg} />
                             <span>{leg.vessel}</span>
                           </button>
                         </li>
