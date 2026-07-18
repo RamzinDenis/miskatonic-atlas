@@ -10,6 +10,7 @@ import {
 } from "@/shared/lib/content";
 import { ChipSection, SourcesSection } from "@/shared/ui/sections";
 import { getPlate } from "@/widgets/plates";
+import { MapInset } from "@/widgets/world-map/map-inset";
 
 export const dynamicParams = false;
 
@@ -66,6 +67,17 @@ export default async function LocationPage({
           <p key={i}>{paragraph}</p>
         ))}
       </div>
+
+      {location.map && (
+        <MapInset
+          x={location.map.x}
+          y={location.map.y}
+          name={location.name}
+          chartHref={
+            location.prominence === "major" ? `/?focus=${location.slug}` : undefined
+          }
+        />
+      )}
 
       <ChipSection
         title="Connected locations"

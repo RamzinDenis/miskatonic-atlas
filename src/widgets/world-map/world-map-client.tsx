@@ -15,6 +15,7 @@ import {
   Marker,
   Polyline,
   ZoomControl,
+  useMap,
   useMapEvents,
 } from "react-leaflet";
 import {
@@ -104,6 +105,36 @@ function routeLabelIcon(leg: RouteLeg, angleDeg: number, active: boolean) {
     iconSize: [0, 0],
     iconAnchor: [0, 0],
   });
+}
+
+/**
+ * Deep link from entity pages: /?focus=slug lands the chart on that pin.
+ * Read client-side (and inside the map, where the instance is guaranteed),
+ * so the page itself stays fully static.
+ */
+function DeepLinkFocus({
+  locations,
+  onSelect,
+}: {
+  locations: MapLocation[];
+  onSelect: (location: MapLocation) => void;
+}) {
+  const map = useMap();
+  const handled = useRef(false);
+  useEffect(() => {
+    if (handled.current) return;
+    handled.current = true;
+    const slug = new URLSearchParams(window.location.search).get("focus");
+    const target = slug ? locations.find((l) => l.slug === slug) : undefined;
+    if (!target) return;
+    onSelect(target);
+    map.setView(
+      pixelToLatLng(target),
+      Math.max(map.getZoom(), FOCUS_ZOOM),
+      { animate: false },
+    );
+  }, [map, locations, onSelect]);
+  return null;
 }
 
 /** Clicks on empty map: close the preview panel, or pick coordinates. */
@@ -222,6 +253,17 @@ export default function WorldMapClient({
         <ZoomControl position="topright" />
         <FitZoomLimit />
         <MapClicks onClick={handleMapClick} />
+        {!picker && (
+          <DeepLinkFocus
+            locations={locations}
+            onSelect={(location) => {
+              setSelected(location);
+              if (!window.matchMedia("(min-width: 640px)").matches) {
+                setLegendOpen(false);
+              }
+            }}
+          />
+        )}
         {locations.map((location) => (
           <Marker
             key={location.slug}

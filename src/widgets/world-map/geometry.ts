@@ -54,3 +54,38 @@ export function pixelToLatLng({ x, y }: PixelPoint): [number, number] {
 export function latLngToPixel(lat: number, lng: number): PixelPoint {
   return { x: Math.round(lng), y: Math.round(WORLD_MAP.height - lat) };
 }
+
+/* Grid calibration of the scan — the constants from the header comment. */
+const PX_PER_LON_DEG = 9.63;
+const REF_MERIDIAN = { lonDeg: -150, x: 1765 };
+const EQUATOR_Y = 1715;
+const MERCATOR_R = (PX_PER_LON_DEG * 180) / Math.PI;
+
+/**
+ * Image pixels → geographic degrees by the grid calibration (north- and
+ * east-positive). Longitude is wrapped to (−180°, 180°]: the scan runs past
+ * the antimeridian on both edges.
+ */
+export function pixelToDegrees({ x, y }: PixelPoint): { lat: number; lon: number } {
+  const rawLon = (x - REF_MERIDIAN.x) / PX_PER_LON_DEG + REF_MERIDIAN.lonDeg;
+  const lon = ((((rawLon + 180) % 360) + 360) % 360) - 180;
+  const lat =
+    ((2 * Math.atan(Math.exp((EQUATOR_Y - y) / MERCATOR_R)) - Math.PI / 2) * 180) /
+    Math.PI;
+  return { lat, lon };
+}
+
+/** "47° 9′ S, 126° 43′ W" — the way the stories themselves give positions. */
+export function formatDegrees(point: PixelPoint): string {
+  const { lat, lon } = pixelToDegrees(point);
+  const part = (value: number, positive: string, negative: string) => {
+    let deg = Math.floor(Math.abs(value));
+    let min = Math.round((Math.abs(value) - deg) * 60);
+    if (min === 60) {
+      deg += 1;
+      min = 0;
+    }
+    return `${deg}° ${min}′ ${value >= 0 ? positive : negative}`;
+  };
+  return `${part(lat, "N", "S")}, ${part(lon, "E", "W")}`;
+}
