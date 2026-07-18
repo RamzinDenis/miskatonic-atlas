@@ -61,10 +61,24 @@ function FitZoomLimit() {
   return null;
 }
 
-function locationIcon(name: string, active: boolean) {
+/**
+ * Chart symbols by kind of feature: a brass ring for settlements, an island
+ * peak for ruins, waves for open sea, a diamond for regions — the way old
+ * charts vary their marks. Stroke colors are literal because leaflet builds
+ * these outside the styled tree.
+ */
+const PIN_GLYPHS: Record<string, string> = {
+  ruin: `<svg class="atlas-pin-glyph" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 11.5 L7 2.5 L12 11.5 Z" fill="rgba(19,16,9,0.55)" stroke="#c39e66" stroke-width="2" stroke-linejoin="round"/></svg>`,
+  sea: `<svg class="atlas-pin-glyph" viewBox="0 0 14 14" aria-hidden="true"><path d="M1.5 5.5 q2.75 -3 5.5 0 t5.5 0 M1.5 9.5 q2.75 -3 5.5 0 t5.5 0" fill="none" stroke="#c39e66" stroke-width="2" stroke-linecap="round"/></svg>`,
+  region: `<svg class="atlas-pin-glyph" viewBox="0 0 14 14" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" transform="rotate(45 7 7)" fill="rgba(19,16,9,0.55)" stroke="#c39e66" stroke-width="2"/></svg>`,
+};
+
+function locationIcon(location: MapLocation, active: boolean) {
+  const glyph =
+    PIN_GLYPHS[location.type] ?? `<span class="atlas-pin-dot"></span>`;
   return divIcon({
     className: "atlas-pin-wrap",
-    html: `<span class="atlas-pin${active ? " atlas-pin--active" : ""}"><span class="atlas-pin-dot"></span><span class="atlas-pin-label">${name}</span></span>`,
+    html: `<span class="atlas-pin${active ? " atlas-pin--active" : ""}">${glyph}<span class="atlas-pin-label">${location.name}</span></span>`,
     iconSize: [14, 14],
     iconAnchor: [7, 7],
   });
@@ -271,7 +285,7 @@ export default function WorldMapClient({
           <Marker
             key={location.slug}
             position={pixelToLatLng(location)}
-            icon={locationIcon(location.name, selected?.slug === location.slug)}
+            icon={locationIcon(location, selected?.slug === location.slug)}
             alt={location.name}
             eventHandlers={{
               click: () => {

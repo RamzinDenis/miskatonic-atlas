@@ -166,6 +166,24 @@ body {
     0 0 16px rgba(195, 158, 102, 0.85);
 }
 
+/* SVG chart symbols (island, waves, region) share the ring's brass glow. */
+.atlas-pin-glyph {
+  position: absolute;
+  inset: 0;
+  width: 14px;
+  height: 14px;
+  filter: drop-shadow(0 0 4px rgba(195, 158, 102, 0.55))
+    drop-shadow(0 1px 0 rgba(8, 6, 2, 0.8));
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.atlas-pin:hover .atlas-pin-glyph,
+.atlas-pin--active .atlas-pin-glyph {
+  transform: scale(1.35);
+  filter: drop-shadow(0 0 7px rgba(195, 158, 102, 0.85))
+    drop-shadow(0 1px 0 rgba(8, 6, 2, 0.8));
+}
+
 /*
  * Feature lettering on XIX-century charts is italic ink on paper — so the
  * labels are dark with a paper-colored halo, standing off the etched texture
@@ -278,7 +296,8 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .atlas-pin-dot {
+  .atlas-pin-dot,
+  .atlas-pin-glyph {
     transition: none;
   }
 }
