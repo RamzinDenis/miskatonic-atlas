@@ -8,11 +8,12 @@ import {
   type Map as LeafletMap,
 } from "leaflet";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import {
   ImageOverlay,
   MapContainer,
   Marker,
+  Polyline,
   ZoomControl,
   useMapEvents,
 } from "react-leaflet";
@@ -24,6 +25,7 @@ import {
   type MapLocation,
   type PixelPoint,
 } from "./geometry";
+import { ROUTE_LEGS, legLabelPlacement, type RouteLeg } from "./routes";
 
 const IMAGE_BOUNDS: LatLngBoundsExpression = [
   [0, 0],
@@ -71,6 +73,39 @@ const pickedIcon = divIcon({
   iconAnchor: [7, 7],
 });
 
+/**
+ * Voyage tracks: each dashed ink line is drawn over a slightly wider
+ * paper-colored twin with the same dash pattern, so every dash gets the
+ * light halo that keeps chart lettering legible on the etched scan.
+ */
+const ROUTE_HALO = {
+  color: "rgba(238, 226, 197, 0.85)",
+  weight: 5,
+  dashArray: "7 7",
+  lineCap: "butt",
+  interactive: false,
+} as const;
+
+function routeInk(active: boolean) {
+  return {
+    color: active ? "#75371a" : "#2b1e08",
+    weight: 2,
+    opacity: 0.9,
+    dashArray: "7 7",
+    lineCap: "butt",
+    bubblingMouseEvents: false,
+  } as const;
+}
+
+function routeLabelIcon(leg: RouteLeg, angleDeg: number, active: boolean) {
+  return divIcon({
+    className: "atlas-route-label-wrap",
+    html: `<span class="atlas-route-label${active ? " atlas-route-label--active" : ""}" style="transform:translate(-50%,-50%) rotate(${angleDeg}deg) translateY(-11px)">${leg.vessel}</span>`,
+    iconSize: [0, 0],
+    iconAnchor: [0, 0],
+  });
+}
+
 /** Clicks on empty map: close the preview panel, or pick coordinates. */
 function MapClicks({
   onClick,
@@ -100,6 +135,7 @@ export default function WorldMapClient({
 }: Props) {
   const mapRef = useRef<LeafletMap | null>(null);
   const [selected, setSelected] = useState<MapLocation | null>(null);
+  const [selectedLeg, setSelectedLeg] = useState<RouteLeg | null>(null);
   const [picked, setPicked] = useState<PixelPoint | null>(null);
   const [copied, setCopied] = useState(false);
   // This component only renders client-side (ssr: false), so the viewport
@@ -112,6 +148,7 @@ export default function WorldMapClient({
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setSelected(null);
+        setSelectedLeg(null);
         setPicked(null);
       }
     };
@@ -140,10 +177,17 @@ export default function WorldMapClient({
       setCopied(false);
     } else {
       setSelected(null);
+      setSelectedLeg(null);
     }
   };
 
+  const selectLeg = (leg: RouteLeg) => {
+    setSelected(null);
+    setSelectedLeg(leg);
+  };
+
   const focusLocation = (location: MapLocation) => {
+    setSelectedLeg(null);
     setSelected(location);
     const map = mapRef.current;
     if (!map) return;
@@ -184,9 +228,36 @@ export default function WorldMapClient({
             position={pixelToLatLng(location)}
             icon={locationIcon(location.name, selected?.slug === location.slug)}
             alt={location.name}
-            eventHandlers={{ click: () => setSelected(location) }}
+            eventHandlers={{
+              click: () => {
+                setSelectedLeg(null);
+                setSelected(location);
+              },
+            }}
           />
         ))}
+        {!picker &&
+          ROUTE_LEGS.map((leg) => {
+            const positions = leg.points.map(pixelToLatLng);
+            const label = legLabelPlacement(leg);
+            const active = selectedLeg?.id === leg.id;
+            return (
+              <Fragment key={leg.id}>
+                <Polyline positions={positions} pathOptions={ROUTE_HALO} />
+                <Polyline
+                  positions={positions}
+                  pathOptions={routeInk(active)}
+                  eventHandlers={{ click: () => selectLeg(leg) }}
+                />
+                <Marker
+                  position={pixelToLatLng(label.at)}
+                  icon={routeLabelIcon(leg, label.angleDeg, active)}
+                  alt={`Track of the ${leg.vessel}`}
+                  eventHandlers={{ click: () => selectLeg(leg) }}
+                />
+              </Fragment>
+            );
+          })}
         {picker && picked && (
           <Marker position={pixelToLatLng(picked)} icon={pickedIcon} />
         )}
@@ -271,6 +342,38 @@ export default function WorldMapClient({
           >
             Open location →
           </Link>
+        </aside>
+      )}
+
+      {!picker && selectedLeg && (
+        <aside className="parchment absolute bottom-6 left-4 right-4 z-[1000] max-h-[55%] max-w-md overflow-y-auto rounded-sm p-5 sm:right-auto">
+          <div className="flex items-baseline justify-between gap-3">
+            <span className="text-xs uppercase tracking-widest text-muted">
+              Voyage track
+            </span>
+            <button
+              type="button"
+              onClick={() => setSelectedLeg(null)}
+              className="-mr-1 -mt-1 px-1 text-muted transition-colors hover:text-foreground"
+              aria-label="Close track preview"
+            >
+              ✕
+            </button>
+          </div>
+          <h2 className="mt-1 font-display text-2xl italic">{selectedLeg.vessel}</h2>
+          <div className="parchment-rule mt-2" />
+          <p className="mt-3 text-sm leading-relaxed">{selectedLeg.course}</p>
+          {selectedLeg.quotes.map((quote) => (
+            <blockquote
+              key={quote.slice(0, 40)}
+              className="mt-3 border-l-2 border-accent pl-3 font-serif text-sm italic leading-relaxed"
+            >
+              “{quote}”
+            </blockquote>
+          ))}
+          <p className="mt-2 text-xs uppercase tracking-widest text-muted">
+            {selectedLeg.attribution}
+          </p>
         </aside>
       )}
 
