@@ -4,6 +4,7 @@ import alert from "./alert.jpg";
 import legrasseIdol from "./legrasse-idol.png";
 import rlyeh from "./rlyeh.png";
 import swampRitual from "./swamp-ritual.png";
+import wilcoxBasRelief from "./wilcox-bas-relief.jpg";
 
 /**
  * Plates — editorial engravings on entity and story pages (CONTEXT.md:
@@ -77,7 +78,7 @@ const plates: Record<string, PlateDef> = {
   "characters/henry-anthony-wilcox": {
     numeral: "V",
     storySlug: "the-call-of-cthulhu",
-    image: null,
+    image: wilcoxBasRelief,
     alt: "Engraved plate of the Wilcox bas-relief: a clay tablet bearing a pulpy tentacled head on a scaly winged body over rows of unknown hieroglyphics",
     caption: "The clay bas-relief Wilcox brought to Professor Angell, drawn after the text:",
     quote:
