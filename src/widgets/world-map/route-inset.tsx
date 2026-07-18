@@ -74,7 +74,7 @@ export function RouteInset({ storySlug }: { storySlug: string }) {
       </div>
       <figcaption className="mt-4 text-center text-sm leading-relaxed text-muted">
         The voyage of the Emma and the Alert, February–April 1925 — tracks
-        drawn after Johansen's story.{" "}
+        drawn after Johansen&rsquo;s story.{" "}
         <Link
           href="/"
           className="whitespace-nowrap italic text-accent transition-colors hover:text-foreground"

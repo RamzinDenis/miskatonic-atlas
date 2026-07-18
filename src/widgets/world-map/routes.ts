@@ -59,7 +59,7 @@ export const ROUTE_LEGS: RouteLeg[] = [
       "The captured yacht Alert under Second Mate Johansen — ahead on the original course, to the risen island.",
     points: [
       { x: 1971, y: 2270 },
-      { x: 1989, y: 2232 },
+      { x: 1989, y: 2231 },
     ],
     labelSegment: 0,
     quotes: [
@@ -74,7 +74,7 @@ export const ROUTE_LEGS: RouteLeg[] = [
     course:
       "Johansen and Briden beaten about by the storm — the derelict Alert, adrift until sighted at 34° 21′ S, 152° 17′ W.",
     points: [
-      { x: 1989, y: 2232 },
+      { x: 1989, y: 2231 },
       { x: 1925, y: 2208 },
       { x: 1868, y: 2148 },
       { x: 1802, y: 2122 },

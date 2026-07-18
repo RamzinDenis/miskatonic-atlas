@@ -12,7 +12,7 @@
  *   longitude — linear, 9.63 px/deg, reference meridian W150° at x = 1765
  *   latitude  — Mercator, equator at y = 1715, R = 9.63·180/π ≈ 551.7 px/rad
  *   y(φ) = 1715 − R·ln(tan(45° + φ/2)), φ north-positive
- * e.g. R'lyeh, canon "S. Latitude 47° 9', W. Longitude 126° 43'" → (1989, 2232).
+ * e.g. R'lyeh, canon "S. Latitude 47° 9', W. Longitude 126° 43'" → (1989, 2231).
  */
 export const WORLD_MAP = {
   id: "world",
