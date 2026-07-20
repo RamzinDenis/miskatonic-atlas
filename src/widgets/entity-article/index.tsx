@@ -3,9 +3,10 @@ import type { ReactNode } from "react";
 import { ChipSection, SourcesSection, type SourceItem } from "@/shared/ui/sections";
 
 /**
- * Shared page body for characters and creatures — the two collections differ
- * only in their badge field (role vs classification). Locations keep their own
- * page: they carry extra fields (map, realWorld, connectedTo).
+ * The page body of a character. It was shared with creatures while the two
+ * differed only in their badge field (role vs classification); creatures now
+ * print as naturalist's leaves of the bestiary and lay themselves out, as
+ * locations always did with their map and cross-references.
  */
 
 export interface EntityArticleProps {

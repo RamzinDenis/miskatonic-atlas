@@ -633,6 +633,277 @@ body {
   opacity: 0.9;
 }
 
+/* --- Bestiarium -------------------------------------------------------- */
+
+/*
+ * The bestiary's live engravings (CONTEXT.md: «Бестиарий»). A beast is the
+ * same alpha mask the chart paints, printed here at plate size and given the
+ * faintest stirrings: breath, the shiver of an impression pulled by hand, a
+ * head that turns after the reader, a flush of vermilion under the iron-gall.
+ * Every effect stays within a pixel or two — the reader is meant to doubt
+ * whether the plate moved at all.
+ *
+ * Each transform owns an element of its own, so the effects compose by
+ * nesting instead of overwriting one another:
+ *   .bestiary-figure   the square mount (perspective)
+ *   └ .bestiary-tilt   the drawing's own box — the gaze turns it
+ *     └ .bestiary-body breath
+ *       └ .bestiary-layer  ink, and the vermilion double above it
+ */
+
+.bestiary-figure {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  perspective: 900px;
+  /* No colour of its own: the ink is inherited, so hovering the scene
+     reprints the whole beast in vermilion like any chosen mark. */
+}
+
+.bestiary-tilt {
+  transform: rotateY(calc(var(--gx, 0) * 6deg)) rotateX(calc(var(--gy, 0) * -5deg));
+}
+
+/* Pointer gone: straighten up slowly instead of snapping back. */
+.bestiary-figure--resting .bestiary-tilt {
+  transition: transform 0.6s ease-out;
+}
+
+.bestiary-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bestiary-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.bestiary-layer--vermilion {
+  color: var(--ink-accent);
+  opacity: 0;
+}
+
+@keyframes bestiary-breath {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.015);
+  }
+}
+
+.bestiary-fx-breath {
+  transform-origin: bottom center;
+  animation: bestiary-breath 8s ease-in-out infinite;
+}
+
+/* Irregular nudges with no tweening between them: the plate is not moving,
+   it is being printed again a hair off the last impression. */
+@keyframes bestiary-shiver {
+  0%,
+  22% {
+    transform: none;
+  }
+  23% {
+    transform: translate(0.6px, -0.4px) rotate(0.2deg);
+  }
+  24%,
+  60% {
+    transform: none;
+  }
+  61% {
+    transform: translate(-0.5px, 0.5px) rotate(-0.15deg);
+  }
+  62%,
+  88% {
+    transform: none;
+  }
+  89% {
+    transform: translate(0.4px, 0.6px);
+  }
+  90%,
+  100% {
+    transform: none;
+  }
+}
+
+.bestiary-fx-shiver {
+  animation: bestiary-shiver 7s steps(1, end) infinite;
+}
+
+@keyframes bestiary-vermilion {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0.22;
+  }
+}
+
+.bestiary-fx-vermilion {
+  animation: bestiary-vermilion 11s ease-in-out infinite;
+}
+
+/* The mount of a plate that was never engraved (lost-plate.tsx) — the
+   double rule of the map's cartouche around an admitted gap. */
+.bestiary-mount {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  padding: 1.5rem;
+  border: 3px double var(--paper-line);
+  color: var(--muted);
+  text-align: center;
+}
+
+.bestiary-mount-fig {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: var(--foreground);
+}
+
+.bestiary-mount-note {
+  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.bestiary-mount--thumb {
+  height: 3rem;
+  gap: 0;
+  padding: 0;
+  border-width: 2px;
+}
+
+.bestiary-mount--thumb .bestiary-mount-fig {
+  font-size: 1rem;
+}
+
+/* --- The showcase at /creatures --- */
+
+.bestiary-scene {
+  display: grid;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+@media (min-width: 640px) {
+  .bestiary-scene {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/*
+ * All seven beasts are mounted at once, stacked in one square box: a mask
+ * inside display:none is never fetched, so hiding the others outright would
+ * make every turn of the sheet a download. Crossfading a stack also keeps
+ * the sheet from jumping as figures of different heights succeed each other.
+ */
+.bestiary-stack {
+  position: relative;
+  display: block;
+  aspect-ratio: 1 / 1;
+  transition: color 0.2s ease;
+}
+
+.bestiary-stack:hover {
+  color: var(--ink-accent);
+}
+
+.bestiary-plate {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.bestiary-plate--shown {
+  visibility: visible;
+  opacity: 1;
+}
+
+.bestiary-fig-no {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+
+/* Three lines of the summary; the leaf carries the rest. */
+.bestiary-summary {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  line-height: 1.6;
+}
+
+.bestiary-ribbon {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-top: 1px solid var(--paper-line);
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+}
+
+.bestiary-thumb {
+  display: flex;
+  flex: none;
+  width: 5.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  scroll-snap-align: center;
+  text-align: center;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.bestiary-thumb:hover {
+  opacity: 1;
+  color: var(--ink-accent);
+}
+
+/* The chosen beast stays in vermilion, as the chosen mark does on the map. */
+.bestiary-thumb--active {
+  opacity: 1;
+  color: var(--ink-accent);
+}
+
+.bestiary-thumb:focus-visible {
+  outline: 2px solid var(--ink-accent);
+  outline-offset: 3px;
+}
+
+.bestiary-thumb-ink {
+  width: 100%;
+  height: 3rem;
+}
+
+.bestiary-thumb-name {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .atlas-pin,
   .atlas-pin-dot,
@@ -641,7 +912,19 @@ body {
   .atlas-route-label,
   .atlas-route-date,
   .atlas-monster,
-  .atlas-monster-label {
+  .atlas-monster-label,
+  .bestiary-plate,
+  .bestiary-stack,
+  .bestiary-thumb {
     transition: none;
+  }
+
+  /* The bestiary falls still: an ordinary engraving, nothing stirring. */
+  [class*="bestiary-fx-"] {
+    animation: none;
+  }
+
+  .bestiary-tilt {
+    transform: none;
   }
 }

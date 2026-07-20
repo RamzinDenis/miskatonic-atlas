@@ -10,9 +10,12 @@
  * feFlood filter), so the site keeps re-inking every mark — iron-gall or
  * track ink at rest, vermilion when chosen — exactly as it did the SVGs.
  *
- * Output: public/maps/monsters/<slug>.png and public/maps/ships/<kind>.png.
- * Prints trimmed aspect ratios — monsters.ts and route-glyphs.ts hold the
- * display sizes; keep them in step.
+ * Output: public/maps/monsters/<slug>.png, public/maps/ships/<kind>.png and
+ * public/bestiary/<slug>.webp — the same beasts a second time, large enough
+ * for the bestiary's showcase and leaves (webp: an alpha png that size runs
+ * to half a megabyte). Prints trimmed aspect ratios — monsters.ts,
+ * route-glyphs.ts and the bestiary registry hold the display sizes; keep
+ * them in step.
  *
  * Usage: node scripts/build-monster-masks.mjs
  */
@@ -36,6 +39,7 @@ const SHIPS = {
 
 const MONSTER_SIZE = 300; // longest side, ~2.5× the largest display size
 const SHIP_SIZE = 160;
+const BESTIARY_SIZE = 1024; // the bestiary prints a beast ~448 px wide
 
 async function buildMask(source, out, size, { gamma = 0.8, gain = 1 } = {}) {
   const { data, info } = await sharp(source)
@@ -56,11 +60,18 @@ async function buildMask(source, out, size, { gamma = 0.8, gain = 1 } = {}) {
     rgba[i * 4 + 3] = Math.min(255, Math.round(255 * gain * ink ** gamma));
   }
 
-  await sharp(rgba, {
+  /* Encoder follows the output extension: chart marks are small enough to
+     stay lossless png, plate-size masks are not (an alpha png at 1024 runs
+     to half a megabyte). All the drawing lives in the alpha channel, so
+     alphaQuality is what sets the weight — at 70 the hatching still reads
+     identically once the mask is printed at its display size. */
+  const encoded = sharp(rgba, {
     raw: { width: info.width, height: info.height, channels: 4 },
-  })
-    .png({ compressionLevel: 9 })
-    .toFile(out);
+  });
+  await (out.endsWith(".webp")
+    ? encoded.webp({ quality: 70, alphaQuality: 70 })
+    : encoded.png({ compressionLevel: 9 })
+  ).toFile(out);
   console.log(
     `${path.basename(out)}: ${info.width}×${info.height} (aspect ${(info.height / info.width).toFixed(3)}) → ${out}`,
   );
@@ -86,5 +97,17 @@ for (const [file, kind] of Object.entries(SHIPS)) {
     path.join(shipDir, `${kind}.png`),
     SHIP_SIZE,
     { gamma: 0.5, gain: 1.4 },
+  );
+}
+
+/* The same beasts at plate size for the bestiary. Same ink curve as the
+   chart marks — the showcase paints them through the very same .mask-ink. */
+const bestiaryDir = path.join(ROOT, "public", "bestiary");
+await mkdir(bestiaryDir, { recursive: true });
+for (const slug of MONSTERS) {
+  await buildMask(
+    path.join(SRC, `monster-${slug}.png`),
+    path.join(bestiaryDir, `${slug}.webp`),
+    BESTIARY_SIZE,
   );
 }

@@ -29,6 +29,12 @@ export function SiteHeader({ floating = false }: { floating?: boolean }) {
             Map
           </Link>
           <Link
+            href="/creatures"
+            className="text-muted transition-colors hover:text-accent"
+          >
+            Bestiary
+          </Link>
+          <Link
             href="/contents"
             className="text-muted transition-colors hover:text-accent"
           >
