@@ -57,15 +57,15 @@ export interface RouteLeg {
 }
 
 /**
- * Hand-tinted survey inks, one per vessel — richer than the chart's own
- * engraving so a voyage reads at first glance, the dash pattern doubling
- * the identity. All stay far from the vermilion that selection reprints
- * a track in.
+ * Hand-tinted survey inks, one per vessel — sombre, night-toned, the way
+ * iron-gall and india inks age on a chart nobody should own; the dash
+ * pattern doubles the identity. All stay far from the vermilion that
+ * selection reprints a track in.
  */
-const SEPIA_INK = "#6f4a0d";
-const PRUSSIAN_INK = "#1f4e78";
-const OLIVE_INK = "#4a6323";
-const PLUM_INK = "#6e2f63";
+const UMBER_INK = "#533a12";
+const PRUSSIAN_INK = "#1d3d5c";
+const GRAPHITE_INK = "#3a352c";
+const OXBLOOD_INK = "#4a2430";
 
 /** The story whose voyage the tracks below chart. */
 export const ROUTE_STORY_SLUG = "the-call-of-cthulhu";
@@ -85,7 +85,7 @@ export const ROUTE_LEGS: RouteLeg[] = [
       { x: 1971, y: 2270 },
     ],
     dash: "11 7",
-    color: SEPIA_INK,
+    color: UMBER_INK,
     cap: "butt",
     labelSegment: 0,
     fixes: [
@@ -135,7 +135,7 @@ export const ROUTE_LEGS: RouteLeg[] = [
       { x: 1743, y: 2068 },
     ],
     dash: "2 7",
-    color: OLIVE_INK,
+    color: GRAPHITE_INK,
     cap: "round",
     labelSegment: 2,
     fixes: [
@@ -161,7 +161,7 @@ export const ROUTE_LEGS: RouteLeg[] = [
       { x: 1189, y: 2066 },
     ],
     dash: "14 6 4 6",
-    color: PLUM_INK,
+    color: OXBLOOD_INK,
     cap: "butt",
     labelSegment: 0,
     fixes: [

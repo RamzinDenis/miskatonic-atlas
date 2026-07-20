@@ -118,8 +118,14 @@ body {
 }
 
 /* The Lovecraft tint lives on the site, not in the PD scan itself. */
-.world-map .leaflet-image-layer {
-  filter: sepia(0.5) saturate(0.62) brightness(0.8) contrast(1.07);
+.world-map .atlas-scan {
+  filter: sepia(0.6) saturate(0.62) brightness(0.8) contrast(1.07);
+}
+
+/* The wear sheet darkens the tinted scan below it; white stays neutral. */
+.world-map .atlas-wear {
+  mix-blend-mode: multiply;
+  pointer-events: none;
 }
 
 .world-map-vignette {
@@ -129,9 +135,33 @@ body {
   pointer-events: none;
   background: radial-gradient(
     ellipse 80% 75% at 50% 45%,
-    transparent 55%,
-    rgba(8, 6, 2, 0.5) 100%
+    transparent 50%,
+    rgba(8, 6, 2, 0.6) 100%
   );
+}
+
+/*
+ * The chart's floating panels (legend cartouche, previews, the Legend
+ * toggle) print on the same weathered stock as the sheet below them: the
+ * site-wide parchment is too freshly bleached next to the aged scan, so
+ * inside the map the paper re-tunes to a yellowed scrap — duller
+ * highlight, deeper edge shading, a couple of damp-stain washes.
+ */
+.world-map .parchment {
+  --paper: #d2bc8c;
+  --paper-soft: #c1ab79;
+  --paper-line: #8f7a4e;
+  background:
+    radial-gradient(ellipse at 18% -2%, rgba(255, 246, 214, 0.16), transparent 55%),
+    radial-gradient(ellipse at 100% 100%, rgba(94, 66, 28, 0.3), transparent 55%),
+    radial-gradient(ellipse at 0% 100%, rgba(94, 66, 28, 0.2), transparent 45%),
+    radial-gradient(ellipse 40% 26% at 82% 12%, rgba(114, 84, 38, 0.18), transparent 70%),
+    radial-gradient(ellipse 34% 22% at 10% 55%, rgba(114, 84, 38, 0.15), transparent 70%),
+    var(--paper);
+  box-shadow:
+    0 0 0 1px rgba(8, 6, 2, 0.75),
+    0 14px 40px rgba(0, 0, 0, 0.55),
+    inset 0 0 80px rgba(84, 56, 20, 0.32);
 }
 
 .world-map .leaflet-bar {
@@ -328,12 +358,12 @@ body {
   position: absolute;
   inset: 0;
   background-repeat: no-repeat;
-  filter: sepia(0.5) saturate(0.62) brightness(0.85) contrast(1.07);
+  filter: sepia(0.6) saturate(0.62) brightness(0.85) contrast(1.07);
 }
 
 /* The voyage inset: same tint on the SVG's scan, ink lettering along tracks. */
 .route-inset-scan {
-  filter: sepia(0.5) saturate(0.62) brightness(0.85) contrast(1.07);
+  filter: sepia(0.6) saturate(0.62) brightness(0.85) contrast(1.07);
 }
 
 .route-inset-label {
@@ -425,13 +455,12 @@ body {
   border: none;
 }
 
+/* Size comes inline per vessel (SHIP_ART) — the engravings differ in rig. */
 .atlas-route-ship {
   position: absolute;
   left: 0;
   top: 0;
   display: block;
-  width: 42px;
-  height: 25px;
   cursor: pointer;
 }
 
@@ -448,12 +477,6 @@ body {
   );
 }
 
-.atlas-route-ship svg {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
 
 /* Logged dates beside their fixes, in the ink of their track (inlined). */
 .atlas-route-date {
@@ -478,13 +501,112 @@ body {
   opacity: 1;
 }
 
+/*
+ * The annotator's beasts: iron-gall sketches by a later hand, larger than
+ * any printed mark and in an ink no printer used — drawn on, not printed.
+ * They hold a paper clearing like every other mark: on Colton's dense
+ * etching a sketch without one simply drowns. Hover reprints one in
+ * vermilion like all chosen marks; its name surfaces with the lettering.
+ */
+.atlas-monster-wrap {
+  background: none;
+  border: none;
+}
+
+.atlas-monster {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #3a2413;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.atlas-monster::before {
+  content: "";
+  position: absolute;
+  inset: -6px -10px;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse,
+    rgba(238, 226, 197, 0.92) 0%,
+    rgba(238, 226, 197, 0.6) 52%,
+    rgba(238, 226, 197, 0) 78%
+  );
+}
+
+.atlas-monster:hover {
+  color: var(--ink-accent);
+}
+
+/* An engraving as an alpha mask filled with the current ink — the raster
+   twin of drawing in currentColor (see build-monster-masks.mjs). Beasts
+   and vessels alike paint through it. */
+.mask-ink {
+  display: block;
+  background-color: currentColor;
+  mask: var(--ink-mask) center / contain no-repeat;
+  -webkit-mask: var(--ink-mask) center / contain no-repeat;
+}
+
+.atlas-monster .mask-ink,
+.atlas-route-ship .mask-ink {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.atlas-monster-label {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  margin-top: 3px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  font-family: var(--font-old-standard), Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.07em;
+  color: #4a3018;
+  transition: opacity 0.25s ease, color 0.15s ease;
+  text-shadow:
+    -1px -1px 0 rgba(238, 226, 197, 0.85),
+    1px -1px 0 rgba(238, 226, 197, 0.85),
+    -1px 1px 0 rgba(238, 226, 197, 0.85),
+    1px 1px 0 rgba(238, 226, 197, 0.85),
+    0 0 6px rgba(238, 226, 197, 0.8);
+}
+
+.world-map--labels .atlas-monster-label,
+.atlas-monster:hover .atlas-monster-label {
+  opacity: 1;
+}
+
+.atlas-monster:hover .atlas-monster-label {
+  color: var(--ink-accent);
+}
+
+.legend-monster {
+  flex: none;
+  width: 22px;
+  height: 20px;
+  color: #3a2413;
+  opacity: 0.9;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .atlas-pin,
   .atlas-pin-dot,
   .atlas-pin-glyph,
   .atlas-pin-label,
   .atlas-route-label,
-  .atlas-route-date {
+  .atlas-route-date,
+  .atlas-monster,
+  .atlas-monster-label {
     transition: none;
   }
 }

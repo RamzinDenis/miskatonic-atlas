@@ -10,7 +10,14 @@ import {
 } from "leaflet";
 import Image from "next/image";
 import Link from "next/link";
-import { Fragment, useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import {
+  Fragment,
+  useEffect,
+  useRef,
+  useState,
+  type CSSProperties,
+} from "react";
 import {
   ImageOverlay,
   MapContainer,
@@ -31,9 +38,16 @@ import {
   type PixelPoint,
 } from "./geometry";
 import {
+  MONSTERS,
+  MONSTER_STORY_SLUG,
+  monsterMaskUrl,
+  type MapMonster,
+  type MonsterKind,
+} from "./monsters";
+import {
   INK_ROUGH_FILTER,
-  SHIP_GLYPHS,
-  SHIP_VIEWBOX,
+  SHIP_ART,
+  shipMaskUrl,
 } from "./route-glyphs";
 import {
   ROUTE_LEGS,
@@ -176,12 +190,31 @@ function routeInk(leg: RouteLeg, active: boolean) {
  */
 function routeShipIcon(leg: RouteLeg, active: boolean) {
   const placement = legShipPlacement(leg);
+  const art = SHIP_ART[leg.ship];
   const flip = placement.flip ? " scaleX(-1)" : "";
   return divIcon({
     className: "atlas-route-ship-wrap",
-    html: `<span class="atlas-route-ship" style="color:${active ? TRACK_ACCENT : leg.color};transform:translate(-50%,-50%) rotate(${placement.angleDeg}deg) translateY(-14px)${flip}"><svg viewBox="${SHIP_VIEWBOX}" aria-hidden="true"><defs>${INK_ROUGH_FILTER}</defs>${SHIP_GLYPHS[leg.ship]}</svg></span>`,
+    html: `<span class="atlas-route-ship" style="color:${active ? TRACK_ACCENT : leg.color};width:${art.w}px;height:${art.h}px;transform:translate(-50%,-50%) rotate(${placement.angleDeg}deg) translateY(-14px)${flip}"><span class="mask-ink" style="--ink-mask:url('${shipMaskUrl(leg.ship)}')"></span></span>`,
     iconSize: [0, 0],
     iconAnchor: [0, 0],
+  });
+}
+
+/**
+ * A beast of the margins, drawn at its natural marginalia size — larger
+ * than any printed mark, because it is not a printed mark: the annotator's
+ * iron-gall engraving of what surfaces there. The engraving is an alpha
+ * mask painted in currentColor (see monsters.ts), so CSS re-inks it like
+ * every other mark. Clicking one opens its creature page; there is nothing
+ * else to preview about a thing like this.
+ */
+function monsterIcon(monster: MapMonster) {
+  const { w, h } = monster.art;
+  return divIcon({
+    className: "atlas-monster-wrap",
+    html: `<span class="atlas-monster"><span class="mask-ink" style="--ink-mask:url('${monsterMaskUrl(monster.slug)}')"></span><span class="atlas-monster-label">${monster.name}</span></span>`,
+    iconSize: [w, h],
+    iconAnchor: [w / 2, h / 2],
   });
 }
 
@@ -207,15 +240,18 @@ function routeLabelIcon(leg: RouteLeg, angleDeg: number, active: boolean) {
   });
 }
 
-/** The vessel's silhouette as it sails the chart, keying the legend row. */
+/** The vessel's engraving as it sails the chart, keying the legend row. */
 function LegendShip({ leg }: { leg: RouteLeg }) {
   return (
-    <svg
-      className="legend-ship"
-      viewBox={SHIP_VIEWBOX}
+    <span
+      className="legend-ship mask-ink"
+      style={
+        {
+          color: leg.color,
+          "--ink-mask": `url('${shipMaskUrl(leg.ship)}')`,
+        } as CSSProperties
+      }
       aria-hidden
-      style={{ color: leg.color }}
-      dangerouslySetInnerHTML={{ __html: SHIP_GLYPHS[leg.ship] }}
     />
   );
 }
@@ -235,6 +271,17 @@ function LegendDash({ leg }: { leg: RouteLeg }) {
         strokeLinecap={leg.cap}
       />
     </svg>
+  );
+}
+
+/** The beast as engraved on the chart, keying its legend row. */
+function LegendMonster({ slug }: { slug: MonsterKind }) {
+  return (
+    <span
+      className="legend-monster mask-ink"
+      style={{ "--ink-mask": `url('${monsterMaskUrl(slug)}')` } as CSSProperties}
+      aria-hidden
+    />
   );
 }
 
@@ -309,6 +356,7 @@ export default function WorldMapClient({
   legend,
   picker = false,
 }: Props) {
+  const router = useRouter();
   const mapRef = useRef<LeafletMap | null>(null);
   const [selected, setSelected] = useState<MapLocation | null>(null);
   const [selectedLeg, setSelectedLeg] = useState<RouteLeg | null>(null);
@@ -378,6 +426,20 @@ export default function WorldMapClient({
     }
   };
 
+  /** Legend click on a beast: fly to where the annotator drew it. */
+  const focusMonster = (monster: MapMonster) => {
+    const map = mapRef.current;
+    if (!map) return;
+    map.flyTo(
+      pixelToLatLng(monster.at),
+      Math.max(map.getZoom(), FOCUS_ZOOM),
+      { duration: 1.1 },
+    );
+    if (!window.matchMedia("(min-width: 640px)").matches) {
+      setLegendOpen(false);
+    }
+  };
+
   const focusLocation = (location: MapLocation) => {
     setSelectedLeg(null);
     setSelected(location);
@@ -412,7 +474,18 @@ export default function WorldMapClient({
         attributionControl={false}
         className="h-full w-full"
       >
-        <ImageOverlay url={WORLD_MAP.url} bounds={IMAGE_BOUNDS} />
+        <ImageOverlay
+          url={WORLD_MAP.url}
+          bounds={IMAGE_BOUNDS}
+          className="atlas-scan"
+        />
+        {/* The copy's biography — scorch, creases, stains — multiplied over
+            the pristine scan so it pans and zooms as part of the paper. */}
+        <ImageOverlay
+          url={WORLD_MAP.wearUrl}
+          bounds={IMAGE_BOUNDS}
+          className="atlas-wear"
+        />
         <ZoomControl position="topright" />
         <FitZoomLimit />
         <ZoomWatcher
@@ -483,6 +556,18 @@ export default function WorldMapClient({
               </Fragment>
             );
           })}
+        {!picker &&
+          MONSTERS.map((monster) => (
+            <Marker
+              key={monster.slug}
+              position={pixelToLatLng(monster.at)}
+              icon={monsterIcon(monster)}
+              alt={monster.name}
+              eventHandlers={{
+                click: () => router.push(`/creatures/${monster.slug}`),
+              }}
+            />
+          ))}
         {picker && picked && (
           <Marker position={pixelToLatLng(picked)} icon={pickedIcon} />
         )}
@@ -566,6 +651,29 @@ export default function WorldMapClient({
                             <LegendShip leg={leg} />
                             <LegendDash leg={leg} />
                             <span>{leg.vessel}</span>
+                          </button>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
+                {legend.some((story) => story.slug === MONSTER_STORY_SLUG) && (
+                  <section className="mt-6">
+                    <h2 className="text-center text-xs uppercase tracking-widest text-muted">
+                      Here be monsters
+                    </h2>
+                    <div className="parchment-rule mt-2" />
+                    <ul className="mt-3 space-y-1.5">
+                      {MONSTERS.map((monster) => (
+                        <li key={monster.slug}>
+                          <button
+                            type="button"
+                            onClick={() => focusMonster(monster)}
+                            className="flex w-full items-center gap-2.5 text-left text-sm italic transition-colors hover:text-accent"
+                          >
+                            <LegendMonster slug={monster.slug} />
+                            <span>{monster.name}</span>
                           </button>
                         </li>
                       ))}

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { WORLD_MAP } from "./geometry";
-import { INK_ROUGH_FILTER, SHIP_GLYPHS } from "./route-glyphs";
+import { SHIP_ART, shipMaskUrl } from "./route-glyphs";
 import {
   ROUTE_LEGS,
   ROUTE_STORY_SLUG,
@@ -58,9 +58,14 @@ export function RouteInset({ storySlug }: { storySlug: string }) {
           role="img"
           aria-label="Chart of the voyage: the Emma out of Auckland, the captured Alert to R'lyeh, Johansen adrift, and the Vigilant towing the derelict to Sydney"
         >
+          {/* The tint filters fill each vessel's mask with its track's ink —
+              the SVG twin of the live chart's mask-ink treatment. */}
           <defs
             dangerouslySetInnerHTML={{
-              __html: `${INK_ROUGH_FILTER}<radialGradient id="route-inset-clearing"><stop offset="0%" stop-color="rgba(238, 226, 197, 0.92)"/><stop offset="55%" stop-color="rgba(238, 226, 197, 0.7)"/><stop offset="100%" stop-color="rgba(238, 226, 197, 0)"/></radialGradient>`,
+              __html: `<radialGradient id="route-inset-clearing"><stop offset="0%" stop-color="rgba(238, 226, 197, 0.92)"/><stop offset="55%" stop-color="rgba(238, 226, 197, 0.7)"/><stop offset="100%" stop-color="rgba(238, 226, 197, 0)"/></radialGradient>${ROUTE_LEGS.map(
+                (leg) =>
+                  `<filter id="route-inset-tint-${leg.id}" x="-10%" y="-10%" width="120%" height="120%"><feFlood flood-color="${leg.color}"/><feComposite in2="SourceAlpha" operator="in"/></filter>`,
+              ).join("")}`,
             }}
           />
           <image
@@ -98,14 +103,15 @@ export function RouteInset({ storySlug }: { storySlug: string }) {
                 {shipFits(leg) && (
                   <g
                     transform={`translate(${ship.at.x} ${ship.at.y}) rotate(${ship.angleDeg}) translate(0 -28) scale(${ship.flip ? -2 : 2} 2)`}
-                    style={{ color: leg.color }}
                   >
-                    <ellipse rx="24" ry="15" fill="url(#route-inset-clearing)" />
-                    <g
-                      transform="translate(-20 -12)"
-                      dangerouslySetInnerHTML={{
-                        __html: SHIP_GLYPHS[leg.ship],
-                      }}
+                    <ellipse rx="26" ry="16" fill="url(#route-inset-clearing)" />
+                    <image
+                      href={shipMaskUrl(leg.ship)}
+                      x={-SHIP_ART[leg.ship].w / 2}
+                      y={-SHIP_ART[leg.ship].h / 2}
+                      width={SHIP_ART[leg.ship].w}
+                      height={SHIP_ART[leg.ship].h}
+                      filter={`url(#route-inset-tint-${leg.id})`}
                     />
                   </g>
                 )}
