@@ -17,6 +17,8 @@
 export const WORLD_MAP = {
   id: "world",
   url: "/maps/world.jpg",
+  /** Ageing sheet (scripts/generate-wear.mjs), multiplied over the scan. */
+  wearUrl: "/maps/world-wear.webp",
   width: 4096,
   height: 2950,
 } as const;
