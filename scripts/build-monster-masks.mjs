@@ -30,6 +30,11 @@ const SRC = path.join(ROOT, "public", "plates");
 
 /* Beasts keep their creature slug; vessels map source file → ShipKind. */
 const MONSTERS = ["tornasuk", "cthulhu", "black-winged-ones"];
+
+/* Beasts engraved for the bestiary alone, with no marginalia on the chart:
+   their small mask has nowhere to live under maps/, so it is written beside
+   the plate-size one and the register points the ribbon at it. */
+const BESTIARY_ONLY = ["white-polypous-thing"];
 const SHIPS = {
   "ship-emma": "schooner",
   "ship-alert": "steam-yacht",
@@ -104,10 +109,19 @@ for (const [file, kind] of Object.entries(SHIPS)) {
    chart marks — the showcase paints them through the very same .mask-ink. */
 const bestiaryDir = path.join(ROOT, "public", "bestiary");
 await mkdir(bestiaryDir, { recursive: true });
-for (const slug of MONSTERS) {
+for (const slug of [...MONSTERS, ...BESTIARY_ONLY]) {
   await buildMask(
     path.join(SRC, `monster-${slug}.png`),
     path.join(bestiaryDir, `${slug}.webp`),
     BESTIARY_SIZE,
+  );
+}
+
+/* Ribbon thumbnails of the beasts that have no chart mark to borrow one from. */
+for (const slug of BESTIARY_ONLY) {
+  await buildMask(
+    path.join(SRC, `monster-${slug}.png`),
+    path.join(bestiaryDir, `${slug}-thumb.png`),
+    MONSTER_SIZE,
   );
 }

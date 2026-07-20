@@ -11,7 +11,7 @@ import {
 } from "react";
 import { BestiaryFigure } from "./figure";
 import { LostPlate, LostPlateThumb } from "./lost-plate";
-import { bestiaryThumbUrl, type BestiaryEntry } from "./registry";
+import type { BestiaryEntry } from "./registry";
 
 /**
  * The showcase of the bestiary: one beast held up at plate size, the folio's
@@ -157,9 +157,7 @@ export function BestiaryShowcase({ entries }: { entries: BestiaryEntry[] }) {
             {item.art ? (
               <span
                 className="bestiary-thumb-ink mask-ink"
-                style={
-                  { "--ink-mask": `url('${bestiaryThumbUrl(item.slug)}')` } as CSSProperties
-                }
+                style={{ "--ink-mask": `url('${item.art.thumb}')` } as CSSProperties}
               />
             ) : (
               <LostPlateThumb fig={item.fig} />

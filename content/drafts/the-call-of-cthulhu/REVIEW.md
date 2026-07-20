@@ -142,3 +142,14 @@ Total: 68 entities.
 - edited: 12
 - junk: 3
 - review time: ~1 h (hybrid: 52 needsReview items resolved in chat with assistant recommendations, applied in bulk; 2026-07-14 09:20–10:20)
+
+## Later revisions
+
+The counters above are the M2 gate record of 2026-07-14 and stay as they were.
+Verdicts revised afterwards are listed here.
+
+- **2026-07-20 — bat-winged devils (creature): as-is → junk.** The gate had kept
+  them apart from the Black-winged Ones on the `identity` item above (no record
+  equates the two names). Revisited while drawing the bestiary: the editor
+  judged the two names one and the same being, and the atlas keeps the one the
+  cultists testified to. Draft moved to `junk/`; 6 creatures remain.

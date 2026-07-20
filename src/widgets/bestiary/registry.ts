@@ -23,6 +23,12 @@ export type BestiaryEffect = "breath" | "ink-shiver" | "gaze-tilt" | "vermilion-
 export interface BestiaryArt {
   /** Plate-size alpha mask under public/. */
   mask: string;
+  /**
+   * The same drawing at ribbon size. Beasts that also haunt the margins of
+   * the chart lend their mark to the showcase instead of carrying a second
+   * small mask of their own.
+   */
+  thumb: string;
   /** height / width of the trimmed mask (the build script prints it). */
   aspect: number;
   effects: BestiaryEffect[];
@@ -46,6 +52,7 @@ export const BESTIARY: BestiaryPlate[] = [
     epithet: "The dreamer in the sunken city",
     art: {
       mask: "/bestiary/cthulhu.webp",
+      thumb: "/maps/monsters/cthulhu.png",
       aspect: 1.008,
       effects: ["breath", "gaze-tilt", "vermilion-pulse"],
     },
@@ -56,6 +63,7 @@ export const BESTIARY: BestiaryPlate[] = [
     epithet: "Supreme elder devil of the ice",
     art: {
       mask: "/bestiary/tornasuk.webp",
+      thumb: "/maps/monsters/tornasuk.png",
       aspect: 0.924,
       effects: ["ink-shiver", "gaze-tilt"],
     },
@@ -66,26 +74,26 @@ export const BESTIARY: BestiaryPlate[] = [
     epithet: "Killers out of the haunted wood",
     art: {
       mask: "/bestiary/black-winged-ones.webp",
+      thumb: "/maps/monsters/black-winged-ones.png",
       aspect: 0.993,
       effects: ["breath", "ink-shiver", "gaze-tilt"],
+    },
+  },
+  {
+    slug: "white-polypous-thing",
+    latin: "Polypus lacustris",
+    epithet: "Nightmare itself; to see it is to die",
+    art: {
+      mask: "/bestiary/white-polypous-thing.webp",
+      thumb: "/bestiary/white-polypous-thing-thumb.png",
+      aspect: 0.953,
+      effects: ["breath", "gaze-tilt"],
     },
   },
   {
     slug: "great-old-ones",
     latin: "Prisci siderei",
     epithet: "Star-born rulers of the elder earth",
-    art: null,
-  },
-  {
-    slug: "white-polypous-thing",
-    latin: "Polypus lacustris",
-    epithet: "Nightmare itself; to see it is to die",
-    art: null,
-  },
-  {
-    slug: "bat-winged-devils",
-    latin: "Vespertilio infernalis",
-    epithet: "Worshipers out of inner earth",
     art: null,
   },
   {
@@ -104,14 +112,6 @@ export function getBestiaryPlate(slug: string): BestiaryPlate | undefined {
 /** The plate's number in the folio, as printed under every figure. */
 export function bestiaryFigure(slug: string): number {
   return BESTIARY.findIndex((entry) => entry.slug === slug) + 1;
-}
-
-/**
- * The chart mark of an engraved beast, reused as the showcase's thumbnail:
- * a 300 px mask already on the site, and the very same drawing.
- */
-export function bestiaryThumbUrl(slug: string): string {
-  return `/maps/monsters/${slug}.png`;
 }
 
 /**
