@@ -156,7 +156,13 @@ body {
   opacity: 0.5;
 }
 
-/* Location pins: a brass ring with a permanent small-caps label. */
+/*
+ * Location pins: engraved chart vignettes in the scan's own near-black ink,
+ * sitting on a cleared patch of paper — the way the scan's own ships hold a
+ * clearing in the etched ocean. Hover and selection "reprint" the mark in
+ * vermilion — the red ink of atlas corrections — instead of glowing:
+ * nothing on a printed chart glows.
+ */
 .atlas-pin-wrap {
   background: none;
   border: none;
@@ -165,65 +171,81 @@ body {
 .atlas-pin {
   position: relative;
   display: block;
-  width: 14px;
-  height: 14px;
+  width: 28px;
+  height: 28px;
+  color: #1d1608;
+  transition: color 0.15s ease;
 }
 
+/* The clearing under the mark — engraver's blank paper, not a glow. */
+.atlas-pin::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(238, 226, 197, 0.95) 0%,
+    rgba(238, 226, 197, 0.75) 48%,
+    rgba(238, 226, 197, 0) 74%
+  );
+}
+
+.atlas-pin:hover,
+.atlas-pin--active {
+  color: var(--ink-accent);
+}
+
+/* Fallback ring (picker, chart inset): the same printed treatment. */
 .atlas-pin-dot {
   position: absolute;
-  inset: 0;
+  inset: 5px;
   border-radius: 50%;
-  border: 2px solid var(--accent);
-  background: rgba(19, 16, 9, 0.55);
-  box-shadow:
-    0 0 0 1px rgba(8, 6, 2, 0.8),
-    0 0 10px rgba(195, 158, 102, 0.55);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  border: 2.5px solid currentColor;
+  transition: transform 0.15s ease;
 }
 
 .atlas-pin:hover .atlas-pin-dot,
 .atlas-pin--active .atlas-pin-dot {
-  transform: scale(1.35);
-  box-shadow:
-    0 0 0 1px rgba(8, 6, 2, 0.8),
-    0 0 16px rgba(195, 158, 102, 0.85);
+  transform: scale(1.15);
 }
 
-/* SVG chart symbols (island, waves, region) share the ring's brass glow. */
 .atlas-pin-glyph {
   position: absolute;
   inset: 0;
-  width: 14px;
-  height: 14px;
-  filter: drop-shadow(0 0 4px rgba(195, 158, 102, 0.55))
-    drop-shadow(0 1px 0 rgba(8, 6, 2, 0.8));
-  transition: transform 0.15s ease, filter 0.15s ease;
+  width: 28px;
+  height: 28px;
+  transition: transform 0.15s ease;
 }
 
 .atlas-pin:hover .atlas-pin-glyph,
 .atlas-pin--active .atlas-pin-glyph {
-  transform: scale(1.35);
-  filter: drop-shadow(0 0 7px rgba(195, 158, 102, 0.85))
-    drop-shadow(0 1px 0 rgba(8, 6, 2, 0.8));
+  transform: scale(1.15);
 }
 
 /*
  * Feature lettering on XIX-century charts is italic ink on paper — so the
  * labels are dark with a paper-colored halo, standing off the etched texture
  * the way the scan's own names do (light text was lost on the bright map).
+ * On the overview zoom the sheet holds only symbols: names fade in past
+ * .world-map--labels (set by the widget's zoom threshold) — and always on
+ * hover or selection.
  */
 .atlas-pin-label {
   position: absolute;
-  left: 20px;
+  left: 32px;
   top: 50%;
   transform: translateY(-50%);
   white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
   font-family: var(--font-old-standard), Georgia, "Times New Roman", serif;
   font-style: italic;
   font-weight: 700;
   font-size: 13px;
   letter-spacing: 0.08em;
   color: #2b1e08;
+  transition: opacity 0.25s ease, color 0.15s ease;
   text-shadow:
     -1px -1px 0 rgba(238, 226, 197, 0.9),
     1px -1px 0 rgba(238, 226, 197, 0.9),
@@ -233,8 +255,14 @@ body {
     0 0 10px rgba(238, 226, 197, 0.7);
 }
 
+.world-map--labels .atlas-pin-label {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .atlas-pin:hover .atlas-pin-label,
 .atlas-pin--active .atlas-pin-label {
+  opacity: 1;
   color: #75371a;
   text-shadow:
     -1px -1px 0 rgba(243, 233, 207, 0.95),
@@ -256,9 +284,9 @@ body {
 
 .legend-glyph {
   flex: none;
-  width: 11px;
-  height: 11px;
-  opacity: 0.75;
+  width: 17px;
+  height: 17px;
+  opacity: 0.85;
 }
 
 .legend-dash {
@@ -266,6 +294,13 @@ body {
   width: 26px;
   height: 6px;
   opacity: 0.9;
+}
+
+.legend-ship {
+  flex: none;
+  width: 25px;
+  height: 15px;
+  opacity: 0.95;
 }
 
 /*
@@ -288,7 +323,7 @@ body {
   box-shadow: inset 0 0 40px rgba(8, 6, 2, 0.55);
 }
 
-/* The tint sits on the scan layer only, so the pin keeps its brass color. */
+/* The tint sits on the scan layer only, so the pin keeps its ink color. */
 .map-inset-scan {
   position: absolute;
   inset: 0;
@@ -304,12 +339,11 @@ body {
 .route-inset-label {
   font-family: var(--font-old-standard), Georgia, "Times New Roman", serif;
   font-style: italic;
-  font-weight: 700;
-  font-size: 26px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  stroke: rgba(238, 226, 197, 0.9);
-  stroke-width: 5px;
+  font-weight: 400;
+  font-size: 23px;
+  letter-spacing: 0.06em;
+  stroke: rgba(238, 226, 197, 0.85);
+  stroke-width: 4px;
   paint-order: stroke;
 }
 
@@ -324,17 +358,20 @@ body {
   paint-order: stroke;
 }
 
+/* "You are here" on the excerpt — printed straight in vermilion. */
 .map-inset-pin {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  color: var(--ink-accent);
 }
 
 /*
- * Voyage tracks: vessel names lettered along the dashed line, the way
- * XIX-century charts mark "Track of the ...". Same ink-on-paper treatment
- * as pin labels; the rotation is inlined per label by the map widget.
+ * Voyage tracks: vessel names lettered along the dashed line the way the
+ * scan letters its own tracks ("Cook 1773", "U.S. Ship Vincennes") — small
+ * quiet italic in the chart's ink, a thin paper halo, no display styling.
+ * The rotation is inlined per label by the map widget.
  */
 .atlas-route-label-wrap {
   background: none;
@@ -350,47 +387,75 @@ body {
   cursor: pointer;
   font-family: var(--font-old-standard), Georgia, "Times New Roman", serif;
   font-style: italic;
-  font-weight: 700;
-  font-size: 11px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #2b1e08;
+  font-weight: 600;
+  font-size: 12.5px;
+  letter-spacing: 0.06em;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
   text-shadow:
-    -1px -1px 0 rgba(238, 226, 197, 0.9),
-    1px -1px 0 rgba(238, 226, 197, 0.9),
-    -1px 1px 0 rgba(238, 226, 197, 0.9),
-    1px 1px 0 rgba(238, 226, 197, 0.9),
-    0 0 5px rgba(238, 226, 197, 0.9),
-    0 0 10px rgba(238, 226, 197, 0.7);
+    -1px -1px 0 rgba(238, 226, 197, 0.85),
+    1px -1px 0 rgba(238, 226, 197, 0.85),
+    -1px 1px 0 rgba(238, 226, 197, 0.85),
+    1px 1px 0 rgba(238, 226, 197, 0.85);
 }
 
-/*
- * The ink color IS the vessel's identity (inlined per label), so hover and
- * selection underline the name instead of recoloring it.
- */
+/* Names surface with the location lettering (or when the leg is chosen). */
+.world-map--labels .atlas-route-label,
+.atlas-route-label--active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Selection re-inks name and track in vermilion (inlined), underlined. */
 .atlas-route-label:hover,
 .atlas-route-label--active {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-/* Direction arrows and dated fixes along the tracks. */
-.atlas-route-arrow-wrap,
+/*
+ * Marks of the tracks: the vessel's engraved silhouette, printed in the
+ * track's own ink (inlined by the widget) on a cleared patch of paper —
+ * the same clearing the pin vignettes hold.
+ */
+.atlas-route-ship-wrap,
 .atlas-route-date-wrap {
   background: none;
   border: none;
 }
 
-.atlas-route-arrow {
+.atlas-route-ship {
   position: absolute;
   left: 0;
   top: 0;
-  width: 11px;
-  height: 11px;
-  filter: drop-shadow(0 0 2px rgba(238, 226, 197, 0.95))
-    drop-shadow(0 0 4px rgba(238, 226, 197, 0.8));
+  display: block;
+  width: 42px;
+  height: 25px;
+  cursor: pointer;
 }
 
+.atlas-route-ship::before {
+  content: "";
+  position: absolute;
+  inset: -4px -6px;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse,
+    rgba(238, 226, 197, 0.9) 0%,
+    rgba(238, 226, 197, 0.65) 55%,
+    rgba(238, 226, 197, 0) 78%
+  );
+}
+
+.atlas-route-ship svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Logged dates beside their fixes, in the ink of their track (inlined). */
 .atlas-route-date {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -399,18 +464,27 @@ body {
   font-style: italic;
   font-size: 10.5px;
   letter-spacing: 0.06em;
-  color: #3a2c10;
+  opacity: 0;
+  transition: opacity 0.25s ease;
   text-shadow:
-    -1px -1px 0 rgba(238, 226, 197, 0.9),
-    1px -1px 0 rgba(238, 226, 197, 0.9),
-    -1px 1px 0 rgba(238, 226, 197, 0.9),
-    1px 1px 0 rgba(238, 226, 197, 0.9),
-    0 0 6px rgba(238, 226, 197, 0.85);
+    -1px -1px 0 rgba(238, 226, 197, 0.85),
+    1px -1px 0 rgba(238, 226, 197, 0.85),
+    -1px 1px 0 rgba(238, 226, 197, 0.85),
+    1px 1px 0 rgba(238, 226, 197, 0.85);
+}
+
+/* Dates surface together with the rest of the lettering. */
+.world-map--labels .atlas-route-date {
+  opacity: 1;
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .atlas-pin,
   .atlas-pin-dot,
-  .atlas-pin-glyph {
+  .atlas-pin-glyph,
+  .atlas-pin-label,
+  .atlas-route-label,
+  .atlas-route-date {
     transition: none;
   }
 }

@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { WORLD_MAP } from "./geometry";
+import { INK_ROUGH_FILTER, SHIP_GLYPHS } from "./route-glyphs";
 import {
   ROUTE_LEGS,
   ROUTE_STORY_SLUG,
   legLabelPlacement,
-  segmentDirection,
+  legShipPlacement,
+  shipFits,
 } from "./routes";
 
 /** Map dash patterns are screen px at base zoom; the inset's viewBox units
@@ -31,7 +33,9 @@ function labelFits(leg: (typeof ROUTE_LEGS)[number]): boolean {
 /**
  * The voyage on a story page: a static excerpt of the chart with the dashed
  * tracks drawn in SVG — no leaflet. The SVG viewBox is the crop window in
- * world.jpg pixels, so track points transfer to it verbatim.
+ * world.jpg pixels, so track points transfer to it verbatim. The marks
+ * speak the live chart's language: the ✕ of a fix and the vessel's
+ * silhouette, both in the track's own ink on a cleared patch of paper.
  */
 
 const PAD_X = 90;
@@ -54,6 +58,11 @@ export function RouteInset({ storySlug }: { storySlug: string }) {
           role="img"
           aria-label="Chart of the voyage: the Emma out of Auckland, the captured Alert to R'lyeh, Johansen adrift, and the Vigilant towing the derelict to Sydney"
         >
+          <defs
+            dangerouslySetInnerHTML={{
+              __html: `${INK_ROUGH_FILTER}<radialGradient id="route-inset-clearing"><stop offset="0%" stop-color="rgba(238, 226, 197, 0.92)"/><stop offset="55%" stop-color="rgba(238, 226, 197, 0.7)"/><stop offset="100%" stop-color="rgba(238, 226, 197, 0)"/></radialGradient>`,
+            }}
+          />
           <image
             href={WORLD_MAP.url}
             x="0"
@@ -65,14 +74,15 @@ export function RouteInset({ storySlug }: { storySlug: string }) {
           {ROUTE_LEGS.map((leg) => {
             const pts = leg.points.map((p) => `${p.x},${p.y}`).join(" ");
             const label = legLabelPlacement(leg);
+            const ship = legShipPlacement(leg);
             const dash = scaleDash(leg.dash);
             return (
               <g key={leg.id}>
                 <polyline
                   points={pts}
                   fill="none"
-                  stroke="rgba(238, 226, 197, 0.85)"
-                  strokeWidth="9"
+                  stroke="rgba(238, 226, 197, 0.6)"
+                  strokeWidth="11"
                   strokeDasharray={dash}
                   strokeLinecap={leg.cap}
                 />
@@ -80,37 +90,41 @@ export function RouteInset({ storySlug }: { storySlug: string }) {
                   points={pts}
                   fill="none"
                   stroke={leg.color}
-                  strokeWidth="3.5"
+                  strokeWidth="5.5"
                   strokeDasharray={dash}
                   strokeLinecap={leg.cap}
                   opacity="0.9"
                 />
-                {leg.arrowSegments.map((segment) => {
-                  const direction = segmentDirection(leg, segment);
-                  return (
-                    <path
-                      key={`arrow-${segment}`}
-                      d="M-9 -7 L11 0 L-9 7 Z"
-                      fill={leg.color}
-                      transform={`translate(${direction.at.x} ${direction.at.y}) rotate(${direction.angleDeg})`}
+                {shipFits(leg) && (
+                  <g
+                    transform={`translate(${ship.at.x} ${ship.at.y}) rotate(${ship.angleDeg}) translate(0 -28) scale(${ship.flip ? -2 : 2} 2)`}
+                    style={{ color: leg.color }}
+                  >
+                    <ellipse rx="24" ry="15" fill="url(#route-inset-clearing)" />
+                    <g
+                      transform="translate(-20 -12)"
+                      dangerouslySetInnerHTML={{
+                        __html: SHIP_GLYPHS[leg.ship],
+                      }}
                     />
-                  );
-                })}
-                {leg.dates.map((date) => (
+                  </g>
+                )}
+                {leg.fixes.map((fix) => (
                   <text
-                    key={date.label}
-                    x={date.x + date.dx * DASH_SCALE}
-                    y={date.y + date.dy * DASH_SCALE}
+                    key={fix.label}
+                    x={fix.x + fix.dx * DASH_SCALE}
+                    y={fix.y + fix.dy * DASH_SCALE}
                     textAnchor="middle"
                     className="route-inset-date"
+                    style={{ fill: leg.color }}
                   >
-                    {date.label}
+                    {fix.label}
                   </text>
                 ))}
                 {labelFits(leg) && (
                   <text
                     x={label.at.x}
-                    y={label.at.y - 12}
+                    y={label.at.y + (shipFits(leg) ? 34 : -12)}
                     transform={`rotate(${label.angleDeg} ${label.at.x} ${label.at.y})`}
                     textAnchor="middle"
                     className="route-inset-label"

@@ -31,10 +31,17 @@ import {
   type PixelPoint,
 } from "./geometry";
 import {
+  INK_ROUGH_FILTER,
+  SHIP_GLYPHS,
+  SHIP_VIEWBOX,
+} from "./route-glyphs";
+import {
   ROUTE_LEGS,
   ROUTE_STORY_SLUG,
   legLabelPlacement,
-  segmentDirection,
+  legShipPlacement,
+  shipFits,
+  type RouteFix,
   type RouteLeg,
 } from "./routes";
 
@@ -69,46 +76,82 @@ function FitZoomLimit() {
 }
 
 /**
- * Chart symbols by kind of feature: a brass ring for settlements, an island
- * peak for ruins, waves for open sea, a diamond for regions — the way old
- * charts vary their marks. Stroke colors are literal because leaflet builds
- * these outside the styled tree.
+ * Chart vignettes by kind of feature, drawn the way this scan draws its own
+ * ships and compass rose: bold black engraving sitting on a cleared patch
+ * of paper (the .atlas-pin clearing), which is what keeps a mark legible on
+ * Colton's dense etching. A steepled New England skyline for towns, a
+ * broken column for ruins, waves with a crossed fix for open sea, a
+ * mountain range for regions. Drawn in currentColor so CSS states re-ink
+ * them (engraving black at rest, vermilion when chosen), and roughened by
+ * the shared turbulence filter (route-glyphs.ts) so the vector edge sits in
+ * the etched scan instead of floating over it. The same markup feeds the
+ * legend, which is what keys the symbols to the chart.
  */
-const PIN_GLYPHS: Record<string, string> = {
-  ruin: `<svg class="atlas-pin-glyph" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 11.5 L7 2.5 L12 11.5 Z" fill="rgba(19,16,9,0.55)" stroke="#c39e66" stroke-width="2" stroke-linejoin="round"/></svg>`,
-  sea: `<svg class="atlas-pin-glyph" viewBox="0 0 14 14" aria-hidden="true"><path d="M1.5 5.5 q2.75 -3 5.5 0 t5.5 0 M1.5 9.5 q2.75 -3 5.5 0 t5.5 0" fill="none" stroke="#c39e66" stroke-width="2" stroke-linecap="round"/></svg>`,
-  region: `<svg class="atlas-pin-glyph" viewBox="0 0 14 14" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" transform="rotate(45 7 7)" fill="rgba(19,16,9,0.55)" stroke="#c39e66" stroke-width="2"/></svg>`,
+
+const VIGNETTES: Record<string, string> = {
+  city: `<g filter="url(#atlas-ink-rough)" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 24h17"/><path d="M9.2 24v-9.8L11.8 8l2.6 6.2V24"/><path d="M11.8 8V5.2"/><path d="M11.8 5.2l2.4 1-2.4 1z" fill="currentColor" stroke="none"/><path d="M14.4 18h5.9v6"/><path d="M13.9 18l2.6-2.6 3.8 2.6"/><path d="M17.1 24v-2.3" stroke-width="1.2"/></g>`,
+  ruin: `<g filter="url(#atlas-ink-rough)" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.6 24.5h14M6.8 21.7h10"/><path d="M9.3 21.7V10.2l2.1-2.6 1.7 2.2 2.4-3.4.8 4v11.3"/><path d="M12.6 12.6v9.1" stroke-width="1.2"/><ellipse cx="22" cy="22.6" rx="2.6" ry="1.7"/></g>`,
+  sea: `<g filter="url(#atlas-ink-rough)" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3.6l4 4M16 3.6l-4 4"/><path d="M3.4 15q3.5-3.8 7 0t7 0t7 0"/><path d="M6.4 20.6q3.5-3.8 7 0t7 0"/></g>`,
+  region: `<g filter="url(#atlas-ink-rough)" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3.2 22 10.6 10l4.3 6.9 3.5-5.5L24.8 22z"/><path d="M8.3 15.7l-1.9 3M10.3 17.2l-1.7 2.7M20 17l-1.5 2.8" stroke-width="1.2"/></g>`,
+  default: `<g filter="url(#atlas-ink-rough)"><circle cx="14" cy="14" r="6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="14" cy="14" r="1.5" fill="currentColor"/></g>`,
 };
 
+/* Every svg carries its own filter defs: pins are leaflet-built html strings,
+   so no single shared <defs> element is guaranteed to be mounted first. */
+function vignetteSvg(type: string): string {
+  return `<svg class="atlas-pin-glyph" viewBox="0 0 28 28" aria-hidden="true"><defs>${INK_ROUGH_FILTER}</defs>${VIGNETTES[type] ?? VIGNETTES.default}</svg>`;
+}
+
 function locationIcon(location: MapLocation, active: boolean) {
-  const glyph =
-    PIN_GLYPHS[location.type] ?? `<span class="atlas-pin-dot"></span>`;
   return divIcon({
     className: "atlas-pin-wrap",
-    html: `<span class="atlas-pin${active ? " atlas-pin--active" : ""}">${glyph}<span class="atlas-pin-label">${location.name}</span></span>`,
-    iconSize: [14, 14],
-    iconAnchor: [7, 7],
+    html: `<span class="atlas-pin${active ? " atlas-pin--active" : ""}">${vignetteSvg(location.type)}<span class="atlas-pin-label">${location.name}</span></span>`,
+    iconSize: [28, 28],
+    iconAnchor: [14, 14],
   });
 }
 
 const pickedIcon = divIcon({
   className: "atlas-pin-wrap",
   html: `<span class="atlas-pin atlas-pin--picked"><span class="atlas-pin-dot"></span></span>`,
-  iconSize: [14, 14],
-  iconAnchor: [7, 7],
+  iconSize: [28, 28],
+  iconAnchor: [14, 14],
 });
 
 /**
- * Voyage tracks: each vessel keeps its own dash pattern and ink (defined in
- * routes.ts), drawn over a slightly wider paper-colored twin with the same
- * pattern, so every dash gets the light halo that keeps chart lettering
- * legible on the etched scan. Selection thickens the line instead of
- * recoloring it — the ink IS the vessel's identity.
+ * Feature lettering is printed, but an overview sheet with every name set
+ * at once is noise: names fade in from this zoom on (hover and selection
+ * always show one). The legend keeps the full list at any zoom.
  */
+const LABEL_MIN_ZOOM = -1;
+
+function ZoomWatcher({ onZoom }: { onZoom: (zoom: number) => void }) {
+  const map = useMapEvents({
+    zoomend() {
+      onZoom(map.getZoom());
+    },
+  });
+  useEffect(() => {
+    onZoom(map.getZoom());
+  }, [map, onZoom]);
+  return null;
+}
+
+/**
+ * Voyage tracks in the manner of the scan's own expedition tracks (Cook,
+ * the Vincennes), held apart per vessel by hand-tinted inks and dash
+ * patterns (routes.ts). A paper twin under the line keeps the dashes
+ * readable on the etching. Only fixes get a lettered date, and each track
+ * carries its vessel's silhouette, bow along the course — the bow, smoke
+ * and wake are what tell the direction of travel. Selection "reprints"
+ * the whole leg in vermilion — the same accent the pins use.
+ */
+const TRACK_ACCENT = "#75371a";
+
 function routeHalo(leg: RouteLeg) {
   return {
-    color: "rgba(238, 226, 197, 0.85)",
-    weight: 5,
+    color: "rgba(238, 226, 197, 0.75)",
+    weight: 6.2,
     dashArray: leg.dash,
     lineCap: leg.cap,
     interactive: false,
@@ -117,42 +160,64 @@ function routeHalo(leg: RouteLeg) {
 
 function routeInk(leg: RouteLeg, active: boolean) {
   return {
-    color: leg.color,
-    weight: active ? 3.4 : 2,
-    opacity: active ? 1 : 0.9,
+    color: active ? TRACK_ACCENT : leg.color,
+    weight: active ? 3.9 : 3,
+    opacity: active ? 1 : 0.95,
     dashArray: leg.dash,
     lineCap: leg.cap,
     bubblingMouseEvents: false,
   } as const;
 }
 
-/** Direction arrow at a segment midpoint — points where the vessel sailed. */
-function routeArrowIcon(leg: RouteLeg, angleDeg: number) {
+/**
+ * The vessel's silhouette sailing just above its track, bow along the
+ * course — lifted clear of the line the way the scan floats its own ships
+ * beside the expedition tracks.
+ */
+function routeShipIcon(leg: RouteLeg, active: boolean) {
+  const placement = legShipPlacement(leg);
+  const flip = placement.flip ? " scaleX(-1)" : "";
   return divIcon({
-    className: "atlas-route-arrow-wrap",
-    html: `<svg class="atlas-route-arrow" viewBox="0 0 10 10" style="transform:translate(-50%,-50%) rotate(${angleDeg}deg)" aria-hidden="true"><path d="M1 1 L9.5 5 L1 9 Z" fill="${leg.color}"/></svg>`,
+    className: "atlas-route-ship-wrap",
+    html: `<span class="atlas-route-ship" style="color:${active ? TRACK_ACCENT : leg.color};transform:translate(-50%,-50%) rotate(${placement.angleDeg}deg) translateY(-14px)${flip}"><svg viewBox="${SHIP_VIEWBOX}" aria-hidden="true"><defs>${INK_ROUGH_FILTER}</defs>${SHIP_GLYPHS[leg.ship]}</svg></span>`,
     iconSize: [0, 0],
     iconAnchor: [0, 0],
   });
 }
 
-/** A dated position beside the track — "Mch. 22", the way charts log fixes. */
-function routeDateIcon(date: { label: string; dx: number; dy: number }) {
+/** A logged date beside its fix — "Mch. 22", in the ink of its track. */
+function routeDateIcon(fix: RouteFix, leg: RouteLeg, active: boolean) {
   return divIcon({
     className: "atlas-route-date-wrap",
-    html: `<span class="atlas-route-date" style="left:${date.dx}px;top:${date.dy}px">${date.label}</span>`,
+    html: `<span class="atlas-route-date" style="color:${active ? TRACK_ACCENT : leg.color};left:${fix.dx}px;top:${fix.dy}px">${fix.label}</span>`,
     iconSize: [0, 0],
     iconAnchor: [0, 0],
   });
 }
 
 function routeLabelIcon(leg: RouteLeg, angleDeg: number, active: boolean) {
+  /* The silhouette floats above the line, so its name letters below it;
+     a leg without a silhouette keeps the name above the bare line. */
+  const lift = shipFits(leg) ? 13 : -10;
   return divIcon({
     className: "atlas-route-label-wrap",
-    html: `<span class="atlas-route-label${active ? " atlas-route-label--active" : ""}" style="color:${leg.color};transform:translate(-50%,-50%) rotate(${angleDeg}deg) translateY(-11px)">${leg.vessel}</span>`,
+    html: `<span class="atlas-route-label${active ? " atlas-route-label--active" : ""}" style="color:${active ? TRACK_ACCENT : leg.color};transform:translate(-50%,-50%) rotate(${angleDeg}deg) translateY(${lift}px)">${leg.vessel}</span>`,
     iconSize: [0, 0],
     iconAnchor: [0, 0],
   });
+}
+
+/** The vessel's silhouette as it sails the chart, keying the legend row. */
+function LegendShip({ leg }: { leg: RouteLeg }) {
+  return (
+    <svg
+      className="legend-ship"
+      viewBox={SHIP_VIEWBOX}
+      aria-hidden
+      style={{ color: leg.color }}
+      dangerouslySetInnerHTML={{ __html: SHIP_GLYPHS[leg.ship] }}
+    />
+  );
 }
 
 /** The vessel's line style as a legend swatch. */
@@ -173,67 +238,18 @@ function LegendDash({ leg }: { leg: RouteLeg }) {
   );
 }
 
-/** The chart symbol of a location type, in ink — the legend's key column. */
+/** The same vignette as on the chart, in ink — the legend's key column. */
 function LegendGlyph({ type }: { type: string }) {
-  const props = {
-    className: "legend-glyph",
-    viewBox: "0 0 14 14",
-    "aria-hidden": true,
-  } as const;
-  switch (type) {
-    case "ruin":
-      return (
-        <svg {...props}>
-          <path
-            d="M2 11.5 L7 2.5 L12 11.5 Z"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinejoin="round"
-          />
-        </svg>
-      );
-    case "sea":
-      return (
-        <svg {...props}>
-          <path
-            d="M1.5 5.5 q2.75 -3 5.5 0 t5.5 0 M1.5 9.5 q2.75 -3 5.5 0 t5.5 0"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-          />
-        </svg>
-      );
-    case "region":
-      return (
-        <svg {...props}>
-          <rect
-            x="3.5"
-            y="3.5"
-            width="7"
-            height="7"
-            transform="rotate(45 7 7)"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.8"
-          />
-        </svg>
-      );
-    default:
-      return (
-        <svg {...props}>
-          <circle
-            cx="7"
-            cy="7"
-            r="4.5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.8"
-          />
-        </svg>
-      );
-  }
+  return (
+    <svg
+      className="legend-glyph"
+      viewBox="0 0 28 28"
+      aria-hidden
+      dangerouslySetInnerHTML={{
+        __html: VIGNETTES[type] ?? VIGNETTES.default,
+      }}
+    />
+  );
 }
 
 /**
@@ -296,6 +312,7 @@ export default function WorldMapClient({
   const mapRef = useRef<LeafletMap | null>(null);
   const [selected, setSelected] = useState<MapLocation | null>(null);
   const [selectedLeg, setSelectedLeg] = useState<RouteLeg | null>(null);
+  const [labelsShown, setLabelsShown] = useState(false);
   const [picked, setPicked] = useState<PixelPoint | null>(null);
   const [copied, setCopied] = useState(false);
   // This component only renders client-side (ssr: false), so the viewport
@@ -378,7 +395,9 @@ export default function WorldMapClient({
   };
 
   return (
-    <div className="world-map absolute inset-0">
+    <div
+      className={`world-map absolute inset-0${labelsShown ? " world-map--labels" : ""}`}
+    >
       <MapContainer
         ref={mapRef}
         crs={CRS.Simple}
@@ -396,6 +415,9 @@ export default function WorldMapClient({
         <ImageOverlay url={WORLD_MAP.url} bounds={IMAGE_BOUNDS} />
         <ZoomControl position="topright" />
         <FitZoomLimit />
+        <ZoomWatcher
+          onZoom={(zoom) => setLabelsShown(zoom >= LABEL_MIN_ZOOM)}
+        />
         <MapClicks onClick={handleMapClick} />
         {!picker && (
           <DeepLinkFocus
@@ -435,27 +457,23 @@ export default function WorldMapClient({
                   pathOptions={routeInk(leg, active)}
                   eventHandlers={{ click: () => selectLeg(leg) }}
                 />
-                {leg.arrowSegments.map((segment) => {
-                  const direction = segmentDirection(leg, segment);
-                  return (
-                    <Marker
-                      key={`arrow-${segment}`}
-                      position={pixelToLatLng(direction.at)}
-                      icon={routeArrowIcon(leg, direction.angleDeg)}
-                      interactive={false}
-                      keyboard={false}
-                    />
-                  );
-                })}
-                {leg.dates.map((date) => (
+                {leg.fixes.map((fix) => (
                   <Marker
-                    key={date.label}
-                    position={pixelToLatLng(date)}
-                    icon={routeDateIcon(date)}
+                    key={fix.label}
+                    position={pixelToLatLng(fix)}
+                    icon={routeDateIcon(fix, leg, active)}
                     interactive={false}
                     keyboard={false}
                   />
                 ))}
+                {shipFits(leg) && (
+                  <Marker
+                    position={pixelToLatLng(legShipPlacement(leg).at)}
+                    icon={routeShipIcon(leg, active)}
+                    alt={`The ${leg.vessel}`}
+                    eventHandlers={{ click: () => selectLeg(leg) }}
+                  />
+                )}
                 <Marker
                   position={pixelToLatLng(label.at)}
                   icon={routeLabelIcon(leg, label.angleDeg, active)}
@@ -545,6 +563,7 @@ export default function WorldMapClient({
                               selectedLeg?.id === leg.id ? "text-accent" : ""
                             }`}
                           >
+                            <LegendShip leg={leg} />
                             <LegendDash leg={leg} />
                             <span>{leg.vessel}</span>
                           </button>
