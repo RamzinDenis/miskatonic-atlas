@@ -43,18 +43,18 @@ export const MONSTERS: MapMonster[] = [
     slug: "tornasuk",
     name: "tornasuk",
     at: { x: 2520, y: 640 },
-    art: { w: 72, h: 66 },
+    art: { w: 58, h: 53 },
   },
   {
     slug: "black-winged-ones",
     name: "Black-winged Ones",
     at: { x: 2245, y: 1505 },
-    art: { w: 80, h: 79 },
+    art: { w: 64, h: 63 },
   },
   {
     slug: "cthulhu",
     name: "Cthulhu",
     at: { x: 2140, y: 2400 },
-    art: { w: 108, h: 109 },
+    art: { w: 74, h: 75 },
   },
 ];
