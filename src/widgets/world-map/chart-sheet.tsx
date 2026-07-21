@@ -35,6 +35,29 @@ function pickSheet(zoom: number, ceiling = Infinity): ChartSheetSource {
 }
 
 /**
+ * Copies the browser has already pulled in this session. Leaving the chart
+ * for a location page tears the whole widget down, and coming back builds
+ * it from nothing — without this the reader watches the ladder replay from
+ * the thumb up over a copy that is already in the cache.
+ */
+const fetched = new Set<string>();
+
+/** The best copy already in hand for an overview, if there is one. */
+function warmSheet(): ChartSheetSource | undefined {
+  return SHEETS.filter(
+    (sheet) => sheet.width <= OVERVIEW_CEILING && fetched.has(sheet.url),
+  ).pop();
+}
+
+/**
+ * Whether the chart can be printed whole on the first frame — read by the
+ * widget so a return visit skips the fade the first visit needs.
+ */
+export function chartIsWarm(): boolean {
+  return warmSheet() !== undefined;
+}
+
+/**
  * The chart itself: one bitmap, swapped for a larger copy when a close-up
  * outgrows it. The swap waits on the browser having the new copy decoded,
  * so the sheet is replaced in a single frame rather than blanking; and it
@@ -49,9 +72,13 @@ export function ChartSheet({
   onReady: () => void;
 }) {
   const map = useMap();
-  const [sheet, setSheet] = useState(() =>
-    pickSheet(map.getZoom(), OVERVIEW_CEILING),
-  );
+  const [sheet, setSheet] = useState(() => {
+    const wanted = pickSheet(map.getZoom(), OVERVIEW_CEILING);
+    const warm = warmSheet();
+    // A copy already fetched costs nothing to show and is never coarser
+    // than the rung this view asks for.
+    return warm && warm.width > wanted.width ? warm : wanted;
+  });
   const shown = useRef(sheet);
   const fetching = useRef<string | null>(null);
 
@@ -62,11 +89,17 @@ export function ChartSheet({
     fetching.current = wanted.url;
     const copy = new Image();
     copy.onload = () => {
+      fetched.add(wanted.url);
       shown.current = wanted;
       setSheet(wanted);
     };
     copy.src = wanted.url;
   }, []);
+
+  const handleLoad = useCallback(() => {
+    fetched.add(shown.current.url);
+    onReady();
+  }, [onReady]);
 
   useMapEvents({
     zoomend() {
@@ -89,7 +122,7 @@ export function ChartSheet({
         bounds={bounds}
         className="atlas-scan"
         zIndex={1}
-        eventHandlers={{ load: onReady }}
+        eventHandlers={{ load: handleLoad }}
       />
     </>
   );

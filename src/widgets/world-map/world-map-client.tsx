@@ -29,7 +29,7 @@ import {
   useMapEvents,
 } from "react-leaflet";
 import { getPlateThumb } from "@/widgets/plates";
-import { ChartSheet } from "./chart-sheet";
+import { ChartSheet, chartIsWarm } from "./chart-sheet";
 import {
   WORLD_MAP,
   formatDegrees,
@@ -365,8 +365,10 @@ export default function WorldMapClient({
   const [labelsShown, setLabelsShown] = useState(false);
   /* Nothing is marked on a sheet that isn't there yet: the pins, tracks and
      beasts stay unprinted until the chart's first tiles are down, or the
-     small marks arrive first and hover for a moment over the dark binding. */
-  const [paperReady, setPaperReady] = useState(false);
+     small marks arrive first and hover for a moment over the dark binding.
+     A chart already in the cache starts printed, so a reader coming back
+     from a location page doesn't sit through the marks fading up again. */
+  const [paperReady, setPaperReady] = useState(chartIsWarm);
   /* Stable: ChartTiles holds a leaflet layer, and a new identity here would
      tear the chart down and rebuild it on every selection and every zoom. */
   const handlePaperReady = useCallback(() => setPaperReady(true), []);
