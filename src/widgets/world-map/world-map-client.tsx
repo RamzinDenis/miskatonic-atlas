@@ -13,6 +13,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
   Fragment,
+  useCallback,
   useEffect,
   useRef,
   useState,
@@ -28,6 +29,7 @@ import {
   useMapEvents,
 } from "react-leaflet";
 import { getPlateThumb } from "@/widgets/plates";
+import { ChartSheet } from "./chart-sheet";
 import {
   WORLD_MAP,
   formatDegrees,
@@ -361,6 +363,13 @@ export default function WorldMapClient({
   const [selected, setSelected] = useState<MapLocation | null>(null);
   const [selectedLeg, setSelectedLeg] = useState<RouteLeg | null>(null);
   const [labelsShown, setLabelsShown] = useState(false);
+  /* Nothing is marked on a sheet that isn't there yet: the pins, tracks and
+     beasts stay unprinted until the chart's first tiles are down, or the
+     small marks arrive first and hover for a moment over the dark binding. */
+  const [paperReady, setPaperReady] = useState(false);
+  /* Stable: ChartTiles holds a leaflet layer, and a new identity here would
+     tear the chart down and rebuild it on every selection and every zoom. */
+  const handlePaperReady = useCallback(() => setPaperReady(true), []);
   const [picked, setPicked] = useState<PixelPoint | null>(null);
   const [copied, setCopied] = useState(false);
   // This component only renders client-side (ssr: false), so the viewport
@@ -458,7 +467,7 @@ export default function WorldMapClient({
 
   return (
     <div
-      className={`world-map absolute inset-0${labelsShown ? " world-map--labels" : ""}`}
+      className={`world-map absolute inset-0${labelsShown ? " world-map--labels" : ""}${paperReady ? " world-map--printed" : ""}`}
     >
       <MapContainer
         ref={mapRef}
@@ -474,17 +483,18 @@ export default function WorldMapClient({
         attributionControl={false}
         className="h-full w-full"
       >
-        <ImageOverlay
-          url={WORLD_MAP.url}
-          bounds={IMAGE_BOUNDS}
-          className="atlas-scan"
-        />
+        <ChartSheet bounds={IMAGE_BOUNDS} onReady={handlePaperReady} />
         {/* The copy's biography — scorch, creases, stains — multiplied over
-            the pristine scan so it pans and zooms as part of the paper. */}
+            the pristine scan so it pans and zooms as part of the paper. It
+            has to share the chart's pane: multiply blends only within a
+            stacking context, and every leaflet pane is one of its own, so
+            from a pane above there would be nothing to darken and the sheet
+            would turn into an opaque lid over the whole chart. */}
         <ImageOverlay
           url={WORLD_MAP.wearUrl}
           bounds={IMAGE_BOUNDS}
           className="atlas-wear"
+          zIndex={2}
         />
         <ZoomControl position="topright" />
         <FitZoomLimit />
@@ -517,7 +527,11 @@ export default function WorldMapClient({
             }}
           />
         ))}
+        {/* Mounted with the paper, not faded in with it: the tracks are svg,
+            and leaflet needs sole ownership of that element's transitions
+            (see globals.css) — so they wait by not existing yet. */}
         {!picker &&
+          paperReady &&
           ROUTE_LEGS.map((leg) => {
             const positions = leg.points.map(pixelToLatLng);
             const label = legLabelPlacement(leg);

@@ -163,6 +163,24 @@ body {
   pointer-events: none;
 }
 
+/*
+ * Nothing is marked on a sheet that isn't there: pins and beasts wait for
+ * the chart itself, or they arrive long before it and hover for a moment
+ * over the dark binding. The tracks wait too, but by not being mounted at
+ * all (see the widget) — leaflet drives its own svg by transitioning
+ * `transform` during a zoom, and any `transition` declared here outranks
+ * that rule and silently kills it, which sends the tracks jumping ahead of
+ * the chart on every zoom.
+ */
+.world-map .leaflet-marker-pane {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.world-map--printed .leaflet-marker-pane {
+  opacity: 1;
+}
+
 .world-map-vignette {
   position: absolute;
   inset: 0;
@@ -911,6 +929,7 @@ body {
   .atlas-pin-label,
   .atlas-route-label,
   .atlas-route-date,
+  .world-map .leaflet-marker-pane,
   .atlas-monster,
   .atlas-monster-label,
   .bestiary-plate,

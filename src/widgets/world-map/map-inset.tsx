@@ -8,7 +8,13 @@ import { WORLD_MAP, formatDegrees } from "./geometry";
  * indexes; the deep link to the chart is therefore majors-only.
  */
 
-/** world.jpg pixels per inset pixel — a regional view around the pin. */
+/**
+ * Scan pixels per inset pixel — a regional view around the pin. The source
+ * is the quarter-size world-inset.webp (190 KB against the scan's 3.6 MB,
+ * which every location page would otherwise pull for a 176px strip), so the
+ * backdrop is drawn at twice its own size: softer, but it sits under sepia
+ * and a wear sheet at strip height, where the hairlines were never legible.
+ */
 const INSET_SCALE = 0.5;
 
 export function MapInset({
@@ -39,7 +45,7 @@ export function MapInset({
         <div
           className="map-inset-scan"
           style={{
-            backgroundImage: `url(${WORLD_MAP.url})`,
+            backgroundImage: `url(${WORLD_MAP.insetUrl})`,
             backgroundSize: `${WORLD_MAP.width * INSET_SCALE}px ${WORLD_MAP.height * INSET_SCALE}px`,
             backgroundPosition: `calc(50% + ${offsetX}px) calc(50% + ${offsetY}px)`,
           }}

@@ -68,8 +68,11 @@ export function RouteInset({ storySlug }: { storySlug: string }) {
               ).join("")}`,
             }}
           />
+          {/* The quarter-size scan, drawn at the scan's own dimensions: the
+              svg scales it back up, and the story page is spared the 3.6 MB
+              original for a figure this size. */}
           <image
-            href={WORLD_MAP.url}
+            href={WORLD_MAP.insetUrl}
             x="0"
             y="0"
             width={WORLD_MAP.width}

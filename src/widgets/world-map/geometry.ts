@@ -16,12 +16,37 @@
  */
 export const WORLD_MAP = {
   id: "world",
+  /** The scan itself — the source everything below is cut from, never served. */
   url: "/maps/world.jpg",
   /** Ageing sheet (scripts/generate-wear.mjs), multiplied over the scan. */
   wearUrl: "/maps/world-wear.webp",
+  /** A 128px thumb of the sheet, under it until a real copy arrives. */
+  lqipUrl: "/maps/world-lqip.webp",
+  /** Quarter-size scan for the static insets on content pages. */
+  insetUrl: "/maps/world-1024.webp",
   width: 4096,
   height: 2950,
 } as const;
+
+/**
+ * The chart at three sizes (scripts/build-map-images.mjs), smallest first.
+ * Nothing needs the full scan to look at the whole world: at an overview
+ * the sheet is squeezed into a viewport, and four fifths of the pixels are
+ * thrown away in the resampling. The widget picks the rung the screen can
+ * actually show and climbs it when a close-up asks for more.
+ *
+ * A ladder rather than a tile pyramid on purpose: tiles are for maps too
+ * large to hold whole, and pay for it with a coarse level visibly swapped
+ * for a fine one and a grid rebuilt on every frame of a zoom. This sheet is
+ * one bitmap at any moment, resampled by the GPU and nothing else.
+ */
+export const SHEETS = [
+  { width: 1024, url: "/maps/world-1024.webp" },
+  { width: 2048, url: "/maps/world-2048.webp" },
+  { width: WORLD_MAP.width, url: WORLD_MAP.url },
+] as const;
+
+export type ChartSheetSource = (typeof SHEETS)[number];
 
 export interface PixelPoint {
   x: number;
