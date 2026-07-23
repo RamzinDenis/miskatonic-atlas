@@ -113,6 +113,18 @@ const VIGNETTES: Record<string, string> = {
   default: `<g filter="url(#atlas-ink-rough)"><circle cx="14" cy="14" r="6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="14" cy="14" r="1.5" fill="currentColor"/></g>`,
 };
 
+/* Display order of the legend's key, matching the schema's type enum;
+   types without a vignette of their own share the default sign. */
+const LOCATION_TYPE_ORDER = [
+  "city",
+  "town",
+  "building",
+  "region",
+  "ruin",
+  "sea",
+  "other",
+];
+
 /* Every svg carries its own filter defs: pins are leaflet-built html strings,
    so no single shared <defs> element is guaranteed to be mounted first. */
 function vignetteSvg(type: string): string {
@@ -478,21 +490,13 @@ export default function WorldMapClient({
     }
   };
 
-  const focusLocation = (location: MapLocation) => {
-    setSelectedLeg(null);
-    setSelected(location);
-    const map = mapRef.current;
-    if (!map) return;
-    map.flyTo(
-      pixelToLatLng(location),
-      Math.max(map.getZoom(), FOCUS_ZOOM),
-      { duration: 1.1 },
-    );
-    // On a phone the open legend covers the pin the user just chose.
-    if (!window.matchMedia("(min-width: 640px)").matches) {
-      setLegendOpen(false);
-    }
-  };
+  /* The signs actually printed on this sheet, in the schema's order — the
+     key row for a type only appears once a charted place wears it. */
+  const legendTypes = legend
+    ? LOCATION_TYPE_ORDER.filter((type) =>
+        legend.some((story) => story.locations.some((l) => l.type === type)),
+      )
+    : [];
 
   return (
     <div
@@ -661,27 +665,28 @@ export default function WorldMapClient({
                     <p className="text-center text-xs tracking-widest text-muted">
                       {story.year}
                     </p>
-                    <div className="parchment-rule mt-2" />
-                    <ul className="mt-3 space-y-1.5">
-                      {story.locations.map((location) => (
-                        <li key={location.slug}>
-                          <button
-                            type="button"
-                            onClick={() => focusLocation(location)}
-                            className={`flex w-full items-center gap-2.5 text-left text-sm transition-colors hover:text-accent ${
-                              selected?.slug === location.slug
-                                ? "text-accent"
-                                : ""
-                            }`}
-                          >
-                            <LegendGlyph type={location.type} />
-                            <span>{location.name}</span>
-                          </button>
-                        </li>
-                      ))}
-                    </ul>
                   </section>
                 ))}
+
+                {/* Each sign is explained once, as a chart's key would —
+                    the pins themselves carry the place names. */}
+                <section className="mt-6">
+                  <h2 className="text-center text-xs uppercase tracking-widest text-muted">
+                    Explanation
+                  </h2>
+                  <div className="parchment-rule mt-2" />
+                  <ul className="mt-3 space-y-1.5">
+                    {legendTypes.map((type) => (
+                      <li
+                        key={type}
+                        className="flex items-center gap-2.5 text-sm capitalize"
+                      >
+                        <LegendGlyph type={type} />
+                        <span>{type}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
 
                 {legend.some((story) => story.slug === ROUTE_STORY_SLUG) && (
                   <section className="mt-6">
@@ -724,7 +729,7 @@ export default function WorldMapClient({
                             className="flex w-full items-center gap-2.5 text-left text-sm italic transition-colors hover:text-accent"
                           >
                             <LegendMonster slug={monster.slug} />
-                            <span>{monster.name}</span>
+                            <span className="cap-first">{monster.name}</span>
                           </button>
                         </li>
                       ))}
@@ -759,7 +764,7 @@ export default function WorldMapClient({
               ✕
             </button>
           </div>
-          <h2 className="mt-1 font-display text-2xl">{selected.name}</h2>
+          <h2 className="cap-first mt-1 font-display text-2xl">{selected.name}</h2>
           <p className="mt-0.5 text-xs tracking-widest text-muted">
             {formatDegrees(selected)}
           </p>

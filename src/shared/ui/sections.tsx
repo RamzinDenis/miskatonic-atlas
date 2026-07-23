@@ -17,7 +17,7 @@ export function ChipSection({ title, items }: { title: string; items: ChipItem[]
           <li key={item.href}>
             <Link
               href={item.href}
-              className="inline-block rounded-md border border-line bg-surface px-4 py-2 text-sm transition-colors hover:border-accent"
+              className="cap-first inline-block rounded-md border border-line bg-surface px-4 py-2 text-sm transition-colors hover:border-accent"
             >
               {item.label}
             </Link>

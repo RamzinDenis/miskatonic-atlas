@@ -60,13 +60,17 @@ export default async function StoryPage({ params }: PageProps<"/stories/[slug]">
                   href={plate.href}
                   className="block border border-line bg-surface p-2 transition-colors hover:border-accent"
                 >
-                  <Image
-                    src={plate.image}
-                    alt={plate.alt}
-                    placeholder="blur"
-                    sizes="(max-width: 640px) 50vw, 224px"
-                    className="block h-auto w-full"
-                  />
+                  {/* A fixed mat keeps the gallery row level: plates of any
+                      orientation hang at one height, letterboxed on paper. */}
+                  <span className="flex h-40 items-center justify-center sm:h-48">
+                    <Image
+                      src={plate.image}
+                      alt={plate.alt}
+                      placeholder="blur"
+                      sizes="(max-width: 640px) 50vw, 224px"
+                      className="block max-h-full w-auto max-w-full"
+                    />
+                  </span>
                   <span className="mt-2 block text-center text-xs uppercase tracking-widest text-muted">
                     Plate {plate.numeral}
                   </span>

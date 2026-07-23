@@ -57,7 +57,7 @@ export default async function CreaturePage({ params }: PageProps<"/creatures/[sl
       <article className="parchment mt-4 px-6 py-10 sm:px-12 sm:py-12">
         <header>
           <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-            <h1 className="font-display text-4xl">{creature.name}</h1>
+            <h1 className="cap-first font-display text-4xl">{creature.name}</h1>
             <span className="text-xs uppercase tracking-widest text-muted">
               {creature.classification.replace(/-/g, " ")}
             </span>

@@ -120,6 +120,16 @@ body {
   color: var(--accent);
 }
 
+/*
+ * Entity names print "as written in the text", lowercase ones included
+ * (tornasuk, grassy island). Where a name opens a line of its own — chips,
+ * index entries, titles — the sheet raises its first letter; the content
+ * itself stays untouched. Needs a block-ish box to take effect.
+ */
+.cap-first::first-letter {
+  text-transform: uppercase;
+}
+
 /* The printer's flower closing a chapter. */
 .fleuron {
   margin-top: 2.75rem;

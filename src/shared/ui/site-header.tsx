@@ -14,17 +14,17 @@ export function SiteHeader({ floating = false }: { floating?: boolean }) {
       }
     >
       <div
-        className={`flex w-full items-baseline justify-between px-6 ${
+        className={`flex w-full items-baseline justify-between gap-4 px-4 sm:px-6 ${
           floating ? "py-3" : "py-4"
         }`}
       >
         <Link
           href="/"
-          className="font-display text-lg tracking-wide text-accent"
+          className="whitespace-nowrap font-display text-base tracking-wide text-accent sm:text-lg"
         >
           Miskatonic Atlas
         </Link>
-        <nav className="flex gap-6 text-xs uppercase tracking-widest">
+        <nav className="flex gap-4 text-xs uppercase tracking-widest sm:gap-6">
           <Link href="/" className="text-muted transition-colors hover:text-accent">
             Map
           </Link>

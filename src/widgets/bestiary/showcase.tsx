@@ -115,7 +115,7 @@ export function BestiaryShowcase({ entries }: { entries: BestiaryEntry[] }) {
 
         <div className="bestiary-caption">
           <p className="bestiary-fig-no">Fig. {entry.fig} — Bestiarium</p>
-          <h2 className="mt-2 font-display text-3xl">{entry.name}</h2>
+          <h2 className="cap-first mt-2 font-display text-3xl">{entry.name}</h2>
           <p className="mt-1 font-serif italic text-muted">
             {entry.latin}
             <span className="ml-3 text-xs uppercase not-italic tracking-widest">

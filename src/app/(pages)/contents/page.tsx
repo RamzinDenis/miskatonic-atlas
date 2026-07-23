@@ -34,7 +34,7 @@ function IndexSection({ title, entries }: { title: string; entries: IndexEntry[]
           <li key={entry.href} className="break-inside-avoid">
             <Link
               href={entry.href}
-              className="transition-colors hover:text-accent"
+              className="cap-first inline-block transition-colors hover:text-accent"
             >
               {entry.name}
             </Link>
