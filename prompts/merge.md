@@ -18,6 +18,30 @@ Occurrences whose names match an **existing** `content/` entity's name or slug
 enrich that entity: the merged draft starts from the existing JSON and adds new
 facts and sources (this is how the M0 hand-made locations get enriched).
 
+## Parts & allusions — when a location folds into its parent
+
+Identity is not the only gate: a referent that IS its own place may still not
+deserve its own article. A location stays a **separate entity** only if at
+least one holds:
+
+- it matches an existing `content/` entity (enrichment case above);
+- the records place it in more than one story of the corpus;
+- it is a destination in its own right — a set-piece that could carry a map
+  pin or an engraving (the Cyclopean Monolith, not the valley around it).
+
+Everything else **folds into its nearest parent** — the location that contains
+it (a temple inside a city) or, for passing allusions, the place the text
+anchors them to (a city inside a named land). Folding means:
+
+- the part's facts join the parent's `_draft.facts`; its strongest 1–2 quotes
+  join the parent's `sources`;
+- if the part has enough substance (2+ facts of its own), it becomes a titled
+  section inside the parent's `description`: a paragraph `## <Part name>`
+  followed by its synthesized prose (the site renders `## ` as a subheading);
+  thinner allusions are woven into the parent's prose without a heading;
+- the part gets no file of its own and no slug — links in `connectedTo` /
+  `locations` point to the parent.
+
 ## Output
 
 One file per entity:
@@ -55,7 +79,8 @@ unknown keys at read time).
 - **type / role / classification** — majority of non-null `typeGuess`es; any
   disagreement or all-null → best guess + `needsReview` entry.
 - **summary** (1–2 sentences) and **description** (2–3 paragraphs, `\n\n`
-  separated) — synthesized **only from the merged facts**, every claim
+  separated; a parent that absorbed parts may run longer, one `## ` section
+  per absorbed part) — synthesized **only from the merged facts**, every claim
   traceable to a source quote. Match the register of the existing M0 files in
   `content/locations/` — encyclopedic, in-world, no editorializing.
 - **sources** — the 2–3 strongest quotes covering the main claims, keep
