@@ -1,15 +1,19 @@
 import fs from "node:fs";
 import path from "node:path";
+import {
+  buildSearchable,
+  findQuote,
+  type NormalizedStory,
+  type SearchableStory,
+} from "../src/shared/lib/quote-search.ts";
 
 /**
  * Every quote in content/ and content/drafts/ must be an exact substring of
  * the normalized story text (corpus/normalized/<storySlug>.json). Deterministic
  * pipeline step (ADR-0001): catches LLM-invented or paraphrased quotes.
  *
- * Comparison folds punctuation variants that normalize.ts and hand-typed
- * quotes may legitimately disagree on (apostrophes, dashes, ellipses,
- * whitespace). Any change to transforms in scripts/normalize.mts must be
- * mirrored here.
+ * The comparison itself lives in src/shared/lib/quote-search.ts, shared with
+ * the /admin/review UI.
  *
  * Exit code 1 if any quote is not found. A quote found in a different
  * paragraph than the draft claims is reported but not fatal — merge/review
@@ -20,59 +24,11 @@ const ROOT = process.cwd();
 const NORMALIZED_DIR = path.join(ROOT, "corpus", "normalized");
 const CONTENT_DIR = path.join(ROOT, "content");
 
-interface Paragraph {
-  n: number;
-  chapter: number | null;
-  text: string;
-}
-
-interface NormalizedStory {
-  slug: string;
-  title: string;
-  paragraphs: Paragraph[];
-}
-
 interface SourceLike {
   storySlug?: string;
   quote?: string;
   /** Draft-only: paragraph number claimed by extraction. */
   paragraph?: number;
-}
-
-function fold(s: string): string {
-  return s
-    .replace(/[‘’´`]/g, "'")
-    .replace(/[“”]/g, '"')
-    .replace(/--|–/g, "—")
-    .replace(/…/g, "...")
-    .replace(/_/g, "")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-interface SearchableStory {
-  title: string;
-  full: string;
-  /** Start offset of each paragraph inside `full`, parallel to paragraphs. */
-  offsets: number[];
-  paragraphs: Paragraph[];
-}
-
-function buildSearchable(story: NormalizedStory): SearchableStory {
-  const folded = story.paragraphs.map((p) => fold(p.text));
-  const offsets: number[] = [];
-  let full = "";
-  for (const text of folded) {
-    offsets.push(full.length);
-    full += text + " ";
-  }
-  return { title: story.title, full, offsets, paragraphs: story.paragraphs };
-}
-
-function paragraphAt(story: SearchableStory, offset: number): Paragraph {
-  let i = story.offsets.findLastIndex((o) => o <= offset);
-  if (i === -1) i = 0;
-  return story.paragraphs[i];
 }
 
 function* contentFiles(): Generator<string> {
@@ -132,11 +88,7 @@ function main() {
         return;
       }
 
-      const needle = fold(source.quote);
-      const matchedParagraphs: number[] = [];
-      for (let o = story.full.indexOf(needle); o !== -1; o = story.full.indexOf(needle, o + 1)) {
-        matchedParagraphs.push(paragraphAt(story, o).n);
-      }
+      const matchedParagraphs = findQuote(story, source.quote);
       if (matchedParagraphs.length === 0) {
         notFound++;
         console.log(`FAIL  ${where}: quote not found in "${story.title}"`);
