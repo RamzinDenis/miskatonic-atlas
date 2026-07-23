@@ -18,7 +18,10 @@ export type MonsterKind = "tornasuk" | "black-winged-ones" | "cthulhu";
  *
  * Points are pixels of world.jpg:
  *   tornasuk         — Baffin Bay, off the Greenland cult's coast
- *   Black-winged Ones — over the Gulf of Mexico, off the swamp country
+ *   Black-winged Ones — open Pacific off Tehuantepec: the Gulf of Mexico
+ *                       itself is too small on this sheet to hold the beast
+ *                       clear of the swamp-country pins and the printed
+ *                       lettering, so it haunts the nearest empty water
  *   Cthulhu          — the empty South Pacific south-east of R'lyeh
  */
 export interface MapMonster {
@@ -48,7 +51,7 @@ export const MONSTERS: MapMonster[] = [
   {
     slug: "black-winged-ones",
     name: "Black-winged Ones",
-    at: { x: 2245, y: 1505 },
+    at: { x: 2255, y: 1622 },
     art: { w: 64, h: 63 },
   },
   {

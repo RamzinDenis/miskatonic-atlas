@@ -14,8 +14,8 @@ export function SiteHeader({ floating = false }: { floating?: boolean }) {
       }
     >
       <div
-        className={`mx-auto flex w-full items-baseline justify-between px-6 py-4 ${
-          floating ? "max-w-none py-3" : "max-w-3xl"
+        className={`flex w-full items-baseline justify-between px-6 ${
+          floating ? "py-3" : "py-4"
         }`}
       >
         <Link

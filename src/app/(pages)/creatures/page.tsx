@@ -43,8 +43,11 @@ export default function BestiaryPage() {
       : [];
   });
 
+  /* Wider than the reading column and vertically centred: the folio is an
+     object held open, not an article, and on a tall screen the sheet should
+     sit in the middle of the desk rather than hang from the top. */
   return (
-    <div className="mx-auto w-full max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
+    <div className="m-auto w-full max-w-3xl px-4 py-10 sm:px-6 sm:py-14 lg:max-w-5xl">
       <article className="parchment px-6 py-10 sm:px-12 sm:py-12">
         <header>
           <h1 className="font-display text-4xl tracking-wide">BESTIARIUM</h1>
