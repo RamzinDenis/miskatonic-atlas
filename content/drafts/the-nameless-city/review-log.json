@@ -1,0 +1,28 @@
+{
+  "decisions": {
+    "locations/the-temple": {
+      "verdict": "junk",
+      "at": "2026-07-23T16:28:15.000Z"
+    },
+    "locations/the-abyss": {
+      "verdict": "junk",
+      "at": "2026-07-23T16:28:15.000Z"
+    },
+    "locations/mnar": {
+      "verdict": "junk",
+      "at": "2026-07-23T16:28:15.000Z"
+    },
+    "locations/ib": {
+      "verdict": "junk",
+      "at": "2026-07-23T16:28:15.000Z"
+    },
+    "locations/the-nameless-city": {
+      "edited": true,
+      "at": "2026-07-23T16:28:15.000Z"
+    },
+    "locations/sarnath-the-doomed": {
+      "edited": true,
+      "at": "2026-07-23T16:28:15.000Z"
+    }
+  }
+}

@@ -1,0 +1,201 @@
+[
+  {
+    "kind": "location",
+    "name": "the nameless city",
+    "aliases": [
+      "the city"
+    ],
+    "facts": [
+      "A presence seemed to be stalking among the spectral stones of the city.",
+      "The narrator imagined it as a mighty seacoast metropolis that ruled the world before Africa rose out of the waves.",
+      "Its people struggled as the sea shrank away and the desert crept into the fertile valley that held it.",
+      "Thousands of its people, represented in allegory by the grotesque reptiles, were driven to chisel their way down through the rocks to another world whereof their prophets had told them.",
+      "On the walls and roof of one of its temples were traces of the pictorial art of the ancient race, curling streaks of paint that had almost faded or crumbled away."
+    ],
+    "typeGuess": "ruin",
+    "relatedNames": [
+      "The Narrator",
+      "the temple",
+      "the crawling creatures"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 11,
+        "quote": "but a presence seemed stalking among the spectral stones of the city, and when I glanced at the moon it seemed to quiver as though mirrored in unquiet waters."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 22,
+        "quote": "the tale of a mighty seacoast metropolis that ruled the world before Africa rose out of the waves, and of its struggles as the sea shrank away, and the desert crept into the fertile valley that held it."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 22,
+        "quote": "thousands of its people here represented in allegory by the grotesque reptiles were driven to chisel their way down through the rocks in some marvelous manner to another world whereof their prophets had told them."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 12,
+        "quote": "On the walls and roof I beheld for the first time some traces of the pictorial art of the ancient race, curious curling streaks of paint that had almost faded or crumbled away"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "He saw the moon gleaming over the ruins and a cloud of sand blown by a wind from a temple ahead.",
+      "He traced the wind to the black orifice of a temple and entered it after the wind died down.",
+      "He found the temple larger than others he had visited, presumably a natural cavern, with low altars and curvilinear carvings.",
+      "He discovered a small artificial door chiselled in solid rock leading to a steeply descending passage of tiny steps.",
+      "He descended the narrow passage for what felt like an immense distance until his torch died out.",
+      "In the darkness he recalled fragments of demoniac lore and recited verse to keep from despairing.",
+      "He reached a level floor and crept through a dark passage lined with wood-and-glass cases resembling coffins.",
+      "He saw a glow ahead and discovered a richly painted underground hall containing mummified reptilian creatures in the cases.",
+      "He theorized the reptile creatures were sacred to the city's people, comparable to the she-wolf of Rome or an Indian tribe's totem-beast.",
+      "He imagined an epic history of the nameless city based on the frescoes he saw, including its rise, decline, and final descent into the earth.",
+      "He described himself as having 'that instinct for the strange and the unknown which had made me a wanderer upon earth and a haunter of far, ancient, and forbidden places.'"
+    ],
+    "typeGuess": "protagonist",
+    "relatedNames": [
+      "the nameless city",
+      "the temple",
+      "the crawling creatures"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 11,
+        "quote": "I decided it came from some rock fissure leading to a cave, and watched the troubled sand to trace it to its source; soon perceiving that it came from the black orifice of a temple a long distance south of me almost out of sight."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 13,
+        "quote": "Then a bright flare of the fantastic flame showed me that for which I had been seeking, the opening to those remoter abysses whence the sudden wind had blown; and I grew faint when I saw that it was a small and plainly artificial door chiselled in the solid rock."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 14,
+        "quote": "I was quite unbalanced with that instinct for the strange and the unknown which had made me a wanderer upon earth and a haunter of far, ancient, and forbidden places."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 17,
+        "quote": "I soon knew that I was in a narrow passage whose walls were lined with cases of wood having glass fronts."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 19,
+        "quote": "there came a gradual glow ahead, and all at once I knew that I saw the dim outlines of the corridor and the cases, revealed by some unknown subterranean phosphorescence."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 21,
+        "quote": "These creatures, I said to myself, were to the men of the nameless city what the she-wolf was to Rome, or some totem-beast is to a tribe of Indians."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 22,
+        "quote": "Holding this view, I thought I could trace roughly a wonderful epic of the nameless city"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the temple",
+    "aliases": [
+      "this temple"
+    ],
+    "facts": [
+      "It was the black orifice of a temple a long distance south, from which an icy wind poured.",
+      "It loomed larger than the other ruined temples and had a doorway far less clogged with sand.",
+      "It was larger than either of the temples the narrator had visited before, and was presumably a natural cavern since it bore winds from beyond.",
+      "Its stones and altars were as low as those in the other temples.",
+      "Its walls and roof bore traces of ancient pictorial art, and two of its altars had curvilinear carvings.",
+      "It contained a small, plainly artificial door chiselled in the solid rock, opening onto a narrow passage with a steep, low-roofed flight of tiny descending steps."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "the nameless city",
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 11,
+        "quote": "it came from the black orifice of a temple a long distance south of me almost out of sight. Against the choking sand-cloud I plodded toward this temple, which, as I neared it, loomed larger than the rest, and showed a doorway far less clogged with caked sand."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 12,
+        "quote": "This temple, as I had fancied from the outside, was larger than either of those I had visited before; and was presumably a natural cavern since it bore winds from some region beyond."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 13,
+        "quote": "I thrust my torch within, beholding a black tunnel with the roof arching low over a rough flight of very small, numerous, and steeply descending steps."
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "the crawling creatures",
+    "aliases": [
+      "these monstrosities",
+      "these crawling creatures",
+      "the mummified forms"
+    ],
+    "facts": [
+      "They were mummified and kept in glass-fronted wooden cases arranged along a long underground passage, hideously like coffins in shape and size.",
+      "They were of the reptile kind, with body lines suggesting sometimes the crocodile, sometimes the seal.",
+      "In size they approximated a small man, and their forelegs bore feet curiously like human hands and fingers.",
+      "Their heads had a contour violating known biological principles, with a colossal protuberant forehead, horns, noselessness, and an alligator-like jaw.",
+      "The narrator decided they were some paleogean species which had lived when the nameless city was alive.",
+      "Most of them were gorgeously enrobed in costly fabrics and laden with ornaments of gold, jewels, and unknown shining metals.",
+      "They held first place among the wild designs on the frescoed walls and ceiling of the underground hall, depicted with cities and gardens fashioned to their own dimensions.",
+      "The narrator believed their pictured history was allegorical, perhaps showing the progress of the race that worshipped them.",
+      "They were, to the men of the nameless city, what the she-wolf was to Rome or a totem-beast to a tribe of Indians.",
+      "In the narrator's imagined epic, the city's people were represented in allegory by these grotesque reptiles as they were driven to chisel a way down through the rocks to another world."
+    ],
+    "typeGuess": "race",
+    "fate": "They were found mummified and enclosed in glass-fronted cases within the underground passage beneath the nameless city.",
+    "relatedNames": [
+      "the nameless city",
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 19,
+        "quote": "The cases were of a strange golden wood, with fronts of exquisite glass, and containing the mummified forms of creatures outreaching in grotesqueness the most chaotic dreams of man."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 20,
+        "quote": "They were of the reptile kind, with body lines suggesting sometimes the crocodile, sometimes the seal, but more often nothing of which either the naturalist or the paleontologist ever heard."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 20,
+        "quote": "Not Jove himself had had so colossal and protuberant a forehead; yet the horns and the noselessness and the alligator-like jaw placed the things outside all established categories."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 20,
+        "quote": "I debated for a time on the reality of the mummies, half suspecting they were artificial idols; but soon decided they were indeed some paleogean species which had lived when the nameless city was alive."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 21,
+        "quote": "The importance of these crawling creatures must have been vast, for they held first place among the wild designs on the frescoed walls and ceiling."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 21,
+        "quote": "These creatures, I said to myself, were to the men of the nameless city what the she-wolf was to Rome, or some totem-beast is to a tribe of Indians."
+      }
+    ]
+  }
+]

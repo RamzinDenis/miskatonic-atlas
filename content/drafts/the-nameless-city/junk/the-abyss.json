@@ -1,0 +1,46 @@
+{
+  "slug": "the-abyss",
+  "name": "the abyss",
+  "type": "other",
+  "summary": "The abyss is a phosphorescent gulf of the inner earth reached through the temple's descending passage, its mouth stirred by sudden gusts at each sunset and sunrise, and home to a horde of devil-like creatures glimpsed against its luminous aether.",
+  "description": "Sudden gusts of air rose around the mouth of the abyss each sunset and sunrise, a phenomenon the narrator recalled with dawning horror. He feared being swept bodily through the open gate into the phosphorescent abyss beyond, and later saw outlined against its luminous aether a horde of devil-like creatures that could not be seen against the dusk of the corridor.",
+  "appearsIn": [
+    "the-nameless-city"
+  ],
+  "connectedTo": [
+    "the-nameless-city"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-nameless-city",
+      "paragraph": 32,
+      "quote": "I instantly recalled the sudden gusts which had risen around the mouth of the abyss each sunset and sunrise"
+    },
+    {
+      "storySlug": "the-nameless-city",
+      "paragraph": 33,
+      "quote": "I dropped prone again and clutched vainly at the floor for fear of being swept bodily through the open gate into the phosphorescent abyss."
+    },
+    {
+      "storySlug": "the-nameless-city",
+      "paragraph": 38,
+      "quote": "Turning, I saw outlined against the luminous aether of the abyss what could not be seen against the dusk of the corridor"
+    }
+  ],
+  "_draft": {
+    "aliases": [
+      "gulf of the inner earth",
+      "phosphorescent abyss"
+    ],
+    "occurrences": 1,
+    "windows": [
+      "w031-039"
+    ],
+    "facts": [
+      "Sudden gusts of air rose around the mouth of the abyss each sunset and sunrise.",
+      "The narrator feared being swept bodily through the open gate into the phosphorescent abyss.",
+      "A horde of devil-like creatures was seen outlined against the luminous aether of the abyss."
+    ],
+    "needsReview": []
+  }
+}

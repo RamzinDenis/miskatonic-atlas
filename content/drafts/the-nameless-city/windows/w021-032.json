@@ -1,0 +1,199 @@
+[
+  {
+    "kind": "location",
+    "name": "the nameless city",
+    "aliases": [],
+    "facts": [
+      "Ruled the world before Africa rose out of the waves, according to the pictured epic.",
+      "Struggled as the sea shrank away and the desert crept into the fertile valley that held it.",
+      "Thousands of its people, represented in allegory by grotesque reptiles, were driven to chisel their way down through the rocks to another world foretold by their prophets.",
+      "The race dwelt in the nameless city and the valley around it for ten million years.",
+      "Its civilization included a written alphabet and had seemingly risen to a higher order than the later civilizations of Egypt and Chaldea.",
+      "No pictures were found representing deaths or funeral customs except those related to wars, violence, and plagues.",
+      "Frescoes showed the city and desert valley in desertion and growing ruin, always by moonlight, with a golden nimbus over the fallen walls.",
+      "The Arabs fear the nameless city.",
+      "An ancientness so vast that measurement is feeble seemed to leer down from its primal stones and rock-hewn temples."
+    ],
+    "typeGuess": "ruin",
+    "relatedNames": [
+      "crawling creatures",
+      "The Narrator",
+      "Irem"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 22,
+        "quote": "the tale of a mighty seacoast metropolis that ruled the world before Africa rose out of the waves, and of its struggles as the sea shrank away, and the desert crept into the fertile valley that held it"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 22,
+        "quote": "thousands of its people here represented in allegory by the grotesque reptiles were driven to chisel their way down through the rocks in some marvelous manner to another world whereof their prophets had told them"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 23,
+        "quote": "the leave-taking of the race that had dwelt in the nameless city and the valley around for ten million years"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 23,
+        "quote": "The civilization, which included a written alphabet, had seemingly risen to a higher order than those immeasurably later civilizations of Egypt and Chaldea, yet there were curious omissions."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 23,
+        "quote": "I could, for example, find no pictures to represent deaths or funeral customs, save such as were related to wars, violence, and plagues"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 24,
+        "quote": "contrasted views of the nameless city in its desertion and growing ruin, and of the strange new realm of paradise to which the race had hewed its way through the stone"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 25,
+        "quote": "I remembered how the Arabs fear the nameless city"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 30,
+        "quote": "An ancientness so vast that measurement is feeble seemed to leer down from the primal stones and rock-hewn temples of the nameless city"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "Crept along the underground corridor toward brighter light while studying the frescoes.",
+      "Recognized the passages depicted in the painted epic as ones he himself had traversed.",
+      "Crept up to a gate at the end of the hall and cried aloud in amazement at the void of light beyond.",
+      "Looked at the steps leading into the abyss but did not dare try them, touched the open brass door and could not move it, then sank prone to the stone floor from exhaustion.",
+      "Felt a throb of fear on realizing his was the only human form among the reptile relics, save the man torn apart in the last painting.",
+      "Was suddenly seized by acute fear and sat up, gazing back along the corridor toward the tunnels leading to the outer world.",
+      "Heard a deep, low moaning sound and felt an increasing draft of cold air flowing from the tunnels and the city above.",
+      "Checked his watch and saw sunrise was near, then braced himself against the gale sweeping down into the cavern."
+    ],
+    "typeGuess": "protagonist",
+    "relatedNames": [
+      "the nameless city",
+      "crawling creatures"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 23,
+        "quote": "As I crept along the corridor toward the brighter light I saw later stages of the painted epic"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 22,
+        "quote": "I even recognized the passages."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 26,
+        "quote": "Creeping up to it, I cried aloud in transcendent amazement at what lay beyond"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 27,
+        "quote": "I looked at the steps, and for the nonce dared not try them. I touched the open brass door, and could not move it. Then I sank prone to the stone floor"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 28,
+        "quote": "mine was the only human form amidst the many relics and symbols of primordial life"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 31,
+        "quote": "I found myself starting frantically to a sitting posture and gazing back along the black corridor toward the tunnels that rose to the outer world"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 31,
+        "quote": "a deep, low moaning, as of a distant throng of condemned spirits, and came from the direction in which I was staring"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 32,
+        "quote": "I looked at my watch and saw that sunrise was near, so braced myself to resist the gale"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "crawling creatures",
+    "aliases": [
+      "sacred reptiles",
+      "grotesque reptiles"
+    ],
+    "facts": [
+      "Held first place among the wild designs on the frescoed walls and ceiling of the nameless city.",
+      "The artist drew them in a world of their own, with cities and gardens fashioned to suit their dimensions.",
+      "Believed by the narrator to be allegorical representations of the men of the nameless city, akin to the she-wolf of Rome or a tribe's totem-beast.",
+      "Emaciated priests, displayed as reptiles in ornate robes, were shown cursing the upper air and all who breathed it in later frescoes.",
+      "The forms of the people, always represented by the sacred reptiles, appeared to gradually waste away, while their spirits hovering above the ruins by moonlight gained in proportion.",
+      "Their hideous mummified forms lay close to the narrator in the corridor."
+    ],
+    "typeGuess": "race",
+    "fate": "Depicted as growing decadent and physically wasting away over time, even as their spirits gained in the mural depictions.",
+    "relatedNames": [
+      "the nameless city",
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 21,
+        "quote": "these crawling creatures must have been vast, for they held first place among the wild designs on the frescoed walls and ceiling"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 21,
+        "quote": "With matchless skill had the artist drawn them in a world of their own, wherein they had cities and gardens fashioned to suit their dimensions"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 25,
+        "quote": "Emaciated priests, displayed as reptiles in ornate robes, cursed the upper air and all who breathed it"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 25,
+        "quote": "The forms of the people—always represented by the sacred reptiles—appeared to be gradually wasting away, though their spirits as shown hovering above the ruins by moonlight gained in proportion."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 28,
+        "quote": "the crawling creatures, whose hideous mummified forms were so close to me"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Irem",
+    "aliases": [
+      "the City of Pillars"
+    ],
+    "facts": [
+      "Referred to as the City of Pillars.",
+      "A primitive-looking man, perhaps a pioneer of ancient Irem, was depicted in a fresco being torn to pieces by members of the older race."
+    ],
+    "typeGuess": "city",
+    "relatedNames": [
+      "crawling creatures"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 25,
+        "quote": "one terrible final scene showed a primitive-looking man, perhaps a pioneer of ancient Irem, the City of Pillars, torn to pieces by members of the older race"
+      }
+    ]
+  }
+]

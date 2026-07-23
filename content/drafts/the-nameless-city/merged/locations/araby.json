@@ -1,0 +1,40 @@
+{
+  "slug": "araby",
+  "name": "Araby",
+  "type": "region",
+  "summary": "Araby is the desert region in which the nameless city lies remote, crumbling and inarticulate beneath ancient sands.",
+  "description": "Araby is the desert in which the nameless city lies remote, crumbling and inarticulate, its low walls nearly hidden by the sands of uncounted ages.",
+  "appearsIn": [
+    "the-nameless-city"
+  ],
+  "connectedTo": [
+    "the-nameless-city"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-nameless-city",
+      "paragraph": 2,
+      "quote": "Remote in the desert of Araby lies the nameless city, crumbling and inarticulate, its low walls nearly hidden by the sands of uncounted ages."
+    }
+  ],
+  "_draft": {
+    "aliases": [],
+    "occurrences": 1,
+    "windows": [
+      "w001-012"
+    ],
+    "facts": [
+      "The nameless city lies remote in the desert of Araby."
+    ],
+    "needsReview": [
+      {
+        "field": "realWorld",
+        "reason": "'Araby' is a poetic name that may correspond to the real-world Arabia (used elsewhere in the mythos as the setting for Irem), but no window explicitly equates the two.",
+        "candidates": [
+          "Arabia",
+          "unspecified desert region"
+        ]
+      }
+    ]
+  }
+}

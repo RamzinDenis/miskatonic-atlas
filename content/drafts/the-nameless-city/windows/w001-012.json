@@ -1,0 +1,252 @@
+[
+  {
+    "kind": "location",
+    "name": "the nameless city",
+    "aliases": [
+      "this hoary survivor of the deluge",
+      "this great-grandmother of the eldest pyramid"
+    ],
+    "facts": [
+      "It protrudes uncannily above the desert sands as parts of a corpse might protrude from an ill-made grave.",
+      "Fear spoke from its age-worn stones, called a hoary survivor of the deluge and great-grandmother of the eldest pyramid.",
+      "It lies remote in the desert of Araby, crumbling and inarticulate, its low walls nearly hidden by sands of uncounted ages.",
+      "There is no legend so old as to give it a name or recall that it was ever alive.",
+      "All the tribes shun it without wholly knowing why.",
+      "Abdul Alhazred the mad poet dreamed of this place the night before composing his couplet.",
+      "The narrator alone of living men has seen it.",
+      "Its ruins consist of shapeless foundations of houses and palaces with no carving or inscription found.",
+      "A low cliff nearby had hewn facades of several small, squat rock houses or temples.",
+      "One cavern proved to be a temple with primitive altars, pillars, and niches, all curiously low, and stones shaped into symbols.",
+      "A larger temple was presumably a natural cavern since it bore winds from some region beyond, and had traces of pictorial art and curvilinear carvings on its altars."
+    ],
+    "typeGuess": "ruin",
+    "relatedNames": [
+      "The Narrator",
+      "Abdul Alhazred",
+      "Araby",
+      "Sarnath the Doomed",
+      "Ib",
+      "Mnar"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 1,
+        "quote": "I saw it protruding uncannily above the sands as parts of a corpse might protrude from an ill-made grave."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 1,
+        "quote": "Fear spoke from the age-worn stones of this hoary survivor of the deluge, this great-grandmother of the eldest pyramid"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 2,
+        "quote": "Remote in the desert of Araby lies the nameless city, crumbling and inarticulate, its low walls nearly hidden by the sands of uncounted ages."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 2,
+        "quote": "There is no legend so old as to give it a name, or to recall that it was ever alive"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 2,
+        "quote": "all the tribes shun it without wholly knowing why"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 2,
+        "quote": "It was of this place that Abdul Alhazred the mad poet dreamed on the night before he sang his unexplainable couplet"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 4,
+        "quote": "I alone have seen it"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 6,
+        "quote": "In and out amongst the shapeless foundations of houses and palaces I wandered, finding never a carving or inscription"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 8,
+        "quote": "Hewn rudely on the face of the cliff were the unmistakable facades of several small, squat rock houses or temples"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 9,
+        "quote": "the cavern was indeed a temple, and beheld plain signs of the race that had lived and worshipped before the desert was a desert"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 12,
+        "quote": "was larger than either of those I had visited before; and was presumably a natural cavern since it bore winds from some region beyond"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 12,
+        "quote": "On the walls and roof I beheld for the first time some traces of the pictorial art of the ancient race"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [
+      "I"
+    ],
+    "facts": [
+      "He was traveling in a parched and terrible valley under the moon when he first saw the nameless city.",
+      "He alone has seen the nameless city, and no other face bears such hideous lines of fear as his.",
+      "No other man shivers so horribly as he does when the night wind rattles the windows.",
+      "He defied the Arabs' warnings and went into the untrodden waste with his camel.",
+      "He had many tools and dug much within the walls of the obliterated edifices.",
+      "He cleared a sand-choked aperture with his spade and crawled through it, carrying a torch, to enter a temple."
+    ],
+    "typeGuess": "protagonist",
+    "relatedNames": [
+      "the nameless city"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 1,
+        "quote": "I was traveling in a parched and terrible valley under the moon"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 4,
+        "quote": "I alone have seen it, and that is why no other face bears such hideous lines of fear as mine"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 4,
+        "quote": "why no other man shivers so horribly when the night wind rattles the windows"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 4,
+        "quote": "yet I defied them and went into the untrodden waste with my camel"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 6,
+        "quote": "I had with me many tools, and dug much within the walls of the obliterated edifices"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 9,
+        "quote": "I cleared one with my spade and crawled through it, carrying a torch"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Abdul Alhazred",
+    "aliases": [
+      "the mad poet"
+    ],
+    "facts": [
+      "He dreamed of the nameless city the night before he sang his unexplainable couplet.",
+      "He is credited with the couplet: 'That is not dead which can eternal lie, And with strange eons, even death may die.'"
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "the nameless city"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 2,
+        "quote": "It was of this place that Abdul Alhazred the mad poet dreamed on the night before he sang his unexplainable couplet"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 3,
+        "quote": "That is not dead which can eternal lie, And with strange eons, even death may die."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Sarnath the Doomed",
+    "aliases": [
+      "Sarnath"
+    ],
+    "facts": [
+      "It stood in the land Mnar when mankind was young."
+    ],
+    "typeGuess": "city",
+    "relatedNames": [
+      "Mnar"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 7,
+        "quote": "thought of Sarnath the Doomed, that stood in the land Mnar when mankind was young"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Ib",
+    "aliases": [],
+    "facts": [
+      "It was carven of gray stone before mankind existed."
+    ],
+    "typeGuess": "city",
+    "relatedNames": [
+      "Mnar"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 7,
+        "quote": "of Ib, that was carven of gray stone before mankind existed"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Mnar",
+    "aliases": [
+      "the land Mnar"
+    ],
+    "facts": [
+      "Sarnath the Doomed stood in this land when mankind was young."
+    ],
+    "typeGuess": "region",
+    "relatedNames": [
+      "Sarnath the Doomed"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 7,
+        "quote": "thought of Sarnath the Doomed, that stood in the land Mnar when mankind was young"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Araby",
+    "aliases": [],
+    "facts": [
+      "The nameless city lies remote in the desert of Araby."
+    ],
+    "typeGuess": "region",
+    "relatedNames": [
+      "the nameless city"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 2,
+        "quote": "Remote in the desert of Araby lies the nameless city"
+      }
+    ]
+  }
+]

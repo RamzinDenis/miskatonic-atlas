@@ -1,0 +1,34 @@
+{
+  "slug": "mnar",
+  "name": "Mnar",
+  "type": "region",
+  "summary": "Mnar was the land in which the city of Sarnath the Doomed stood when mankind was young.",
+  "description": "Mnar was the land that held Sarnath the Doomed in the age when mankind was young, one of the ancient places the narrator recalled while confronting the far greater antiquity of the nameless city.",
+  "appearsIn": [
+    "the-nameless-city"
+  ],
+  "connectedTo": [
+    "sarnath-the-doomed",
+    "ib"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-nameless-city",
+      "paragraph": 7,
+      "quote": "thought of Sarnath the Doomed, that stood in the land Mnar when mankind was young"
+    }
+  ],
+  "_draft": {
+    "aliases": [
+      "the land Mnar"
+    ],
+    "occurrences": 1,
+    "windows": [
+      "w001-012"
+    ],
+    "facts": [
+      "Sarnath the Doomed stood in this land when mankind was young."
+    ],
+    "needsReview": []
+  }
+}

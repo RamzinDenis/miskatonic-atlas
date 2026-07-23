@@ -1,0 +1,32 @@
+{
+  "slug": "ib",
+  "name": "Ib",
+  "type": "city",
+  "summary": "Ib was a city carven of gray stone before mankind existed, recalled by the narrator as a point of comparison for the nameless city's unfathomable age.",
+  "description": "Ib was carven of gray stone before mankind existed. The narrator's thoughts turned to it, alongside Sarnath the Doomed, while confronting the impossible antiquity of the nameless city.",
+  "appearsIn": [
+    "the-nameless-city"
+  ],
+  "connectedTo": [
+    "mnar",
+    "the-nameless-city"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-nameless-city",
+      "paragraph": 7,
+      "quote": "of Ib, that was carven of gray stone before mankind existed"
+    }
+  ],
+  "_draft": {
+    "aliases": [],
+    "occurrences": 1,
+    "windows": [
+      "w001-012"
+    ],
+    "facts": [
+      "It was carven of gray stone before mankind existed."
+    ],
+    "needsReview": []
+  }
+}

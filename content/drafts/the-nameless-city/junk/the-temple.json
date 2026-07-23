@@ -1,0 +1,48 @@
+{
+  "slug": "the-temple",
+  "name": "the temple",
+  "type": "building",
+  "summary": "The temple is the largest of the rock-hewn shrines discovered in the nameless city, a natural cavern bearing winds from some region beyond and traces of ancient pictorial art, its depths reached by a hidden stair chiselled into the rock.",
+  "description": "The temple appeared as the black orifice from which an icy wind poured, a long distance south of the narrator, and loomed larger than the other ruined temples as he approached, its doorway far less clogged with sand. It proved larger than either of the temples visited before, and was presumably a natural cavern since it bore winds from some region beyond; its stones and altars were as low as those in the other temples, but its walls and roof bore traces of ancient pictorial art, with two of its altars carrying curvilinear carvings.\n\nWithin it was found a small, plainly artificial door chiselled in the solid rock, opening onto a narrow passage where a steep, low-roofed flight of tiny steps descended into darkness.",
+  "appearsIn": [
+    "the-nameless-city"
+  ],
+  "connectedTo": [
+    "the-nameless-city"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-nameless-city",
+      "paragraph": 11,
+      "quote": "it came from the black orifice of a temple a long distance south of me almost out of sight. Against the choking sand-cloud I plodded toward this temple, which, as I neared it, loomed larger than the rest, and showed a doorway far less clogged with caked sand."
+    },
+    {
+      "storySlug": "the-nameless-city",
+      "paragraph": 12,
+      "quote": "This temple, as I had fancied from the outside, was larger than either of those I had visited before; and was presumably a natural cavern since it bore winds from some region beyond."
+    },
+    {
+      "storySlug": "the-nameless-city",
+      "paragraph": 13,
+      "quote": "I thrust my torch within, beholding a black tunnel with the roof arching low over a rough flight of very small, numerous, and steeply descending steps."
+    }
+  ],
+  "_draft": {
+    "aliases": [
+      "this temple"
+    ],
+    "occurrences": 2,
+    "windows": [
+      "w011-022"
+    ],
+    "facts": [
+      "It was the black orifice of a temple a long distance south, from which an icy wind poured.",
+      "It loomed larger than the other ruined temples and had a doorway far less clogged with sand.",
+      "It was larger than either of the temples the narrator had visited before, and was presumably a natural cavern since it bore winds from beyond.",
+      "Its stones and altars were as low as those in the other temples.",
+      "Its walls and roof bore traces of ancient pictorial art, and two of its altars had curvilinear carvings.",
+      "It contained a small, plainly artificial door chiselled in the solid rock, opening onto a narrow passage with a steep, low-roofed flight of tiny descending steps."
+    ],
+    "needsReview": []
+  }
+}

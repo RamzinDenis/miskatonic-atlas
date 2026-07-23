@@ -1,0 +1,40 @@
+{
+  "slug": "sarnath-the-doomed",
+  "name": "Sarnath the Doomed",
+  "type": "city",
+  "summary": "Sarnath the Doomed was a city that stood in the land of Mnar when mankind was young, recalled by the narrator — together with Ib, carven of gray stone before mankind existed — as he confronted the incomprehensible antiquity of the nameless city.",
+  "description": "Sarnath the Doomed stood in the land Mnar when mankind was young. In the same land lay Ib, a city carven of gray stone before mankind existed.\n\nThe narrator's thoughts turned to both cities while grasping at the vast and inarticulate age of the nameless city before him — and found that even these ancient names fell short of it.",
+  "appearsIn": [
+    "the-nameless-city"
+  ],
+  "connectedTo": [
+    "the-nameless-city"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-nameless-city",
+      "paragraph": 7,
+      "quote": "thought of Sarnath the Doomed, that stood in the land Mnar when mankind was young"
+    },
+    {
+      "storySlug": "the-nameless-city",
+      "paragraph": 7,
+      "quote": "of Ib, that was carven of gray stone before mankind existed"
+    }
+  ],
+  "_draft": {
+    "aliases": [
+      "Sarnath"
+    ],
+    "occurrences": 1,
+    "windows": [
+      "w001-012"
+    ],
+    "facts": [
+      "It stood in the land Mnar when mankind was young.",
+      "Ib, in the same land, was carven of gray stone before mankind existed.",
+      "The narrator recalled both cities as points of comparison for the nameless city's unfathomable age."
+    ],
+    "needsReview": []
+  }
+}

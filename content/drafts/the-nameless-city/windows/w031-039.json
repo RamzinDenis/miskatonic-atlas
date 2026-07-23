@@ -1,0 +1,197 @@
+[
+  {
+    "kind": "location",
+    "name": "the nameless city",
+    "aliases": [],
+    "facts": [
+      "The narrator's fear was tied to first seeing the terrible valley and the nameless city under a cold moon.",
+      "The crawling reptiles referenced later belong to a race associated with the nameless city."
+    ],
+    "typeGuess": "ruin",
+    "relatedNames": [
+      "The Narrator",
+      "the nameless race"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 31,
+        "quote": "Suddenly there came another burst of that acute fear which had intermittently seized me ever since I first saw the terrible valley and the nameless city under a cold moon"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 38,
+        "quote": "the crawling reptiles of the nameless city"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the abyss",
+    "aliases": [
+      "gulf of the inner earth",
+      "phosphorescent abyss"
+    ],
+    "facts": [
+      "Sudden gusts of air rose around the mouth of the abyss each sunset and sunrise.",
+      "The narrator feared being swept bodily through the open gate into the phosphorescent abyss.",
+      "A horde of devil-like creatures was seen outlined against the luminous aether of the abyss."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 32,
+        "quote": "I instantly recalled the sudden gusts which had risen around the mouth of the abyss each sunset and sunrise"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 33,
+        "quote": "I dropped prone again and clutched vainly at the floor for fear of being swept bodily through the open gate into the phosphorescent abyss."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 38,
+        "quote": "Turning, I saw outlined against the luminous aether of the abyss what could not be seen against the dusk of the corridor"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "He was seized by acute fear and sat up frantically, gazing back toward the tunnels leading to the outer world.",
+      "He heard a deep, low moaning sound growing in volume, the first sound to break the silence of the depths.",
+      "He became conscious of an increasing draft of cold air flowing from the tunnels and the city above.",
+      "He looked at his watch and saw that sunrise was near.",
+      "He braced himself to resist the gale sweeping down into the abyss.",
+      "He dropped prone and clutched at the floor for fear of being swept into the abyss.",
+      "He compared himself to the man who was torn to pieces by the nameless race.",
+      "He believed he screamed frantically and was almost mad.",
+      "He tried to crawl against the wind but was pushed slowly toward the unknown world.",
+      "His reason snapped and he babbled the couplet of the mad Arab Alhazred.",
+      "He saw a nightmare horde of devil-like reptile creatures outlined against the abyss.",
+      "He was plunged into darkness after the great brazen door clanged shut behind the creatures."
+    ],
+    "typeGuess": "protagonist",
+    "fate": "He survived the ordeal, guided back to life by unknown means, but remains haunted, expecting to 'shiver in the night wind till oblivion—or worse—claims me.'",
+    "relatedNames": [
+      "the nameless city",
+      "the nameless race",
+      "Alhazred"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 31,
+        "quote": "despite my exhaustion I found myself starting frantically to a sitting posture and gazing back along the black corridor toward the tunnels that rose to the outer world"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 32,
+        "quote": "I looked at my watch and saw that sunrise was near, so braced myself to resist the gale that was sweeping down to its cavern home"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 33,
+        "quote": "I dropped prone again and clutched vainly at the floor for fear of being swept bodily through the open gate into the phosphorescent abyss."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 34,
+        "quote": "once more I compared myself shudderingly to the only human image in that frightful corridor, the man who was torn to pieces by the nameless race"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 35,
+        "quote": "I think I screamed frantically near the last—I was almost mad—but if I did so my cries were lost in the hell-born babel of the howling wind-wraiths."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 35,
+        "quote": "Finally reason must have wholly snapped; for I fell to babbling over and over that unexplainable couplet of the mad Arab Alhazred, who dreamed of the nameless city"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 37,
+        "quote": "what Abaddon guided me back to life, where I must always remember and shiver in the night wind till oblivion—or worse—claims me"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 39,
+        "quote": "And as the wind died away I was plunged into the ghoul-peopled darkness of earth's bowels; for behind the last of the creatures the great brazen door clanged shut"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Alhazred",
+    "aliases": [
+      "the mad Arab Alhazred"
+    ],
+    "facts": [
+      "He was called the mad Arab.",
+      "He dreamed of the nameless city.",
+      "He is credited with an unexplainable couplet: 'That is not dead which can eternal lie, And with strange eons, even death may die.'"
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "the nameless city",
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 35,
+        "quote": "that unexplainable couplet of the mad Arab Alhazred, who dreamed of the nameless city"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 36,
+        "quote": "That is not dead which can eternal lie, And with strange eons, even death may die."
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "the nameless race",
+    "aliases": [
+      "crawling reptiles of the nameless city",
+      "fiends",
+      "devils"
+    ],
+    "facts": [
+      "The nameless race tore a man to pieces, as recalled by the narrator.",
+      "A nightmare horde of these creatures was described as hate-distorted, grotesquely panoplied, and half-transparent devils of a race no man might mistake.",
+      "Their voices took the articulate form of ghastly cursing and snarling of strange-tongued fiends.",
+      "They were the crawling reptiles of the nameless city.",
+      "The great brazen door clanged shut behind the last of the creatures."
+    ],
+    "typeGuess": "race",
+    "relatedNames": [
+      "the nameless city",
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 34,
+        "quote": "the man who was torn to pieces by the nameless race"
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 38,
+        "quote": "I heard the ghastly cursing and snarling of strange-tongued fiends. Turning, I saw outlined against the luminous aether of the abyss what could not be seen against the dusk of the corridor—a nightmare horde of rushing devils; hate-distorted, grotesquely panoplied, half-transparent devils of a race no man might mistake—the crawling reptiles of the nameless city."
+      },
+      {
+        "storySlug": "the-nameless-city",
+        "paragraph": 39,
+        "quote": "behind the last of the creatures the great brazen door clanged shut with a deafening peal of metallic music"
+      }
+    ]
+  }
+]
