@@ -14,6 +14,12 @@ alias, a fact or quote equating the names. Never merge on world knowledge: if
 no window says X is Y, X and Y stay separate entities and the doubt goes to
 `needsReview`.
 
+**Generic titles are not names.** An unnamed narrator, captain, professor and
+the like is a different person in every story: a generic title matches an
+existing entity or another group only within the same story, never across
+stories. Slug and name carry the story as disambiguation:
+`the-narrator-of-<storySlug>`, `"The Narrator (<Story Title>)"`.
+
 Occurrences whose names match an **existing** `content/` entity's name or slug
 enrich that entity: the merged draft starts from the existing JSON and adds new
 facts and sources (this is how the M0 hand-made locations get enriched).
