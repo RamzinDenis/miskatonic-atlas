@@ -2,6 +2,28 @@ import Link from "next/link";
 
 /** Shared building blocks of entity pages: chip link lists and source quotes. */
 
+/**
+ * Entity description body. Paragraphs are separated by `\n\n`; a paragraph
+ * starting with `## ` renders as a subheading — used when a minor location is
+ * folded into its parent article as a titled section (prompts/merge.md,
+ * «Parts & allusions»).
+ */
+export function Description({ text }: { text: string }) {
+  return (
+    <div className="drop-cap mt-6 space-y-4 text-[17px] leading-relaxed">
+      {text.split("\n\n").map((paragraph, i) =>
+        paragraph.startsWith("## ") ? (
+          <h2 key={i} className="pt-4 font-display text-xl tracking-wide">
+            {paragraph.slice(3)}
+          </h2>
+        ) : (
+          <p key={i}>{paragraph}</p>
+        ),
+      )}
+    </div>
+  );
+}
+
 export interface ChipItem {
   href: string;
   label: string;

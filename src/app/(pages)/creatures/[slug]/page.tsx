@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getCreature, getCreatures, getLocation, getStory } from "@/shared/lib/content";
-import { ChipSection, SourcesSection } from "@/shared/ui/sections";
+import { ChipSection, Description, SourcesSection } from "@/shared/ui/sections";
 import { BestiaryFigure } from "@/widgets/bestiary/figure";
 import { LostPlate } from "@/widgets/bestiary/lost-plate";
 import { bestiaryFolio } from "@/widgets/bestiary/registry";
@@ -85,11 +85,7 @@ export default async function CreaturePage({ params }: PageProps<"/creatures/[sl
 
         <p className="mt-8 text-lg leading-relaxed">{creature.summary}</p>
 
-        <div className="drop-cap mt-6 space-y-4 text-[17px] leading-relaxed">
-          {creature.description.split("\n\n").map((paragraph, i) => (
-            <p key={i}>{paragraph}</p>
-          ))}
-        </div>
+        <Description text={creature.description} />
 
         {getPlate("creatures", creature.slug)}
 

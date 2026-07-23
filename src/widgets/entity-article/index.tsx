@@ -1,6 +1,11 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { ChipSection, SourcesSection, type SourceItem } from "@/shared/ui/sections";
+import {
+  ChipSection,
+  Description,
+  SourcesSection,
+  type SourceItem,
+} from "@/shared/ui/sections";
 
 /**
  * The page body of a character. It was shared with creatures while the two
@@ -52,11 +57,7 @@ export function EntityArticle({
 
       {plate}
 
-      <div className="drop-cap mt-6 space-y-4 text-[17px] leading-relaxed">
-        {description.split("\n\n").map((paragraph, i) => (
-          <p key={i}>{paragraph}</p>
-        ))}
-      </div>
+      <Description text={description} />
 
       {fate && (
         <p className="mt-6 border-l-2 border-line pl-4 text-[17px]">

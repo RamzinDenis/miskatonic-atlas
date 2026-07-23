@@ -8,7 +8,7 @@ import {
   getLocations,
   getStory,
 } from "@/shared/lib/content";
-import { ChipSection, SourcesSection } from "@/shared/ui/sections";
+import { ChipSection, Description, SourcesSection } from "@/shared/ui/sections";
 import { getPlate } from "@/widgets/plates";
 import { MapInset } from "@/widgets/world-map/map-inset";
 
@@ -62,11 +62,7 @@ export default async function LocationPage({
 
       {getPlate("locations", location.slug)}
 
-      <div className="drop-cap mt-6 space-y-4 text-[17px] leading-relaxed">
-        {location.description.split("\n\n").map((paragraph, i) => (
-          <p key={i}>{paragraph}</p>
-        ))}
-      </div>
+      <Description text={location.description} />
 
       {location.map && (
         <MapInset
