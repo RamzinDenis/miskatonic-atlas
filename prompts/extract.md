@@ -74,10 +74,14 @@ records**:
    facts about him (identity, relatives, actions, movements) — not merely
    because first-person voice is present. Use `"name": "The Narrator"` unless
    the passage itself names him.
-8. Authors of quoted epigraphs and cited real-world writers are **not** story
+8. **Unnamed incidental characters are not extracted** — a captain, a doctor,
+   a "celebrated ethnologist", crews, crowds: anyone who exists only to perform
+   one passing function for the plot. An unnamed character qualifies only when
+   the story treats him as a distinct recurring figure (the narrator, rule 7).
+9. Authors of quoted epigraphs and cited real-world writers are **not** story
    entities.
-9. When the passage genuinely contains no extractable entity, the window file
-   is an empty array `[]` — that is a valid result, not a failure.
+10. When the passage genuinely contains no extractable entity, the window file
+    is an empty array `[]` — that is a valid result, not a failure.
 
 ## Run
 
