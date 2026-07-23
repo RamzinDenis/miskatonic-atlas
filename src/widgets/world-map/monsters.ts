@@ -5,7 +5,8 @@ export type MonsterKind =
   | "tornasuk"
   | "black-winged-ones"
   | "cthulhu"
-  | "the-thing";
+  | "the-thing"
+  | "the-crawling-reptiles-of-the-nameless-city";
 
 /**
  * Monsters — the annotator's marginalia on the chart. Pure presentation,
@@ -29,6 +30,10 @@ export type MonsterKind =
  *   Cthulhu          — the empty South Pacific south-east of R'lyeh
  *   The Thing        — beside the risen island of the monolith, clear of
  *                       the Pacific pin and the Emma's track to the south
+ *   Crawling Reptiles — the empty Arabian Sea south-east of the city's pin:
+ *                       the desert around the pin is cramped against the
+ *                       sheet's engraved border, so the beast haunts the
+ *                       nearest open water, clear of the border and the fold
  */
 export interface MapMonster {
   /** Creature content slug — doubles as the mask file name. */
@@ -75,5 +80,12 @@ export const MONSTERS: MapMonster[] = [
     storySlug: "dagon",
     at: { x: 1960, y: 1890 },
     art: { w: 66, h: 58 },
+  },
+  {
+    slug: "the-crawling-reptiles-of-the-nameless-city",
+    name: "The Crawling Reptiles",
+    storySlug: "the-nameless-city",
+    at: { x: 3745, y: 1655 },
+    art: { w: 62, h: 47 },
   },
 ];

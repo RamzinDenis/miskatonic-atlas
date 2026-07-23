@@ -2,9 +2,12 @@
 
 > Процедура и стиль-блоки: `docs/engravings.md`. Сгенерированное вычёркивать.
 
-## The Nameless City
+## The Nameless City — сгенерировано 23.07, промпты сохранены для истории
 
-### 1. The Crawling Reptiles — гравюра-маска (жанр А)
+### 1. ~~The Crawling Reptiles — гравюра-маска (жанр А)~~
+
+Сделано 23.07: `monster-the-crawling-reptiles-of-the-nameless-city.png` →
+маска бестиария aspect 0.765 + маргиналия в пустыне у города (3770, 1540).
 
 Бестиарий (лист + витрина); маргиналия на карте — по решению владельца
 (у пина города — суша Аравии; аннотатор мог рисовать и на пустой пустыне,
@@ -40,9 +43,10 @@ race. NOT a dinosaur, NOT a lizard-man standing upright — a crawling robed
 thing.
 ```
 
-### 2. Plate VII «город под луной» — вклейка (жанр Б)
+### 2. ~~Plate VII «город под луной» — вклейка (жанр Б)~~
 
-На `locations/the-nameless-city` (страница + превью пина + галерея рассказа).
+Сделано 23.07: `src/widgets/plates/the-nameless-city.png` →
+`locations/the-nameless-city` (страница + превью пина + галерея рассказа).
 
 Референсы: `src/widgets/plates/rlyeh.png` + `swamp-ritual.png`.
 

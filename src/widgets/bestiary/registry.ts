@@ -104,6 +104,17 @@ export const BESTIARY: BestiaryPlate[] = [
     },
   },
   {
+    slug: "the-crawling-reptiles-of-the-nameless-city",
+    latin: "Lacerta palaeogaea",
+    epithet: "Outside all established categories",
+    art: {
+      mask: "/bestiary/the-crawling-reptiles-of-the-nameless-city.webp",
+      thumb: "/maps/monsters/the-crawling-reptiles-of-the-nameless-city.png",
+      aspect: 0.765,
+      effects: ["breath", "ink-shiver", "gaze-tilt"],
+    },
+  },
+  {
     slug: "great-old-ones",
     latin: "Prisci siderei",
     epithet: "Star-born rulers of the elder earth",

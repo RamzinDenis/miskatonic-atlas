@@ -5,6 +5,7 @@ import legrasseIdol from "./legrasse-idol.png";
 import monolithRite from "./monolith-rite.png";
 import rlyeh from "./rlyeh.png";
 import swampRitual from "./swamp-ritual.png";
+import theNamelessCity from "./the-nameless-city.png";
 import wilcoxBasRelief from "./wilcox-bas-relief.jpg";
 
 /**
@@ -85,6 +86,16 @@ const plates: Record<string, PlateDef> = {
     quote:
       "Vast, Polyphemus-like, and loathsome, it darted like a stupendous monster of nightmares to the monolith, about which it flung its gigantic scaly arms, the while it bowed its hideous head and gave vent to certain measured sounds.",
     attribution: "Dagon (1919)",
+  },
+  "locations/the-nameless-city": {
+    numeral: "VII",
+    storySlug: "the-nameless-city",
+    image: theNamelessCity,
+    alt: "Engraved plate of the nameless city under the moon: broken walls and shapeless ruins protruding from desert sands beneath a huge low moon, watched from a dark ridge by a tiny traveler with a camel",
+    caption: "First sight of the city from the terrible valley, drawn after the text:",
+    quote:
+      "I was traveling in a parched and terrible valley under the moon, and afar I saw it protruding uncannily above the sands as parts of a corpse might protrude from an ill-made grave.",
+    attribution: "The Nameless City (1921)",
   },
   "characters/henry-anthony-wilcox": {
     numeral: "V",
