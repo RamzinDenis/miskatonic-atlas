@@ -43,7 +43,6 @@ import {
 } from "./geometry";
 import {
   MONSTERS,
-  MONSTER_STORY_SLUG,
   monsterMaskUrl,
   type MapMonster,
   type MonsterKind,
@@ -530,6 +529,14 @@ export default function WorldMapClient({
       )
     : [];
 
+  /* Beasts of the stories this legend lists — each marginalia keys to the
+     story whose annotator drew it, so a new story brings its own beasts. */
+  const legendMonsters = legend
+    ? MONSTERS.filter((monster) =>
+        legend.some((story) => story.slug === monster.storySlug),
+      )
+    : [];
+
   return (
     <div
       className={`world-map absolute inset-0${labelsShown ? " world-map--labels" : ""}${paperReady ? " world-map--printed" : ""}`}
@@ -746,14 +753,14 @@ export default function WorldMapClient({
                   </section>
                 )}
 
-                {legend.some((story) => story.slug === MONSTER_STORY_SLUG) && (
+                {legendMonsters.length > 0 && (
                   <section className="mt-6">
                     <h2 className="text-center text-xs uppercase tracking-widest text-muted">
                       Here be monsters
                     </h2>
                     <div className="parchment-rule mt-2" />
                     <ul className="mt-3 space-y-1.5">
-                      {MONSTERS.map((monster) => (
+                      {legendMonsters.map((monster) => (
                         <li key={monster.slug}>
                           <button
                             type="button"

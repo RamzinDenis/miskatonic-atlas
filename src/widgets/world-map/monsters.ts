@@ -1,7 +1,11 @@
 import type { PixelPoint } from "./geometry";
 
 /** The beasts of this chart — slug doubles as the creature content slug. */
-export type MonsterKind = "tornasuk" | "black-winged-ones" | "cthulhu";
+export type MonsterKind =
+  | "tornasuk"
+  | "black-winged-ones"
+  | "cthulhu"
+  | "the-thing";
 
 /**
  * Monsters — the annotator's marginalia on the chart. Pure presentation,
@@ -23,18 +27,20 @@ export type MonsterKind = "tornasuk" | "black-winged-ones" | "cthulhu";
  *                       clear of the swamp-country pins and the printed
  *                       lettering, so it haunts the nearest empty water
  *   Cthulhu          — the empty South Pacific south-east of R'lyeh
+ *   The Thing        — beside the risen island of the monolith, clear of
+ *                       the Pacific pin and the Emma's track to the south
  */
 export interface MapMonster {
   /** Creature content slug — doubles as the mask file name. */
   slug: MonsterKind;
   name: string;
+  /** The story the annotator read before drawing this beast — keys the
+      legend's "Here be monsters" rows to their stories. */
+  storySlug: string;
   at: PixelPoint;
   /** Display size on the chart, screen px. */
   art: { w: number; h: number };
 }
-
-/** The story whose beasts haunt the chart's margins. */
-export const MONSTER_STORY_SLUG = "the-call-of-cthulhu";
 
 /** The beast's alpha mask, painted in currentColor wherever it appears. */
 export function monsterMaskUrl(slug: MonsterKind): string {
@@ -45,19 +51,29 @@ export const MONSTERS: MapMonster[] = [
   {
     slug: "tornasuk",
     name: "tornasuk",
+    storySlug: "the-call-of-cthulhu",
     at: { x: 2520, y: 640 },
     art: { w: 58, h: 53 },
   },
   {
     slug: "black-winged-ones",
     name: "Black-winged Ones",
+    storySlug: "the-call-of-cthulhu",
     at: { x: 2255, y: 1622 },
     art: { w: 64, h: 63 },
   },
   {
     slug: "cthulhu",
     name: "Cthulhu",
+    storySlug: "the-call-of-cthulhu",
     at: { x: 2140, y: 2400 },
     art: { w: 74, h: 75 },
+  },
+  {
+    slug: "the-thing",
+    name: "The Thing",
+    storySlug: "dagon",
+    at: { x: 2085, y: 1815 },
+    art: { w: 66, h: 58 },
   },
 ];

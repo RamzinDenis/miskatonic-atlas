@@ -2,6 +2,7 @@ import Image, { type StaticImageData } from "next/image";
 import type { ReactNode } from "react";
 import alert from "./alert.jpg";
 import legrasseIdol from "./legrasse-idol.png";
+import monolithRite from "./monolith-rite.png";
 import rlyeh from "./rlyeh.png";
 import swampRitual from "./swamp-ritual.png";
 import wilcoxBasRelief from "./wilcox-bas-relief.jpg";
@@ -74,6 +75,16 @@ const plates: Record<string, PlateDef> = {
     quote:
       "The awful squid-head with writhing feelers came nearly up to the bowsprit of the sturdy yacht, but Johansen drove on relentlessly.",
     attribution: "The Call of Cthulhu (1928) — Chapter 3, The Madness from the Sea",
+  },
+  "locations/cyclopean-monolith": {
+    numeral: "VI",
+    storySlug: "dagon",
+    image: monolithRite,
+    alt: "Engraved plate of the monolith rite: a vast scaly sea-thing flung about a carved white monolith rising from dark water in a moonlit chasm, watched by a lone tiny figure on the slimy slope",
+    caption: "The thing at the monolith, drawn after the text:",
+    quote:
+      "Vast, Polyphemus-like, and loathsome, it darted like a stupendous monster of nightmares to the monolith, about which it flung its gigantic scaly arms, the while it bowed its hideous head and gave vent to certain measured sounds.",
+    attribution: "Dagon (1919)",
   },
   "characters/henry-anthony-wilcox": {
     numeral: "V",

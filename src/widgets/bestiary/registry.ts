@@ -93,6 +93,17 @@ export const BESTIARY: BestiaryPlate[] = [
     },
   },
   {
+    slug: "the-thing",
+    latin: "Polyphemus abyssorum",
+    epithet: "Vast, Polyphemus-like, and loathsome",
+    art: {
+      mask: "/bestiary/the-thing.webp",
+      thumb: "/maps/monsters/the-thing.png",
+      aspect: 0.88,
+      effects: ["breath", "ink-shiver", "gaze-tilt"],
+    },
+  },
+  {
     slug: "great-old-ones",
     latin: "Prisci siderei",
     epithet: "Star-born rulers of the elder earth",
@@ -108,12 +119,6 @@ export const BESTIARY: BestiaryPlate[] = [
     slug: "dagon",
     latin: "Dagon philistaeus",
     epithet: "The Fish-God of the ancient Philistine legend",
-    art: null,
-  },
-  {
-    slug: "the-thing",
-    latin: "Polyphemus abyssorum",
-    epithet: "Vast, Polyphemus-like, and loathsome",
     art: null,
   },
 ];

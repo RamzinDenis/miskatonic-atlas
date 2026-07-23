@@ -29,7 +29,7 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.join(ROOT, "public", "plates");
 
 /* Beasts keep their creature slug; vessels map source file → ShipKind. */
-const MONSTERS = ["tornasuk", "cthulhu", "black-winged-ones"];
+const MONSTERS = ["tornasuk", "cthulhu", "black-winged-ones", "the-thing"];
 
 /* Beasts engraved for the bestiary alone, with no marginalia on the chart:
    their small mask has nowhere to live under maps/, so it is written beside
