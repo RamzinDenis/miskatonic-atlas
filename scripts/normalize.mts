@@ -63,7 +63,9 @@ function cutGutenbergBody(text: string): string {
   const lines = text.split(/\r?\n/);
   const start = lines.findIndex((l) => l.includes("*** START OF THE PROJECT GUTENBERG EBOOK"));
   const end = lines.findIndex((l) => l.includes("*** END OF THE PROJECT GUTENBERG EBOOK"));
-  if (start === -1 || end === -1) throw new Error("Gutenberg START/END markers not found");
+  // Non-Gutenberg sources (Wikisource) carry story text only, no markers.
+  if (start === -1 && end === -1) return text;
+  if (start === -1 || end === -1) throw new Error("Gutenberg START/END markers unpaired");
   return lines.slice(start + 1, end).join("\n");
 }
 
@@ -83,7 +85,8 @@ function unwrapAndClean(block: string): string {
     .trim();
 }
 
-const CHAPTER_RE = /^(\d+)\.\s+(.+?)\.?$/;
+// "1. The Horror in Clay." (CoC) or a bare "3" (The Dunwich Horror).
+const CHAPTER_RE = /^(\d+)(?:\.\s+(.+?)\.?)?$/;
 
 export function normalize(raw: string): NormalizedStory {
   const { meta, body } = parseFrontmatter(raw);
@@ -110,9 +113,11 @@ export function normalize(raw: string): NormalizedStory {
     const heading = text.length < 60 && text.match(CHAPTER_RE);
     if (heading) {
       currentChapter = Number(heading[1]);
-      chapters.push({ n: currentChapter, title: heading[2] });
+      chapters.push({ n: currentChapter, title: heading[2] ?? "" });
       continue;
     }
+
+    if (/^the end\.?$/i.test(text)) continue;
 
     // Epigraph attribution ("—Algernon Blackwood.") belongs to the quote above it.
     if (text.startsWith("—") && paragraphs.length > 0) {

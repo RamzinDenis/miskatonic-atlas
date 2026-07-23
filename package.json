@@ -10,6 +10,8 @@
     "start": "next start",
     "lint": "eslint",
     "normalize": "node scripts/normalize.mts",
+    "extract": "node --env-file=.env.local scripts/extract.mts",
+    "merge": "node --env-file=.env.local scripts/merge.mts",
     "verify-quotes": "node scripts/verify-quotes.mts",
     "check-drafts": "node scripts/check-drafts.mts",
     "validate": "node scripts/validate.mts"
@@ -26,6 +28,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@anthropic-ai/sdk": "^0.113.0",
     "@tailwindcss/postcss": "^4",
     "@types/leaflet": "^1.9.21",
     "@types/node": "^20",
