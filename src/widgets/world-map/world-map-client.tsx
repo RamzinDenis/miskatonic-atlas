@@ -685,27 +685,39 @@ export default function WorldMapClient({
               className="parchment mt-2 min-h-0 w-64 overflow-y-auto rounded-sm p-2"
             >
               <div className="legend-cartouche px-4 pb-4 pt-3">
-                {legend.map((story) => (
-                  <section key={story.slug} className="mt-6 first:mt-0">
-                    <div
-                      className="text-center text-base leading-none text-muted"
-                      aria-hidden="true"
-                    >
-                      ❧
-                    </div>
-                    <h2 className="mt-1.5 text-center font-display text-lg italic leading-snug">
-                      <Link
-                        href={`/stories/${story.slug}`}
-                        className="transition-colors hover:text-accent"
+                {/* One shared key for the whole sheet: the stories are a
+                    compact register at its head, not sections of their own —
+                    every sign below explains marks of any story. */}
+                <section>
+                  <div
+                    className="text-center text-base leading-none text-muted"
+                    aria-hidden="true"
+                  >
+                    ❧
+                  </div>
+                  <h2 className="mt-1.5 text-center text-xs uppercase tracking-widest text-muted">
+                    Stories of this chart
+                  </h2>
+                  <div className="parchment-rule mt-2" />
+                  <ul className="mt-3 space-y-1.5">
+                    {legend.map((story) => (
+                      <li
+                        key={story.slug}
+                        className="flex items-baseline justify-between gap-3 text-sm"
                       >
-                        {story.title}
-                      </Link>
-                    </h2>
-                    <p className="text-center text-xs tracking-widest text-muted">
-                      {story.year}
-                    </p>
-                  </section>
-                ))}
+                        <Link
+                          href={`/stories/${story.slug}`}
+                          className="font-display italic leading-snug transition-colors hover:text-accent"
+                        >
+                          {story.title}
+                        </Link>
+                        <span className="text-xs tracking-widest text-muted">
+                          {story.year}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
 
                 {/* Each sign is explained once, as a chart's key would —
                     the pins themselves carry the place names. */}

@@ -263,10 +263,11 @@ export function getPickerLocations(): {
   };
 }
 
-/** The legend panel: each story with its charted major locations, A→Z. */
+/** The legend panel: the chart's stories in order of publication, each with
+    its charted major locations A→Z. */
 export function getMapLegend(): MapLegendGroup[] {
   const content = loadContent();
-  return content.stories.map((story) => ({
+  return [...content.stories].sort((a, b) => a.year - b.year).map((story) => ({
     slug: story.slug,
     title: story.title,
     year: story.year,
