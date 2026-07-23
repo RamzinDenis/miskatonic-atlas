@@ -7,6 +7,7 @@ import {
   latLngBounds,
   type LatLngBoundsExpression,
   type Map as LeafletMap,
+  type Marker as LeafletMarker,
 } from "leaflet";
 import Image from "next/image";
 import Link from "next/link";
@@ -374,6 +375,11 @@ export default function WorldMapClient({
   const handlePaperReady = useCallback(() => setPaperReady(true), []);
   const [picked, setPicked] = useState<PixelPoint | null>(null);
   const [copied, setCopied] = useState(false);
+  /* Picker mode: pins dragged off their printed position, keyed by slug.
+     Saved to content/locations/*.json by the dev-only /admin/coords/save. */
+  const [moves, setMoves] = useState<Record<string, PixelPoint>>({});
+  const [saving, setSaving] = useState(false);
+  const [saveError, setSaveError] = useState<string | null>(null);
   // This component only renders client-side (ssr: false), so the viewport
   // is known on first render: the legend starts open except on phones.
   const [legendOpen, setLegendOpen] = useState(
@@ -400,6 +406,27 @@ export default function WorldMapClient({
     await navigator.clipboard.writeText(snippet);
     setCopied(true);
     setTimeout(() => setCopied(false), 1500);
+  };
+
+  const saveMoves = async () => {
+    setSaving(true);
+    setSaveError(null);
+    try {
+      const res = await fetch("/admin/coords/save", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          moves: Object.entries(moves).map(([slug, p]) => ({ slug, ...p })),
+        }),
+      });
+      if (!res.ok) throw new Error(await res.text());
+      setMoves({});
+      router.refresh();
+    } catch (e) {
+      setSaveError((e as Error).message);
+    } finally {
+      setSaving(false);
+    }
   };
 
   const handleMapClick = (point: PixelPoint) => {
@@ -518,13 +545,21 @@ export default function WorldMapClient({
         {locations.map((location) => (
           <Marker
             key={location.slug}
-            position={pixelToLatLng(location)}
+            position={pixelToLatLng(moves[location.slug] ?? location)}
             icon={locationIcon(location, selected?.slug === location.slug)}
             alt={location.name}
+            draggable={picker}
             eventHandlers={{
               click: () => {
                 setSelectedLeg(null);
                 setSelected(location);
+              },
+              dragend: (e) => {
+                const at = (e.target as LeafletMarker).getLatLng();
+                setMoves((prev) => ({
+                  ...prev,
+                  [location.slug]: latLngToPixel(at.lat, at.lng),
+                }));
               },
             }}
           />
@@ -826,9 +861,43 @@ export default function WorldMapClient({
             </>
           ) : (
             <p className="mt-2 text-sm text-muted">
-              Click the map to get pixel coordinates of world.jpg for a
-              location&apos;s <code className="font-mono">map</code> field.
+              Drag a pin to move a location, or click the map to get pixel
+              coordinates for a new one.
             </p>
+          )}
+          {Object.keys(moves).length > 0 && (
+            <div className="mt-3 border-t border-line pt-3">
+              <ul className="max-h-32 space-y-1 overflow-y-auto font-mono text-xs text-muted">
+                {Object.entries(moves).map(([slug, p]) => (
+                  <li key={slug}>
+                    {slug} → {p.x}, {p.y}
+                  </li>
+                ))}
+              </ul>
+              {saveError && (
+                <p className="mt-2 text-xs text-red-400">{saveError}</p>
+              )}
+              <div className="mt-2 flex gap-2">
+                <button
+                  type="button"
+                  onClick={saveMoves}
+                  disabled={saving}
+                  className="rounded-md border border-line px-3 py-1.5 text-sm text-accent transition-colors hover:border-accent disabled:opacity-50"
+                >
+                  {saving
+                    ? "Saving…"
+                    : `Save ${Object.keys(moves).length} to content/`}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setMoves({})}
+                  disabled={saving}
+                  className="rounded-md border border-line px-3 py-1.5 text-sm text-muted transition-colors hover:border-accent disabled:opacity-50"
+                >
+                  Reset
+                </button>
+              </div>
+            </div>
           )}
         </aside>
       )}
