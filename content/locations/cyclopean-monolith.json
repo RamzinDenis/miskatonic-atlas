@@ -1,0 +1,30 @@
+{
+  "slug": "cyclopean-monolith",
+  "name": "the Cyclopean Monolith",
+  "type": "ruin",
+  "summary": "A vast, ancient stone monolith rising from an abyss at the bottom of the sea, carved with aquatic hieroglyphics and worshipped by a fish-like creature that emerged from the water to embrace it.",
+  "description": "Rising about a hundred yards across the valley, the Cyclopean Monolith first appeared to the narrator as a vast and singular object gleaming whitely in the light of the ascendant moon. Closer inspection showed it to be a gigantic, well-shaped piece of stone whose contour and position seemed not altogether the work of Nature, but rather the workmanship — and perhaps the worship — of living and thinking creatures. It stood within an abyss that had yawned at the bottom of the sea since the world was young.\n\nThe monolith's surface bore inscriptions and crude sculptures in a system of hieroglyphics unknown to the narrator, consisting for the most part of conventionalized aquatic symbols such as fishes, eels, octopi, crustaceans, molluscs, and whales. Some of the bas-reliefs depicted fish-like men disporting themselves in water, or paying homage at a monolithic shrine that appeared to be under the waves as well.\n\nA vast, scaly creature rose from the water and flung its gigantic arms about the monolith, bowing its hideous head and giving vent to certain measured sounds, as if performing some rite of worship before the ancient stone.",
+  "appearsIn": [
+    "dagon"
+  ],
+  "connectedTo": [
+    "valley"
+  ],
+  "sources": [
+    {
+      "storySlug": "dagon",
+      "paragraph": 12,
+      "quote": "All at once my attention was captured by a vast and singular object on the opposite slope, which rose steeply about a hundred yards ahead of me; an object that gleamed whitely in the newly bestowed rays of the ascending moon."
+    },
+    {
+      "storySlug": "dagon",
+      "paragraph": 14,
+      "quote": "Across the chasm, the wavelets washed the base of the Cyclopean monolith; on whose surface I could now trace both inscriptions and crude sculptures."
+    },
+    {
+      "storySlug": "dagon",
+      "paragraph": 17,
+      "quote": "it darted like a stupendous monster of nightmares to the monolith, about which it flung its gigantic scaly arms, the while it bowed its hideous head and gave vent to certain measured sounds."
+    }
+  ]
+}

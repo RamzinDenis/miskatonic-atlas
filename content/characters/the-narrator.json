@@ -1,0 +1,32 @@
+{
+  "slug": "the-narrator",
+  "name": "The Narrator",
+  "role": "protagonist",
+  "summary": "The unnamed narrator, a shell-shocked survivor of a German sea-raider attack in the Pacific, recounts his harrowing encounter with a monstrous creature and the ancient monolith it worshipped, an experience that drove him to morphine addiction and ultimately to the resolve to end his own life.",
+  "description": "The unnamed narrator, formerly super-cargo aboard a packet vessel, was captured when a German sea-raider attacked his ship in a remote part of the Pacific; treated fairly as a prisoner, he escaped alone five days later in a small boat with provisions. Lacking navigational skill, he drifted for days beneath the sun until he awoke half sucked into a vast expanse of black mire, his boat grounded nearby — the exposed floor of the ocean, he surmised, thrust upward by some volcanic upheaval.\n\nSetting out overland with food and water, he journeyed for days toward a distant hummock, reaching its base on the fourth evening. After sleeping and waking from disturbing dreams, he climbed the mound by moonlight and looked down into an immense pit, where he discovered a vast whitish monolith across the chasm carved with sculptures and inscriptions. There he witnessed an enormous, Polyphemus-like creature rise from the water to embrace the stone and utter measured sounds, an experience that he believed drove him briefly mad.\n\nRescued in mid-ocean by the captain of an American ship and hospitalized in San Francisco, he later sought out a celebrated ethnologist regarding the legend of Dagon, the Fish-God, but abandoned his inquiries on finding the man conventional. Haunted by visions of nameless things worshipping ancient idols on the sea floor, he became a hopeless slave to morphine, and at last, hearing what he took for an immense slippery body lumbering at his door, resolved to end his life by leaping from his garret window.",
+  "locations": [
+    "pacific",
+    "san-francisco"
+  ],
+  "appearsIn": [
+    "dagon"
+  ],
+  "fate": "He resolves to end his own life after writing his account, believing an immense slippery creature is at his door and that 'the end is near.'",
+  "sources": [
+    {
+      "storySlug": "dagon",
+      "paragraph": 1,
+      "quote": "I am writing this under an appreciable mental strain, since by tonight I shall be no more."
+    },
+    {
+      "storySlug": "dagon",
+      "paragraph": 17,
+      "quote": "I think I went mad then."
+    },
+    {
+      "storySlug": "dagon",
+      "paragraph": 22,
+      "quote": "The end is near. I hear a noise at the door, as of some immense slippery body lumbering against it. It shall not find me. God, that hand! The window! The window!"
+    }
+  ]
+}

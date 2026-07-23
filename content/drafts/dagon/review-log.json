@@ -1,0 +1,41 @@
+{
+  "decisions": {
+    "locations/cyclopean-monolith": {
+      "edited": true,
+      "at": "2026-07-23T14:47:36.962Z",
+      "verdict": "as-is"
+    },
+    "locations/san-francisco": {
+      "verdict": "as-is",
+      "at": "2026-07-23T14:42:13.104Z"
+    },
+    "characters/the-narrator": {
+      "verdict": "as-is",
+      "at": "2026-07-23T14:43:34.279Z"
+    },
+    "creatures/dagon": {
+      "verdict": "as-is",
+      "at": "2026-07-23T14:43:48.915Z"
+    },
+    "creatures/the-thing": {
+      "verdict": "as-is",
+      "at": "2026-07-23T14:43:59.660Z"
+    },
+    "characters/celebrated-ethnologist": {
+      "verdict": "junk",
+      "at": "2026-07-23T14:46:22.538Z"
+    },
+    "characters/captain-of-the-american-ship": {
+      "verdict": "junk",
+      "at": "2026-07-23T14:46:24.240Z"
+    },
+    "locations/valley": {
+      "verdict": "as-is",
+      "at": "2026-07-23T14:47:35.305Z"
+    },
+    "locations/pacific": {
+      "verdict": "as-is",
+      "at": "2026-07-23T14:50:30.773Z"
+    }
+  }
+}

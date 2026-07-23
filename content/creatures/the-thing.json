@@ -1,0 +1,25 @@
+{
+  "slug": "the-thing",
+  "name": "The Thing",
+  "classification": "entity",
+  "summary": "A vast, Polyphemus-like sea creature that rose from the depths of a sunken chasm to embrace the great monolith, uttering strange measured sounds, and which may have later stalked the narrator to his door.",
+  "description": "The creature rose to the surface of the flooded chasm with only a slight churning of the water, revealing itself as vast, Polyphemus-like, and loathsome. It darted toward the great monolith like a stupendous monster of nightmare, flung its gigantic scaly arms about the stone, bowed its hideous head, and gave vent to certain measured sounds, apparently in a form of worship or communion with the ancient carved idol.\n\nAt the close of the narrator's account, an immense slippery body is heard lumbering against his door, suggesting the creature — or one like it — had tracked him to his refuge.",
+  "locations": [
+    "cyclopean-monolith"
+  ],
+  "appearsIn": [
+    "dagon"
+  ],
+  "sources": [
+    {
+      "storySlug": "dagon",
+      "paragraph": 17,
+      "quote": "Then suddenly I saw it. With only a slight churning to mark its rise to the surface, the thing slid into view above the dark waters. Vast, Polyphemus-like, and loathsome, it darted like a stupendous monster of nightmares to the monolith, about which it flung its gigantic scaly arms, the while it bowed its hideous head and gave vent to certain measured sounds."
+    },
+    {
+      "storySlug": "dagon",
+      "paragraph": 22,
+      "quote": "I hear a noise at the door, as of some immense slippery body lumbering against it."
+    }
+  ]
+}

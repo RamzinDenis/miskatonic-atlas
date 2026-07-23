@@ -1,0 +1,18 @@
+{
+  "slug": "dagon",
+  "name": "Dagon",
+  "classification": "deity",
+  "summary": "Dagon, the Fish-God of ancient Philistine legend, is invoked by the narrator when questioning a celebrated ethnologist, hinting obliquely at the identity of the monstrous entity he witnessed.",
+  "description": "Dagon is referenced only briefly, as the subject of an ancient Philistine legend the narrator raised with a celebrated ethnologist, who identified him as 'the Fish-God.' No further details of Dagon's nature or history are given in the account.",
+  "locations": [],
+  "appearsIn": [
+    "dagon"
+  ],
+  "sources": [
+    {
+      "storySlug": "dagon",
+      "paragraph": 19,
+      "quote": "the ancient Philistine legend of Dagon, the Fish-God"
+    }
+  ]
+}

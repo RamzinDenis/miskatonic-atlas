@@ -1,0 +1,269 @@
+[
+  {
+    "kind": "location",
+    "name": "the valley",
+    "aliases": [
+      "the chasm",
+      "the abyss"
+    ],
+    "facts": [
+      "The slopes of the valley were not as perpendicular as the narrator had imagined, with ledges and rock outcroppings offering footholds for descent.",
+      "After a drop of a few hundred feet the declivity became very gradual.",
+      "The abyss had yawned at the bottom of the sea since the world was young.",
+      "A far-flung body of water flowed at the bottom of the chasm, winding out of sight in both directions."
+    ],
+    "typeGuess": "region",
+    "relatedNames": [
+      "the Cyclopean monolith"
+    ],
+    "sources": [
+      {
+        "storySlug": "dagon",
+        "paragraph": 11,
+        "quote": "the slopes of the valley were not quite so perpendicular as I had imagined"
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 12,
+        "quote": "its location in an abyss which had yawned at the bottom of the sea since the world was young"
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 13,
+        "quote": "a far-flung body of water flowed at the bottom, winding out of sight in both directions, and almost lapping my feet as I stood on the slope."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the Cyclopean monolith",
+    "aliases": [
+      "a well-shaped monolith",
+      "the strange object"
+    ],
+    "facts": [
+      "The object gleamed whitely on the opposite slope in the newly bestowed rays of the ascending moon.",
+      "It was a well-shaped monolith whose massive bulk showed workmanship and perhaps worship by living and thinking creatures.",
+      "Its surface bore inscriptions and crude sculptures in a system of hieroglyphics unknown to the narrator.",
+      "The carvings consisted mostly of conventionalized aquatic symbols such as fishes, eels, octopi, crustaceans, molluscs, and whales.",
+      "Bas-reliefs on the monolith depicted fish-like men disporting in water or paying homage at a monolithic shrine appearing to be under the waves.",
+      "A vast creature rose from the water and flung its gigantic scaly arms about the monolith, bowing its head and making measured sounds."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "the thing"
+    ],
+    "sources": [
+      {
+        "storySlug": "dagon",
+        "paragraph": 12,
+        "quote": "the strange object was a well-shaped monolith whose massive bulk had know the workmanship and perhaps the worship of living and thinking creatures."
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 14,
+        "quote": "Across the chasm, the wavelets washed the base of the Cyclopean monolith; on whose surface I could now trace both inscriptions and crude sculptures."
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 14,
+        "quote": "consisting for the most part of conventionalized aquatic symbols such as fishes, eels, octopi, crustaceans, molluscs, whales, and the like."
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 15,
+        "quote": "paying homage at some monolithic shrine which appeared to be under the waves as well"
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 17,
+        "quote": "it darted like a stupendous monster of nightmares to the monolith, about which it flung its gigantic scaly arms, the while it bowed its hideous head and gave vent to certain measured sounds."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "San Francisco",
+    "aliases": [],
+    "facts": [
+      "The narrator awoke in a San Francisco hospital after being rescued.",
+      "He was brought there by the captain of the American ship that picked up his boat in mid-ocean."
+    ],
+    "typeGuess": "city",
+    "relatedNames": [
+      "The Narrator",
+      "the captain of the American ship"
+    ],
+    "sources": [
+      {
+        "storySlug": "dagon",
+        "paragraph": 19,
+        "quote": "When I came out of the shadows I was in a San Francisco hospital; brought thither by the captain of the American ship which had picked up my boat in mid-ocean."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "He scrambled down the rocks and stood on the gentler slope, gazing into the deeps.",
+      "He examined the monolith's inscriptions and sculptures across the chasm.",
+      "He witnessed a vast creature rise from the water and embrace the monolith, and believed he went mad.",
+      "He had a delirious journey back to his stranded boat, singing and laughing oddly.",
+      "He was found and hospitalized in San Francisco after being picked up in mid-ocean by an American ship's captain.",
+      "He sought out a celebrated ethnologist and asked about the legend of Dagon, the Fish-God, but did not press further after finding the man conventional.",
+      "He tried morphine for relief from his visions but became a hopeless slave to the drug.",
+      "He has written a full account and intends to end matters.",
+      "He wonders if the events were a mere fever-phantasm suffered after escaping a German man-of-war.",
+      "He envisions nameless things crawling on the sea floor, worshipping ancient stone idols and carving likenesses on submarine obelisks, and fears mankind's future destruction.",
+      "At the end he hears a noise at the door as of an immense slippery body lumbering against it."
+    ],
+    "typeGuess": "protagonist",
+    "fate": "He resolves to end his own life after writing his account, believing an immense slippery creature is at his door and that 'the end is near.'",
+    "relatedNames": [
+      "the Cyclopean monolith",
+      "the thing",
+      "Dagon",
+      "a celebrated ethnologist",
+      "the captain of the American ship"
+    ],
+    "sources": [
+      {
+        "storySlug": "dagon",
+        "paragraph": 11,
+        "quote": "I scrambled with difficulty down the rocks and stood on the gentler slope beneath, gazing into the Stygian deeps where no light had yet penetrated."
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 17,
+        "quote": "I think I went mad then."
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 19,
+        "quote": "Once I sought out a celebrated ethnologist, and amused him with peculiar questions regarding the ancient Philistine legend of Dagon, the Fish-God; but soon perceiving that he was hopelessly conventional, I did not press my inquiries."
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 20,
+        "quote": "I tried morphine; but the drug has given only transient surcease, and has drawn me into its clutches as a hopeless slave."
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 20,
+        "quote": "So now I am going to end matters, having written a full account for the information or the contemptuous amusement of my fellow-men."
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 20,
+        "quote": "a mere freak of fever as I lay sun-stricken and raving in the open boat after my escape from the German man-of-war."
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 21,
+        "quote": "I cannot think of the deep sea without shuddering at the nameless things that may at this very moment be crawling and floundering on its slimy bed, worshipping their ancient stone idols and carving their own detestable likenesses on submarine obelisks of water-soaked granite."
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 22,
+        "quote": "The end is near. I hear a noise at the door, as of some immense slippery body lumbering against it. It shall not find me. God, that hand! The window! The window!"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "a celebrated ethnologist",
+    "aliases": [],
+    "facts": [
+      "The narrator sought him out and asked him peculiar questions about the ancient Philistine legend of Dagon, the Fish-God.",
+      "He was perceived by the narrator as hopelessly conventional."
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": [
+      "The Narrator",
+      "Dagon"
+    ],
+    "sources": [
+      {
+        "storySlug": "dagon",
+        "paragraph": 19,
+        "quote": "Once I sought out a celebrated ethnologist, and amused him with peculiar questions regarding the ancient Philistine legend of Dagon, the Fish-God; but soon perceiving that he was hopelessly conventional, I did not press my inquiries."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "the captain of the American ship",
+    "aliases": [],
+    "facts": [
+      "He picked up the narrator's boat in mid-ocean.",
+      "He brought the narrator to a San Francisco hospital."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "The Narrator",
+      "San Francisco"
+    ],
+    "sources": [
+      {
+        "storySlug": "dagon",
+        "paragraph": 19,
+        "quote": "brought thither by the captain of the American ship which had picked up my boat in mid-ocean"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "the thing",
+    "aliases": [
+      "it"
+    ],
+    "facts": [
+      "It rose to the surface with only a slight churning of the water.",
+      "It was vast, Polyphemus-like, and loathsome.",
+      "It darted like a stupendous monster of nightmares toward the monolith.",
+      "It flung its gigantic scaly arms about the monolith, bowed its hideous head, and gave vent to certain measured sounds.",
+      "At the story's end, an immense slippery body is heard lumbering against the narrator's door."
+    ],
+    "typeGuess": "entity",
+    "relatedNames": [
+      "the Cyclopean monolith",
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "dagon",
+        "paragraph": 17,
+        "quote": "Then suddenly I saw it. With only a slight churning to mark its rise to the surface, the thing slid into view above the dark waters. Vast, Polyphemus-like, and loathsome, it darted like a stupendous monster of nightmares to the monolith, about which it flung its gigantic scaly arms, the while it bowed its hideous head and gave vent to certain measured sounds."
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 22,
+        "quote": "I hear a noise at the door, as of some immense slippery body lumbering against it."
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Dagon",
+    "aliases": [
+      "the Fish-God"
+    ],
+    "facts": [
+      "Dagon is referenced as an ancient Philistine legend, called the Fish-God."
+    ],
+    "typeGuess": "deity",
+    "relatedNames": [
+      "The Narrator",
+      "a celebrated ethnologist"
+    ],
+    "sources": [
+      {
+        "storySlug": "dagon",
+        "paragraph": 19,
+        "quote": "the ancient Philistine legend of Dagon, the Fish-God"
+      }
+    ]
+  }
+]

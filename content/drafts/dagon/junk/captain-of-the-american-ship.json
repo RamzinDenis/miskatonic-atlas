@@ -1,0 +1,33 @@
+{
+  "slug": "captain-of-the-american-ship",
+  "name": "The Captain of the American Ship",
+  "role": "other",
+  "summary": "The captain of an American ship who rescued the narrator's boat in mid-ocean and brought him to a hospital in San Francisco.",
+  "description": "This unnamed captain commanded the American ship that picked up the narrator's small boat adrift in mid-ocean. He subsequently brought the delirious narrator to a hospital in San Francisco, where he was treated.",
+  "locations": [
+    "pacific",
+    "san-francisco"
+  ],
+  "appearsIn": [
+    "dagon"
+  ],
+  "sources": [
+    {
+      "storySlug": "dagon",
+      "paragraph": 19,
+      "quote": "brought thither by the captain of the American ship which had picked up my boat in mid-ocean"
+    }
+  ],
+  "_draft": {
+    "aliases": [],
+    "occurrences": 1,
+    "windows": [
+      "w011-022"
+    ],
+    "facts": [
+      "He picked up the narrator's boat in mid-ocean.",
+      "He brought the narrator to a San Francisco hospital."
+    ],
+    "needsReview": []
+  }
+}

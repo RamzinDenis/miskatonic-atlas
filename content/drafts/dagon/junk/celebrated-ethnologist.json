@@ -1,0 +1,30 @@
+{
+  "slug": "celebrated-ethnologist",
+  "name": "A Celebrated Ethnologist",
+  "role": "scholar",
+  "summary": "An unnamed scholar consulted by the narrator regarding the ancient Philistine legend of Dagon, the Fish-God, though the narrator abandoned his inquiries upon judging the man hopelessly conventional.",
+  "description": "The narrator sought out this celebrated ethnologist and questioned him about the ancient Philistine legend of Dagon, the Fish-God, hoping perhaps for insight into his own harrowing experience. Finding the man hopelessly conventional in his views, the narrator did not press his inquiries further.",
+  "locations": [],
+  "appearsIn": [
+    "dagon"
+  ],
+  "sources": [
+    {
+      "storySlug": "dagon",
+      "paragraph": 19,
+      "quote": "Once I sought out a celebrated ethnologist, and amused him with peculiar questions regarding the ancient Philistine legend of Dagon, the Fish-God; but soon perceiving that he was hopelessly conventional, I did not press my inquiries."
+    }
+  ],
+  "_draft": {
+    "aliases": [],
+    "occurrences": 1,
+    "windows": [
+      "w011-022"
+    ],
+    "facts": [
+      "The narrator sought him out and asked him peculiar questions about the ancient Philistine legend of Dagon, the Fish-God.",
+      "He was perceived by the narrator as hopelessly conventional."
+    ],
+    "needsReview": []
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "slug": "valley",
+  "name": "the Valley",
+  "type": "region",
+  "summary": "A vast chasm at the bottom of the sea, exposed by an earthquake, with gently sloping sides and a body of water flowing along its floor; the Cyclopean Monolith stands on its far slope.",
+  "description": "The valley — also called the chasm or the abyss — had yawned at the bottom of the sea since the world was young. Its slopes proved less perpendicular than they first appeared, offering ledges and rock outcroppings that permitted a difficult descent; after a drop of a few hundred feet the declivity became very gradual.\n\nA far-flung body of water flowed at the bottom of the chasm, winding out of sight in both directions and nearly lapping the narrator's feet as he stood on the slope. Across this water, on the valley's opposite slope, stood the Cyclopean Monolith.",
+  "appearsIn": [
+    "dagon"
+  ],
+  "connectedTo": [
+    "cyclopean-monolith"
+  ],
+  "sources": [
+    {
+      "storySlug": "dagon",
+      "paragraph": 11,
+      "quote": "the slopes of the valley were not quite so perpendicular as I had imagined"
+    },
+    {
+      "storySlug": "dagon",
+      "paragraph": 12,
+      "quote": "its location in an abyss which had yawned at the bottom of the sea since the world was young"
+    },
+    {
+      "storySlug": "dagon",
+      "paragraph": 13,
+      "quote": "a far-flung body of water flowed at the bottom, winding out of sight in both directions, and almost lapping my feet as I stood on the slope."
+    }
+  ]
+}

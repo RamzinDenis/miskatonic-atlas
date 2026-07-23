@@ -1,0 +1,138 @@
+[
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "He is writing under an appreciable mental strain because by tonight he shall be no more.",
+      "He is penniless and at the end of his supply of morphine.",
+      "He plans to cast himself from his garret window into the squalid street below.",
+      "He is addicted to morphine (slavery to morphine).",
+      "He was super-cargo of a packet that fell victim to a German sea-raider in the Pacific.",
+      "He was treated fairly as a naval prisoner after the ship's capture.",
+      "Five days after being taken prisoner he escaped alone in a small boat with water and provisions.",
+      "He was not a competent navigator and only guessed he was somewhat south of the equator.",
+      "He drifted aimlessly for uncounted days beneath the sun without sighting ship or land.",
+      "He awoke to find himself half sucked into a slimy expanse of black mire with his boat grounded nearby.",
+      "He theorized that a volcanic upheaval had thrust a portion of the ocean floor to the surface.",
+      "He made a pack of food and water and set out overland in search of the vanished sea.",
+      "He traveled westward for several days guided by a distant hummock.",
+      "On the fourth evening he reached the base of the mound/hummock and slept in its shadow.",
+      "He awoke from wild dreams and decided to travel by moonlight instead of by day.",
+      "He climbed to the crest of the mound and looked down into an immense pit or canyon.",
+      "He descended the rocky slope into the valley.",
+      "He noticed a vast, singular whitish object on the opposite slope that turned out to be a monolith."
+    ],
+    "typeGuess": "protagonist",
+    "relatedNames": [
+      "the Pacific",
+      "the monolith"
+    ],
+    "sources": [
+      {
+        "storySlug": "dagon",
+        "paragraph": 1,
+        "quote": "I am writing this under an appreciable mental strain, since by tonight I shall be no more."
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 1,
+        "quote": "Penniless, and at the end of my supply of the drug which alone makes life endurable, I can bear the torture no longer; and shall cast myself from this garret window into the squalid street below."
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 2,
+        "quote": "It was in one of the most open and least frequented parts of the Pacific that the packet of which I was super-cargo fell a victim to the German sea-raider."
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 2,
+        "quote": "five days after we were taken I managed to escape alone in a small boat with water and provisions for a good length of time."
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 3,
+        "quote": "Never a competent navigator, I could only guess vaguely by the sun and stars that I was somewhat south of the equator."
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 4,
+        "quote": "When at last I awaked, it was to discover myself half sucked into a slimy expanse of hellish black mire which extended about me in monotonous undulations as far as I could see, and in which my boat lay grounded some distance away."
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 6,
+        "quote": "Through some unprecedented volcanic upheaval, a portion of the ocean floor must have been thrown to the surface, exposing regions which for innumerable millions of years had lain hidden under unfathomable watery depths."
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 8,
+        "quote": "By the fourth evening I attained the base of the mound which turned out to be much higher than it had appeared from a distance"
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 10,
+        "quote": "I think my horror was greater when I gained the summit of the mound and looked down the other side into an immeasurable pit or canyon, whose black recesses the moon had not yet soared high enough to illumine."
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 12,
+        "quote": "All at once my attention was captured by a vast and singular object on the opposite slope, which rose steeply about a hundred yards ahead of me; an object that gleamed whitely in the newly bestowed rays of the ascending moon."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the Pacific",
+    "aliases": [],
+    "facts": [
+      "It was in one of the most open and least frequented parts of the Pacific that the narrator's packet was captured by a German sea-raider.",
+      "At the time, the great war was at its very beginning and the enemy navy had not reached its later degree of ruthlessness."
+    ],
+    "typeGuess": "sea",
+    "realWorld": "Pacific Ocean",
+    "relatedNames": [
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "dagon",
+        "paragraph": 2,
+        "quote": "It was in one of the most open and least frequented parts of the Pacific that the packet of which I was super-cargo fell a victim to the German sea-raider."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the monolith",
+    "aliases": [
+      "the strange object",
+      "a gigantic piece of stone",
+      "a vast and singular object"
+    ],
+    "facts": [
+      "It was a vast and singular object on the opposite slope of the valley that gleamed whitely in the moonlight.",
+      "It rose steeply about a hundred yards ahead of the narrator.",
+      "It was a gigantic piece of stone.",
+      "Its contour and position seemed not altogether the work of Nature.",
+      "It was located in an abyss that had yawned at the bottom of the sea since the world was young.",
+      "It was a well-shaped monolith whose massive bulk had known the workmanship and perhaps the worship of living and thinking creatures."
+    ],
+    "typeGuess": "ruin",
+    "relatedNames": [
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "dagon",
+        "paragraph": 12,
+        "quote": "All at once my attention was captured by a vast and singular object on the opposite slope, which rose steeply about a hundred yards ahead of me; an object that gleamed whitely in the newly bestowed rays of the ascending moon."
+      },
+      {
+        "storySlug": "dagon",
+        "paragraph": 12,
+        "quote": "I perceived beyond a doubt that the strange object was a well-shaped monolith whose massive bulk had know the workmanship and perhaps the worship of living and thinking creatures."
+      }
+    ]
+  }
+]

@@ -2,23 +2,29 @@
   "slug": "san-francisco",
   "name": "San Francisco",
   "type": "city",
+  "prominence": "minor",
+  "summary": "The city for which the narrator of The Call of Cthulhu took a train while following the Alert's trail, and the city in whose hospital the narrator of Dagon awoke after being rescued from the Pacific.",
+  "description": "After a day of hurried cabling and arranging, the narrator bade his host adieu and took a train for San Francisco.\n\nIn Dagon, the narrator awoke in a San Francisco hospital after his ordeal at sea, having been brought there by the captain of the American ship that had picked up his boat in mid-ocean.",
   "map": {
     "x": 2031,
     "y": 1322
   },
-  "prominence": "minor",
-  "summary": "The city for which the narrator took a train after a day of hurried cabling and arranging, setting out on the trail of the Alert's story.",
-  "description": "After a day of hurried cabling and arranging, the narrator bade his host adieu and took a train for San Francisco.",
   "appearsIn": [
-    "the-call-of-cthulhu"
+    "the-call-of-cthulhu",
+    "dagon"
   ],
   "connectedTo": [],
   "sources": [
     {
       "storySlug": "the-call-of-cthulhu",
+      "paragraph": 89,
       "quote": "That evening, after a day of hurried cabling and arranging, I bade my host adieu and took a train for San Francisco.",
-      "context": "Chapter 3, The Madness from the Sea",
-      "paragraph": 89
+      "context": "Chapter 3, The Madness from the Sea"
+    },
+    {
+      "storySlug": "dagon",
+      "paragraph": 19,
+      "quote": "When I came out of the shadows I was in a San Francisco hospital; brought thither by the captain of the American ship which had picked up my boat in mid-ocean."
     }
   ]
 }
