@@ -73,7 +73,7 @@ export const MONSTERS: MapMonster[] = [
     slug: "the-thing",
     name: "The Thing",
     storySlug: "dagon",
-    at: { x: 2085, y: 1815 },
+    at: { x: 1960, y: 1890 },
     art: { w: 66, h: 58 },
   },
 ];
