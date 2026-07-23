@@ -16,12 +16,18 @@ import type {
  * utilitarian styling — a workbench, not part of the atlas presentation.
  */
 
+interface NeedsReviewItem {
+  field: string;
+  reason: string;
+  candidates?: string[];
+}
+
 interface DraftBlock {
   aliases?: string[];
   occurrences?: number;
   windows?: string[];
   facts?: string[];
-  needsReview?: { field: string; reason: string; candidates?: string[] }[];
+  needsReview?: NeedsReviewItem[];
 }
 
 const API = "/admin/review/api";
@@ -365,10 +371,42 @@ function DraftDetail({
   onSave: () => void;
   onVerdict: (v: "as-is" | "edited" | "junk") => void;
 }) {
-  const entity = parseEntity(draft.raw);
+  // Render from the editor state when it parses, so candidate clicks and
+  // manual edits are reflected immediately; fall back to the file on disk.
+  const editorEntity = parseEntity(editorText);
+  const entity = editorEntity ?? parseEntity(draft.raw);
   const block = entity?._draft as DraftBlock | undefined;
   const quotes = report?.quotes ?? draft.quotes;
   const dirty = editorText !== draft.raw;
+
+  /** Mutate the parsed editor JSON and write it back into the textarea. */
+  const mutateEditor = (
+    fn: (entity: Record<string, unknown>, block: DraftBlock) => void,
+  ) => {
+    if (!editorEntity) return;
+    fn(editorEntity, (editorEntity._draft ?? {}) as DraftBlock);
+    setEditorText(JSON.stringify(editorEntity, null, 2) + "\n");
+  };
+
+  // Scalar field: apply the candidate and resolve the item in one click.
+  // Array field (slug lists): toggle membership, resolve via "keep current".
+  const applyCandidate = (index: number, item: NeedsReviewItem, candidate: string) =>
+    mutateEditor((entity, block) => {
+      const current = entity[item.field];
+      if (Array.isArray(current)) {
+        entity[item.field] = current.includes(candidate)
+          ? current.filter((v) => v !== candidate)
+          : [...current, candidate];
+      } else {
+        entity[item.field] = candidate;
+        block.needsReview?.splice(index, 1);
+      }
+    });
+
+  const resolveItem = (index: number) =>
+    mutateEditor((_entity, block) => {
+      block.needsReview?.splice(index, 1);
+    });
 
   return (
     <main className="overflow-y-auto p-4">
@@ -416,33 +454,72 @@ function DraftDetail({
 
       {block?.needsReview && block.needsReview.length > 0 && (
         <section className="mb-3 space-y-2">
-          {block.needsReview.map((item, i) => (
-            <div
-              key={i}
-              className="rounded border border-amber-900/70 bg-amber-950/30 px-3 py-2"
-            >
-              <div className="mb-1">
-                <code className="font-semibold text-amber-300">{item.field}</code>{" "}
-                <span className="text-neutral-300">{item.reason}</span>
-              </div>
-              {item.candidates && item.candidates.length > 0 && (
-                <div className="flex flex-wrap gap-1.5">
-                  {item.candidates.map((c) => (
-                    <code
-                      key={c}
-                      className="rounded bg-neutral-800 px-1.5 py-0.5 text-xs text-neutral-300"
-                    >
-                      {c}
-                    </code>
-                  ))}
+          {block.needsReview.map((item, i) => {
+            const current = entity?.[item.field];
+            const isArray = Array.isArray(current);
+            return (
+              <div
+                key={`${item.field}-${i}`}
+                className="rounded border border-amber-900/70 bg-amber-950/30 px-3 py-2"
+              >
+                <div className="mb-1 flex items-baseline gap-3">
+                  <span className="min-w-0 flex-1">
+                    <code className="font-semibold text-amber-300">{item.field}</code>{" "}
+                    <span className="text-neutral-300">{item.reason}</span>
+                    {!isArray && current != null && (
+                      <span className="text-neutral-500">
+                        {" "}
+                        — now <code className="text-neutral-400">{String(current)}</code>
+                      </span>
+                    )}
+                  </span>
+                  <button
+                    onClick={() => resolveItem(i)}
+                    disabled={busy || !editorEntity}
+                    title="Keep the current value and mark this item resolved"
+                    className="shrink-0 rounded border border-neutral-700 px-1.5 py-0.5 text-xs text-neutral-300 hover:bg-neutral-800 disabled:opacity-40"
+                  >
+                    ✓ keep current
+                  </button>
                 </div>
-              )}
-            </div>
-          ))}
+                {item.candidates && item.candidates.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5">
+                    {item.candidates.map((c) => {
+                      const active = isArray
+                        ? (current as unknown[]).includes(c)
+                        : current === c;
+                      return (
+                        <button
+                          key={c}
+                          onClick={() => applyCandidate(i, item, c)}
+                          disabled={busy || !editorEntity}
+                          title={
+                            isArray
+                              ? "Toggle this value in the list, then ✓ keep current to resolve"
+                              : "Set the field to this value and resolve the item"
+                          }
+                          className={`rounded border px-1.5 py-0.5 font-mono text-xs disabled:opacity-40 ${
+                            active
+                              ? "border-amber-500 bg-amber-900/60 text-amber-200"
+                              : "border-neutral-700 bg-neutral-800 text-neutral-300 hover:border-amber-700 hover:text-amber-200"
+                          }`}
+                        >
+                          {c}
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            );
+          })}
           <p className="text-xs text-neutral-500">
-            Resolve by editing the JSON below (fix the field, delete the
-            needsReview entry), then Save. Accepting drops the whole _draft
-            block.
+            Click a candidate to apply it (list fields toggle; finish them with
+            “✓ keep current”), or edit the JSON below for anything else — then
+            Save. Accepting drops the whole _draft block.
+            {!editorEntity && (
+              <span className="text-red-400"> Buttons disabled: the JSON below does not parse.</span>
+            )}
           </p>
         </section>
       )}
