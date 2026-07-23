@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import { getCreatures } from "@/shared/lib/content";
-import {
-  assertBestiaryComplete,
-  BESTIARY,
-  type BestiaryEntry,
-} from "@/widgets/bestiary/registry";
+import { bestiaryFolio } from "@/widgets/bestiary/registry";
 import { BestiaryShowcase } from "@/widgets/bestiary/showcase";
 
 /**
@@ -13,7 +9,8 @@ import { BestiaryShowcase } from "@/widgets/bestiary/showcase";
  * hands the showcase plain data; the island only turns the sheet.
  *
  * Unlike the Index, this page shows every beast on record, passing ones
- * included: the showcase is their place in the atlas's navigation.
+ * included: the showcase is their place in the atlas's navigation. Beasts
+ * fresh from review print as wanting plates until the register names them.
  */
 
 export const metadata: Metadata = {
@@ -23,25 +20,7 @@ export const metadata: Metadata = {
 };
 
 export default function BestiaryPage() {
-  const creatures = getCreatures();
-  assertBestiaryComplete(creatures.map((c) => c.slug));
-
-  /* The register sets the order of the folio, so the join runs through it. */
-  const bySlug = new Map(creatures.map((creature) => [creature.slug, creature]));
-  const entries: BestiaryEntry[] = BESTIARY.flatMap((plate, i) => {
-    const creature = bySlug.get(plate.slug);
-    return creature
-      ? [
-          {
-            ...plate,
-            name: creature.name,
-            classification: creature.classification,
-            summary: creature.summary,
-            fig: i + 1,
-          },
-        ]
-      : [];
-  });
+  const entries = bestiaryFolio(getCreatures());
 
   /* Wider than the reading column and vertically centred: the folio is an
      object held open, not an article, and on a tall screen the sheet should

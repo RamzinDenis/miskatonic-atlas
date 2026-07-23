@@ -15,6 +15,7 @@ import type {
   MapFigure,
   MapLegendGroup,
   MapLocation,
+  UnplacedLocation,
 } from "@/widgets/world-map/geometry";
 
 /**
@@ -240,6 +241,26 @@ function toMapLocation(content: AtlasContent) {
 export function getMapLocations(): MapLocation[] {
   const content = loadContent();
   return majorOnly(content.locations).flatMap(toMapLocation(content));
+}
+
+/**
+ * The dev coordinate picker's view (/admin/coords): every placed location
+ * regardless of prominence — minors are curated there too, they just stay
+ * off the shared map — plus the placement queue of locations that have no
+ * `map` yet (fresh from review promotion).
+ */
+export function getPickerLocations(): {
+  placed: MapLocation[];
+  unplaced: UnplacedLocation[];
+} {
+  const content = loadContent();
+  return {
+    placed: content.locations.flatMap(toMapLocation(content)),
+    unplaced: content.locations
+      .filter((l) => !l.map)
+      .map(({ slug, name, type }) => ({ slug, name, type }))
+      .sort((a, b) => a.name.localeCompare(b.name, "en")),
+  };
 }
 
 /** The legend panel: each story with its charted major locations, A→Z. */

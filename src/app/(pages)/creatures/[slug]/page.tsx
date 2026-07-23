@@ -5,7 +5,7 @@ import { getCreature, getCreatures, getLocation, getStory } from "@/shared/lib/c
 import { ChipSection, SourcesSection } from "@/shared/ui/sections";
 import { BestiaryFigure } from "@/widgets/bestiary/figure";
 import { LostPlate } from "@/widgets/bestiary/lost-plate";
-import { bestiaryFigure, getBestiaryPlate } from "@/widgets/bestiary/registry";
+import { bestiaryFolio } from "@/widgets/bestiary/registry";
 import { getPlate } from "@/widgets/plates";
 
 /**
@@ -34,13 +34,11 @@ export default async function CreaturePage({ params }: PageProps<"/creatures/[sl
   const creature = getCreature(slug);
   if (!creature) notFound();
 
-  const plate = getBestiaryPlate(slug);
-  if (!plate) {
-    throw new Error(
-      `no bestiary register entry for creature "${slug}" — add one in src/widgets/bestiary/registry.ts`,
-    );
-  }
-  const fig = bestiaryFigure(slug);
+  /* The folio computed the same way as on /creatures, so the figure number
+     under the engraving matches the showcase. The entry always exists — the
+     folio covers every creature, register entry or not. */
+  const plate = bestiaryFolio(getCreatures()).find((entry) => entry.slug === slug)!;
+  const fig = plate.fig;
 
   const locations = creature.locations.flatMap((s) => getLocation(s) ?? []);
   const appearsIn = creature.appearsIn.flatMap((s) => getStory(s) ?? []);
@@ -62,11 +60,13 @@ export default async function CreaturePage({ params }: PageProps<"/creatures/[sl
               {creature.classification.replace(/-/g, " ")}
             </span>
           </div>
-          <p className="mt-2 text-sm text-muted">
-            <span className="font-serif italic">{plate.latin}</span>
-            <span className="mx-2">—</span>
-            {plate.epithet}
-          </p>
+          {plate.latin && (
+            <p className="mt-2 text-sm text-muted">
+              <span className="font-serif italic">{plate.latin}</span>
+              <span className="mx-2">—</span>
+              {plate.epithet}
+            </p>
+          )}
           <div className="parchment-rule mt-5" />
         </header>
 

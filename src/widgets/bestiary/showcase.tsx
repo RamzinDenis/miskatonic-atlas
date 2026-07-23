@@ -116,13 +116,17 @@ export function BestiaryShowcase({ entries }: { entries: BestiaryEntry[] }) {
         <div className="bestiary-caption">
           <p className="bestiary-fig-no">Fig. {entry.fig} — Bestiarium</p>
           <h2 className="cap-first mt-2 font-display text-3xl">{entry.name}</h2>
+          {/* An uncurated beast has no binomial yet — the caption holds its
+              classification alone until the register names it. */}
           <p className="mt-1 font-serif italic text-muted">
             {entry.latin}
-            <span className="ml-3 text-xs uppercase not-italic tracking-widest">
+            <span
+              className={`${entry.latin ? "ml-3 " : ""}text-xs uppercase not-italic tracking-widest`}
+            >
               {entry.classification.replace(/-/g, " ")}
             </span>
           </p>
-          <p className="mt-3 text-[17px]">{entry.epithet}</p>
+          {entry.epithet && <p className="mt-3 text-[17px]">{entry.epithet}</p>}
           <p className="bestiary-summary mt-3 text-muted">{entry.summary}</p>
           <Link
             href={`/creatures/${entry.slug}`}

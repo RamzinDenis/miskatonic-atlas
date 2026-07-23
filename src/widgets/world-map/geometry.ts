@@ -69,6 +69,13 @@ export interface MapLocation extends PixelPoint {
   figures: MapFigure[];
 }
 
+/** A location still off the chart — the picker's placement queue. */
+export interface UnplacedLocation {
+  slug: string;
+  name: string;
+  type: string;
+}
+
 /** One story's section of the map legend panel. */
 export interface MapLegendGroup {
   slug: string;

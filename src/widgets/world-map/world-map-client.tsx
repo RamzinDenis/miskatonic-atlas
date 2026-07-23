@@ -39,6 +39,7 @@ import {
   type MapLegendGroup,
   type MapLocation,
   type PixelPoint,
+  type UnplacedLocation,
 } from "./geometry";
 import {
   MONSTERS,
@@ -364,12 +365,15 @@ interface Props {
   legend?: MapLegendGroup[];
   /** Dev-only coordinate picker mode: click → pixel coords + JSON snippet. */
   picker?: boolean;
+  /** Picker only: the placement queue — locations with no `map` yet. */
+  unplaced?: UnplacedLocation[];
 }
 
 export default function WorldMapClient({
   locations,
   legend,
   picker = false,
+  unplaced = [],
 }: Props) {
   const router = useRouter();
   const mapRef = useRef<LeafletMap | null>(null);
@@ -387,6 +391,8 @@ export default function WorldMapClient({
   const handlePaperReady = useCallback(() => setPaperReady(true), []);
   const [picked, setPicked] = useState<PixelPoint | null>(null);
   const [copied, setCopied] = useState(false);
+  /* Picker mode: the queued location the next chart click will pin. */
+  const [placing, setPlacing] = useState<string | null>(null);
   /* Picker mode: pins dragged off their printed position, keyed by slug.
      Saved to content/locations/*.json by the dev-only /admin/coords/save. */
   const [moves, setMoves] = useState<Record<string, PixelPoint>>({});
@@ -404,6 +410,7 @@ export default function WorldMapClient({
         setSelected(null);
         setSelectedLeg(null);
         setPicked(null);
+        setPlacing(null);
       }
     };
     window.addEventListener("keydown", onKey);
@@ -441,6 +448,27 @@ export default function WorldMapClient({
     }
   };
 
+  /** Placement queue: pin the chosen location where the click landed and
+      save at once — the refreshed page returns it as an ordinary pin. */
+  const placeAt = async (slug: string, point: PixelPoint) => {
+    setSaving(true);
+    setSaveError(null);
+    try {
+      const res = await fetch("/admin/coords/save", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ moves: [{ slug, ...point }] }),
+      });
+      if (!res.ok) throw new Error(await res.text());
+      setPlacing(null);
+      router.refresh();
+    } catch (e) {
+      setSaveError((e as Error).message);
+    } finally {
+      setSaving(false);
+    }
+  };
+
   const handleMapClick = (point: PixelPoint) => {
     if (picker) {
       const inside =
@@ -448,6 +476,10 @@ export default function WorldMapClient({
         point.x <= WORLD_MAP.width &&
         point.y >= 0 &&
         point.y <= WORLD_MAP.height;
+      if (placing && inside && !saving) {
+        void placeAt(placing, point);
+        return;
+      }
       setPicked(inside ? point : null);
       setCopied(false);
     } else {
@@ -851,6 +883,46 @@ export default function WorldMapClient({
           <span className="text-xs uppercase tracking-widest text-muted">
             Coordinate picker · dev only
           </span>
+          {unplaced.length > 0 && (
+            <div className="mt-3 border-b border-line pb-3">
+              <p className="text-xs uppercase tracking-widest text-muted">
+                Placement queue
+              </p>
+              <ul className="mt-1.5 max-h-32 space-y-1 overflow-y-auto">
+                {unplaced.map((location) => (
+                  <li key={location.slug}>
+                    <button
+                      type="button"
+                      disabled={saving}
+                      onClick={() =>
+                        setPlacing(placing === location.slug ? null : location.slug)
+                      }
+                      className={`w-full rounded-md border px-2 py-1 text-left text-sm transition-colors disabled:opacity-50 ${
+                        placing === location.slug
+                          ? "border-accent text-accent"
+                          : "border-line hover:border-accent"
+                      }`}
+                    >
+                      {location.name}
+                      <span className="ml-2 text-xs uppercase tracking-widest text-muted">
+                        {location.type}
+                      </span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-2 text-xs text-muted">
+                {placing
+                  ? saving
+                    ? "Saving…"
+                    : "Click the chart to place it (Esc to cancel)."
+                  : "Pick a location, then click the chart."}
+              </p>
+              {saveError && Object.keys(moves).length === 0 && (
+                <p className="mt-1 text-xs text-red-400">{saveError}</p>
+              )}
+            </div>
+          )}
           {picked ? (
             <>
               <pre className="mt-3 overflow-x-auto rounded-md border border-line bg-background px-3 py-2 font-mono text-sm">

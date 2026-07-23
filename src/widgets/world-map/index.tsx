@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import type { MapLegendGroup, MapLocation } from "./geometry";
+import type { MapLegendGroup, MapLocation, UnplacedLocation } from "./geometry";
 
 /**
  * Leaflet touches `window` at import time, so the real widget loads only in
@@ -16,12 +16,14 @@ const WorldMapClient = dynamic(() => import("./world-map-client"), {
   ),
 });
 
-export type { MapLegendGroup, MapLocation };
+export type { MapLegendGroup, MapLocation, UnplacedLocation };
 
 export function WorldMap(props: {
   locations: MapLocation[];
   legend?: MapLegendGroup[];
   picker?: boolean;
+  /** Picker only: locations awaiting a spot on the chart. */
+  unplaced?: UnplacedLocation[];
 }) {
   return <WorldMapClient {...props} />;
 }

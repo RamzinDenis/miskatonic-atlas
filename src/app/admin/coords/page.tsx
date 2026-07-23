@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getMapLocations } from "@/shared/lib/content";
+import { getPickerLocations } from "@/shared/lib/content";
 import { WorldMap } from "@/widgets/world-map";
 
 export const metadata: Metadata = {
@@ -9,15 +9,17 @@ export const metadata: Metadata = {
 };
 
 /**
- * Dev-only helper: click the basemap, paste the JSON snippet into a
- * location's `map` field. Compiled out of production builds entirely.
+ * Dev-only helper: drag pins to move placed locations, pick a location from
+ * the placement queue and click the chart to place it, or click bare map for
+ * a JSON snippet. Compiled out of production builds entirely.
  */
 export default function CoordsPage() {
   if (process.env.NODE_ENV === "production") notFound();
 
+  const { placed, unplaced } = getPickerLocations();
   return (
     <div className="relative h-dvh">
-      <WorldMap locations={getMapLocations()} picker />
+      <WorldMap locations={placed} unplaced={unplaced} picker />
     </div>
   );
 }

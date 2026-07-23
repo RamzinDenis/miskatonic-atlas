@@ -5,11 +5,13 @@
  * routes: they are written here by hand and never enter schemas, content
  * JSON or the extraction pipeline.
  *
- * Every creature of the atlas has an entry, major or minor — the showcase is
- * where the passing beasts are shown. A beast whose engraving was never made
- * carries `art: null` and prints as a wanting plate (lost-plate.tsx); adding
- * the art later means dropping a mask into public/bestiary/ and filling `art`
- * here, nothing else.
+ * The register is curation, not a gate: a creature promoted from review with
+ * no entry here still prints — as a wanting plate (lost-plate.tsx) under its
+ * content name, with no binomial and no epithet until the curator writes
+ * them. A registered beast whose engraving was never made carries `art: null`
+ * and prints as a wanting plate too; adding the art later means dropping a
+ * mask into public/bestiary/ and filling `art` here, nothing else. The only
+ * hard error left is an entry whose creature is gone from content/.
  *
  * Masks are the raster engravings reduced to alpha by
  * scripts/build-monster-masks.mjs and painted through CSS mask-image in
@@ -102,52 +104,83 @@ export const BESTIARY: BestiaryPlate[] = [
     epithet: "Of whom old Castro dared not speak",
     art: null,
   },
+  {
+    slug: "dagon",
+    latin: "Dagon philistaeus",
+    epithet: "The Fish-God of the ancient Philistine legend",
+    art: null,
+  },
+  {
+    slug: "the-thing",
+    latin: "Polyphemus abyssorum",
+    epithet: "Vast, Polyphemus-like, and loathsome",
+    art: null,
+  },
 ];
 
-/** The register entry for a creature, or undefined if it has none. */
-export function getBestiaryPlate(slug: string): BestiaryPlate | undefined {
-  return BESTIARY.find((entry) => entry.slug === slug);
-}
-
-/** The plate's number in the folio, as printed under every figure. */
-export function bestiaryFigure(slug: string): number {
-  return BESTIARY.findIndex((entry) => entry.slug === slug) + 1;
-}
-
-/**
- * Build-time guard on the two halves of a beast. Every creature in the
- * content needs an entry here or it would vanish from the showcase; every
- * entry here needs its creature or the showcase would print a name the
- * atlas cannot open. Either way the static build stops.
- */
-export function assertBestiaryComplete(contentSlugs: string[]): void {
-  const registered = new Set(BESTIARY.map((entry) => entry.slug));
-  const unregistered = contentSlugs.filter((slug) => !registered.has(slug));
-  const orphaned = BESTIARY.map((entry) => entry.slug).filter(
-    (slug) => !contentSlugs.includes(slug),
-  );
-  if (unregistered.length || orphaned.length) {
-    throw new Error(
-      "bestiary register out of step with content/creatures — " +
-        [
-          unregistered.length && `no register entry for ${unregistered.join(", ")}`,
-          orphaned.length && `no creature for ${orphaned.join(", ")}`,
-        ]
-          .filter(Boolean)
-          .join("; ") +
-        " (src/widgets/bestiary/registry.ts)",
-    );
-  }
-}
-
-/**
- * A register entry joined with its content — what the server hands the
- * showcase island. Plain JSON: no ReactNode, nothing to serialize around.
- */
-export interface BestiaryEntry extends BestiaryPlate {
+/** The creature content the folio needs — structural, so the widget never
+    imports the content gateway (a node:fs module) or its schemas. */
+export interface FolioCreature {
+  slug: string;
   name: string;
   classification: string;
   summary: string;
-  /** Number of the figure in the folio, 1-based. */
+}
+
+/**
+ * A plate joined with its content — what the server hands the showcase
+ * island. Plain JSON: no ReactNode, nothing to serialize around. For an
+ * uncurated beast `latin` and `epithet` are null and the caption prints
+ * without them.
+ */
+export interface BestiaryEntry {
+  slug: string;
+  name: string;
+  classification: string;
+  summary: string;
+  latin: string | null;
+  epithet: string | null;
+  art: BestiaryArt | null;
+  /** Number of the figure in the folio, 1-based over the final order. */
   fig: number;
+}
+
+/**
+ * The folio itself: every creature of the content joined with its register
+ * entry. Curated plates come first in the register's order; uncurated beasts
+ * close the folio A→Z as wanting plates. Throws only for an orphaned entry —
+ * a register row whose creature is gone would print a name the atlas cannot
+ * open, so the static build stops.
+ */
+export function bestiaryFolio(creatures: FolioCreature[]): BestiaryEntry[] {
+  const bySlug = new Map(creatures.map((creature) => [creature.slug, creature]));
+
+  const orphaned = BESTIARY.filter((plate) => !bySlug.has(plate.slug));
+  if (orphaned.length > 0) {
+    throw new Error(
+      `bestiary register out of step with content/creatures — no creature for ${orphaned
+        .map((plate) => plate.slug)
+        .join(", ")} (src/widgets/bestiary/registry.ts)`,
+    );
+  }
+
+  const registered = new Set(BESTIARY.map((plate) => plate.slug));
+  const uncurated = creatures
+    .filter((creature) => !registered.has(creature.slug))
+    .sort((a, b) => a.name.localeCompare(b.name, "en"));
+
+  return [
+    ...BESTIARY.map((plate) => ({
+      ...plate,
+      name: bySlug.get(plate.slug)!.name,
+      classification: bySlug.get(plate.slug)!.classification,
+      summary: bySlug.get(plate.slug)!.summary,
+    })),
+    ...uncurated.map((creature) => ({
+      ...creature,
+      latin: null,
+      epithet: null,
+      art: null,
+    })),
+  ].map((entry, i) => ({ ...entry, fig: i + 1 }));
 }
