@@ -20,6 +20,6 @@ Mark a verdict for every entity in /admin/review (or by hand below); the verdict
 Folding follows the «Parts & allusions» rule added to `prompts/merge.md` (2026-07-23):
 a location without cross-story presence or pin-worthy substance becomes a titled
 section (or a woven-in mention) inside its parent article instead of a page of its own.
-| The Narrator | character | 4 | 2 | |
+| The Narrator (The Nameless City) | character | 4 |  | split from the Dagon narrator (was merged by generic title; both needsReview resolved) — awaiting verdict |
 | Abdul Alhazred | character | 2 |  | |
 | The Crawling Reptiles of the Nameless City | creature | 3 | 1 | |

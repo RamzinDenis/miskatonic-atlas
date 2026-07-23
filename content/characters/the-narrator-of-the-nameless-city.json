@@ -1,0 +1,31 @@
+{
+  "slug": "the-narrator-of-the-nameless-city",
+  "name": "The Narrator (The Nameless City)",
+  "role": "protagonist",
+  "summary": "An unnamed wanderer whose consuming instinct for 'the strange and the unknown' leads him alone into the nameless city, where he uncovers an underground gallery of mummified reptilian beings and barely survives an eruption of their still-living kin from the abyss beneath the ruins.",
+  "description": "The unnamed narrator is a solitary antiquarian who deliberately defies the warnings of nearby Arabs and journeys alone by camel into a parched, terrible valley to explore the nameless city, an urge he attributes to 'that instinct for the strange and the unknown which had made me a wanderer upon earth and a haunter of far, ancient, and forbidden places.' Digging among the obliterated edifices with tools he had brought, he clears a buried aperture and, torch in hand, descends through a natural cavern and an artificial rock-hewn passage into a subterranean gallery lined with glass-fronted cases holding the mummified remains of a reptilian race, and reads their painted history as an allegorical epic of the city's rise and fall.\n\nPressing toward a brazen gate at the corridor's end, he beholds a luminous abyss beyond and collapses from exhaustion and dread, aware that among all the reptile relics his is the only human form — save for one figure shown torn to pieces in the final fresco. A rising moan and a gathering gale from the depths herald the return of the city's ancient inhabitants: amid a howling wind he babbles the couplet of 'the mad Arab Alhazred, who dreamed of the nameless city,' and glimpses a nightmare horde of devil-like reptiles surge past him back into the earth, the great brazen door clanging shut behind them.\n\nHe is left saying that some unnamed power 'guided him back to life,' though he expects forever to 'shiver in the night wind till oblivion — or worse' claims him.",
+  "locations": [
+    "the-nameless-city"
+  ],
+  "appearsIn": [
+    "the-nameless-city"
+  ],
+  "fate": "He survives the eruption from the abyss, guided back to life by means he cannot name, but remains haunted — expecting to shiver in the night wind till oblivion, or worse, claims him.",
+  "sources": [
+    {
+      "storySlug": "the-nameless-city",
+      "paragraph": 4,
+      "quote": "I alone have seen it, and that is why no other face bears such hideous lines of fear as mine"
+    },
+    {
+      "storySlug": "the-nameless-city",
+      "paragraph": 14,
+      "quote": "I was quite unbalanced with that instinct for the strange and the unknown which had made me a wanderer upon earth and a haunter of far, ancient, and forbidden places."
+    },
+    {
+      "storySlug": "the-nameless-city",
+      "paragraph": 37,
+      "quote": "what Abaddon guided me back to life, where I must always remember and shiver in the night wind till oblivion—or worse—claims me"
+    }
+  ]
+}

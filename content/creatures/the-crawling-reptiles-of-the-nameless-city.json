@@ -28,54 +28,5 @@
       "quote": "a nightmare horde of rushing devils; hate-distorted, grotesquely panoplied, half-transparent devils of a race no man might mistake—the crawling reptiles of the nameless city"
     }
   ],
-  "_draft": {
-    "aliases": [
-      "these monstrosities",
-      "these crawling creatures",
-      "the mummified forms",
-      "crawling creatures",
-      "sacred reptiles",
-      "grotesque reptiles",
-      "the nameless race",
-      "crawling reptiles of the nameless city",
-      "fiends",
-      "devils"
-    ],
-    "occurrences": 3,
-    "windows": [
-      "w011-022",
-      "w021-032",
-      "w031-039"
-    ],
-    "facts": [
-      "They were mummified and kept in glass-fronted wooden cases arranged along a long underground passage, hideously like coffins in shape and size.",
-      "They were of the reptile kind, with body lines suggesting sometimes the crocodile, sometimes the seal.",
-      "In size they approximated a small man, and their forelegs bore feet curiously like human hands and fingers.",
-      "Their heads had a contour violating known biological principles, with a colossal protuberant forehead, horns, noselessness, and an alligator-like jaw.",
-      "The narrator decided they were some paleogean species which had lived when the nameless city was alive.",
-      "Most of them were gorgeously enrobed in costly fabrics and laden with ornaments of gold, jewels, and unknown shining metals.",
-      "They held first place among the wild designs on the frescoed walls and ceiling of the underground hall, depicted with cities and gardens fashioned to their own dimensions.",
-      "The narrator believed their pictured history was allegorical, perhaps showing the progress of the race that worshipped them.",
-      "They were, to the men of the nameless city, what the she-wolf was to Rome or a totem-beast to a tribe of Indians.",
-      "In the narrator's imagined epic, the city's people were represented in allegory by these grotesque reptiles as they were driven to chisel a way down through the rocks to another world.",
-      "Emaciated priests, displayed as reptiles in ornate robes, were shown cursing the upper air and all who breathed it in later frescoes.",
-      "The forms of the people, always represented by the sacred reptiles, appeared to gradually waste away, while their spirits hovering above the ruins by moonlight gained in proportion.",
-      "Their hideous mummified forms lay close to the narrator in the corridor.",
-      "The nameless race tore a man to pieces, as recalled by the narrator.",
-      "A nightmare horde of these creatures was described as hate-distorted, grotesquely panoplied, and half-transparent devils of a race no man might mistake.",
-      "Their voices took the articulate form of ghastly cursing and snarling of strange-tongued fiends.",
-      "They were the crawling reptiles of the nameless city.",
-      "The great brazen door clanged shut behind the last of the creatures."
-    ],
-    "needsReview": [
-      {
-        "field": "identity",
-        "reason": "unclear whether the mummified specimens displayed in cases and the living horde encountered at the climax are the same surviving population or merely a related but distinct manifestation of the race",
-        "candidates": [
-          "same race, a dormant/living remnant survived alongside the mummified dead",
-          "a separate, spectral or otherwise distinct manifestation of the same race"
-        ]
-      }
-    ]
-  }
+  "identity": "same race, a dormant/living remnant survived alongside the mummified dead"
 }

@@ -18,11 +18,34 @@
     },
     "locations/the-nameless-city": {
       "edited": true,
-      "at": "2026-07-23T16:28:15.000Z"
+      "at": "2026-07-23T16:40:54.519Z",
+      "verdict": "as-is"
     },
     "locations/sarnath-the-doomed": {
       "edited": true,
-      "at": "2026-07-23T16:28:15.000Z"
+      "at": "2026-07-23T16:41:01.612Z",
+      "verdict": "as-is"
+    },
+    "locations/araby": {
+      "verdict": "junk",
+      "at": "2026-07-23T16:40:02.635Z"
+    },
+    "locations/irem": {
+      "verdict": "as-is",
+      "at": "2026-07-23T16:40:22.000Z"
+    },
+    "characters/abdul-alhazred": {
+      "verdict": "as-is",
+      "at": "2026-07-23T16:41:17.711Z"
+    },
+    "characters/the-narrator-of-the-nameless-city": {
+      "verdict": "as-is",
+      "at": "2026-07-23T16:46:12.504Z"
+    },
+    "creatures/the-crawling-reptiles-of-the-nameless-city": {
+      "edited": true,
+      "at": "2026-07-23T16:47:14.532Z",
+      "verdict": "as-is"
     }
   }
 }

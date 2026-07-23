@@ -8,7 +8,6 @@
     "the-nameless-city"
   ],
   "connectedTo": [
-    "araby",
     "irem",
     "sarnath-the-doomed"
   ],
@@ -38,55 +37,5 @@
       "paragraph": 33,
       "quote": "I dropped prone again and clutched vainly at the floor for fear of being swept bodily through the open gate into the phosphorescent abyss."
     }
-  ],
-  "_draft": {
-    "aliases": [
-      "this hoary survivor of the deluge",
-      "this great-grandmother of the eldest pyramid",
-      "the city"
-    ],
-    "occurrences": 4,
-    "windows": [
-      "w001-012",
-      "w011-022",
-      "w021-032",
-      "w031-039"
-    ],
-    "facts": [
-      "It protrudes uncannily above the desert sands as parts of a corpse might protrude from an ill-made grave.",
-      "Fear spoke from its age-worn stones, called a hoary survivor of the deluge and great-grandmother of the eldest pyramid.",
-      "It lies remote in the desert of Araby, crumbling and inarticulate, its low walls nearly hidden by sands of uncounted ages.",
-      "There is no legend so old as to give it a name or recall that it was ever alive.",
-      "All the tribes shun it without wholly knowing why.",
-      "Abdul Alhazred the mad poet dreamed of this place the night before composing his couplet.",
-      "The narrator alone of living men has seen it.",
-      "Its ruins consist of shapeless foundations of houses and palaces with no carving or inscription found.",
-      "A low cliff nearby had hewn facades of several small, squat rock houses or temples.",
-      "One cavern proved to be a temple with primitive altars, pillars, and niches, all curiously low, and stones shaped into symbols.",
-      "A larger temple was presumably a natural cavern since it bore winds from some region beyond, and had traces of pictorial art and curvilinear carvings on its altars.",
-      "A presence seemed to be stalking among the spectral stones of the city.",
-      "The narrator imagined it as a mighty seacoast metropolis that ruled the world before Africa rose out of the waves.",
-      "Its people struggled as the sea shrank away and the desert crept into the fertile valley that held it.",
-      "Thousands of its people, represented in allegory by the grotesque reptiles, were driven to chisel their way down through the rocks to another world whereof their prophets had told them.",
-      "On the walls and roof of one of its temples were traces of the pictorial art of the ancient race, curling streaks of paint that had almost faded or crumbled away.",
-      "The race dwelt in the nameless city and the valley around it for ten million years.",
-      "Its civilization included a written alphabet and had seemingly risen to a higher order than the later civilizations of Egypt and Chaldea.",
-      "No pictures were found representing deaths or funeral customs except those related to wars, violence, and plagues.",
-      "Frescoes showed the city and desert valley in desertion and growing ruin, always by moonlight, with a golden nimbus over the fallen walls.",
-      "The Arabs fear the nameless city.",
-      "An ancientness so vast that measurement is feeble seemed to leer down from its primal stones and rock-hewn temples.",
-      "The narrator's fear was tied to first seeing the terrible valley and the nameless city under a cold moon.",
-      "The crawling reptiles referenced later belong to a race associated with the nameless city.",
-      "The great temple was the black orifice of a temple a long distance south, from which an icy wind poured.",
-      "The great temple loomed larger than the other ruined temples and had a doorway far less clogged with sand.",
-      "The great temple was larger than either of the temples the narrator had visited before, and was presumably a natural cavern since it bore winds from beyond.",
-      "The great temple's stones and altars were as low as those in the other temples.",
-      "The great temple's walls and roof bore traces of ancient pictorial art, and two of its altars had curvilinear carvings.",
-      "The great temple contained a small, plainly artificial door chiselled in the solid rock, opening onto a narrow passage with a steep, low-roofed flight of tiny descending steps.",
-      "Sudden gusts of air rose around the mouth of the abyss each sunset and sunrise.",
-      "The narrator feared being swept bodily through the open gate into the phosphorescent abyss.",
-      "A horde of devil-like creatures was seen outlined against the luminous aether of the abyss."
-    ],
-    "needsReview": []
-  }
+  ]
 }
