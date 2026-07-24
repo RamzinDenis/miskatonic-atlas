@@ -135,17 +135,43 @@ async function main() {
   async function runWindow(from: number, to: number, attempt = 1): Promise<void> {
     const id = `w${pad(from)}-${pad(to)}`;
     try {
-      const response = await client.messages.parse({
+      const response = await client.messages.create({
         model: MODEL,
         max_tokens: 16000,
+        // Sonnet 5 runs adaptive thinking by default; those tokens share the
+        // max_tokens budget and were truncating the structured JSON on the
+        // densest windows (Unterminated string / Expected ',' after element).
+        // Extraction is schema-constrained, so thinking buys little — disable
+        // it and hand the full budget to the output.
+        thinking: { type: "disabled" },
         output_config: { format: zodOutputFormat(WindowOutput) },
         messages: [{ role: "user", content: windowPrompt(story, sections, from, to) }],
       });
       usage.input += response.usage.input_tokens;
       usage.output += response.usage.output_tokens;
-      if (!response.parsed_output) throw new Error(`stop_reason ${response.stop_reason}, no parsed output`);
 
-      const records = response.parsed_output.occurrences.map(toDiskRecord);
+      const raw = response.content
+        .filter((b): b is Anthropic.TextBlock => b.type === "text")
+        .map((b) => b.text)
+        .join("");
+
+      let parsed: ReturnType<typeof WindowOutput.parse>;
+      try {
+        parsed = WindowOutput.parse(JSON.parse(raw));
+      } catch (parseErr) {
+        if (response.stop_reason === "max_tokens") {
+          throw new Error(
+            `output truncated at max_tokens (${response.usage.output_tokens} out tok) — raise max_tokens or shrink the window`,
+          );
+        }
+        const dump = path.join(outDir, `${id}.raw.txt`);
+        fs.writeFileSync(dump, raw);
+        throw new Error(
+          `parse failed (stop_reason=${response.stop_reason}): ${(parseErr as Error).message} — raw dumped to ${dump}`,
+        );
+      }
+
+      const records = parsed.occurrences.map(toDiskRecord);
       fs.writeFileSync(
         path.join(outDir, `${id}.json`),
         JSON.stringify(records, null, 2) + "\n",
