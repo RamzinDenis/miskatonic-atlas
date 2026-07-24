@@ -22,7 +22,7 @@ export interface EntityArticleProps {
   plate?: ReactNode;
   description: string;
   fate?: string;
-  locations: { slug: string; name: string }[];
+  locations: { href: string; name: string }[];
   stories: { slug: string; title: string; year: number }[];
   sources: SourceItem[];
 }
@@ -68,7 +68,7 @@ export function EntityArticle({
 
       <ChipSection
         title="Locations"
-        items={locations.map((l) => ({ href: `/locations/${l.slug}`, label: l.name }))}
+        items={locations.map((l) => ({ href: l.href, label: l.name }))}
       />
 
       <SourcesSection sources={sources} />

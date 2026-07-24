@@ -83,7 +83,9 @@ export default async function StoryPage({ params }: PageProps<"/stories/[slug]">
 
       <ChipSection
         title="Locations"
-        items={locations.map((l) => ({ href: `/locations/${l.slug}`, label: l.name }))}
+        items={locations
+          .filter((l) => !l.parentSlug)
+          .map((l) => ({ href: `/locations/${l.slug}`, label: l.name }))}
       />
       <ChipSection
         title="Characters"

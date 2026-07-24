@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
+  getChildLocations,
   getCharactersAt,
   getCreaturesAt,
   getLocation,
-  getLocations,
   getStory,
+  getTopLocations,
+  locationHref,
 } from "@/shared/lib/content";
+import type { Location } from "@/shared/schemas";
 import { ChipSection, Description, SourcesSection } from "@/shared/ui/sections";
 import { getPlate } from "@/widgets/plates";
 import { MapInset } from "@/widgets/world-map/map-inset";
@@ -15,7 +18,8 @@ import { MapInset } from "@/widgets/world-map/map-inset";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return getLocations().map(({ slug }) => ({ slug }));
+  // Sub-locations are sections of their parent's page, not their own routes.
+  return getTopLocations().map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -26,38 +30,18 @@ export async function generateMetadata({
   return location ? { title: location.name, description: location.summary } : {};
 }
 
-export default async function LocationPage({
-  params,
-}: PageProps<"/locations/[slug]">) {
-  const { slug } = await params;
-  const location = getLocation(slug);
-  if (!location) notFound();
-
-  const connected = location.connectedTo.flatMap((s) => getLocation(s) ?? []);
-  const appearsIn = location.appearsIn.flatMap((s) => getStory(s) ?? []);
-  const characters = getCharactersAt(slug);
-  const creatures = getCreaturesAt(slug);
+/** The shared body of a location, rendered for the parent article and for each
+    sub-location section alike. */
+function LocationBody({ location }: { location: Location }) {
+  const connected = location.connectedTo.flatMap((ref) => {
+    const loc = getLocation(ref);
+    return loc ? [{ href: locationHref(ref), label: loc.name }] : [];
+  });
+  const characters = getCharactersAt(location.slug);
+  const creatures = getCreaturesAt(location.slug);
 
   return (
-    <div className="mx-auto w-full max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
-      <Link href="/" className="text-sm text-muted transition-colors hover:text-accent">
-        ← Map
-      </Link>
-
-      <article className="parchment mt-4 px-6 py-10 sm:px-12 sm:py-12">
-      <header>
-        <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-          <h1 className="font-display text-4xl">{location.name}</h1>
-          <span className="text-xs uppercase tracking-widest text-muted">
-            {location.type}
-          </span>
-        </div>
-        {location.realWorld && (
-          <p className="mt-2 text-sm text-muted">Real-world: {location.realWorld}</p>
-        )}
-        <div className="parchment-rule mt-5" />
-      </header>
-
+    <>
       <p className="mt-6 text-lg leading-relaxed">{location.summary}</p>
 
       {getPlate("locations", location.slug)}
@@ -69,16 +53,11 @@ export default async function LocationPage({
           x={location.map.x}
           y={location.map.y}
           name={location.name}
-          chartHref={
-            location.prominence === "major" ? `/?focus=${location.slug}` : undefined
-          }
+          chartHref={location.prominence === "major" ? `/?focus=${location.slug}` : undefined}
         />
       )}
 
-      <ChipSection
-        title="Connected locations"
-        items={connected.map((c) => ({ href: `/locations/${c.slug}`, label: c.name }))}
-      />
+      <ChipSection title="Connected locations" items={connected} />
       <ChipSection
         title="Characters"
         items={characters.map((c) => ({ href: `/characters/${c.slug}`, label: c.name }))}
@@ -99,28 +78,102 @@ export default async function LocationPage({
           };
         })}
       />
+    </>
+  );
+}
 
-      {appearsIn.length > 0 && (
-        <section className="mt-10">
-          <h2 className="font-display text-2xl">Appears in</h2>
-          <ul className="mt-4 space-y-1">
-            {appearsIn.map((story) => (
-              <li key={story.slug}>
-                <Link
-                  href={`/stories/${story.slug}`}
-                  className="text-muted transition-colors hover:text-accent"
-                >
-                  {story.title} ({story.year})
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+export default async function LocationPage({ params }: PageProps<"/locations/[slug]">) {
+  const { slug } = await params;
+  const location = getLocation(slug);
+  if (!location) notFound();
 
-      <div className="fleuron" aria-hidden="true">
-        ❦
-      </div>
+  const children = getChildLocations(location.slug);
+  const appearsIn = location.appearsIn.flatMap((s) => getStory(s) ?? []);
+
+  return (
+    <div className="mx-auto w-full max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
+      <Link href="/" className="text-sm text-muted transition-colors hover:text-accent">
+        ← Map
+      </Link>
+
+      <article className="parchment mt-4 px-6 py-10 sm:px-12 sm:py-12">
+        <header>
+          <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+            <h1 className="font-display text-4xl">{location.name}</h1>
+            <span className="text-xs uppercase tracking-widest text-muted">{location.type}</span>
+          </div>
+          {location.subtitle && (
+            <p className="mt-2 text-base italic text-muted">{location.subtitle}</p>
+          )}
+          {location.realWorld && (
+            <p className="mt-2 text-sm text-muted">Real-world: {location.realWorld}</p>
+          )}
+          <div className="parchment-rule mt-5" />
+        </header>
+
+        <LocationBody location={location} />
+
+        {children.length > 0 && (
+          <section className="mt-12">
+            <h2 className="font-display text-2xl">Within {location.name}</h2>
+            <ul className="mt-4 flex flex-wrap gap-3">
+              {children.map((child) => (
+                <li key={child.slug}>
+                  <Link
+                    href={`#${child.slug}`}
+                    className="cap-first inline-block rounded-md border border-line bg-surface px-4 py-2 text-sm transition-colors hover:border-accent"
+                  >
+                    {child.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {children.map((child) => (
+          <section
+            key={child.slug}
+            id={child.slug}
+            className="mt-14 scroll-mt-24 border-t border-line pt-10"
+          >
+            <header>
+              <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+                <h2 className="font-display text-3xl">{child.name}</h2>
+                <span className="text-xs uppercase tracking-widest text-muted">{child.type}</span>
+              </div>
+              {child.subtitle && (
+                <p className="mt-2 text-sm italic text-muted">{child.subtitle}</p>
+              )}
+              {child.realWorld && (
+                <p className="mt-1 text-sm text-muted">Real-world: {child.realWorld}</p>
+              )}
+            </header>
+            <LocationBody location={child} />
+          </section>
+        ))}
+
+        {appearsIn.length > 0 && (
+          <section className="mt-12">
+            <h2 className="font-display text-2xl">Appears in</h2>
+            <ul className="mt-4 space-y-1">
+              {appearsIn.map((story) => (
+                <li key={story.slug}>
+                  <Link
+                    href={`/stories/${story.slug}`}
+                    className="text-muted transition-colors hover:text-accent"
+                  >
+                    {story.title} ({story.year})
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <div className="fleuron" aria-hidden="true">
+          ❦
+        </div>
       </article>
     </div>
   );

@@ -34,12 +34,23 @@ if (storyDirs.length === 0) {
 // Known slugs: everything merged across all stories + everything already in content/.
 const known = new Set<string>();
 const locationSlugs = new Set<string>();
+// slug -> parentSlug for every known location, to validate containment (ADR-0003).
+// Drafts win over content/ on conflict, since merged drafts are the newer truth.
+const locationParent = new Map<string, string | undefined>();
 function addDir(dir: string, isLocations: boolean) {
   if (!fs.existsSync(dir)) return;
   for (const f of fs.readdirSync(dir).filter((x) => x.endsWith(".json"))) {
     const slug = f.replace(/\.json$/, "");
     known.add(slug);
-    if (isLocations) locationSlugs.add(slug);
+    if (isLocations) {
+      locationSlugs.add(slug);
+      try {
+        const raw = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
+        locationParent.set(slug, typeof raw.parentSlug === "string" ? raw.parentSlug : undefined);
+      } catch {
+        // JSON errors are reported in the main validation loop below.
+      }
+    }
   }
 }
 for (const kind of Object.keys(schemas)) {
@@ -49,6 +60,24 @@ for (const kind of Object.keys(schemas)) {
 const storySlugs = new Set(
   fs.readdirSync(path.join(ROOT, "content", "stories")).map((f) => f.replace(/\.json$/, "")),
 );
+
+/**
+ * Validate a location reference that may be a composite id `parentSlug/slug`
+ * (ADR-0003). Returns an error message, or null if the reference is valid.
+ * A sub-location must always be referenced by its composite id, never bare.
+ */
+function locationRefError(ref: string): string | null {
+  const i = ref.lastIndexOf("/");
+  const slug = i === -1 ? ref : ref.slice(i + 1);
+  if (!locationSlugs.has(slug)) return `unknown location "${ref}"`;
+  const parent = locationParent.get(slug);
+  if (i === -1) {
+    return parent ? `"${ref}" is a sub-location — use composite id "${parent}/${slug}"` : null;
+  }
+  return ref.slice(0, i) === parent
+    ? null
+    : `"${ref}" — parent mismatch (expected "${parent ?? "—"}/${slug}")`;
+}
 
 let files = 0;
 let errors = 0;
@@ -86,17 +115,37 @@ for (const story of storyDirs) {
         console.log(`FAIL  ${rel}: slug "${result.data.slug}" != file name`);
       }
 
-      const refChecks: [string, readonly string[], ReadonlySet<string>][] = [
-        ["appearsIn", (entity.appearsIn as string[]) ?? [], storySlugs],
-        ["connectedTo", (entity.connectedTo as string[]) ?? [], locationSlugs],
-        ["locations", (entity.locations as string[]) ?? [], locationSlugs],
-      ];
-      for (const [field, slugs, set] of refChecks) {
-        for (const s of slugs) {
-          if (!set.has(s)) {
+      for (const s of (entity.appearsIn as string[]) ?? []) {
+        if (!storySlugs.has(s)) {
+          errors++;
+          console.log(`FAIL  ${rel}: appearsIn → unknown slug "${s}"`);
+        }
+      }
+      for (const field of ["connectedTo", "locations"] as const) {
+        for (const ref of (entity[field] as string[]) ?? []) {
+          const msg = locationRefError(ref);
+          if (msg) {
             errors++;
-            console.log(`FAIL  ${rel}: ${field} → unknown slug "${s}"`);
+            console.log(`FAIL  ${rel}: ${field} → ${msg}`);
           }
+        }
+      }
+
+      // Containment invariants (ADR-0003): parent resolves, no self-parent,
+      // depth capped at two levels (a parent must not itself be a child).
+      if (kind === "locations" && typeof entity.parentSlug === "string") {
+        const parent = entity.parentSlug;
+        if (parent === result.data.slug) {
+          errors++;
+          console.log(`FAIL  ${rel}: parentSlug points at itself`);
+        } else if (!locationSlugs.has(parent)) {
+          errors++;
+          console.log(`FAIL  ${rel}: parentSlug → unknown location "${parent}"`);
+        } else if (locationParent.get(parent)) {
+          errors++;
+          console.log(
+            `FAIL  ${rel}: parentSlug "${parent}" is itself a sub-location — nesting is two levels only`,
+          );
         }
       }
     }

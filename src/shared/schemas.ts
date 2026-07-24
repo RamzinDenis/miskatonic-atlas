@@ -30,8 +30,17 @@ export const LocationSchema = z.object({
   slug: z.string(),
   name: z.string(),
   nameRu: z.string().optional(),
+  subtitle: z.string().optional(),
   type: z.enum(["city", "town", "building", "region", "ruin", "sea", "other"]),
   prominence: Prominence,
+  /**
+   * Slug of the settlement/region this location is wholly inside (geographic
+   * containment, see ADR-0003). Present only on sub-locations; the canonical
+   * id/URL of a child is `parentSlug/slug`. Nesting is strictly two levels —
+   * a location that has a parentSlug is never itself a parent. Editorial field,
+   * never set by the extraction pipeline.
+   */
+  parentSlug: z.string().optional(),
   summary: z.string(),
   description: z.string(),
   map: MapPoint.optional(),

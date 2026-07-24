@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getCharacter, getCharacters, getLocation, getStory } from "@/shared/lib/content";
+import {
+  getCharacter,
+  getCharacters,
+  getLocation,
+  getStory,
+  locationHref,
+} from "@/shared/lib/content";
 import { EntityArticle } from "@/widgets/entity-article";
 import { getPlate } from "@/widgets/plates";
 
@@ -31,7 +37,10 @@ export default async function CharacterPage({ params }: PageProps<"/characters/[
       plate={getPlate("characters", character.slug)}
       description={character.description}
       fate={character.fate}
-      locations={character.locations.flatMap((s) => getLocation(s) ?? [])}
+      locations={character.locations.flatMap((s) => {
+        const loc = getLocation(s);
+        return loc ? [{ href: locationHref(s), name: loc.name }] : [];
+      })}
       stories={character.appearsIn.flatMap((s) => getStory(s) ?? [])}
       sources={character.sources.map((source) => {
         const story = getStory(source.storySlug);

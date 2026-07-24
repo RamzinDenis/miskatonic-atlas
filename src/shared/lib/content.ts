@@ -97,15 +97,53 @@ function checkRefs(
   }
 }
 
+/** The file slug behind a location reference — the segment after any parent
+    prefix, so a composite id `parentSlug/slug` resolves to its file. */
+function refSlug(ref: string): string {
+  const i = ref.lastIndexOf("/");
+  return i === -1 ? ref : ref.slice(i + 1);
+}
+
 function checkIntegrity(content: AtlasContent, errors: string[]) {
   const storySlugs = new Set(content.stories.map((s) => s.slug));
   const locationSlugs = new Set(content.locations.map((l) => l.slug));
+  const locationParent = new Map(content.locations.map((l) => [l.slug, l.parentSlug]));
+
+  // A (possibly composite `parentSlug/slug`) location reference: the file must
+  // exist, a sub-location must be referenced by its composite id, and the
+  // prefix must match the target's actual parent (ADR-0003).
+  const checkLocationRefs = (from: string, field: string, refs: readonly string[]) => {
+    for (const ref of refs) {
+      const slug = refSlug(ref);
+      if (!locationSlugs.has(slug)) {
+        errors.push(`${from}: ${field} → unknown location "${ref}"`);
+        continue;
+      }
+      const parent = locationParent.get(slug);
+      const i = ref.lastIndexOf("/");
+      if (i === -1) {
+        if (parent) errors.push(`${from}: ${field} → "${ref}" is a sub-location; use "${parent}/${slug}"`);
+      } else if (ref.slice(0, i) !== parent) {
+        errors.push(`${from}: ${field} → "${ref}" parent mismatch (expected "${parent ?? "—"}/${slug}")`);
+      }
+    }
+  };
 
   for (const location of content.locations) {
     const from = `content/locations/${location.slug}.json`;
     checkRefs(from, "appearsIn", location.appearsIn, storySlugs, "story", errors);
-    checkRefs(from, "connectedTo", location.connectedTo, locationSlugs, "location", errors);
+    checkLocationRefs(from, "connectedTo", location.connectedTo);
     checkRefs(from, "sources", location.sources.map((s) => s.storySlug), storySlugs, "story", errors);
+    // Containment invariants: parent resolves, no self-parent, depth ≤ 2.
+    if (location.parentSlug) {
+      if (location.parentSlug === location.slug) {
+        errors.push(`${from}: parentSlug points at itself`);
+      } else if (!locationSlugs.has(location.parentSlug)) {
+        errors.push(`${from}: parentSlug → unknown location "${location.parentSlug}"`);
+      } else if (locationParent.get(location.parentSlug)) {
+        errors.push(`${from}: parentSlug "${location.parentSlug}" is itself a sub-location — nesting is two levels only`);
+      }
+    }
   }
 
   for (const [dirName, entities] of [
@@ -114,7 +152,7 @@ function checkIntegrity(content: AtlasContent, errors: string[]) {
   ] as const) {
     for (const entity of entities) {
       const from = `content/${dirName}/${entity.slug}.json`;
-      checkRefs(from, "locations", entity.locations, locationSlugs, "location", errors);
+      checkLocationRefs(from, "locations", entity.locations);
       checkRefs(from, "appearsIn", entity.appearsIn, storySlugs, "story", errors);
       checkRefs(from, "sources", entity.sources.map((s) => s.storySlug), storySlugs, "story", errors);
     }
@@ -168,8 +206,34 @@ export function getLocations(): Location[] {
   return loadContent().locations;
 }
 
-export function getLocation(slug: string): Location | undefined {
-  return loadContent().locations.find((l) => l.slug === slug);
+/** Top-level locations only — sub-locations render as sections of their parent
+    page, so they are not their own routes (ADR-0003). */
+export function getTopLocations(): Location[] {
+  return loadContent().locations.filter((l) => !l.parentSlug);
+}
+
+/** The sub-locations of a location, A→Z — the sections of its fandom page. */
+export function getChildLocations(parentSlug: string): Location[] {
+  return loadContent()
+    .locations.filter((l) => l.parentSlug === parentSlug)
+    .sort((a, b) => a.name.localeCompare(b.name, "en"));
+}
+
+/** Resolves a location reference, accepting a composite id `parentSlug/slug`. */
+export function getLocation(ref: string): Location | undefined {
+  return loadContent().locations.find((l) => l.slug === refSlug(ref));
+}
+
+/** The canonical id of a location: `parentSlug/slug` for a sub-location, else `slug`. */
+export function locationId(location: Pick<Location, "slug" | "parentSlug">): string {
+  return location.parentSlug ? `${location.parentSlug}/${location.slug}` : location.slug;
+}
+
+/** Href for a location reference: a sub-location deep-links to its section
+    (`#slug`) on its parent's page; a top-level location gets its own page. */
+export function locationHref(ref: string): string {
+  const i = ref.lastIndexOf("/");
+  return i === -1 ? `/locations/${ref}` : `/locations/${ref.slice(0, i)}#${ref.slice(i + 1)}`;
 }
 
 export function getCharacters(): Character[] {
@@ -203,11 +267,11 @@ export function getStoryEntities(storySlug: string): {
 }
 
 export function getCharactersAt(locationSlug: string): Character[] {
-  return loadContent().characters.filter((c) => c.locations.includes(locationSlug));
+  return loadContent().characters.filter((c) => c.locations.some((l) => refSlug(l) === locationSlug));
 }
 
 export function getCreaturesAt(locationSlug: string): Creature[] {
-  return loadContent().creatures.filter((c) => c.locations.includes(locationSlug));
+  return loadContent().creatures.filter((c) => c.locations.some((l) => refSlug(l) === locationSlug));
 }
 
 function toMapLocation(content: AtlasContent) {
@@ -217,10 +281,10 @@ function toMapLocation(content: AtlasContent) {
     // only major figures are listed (minor ones stay on the location page).
     const figures: MapFigure[] = [
       ...majorOnly(content.characters)
-        .filter((c) => c.locations.includes(location.slug))
+        .filter((c) => c.locations.some((l) => refSlug(l) === location.slug))
         .map((c) => ({ slug: c.slug, name: c.name, kind: "characters" as const })),
       ...majorOnly(content.creatures)
-        .filter((c) => c.locations.includes(location.slug))
+        .filter((c) => c.locations.some((l) => refSlug(l) === location.slug))
         .map((c) => ({ slug: c.slug, name: c.name, kind: "creatures" as const })),
     ];
     return [
