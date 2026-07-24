@@ -1,0 +1,34 @@
+{
+  "slug": "sentinel-hill",
+  "name": "Sentinel Hill",
+  "parentSlug": "dunwich",
+  "type": "other",
+  "summary": "A hill overlooking Dunwich crowned by an ancient table-like altar-stone amid a tumulus of bones, long used by the Whateleys for hellish rites and finally the site where the Dunwich horror was destroyed.",
+  "description": "Deposits of skulls and bones found around the sizable table-like rock on Sentinel Hill sustain the popular belief that such spots were once the burial-places of the Pocumtucks. Twice a year the Whateleys would build hellish fires and chant rituals by this altar-stone, on May Eve and Hallowmass, and each such night the mountain rumblings would recur with greater violence; on Hallowe'en 1915 an underground rumbling synchronized with bursts of flame from the summit, blamed on \"them witch Whateleys' doin's,\" a phenomenon that recurred in later years. Old Whateley once predicted that a child of Lavinny's would call its father's name on the hill's top, and Wilbur himself was once seen running up ahead of his mother just before a great blaze was noticed there.\n\nWhen the horror finally broke loose, fresh monstrous tracks were found in the road skirting the hill, with a thirty-foot swath of crushed shrubbery leading steeply upward from its base; the thing proved able to scale a sheer stony cliff of almost complete verticality, and its trail ended, or reversed, at the summit. Armitage found the trail up and down Sentinel Hill of almost cataclysmic significance, and lingered over the sinister altarlike stone crowning it; grass and bushes were seen creeping slowly up the slope toward the top, and whippoorwills piped unseasonably in its underbrush.\n\nAt the climax, three figures were seen standing on the topmost ridge, level with the altar-stone but at a distance from it; a mistiness gathered around the stone in a lightning flash, and deep vocal sounds seemed to issue from that spot. A single bolt of lightning shot from the purple zenith to the altar-stone, and a great tidal wave of viewless force and stench swept down over the countryside, leaving the tarry deposit later found there and on the ruined Whateley farmhouse floor alike. The stench left quickly, but the vegetation never came right again — to this day something queer and unholy clings to the growths on and around that fearsome hill. Armitage afterward urged that men dynamite the altar-stone and pull down the rings of standing stones on the other hills.",
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "connectedTo": [
+    "dunwich/cold-spring-glen"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 10,
+      "quote": "Deposits of skulls and bones, found within these circles and around the sizable table-like rock on Sentinel Hill, sustain the popular belief that such spots were once the burial-places of the Pocumtucks",
+      "context": "Chapter 1"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 138,
+      "quote": "A single lightning bolt shot from the purple zenith to the altar-stone, and a great tidal wave of viewless force and indescribable stench swept down from the hill to all the countryside.",
+      "context": "Chapter 10"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 139,
+      "quote": "The stench left quickly, but the vegetation never came right again. To this day there is something queer and unholy about the growths on and around that fearsome hill.",
+      "context": "Chapter 10"
+    }
+  ]
+}

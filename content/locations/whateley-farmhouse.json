@@ -1,0 +1,35 @@
+{
+  "slug": "whateley-farmhouse",
+  "name": "the Whateley Farmhouse",
+  "parentSlug": "dunwich",
+  "type": "building",
+  "summary": "The large, partly ruined farmhouse four miles from Dunwich village where Wilbur Whateley was born and secretly raised something monstrous in its sealed and gutted upper story, ending as a blown-open, tarry wreck.",
+  "description": "The house was a large and partly inhabited farmhouse set against a hillside, four miles from the village and a mile and a half from any other dwelling, its rear end buried entirely in the rocky hillside; three least-ruined ground-floor rooms had long sufficed for Old Whateley and his daughter. Soon after Wilbur's birth, Old Whateley restored the unused parts, boarding up all the windows in the reclaimed upper story and converting one — in the rear of the east gable end, close against the hill — into a solid plank door, with a cleated wooden runway built up to it from the ground; a tool-shed was likewise put in order, clapboarded, and fitted with a stout fresh lock, then abandoned again once the work was done. In time, callers professed to hear sounds in the sealed upper story even when the whole family were downstairs.\n\nAround 1923 a second siege of carpentry occurred entirely inside the sealed upper part: partitions and the attic floor were removed, leaving one vast open void between the ground story and the peaked roof, and the great central chimney was torn down and replaced with a flimsy outside tin stove-pipe. In the summer of 1927 still more carpentry followed on the ground floor, as Wilbur closed up all its doors and windows and removed its partitions, just as he and his grandfather had done upstairs four years before. Henry Armitage had once called at the farm and been sickened there by an unholy stench.\n\nAt the last, the house became a great empty shell giving off an unwonted stench and surging, lapping sounds, which local officials found excuses to avoid investigating closely. It was finally found blown open, its timbers scattered as though by dynamite, though the bottom floor remained, covered with a foul tarlike substance dripping from its edges — the same tarry stickiness later found on the altar-stone atop Sentinel Hill. Men shuddered visibly passing the site of Wilbur's wrecked abode as they followed the line of monstrous prints leading on toward that hill.",
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "connectedTo": [
+    "dunwich/sentinel-hill",
+    "dunwich/cold-spring-glen"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 26,
+      "quote": "a second great siege of carpentry went on at the old house. It was all inside the sealed upper part, and from bits of discarded lumber people concluded that the youth and his grandfather had knocked out all the partitions and even removed the attic floor, leaving only one vast open void between the ground story and the peaked roof.",
+      "context": "Chapter 4"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 67,
+      "quote": "He says Ol' Whateley's haouse is all blowed up, with the timbers scattered raound like they'd ben dynamite inside; only the bottom floor ain't through, but is all covered with a kind o' tarlike stuff that smells awful an' drips daown offen the aidges onto the graoun' whar the side timbers is blowed away.",
+      "context": "Chapter 7"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 119,
+      "quote": "As the men passed the site of Wilbur Whateley's abode they shuddered visibly, and seemed again to mix hesitancy with their zeal.",
+      "context": "Chapter 9"
+    }
+  ]
+}

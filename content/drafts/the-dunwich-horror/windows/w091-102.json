@@ -1,0 +1,529 @@
+[
+  {
+    "kind": "character",
+    "name": "Armitage",
+    "aliases": [
+      "Dr. Armitage",
+      "the old librarian"
+    ],
+    "facts": [
+      "On Sunday Armitage was busy comparing formulæ and mixing chemicals obtained from the college laboratory.",
+      "He doubted the efficacy of any material agent in stamping out the entity Wilbur Whateley had left behind him.",
+      "On Monday he continued an infinity of research and experiment.",
+      "By Tuesday he had a definite line of action mapped out and believed he would try a trip to Dunwich within a week.",
+      "On Wednesday he read a news item about the monster raised up by Dunwich bootleg whisky and telephoned Rice and Morgan.",
+      "He knew he would be meddling with terrible powers but saw no other way to annul the deeper meddling others had done before him.",
+      "Friday morning he set out by motor for Dunwich with Rice and Morgan, arriving about 1 in the afternoon.",
+      "He rode around Dunwich with Rice and Morgan questioning the natives about what had occurred.",
+      "He looked long at the sinister altarlike stone on the summit of Sentinel Hill, which seemed of almost cataclysmic significance to him.",
+      "He sought to compare notes with a party of State Police but found their car empty.",
+      "Upon coming actually upon the horror's monstrous work he trembled with the responsibility he felt to be his.",
+      "He rehearsed the formulæ he had memorized and clutched a paper with alternative ones he had not memorized.",
+      "He checked that his electric flashlight was in working order.",
+      "He warned his colleagues that no material weapon would be of help against the entity.",
+      "He did not add to the fright of the Dunwich people by giving hints or clues about what to expect.",
+      "He hoped the entity might be conquered without revelation to the world of the monstrous thing it had escaped.",
+      "He told his colleagues it would be suicidal to try to attack the entity in the dark.",
+      "He was undecided with Rice and Morgan what to do the next morning."
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": [
+      "Rice",
+      "Morgan",
+      "Wilbur Whateley",
+      "Dunwich"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 91,
+        "quote": "Late at night the conference disbanded without having developed a definite plan, but all day Sunday Armitage was busy comparing formulæ and mixing chemicals obtained from the college laboratory.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 92,
+        "quote": "By Tuesday he had a definite line of action mapped out, and believed he would try a trip to Dunwich within a week.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 93,
+        "quote": "Friday morning Armitage, Rice and Morgan set out by motor for Dunwich, arriving at the village about 1 in the afternoon.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 93,
+        "quote": "The trail up and down Sentinel Hill seemed to Armitage of almost cataclysmic significance, and he looked long at the sinister altarlike stone on the summit.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 96,
+        "quote": "Armitage, now that he had actually come upon the horror and its monstrous work, trembled with the responsibility he felt to be his.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 97,
+        "quote": "Armitage, having read the hideous diary, knew painfully well what kind of a manifestation to expect, but he did not add to the fright of the Dunwich people by giving any hints or clues.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 98,
+        "quote": "Whatever was down there in the glen was biding its time, and Armitage told his colleagues it would be suicidal to try to attack it in the dark.",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Rice",
+    "aliases": [],
+    "facts": [
+      "Armitage telephoned for Rice after learning of the record-breaking monster news item.",
+      "Rice set out with Armitage and Morgan by motor for Dunwich on Friday morning.",
+      "Rice took from a valise a metal sprayer of the sort used in combating insects.",
+      "Rice, along with the others, had smelled the same ineffable fetor once before when they stood above a dying thing that had passed for fifteen years and a half as a human being."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Armitage",
+      "Morgan"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 92,
+        "quote": "Armitage, half stunned, could only telephone for Rice and Morgan.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 93,
+        "quote": "Friday morning Armitage, Rice and Morgan set out by motor for Dunwich, arriving at the village about 1 in the afternoon.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 96,
+        "quote": "Rice, beside him, took from a valise a metal sprayer of the sort used in combating insects; whilst Morgan uncased the big-game rifle on which he relied despite his colleague's warnings that no material weapon would be of help.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 98,
+        "quote": "Once in a while a wind, sweeping up out of Cold Spring Glen, would bring a touch of ineffable fetor to the heavy night air; such a fetor as all three of the watchers had smelled once before, when they stood above a dying thing that had passed for fifteen years and a half as a human being.",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Morgan",
+    "aliases": [],
+    "facts": [
+      "Armitage telephoned for Morgan after learning of the news item.",
+      "Morgan set out with Armitage and Rice by motor for Dunwich on Friday morning.",
+      "Morgan uncased a big-game rifle on which he relied despite his colleague's warnings that no material weapon would be of help.",
+      "Morgan, along with the others, had smelled the same ineffable fetor once before when they stood above a dying thing that had passed for fifteen years and a half as a human being."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Armitage",
+      "Rice"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 92,
+        "quote": "Armitage, half stunned, could only telephone for Rice and Morgan.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 96,
+        "quote": "Rice, beside him, took from a valise a metal sprayer of the sort used in combating insects; whilst Morgan uncased the big-game rifle on which he relied despite his colleague's warnings that no material weapon would be of help.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 98,
+        "quote": "Once in a while a wind, sweeping up out of Cold Spring Glen, would bring a touch of ineffable fetor to the heavy night air; such a fetor as all three of the watchers had smelled once before, when they stood above a dying thing that had passed for fifteen years and a half as a human being.",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Wilbur Whateley",
+    "aliases": [],
+    "facts": [
+      "Wilbur Whateley had left behind him an earth-threatening entity which was to burst forth in a few hours and become known as the Dunwich horror."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Armitage"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 91,
+        "quote": "The more he reflected on the hellish diary, the more he was inclined to doubt the efficacy of any material agent in stamping out the entity which Wilbur Whateley had left behind him—the earth-threatening entity which, unknown to him, was to burst forth in a few hours and become the memorable Dunwich horror.",
+        "context": "Chapter 8"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "the Dunwich horror",
+    "aliases": [
+      "the entity",
+      "the mountainous blasphemy",
+      "the horror"
+    ],
+    "facts": [
+      "It was the earth-threatening entity which Wilbur Whateley had left behind him.",
+      "It was to burst forth and become known as the memorable Dunwich horror.",
+      "At night it lumbered upon its eldritch course.",
+      "A wind sweeping up out of Cold Spring Glen brought a touch of ineffable fetor associated with it, the same fetor the watchers had smelled once before over a dying thing that had passed for fifteen years and a half as a human being.",
+      "It did not appear the first night the watchers waited, biding its time in the glen.",
+      "The next morning a frightened group of men reported it was 'aout' and moving by day."
+    ],
+    "typeGuess": "entity",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Armitage",
+      "Cold Spring Glen"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 91,
+        "quote": "the earth-threatening entity which, unknown to him, was to burst forth in a few hours and become the memorable Dunwich horror",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 96,
+        "quote": "Night would soon fall, and it was then that the mountainous blasphemy lumbered upon its eldritch course.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 98,
+        "quote": "such a fetor as all three of the watchers had smelled once before, when they stood above a dying thing that had passed for fifteen years and a half as a human being. But the looked-for terror did not appear. Whatever was down there in the glen was biding its time",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 101,
+        "quote": "\"it's a-goin' agin, an' this time by day! It's aout—it's aout an' a-movin' this very minute, an' only the Lord knows when it'll be on us all!\"",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Sam Hutchins",
+    "aliases": [],
+    "facts": [
+      "Sam Hutchins thought of something and turned pale, nudging Fred Farr and pointing to the deep hollow nearby.",
+      "Sam Hutchins said he had told the State Police not to go down into the glen because of the tracks, the smell, and the whippoorwills screeching in the dark of noonday."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Fred Farr"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 94,
+        "quote": "Then old Sam Hutchins thought of something and turned pale, nudging Fred Farr and pointing to the dank, deep hollow that yawned close by.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 95,
+        "quote": "\"Gawd,\" he gasped, \"I telled 'em not ter go daown into the glen, an' I never thought nobody'd dew it with them tracks an' that smell an' the whippoorwills a-screechin' daown thar in the dark o' noonday....\"",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Fred Farr",
+    "aliases": [],
+    "facts": [
+      "Fred Farr was nudged by Sam Hutchins and shown the deep hollow near the Frye yard."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Sam Hutchins"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 94,
+        "quote": "Then old Sam Hutchins thought of something and turned pale, nudging Fred Farr and pointing to the dank, deep hollow that yawned close by.",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Elmer Frye",
+    "aliases": [],
+    "facts": [
+      "The Elmer Frye house and family were annihilated."
+    ],
+    "typeGuess": "other",
+    "fate": "His house and family were annihilated.",
+    "relatedNames": [
+      "Dunwich"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 93,
+        "quote": "From the air of hushed fright at Osborn's store they knew something hideous had happened, and soon learned of the annihilation of the Elmer Frye house and family.",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Seth Bishop",
+    "aliases": [],
+    "facts": [
+      "Seth Bishop's cattle were found wounded near the Frye ruins."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 93,
+        "quote": "the wounded Seth Bishop cattle, and the enormous swaths of disturbed vegetation in various places",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Dunwich",
+    "aliases": [
+      "the village",
+      "Dunwich people"
+    ],
+    "facts": [
+      "Armitage, Rice, and Morgan arrived at the Dunwich village about 1 in the afternoon on Friday.",
+      "Even in bright sunlight a quiet dread and portent seemed to hover about the strangely domed hills and shadowy ravines of the region.",
+      "A gaunt circle of stones could be glimpsed on a mountain top against the sky.",
+      "The Elmer Frye house and family in Dunwich were annihilated.",
+      "The natives of Dunwich were questioned about what had occurred.",
+      "The men from Arkham did not tell the Dunwich people what kind of manifestation to expect."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Armitage",
+      "Sentinel Hill",
+      "Cold Spring Glen",
+      "Osborn's store"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 93,
+        "quote": "Friday morning Armitage, Rice and Morgan set out by motor for Dunwich, arriving at the village about 1 in the afternoon.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 93,
+        "quote": "The day was pleasant, but even in the brightest sunlight a kind of quiet dread and portent seemed to hover about the strangely domed hills and the deep, shadowy ravines of the stricken region.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 97,
+        "quote": "Armitage, having read the hideous diary, knew painfully well what kind of a manifestation to expect, but he did not add to the fright of the Dunwich people by giving any hints or clues.",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Sentinel Hill",
+    "aliases": [],
+    "facts": [
+      "The trail up and down Sentinel Hill seemed to Armitage of almost cataclysmic significance.",
+      "There was a sinister altarlike stone on the summit of Sentinel Hill."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Armitage",
+      "Dunwich"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 93,
+        "quote": "The trail up and down Sentinel Hill seemed to Armitage of almost cataclysmic significance, and he looked long at the sinister altarlike stone on the summit.",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Osborn's store",
+    "aliases": [],
+    "facts": [
+      "There was an air of hushed fright at Osborn's store."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Dunwich"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 93,
+        "quote": "From the air of hushed fright at Osborn's store they knew something hideous had happened, and soon learned of the annihilation of the Elmer Frye house and family.",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Frye ruins",
+    "aliases": [
+      "Frye house",
+      "Frye yard"
+    ],
+    "facts": [
+      "The Elmer Frye house and family were annihilated.",
+      "The Frye ruins showed lingering traces of tarry stickiness.",
+      "Blasphemous tracks were found in the Frye yard.",
+      "A car belonging to a party of State Police stood empty near the ruins in the Frye yard.",
+      "The visitors stood guard at the Frye ruins near the glen."
+    ],
+    "typeGuess": "ruin",
+    "relatedNames": [
+      "Elmer Frye",
+      "Dunwich",
+      "Cold Spring Glen"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 93,
+        "quote": "seeing for themselves with rising pangs of horror the drear Frye ruins with their lingering traces of the tarry stickiness, the blasphemous tracks in the Frye yard, the wounded Seth Bishop cattle, and the enormous swaths of disturbed vegetation in various places",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 94,
+        "quote": "There had been five of them in a car, but now the car stood empty near the ruins in the Frye yard.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 97,
+        "quote": "They shook their heads at the visitors' plan to stand guard at the Frye ruins near the glen; and as they left, had little expectancy of ever seeing the watchers again.",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Cold Spring Glen",
+    "aliases": [
+      "the glen"
+    ],
+    "facts": [
+      "Sam Hutchins had warned people not to go down into the glen because of tracks, a smell, and whippoorwills screeching in the dark of noonday.",
+      "A party of State Police who went down into the glen disappeared.",
+      "A wind sweeping up out of Cold Spring Glen brought a touch of ineffable fetor to the night air.",
+      "Rumblings were heard under the hills at night, and a forky lightning bolt seemed to descend into the accursed glen."
+    ],
+    "typeGuess": "region",
+    "relatedNames": [
+      "Sam Hutchins",
+      "Dunwich"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 95,
+        "quote": "I telled 'em not ter go daown into the glen, an' I never thought nobody'd dew it with them tracks an' that smell an' the whippoorwills a-screechin' daown thar in the dark o' noonday....",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 98,
+        "quote": "Once in a while a wind, sweeping up out of Cold Spring Glen, would bring a touch of ineffable fetor to the heavy night air",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 99,
+        "quote": "Sheet lightning shimmered, and then a forky bolt flashed near at hand, as if descending into the accursed glen itself.",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Aylesbury",
+    "aliases": [],
+    "facts": [
+      "A party of State Police had come from Aylesbury that morning in response to the first telephone reports of the Frye tragedy."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Dunwich"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 94,
+        "quote": "At length the visitors, apprised of a party of State Police which had come from Aylesbury that morning in response to the first telephone reports of the Frye tragedy, decided to seek out the officers and compare notes as far as practicable.",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Arkham",
+    "aliases": [
+      "the men from Arkham"
+    ],
+    "facts": [
+      "A facetious little item about the Dunwich monster was tucked away in a corner of the Arkham Advertiser.",
+      "Armitage, Rice, and Morgan are referred to as the men from Arkham."
+    ],
+    "typeGuess": "city",
+    "relatedNames": [
+      "Armitage",
+      "Rice",
+      "Morgan"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 92,
+        "quote": "Tucked obscurely away in a corner of the Arkham Advertiser was a facetious little item from the Associated Press, telling what a record-breaking monster the bootleg whisky of Dunwich had raised up.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 99,
+        "quote": "The men from Arkham were undecided what to do.",
+        "context": "Chapter 9"
+      }
+    ]
+  }
+]

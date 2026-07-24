@@ -1,0 +1,34 @@
+{
+  "slug": "sally-sawyer",
+  "name": "Sally Sawyer",
+  "role": "witness",
+  "summary": "Sally Sawyer, housekeeper at Seth Bishop's farm, witnessed the horror's assault on the Bishop house and yard, and gave voice to the old Dunwich lore that unseen, non-human things had always haunted the region, especially the unwholesome Cold Spring Glen.",
+  "description": "Sally Sawyer, housekeeper at Seth Bishop's — the nearest place to Whateley's — relayed her son Chauncey's terrified account of the wrecked Whateley farmhouse over the party telephone line, and believed that 'black' Wilbur Whateley, who had come to the bad end he deserved, was at the bottom of the breeding of the horror, insisting he 'wa'n't all human hisself.' She held that Old Whateley and Wilbur together had raised something in the nailed-up house even less human than Wilbur was.\n\nSally warned that Cold Spring Glen was never a healthy or decent place, where the whippoorwills and fireflies never acted like creatures of God, and where strange rushing, talking sounds could be heard between the rock falls and Bear's Den. During the horror's second assault she cried out that the trees were bending toward the house with a mushy, elephant-like tread, that the shed and picket fence had inexplicably collapsed, and finally that the house itself was caving in.",
+  "locations": [
+    "dunwich",
+    "dunwich/cold-spring-glen"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 69,
+      "quote": "They's allus ben unseen things araound Dunwich—livin' things—as ain't human an' ain't good fer human folks.",
+      "context": "Chapter 7"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 71,
+      "quote": "I allus says Col' Spring Glen ain't no healthy nor decent place. The whippoorwills an' fireflies there never did act like they was creaters o' Gawd, an' they's them as says ye kin hear strange things a-rushin' an' a-talkin' in the air daown thar ef ye stand in the right place, atween the rock falls an' Bear's Den.",
+      "context": "Chapter 7"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 109,
+      "quote": "Sally she yelled aout, 'O help, the haouse is a-cavin' in'",
+      "context": "Chapter 9"
+    }
+  ]
+}

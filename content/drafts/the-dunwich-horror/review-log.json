@@ -1,0 +1,225 @@
+{
+  "decisions": {
+    "locations/miskatonic-river": {
+      "edited": true,
+      "at": "2026-07-24T10:15:23.089Z",
+      "verdict": "as-is"
+    },
+    "locations/boston": {
+      "verdict": "as-is",
+      "at": "2026-07-24T09:09:31.040Z"
+    },
+    "locations/arkham": {
+      "verdict": "as-is",
+      "at": "2026-07-24T09:10:08.911Z"
+    },
+    "locations/aylesbury": {
+      "verdict": "as-is",
+      "at": "2026-07-24T10:14:48.640Z"
+    },
+    "locations/frye-place": {
+      "edited": true,
+      "at": "2026-07-24T10:15:00.351Z",
+      "verdict": "edited"
+    },
+    "locations/dunwich": {
+      "verdict": "as-is",
+      "at": "2026-07-24T10:15:07.308Z"
+    },
+    "locations/harvard": {
+      "verdict": "as-is",
+      "at": "2026-07-24T10:15:17.914Z"
+    },
+    "locations/cold-spring-glen": {
+      "verdict": "as-is",
+      "at": "2026-07-24T10:15:24.654Z"
+    },
+    "locations/miskatonic-university": {
+      "verdict": "as-is",
+      "at": "2026-07-24T10:15:26.196Z"
+    },
+    "locations/sentinel-hill": {
+      "verdict": "as-is",
+      "at": "2026-07-24T10:15:27.954Z"
+    },
+    "locations/whateley-farmhouse": {
+      "verdict": "as-is",
+      "at": "2026-07-24T10:15:29.753Z"
+    },
+    "characters/curtis-old-whateleys-son": {
+      "verdict": "junk",
+      "at": "2026-07-24T11:40:12.127Z"
+    },
+    "characters/curtis-whateley": {
+      "edited": true,
+      "at": "2026-07-24T11:40:46.103Z",
+      "verdict": "edited"
+    },
+    "characters/dr-francis-morgan": {
+      "edited": true,
+      "at": "2026-07-24T11:41:25.758Z",
+      "verdict": "as-is"
+    },
+    "characters/dr-hartwell": {
+      "verdict": "as-is",
+      "at": "2026-07-24T11:41:34.751Z"
+    },
+    "characters/dr-houghton": {
+      "edited": true,
+      "at": "2026-07-24T11:43:13.345Z",
+      "verdict": "as-is"
+    },
+    "characters/chauncey": {
+      "verdict": "as-is",
+      "at": "2026-07-24T11:43:19.914Z"
+    },
+    "characters/earl-sawyer": {
+      "verdict": "as-is",
+      "at": "2026-07-24T11:43:54.348Z"
+    },
+    "characters/elam-hutchins": {
+      "verdict": "junk",
+      "at": "2026-07-24T11:44:03.536Z"
+    },
+    "characters/elmer-frye": {
+      "verdict": "junk",
+      "at": "2026-07-24T11:44:18.656Z"
+    },
+    "characters/fred-farr": {
+      "verdict": "junk",
+      "at": "2026-07-24T11:44:32.761Z"
+    },
+    "characters/george-corey": {
+      "verdict": "junk",
+      "at": "2026-07-24T11:44:38.019Z"
+    },
+    "characters/henry-armitage": {
+      "verdict": "as-is",
+      "at": "2026-07-24T11:44:56.085Z"
+    },
+    "characters/henry-wheeler": {
+      "verdict": "junk",
+      "at": "2026-07-24T11:45:06.977Z"
+    },
+    "characters/joe-osborn": {
+      "verdict": "junk",
+      "at": "2026-07-24T11:45:14.003Z"
+    },
+    "characters/mrs-whateley": {
+      "verdict": "as-is",
+      "at": "2026-07-24T11:45:29.419Z"
+    },
+    "characters/lavinia-whateley": {
+      "verdict": "as-is",
+      "at": "2026-07-24T11:45:34.965Z"
+    },
+    "characters/luther-brown": {
+      "verdict": "as-is",
+      "at": "2026-07-24T12:03:33.146Z"
+    },
+    "characters/mamie-bishop": {
+      "verdict": "junk",
+      "at": "2026-07-24T12:03:45.185Z"
+    },
+    "characters/mrs-frye": {
+      "verdict": "junk",
+      "at": "2026-07-24T12:04:14.883Z"
+    },
+    "characters/selina-frye": {
+      "edited": true,
+      "at": "2026-07-24T12:04:21.219Z",
+      "verdict": "as-is"
+    },
+    "characters/seth-bishop": {
+      "edited": true,
+      "at": "2026-07-24T12:05:50.616Z",
+      "verdict": "as-is"
+    },
+    "characters/mis-corey": {
+      "verdict": "as-is",
+      "at": "2026-07-24T12:09:42.264Z"
+    },
+    "characters/old-whateley": {
+      "verdict": "as-is",
+      "at": "2026-07-24T12:09:52.752Z"
+    },
+    "characters/professor-warren-rice": {
+      "edited": true,
+      "at": "2026-07-24T12:10:13.474Z",
+      "verdict": "as-is"
+    },
+    "characters/reverend-abijah-hoadley": {
+      "verdict": "as-is",
+      "at": "2026-07-24T12:10:35.528Z"
+    },
+    "characters/sally-sawyer": {
+      "verdict": "as-is",
+      "at": "2026-07-24T12:10:49.282Z"
+    },
+    "characters/squire-sawyer-whateley": {
+      "verdict": "as-is",
+      "at": "2026-07-24T12:11:28.710Z"
+    },
+    "characters/silas-bishop": {
+      "verdict": "junk",
+      "at": "2026-07-24T12:11:43.114Z"
+    },
+    "characters/wesley-corey": {
+      "verdict": "junk",
+      "at": "2026-07-24T12:11:51.639Z"
+    },
+    "characters/wilbur-whateley": {
+      "edited": true,
+      "at": "2026-07-24T12:12:28.137Z",
+      "verdict": "edited"
+    },
+    "characters/zechariah-whateley": {
+      "verdict": "as-is",
+      "at": "2026-07-24T12:12:47.870Z"
+    },
+    "characters/will-hutchins": {
+      "verdict": "junk",
+      "at": "2026-07-24T12:12:54.060Z"
+    },
+    "characters/sam-hutchins": {
+      "verdict": "junk",
+      "at": "2026-07-24T12:13:02.085Z"
+    },
+    "characters/zeb-whateley": {
+      "verdict": "junk",
+      "at": "2026-07-24T12:24:04.828Z"
+    },
+    "characters/old-zebulon-whateley": {
+      "verdict": "as-is",
+      "at": "2026-07-24T12:24:07.452Z"
+    },
+    "creatures/cthulhu": {
+      "verdict": "as-is",
+      "at": "2026-07-24T12:40:38.321Z"
+    },
+    "creatures/elder-things": {
+      "verdict": "as-is",
+      "at": "2026-07-24T13:13:12.922Z"
+    },
+    "creatures/shub-niggurath": {
+      "verdict": "as-is",
+      "at": "2026-07-24T13:13:23.229Z"
+    },
+    "creatures/yog-sothoth": {
+      "verdict": "as-is",
+      "at": "2026-07-24T13:13:27.511Z"
+    },
+    "creatures/whippoorwills": {
+      "verdict": "as-is",
+      "at": "2026-07-24T13:16:51.670Z"
+    },
+    "creatures/the-old-ones": {
+      "verdict": "as-is",
+      "at": "2026-07-24T13:16:53.846Z"
+    },
+    "creatures/the-dunwich-horror": {
+      "verdict": "as-is",
+      "at": "2026-07-24T13:16:57.325Z"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "slug": "curtis-old-whateleys-son",
+  "name": "Curtis Whateley",
+  "role": "other",
+  "summary": "Curtis Whateley, a son of Old Whateley, sold his father a pair of Alderney cows around the time of Wilbur's birth, and is otherwise unrecorded in the Whateley chronicle.",
+  "description": "Curtis was Old Whateley's son, from whom his father purchased the pair of Alderney cows that Zechariah Whateley later came to lead away from the farm. Nothing further is recorded of him.",
+  "locations": [
+    "dunwich",
+    "dunwich/whateley-farmhouse"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 15,
+      "quote": "Old Whateley had bought of his son Curtis",
+      "context": "Chapter 2"
+    }
+  ],
+  "_draft": {
+    "aliases": [
+      "Curtis Whateley"
+    ],
+    "occurrences": 1,
+    "windows": [
+      "w011-022"
+    ],
+    "facts": [
+      "Was Old Whateley's son.",
+      "Old Whateley bought a pair of Alderney cows from him."
+    ],
+    "needsReview": [
+      {
+        "field": "identity",
+        "reason": "Shares the name 'Curtis Whateley' with the unrelated 1928 witness described as being 'of the undecayed branch'; no textual link connects them so they are kept as separate entities.",
+        "candidates": [
+          "curtis-old-whateleys-son",
+          "curtis-whateley"
+        ]
+      }
+    ]
+  }
+}

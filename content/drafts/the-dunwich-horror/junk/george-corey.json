@@ -1,0 +1,43 @@
+{
+  "slug": "george-corey",
+  "name": "George Corey",
+  "role": "other",
+  "summary": "George Corey was a Dunwich farmer whose hired boy Luther worked his land near Cold Spring Glen and first raised the alarm over the horror's tracks.",
+  "description": "George Corey was the farmer, between Cold Spring Glen and the village, at whose place Luther Brown worked as hired boy; George's wife, Mrs. Corey, lived down by the junction.",
+  "locations": [
+    "dunwich",
+    "dunwich/cold-spring-glen"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 64,
+      "quote": "About 7 o'clock Luther Brown, the hired boy at George Corey's, between Cold Spring Glen and the village, rushed frenziedly back from his morning trip to Ten-Acre Meadow with the cows.",
+      "context": "Chapter 7"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 103,
+      "quote": "it was Mis' Corey, George's wife that lives daown by the junction",
+      "context": "Chapter 9"
+    }
+  ],
+  "_draft": {
+    "aliases": [
+      "George"
+    ],
+    "occurrences": 2,
+    "windows": [
+      "w061-072",
+      "w101-112"
+    ],
+    "facts": [
+      "Luther Brown was the hired boy at his farm, between Cold Spring Glen and the village.",
+      "His wife is Mrs. Corey, who lives down by the junction."
+    ],
+    "needsReview": []
+  }
+}

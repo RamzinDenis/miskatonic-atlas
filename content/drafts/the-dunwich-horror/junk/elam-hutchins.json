@@ -1,0 +1,35 @@
+{
+  "slug": "elam-hutchins",
+  "name": "Elam Hutchins",
+  "role": "other",
+  "summary": "Elam Hutchins was a Dunwich neighbor whose collie Jack was shot by young Wilbur Whateley after the dog tried to bite him, prompting Elam's threat to kill the boy if he dared.",
+  "description": "According to Wilbur Whateley's diary, Elam Hutchins's collie Jack tried to bite the young Wilbur, who shot the dog; Elam responded that he would kill Wilbur if he dared.",
+  "locations": [
+    "dunwich"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 84,
+      "quote": "Shot Elam Hutchins's collie Jack when he went to bite me, and Elam says he would kill me if he dast.",
+      "context": "Chapter 8"
+    }
+  ],
+  "_draft": {
+    "aliases": [
+      "Elam"
+    ],
+    "occurrences": 1,
+    "windows": [
+      "w081-092"
+    ],
+    "facts": [
+      "His collie Jack tried to bite Wilbur Whateley and was shot by him.",
+      "He said he would kill Wilbur if he dared."
+    ],
+    "needsReview": []
+  }
+}

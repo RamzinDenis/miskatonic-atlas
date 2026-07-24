@@ -1,0 +1,38 @@
+{
+  "slug": "the-dunwich-horror",
+  "name": "The Dunwich Horror",
+  "classification": "entity",
+  "summary": "The Dunwich Horror was the monstrous, invisible twin brother of Wilbur Whateley — begotten by Yog-Sothoth upon Lavinia Whateley — that rampaged across Dunwich in August 1928 before being destroyed by Dr. Armitage's party atop Sentinel Hill.",
+  "description": "Left behind by Wilbur Whateley at his death, the entity burst forth within hours to become the memorable Dunwich horror: an invisible, mountainous blasphemy that lumbered by night, wrecking the Elmer Frye farm and family so completely that nothing living or dead could be found among the ruins, mauling Seth Bishop's cattle, and eventually assaulting the Bishop house and yard itself, leaving broad swaths of crushed vegetation, barrel-sized tracks, and a tarry, ineffable stench in its wake. It was tracked at last up the slopes of Sentinel Hill, its passage visible only as trembling, creeping grass and bushes moving toward the altar-stone.\n\nWhen Dr. Armitage, Professor Rice, and Dr. Morgan intercepted it near the summit, Rice's chemical spray gave it a moment's visibility: witnesses glimpsed an instant's flash of gray cloud the size of a building, and Curtis Whateley, watching through a telescope, described something bigger than a barn, made of squirming ropes, shaped like a monstrous hen's egg, jelly-like, with dozens of hogshead-sized legs, bulging eyes, and ten or twenty stovepipe-sized mouths, gray with blue or purple rings — crowned by a grotesque half-face with red eyes and crinkly albino hair, resembling old Wizard Whateley himself, yards and yards across. As the three scholars chanted their incantation, the creature's own raucous, half-human croaking rose to a climax and burst into an anguished cry of 'FATHER! FATHER! YOG-SOTHOTH!' before a single lightning bolt struck the altar-stone and a tidal wave of viewless force and stench swept down the hill.\n\nArmitage declared that the thing had gone forever, split back into what it was originally made of — an impossibility in a normal world, only the least fraction of it ever truly matter — with most of its substance returning to its father, Yog-Sothoth, in some vague realm or dimension outside the material universe. It was later revealed to have been Wilbur Whateley's twin brother, raised by the Whateleys for a terrible part in the doings that were to come, growing fast and huge for the same reason as Wilbur but surpassing him because it carried a far greater share of that same cosmic 'outsideness.'",
+  "locations": [
+    "dunwich",
+    "dunwich/cold-spring-glen",
+    "dunwich/sentinel-hill",
+    "dunwich/whateley-farmhouse",
+    "dunwich/frye-place"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "fate": "Destroyed atop Sentinel Hill in August 1928 when Armitage, Rice, and Morgan's incantation and powder revealed and dispelled it, splitting it back into the otherworldly substance from which it was made; most of it returned to its father, Yog-Sothoth, in a realm outside the material universe.",
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 129,
+      "quote": "Bigger 'n a barn ... all made o' squirmin' ropes ... hull thing sort o' shaped like a hen's egg bigger'n anything, with dozens o' legs like hogsheads that haff shut up when they step ... nothin' solid abaout it—all like jelly, an' made o' sep'rit wrigglin' ropes pushed clost together ... great bulgin' eyes all over it ... ten or twenty maouths or trunks a-stickin' aout all along the sides, big as stovepipes, an' all a-tossin' an' openin' an' shuttin' ... all gray, with kinder blue or purple rings ... an' Gawd in Heaven—that haff face on top!...",
+      "context": "Chapter 10"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 140,
+      "quote": "The thing has gone for ever,\" Armitage said. \"It has been split up into what it was originally made of, and can never exist again. It was an impossibility in a normal world. Only the least fraction was really matter in any sense we know. It was like its father—and most of it has gone back to him in some vague realm or dimension outside our material universe; some vague abyss out of which only the most accursed rites of human blasphemy could ever have called him for a moment on the hills.",
+      "context": "Chapter 10"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 149,
+      "quote": "It grew fast and big from the same reason that Wilbur grew fast and big—but it beat him because it had a greater share of the outsideness in it. You needn't ask how Wilbur called it out of the air. He didn't call it out. It was his twin brother, but it looked more like the father than he did.",
+      "context": "Chapter 10"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "mis-corey",
+  "name": "Mrs. Corey",
+  "role": "witness",
+  "summary": "Mrs. Corey, George Corey's wife, set off the telephone panic across Dunwich after her hired boy Luther came home in terror, and later fielded reports of the horror's approach toward her own house.",
+  "description": "Mrs. Corey, unable to extract more information from her frightened hired boy Luther, began telephoning the neighbors, starting the overture of panic that heralded the major terrors; she called Sally Sawyer, housekeeper at Seth Bishop's. Later, during the party-line panic, she reported on the tracks and reasoned that if they had not yet reached her house they must have gone into the glen itself.",
+  "locations": [
+    "dunwich"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 66,
+      "quote": "Mrs. Corey, unable to extract more information, began telephoning the neighbors; thus starting on its rounds the overture of panic that heralded the major terrors.",
+      "context": "Chapter 7"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 71,
+      "quote": "ef they was on the glen rud this side o' the glen, an' ain't got to your haouse yet, I calc'late they must go into the glen itself",
+      "context": "Chapter 7"
+    }
+  ]
+}

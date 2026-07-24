@@ -1,0 +1,19 @@
+{
+  "slug": "elder-things",
+  "name": "Elder Things",
+  "classification": "race",
+  "summary": "The Elder Things are alien powers that, in Dr. Armitage's fevered ravings, wished to strip the earth from the solar system and drag it into the otherworldly plane from which they had once fallen.",
+  "description": "While delirious from his exhausting decipherment of Wilbur Whateley's diary, Dr. Armitage would shout that the world was in danger, since the Elder Things wished to strip it and drag it away from the solar system and cosmos of matter into some other plane or phase of entity from which it had once fallen, vigintillions of eons ago.",
+  "locations": [],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 88,
+      "quote": "He would shout that the world was in danger, since the Elder Things wished to strip it and drag it away from the solar system and cosmos of matter into some other plane or phase of entity from which it had once fallen, vigintillions of eons ago.",
+      "context": "Chapter 8"
+    }
+  ]
+}

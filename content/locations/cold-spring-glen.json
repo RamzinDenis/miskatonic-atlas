@@ -1,0 +1,35 @@
+{
+  "slug": "cold-spring-glen",
+  "name": "Cold Spring Glen",
+  "parentSlug": "dunwich",
+  "type": "other",
+  "summary": "A sinister ravine near Dunwich, long reputed unhealthy and haunted by whippoorwills and fireflies that 'don't act like creatures of God,' into and out of which the Dunwich horror was seen to pass.",
+  "description": "Old Whateley noticed the growing number of whippoorwills that would come out of Cold Spring Glen to chirp under his window at night. Sally Sawyer maintained that the glen is not a healthy or decent place, its whippoorwills and fireflies never acting like creatures of God, and that strange things could be heard rushing and talking in the air down there between the rock falls and Bear's Den. Elmer Frye's house stood on the eastern edge of the glen, and the Frye place itself stood at its head; Luther Brown's usual morning route with the cows to Ten-Acre Meadow lay between the glen and the village.\n\nWhen the horror burst loose, all the trees on the glen's banks were found bent and broken, with a great avenue gouged in the underbrush, as though whatever had escaped had gone down into the ravine; monstrous tracks argued a passage in two directions between the glen and Sentinel Hill. Only a distant fetor rose from below, no sound, and dogs grew cowed and reluctant near it. Sam Hutchins later warned people not to go down into the glen because of the tracks, the smell, and whippoorwills screeching in the dark of noonday — a warning a party of State Police disregarded, and from which they never returned. At night a wind sweeping up out of the glen would bring a touch of ineffable fetor to the air, and once a forky bolt of lightning seemed to descend into the accursed place itself.",
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "connectedTo": [
+    "dunwich/sentinel-hill",
+    "dunwich/frye-place"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 71,
+      "quote": "I allus says Col' Spring Glen ain't no healthy nor decent place. The whippoorwills an' fireflies there never did act like they was creaters o' Gawd, an' they's them as says ye kin hear strange things a-rushin' an' a-talkin' in the air daown thar ef ye stand in the right place, atween the rock falls an' Bear's Den.",
+      "context": "Chapter 7"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 73,
+      "quote": "Whatever had burst loose upon the world had assuredly gone down into the great sinister ravine; for all the trees on the banks were bent and broken, and a great avenue had been gouged in the precipice-hanging underbrush.",
+      "context": "Chapter 7"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 95,
+      "quote": "I telled 'em not ter go daown into the glen, an' I never thought nobody'd dew it with them tracks an' that smell an' the whippoorwills a-screechin' daown thar in the dark o' noonday....",
+      "context": "Chapter 9"
+    }
+  ]
+}

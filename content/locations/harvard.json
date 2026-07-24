@@ -1,0 +1,37 @@
+{
+  "slug": "harvard",
+  "name": "Harvard",
+  "type": "building",
+  "summary": "The Massachusetts university whose Widener Library held a copy of the Necronomicon that Wilbur Whateley tried in vain to borrow or copy, making a grotesque and nerve-wracking trip to Cambridge for the purpose.",
+  "description": "Some of the Whateleys and Bishops still send their eldest sons to Harvard, though those sons seldom return to the moldering gambrel roofs under which they and their ancestors were born.\n\n## Widener Library\n\nCorrespondence with the Widener Library at Harvard, along with the Bibliotheque Nationale in Paris, the British Museum, the University of Buenos Aires, and the Library of Miskatonic University at Arkham, all failed to get Wilbur Whateley the loan of a book he desperately wanted. He later made a grotesque trip to Cambridge in frantic efforts to borrow or copy from the Necronomicon at the Widener Library, and was shockingly nervous there, anxious for the book yet almost equally anxious to get home again. Dr. Armitage, learning of this, issued warnings of the keenest intensity to all librarians having charge of the dreaded volume, and it was these warnings that ultimately thwarted Wilbur's efforts at Widener.",
+  "realWorld": "Harvard University, Cambridge, Massachusetts",
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "connectedTo": [
+    "arkham/miskatonic-university",
+    "paris",
+    "london",
+    "south-america"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 41,
+      "quote": "Correspondence with the Widener Library at Harvard, the Bibliotheque Nationale in Paris, the British Museum, the University of Buenos Aires, and the Library of Miskatonic University at Arkham had failed to get him the loan of a book he desperately wanted",
+      "context": "Chapter 5"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 52,
+      "quote": "He had heard, meanwhile, of Whateley's grotesque trip to Cambridge, and of his frantic efforts to borrow or copy from the Necronomicon at the Widener Library.",
+      "context": "Chapter 6"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 52,
+      "quote": "Armitage had issued warnings of the keenest intensity to all librarians having charge of the dreaded volume.",
+      "context": "Chapter 6"
+    }
+  ]
+}

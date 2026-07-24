@@ -1,0 +1,38 @@
+{
+  "slug": "dunwich",
+  "name": "Dunwich",
+  "type": "town",
+  "summary": "An ancient, decayed township in north central Massachusetts, shunned by outsiders since the horror of 1928, whose Whateley and Bishop families became notorious for witchcraft and worse; it is the central setting of the events later called the Dunwich horror.",
+  "description": "Dunwich is reached by taking the wrong fork at the junction of the Aylesbury pike beyond Dean's Corners; the village proper lies huddled between a stream and the vertical slope of Round Mountain, its rotting gambrel roofs bespeaking an architectural period far older than the surrounding region, for Dunwich is ridiculously old — older by far than any community within thirty miles of it. Outsiders visit as seldom as possible, and since the events of 1928, hushed up by those who had the town's and the world's welfare at heart, every signboard pointing toward it has been taken down. The township's old gentry represent two or three armigerous families that came from Salem in 1692; some of the Whateleys and Bishops still send their eldest sons to Harvard and Miskatonic, though those sons seldom return. In 1747 the Reverend Abijah Hoadley, newly come to the Congregational Church at Dunwich Village, preached a memorable sermon on the close presence of Satan and his imps; the text, printed in Springfield, is still extant.\n\nWilbur Whateley was born in a farmhouse within the township, and it was around him that the horror eventually gathered: he grew more and more hated and dreaded around the village for youthful disappearances laid vaguely at his door, and his eventual trip outside the region was remembered as scarcely less strange than his birth. When the crisis came, the countryside fell into great agitation over rumblings beneath the domed hills and the stench and sounds issuing from the ruined Whateley farmhouse; three-quarters of the men and boys of Dunwich trooped between the ruins and Cold Spring Glen, and the Elmer Fryes were erased from the village in a single night. Sally Sawyer, one of the natives, maintained that there have always been unseen, non-human things around Dunwich, and even the editor of the Aylesbury Transcript, accustomed to wild tales from the place, could only manage a facetious paragraph, later echoed by an Associated Press item about the 'record-breaking monster' the local bootleg whisky had supposedly raised up. Elsewhere in the township, Corey's place served as a rallying point where armed men gathered with Fords and wagons, and the road toward Wizard Whateley's and Sentinel Hill crossed Bishop's Brook.\n\n## Osborn's General Store\n\nOsborn's general store in Dunwich Village served as the settlement's social hub. Old Whateley discoursed incoherently to the loungers there a week after Wilbur's birth, and later returned to tell them he thought his time had almost come; Wilbur himself telephoned Dr. Houghton from Osborn's on Lammas Night, 1924, and bought there the cheap valise he carried on his trip to Arkham. When the Frye house was annihilated, it was the air of hushed fright at Osborn's that first told the men from Arkham something hideous had happened.\n\n## Devil's Hop Yard\n\nThe Devil's Hop Yard is a bleak, blasted hillside within the township where no tree, shrub, or grass-blade will grow. Seth Bishop's cattle were later found grazing the upper pasture nigh the Hop Yard in an awful, wounded state, and his farmhouse and barn — reached by cutting across the lower meadow, wading the brook, and climbing through Carrier's mowing and the timber-lot — were found collapsed into empty shells like the Frye place before them, with nothing dead or living inside, only stench and tarry stickiness.",
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "connectedTo": [
+    "aylesbury",
+    "arkham",
+    "miskatonic-river",
+    "harvard",
+    "arkham/miskatonic-university",
+    "new-england"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 5,
+      "quote": "Outsiders visit Dunwich as seldom as possible, and since a certain season of horror all the signboards pointing toward it have been taken down.",
+      "context": "Chapter 1"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 10,
+      "quote": "Dunwich is indeed ridiculously old—older by far than any of the communities within thirty miles of it.",
+      "context": "Chapter 1"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 93,
+      "quote": "The day was pleasant, but even in the brightest sunlight a kind of quiet dread and portent seemed to hover about the strangely domed hills and the deep, shadowy ravines of the stricken region.",
+      "context": "Chapter 9"
+    }
+  ]
+}

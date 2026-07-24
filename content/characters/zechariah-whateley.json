@@ -1,0 +1,28 @@
+{
+  "slug": "zechariah-whateley",
+  "name": "Zechariah Whateley",
+  "role": "witness",
+  "summary": "Old Zechariah Whateley, of the undecayed branch of the family, was one of only two people to see the infant Wilbur during his first month of life, having come to lead cattle bought from his son Curtis.",
+  "description": "Zechariah Whateley, of the undecayed Whateleys, was one of only two persons to see Wilbur Whateley during the first month of the infant's life. He came to the farmhouse to lead away a pair of Alderney cows that Old Whateley had purchased from his own son, Curtis.",
+  "locations": [
+    "dunwich",
+    "dunwich/whateley-farmhouse"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 15,
+      "quote": "The only persons who saw Wilbur during the first month of his life were old Zechariah Whateley, of the undecayed Whateleys, and Earl Sawyer's common-law wife, Mamie Bishop.",
+      "context": "Chapter 2"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 15,
+      "quote": "Zechariah came to lead a pair of Alderney cows which Old Whateley had bought of his son Curtis.",
+      "context": "Chapter 2"
+    }
+  ]
+}

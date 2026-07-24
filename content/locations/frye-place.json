@@ -1,0 +1,34 @@
+{
+  "slug": "frye-place",
+  "name": "the Frye Place",
+  "parentSlug": "dunwich",
+  "type": "building",
+  "summary": "Elmer Frye's farmhouse at the head of Cold Spring Glen, the first homestead annihilated by the Dunwich horror, found collapsed into an empty, stench-filled shell.",
+  "description": "Elmer Frye's house stood on the eastern edge of Cold Spring Glen; a frightful stench and the savage barking of dogs awakened the household there one night, and one side of the old red barn was found completely caved in, with only about a quarter of the cattle ever located and identified. When a hastily assembled group of armed men reached the place at the head of the glen, there was no longer any house at all — it had caved in like an egg-shell, and amongst the ruins nothing living or dead could be discovered, only a stench and a tarry stickiness. The Elmer Fryes had been erased from Dunwich entire.\n\nWhen the men from Arkham later examined the site, the Frye ruins still showed lingering traces of the tarry stickiness and blasphemous tracks in the yard; a car belonging to a party of State Police stood empty near the ruins, its occupants never found. The visitors from Arkham nonetheless resolved to stand guard at the Frye ruins near the glen, though the Dunwich natives who saw them leave had little expectation of seeing them again.",
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "connectedTo": [
+    "dunwich/cold-spring-glen"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 79,
+      "quote": "There were more swaths and monstrous prints, but there was no longer any house. It had caved in like an egg-shell, and amongst the ruins nothing living or dead could be discovered—only a stench and a tarry stickiness.",
+      "context": "Chapter 7"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 93,
+      "quote": "seeing for themselves with rising pangs of horror the drear Frye ruins with their lingering traces of the tarry stickiness, the blasphemous tracks in the Frye yard",
+      "context": "Chapter 9"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 97,
+      "quote": "They shook their heads at the visitors' plan to stand guard at the Frye ruins near the glen; and as they left, had little expectancy of ever seeing the watchers again.",
+      "context": "Chapter 9"
+    }
+  ]
+}

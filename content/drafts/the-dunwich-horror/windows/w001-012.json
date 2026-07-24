@@ -1,0 +1,469 @@
+[
+  {
+    "kind": "location",
+    "name": "Dunwich",
+    "aliases": [
+      "Dunwich Village"
+    ],
+    "facts": [
+      "Outsiders visit Dunwich as seldom as possible, and signboards pointing toward it have been taken down since a season of horror.",
+      "The Dunwich horror of 1928 was hushed up by those who had the town's and the world's welfare at heart.",
+      "Dunwich is ridiculously old, older by far than any of the communities within thirty miles of it.",
+      "A traveler reaches Dunwich by taking the wrong fork at the junction of the Aylesbury pike beyond Dean's Corners.",
+      "The village lies between a stream and the vertical slope of Round Mountain.",
+      "In 1747 the Reverend Abijah Hoadley was newly come to the Congregational Church at Dunwich Village."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Round Mountain",
+      "Aylesbury pike",
+      "Dean's Corners",
+      "Reverend Abijah Hoadley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 4,
+        "quote": "Afterward one sometimes learns that one has been through Dunwich.",
+        "context": "Chapter 1"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 5,
+        "quote": "Outsiders visit Dunwich as seldom as possible, and since a certain season of horror all the signboards pointing toward it have been taken down.",
+        "context": "Chapter 1"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 5,
+        "quote": "In our sensible age—since the Dunwich horror of 1928 was hushed up by those who had the town's and the world's welfare at heart—people shun it without knowing exactly why.",
+        "context": "Chapter 1"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 10,
+        "quote": "Dunwich is indeed ridiculously old—older by far than any of the communities within thirty miles of it.",
+        "context": "Chapter 1"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 6,
+        "quote": "In 1747 the Reverend Abijah Hoadley, newly come to the Congregational Church at Dunwich Village, preached a memorable sermon on the close presence of Satan and his imps",
+        "context": "Chapter 1"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Aylesbury pike",
+    "aliases": [],
+    "facts": [
+      "A traveler in north central Massachusetts takes the wrong fork at the junction of the Aylesbury pike just beyond Dean's Corners to reach Dunwich."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Dean's Corners",
+      "Dunwich"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 2,
+        "quote": "the junction of the Aylesbury pike just beyond Dean's Corners",
+        "context": "Chapter 1"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Dean's Corners",
+    "aliases": [],
+    "facts": [
+      "Dean's Corners is a point near the junction of the Aylesbury pike where a traveler can take the wrong fork toward Dunwich."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Aylesbury pike",
+      "Dunwich"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 2,
+        "quote": "the junction of the Aylesbury pike just beyond Dean's Corners",
+        "context": "Chapter 1"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Round Mountain",
+    "aliases": [],
+    "facts": [
+      "A small village is seen huddled between a stream and the vertical slope of Round Mountain."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Dunwich"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 4,
+        "quote": "Across a covered bridge one sees a small village huddled between the stream and the vertical slope of Round Mountain, and wonders at the cluster of rotting gambrel roofs bespeaking an earlier architectural period than that of the neighboring region.",
+        "context": "Chapter 1"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the Miskatonic",
+    "aliases": [
+      "Miskatonic's upper reaches"
+    ],
+    "facts": [
+      "The thin, shining line of the Miskatonic's upper reaches has an oddly serpentlike suggestion as it winds close to the feet of the domed hills among which it rises."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 3,
+        "quote": "The thin, shining line of the Miskatonic's upper reaches has an oddly serpentlike suggestion as it winds close to the feet of the domed hills among which it rises.",
+        "context": "Chapter 1"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Sentinel Hill",
+    "aliases": [],
+    "facts": [
+      "Deposits of skulls and bones found around the sizable table-like rock on Sentinel Hill sustain the popular belief that such spots were once the burial-places of the Pocumtucks."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 10,
+        "quote": "Deposits of skulls and bones, found within these circles and around the sizable table-like rock on Sentinel Hill, sustain the popular belief that such spots were once the burial-places of the Pocumtucks",
+        "context": "Chapter 1"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Devil's Hop Yard",
+    "aliases": [],
+    "facts": [
+      "The Devil's Hop Yard is a bleak, blasted hillside where no tree, shrub, or grass-blade will grow."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 9,
+        "quote": "while still others try to explain the Devil's Hop Yard—a bleak, blasted hillside where no tree, shrub, or grass-blade will grow.",
+        "context": "Chapter 1"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Salem",
+    "aliases": [],
+    "facts": [
+      "The old gentry of Dunwich represent two or three armigerous families which came from Salem in 1692."
+    ],
+    "typeGuess": "city",
+    "realWorld": "Salem, Massachusetts",
+    "relatedNames": [
+      "Dunwich"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 5,
+        "quote": "The old gentry, representing the two or three armigerous families which came from Salem in 1692, have kept somewhat above the general level of decay",
+        "context": "Chapter 1"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Harvard",
+    "aliases": [],
+    "facts": [
+      "Some of the Whateleys and Bishops still send their eldest sons to Harvard, though those sons seldom return."
+    ],
+    "typeGuess": "building",
+    "realWorld": "Harvard University",
+    "relatedNames": [
+      "Miskatonic"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 5,
+        "quote": "Some of the Whateleys and Bishops still send their eldest sons to Harvard and Miskatonic, though those sons seldom return to the moldering gambrel roofs under which they and their ancestors were born.",
+        "context": "Chapter 1"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Miskatonic",
+    "aliases": [],
+    "facts": [
+      "Some of the Whateleys and Bishops still send their eldest sons to Miskatonic, though those sons seldom return."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Harvard"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 5,
+        "quote": "Some of the Whateleys and Bishops still send their eldest sons to Harvard and Miskatonic, though those sons seldom return to the moldering gambrel roofs under which they and their ancestors were born.",
+        "context": "Chapter 1"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Springfield",
+    "aliases": [],
+    "facts": [
+      "The text of Reverend Hoadley's 1747 sermon was printed in Springfield and is still extant."
+    ],
+    "typeGuess": "city",
+    "relatedNames": [
+      "Reverend Abijah Hoadley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 8,
+        "quote": "Mr. Hoadley disappeared soon after delivering this sermon; but the text, printed in Springfield, is still extant.",
+        "context": "Chapter 1"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Reverend Abijah Hoadley",
+    "aliases": [
+      "Mr. Hoadley"
+    ],
+    "facts": [
+      "In 1747 he was newly come to the Congregational Church at Dunwich Village.",
+      "He preached a memorable sermon on the close presence of Satan and his imps.",
+      "He claimed to have caught a plain discourse of evil powers in the hill behind his house, with rattling, rolling, groaning, screeching and hissing.",
+      "He disappeared soon after delivering the sermon.",
+      "The text of his sermon was printed in Springfield and is still extant."
+    ],
+    "typeGuess": "witness",
+    "fate": "disappeared soon after delivering the sermon",
+    "relatedNames": [
+      "Dunwich",
+      "Springfield"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 6,
+        "quote": "In 1747 the Reverend Abijah Hoadley, newly come to the Congregational Church at Dunwich Village, preached a memorable sermon on the close presence of Satan and his imps, in which he said:",
+        "context": "Chapter 1"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 7,
+        "quote": "I myself did not more than a Fortnight ago catch a very plain Discourse of evill Powers in the Hill behind my House; wherein there were a Rattling and Rolling, Groaning, Screeching, and Hissing, such as no Things of this Earth cou'd raise up",
+        "context": "Chapter 1"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 8,
+        "quote": "Mr. Hoadley disappeared soon after delivering this sermon; but the text, printed in Springfield, is still extant.",
+        "context": "Chapter 1"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Wilbur Whateley",
+    "aliases": [],
+    "facts": [
+      "Wilbur Whateley was born at 5 a.m. on Sunday, the second of February, 1913, in a large and partly inhabited farmhouse set against a hillside four miles from Dunwich village.",
+      "His birth date was recalled because it was Candlemas and because noises in the hills had sounded and dogs had barked persistently the night before.",
+      "His mother was Lavinia Whateley, one of the decadent Whateleys.",
+      "He was described as a dark, goatish-looking infant, in contrast to his mother's sickly pink-eyed albinism."
+    ],
+    "typeGuess": "protagonist",
+    "relatedNames": [
+      "Lavinia Whateley",
+      "Old Whateley",
+      "Dunwich"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 11,
+        "quote": "It was in the township of Dunwich, in a large and partly inhabited farmhouse set against a hillside four miles from the village and a mile and a half from any other dwelling, that Wilbur Whateley was born at 5 a. m. on Sunday, the second of February, 1913.",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 11,
+        "quote": "she seemed strangely proud of the dark, goatish-looking infant who formed such a contrast to her own sickly and pink-eyed albinism, and was heard to mutter many curious prophecies about its unusual powers and tremendous future.",
+        "context": "Chapter 2"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Lavinia Whateley",
+    "aliases": [],
+    "facts": [
+      "Lavinia Whateley was one of the decadent Whateleys, a somewhat deformed, unattractive albino woman of 35.",
+      "She lived with an aged and half-insane father about whom frightful tales of wizardry had been whispered in his youth.",
+      "She had no known husband but made no attempt to disavow her child, Wilbur.",
+      "She seemed strangely proud of the infant and muttered curious prophecies about its unusual powers and tremendous future.",
+      "She was a lone creature given to wandering amidst thunderstorms in the hills.",
+      "She tried to read the great odorous books her father had inherited through two centuries of Whateleys.",
+      "She had never been to school but was filled with disjointed scraps of ancient lore taught to her by Old Whateley.",
+      "Her mother, Mrs. Whateley, died by violence, unexplained, when Lavinia was twelve years old."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Old Whateley",
+      "Mrs. Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 11,
+        "quote": "the mother was one of the decadent Whateleys, a somewhat deformed, unattractive albino woman of 35, living with an aged and half-insane father about whom the most frightful tales of wizardry had been whispered in his youth.",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 11,
+        "quote": "Lavinia Whateley had no known husband, but according to the custom of the region made no attempt to disavow the child",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 12,
+        "quote": "Lavinia was one who would be apt to mutter such things, for she was a lone creature given to wandering amidst thunderstorms in the hills and trying to read the great odorous books which her father had inherited through two centuries of Whateleys, and which were fast falling to pieces with age and worm-holes.",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 12,
+        "quote": "She had never been to school, but was filled with disjointed scraps of ancient lore that Old Whateley had taught her.",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 12,
+        "quote": "The remote farmhouse had always been feared because of Old Whateley's reputation for black magic, and the unexplained death by violence of Mrs. Whateley when Lavinia was twelve years old had not helped to make the place popular.",
+        "context": "Chapter 2"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Old Whateley",
+    "aliases": [],
+    "facts": [
+      "Old Whateley was aged and half-insane, the father of Lavinia Whateley.",
+      "The most frightful tales of wizardry had been whispered about him in his youth.",
+      "He inherited great odorous books through two centuries of Whateleys.",
+      "He taught Lavinia disjointed scraps of ancient lore.",
+      "The remote farmhouse had always been feared because of his reputation for black magic."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Lavinia Whateley",
+      "Mrs. Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 11,
+        "quote": "the mother was one of the decadent Whateleys, a somewhat deformed, unattractive albino woman of 35, living with an aged and half-insane father about whom the most frightful tales of wizardry had been whispered in his youth.",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 12,
+        "quote": "The remote farmhouse had always been feared because of Old Whateley's reputation for black magic, and the unexplained death by violence of Mrs. Whateley when Lavinia was twelve years old had not helped to make the place popular.",
+        "context": "Chapter 2"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Mrs. Whateley",
+    "aliases": [],
+    "facts": [
+      "Mrs. Whateley died by violence, unexplained, when Lavinia was twelve years old."
+    ],
+    "typeGuess": "other",
+    "fate": "died by violence, cause unexplained",
+    "relatedNames": [
+      "Lavinia Whateley",
+      "Old Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 12,
+        "quote": "The remote farmhouse had always been feared because of Old Whateley's reputation for black magic, and the unexplained death by violence of Mrs. Whateley when Lavinia was twelve years old had not helped to make the place popular.",
+        "context": "Chapter 2"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "whippoorwills",
+    "aliases": [],
+    "facts": [
+      "The natives are mortally afraid of the numerous whippoorwills which grow vocal on warm nights.",
+      "It is vowed that the birds are psychopomps lying in wait for the souls of the dying.",
+      "They time their eery cries in unison with the sufferer's struggling breath.",
+      "If they catch the fleeing soul when it leaves the body, they instantly flutter away chittering in demoniac laughter.",
+      "If they fail to catch the soul, they subside gradually into a disappointed silence."
+    ],
+    "typeGuess": "entity",
+    "relatedNames": [
+      "Dunwich"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 9,
+        "quote": "Then, too, the natives are mortally afraid of the numerous whippoorwills which grow vocal on warm nights.",
+        "context": "Chapter 1"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 9,
+        "quote": "It is vowed that the birds are psychopomps lying in wait for the souls of the dying, and that they time their eery cries in unison with the sufferer's struggling breath.",
+        "context": "Chapter 1"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 9,
+        "quote": "If they can catch the fleeing soul when it leaves the body, they instantly flutter away chittering in demoniac laughter; but if they fail, they subside gradually into a disappointed silence.",
+        "context": "Chapter 1"
+      }
+    ]
+  }
+]

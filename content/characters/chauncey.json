@@ -1,0 +1,29 @@
+{
+  "slug": "chauncey",
+  "name": "Chauncey",
+  "role": "witness",
+  "summary": "Chauncey, Sally Sawyer's son, was terrified by a night of unnaturally loud whippoorwills and strange ripping sounds near Wizard Whateley's, then discovered the wrecked, tar-stinking ruin of the Whateley farmhouse and its trail of monstrous tracks the next morning.",
+  "description": "Chauncey, who slept poorly, had gone up on the hill toward Whateley's and dashed back in terror after one look at the place and the pasturage where his stepfather Seth Bishop's cows had been left out all night. He reported that Old Whateley's house was all blown up, its timbers scattered as if by dynamite, the bottom floor covered in a foul tarlike substance, and awful round marks bigger than a hogshead in the yard leading in a wide matted swath toward the meadows, with the cows found half-devoured and drained of blood near the Devil's Hop Yard.\n\nToward morning, Chauncey had heard the whippoorwills so loud in Cold Spring Glen that he could not sleep, and a faint ripping or tearing sound of wood, like a great box being opened far off.",
+  "locations": [
+    "dunwich",
+    "dunwich/cold-spring-glen",
+    "dunwich/whateley-farmhouse"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 67,
+      "quote": "He says Ol' Whateley's haouse is all blowed up, with the timbers scattered raound like they'd ben dynamite inside; only the bottom floor ain't through, but is all covered with a kind o' tarlike stuff that smells awful an' drips daown offen the aidges onto the graoun' whar the side timbers is blowed away.",
+      "context": "Chapter 7"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 70,
+      "quote": "towards mornin' Cha'ncey he heerd the whippoorwills so laoud in Col' Spring Glen he couldn't sleep none. Then he thought he heerd another faintlike saound over towards Wizard Whateley's—a kinder rippin' or tearin' o' wood, like some big box or crate was bein' opened fur off.",
+      "context": "Chapter 7"
+    }
+  ]
+}

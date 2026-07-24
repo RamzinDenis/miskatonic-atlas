@@ -1,0 +1,34 @@
+{
+  "slug": "aylesbury",
+  "name": "Aylesbury",
+  "type": "town",
+  "summary": "A larger town near Dunwich, seat of the county court-house and home to Dr. Houghton and the Aylesbury Transcript, from which help and officials were drawn during the Dunwich horror.",
+  "description": "Old Whateley once referenced Aylesbury as a standard for a proper husband and church wedding, and its people felt tremors on May Eve of 1915 that reached even that far. Dr. Houghton of Aylesbury attended Old Whateley in his last illness, and the Aylesbury Transcript's editor, accustomed to wild tales from Dunwich, could only manage a humorous paragraph about the monstrous tracks later found near Sentinel Hill.\n\nWhen the crisis broke, men were sent to both Dunwich and Aylesbury to look up property and notify any heirs of the late Wilbur Whateley, and a ponderous report on the estate's heirship was filed at the court-house in Aylesbury, with litigation said to be still in progress amongst the innumerable Whateleys of the upper Miskatonic valley. Earl Sawyer suggested help be asked from Aylesbury or Arkham, and a party of State Police did in fact come from Aylesbury in response to the first telephone reports of the Frye tragedy.",
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "connectedTo": [
+    "dunwich",
+    "arkham"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 22,
+      "quote": "On May Eve of 1915 there were tremors which even the Aylesbury people felt",
+      "context": "Chapter 3"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 62,
+      "quote": "They filed a ponderous report at the court-house in Aylesbury, and litigations concerning heirship are said to be still in progress amongst the innumerable Whateleys, decayed and undecayed, of the upper Miskatonic valley.",
+      "context": "Chapter 7"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 94,
+      "quote": "apprised of a party of State Police which had come from Aylesbury that morning in response to the first telephone reports of the Frye tragedy",
+      "context": "Chapter 9"
+    }
+  ]
+}

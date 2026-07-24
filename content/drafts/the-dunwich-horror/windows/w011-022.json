@@ -1,0 +1,575 @@
+[
+  {
+    "kind": "character",
+    "name": "Wilbur Whateley",
+    "aliases": [
+      "Lavinny's boy",
+      "Lavinny's black brat",
+      "the boy"
+    ],
+    "facts": [
+      "Born at 5 a.m. on Sunday, February 2, 1913, in a farmhouse in Dunwich township.",
+      "His mother was Lavinia Whateley, and his paternity was never disclosed.",
+      "There was a hideous screaming on the night he was born, but no known doctor or midwife attended.",
+      "At seven months old he began to walk unassisted.",
+      "At eleven months old he had commenced to talk, with speech unusually free of infantile lisping.",
+      "His facial features were goatish and ugly despite an appearance of intelligence, with thick lips, coarse hair, and elongated ears.",
+      "Dogs abhorred him and he had to take defensive measures against their barking.",
+      "He once shrieked the name of Yog-Sothoth in the midst of a circle of stones with a great book open before him, and the hills shook.",
+      "He was seen running sturdily up Sentinel Hill ahead of his mother, apparently unclothed, before a blaze appeared on the hill.",
+      "He was never subsequently seen without complete and tightly buttoned attire, becoming angry if it was disarranged.",
+      "By a year and seven months old he had grown as large as a four-year-old child and was a fluent, intelligent talker.",
+      "By his fourth year he looked like a boy of ten, grew taciturn, and displayed a dawning look of evil in his goatish face.",
+      "He was obliged to carry a pistol to traverse the countryside safely because of dogs' aversion to him."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Lavinia Whateley",
+      "Old Whateley",
+      "Yog-Sothoth",
+      "Sentinel Hill",
+      "Dunwich"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 11,
+        "quote": "Wilbur Whateley was born at 5 a. m. on Sunday, the second of February, 1913",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 13,
+        "quote": "There was a hideous screaming which echoed above even the hill noises and the dogs' barking on the night Wilbur was born, but no known doctor or midwife presided at his coming.",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 16,
+        "quote": "no one was really unprepared when, at seven months, he began to walk unassisted",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 18,
+        "quote": "how the hills once shook when he shrieked the dreadful name of Yog-Sothoth in the midst of a circle of stones with a great book open in his arms before him",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 17,
+        "quote": "Silas Bishop—of the undecayed Bishops—mentioned having seen the boy running sturdily up that hill ahead of his mother about an hour before the blaze was remarked.",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 17,
+        "quote": "Wilbur was never subsequently seen alive and conscious without complete and tightly buttoned attire, the disarrangement or threatened disarrangement of which always seemed to fill him with anger and alarm.",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 21,
+        "quote": "He had grown as large as a child of four, and was a fluent and incredibly intelligent talker.",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 22,
+        "quote": "Wilbur was growing up uncannily, so that he looked like a boy of ten as he entered his fourth year.",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 22,
+        "quote": "he was obliged to carry a pistol in order to traverse the countryside in safety",
+        "context": "Chapter 3"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Lavinia Whateley",
+    "aliases": [
+      "Lavinny",
+      "Lavinny's mother"
+    ],
+    "facts": [
+      "She was a somewhat deformed, unattractive albino woman of 35.",
+      "She had no known husband but did not disavow her child.",
+      "She seemed strangely proud of her child's unusual powers and predicted a tremendous future for him.",
+      "She was a lone creature given to wandering amidst thunderstorms in the hills.",
+      "She tried to read the great odorous ancient books inherited by her father.",
+      "She had never been to school but was filled with disjointed scraps of lore taught by her father.",
+      "Her own mother died by violence when Lavinia was twelve years old.",
+      "In the spring after Wilbur's birth she resumed her rambles in the hills, carrying him."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Old Whateley",
+      "Mrs. Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 11,
+        "quote": "the mother was one of the decadent Whateleys, a somewhat deformed, unattractive albino woman of 35",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 11,
+        "quote": "Lavinia Whateley had no known husband, but according to the custom of the region made no attempt to disavow the child",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 12,
+        "quote": "she was a lone creature given to wandering amidst thunderstorms in the hills and trying to read the great odorous books which her father had inherited through two centuries of Whateleys",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 12,
+        "quote": "the unexplained death by violence of Mrs. Whateley when Lavinia was twelve years old had not helped to make the place popular",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 16,
+        "quote": "In the spring after Wilbur's birth Lavinia resumed her customary rambles in the hills, bearing in her misproportioned arms the swarthy child.",
+        "context": "Chapter 2"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Old Whateley",
+    "aliases": [
+      "the old man"
+    ],
+    "facts": [
+      "He was the aged and half-insane father of Lavinia Whateley.",
+      "Frightful tales of wizardry had been whispered about him in his youth.",
+      "He taught Lavinia disjointed scraps of ancient lore.",
+      "A week after Wilbur's birth he drove his sleigh into Dunwich Village and discoursed incoherently to loungers at Osborn's general store.",
+      "He claimed the boy's father was as good a husband as could be found and predicted a child of Lavinny's would someday call its father's name atop Sentinel Hill.",
+      "He continued buying cattle from Wilbur's birth until 1928 without measurably increasing the size of his herd.",
+      "He repaired the unused parts of his house, boarding up all the windows in the reclaimed upper story.",
+      "He fitted up a downstairs room with shelving to hold the family's ancient books for Wilbur's use.",
+      "He said he had made some use of the old books but that the boy was fitted to make better use of them.",
+      "He instructed and catechized Wilbur through long, hushed afternoons."
+    ],
+    "typeGuess": "cultist",
+    "relatedNames": [
+      "Lavinia Whateley",
+      "Wilbur Whateley",
+      "Sentinel Hill"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 11,
+        "quote": "living with an aged and half-insane father about whom the most frightful tales of wizardry had been whispered in his youth",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 13,
+        "quote": "Old Whateley drove his sleigh through the snow into Dunwich Village and discoursed incoherently to the group of loungers at Osborn's general store.",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 14,
+        "quote": "some day yew folks'll hear a child o' Lavinny's a-callin' its father's name on the top o' Sentinel Hill!",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 19,
+        "quote": "Meanwhile Old Whateley continued to buy cattle without measurably increasing the size of his herd.",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 19,
+        "quote": "His mania showed itself only in his tight boarding-up of all the windows in the reclaimed section",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 20,
+        "quote": "I made some use of 'em,\" he would say as he tried to mend a torn black-letter page with paste prepared on the rusty kitchen stove, \"but the boy's fitten to make better use of 'em.",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 21,
+        "quote": "Old Whateley would instruct and catechize him through long, hushed afternoons.",
+        "context": "Chapter 3"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Mrs. Whateley",
+    "aliases": [],
+    "facts": [
+      "She was Lavinia Whateley's mother.",
+      "She died by violence when Lavinia was twelve years old."
+    ],
+    "typeGuess": "other",
+    "fate": "Died by violence, unexplained, when Lavinia was twelve years old.",
+    "relatedNames": [
+      "Lavinia Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 12,
+        "quote": "the unexplained death by violence of Mrs. Whateley when Lavinia was twelve years old had not helped to make the place popular",
+        "context": "Chapter 2"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Zechariah Whateley",
+    "aliases": [
+      "old Zechariah Whateley"
+    ],
+    "facts": [
+      "He was one of only two persons who saw Wilbur during the first month of his life.",
+      "He was of the undecayed Whateleys.",
+      "He came to lead a pair of Alderney cows which Old Whateley had bought of his son Curtis."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Old Whateley",
+      "Curtis"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 15,
+        "quote": "The only persons who saw Wilbur during the first month of his life were old Zechariah Whateley, of the undecayed Whateleys, and Earl Sawyer's common-law wife, Mamie Bishop.",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 15,
+        "quote": "Zechariah came to lead a pair of Alderney cows which Old Whateley had bought of his son Curtis.",
+        "context": "Chapter 2"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Mamie Bishop",
+    "aliases": [],
+    "facts": [
+      "She was Earl Sawyer's common-law wife.",
+      "Her visit to see Wilbur was frankly one of curiosity.",
+      "Her subsequent tales did justice to her observations of Wilbur."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Earl Sawyer"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 15,
+        "quote": "Earl Sawyer's common-law wife, Mamie Bishop.",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 15,
+        "quote": "Mamie's visit was frankly one of curiosity, and her subsequent tales did justice to her observations",
+        "context": "Chapter 2"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Earl Sawyer",
+    "aliases": [],
+    "facts": [
+      "He was the common-law husband of Mamie Bishop.",
+      "He once stepped into the abandoned tool-house after a cattle-selling call on Old Whateley.",
+      "He encountered a singular, stench-like odor he had never smelt before except near the Indian circles on the hills."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Mamie Bishop",
+      "Old Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 15,
+        "quote": "Earl Sawyer's common-law wife, Mamie Bishop",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 21,
+        "quote": "when Earl Sawyer once stepped within after a cattle-selling call on Old Whateley he was quite discomposed by the singular odor he encountered—such a stench, he averred, as he had never before smelt in all his life except near the Indian circles on the hills",
+        "context": "Chapter 3"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Silas Bishop",
+    "aliases": [],
+    "facts": [
+      "He was of the undecayed Bishops.",
+      "He saw the boy running sturdily up Sentinel Hill ahead of his mother about an hour before a blaze was seen.",
+      "He was rounding up a stray heifer when he saw the two figures.",
+      "He thought the two figures were entirely unclothed."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Lavinia Whateley",
+      "Sentinel Hill"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 17,
+        "quote": "Considerable talk was started when Silas Bishop—of the undecayed Bishops—mentioned having seen the boy running sturdily up that hill ahead of his mother about an hour before the blaze was remarked.",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 17,
+        "quote": "Silas was rounding up a stray heifer, but he nearly forgot his mission when he fleetingly spied the two figures in the dim light of his lantern.",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 17,
+        "quote": "the astonished watcher seemed to think they were entirely unclothed",
+        "context": "Chapter 2"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Curtis",
+    "aliases": [
+      "Curtis Whateley"
+    ],
+    "facts": [
+      "He was Old Whateley's son.",
+      "Old Whateley bought a pair of Alderney cows from him."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Old Whateley",
+      "Zechariah Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 15,
+        "quote": "Old Whateley had bought of his son Curtis",
+        "context": "Chapter 2"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Yog-Sothoth",
+    "aliases": [],
+    "facts": [
+      "Wilbur shrieked the dreadful name of Yog-Sothoth in the midst of a circle of stones with a great book open before him.",
+      "The hills once shook when the name was shrieked."
+    ],
+    "typeGuess": "entity",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Sentinel Hill"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 18,
+        "quote": "how the hills once shook when he shrieked the dreadful name of Yog-Sothoth in the midst of a circle of stones with a great book open in his arms before him",
+        "context": "Chapter 2"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Dunwich",
+    "aliases": [
+      "Dunwich Village"
+    ],
+    "facts": [
+      "It is a township with hills where strange noises had sounded and dogs barked persistently.",
+      "Wilbur Whateley was born in a farmhouse within this township.",
+      "Dunwich Village contains Osborn's general store, where Old Whateley spoke to loungers."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Old Whateley",
+      "Wilbur Whateley",
+      "Sentinel Hill",
+      "Osborn's general store"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 11,
+        "quote": "It was in the township of Dunwich, in a large and partly inhabited farmhouse set against a hillside four miles from the village and a mile and a half from any other dwelling, that Wilbur Whateley was born",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 13,
+        "quote": "Old Whateley drove his sleigh through the snow into Dunwich Village and discoursed incoherently to the group of loungers at Osborn's general store.",
+        "context": "Chapter 2"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Sentinel Hill",
+    "aliases": [],
+    "facts": [
+      "An old table-like stone stands amidst its tumulus of ancient bones on top of this hill.",
+      "A great blaze was seen at midnight on the top of this hill on Hallowe'en.",
+      "Wilbur was seen running up this hill ahead of his mother before the blaze was noticed.",
+      "Old Whateley predicted a child of Lavinny's would call its father's name atop this hill.",
+      "An underground rumbling synchronized with bursts of flame occurred from the summit of this hill on Hallowe'en 1915."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Old Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 17,
+        "quote": "a great blaze was seen at midnight on the top of Sentinel Hill where the old table-like stone stands amidst its tumulus of ancient bones",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 14,
+        "quote": "some day yew folks'll hear a child o' Lavinny's a-callin' its father's name on the top o' Sentinel Hill!",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 22,
+        "quote": "the following Hallowe'en produced an underground rumbling queerly synchronized with bursts of flame—\"them witch Whateleys' doin's\"—from the summit of Sentinel Hill",
+        "context": "Chapter 3"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Aylesbury",
+    "aliases": [],
+    "facts": [
+      "Old Whateley referenced Aylesbury when speaking of standards for a proper husband and church wedding.",
+      "People in Aylesbury felt tremors on May Eve of 1915."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 14,
+        "quote": "I calc'late her man is as good a husban' as ye kin find this side of Aylesbury",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 22,
+        "quote": "On May Eve of 1915 there were tremors which even the Aylesbury people felt",
+        "context": "Chapter 3"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Osborn's general store",
+    "aliases": [],
+    "facts": [
+      "Located in Dunwich Village, this was where Old Whateley discoursed incoherently to a group of loungers a week after Wilbur's birth."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Dunwich",
+      "Old Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 13,
+        "quote": "Old Whateley drove his sleigh through the snow into Dunwich Village and discoursed incoherently to the group of loungers at Osborn's general store.",
+        "context": "Chapter 2"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the old farmhouse",
+    "aliases": [
+      "the farmhouse",
+      "his house"
+    ],
+    "facts": [
+      "It was a large and partly inhabited farmhouse set against a hillside, four miles from the village and a mile and a half from any other dwelling.",
+      "Its rear end was buried entirely in the rocky hillside.",
+      "Three least-ruined ground-floor rooms had long sufficed for Old Whateley and his daughter.",
+      "Old Whateley repaired and restored its unused parts, boarding up all the windows in the reclaimed upper story.",
+      "One upper window was converted into a solid plank door, with a cleated wooden runway built up to it from the ground.",
+      "A tool-shed on the property was put in order, clapboarded, and fitted with a stout fresh lock soon after Wilbur was born, and later abandoned again."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Old Whateley",
+      "Lavinia Whateley",
+      "Wilbur Whateley",
+      "Dunwich"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 11,
+        "quote": "in a large and partly inhabited farmhouse set against a hillside four miles from the village and a mile and a half from any other dwelling",
+        "context": "Chapter 2"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 19,
+        "quote": "a spacious, peaked-roofed affair whose rear end was buried entirely in the rocky hillside, and whose three least-ruined ground-floor rooms had always been sufficient for himself and his daughter",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 21,
+        "quote": "those who watched it wondered why one of the upper windows had been made into a solid plank door...no one could imagine why a cleated wooden runway was built up to it from the ground",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 19,
+        "quote": "one of the many tool-sheds had been put suddenly in order, clapboarded, and fitted with a stout fresh lock",
+        "context": "Chapter 3"
+      }
+    ]
+  }
+]

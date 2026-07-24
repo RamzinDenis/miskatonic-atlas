@@ -1,0 +1,37 @@
+{
+  "slug": "old-whateley",
+  "name": "Old Whateley",
+  "role": "other",
+  "summary": "Old Whateley was the half-insane, wizardry-rumored patriarch of the Whateley family, who reared his grandson Wilbur on forbidden lore and, dying in 1924, charged him with opening the gates to Yog-Sothoth.",
+  "description": "Old Whateley was the aged, half-insane father of Lavinia Whateley, about whom the most frightful tales of wizardry had been whispered in his youth; the remote farmhouse had always been feared for his reputation in black magic, deepened by the unexplained violent death of his wife when Lavinia was twelve. He taught Lavinia disjointed scraps of ancient lore, paid for cattle in ancient gold without ever increasing his herd, boarded up the farmhouse's reclaimed upper story, and through long, hushed afternoons instructed and catechized his grandson Wilbur — sometimes making him repeat the Dho formula until the boy believed he glimpsed the inner city at the magnetic poles.\n\nOn Lammas Night, 1924, Old Whateley — noticing a growing, ominous flock of whippoorwills gathering under his window from Cold Spring Glen — fell into a grave cardiac decline. Dying, he addressed his bearded young grandson as 'Willy,' telling him he would need 'more space,' and instructed him to open the gates to Yog-Sothoth with a long chant on page 751 of 'the complete edition' and then burn 'the prison,' since fire from earth could not destroy it. Years later, when the horror he had helped conceive was finally destroyed atop Sentinel Hill, a witness recognized its grotesque half-face as the very image of 'Wizard' Whateley, 'only yards and yards acrost.'",
+  "locations": [
+    "dunwich",
+    "dunwich/whateley-farmhouse",
+    "dunwich/sentinel-hill",
+    "dunwich/cold-spring-glen"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "fate": "Died on Lammas Night, 1924, of cardiac failure, giving his grandson Wilbur dying instructions to open the gates to Yog-Sothoth.",
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 12,
+      "quote": "The remote farmhouse had always been feared because of Old Whateley's reputation for black magic, and the unexplained death by violence of Mrs. Whateley when Lavinia was twelve years old had not helped to make the place popular.",
+      "context": "Chapter 2"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 31,
+      "quote": "More space, Willy, more space soon. Yew grows—an' that grows faster. It'll be ready to sarve ye soon, boy. Open up the gates to Yog-Sothoth with the long chant that ye'll find on page 751 of the complete edition, an' then put a match to the prison. Fire from airth can't burn it nohaow!",
+      "context": "Chapter 4"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 142,
+      "quote": "an' it looked like Wizard Whateley's, only it was yards an' yards acrost....",
+      "context": "Chapter 10"
+    }
+  ]
+}

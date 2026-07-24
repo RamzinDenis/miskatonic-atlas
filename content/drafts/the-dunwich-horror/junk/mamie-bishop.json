@@ -1,0 +1,45 @@
+{
+  "slug": "mamie-bishop",
+  "name": "Mamie Bishop",
+  "role": "witness",
+  "summary": "Mamie Bishop, common-law wife of Earl Sawyer, was one of the first outsiders to see the infant Wilbur Whateley out of curiosity, and years later was the confidante to whom Lavinia admitted her fear of her grown son.",
+  "description": "Mamie Bishop, Earl Sawyer's common-law wife, was one of only two people who saw the infant Wilbur during his first month of life; her visit was frankly one of curiosity, and her subsequent tales did justice to her observations. Years later, in 1926, Lavinia Whateley confided to Mamie that she was afraid of her own son.",
+  "locations": [
+    "dunwich",
+    "dunwich/whateley-farmhouse"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 15,
+      "quote": "Mamie's visit was frankly one of curiosity, and her subsequent tales did justice to her observations",
+      "context": "Chapter 2"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 37,
+      "quote": "in 1926 the poor creature complained to Mamie Bishop of being afraid of him.",
+      "context": "Chapter 4"
+    }
+  ],
+  "_draft": {
+    "aliases": [
+      "Mamie"
+    ],
+    "occurrences": 2,
+    "windows": [
+      "w011-022",
+      "w031-042"
+    ],
+    "facts": [
+      "Was Earl Sawyer's common-law wife.",
+      "Her visit to see infant Wilbur was one of curiosity.",
+      "Her subsequent tales did justice to her observations of Wilbur.",
+      "In 1926 Lavinia complained to her of being afraid of Wilbur."
+    ],
+    "needsReview": []
+  }
+}

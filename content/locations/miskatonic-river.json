@@ -1,0 +1,34 @@
+{
+  "slug": "miskatonic-river",
+  "name": "the Miskatonic",
+  "type": "region",
+  "summary": "The river and its upper valley running near Dunwich, its serpentlike upper reaches rising among the domed hills, and whose isolated upper valley Dr. Armitage came to regard as harboring lurking terrors.",
+  "description": "The thin, shining line of the Miskatonic's upper reaches has an oddly serpentlike suggestion as it winds close to the feet of the domed hills among which it rises, near Dunwich. Dr. Armitage came to feel that something ought to be done about the lurking terrors of the upper Miskatonic valley, a region whose innumerable Whateleys, decayed and undecayed, were still embroiled in litigation over Wilbur Whateley's estate long after the horror had passed.",
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "connectedTo": [
+    "dunwich",
+    "aylesbury"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 3,
+      "quote": "The thin, shining line of the Miskatonic's upper reaches has an oddly serpentlike suggestion as it winds close to the feet of the domed hills among which it rises.",
+      "context": "Chapter 1"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 51,
+      "quote": "the lurking terrors of the upper Miskatonic valley",
+      "context": "Chapter 5"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 62,
+      "quote": "litigations concerning heirship are said to be still in progress amongst the innumerable Whateleys, decayed and undecayed, of the upper Miskatonic valley.",
+      "context": "Chapter 7"
+    }
+  ]
+}

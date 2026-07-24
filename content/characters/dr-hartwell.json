@@ -1,0 +1,27 @@
+{
+  "slug": "dr-hartwell",
+  "name": "Dr. Hartwell",
+  "role": "other",
+  "summary": "Dr. Hartwell was Armitage's personal physician in Arkham, summoned to treat him after his exhausting decipherment of Wilbur Whateley's diary left him collapsed and delirious.",
+  "description": "Dr. Hartwell, Armitage's physician, called to see him and insisted he cease his exhausting work on Wilbur Whateley's diary, but Armitage refused; Hartwell was summoned again that evening and put the exhausted scholar to bed, receiving no explanations for his condition.",
+  "locations": [
+    "arkham"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 86,
+      "quote": "Some time before noon his physician, Dr. Hartwell, called to see him and insisted that he cease work.",
+      "context": "Chapter 8"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 88,
+      "quote": "He made no explanations to Hartwell",
+      "context": "Chapter 8"
+    }
+  ]
+}

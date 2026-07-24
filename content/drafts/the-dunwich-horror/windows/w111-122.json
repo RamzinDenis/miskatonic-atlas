@@ -1,0 +1,390 @@
+[
+  {
+    "kind": "character",
+    "name": "Armitage",
+    "aliases": [],
+    "facts": [
+      "Saw that the time for positive action had come",
+      "Spoke decisively to the faltering group of frightened rustics",
+      "Believes there's a chance of putting the thing out of business",
+      "Has seen Wilbur Whateley's diary",
+      "Has read some of the strange old books Wilbur Whateley used to read",
+      "Thinks he knows the right kind of spell to recite to make the thing fade away",
+      "Has a powder in a long-distance sprayer that might make the invisible thing show up for a second",
+      "Inadvertently took a wrong direction and was corrected by Joe Osborn",
+      "Produced a pocket telescope of considerable power and scanned the side of Sentinel Hill",
+      "Handed the telescope to Morgan, whose sight was keener"
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Rice",
+      "Morgan",
+      "Earl Sawyer",
+      "Joe Osborn"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 112,
+        "quote": "Armitage saw that the time for positive action had come, and spoke decisively to the faltering group of frightened rustics.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 113,
+        "quote": "I've seen Wilbur Whateley's diary and read some of the strange old books he used to read, and I think I know the right kind of a spell to recite to make the thing fade away.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 113,
+        "quote": "It's invisible—I knew it would be—but there's a powder in this long-distance sprayer that might make it show up for a second.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 117,
+        "quote": "When Armitage inadvertently took a wrong direction, Joe Osborn warned him and walked ahead to show the right one.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 120,
+        "quote": "Armitage produced a pocket telescope of considerable power and scanned the steep green side of the hill. Then he handed the instrument to Morgan, whose sight was keener.",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Wilbur Whateley",
+    "aliases": [
+      "Wilbur"
+    ],
+    "facts": [
+      "Kept a diary that Armitage has seen",
+      "Read strange old books",
+      "Would have let in something worse than the current thing if he had lived longer"
+    ],
+    "typeGuess": "cultist",
+    "fate": "Implied to no longer be alive, as referenced in the past tense regarding what he would have done 'if he'd lived longer'",
+    "relatedNames": [
+      "Armitage"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 113,
+        "quote": "I've seen Wilbur Whateley's diary and read some of the strange old books he used to read, and I think I know the right kind of a spell to recite to make the thing fade away.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 113,
+        "quote": "It's a frightful thing to have alive, but it isn't as bad as what Wilbur would have let in if he'd lived longer.",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Rice",
+    "aliases": [],
+    "facts": [
+      "Walked with Armitage and Morgan toward the wrecked place, in the direction indicated by Earl Sawyer"
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Armitage",
+      "Morgan"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 117,
+        "quote": "Armitage, with Rice and Morgan, started to walk in the direction indicated; and most of the natives followed slowly.",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Morgan",
+    "aliases": [],
+    "facts": [
+      "Walked with Armitage and Rice toward the wrecked place",
+      "Had keener sight than Armitage",
+      "Received Armitage's telescope and cried out sharply upon seeing something on the hill",
+      "Passed the telescope to Earl Sawyer, indicating a spot on the slope"
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Armitage",
+      "Rice",
+      "Earl Sawyer"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 117,
+        "quote": "Armitage, with Rice and Morgan, started to walk in the direction indicated; and most of the natives followed slowly.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 120,
+        "quote": "Then he handed the instrument to Morgan, whose sight was keener. After a moment of gazing Morgan cried out sharply, passing the glass to Earl Sawyer and indicating a certain spot on the slope with his finger.",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Earl Sawyer",
+    "aliases": [],
+    "facts": [
+      "Spoke softly, pointing with a grimy finger through the lessening rain",
+      "Gave directions to reach Seth Bishop's place by cutting across the lower meadow, wading the brook, and climbing through Carrier's mowing and the timber-lot",
+      "Received the telescope from Morgan and fumbled before focusing it with Armitage's aid",
+      "Cried out that the grass and bushes on the hill were moving, creeping up toward the top"
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Morgan",
+      "Armitage"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 115,
+        "quote": "The men shuffled about a moment, and then Earl Sawyer spoke softly, pointing with a grimy finger through the steadily lessening rain.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 116,
+        "quote": "I guess ye kin git to Seth Bishop's quickest by cuttin' acrost the lower medder here, wadin' the brook at the low place, an' climbin' through Carrier's mowin' an' the timber-lot beyont.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 120,
+        "quote": "Sawyer, as clumsy as most non-users of optical devices are, fumbled a while; but eventually focused the lenses with Armitage's aid.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 121,
+        "quote": "Gawd almighty, the grass an' bushes is a-movin'! It's a-goin' up—slow-like—creepin' up ter the top this minute, heaven only knows what fer!",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Joe Osborn",
+    "aliases": [],
+    "facts": [
+      "Warned Armitage when he took a wrong direction and walked ahead to show the right one"
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Armitage"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 117,
+        "quote": "When Armitage inadvertently took a wrong direction, Joe Osborn warned him and walked ahead to show the right one.",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "the thing",
+    "aliases": [
+      "the monster",
+      "the nameless entity",
+      "it"
+    ],
+    "facts": [
+      "Is a thing of wizardry and must be put down by the same means as wizards",
+      "Is invisible",
+      "A powder from a long-distance sprayer might make it show up for a second",
+      "Is not as bad as what Wilbur Whateley would have let in if he had lived longer",
+      "Cannot multiply",
+      "Can do a lot of harm",
+      "Wrecked the Bishop house and barn, leaving nothing dead or living in the collapsed shells",
+      "Left hideously unmistakable tracks and a stench with tarry stickiness at the Bishop ruins",
+      "Left a line of horrible prints leading toward the wrecked Whateley farmhouse and Sentinel Hill",
+      "Left a broad swath marking its former route to and from the summit of Sentinel Hill",
+      "Was seen as moving grass and bushes creeping up the slope of Sentinel Hill toward the top"
+    ],
+    "typeGuess": "entity",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Armitage",
+      "Sentinel Hill",
+      "Seth Bishop's",
+      "Whateley farmhouse"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 113,
+        "quote": "this thing is a thing of wizardry, and must be put down by the same means.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 113,
+        "quote": "It's invisible—I knew it would be—but there's a powder in this long-distance sprayer that might make it show up for a second.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 113,
+        "quote": "Now we've only this one thing to fight, and it can't multiply. It can, though, do a lot of harm; so we mustn't hesitate to rid the community of it.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 118,
+        "quote": "nothing dead or living was found in either of the collapsed shells which had been the Bishop house and barn. No one cared to remain there amidst the stench and the tarry stickiness, but all turned instinctively to the line of horrible prints leading on toward the wrecked Whateley farmhouse and the altar-crowned slopes of Sentinel Hill.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 119,
+        "quote": "there was a fresh bending and matting visible along the broad swath marking the monster's former route to and from the summit.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 121,
+        "quote": "the grass an' bushes is a-movin'! It's a-goin' up—slow-like—creepin' up ter the top this minute",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Corey's place",
+    "aliases": [],
+    "facts": [
+      "Was a gathering point where able-bodied men-folk were rounded up with Fords and wagons"
+    ],
+    "typeGuess": "building",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 111,
+        "quote": "We that heerd it got aout Fords an' wagons an' raounded up as many able-bodied men-folks as we could get, at Corey's place, an' come up here ter see what yew thought best ter dew.",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Seth Bishop's",
+    "aliases": [
+      "Seth Bishop place",
+      "Bishop house and barn"
+    ],
+    "facts": [
+      "Could be reached quickest by cutting across the lower meadow, wading the brook, and climbing through Carrier's mowing and the timber-lot",
+      "The Bishop house and barn were found as collapsed shells with nothing dead or living inside",
+      "The ruins were surrounded by stench and tarry stickiness"
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Earl Sawyer",
+      "the thing"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 116,
+        "quote": "I guess ye kin git to Seth Bishop's quickest by cuttin' acrost the lower medder here, wadin' the brook at the low place, an' climbin' through Carrier's mowin' an' the timber-lot beyont.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 118,
+        "quote": "They were a little beyond the Seth Bishop place, but bent trees and hideously unmistakable tracks showed what had passed by. Only a few moments were consumed in surveying the ruins just around the bend. It was the Frye incident all over again, and nothing dead or living was found in either of the collapsed shells which had been the Bishop house and barn.",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the wrecked Whateley farmhouse",
+    "aliases": [
+      "Wilbur Whateley's abode"
+    ],
+    "facts": [
+      "Was wrecked",
+      "Was Wilbur Whateley's abode",
+      "Men passed its site and shuddered visibly"
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "the thing"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 118,
+        "quote": "all turned instinctively to the line of horrible prints leading on toward the wrecked Whateley farmhouse and the altar-crowned slopes of Sentinel Hill.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 119,
+        "quote": "As the men passed the site of Wilbur Whateley's abode they shuddered visibly, and seemed again to mix hesitancy with their zeal.",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Sentinel Hill",
+    "aliases": [],
+    "facts": [
+      "Has altar-crowned slopes",
+      "The monster's tracks led toward it and up its steep green side",
+      "Grass and bushes were seen moving up its slope toward the top"
+    ],
+    "typeGuess": "region",
+    "relatedNames": [
+      "the thing",
+      "Armitage",
+      "Earl Sawyer",
+      "Morgan"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 118,
+        "quote": "all turned instinctively to the line of horrible prints leading on toward the wrecked Whateley farmhouse and the altar-crowned slopes of Sentinel Hill.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 119,
+        "quote": "Opposite the base of Sentinel Hill the tracks left the road, and there was a fresh bending and matting visible along the broad swath marking the monster's former route to and from the summit.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 121,
+        "quote": "the grass an' bushes is a-movin'! It's a-goin' up—slow-like—creepin' up ter the top this minute, heaven only knows what fer!",
+        "context": "Chapter 9"
+      }
+    ]
+  }
+]

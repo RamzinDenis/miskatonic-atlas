@@ -1,0 +1,303 @@
+[
+  {
+    "kind": "character",
+    "name": "Curtis Whateley",
+    "aliases": [
+      "poor Curtis Whateley"
+    ],
+    "facts": [
+      "His scattered senses began to knit back into continuity after a pause.",
+      "He put his hands to his head with a moan.",
+      "The horror of the sight that had prostrated him burst in upon him again.",
+      "He described seeing a half face with red eyes and crinkly albino hair and no chin, like the Whateleys.",
+      "He described the thing as an octopus, centipede, spider kind of thing with a half-shaped man's face on top that looked like Wizard Whateley's, yards and yards across."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Wizard Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 141,
+        "quote": "There was a brief silence, and in that pause the scattered senses of poor Curtis Whateley began to knit back into a sort of continuity; so that he put his hands to his head with a moan.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 142,
+        "quote": "that haff face on top of it ... that face with the red eyes an' crinkly albino hair, an' no chin, like the Whateleys.... It was a octopus, centipede, spider kind o' thing, but they was a haff-shaped man's face on top of it, an' it looked like Wizard Whateley's, only it was yards an' yards acrost....",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Zebulon Whateley",
+    "aliases": [
+      "old Zebulon Whateley"
+    ],
+    "facts": [
+      "He wanderingly remembered ancient things.",
+      "He had been silent heretofore among the group.",
+      "He recalled that fifteen years ago Old Whateley said they would someday hear a child of Lavinny's calling its father's name on top of Sentinel Hill."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Wizard Whateley",
+      "Lavinny"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 143,
+        "quote": "Only old Zebulon Whateley, who wanderingly remembered ancient things but who had been silent heretofore, spoke aloud.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 144,
+        "quote": "Fifteen year' gone,\" he rambled, \"I heerd Ol' Whateley say as haow some day we'd hear a child o' Lavinny's a-callin' its father's name on the top o' Sentinel Hill....",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Joe Osborn",
+    "aliases": [],
+    "facts": [
+      "He interrupted Zebulon Whateley to question the Arkham men anew.",
+      "He asked what the thing was and how young Wizard Whateley had called it out of the air."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Wizard Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 145,
+        "quote": "But Joe Osborn interrupted him to question the Arkham men anew.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 146,
+        "quote": "\"What was it, anyhaow, an' haowever did young Wizard Whateley call it aout o' the air it come from?\"",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Armitage",
+    "aliases": [],
+    "facts": [
+      "He chose his words carefully when answering.",
+      "He explained that the thing was mostly a kind of force not belonging to our part of space, acting by other laws than Nature's.",
+      "He stated that some of that force was in Wilbur Whateley himself, enough to make a devil and precocious monster of him.",
+      "He said he intended to burn Wilbur's accursed diary.",
+      "He recommended dynamiting the altar-stone and pulling down the standing stone rings on the other hills.",
+      "He explained that the beings the Whateleys favored intended to wipe out the human race and drag the earth off to some nameless place for some nameless purpose."
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": [
+      "Wilbur Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 147,
+        "quote": "Armitage chose his words carefully.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 148,
+        "quote": "It was—well, it was mostly a kind of force that doesn't belong in our part of space; a kind of force that acts and grows and shapes itself by other laws than those of our sort of Nature. We have no business calling in such things from outside, and only very wicked people and very wicked cults ever try to. There was some of it in Wilbur Whateley himself—enough to make a devil and a precocious monster of him, and to make his passing out a pretty terrible sight. I'm going to burn his accursed diary, and if you men are wise you'll dynamite that altar-stone up there, and pull down all the rings of standing stones on the other hills.",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Wilbur Whateley",
+    "aliases": [
+      "young Wizard Whateley"
+    ],
+    "facts": [
+      "He had some of the outside force in him, enough to make a devil and precocious monster of him.",
+      "His death (passing out) was a pretty terrible sight.",
+      "He kept a diary that Armitage intends to burn.",
+      "He grew fast and big for the same reason as the creature sent back, though it beat him because it had a greater share of the outsideness in it.",
+      "He did not call the creature out of the air; it was his twin brother."
+    ],
+    "typeGuess": "other",
+    "fate": "His passing out (death) was described as a pretty terrible sight.",
+    "relatedNames": [
+      "Armitage"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 148,
+        "quote": "There was some of it in Wilbur Whateley himself—enough to make a devil and a precocious monster of him, and to make his passing out a pretty terrible sight.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 149,
+        "quote": "It grew fast and big from the same reason that Wilbur grew fast and big—but it beat him because it had a greater share of the outsideness in it. You needn't ask how Wilbur called it out of the air. He didn't call it out. It was his twin brother, but it looked more like the father than he did.",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Wizard Whateley",
+    "aliases": [
+      "Ol' Whateley",
+      "Old Whateley"
+    ],
+    "facts": [
+      "The half face on the creature looked like his.",
+      "Fifteen years earlier he said they would someday hear a child of Lavinny's calling its father's name atop Sentinel Hill."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Curtis Whateley",
+      "Zebulon Whateley",
+      "Lavinny"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 142,
+        "quote": "an' it looked like Wizard Whateley's, only it was yards an' yards acrost....",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 144,
+        "quote": "I heerd Ol' Whateley say as haow some day we'd hear a child o' Lavinny's a-callin' its father's name on the top o' Sentinel Hill....",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Lavinny",
+    "aliases": [],
+    "facts": [
+      "A child of hers was foretold to call its father's name atop Sentinel Hill."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Zebulon Whateley",
+      "Wizard Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 144,
+        "quote": "we'd hear a child o' Lavinny's a-callin' its father's name on the top o' Sentinel Hill....",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "the thing",
+    "aliases": [
+      "it",
+      "that haff face",
+      "his twin brother"
+    ],
+    "facts": [
+      "It had a half face with red eyes and crinkly albino hair and no chin, like the Whateleys.",
+      "It resembled an octopus, centipede, spider kind of thing, yards and yards across, with a half-shaped man's face on top.",
+      "It was mostly a kind of force that doesn't belong in our part of space, acting and growing by other laws than Nature's.",
+      "It was raised by the Whateleys for a terrible part in doings that were to come.",
+      "It grew fast and big for the same reason Wilbur grew fast and big, but had a greater share of outsideness and so surpassed him.",
+      "It was Wilbur Whateley's twin brother, but looked more like the father (Wizard Whateley) than Wilbur did.",
+      "It was not called out of the air by Wilbur; it was already his twin brother.",
+      "It had just been sent back (destroyed or banished) before this conversation took place."
+    ],
+    "typeGuess": "entity",
+    "fate": "It was sent back just before this conversation, implying its destruction or banishment.",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Wizard Whateley",
+      "Curtis Whateley",
+      "Armitage"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 142,
+        "quote": "It was a octopus, centipede, spider kind o' thing, but they was a haff-shaped man's face on top of it, an' it looked like Wizard Whateley's, only it was yards an' yards acrost....",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 149,
+        "quote": "But as to this thing we've just sent back—the Whateleys raised it for a terrible part in the doings that were to come. It grew fast and big from the same reason that Wilbur grew fast and big—but it beat him because it had a greater share of the outsideness in it. You needn't ask how Wilbur called it out of the air. He didn't call it out. It was his twin brother, but it looked more like the father than he did.",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Sentinel Hill",
+    "aliases": [],
+    "facts": [
+      "A child of Lavinny's was foretold to call its father's name atop this hill.",
+      "There is an altar-stone up there.",
+      "Rings of standing stones stand on nearby hills associated with this location."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Zebulon Whateley",
+      "Wizard Whateley",
+      "Armitage"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 144,
+        "quote": "we'd hear a child o' Lavinny's a-callin' its father's name on the top o' Sentinel Hill....",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 148,
+        "quote": "if you men are wise you'll dynamite that altar-stone up there, and pull down all the rings of standing stones on the other hills.",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Arkham",
+    "aliases": [
+      "Arkham men"
+    ],
+    "facts": [
+      "Men from Arkham were present and were questioned by Joe Osborn."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Joe Osborn",
+      "Armitage"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 145,
+        "quote": "But Joe Osborn interrupted him to question the Arkham men anew.",
+        "context": "Chapter 10"
+      }
+    ]
+  }
+]

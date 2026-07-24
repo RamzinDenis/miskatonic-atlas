@@ -1,0 +1,517 @@
+[
+  {
+    "kind": "character",
+    "name": "Wilbur",
+    "aliases": [
+      "Wilbur Whateley",
+      "Willy"
+    ],
+    "facts": [
+      "When a year and seven months old, in September 1914, his size and accomplishments were almost alarming; he had grown as large as a child of four and was a fluent and intelligent talker.",
+      "He ran freely about the fields and hills and accompanied his mother on all her wanderings.",
+      "At home he would pore diligently over the queer pictures and charts in his grandfather's books while Old Whateley instructed him.",
+      "By his fourth year he looked like a boy of ten, read avidly by himself, and talked much less than formerly.",
+      "People began to speak of a dawning look of evil in his goatish face.",
+      "Dogs displayed aversion toward him, and he was obliged to carry a pistol to traverse the countryside safely.",
+      "At four and a half he looked like a lad of fifteen, with a coarse dark down on lip and cheek and a breaking voice.",
+      "At about age ten his mind, voice, stature, and bearded face gave all the impressions of maturity, during which a second siege of carpentry occurred at the house.",
+      "On Lammas Night, 1924, he summoned Dr. Houghton of Aylesbury by lashing his one remaining horse through the darkness and telephoning from Osborn's.",
+      "He stood, oddly bearded, by his grandfather's deathbed alongside his albino mother.",
+      "His dying grandfather addressed him as 'Willy' and told him he would need 'more space' and instructed him to open the gates to Yog-Sothoth with a chant from page 751 of 'the complete edition.'"
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Old Whateley",
+      "Lavinia Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 21,
+        "quote": "When Wilbur was a year and seven months old—in September of 1914—his size and accomplishments were almost alarming. He had grown as large as a child of four, and was a fluent and incredibly intelligent talker.",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 22,
+        "quote": "Wilbur was growing up uncannily, so that he looked like a boy of ten as he entered his fourth year.",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 22,
+        "quote": "The aversion displayed toward him by dogs had now become a matter of wide remark, and he was obliged to carry a pistol in order to traverse the countryside in safety.",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 24,
+        "quote": "Wilbur was four and a half then, and looked like a lad of fifteen. His lip and cheek were fuzzy with a coarse dark down, and his voice had begun to break.",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 26,
+        "quote": "About 1923, when Wilbur was a boy of ten whose mind, voice, stature, and bearded face gave all the impressions of maturity, a second great siege of carpentry went on at the old house.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 29,
+        "quote": "On Lammas Night, 1924, Dr. Houghton of Aylesbury was hastily summoned by Wilbur Whateley, who had lashed his one remaining horse through the darkness and telephoned from Osborn's in the village.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 29,
+        "quote": "The shapeless albino daughter and oddly bearded grandson stood by the bedside",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 31,
+        "quote": "More space, Willy, more space soon. Yew grows—an' that grows faster. It'll be ready to sarve ye soon, boy. Open up the gates to Yog-Sothoth with the long chant that ye'll find on page 751 of the complete edition, an' then put a match to the prison. Fire from airth can't burn it nohaow!",
+        "context": "Chapter 4"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Old Whateley",
+    "aliases": [],
+    "facts": [
+      "He would instruct and catechize Wilbur through long, hushed afternoons.",
+      "Earl Sawyer once made a cattle-selling call on him.",
+      "He always paid for his cattle in gold pieces of extremely ancient date.",
+      "He noticed a growing number of whippoorwills coming from Cold Spring Glen to chirp under his window and regarded it as significant, telling loungers at Osborn's that his time had almost come.",
+      "He spoke of the whippoorwills whistling in tune with his breathing, believing they were trying to catch his soul.",
+      "On Lammas Night 1924 he was found by Dr. Houghton in a very grave state, with cardiac action and stertorous breathing signaling an end not far off.",
+      "Toward 1 o'clock he regained consciousness and spoke a few words to his grandson.",
+      "In his dying words he told Wilbur he would need 'more space' and instructed him to open the gates to Yog-Sothoth with a chant from page 751 of 'the complete edition' and then burn 'the prison,' saying fire from earth could not burn it."
+    ],
+    "typeGuess": "other",
+    "fate": "Found gravely ill on Lammas Night 1924 with cardiac trouble and labored breathing signaling an approaching death; gave dying instructions to his grandson.",
+    "relatedNames": [
+      "Wilbur",
+      "Lavinia Whateley",
+      "Earl Sawyer"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 21,
+        "quote": "while Old Whateley would instruct and catechize him through long, hushed afternoons",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 21,
+        "quote": "when Earl Sawyer once stepped within after a cattle-selling call on Old Whateley",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 24,
+        "quote": "why Old Whateley always paid for his cattle in gold pieces of extremely ancient date",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 27,
+        "quote": "Old Whateley noticed the growing number of whippoorwills that would come out of Cold Spring Glen to chirp under his window at night. He seemed to regard the circumstance as one of great significance, and told the loungers at Osborn's that he thought his time had almost come.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 28,
+        "quote": "They whistle jest in tune with my breathin' naow, an' I guess they're gittin' ready to ketch my soul.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 29,
+        "quote": "He found Old Whateley in a very grave state, with a cardiac action and stertorous breathing that told of an end not far off.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 30,
+        "quote": "Toward 1 o'clock Old Whateley gained consciousness, and interrupted his wheezing to choke out a few words to his grandson.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 31,
+        "quote": "More space, Willy, more space soon. Yew grows—an' that grows faster. It'll be ready to sarve ye soon, boy. Open up the gates to Yog-Sothoth with the long chant that ye'll find on page 751 of the complete edition, an' then put a match to the prison. Fire from airth can't burn it nohaow!",
+        "context": "Chapter 4"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Lavinia",
+    "aliases": [
+      "Lavinia Whateley"
+    ],
+    "facts": [
+      "Callers at the house would often find her alone on the ground floor while odd cries and footsteps resounded in the boarded-up second story.",
+      "She would never tell what her father and the boy were doing upstairs, and once turned pale with abnormal fear when a fish-peddler tried the locked stairway door.",
+      "She is described as the shapeless albino daughter who stood by her father's bedside as he lay dying."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Old Whateley",
+      "Wilbur"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 23,
+        "quote": "The few callers at the house would often find Lavinia alone on the ground floor, while odd cries and footsteps resounded in the boarded-up second story.",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 23,
+        "quote": "She would never tell what her father and the boy were doing up there, though once she turned pale and displayed an abnormal degree of fear when a jocose fish-peddler tried the locked door leading to the stairway.",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 29,
+        "quote": "The shapeless albino daughter and oddly bearded grandson stood by the bedside",
+        "context": "Chapter 4"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Earl Sawyer",
+    "aliases": [],
+    "facts": [
+      "He once stepped into the abandoned tool-house after a cattle-selling call on Old Whateley and was discomposed by a singular stench unlike anything sane or of this earth, comparable only to odors near the Indian circles on the hills.",
+      "He went out to the Whateley place with reporters and camera men and called their attention to a queer stench trickling down from the sealed upper spaces, similar to the stench in the abandoned tool-shed and near the stone circles on the mountains."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Old Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 21,
+        "quote": "when Earl Sawyer once stepped within after a cattle-selling call on Old Whateley he was quite discomposed by the singular odor he encountered—such a stench, he averred, as he had never before smelt in all his life except near the Indian circles on the hills, and which could not come from anything sane or of this earth.",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 24,
+        "quote": "Earl Sawyer went out to the Whateley place with both sets of reporters and camera men, and called their attention to the queer stench which now seemed to trickle down from the sealed upper spaces.",
+        "context": "Chapter 3"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Squire Sawyer Whateley",
+    "aliases": [],
+    "facts": [
+      "In 1917, as chairman of the local draft board, he had hard work finding a quota of young Dunwich men fit even to be sent to a development camp."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 24,
+        "quote": "In 1917 the war came, and Squire Sawyer Whateley, as chairman of the local draft board, had hard work finding a quota of young Dunwich men fit even to be sent to a development camp.",
+        "context": "Chapter 3"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Dr. Houghton",
+    "aliases": [],
+    "facts": [
+      "He was of Aylesbury and was hastily summoned by Wilbur Whateley on Lammas Night, 1924.",
+      "He found Old Whateley in a very grave state with cardiac action and stertorous breathing.",
+      "He was chiefly disturbed by the chattering whippoorwills outside, finding it uncanny and unnatural, much like the whole region he had entered so reluctantly."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Wilbur",
+      "Old Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 29,
+        "quote": "On Lammas Night, 1924, Dr. Houghton of Aylesbury was hastily summoned by Wilbur Whateley, who had lashed his one remaining horse through the darkness and telephoned from Osborn's in the village.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 29,
+        "quote": "He found Old Whateley in a very grave state, with a cardiac action and stertorous breathing that told of an end not far off.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 29,
+        "quote": "The doctor, though, was chiefly disturbed by the chattering night birds outside; a seemingly limitless legion of whippoorwills that cried their endless message in repetitions timed diabolically to the wheezing gasps of the dying man. It was uncanny and unnatural—too much, thought Dr. Houghton, like the whole of the region he had entered so reluctantly in response to the urgent call.",
+        "context": "Chapter 4"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the Whateley place",
+    "aliases": [
+      "the house",
+      "the old house",
+      "the ancient farmhouse"
+    ],
+    "facts": [
+      "By 1914 the restoration of the house was finished, and one of the upper windows had been made into a solid plank door with a cleated wooden runway built up to it from the ground.",
+      "The window was in the rear of the east gable end, close against the hill.",
+      "The old tool-house on the property, tightly locked and windowlessly clapboarded since Wilbur's birth, had been abandoned again around the time the restoration was completed.",
+      "News stories described the sealed second story of the ancient farmhouse.",
+      "Around 1923 a second siege of carpentry occurred entirely inside the sealed upper part: the partitions and attic floor were removed, leaving one vast open void between the ground story and the peaked roof, and the great central chimney was torn down and replaced with a flimsy outside tin stove-pipe.",
+      "Callers professed to hear sounds in the sealed upper story even when the whole family were downstairs."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Wilbur",
+      "Old Whateley",
+      "Lavinia Whateley",
+      "Earl Sawyer"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 21,
+        "quote": "By this time the restoration of the house was finished, and those who watched it wondered why one of the upper windows had been made into a solid plank door.",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 21,
+        "quote": "It was a window in the rear of the east gable end, close against the hill; and no one could imagine why a cleated wooden runway was built up to it from the ground.",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 21,
+        "quote": "About the period of this work's completion people noticed that the old tool-house, tightly locked and windowlessly clapboarded since Wilbur's birth, had been abandoned again.",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 24,
+        "quote": "the sealed second story of the ancient farmhouse",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 25,
+        "quote": "In the course of time callers professed to hear sounds in the sealed upper story even when all the family were downstairs",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 26,
+        "quote": "a second great siege of carpentry went on at the old house. It was all inside the sealed upper part, and from bits of discarded lumber people concluded that the youth and his grandfather had knocked out all the partitions and even removed the attic floor, leaving only one vast open void between the ground story and the peaked roof.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 26,
+        "quote": "They had torn down the great central chimney, too, and fitted the rusty range with a flimsy outside tin stove-pipe.",
+        "context": "Chapter 4"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Dunwich Village",
+    "aliases": [],
+    "facts": [
+      "The fish-peddler told the store loungers at Dunwich Village that he thought he heard a horse stamping on the floor above at the Whateley house."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 23,
+        "quote": "That peddler told the store loungers at Dunwich Village that he thought he heard a horse stamping on that floor above.",
+        "context": "Chapter 3"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Sentinel Hill",
+    "aliases": [],
+    "facts": [
+      "On Hallowe'en 1914 an underground rumbling occurred synchronized with bursts of flame from its summit, attributed to 'them witch Whateleys' doin's.'",
+      "Twice a year the Whateleys would light fires on its top, at which times mountain rumblings would recur with greater violence."
+    ],
+    "typeGuess": "region",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 22,
+        "quote": "whilst the following Hallowe'en produced an underground rumbling queerly synchronized with bursts of flame—\"them witch Whateleys' doin's\"—from the summit of Sentinel Hill.",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 25,
+        "quote": "Twice a year they would light fires on the top of Sentinel Hill, at which times the mountain rumblings would recur with greater and greater violence",
+        "context": "Chapter 4"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Cold Spring Glen",
+    "aliases": [],
+    "facts": [
+      "Whippoorwills would come out of it to chirp under Old Whateley's window at night in increasing numbers."
+    ],
+    "typeGuess": "region",
+    "relatedNames": [
+      "Old Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 27,
+        "quote": "Old Whateley noticed the growing number of whippoorwills that would come out of Cold Spring Glen to chirp under his window at night.",
+        "context": "Chapter 4"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Aylesbury",
+    "aliases": [],
+    "facts": [
+      "Its people felt tremors on May Eve of 1915.",
+      "Dr. Houghton, who was summoned to attend Old Whateley, was of Aylesbury."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Dr. Houghton"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 22,
+        "quote": "On May Eve of 1915 there were tremors which even the Aylesbury people felt",
+        "context": "Chapter 3"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 29,
+        "quote": "On Lammas Night, 1924, Dr. Houghton of Aylesbury was hastily summoned by Wilbur Whateley",
+        "context": "Chapter 4"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Osborn's",
+    "aliases": [],
+    "facts": [
+      "Old Whateley told the loungers gathered there that he thought his time had almost come.",
+      "Wilbur telephoned Dr. Houghton from there on Lammas Night, 1924."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Old Whateley",
+      "Wilbur"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 27,
+        "quote": "told the loungers at Osborn's that he thought his time had almost come",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 29,
+        "quote": "telephoned from Osborn's in the village",
+        "context": "Chapter 4"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "whippoorwills",
+    "aliases": [
+      "chattering night birds"
+    ],
+    "facts": [
+      "A growing number of them would come out of Cold Spring Glen to chirp under Old Whateley's window at night.",
+      "Old Whateley believed they whistled in tune with his breathing and were getting ready to catch his soul as it departed, and that if they succeeded they would keep singing and laughing till break of day, but if not they would quiet down.",
+      "On the night of Old Whateley's death, a seemingly limitless legion of them cried their endless message in repetitions timed diabolically to his wheezing gasps.",
+      "After his death-related speech, the flock outside adjusted their cries to the altered tempo of events, coinciding with strange hill noises from afar."
+    ],
+    "typeGuess": "entity",
+    "relatedNames": [
+      "Old Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 27,
+        "quote": "Old Whateley noticed the growing number of whippoorwills that would come out of Cold Spring Glen to chirp under his window at night.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 28,
+        "quote": "They whistle jest in tune with my breathin' naow, an' I guess they're gittin' ready to ketch my soul. They know it's a-goin' aout, an' dun't calc'late to miss it. Yew'll know, boys, arter I'm gone, whether they git me er not. Ef they dew, they'll keep up a-singin' an' laffin' till break o' day. Ef they dun't, they'll kinder quiet daown like.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 29,
+        "quote": "The doctor, though, was chiefly disturbed by the chattering night birds outside; a seemingly limitless legion of whippoorwills that cried their endless message in repetitions timed diabolically to the wheezing gasps of the dying man.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 32,
+        "quote": "After a pause, during which the flock of whippoorwills outside adjusted their cries to the altered tempo while some indications of the strange hill noises came from afar off, he added another sentence or two.",
+        "context": "Chapter 4"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Yog-Sothoth",
+    "aliases": [],
+    "facts": [
+      "Old Whateley, dying, instructed Wilbur to 'open up the gates to Yog-Sothoth' using a long chant found on page 751 of 'the complete edition.'"
+    ],
+    "typeGuess": null,
+    "relatedNames": [
+      "Old Whateley",
+      "Wilbur"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 31,
+        "quote": "Open up the gates to Yog-Sothoth with the long chant that ye'll find on page 751 of the complete edition, an' then put a match to the prison.",
+        "context": "Chapter 4"
+      }
+    ]
+  }
+]

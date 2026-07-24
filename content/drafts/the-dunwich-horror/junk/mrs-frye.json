@@ -1,0 +1,33 @@
+{
+  "slug": "mrs-frye",
+  "name": "Mrs. Frye",
+  "role": "witness",
+  "summary": "Mrs. Frye proposed telephoning the neighbors when the strange noises began at the Frye farm, moments before the horror struck.",
+  "description": "When the stench and barking began at the Frye farmstead, Mrs. Frye proposed telephoning the neighbors; her husband Elmer was about to agree when the noise of splintering wood burst in upon their deliberations.",
+  "locations": [
+    "dunwich",
+    "dunwich/frye-place"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 74,
+      "quote": "Mrs. Frye proposed telephoning the neighbors, and Elmer was about to agree when the noise of splintering wood burst in upon their deliberations.",
+      "context": "Chapter 7"
+    }
+  ],
+  "_draft": {
+    "aliases": [],
+    "occurrences": 1,
+    "windows": [
+      "w071-082"
+    ],
+    "facts": [
+      "Proposed telephoning the neighbors when the noise began."
+    ],
+    "needsReview": []
+  }
+}

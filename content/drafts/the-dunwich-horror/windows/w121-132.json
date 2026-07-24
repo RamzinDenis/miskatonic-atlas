@@ -1,0 +1,442 @@
+[
+  {
+    "kind": "character",
+    "name": "Dr. Armitage",
+    "aliases": [
+      "Armitage"
+    ],
+    "facts": [
+      "Was old and white-bearded",
+      "Was one of three men from Arkham who ascended the mountain alone",
+      "Had to be helped climbing more than once",
+      "Was questioned by the group about what he knew of the thing, with no reply seeming to satisfy them",
+      "Was seen adjusting the sprayer which Rice held",
+      "Was seen chanting with the other men from Arkham, raising his arms in rhythmic incantation"
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": [
+      "Professor Rice",
+      "Dr. Morgan",
+      "the entity"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 123,
+        "quote": "old, white-bearded Dr. Armitage",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 123,
+        "quote": "Armitage had to be helped more than once.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 122,
+        "quote": "Voices began questioning Armitage about what he knew of the thing, and no reply seemed quite to satisfy.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 125,
+        "quote": "Armitage was adjusting the sprayer which Rice held, and that something must be about to happen",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 132,
+        "quote": "The chanting of the men from Arkham now became unmistakable, and Wheeler saw through the glass that they were all raising their arms in the rhythmic incantation.",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Professor Rice",
+    "aliases": [
+      "Rice"
+    ],
+    "facts": [
+      "Was stocky and iron-gray",
+      "Was one of three men from Arkham who ascended the mountain alone",
+      "Held the sprayer that Armitage adjusted",
+      "Had an excellent chance of spreading the potent powder over the entity from a vantage point above and behind it"
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": [
+      "Dr. Armitage",
+      "Dr. Morgan",
+      "the entity"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 123,
+        "quote": "stocky, iron-gray Professor Rice",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 125,
+        "quote": "He saw that Rice, from the party's point of vantage above and behind the entity, had an excellent chance of spreading the potent powder with marvelous effect.",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Dr. Morgan",
+    "aliases": [
+      "Morgan"
+    ],
+    "facts": [
+      "Was lean and youngish",
+      "Was one of three men from Arkham who ascended the mountain alone"
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": [
+      "Dr. Armitage",
+      "Professor Rice"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 123,
+        "quote": "lean, youngish Dr. Morgan",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Curtis Whateley",
+    "aliases": [],
+    "facts": [
+      "Was of the undecayed branch of the Whateley family",
+      "Was holding the telescope when the Arkham party detoured from the swath",
+      "Snatched back the telescope and strained his vision to watch Rice spray the entity",
+      "Dropped the telescope with a piercing shriek into the mud after seeing an instant's flash of gray cloud",
+      "Described the entity in fragmented, panicked speech as bigger than a barn, made of squirming ropes, shaped like a giant hen's egg, with dozens of legs like hogsheads, jelly-like, with bulging eyes and many mouths or trunks like stovepipes, gray with blue or purple rings, and a half face on top",
+      "Collapsed completely after this final memory and could say no more",
+      "Was carried to the roadside by Fred Farr and Will Hutchins"
+    ],
+    "typeGuess": "witness",
+    "fate": "Collapsed and was carried away, unable to continue speaking after witnessing the entity",
+    "relatedNames": [
+      "the entity",
+      "Henry Wheeler",
+      "Fred Farr",
+      "Will Hutchins"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 124,
+        "quote": "Curtis Whateley—of the undecayed branch—was holding the telescope when the Arkham party detoured radically from the swath.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 125,
+        "quote": "Curtis Whateley snatched back the telescope and strained his vision to the utmost.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 126,
+        "quote": "Curtis, who had held the instrument, dropped it with a piercing shriek into the ankle-deep mud of the road.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 129,
+        "quote": "Bigger 'n a barn ... all made o' squirmin' ropes ... hull thing sort o' shaped like a hen's egg bigger'n anything, with dozens o' legs like hogsheads that haff shut up when they step ... nothin' solid abaout it—all like jelly, an' made o' sep'rit wrigglin' ropes pushed clost together ... great bulgin' eyes all over it ... ten or twenty maouths or trunks a-stickin' aout all along the sides, big as stovepipes, an' all a-tossin' an' openin' an' shuttin' ... all gray, with kinder blue or purple rings ... an' Gawd in Heaven—that haff face on top!...",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 130,
+        "quote": "This final memory, whatever it was, proved too much for poor Curtis, and he collapsed completely before he could say more.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 130,
+        "quote": "Fred Farr and Will Hutchins carried him to the roadside and laid him on the damp grass.",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Wesley Corey",
+    "aliases": [],
+    "facts": [
+      "Took the telescope and reported that Armitage was adjusting the sprayer which Rice held",
+      "Cried out that something must be about to happen"
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Dr. Armitage",
+      "Professor Rice"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 125,
+        "quote": "Then Wesley Corey, who had taken the glass, cried out that Armitage was adjusting the sprayer which Rice held, and that something must be about to happen.",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Henry Wheeler",
+    "aliases": [
+      "Wheeler"
+    ],
+    "facts": [
+      "Rescued the fallen telescope and wiped it clean of mud after Curtis dropped it",
+      "Turned the rescued telescope on the mountain to see what he might",
+      "Whispered 'I guess he's sayin' the spell' as he watched a figure raising its hands rhythmically",
+      "Saw through the glass that the men from Arkham were all raising their arms in rhythmic incantation"
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Curtis Whateley",
+      "Earl Sawyer"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 128,
+        "quote": "only Henry Wheeler thought to rescue the fallen telescope and wipe it clean of mud",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 130,
+        "quote": "Henry Wheeler, trembling, turned the rescued telescope on the mountain to see what he might.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 131,
+        "quote": "\"I guess he's sayin' the spell,\" whispered Wheeler as he snatched back the telescope.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 132,
+        "quote": "Wheeler saw through the glass that they were all raising their arms in the rhythmic incantation.",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Fred Farr",
+    "aliases": [],
+    "facts": [
+      "Carried the collapsed Curtis Whateley to the roadside along with Will Hutchins"
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Curtis Whateley",
+      "Will Hutchins"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 130,
+        "quote": "Fred Farr and Will Hutchins carried him to the roadside and laid him on the damp grass.",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Will Hutchins",
+    "aliases": [],
+    "facts": [
+      "Carried the collapsed Curtis Whateley to the roadside along with Fred Farr"
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Curtis Whateley",
+      "Fred Farr"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 130,
+        "quote": "Fred Farr and Will Hutchins carried him to the roadside and laid him on the damp grass.",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Earl Sawyer",
+    "aliases": [],
+    "facts": [
+      "Took the telescope and reported the three figures standing on the topmost ridge, level with the altar-stone but at a distance from it",
+      "Reported that one figure seemed to be raising its hands above its head at rhythmic intervals"
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Dr. Armitage",
+      "Professor Rice",
+      "Dr. Morgan"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 131,
+        "quote": "Earl Sawyer now took the telescope and reported the three figures as standing on the topmost ridge, virtually level with the altar-stone but at a considerable distance from it.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 131,
+        "quote": "One figure, he said, seemed to be raising its hands above its head at rhythmic intervals",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "the entity",
+    "aliases": [
+      "the nameless entity",
+      "its hellish maker",
+      "the invisible blasphemy",
+      "the unseen horror"
+    ],
+    "facts": [
+      "Left a swath in the grass and bushes that trembled as it moved with snail-like deliberateness up the mountain",
+      "Was being pursued by three men from Arkham",
+      "Was invisible until sprayed with a potent powder, at which point it appeared as an instant's flash of gray cloud about the size of a moderately large building",
+      "Was described by Curtis Whateley as bigger than a barn, made of squirming ropes, shaped like a giant hen's egg, with dozens of legs like hogsheads, jelly-like in substance, with great bulging eyes all over it, ten or twenty mouths or trunks along its sides big as stovepipes, gray with blue or purple rings, and a half face on top"
+    ],
+    "typeGuess": "entity",
+    "relatedNames": [
+      "Dr. Armitage",
+      "Professor Rice",
+      "Dr. Morgan",
+      "Curtis Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 121,
+        "quote": "the grass an' bushes is a-movin'! It's a-goin' up—slow-like—creepin' up ter the top this minute",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 122,
+        "quote": "It was one thing to chase the nameless entity, but quite another to find it.",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 123,
+        "quote": "High above the toiling group the great swath trembled as its hellish maker repassed with snail-like deliberateness.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 124,
+        "quote": "the party were seen to gain the minor elevation only a short time after the invisible blasphemy had passed it",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 125,
+        "quote": "this sprayer was expected to give the unseen horror a moment of visibility",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 126,
+        "quote": "Those without the telescope saw only an instant's flash of gray cloud—a cloud about the size of a moderately large building—near the top of the mountain.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 129,
+        "quote": "Bigger 'n a barn ... all made o' squirmin' ropes ... hull thing sort o' shaped like a hen's egg bigger'n anything, with dozens o' legs like hogsheads that haff shut up when they step",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Sentinel Hill",
+    "aliases": [],
+    "facts": [
+      "Had underbrush in which whippoorwills were piping unseasonably",
+      "Had an altar-stone near its topmost ridge"
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "the entity"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 130,
+        "quote": "even in the underbrush of Sentinel Hill itself",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "altar-stone",
+    "aliases": [
+      "the altar-stone"
+    ],
+    "facts": [
+      "Was located near the topmost ridge of the mountain",
+      "The three figures were seen standing virtually level with it but at a considerable distance from it"
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Sentinel Hill"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 131,
+        "quote": "standing on the topmost ridge, virtually level with the altar-stone but at a considerable distance from it",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Arkham",
+    "aliases": [],
+    "facts": [
+      "Was the home of the three men (Armitage, Rice, and Morgan) who ascended the mountain to confront the entity"
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Dr. Armitage",
+      "Professor Rice",
+      "Dr. Morgan"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 123,
+        "quote": "the three men from Arkham—old, white-bearded Dr. Armitage, stocky, iron-gray Professor Rice, and lean, youngish Dr. Morgan—ascended the mountain alone",
+        "context": "Chapter 10"
+      }
+    ]
+  }
+]

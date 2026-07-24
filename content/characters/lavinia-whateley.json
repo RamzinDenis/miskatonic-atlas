@@ -1,0 +1,36 @@
+{
+  "slug": "lavinia-whateley",
+  "name": "Lavinia Whateley",
+  "role": "other",
+  "summary": "Lavinia Whateley was the deformed albino daughter of Old Whateley and mother of Wilbur, a lone wanderer of the hills who proudly foresaw her son's monstrous destiny before vanishing on Hallowe'en 1926, reportedly out of fear of him.",
+  "description": "Lavinia Whateley was a somewhat deformed, unattractive albino woman of thirty-five when Wilbur was born, living with her aged and half-insane father about whom frightful tales of wizardry had long been whispered. She had no known husband but did not disavow her child, and seemed strangely proud of his unusual powers; she was a lone creature given to wandering the hills in thunderstorms, trying to read the great odorous books her father had inherited, though she had never been to school and knew only the disjointed lore he taught her. Her own mother had died by unexplained violence when Lavinia was twelve.\n\nAs Wilbur grew, he came to treat her with mounting contempt, at last forbidding her to accompany him to the hills on May Eve and Hallowmass; by 1926 she confessed to Mamie Bishop that she was afraid of him and did not know what he wanted or was trying to do. That Hallowe'en she disappeared and was never seen again.",
+  "locations": [
+    "dunwich",
+    "dunwich/whateley-farmhouse",
+    "dunwich/sentinel-hill"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "fate": "Disappeared after Hallowe'en 1926 and was never seen again, having earlier confessed fear of her son Wilbur.",
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 11,
+      "quote": "the mother was one of the decadent Whateleys, a somewhat deformed, unattractive albino woman of 35, living with an aged and half-insane father about whom the most frightful tales of wizardry had been whispered in his youth.",
+      "context": "Chapter 2"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 38,
+      "quote": "They's more abaout him as I knows than I kin tell ye, Mamie,\" she said, \"an' naowadays they's more nor what I know myself. I vaow afur Gawd, I dun't know what he wants nor what he's a-tryin' to dew.",
+      "context": "Chapter 4"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 39,
+      "quote": "None of the countryfolk seemed to have died—but poor Lavinia Whateley, the twisted albino, was never seen again.",
+      "context": "Chapter 4"
+    }
+  ]
+}

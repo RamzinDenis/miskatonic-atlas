@@ -1,0 +1,49 @@
+{
+  "slug": "elmer-frye",
+  "name": "Elmer Frye",
+  "role": "other",
+  "summary": "Elmer Frye was a Dunwich farmer on the eastern edge of Cold Spring Glen whose household was awakened by stench and barking dogs in the second phase of the horror, and whose entire family and farm were annihilated that night.",
+  "description": "A frightful stench and the savage barking of dogs awakened the household at Elmer Frye's, on the eastern edge of Cold Spring Glen. Frye lit a lantern through force of habit, but knew it would be death to go out into the black farmyard; his wife proposed telephoning the neighbors just as the noise of splintering wood burst in upon their deliberations.\n\nThe Elmer Fryes were erased from Dunwich that night — their house caved in, and nothing living or dead could be found amongst the ruins.",
+  "locations": [
+    "dunwich",
+    "dunwich/cold-spring-glen",
+    "dunwich/frye-place"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "fate": "He and his household were erased from Dunwich when their house caved in and nothing living or dead could be found amongst the ruins.",
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 74,
+      "quote": "a frightful stench and the savage barking of the dogs awakened the household at Elmer Frye's, on the eastern edge of Cold Spring Glen",
+      "context": "Chapter 7"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 79,
+      "quote": "The Elmer Fryes had been erased from Dunwich.",
+      "context": "Chapter 7"
+    }
+  ],
+  "_draft": {
+    "aliases": [
+      "the Elmer Fryes"
+    ],
+    "occurrences": 3,
+    "windows": [
+      "w071-082",
+      "w091-102",
+      "w101-112"
+    ],
+    "facts": [
+      "His household was awakened by stench and barking dogs about 2 a.m.",
+      "He lit a lantern but knew it would be death to go outside.",
+      "His wife proposed telephoning the neighbors when the noise began.",
+      "His family and farm were annihilated, house caved in, nothing found among the ruins.",
+      "Sam Hutchins references the Elmer Frye place having been 'took' in a prior comparison."
+    ],
+    "needsReview": []
+  }
+}

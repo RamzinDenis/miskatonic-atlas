@@ -1,0 +1,28 @@
+{
+  "slug": "selina-frye",
+  "name": "Selina Frye",
+  "role": "witness",
+  "summary": "Selina Frye tottered to the telephone amid the destruction of her family's farm and spread the first news of the horror's second, deadlier phase.",
+  "description": "Amid the wreckage of the Frye farmstead, Selina Frye tottered to the telephone and spread what news she could of the second phase of the horror that had struck her family.",
+  "locations": [
+    "dunwich",
+    "dunwich/frye-place"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 74,
+      "quote": "Selina Frye tottered to the telephone and spread what news she could of the second phase of the horror",
+      "context": "Chapter 7"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 74,
+      "quote": "Mrs. Frye proposed telephoning the neighbors, and Elmer was about to agree when the noise of splintering wood burst in upon their deliberations.",
+      "context": "Chapter 7"
+    }
+  ]
+}

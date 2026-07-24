@@ -1,0 +1,23 @@
+{
+  "slug": "mrs-whateley",
+  "name": "Mrs. Whateley",
+  "role": "other",
+  "summary": "Mrs. Whateley, wife of Old Whateley and mother of Lavinia, died by unexplained violence when her daughter was twelve years old, an event that deepened the countryside's fear of the Whateley farmstead.",
+  "description": "Little is recorded of Mrs. Whateley beyond her death: she was the wife of Old Whateley and mother of Lavinia, and her unexplained, violent death when Lavinia was twelve years old only added to the ill repute the remote farmhouse already held because of her husband's reputation for black magic.",
+  "locations": [
+    "dunwich",
+    "dunwich/whateley-farmhouse"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "fate": "Died by violence, cause unexplained, when Lavinia was twelve years old.",
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 12,
+      "quote": "The remote farmhouse had always been feared because of Old Whateley's reputation for black magic, and the unexplained death by violence of Mrs. Whateley when Lavinia was twelve years old had not helped to make the place popular.",
+      "context": "Chapter 2"
+    }
+  ]
+}

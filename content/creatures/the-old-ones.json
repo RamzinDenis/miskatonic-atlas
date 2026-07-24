@@ -1,0 +1,31 @@
+{
+  "slug": "the-old-ones",
+  "name": "The Old Ones",
+  "classification": "race",
+  "summary": "The Old Ones are an ancient, undimensioned race that once ruled the earth and, according to the Necronomicon, walk unseen in lonely places still, awaiting the day they shall rule again.",
+  "description": "The Necronomicon teaches that the Old Ones were, are, and shall be — not in the spaces we know, but between them, walking serene and primal, undimensioned and to us unseen. By their smell men can sometimes know them near, but of their semblance no man can know, save only in the features of those they have begotten on mankind; they walk unseen and foul in lonely places where the Words have been spoken and the Rites howled through at their Seasons, bending the forest and crushing the city, though never beheld doing so.\n\nTheir seal is engraved on stones in the ice desert of the South and the sunken isles of Ocean; great Cthulhu is said to be their cousin, though even he can spy them only dimly. Man rules now where they ruled once, the text warns, and they shall soon rule again where man rules now.",
+  "locations": [],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 43,
+      "quote": "The Old Ones were, the Old Ones are, and the Old Ones shall be. Not in the spaces we know, but between them. They walk serene and primal, undimensioned and to us unseen.",
+      "context": "Chapter 5"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 43,
+      "quote": "By Their smell can men sometimes know Them near, but of Their semblance can no man know, saving only in the features of those They have begotten on mankind",
+      "context": "Chapter 5"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 43,
+      "quote": "Man rules now where They ruled once; They shall soon rule where man rules now.",
+      "context": "Chapter 5"
+    }
+  ]
+}

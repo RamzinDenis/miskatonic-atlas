@@ -1,0 +1,27 @@
+{
+  "slug": "seth-bishop",
+  "name": "Seth Bishop",
+  "role": "witness",
+  "summary": "Seth Bishop was the Dunwich farmer at whose house Sally Sawyer kept, whose cattle were mangled by the roaming horror and whose own home was later wrecked in its second assault.",
+  "description": "Sally Sawyer was housekeeper at Seth Bishop's, the nearest place to Whateley's; his cows were left out all night and found in an awful shape, half gone and half sucked dry of blood, and he himself went out to look at them though he was unlikely to venture near Wizard Whateley's. In the morning after the Frye disaster, his household reported excitement among the dogs and vague sounds and stenches from afar; soon after, his own house and yard were struck by the horror, with Sally and Chauncey (Cha'ncey) heard yelling amid the chaos.",
+  "locations": [
+    "dunwich"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 68,
+      "quote": "Seth he's gone aout naow to look at 'em, though I'll vaow he wun't keer ter git very nigh Wizard Whateley's!",
+      "context": "Chapter 7"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 107,
+      "quote": "everybody on the line could hear Cha'ncey an' ol' Seth Bishop a-yellin', tew",
+      "context": "Chapter 9"
+    }
+  ]
+}

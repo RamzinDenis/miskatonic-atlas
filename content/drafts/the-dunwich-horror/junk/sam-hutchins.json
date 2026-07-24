@@ -1,0 +1,40 @@
+{
+  "slug": "sam-hutchins",
+  "name": "Sam Hutchins",
+  "role": "witness",
+  "summary": "Sam Hutchins was a Dunwich local who recalled having warned the State Police against entering Cold Spring Glen, moments before their fate became apparent.",
+  "description": "Old Sam Hutchins, standing near the deep hollow by the Frye ruins, suddenly turned pale and nudged Fred Farr, recalling that he had told the State Police not to go down into the glen because of the tracks, the smell, and the whippoorwills screeching in the dark of noonday.",
+  "locations": [
+    "dunwich",
+    "dunwich/cold-spring-glen"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 94,
+      "quote": "Then old Sam Hutchins thought of something and turned pale, nudging Fred Farr and pointing to the dank, deep hollow that yawned close by.",
+      "context": "Chapter 9"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 95,
+      "quote": "Gawd,\" he gasped, \"I telled 'em not ter go daown into the glen, an' I never thought nobody'd dew it with them tracks an' that smell an' the whippoorwills a-screechin' daown thar in the dark o' noonday....",
+      "context": "Chapter 9"
+    }
+  ],
+  "_draft": {
+    "aliases": [],
+    "occurrences": 1,
+    "windows": [
+      "w091-102"
+    ],
+    "facts": [
+      "Thought of something and turned pale, nudging Fred Farr toward the deep hollow.",
+      "Recalled telling the State Police not to go down into the glen because of tracks, smell, and whippoorwills."
+    ],
+    "needsReview": []
+  }
+}

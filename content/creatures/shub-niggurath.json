@@ -1,0 +1,19 @@
+{
+  "slug": "shub-niggurath",
+  "name": "Shub-Niggurath",
+  "classification": "deity",
+  "summary": "Shub-Niggurath is a deity invoked in the Necronomicon's passage on Yog-Sothoth and the Old Ones with the ritual cry 'Iä Shub-Niggurath!'",
+  "description": "Shub-Niggurath appears in the Necronomicon text that Wilbur Whateley sought at Miskatonic University, invoked amid the passage on Yog-Sothoth and the Old Ones with the exclamation 'Iä Shub-Niggurath!' — a name of dread reverence among the cults that traffic with such forces.",
+  "locations": [],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 43,
+      "quote": "Iä Shub-Niggurath!",
+      "context": "Chapter 5"
+    }
+  ]
+}

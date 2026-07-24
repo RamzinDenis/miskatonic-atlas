@@ -1,0 +1,771 @@
+[
+  {
+    "kind": "character",
+    "name": "Wilbur Whateley",
+    "aliases": [
+      "Whateley"
+    ],
+    "facts": [
+      "Made his first trip outside the Dunwich region the following winter.",
+      "Correspondence with several major libraries failed to get him the loan of a book he desperately wanted.",
+      "Set out in person to consult the copy at Miskatonic, the nearest to him geographically.",
+      "Was shabby, dirty, bearded, and uncouth of dialect.",
+      "Was almost eight feet tall.",
+      "Carried a cheap new valise from Osborn's general store.",
+      "Appeared in Arkham seeking the Necronomicon kept under lock and key at the college library.",
+      "Had never seen a city before.",
+      "Passed heedlessly by the great watchdog that barked at him with unnatural fury.",
+      "Had with him the imperfect copy of Dr. Dee's English version bequeathed by his grandfather.",
+      "Sought to collate the two texts to find a passage that would fall on the 751st page of his own defective volume.",
+      "Was looking for a formula or incantation containing the name Yog-Sothoth.",
+      "Spoke in a strange, resonant fashion hinting at sound-producing organs unlike mankind's.",
+      "Asked to take the Necronomicon home, promising to take good care of it, and was refused.",
+      "Left the library saying Harvard might not be so fussy as Armitage.",
+      "Studied by Armitage as having a gorilla-like lope while crossing the campus.",
+      "Made a grotesque trip to Cambridge and tried frantically to borrow or copy from the Necronomicon at the Widener Library.",
+      "His efforts at Widener were in vain because Armitage had warned librarians in advance.",
+      "Was shockingly nervous at Cambridge, anxious for the book yet almost equally anxious to get home."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Henry Armitage",
+      "Yog-Sothoth"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "The following winter brought an event no less strange than Wilbur's first trip outside the Dunwich region.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "Almost eight feet tall, and carrying a cheap new valise from Osborn's general store, this dark and goatish gargoyle appeared one day in Arkham in quest of the dreaded volume kept under lock and key at the college library",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "He had never seen a city before, but had no thought save to find his way to the university grounds; where, indeed, he passed heedlessly by the great white-fanged watchdog that barked with unnatural fury and enmity, and tugged frantically at its stout chain.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 42,
+        "quote": "Wilbur had with him the priceless but imperfect copy of Dr. Dee's English version which his grandfather had bequeathed him, and upon receiving access to the Latin copy he at once began to collate the two texts with the aim of discovering a certain passage which would have come on the 751st page of his own defective volume.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 42,
+        "quote": "He was looking, he had to admit, for a kind of formula or incantation containing the frightful name Yog-Sothoth",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 45,
+        "quote": "Presently Wilbur raised his head and began speaking in that strange, resonant fashion which hinted at sound-producing organs unlike the run of mankind's.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 48,
+        "quote": "\"Wal, all right, ef ye feel that way abaout it. Maybe Harvard wun't be so fussy as yew be.\" And without saying more he rose and strode out of the building, stooping at each doorway.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 49,
+        "quote": "Armitage heard the savage yelping of the great watchdog, and studied Whateley's gorilla-like lope as he crossed the bit of campus visible from the window.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 52,
+        "quote": "He had heard, meanwhile, of Whateley's grotesque trip to Cambridge, and of his frantic efforts to borrow or copy from the Necronomicon at the Widener Library.",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 52,
+        "quote": "Wilbur had been shockingly nervous at Cambridge; anxious for the book, yet almost equally anxious to get home again, as if he feared the results of being away long.",
+        "context": "Chapter 6"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Henry Armitage",
+    "aliases": [
+      "Dr. Armitage",
+      "Armitage"
+    ],
+    "facts": [
+      "Was the librarian at Miskatonic, holding degrees A.M. Miskatonic, Ph.D. Princeton, Litt.D. Johns Hopkins.",
+      "Had once called at the Whateley farm.",
+      "Politely plied Wilbur with questions.",
+      "Looked involuntarily over Wilbur's shoulder at the open Necronomicon pages.",
+      "Mentally translated the Latin text he read.",
+      "Associated the text with what he had heard of Dunwich and Wilbur's dim, hideous aura.",
+      "Felt a wave of fright as tangible as a draft of the tomb's cold clamminess.",
+      "Refused to let Wilbur take the Necronomicon home.",
+      "Heard the savage yelping of the watchdog as Wilbur left.",
+      "Recalled wild tales, old Sunday stories in the Advertiser, and lore from Dunwich rustics.",
+      "Locked away the Necronomicon with a shudder of disgust.",
+      "Noticed the room reeked with an unholy stench, the same odor that had sickened him at the Whateley farmhouse less than three years before.",
+      "Muttered aloud questioning what or who was Wilbur Whateley's father.",
+      "Set about collecting all possible data on Wilbur Whateley and the presences around Dunwich.",
+      "Got in communication with Dr. Houghton of Aylesbury.",
+      "Made a visit to Dunwich Village that failed to bring out much new information.",
+      "Made a close survey of the parts of the Necronomicon Wilbur had sought.",
+      "Had talks with students of archaic lore in Boston and wrote letters to others elsewhere.",
+      "Felt growing amazement passing into a state of acute spiritual fear.",
+      "Issued warnings to all librarians having charge of the Necronomicon, including at Widener Library.",
+      "Was among those who witnessed the monstrous prologue of the Dunwich horror in 1928."
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Dr. Houghton",
+      "Old Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 42,
+        "quote": "the same erudite Henry Armitage (A. M. Miskatonic, Ph. D. Princeton, Litt. D. Johns Hopkins) who had once called at the farm, and who now politely plied him with questions.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 42,
+        "quote": "As he copied the formula he finally chose, Dr. Armitage looked involuntarily over his shoulder at the open pages",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 44,
+        "quote": "Dr. Armitage, associating what he was reading with what he had heard of Dunwich and its brooding presences, and of Wilbur Whateley and his dim, hideous aura that stretched from a dubious birth to a cloud of probable matricide, felt a wave of fright as tangible as a draft of the tomb's cold clamminess.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 47,
+        "quote": "There was too much responsibility in giving such a being the key to such blasphemous outer spheres.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 49,
+        "quote": "He locked away the Necronomicon with a shudder of disgust, but the room still reeked with an unholy and unidentifiable stench.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 49,
+        "quote": "Yes—the odor was the same as that which had sickened him at the Whateley farmhouse less than three years before.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 50,
+        "quote": "\"Inbreeding?\" Armitage muttered half aloud to himself.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 51,
+        "quote": "During the ensuing weeks Dr. Armitage set about to collect all possible data on Wilbur Whateley and the formless presences around Dunwich.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 51,
+        "quote": "He got in communication with Dr. Houghton of Aylesbury, who had attended Old Whateley in his last illness, and found much to ponder over in the grandfather's last words as quoted by the physician.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 52,
+        "quote": "Dr. Armitage was among those who witnessed its monstrous prologue.",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 52,
+        "quote": "Those efforts had been in vain, since Armitage had issued warnings of the keenest intensity to all librarians having charge of the dreaded volume.",
+        "context": "Chapter 6"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Dr. Houghton",
+    "aliases": [],
+    "facts": [
+      "Was of Aylesbury.",
+      "Had attended Old Whateley in his last illness."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Old Whateley",
+      "Henry Armitage"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 51,
+        "quote": "He got in communication with Dr. Houghton of Aylesbury, who had attended Old Whateley in his last illness, and found much to ponder over in the grandfather's last words as quoted by the physician.",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Old Whateley",
+    "aliases": [
+      "the grandfather"
+    ],
+    "facts": [
+      "Was Wilbur Whateley's grandfather, who bequeathed him the imperfect copy of Dr. Dee's English version of the Necronomicon.",
+      "Was attended by Dr. Houghton of Aylesbury in his last illness.",
+      "His last words were quoted by the physician and gave Armitage much to ponder over."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Dr. Houghton"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 42,
+        "quote": "Wilbur had with him the priceless but imperfect copy of Dr. Dee's English version which his grandfather had bequeathed him",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 51,
+        "quote": "He got in communication with Dr. Houghton of Aylesbury, who had attended Old Whateley in his last illness, and found much to ponder over in the grandfather's last words as quoted by the physician.",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Widener Library",
+    "aliases": [],
+    "facts": [
+      "Located at Harvard; correspondence with it failed to get Wilbur the loan of a book.",
+      "Wilbur later made frantic efforts to borrow or copy from the Necronomicon there.",
+      "Armitage had issued warnings to its librarians preventing Wilbur's efforts."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Henry Armitage"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "Correspondence with the Widener Library at Harvard, the Bibliotheque Nationale in Paris, the British Museum, the University of Buenos Aires, and the Library of Miskatonic University at Arkham had failed to get him the loan of a book he desperately wanted",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 52,
+        "quote": "He had heard, meanwhile, of Whateley's grotesque trip to Cambridge, and of his frantic efforts to borrow or copy from the Necronomicon at the Widener Library.",
+        "context": "Chapter 6"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Bibliotheque Nationale",
+    "aliases": [],
+    "facts": [
+      "Located in Paris; correspondence with it failed to get Wilbur the loan of the book he wanted."
+    ],
+    "typeGuess": "building",
+    "realWorld": "Paris",
+    "relatedNames": [
+      "Wilbur Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "Correspondence with the Widener Library at Harvard, the Bibliotheque Nationale in Paris, the British Museum, the University of Buenos Aires, and the Library of Miskatonic University at Arkham had failed to get him the loan of a book he desperately wanted",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "British Museum",
+    "aliases": [],
+    "facts": [
+      "Correspondence with it failed to get Wilbur the loan of the book he wanted."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Wilbur Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "Correspondence with the Widener Library at Harvard, the Bibliotheque Nationale in Paris, the British Museum, the University of Buenos Aires, and the Library of Miskatonic University at Arkham had failed to get him the loan of a book he desperately wanted",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "University of Buenos Aires",
+    "aliases": [],
+    "facts": [
+      "Correspondence with it failed to get Wilbur the loan of the book he wanted."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Wilbur Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "Correspondence with the Widener Library at Harvard, the Bibliotheque Nationale in Paris, the British Museum, the University of Buenos Aires, and the Library of Miskatonic University at Arkham had failed to get him the loan of a book he desperately wanted",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Library of Miskatonic University at Arkham",
+    "aliases": [
+      "Miskatonic",
+      "the college library"
+    ],
+    "facts": [
+      "Was the nearest library to Wilbur geographically, so he went there in person.",
+      "Kept the dreaded Necronomicon under lock and key.",
+      "Wilbur consulted the Latin copy of the Necronomicon there."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Henry Armitage",
+      "Arkham"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "so at length he set out in person, shabby, dirty, bearded, and uncouth of dialect, to consult the copy at Miskatonic, which was the nearest to him geographically.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "this dark and goatish gargoyle appeared one day in Arkham in quest of the dreaded volume kept under lock and key at the college library—the hideous Necronomicon of the mad Arab Alhazred in Olaus Wormius' Latin version, as printed in Spain in the Seventeenth Century.",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Arkham",
+    "aliases": [],
+    "facts": [
+      "Was a city that Wilbur had never seen before he traveled there.",
+      "Wilbur appeared there in quest of the Necronomicon."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Library of Miskatonic University at Arkham"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "this dark and goatish gargoyle appeared one day in Arkham in quest of the dreaded volume kept under lock and key at the college library",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "He had never seen a city before, but had no thought save to find his way to the university grounds",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Miskatonic University",
+    "aliases": [
+      "the university grounds",
+      "the college"
+    ],
+    "facts": [
+      "Had a great white-fanged watchdog on its grounds that barked furiously at Wilbur.",
+      "Wilbur crossed a bit of its campus, visible from Armitage's window, as he left."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Arkham"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "he passed heedlessly by the great white-fanged watchdog that barked with unnatural fury and enmity, and tugged frantically at its stout chain.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 49,
+        "quote": "Armitage heard the savage yelping of the great watchdog, and studied Whateley's gorilla-like lope as he crossed the bit of campus visible from the window.",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Osborn's general store",
+    "aliases": [],
+    "facts": [
+      "Wilbur carried a cheap new valise from this store."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Wilbur Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "Almost eight feet tall, and carrying a cheap new valise from Osborn's general store, this dark and goatish gargoyle appeared one day in Arkham",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Dunwich",
+    "aliases": [
+      "the Dunwich region"
+    ],
+    "facts": [
+      "Wilbur made his first trip outside this region in the winter described.",
+      "Armitage associated the Necronomicon text with what he had heard of Dunwich and its brooding presences.",
+      "Unseen things not of earth were said to rush through New England's glens near Dunwich and brood on mountain tops."
+    ],
+    "typeGuess": "region",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Henry Armitage"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "The following winter brought an event no less strange than Wilbur's first trip outside the Dunwich region.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 44,
+        "quote": "Dr. Armitage, associating what he was reading with what he had heard of Dunwich and its brooding presences",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 49,
+        "quote": "Unseen things not of earth—or at least not of tri-dimensional earth—rushed fetid and horrible through New England's glens, and brooded obscenely on the mountain tops.",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Dunwich Village",
+    "aliases": [],
+    "facts": [
+      "Armitage made a visit there that failed to bring out much that was new."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Henry Armitage"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 51,
+        "quote": "A visit to Dunwich Village failed to bring out much that was new",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Aylesbury",
+    "aliases": [],
+    "facts": [
+      "Dr. Houghton, who attended Old Whateley in his last illness, was of Aylesbury."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Dr. Houghton"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 51,
+        "quote": "He got in communication with Dr. Houghton of Aylesbury, who had attended Old Whateley in his last illness",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Boston",
+    "aliases": [],
+    "facts": [
+      "Armitage had talks with several students of archaic lore there."
+    ],
+    "typeGuess": "city",
+    "relatedNames": [
+      "Henry Armitage"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 51,
+        "quote": "Talks with several students of archaic lore in Boston, and letters to many others elsewhere, gave him a growing amazement",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Cambridge",
+    "aliases": [],
+    "facts": [
+      "Wilbur made a grotesque trip there and was shockingly nervous while there.",
+      "Wilbur tried to borrow or copy the Necronomicon from the Widener Library there."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Widener Library"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 52,
+        "quote": "He had heard, meanwhile, of Whateley's grotesque trip to Cambridge, and of his frantic efforts to borrow or copy from the Necronomicon at the Widener Library.",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 52,
+        "quote": "Wilbur had been shockingly nervous at Cambridge; anxious for the book, yet almost equally anxious to get home again",
+        "context": "Chapter 6"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Whateley farmhouse",
+    "aliases": [
+      "the farm"
+    ],
+    "facts": [
+      "Armitage had once called at the farm.",
+      "An unholy stench there had sickened Armitage less than three years before the events of this passage."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Henry Armitage",
+      "Wilbur Whateley",
+      "Old Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 42,
+        "quote": "the same erudite Henry Armitage ... who had once called at the farm",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 49,
+        "quote": "the odor was the same as that which had sickened him at the Whateley farmhouse less than three years before.",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Kadath",
+    "aliases": [],
+    "facts": [
+      "The Necronomicon text states that Kadath in the cold waste hath known the Old Ones, and asks what man knows Kadath."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "The Old Ones"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 43,
+        "quote": "Kadath in the cold waste hath known Them, and what man knows Kadath?",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Yog-Sothoth",
+    "aliases": [],
+    "facts": [
+      "Is described in the Necronomicon text as knowing the gate, being the gate, and being the key and guardian of the gate.",
+      "Past, present, and future are said to be all one in Yog-Sothoth.",
+      "Knows where the Old Ones broke through of old and where they shall break through again.",
+      "Wilbur sought a formula or incantation containing this name.",
+      "Is called the key to the gate whereby the spheres meet."
+    ],
+    "typeGuess": "great-old-one",
+    "relatedNames": [
+      "The Old Ones",
+      "Wilbur Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 42,
+        "quote": "He was looking, he had to admit, for a kind of formula or incantation containing the frightful name Yog-Sothoth",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 43,
+        "quote": "Yog-Sothoth knows the gate. Yog-Sothoth is the gate. Yog-Sothoth is the key and guardian of the gate. Past, present, future, all are one in Yog-Sothoth.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 43,
+        "quote": "Yog-Sothoth is the key to the gate, whereby the spheres meet.",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "The Old Ones",
+    "aliases": [
+      "They",
+      "Them"
+    ],
+    "facts": [
+      "Were, are, and shall be, existing not in the spaces we know but between them.",
+      "Walk serene and primal, undimensioned and unseen to us.",
+      "Broke through of old and shall break through again where Yog-Sothoth knows.",
+      "Have trod earth's fields and still tread them, though no one can behold them as they tread.",
+      "Can sometimes be known by men through their smell, but their semblance cannot be known save through the features of beings they have begotten on mankind.",
+      "Walk unseen and foul in lonely places where certain Words have been spoken and Rites howled through at their Seasons.",
+      "Bend the forest and crush the city, yet may not be beheld doing so.",
+      "Have their seal engraven on stones in the ice desert of the South and the sunken isles of Ocean.",
+      "Great Cthulhu is said to be their cousin, able to spy them only dimly.",
+      "Man rules now where they ruled once, and they shall soon rule again where man rules now."
+    ],
+    "typeGuess": "race",
+    "relatedNames": [
+      "Yog-Sothoth",
+      "Great Cthulhu",
+      "Shub-Niggurath"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 43,
+        "quote": "The Old Ones were, the Old Ones are, and the Old Ones shall be. Not in the spaces we know, but between them. They walk serene and primal, undimensioned and to us unseen.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 43,
+        "quote": "By Their smell can men sometimes know Them near, but of Their semblance can no man know, saving only in the features of those They have begotten on mankind",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 43,
+        "quote": "They walk unseen and foul in lonely places where the Words have been spoken and the Rites howled through at their Seasons.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 43,
+        "quote": "Great Cthulhu is Their cousin, yet can he spy Them only dimly.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 43,
+        "quote": "Man rules now where They ruled once; They shall soon rule where man rules now.",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Great Cthulhu",
+    "aliases": [
+      "Cthulhu"
+    ],
+    "facts": [
+      "Is described as the cousin of the Old Ones.",
+      "Can spy the Old Ones only dimly."
+    ],
+    "typeGuess": "great-old-one",
+    "relatedNames": [
+      "The Old Ones"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 43,
+        "quote": "Great Cthulhu is Their cousin, yet can he spy Them only dimly.",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Shub-Niggurath",
+    "aliases": [],
+    "facts": [
+      "Is invoked in the Necronomicon text with the exclamation \"Iä Shub-Niggurath!\""
+    ],
+    "typeGuess": "deity",
+    "relatedNames": [
+      "The Old Ones"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 43,
+        "quote": "Iä Shub-Niggurath!",
+        "context": "Chapter 5"
+      }
+    ]
+  }
+]

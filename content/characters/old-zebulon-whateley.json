@@ -1,0 +1,28 @@
+{
+  "slug": "old-zebulon-whateley",
+  "name": "Old Zebulon Whateley",
+  "role": "other",
+  "summary": "Old Zebulon Whateley, of a branch midway between soundness and decadence, retained memories of ancient rites and chantings in the stone circles connected with Wilbur and his grandfather, and recalled Old Whateley's fifteen-year-old prophecy at the height of the crisis.",
+  "description": "Old Zebulon Whateley, of a branch hovering half-way between soundness and decadence, made darkly wild suggestions about rites that ought to be practised on the hilltops; his memories of chantings in the great stone circles were not altogether connected only with Wilbur and his grandfather. He was absent from the group that ascended Sentinel Hill, and only he could have done justice to the situation or offered a plausible explanation.\n\nWhen the horror was finally destroyed, old Zebulon — silent until then — spoke aloud, wanderingly recalling that fifteen years before he had heard Old Whateley say that some day they would hear a child of Lavinny's calling its father's name atop Sentinel Hill.",
+  "locations": [
+    "dunwich",
+    "dunwich/sentinel-hill"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 75,
+      "quote": "Old Zebulon Whateley, of a branch that hovered about half-way between soundness and decadence, made darkly wild suggestions about rites that ought to be practised on the hilltops.",
+      "context": "Chapter 7"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 144,
+      "quote": "Fifteen year' gone,\" he rambled, \"I heerd Ol' Whateley say as haow some day we'd hear a child o' Lavinny's a-callin' its father's name on the top o' Sentinel Hill....",
+      "context": "Chapter 10"
+    }
+  ]
+}

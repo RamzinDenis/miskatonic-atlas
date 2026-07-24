@@ -1,0 +1,559 @@
+[
+  {
+    "kind": "character",
+    "name": "Dr. Armitage",
+    "aliases": [
+      "Armitage"
+    ],
+    "facts": [
+      "Set about to collect all possible data on Wilbur Whateley and the formless presences around Dunwich.",
+      "Got in communication with Dr. Houghton of Aylesbury.",
+      "Found much to ponder over in the grandfather's last words as quoted by the physician.",
+      "A visit to Dunwich Village failed to bring out much that was new.",
+      "A close survey of the Necronomicon seemed to supply new and terrible clues to the nature, methods, and desires of the strange evil.",
+      "Talks with students of archaic lore in Boston and letters to others gave him growing amazement passing into acute spiritual fear.",
+      "Was among those who witnessed the monstrous prologue of the Dunwich horror.",
+      "Had issued warnings of the keenest intensity to all librarians having charge of the Necronomicon.",
+      "Was awakened by the wild, fierce cries of the savage watchdog on the college campus.",
+      "Hastened into clothing and rushed to the college buildings.",
+      "Brushed back the crowd with authority as he unlocked the vestibule door.",
+      "Motioned Professor Warren Rice and Dr. Francis Morgan to accompany him inside.",
+      "Summoned up his courage and snapped the light switch in the reading-room.",
+      "Made no written record of the dying thing's mouthings but asserts nothing in English was uttered.",
+      "Shouted to the men outside that no one must be admitted till the police or medical examiner came.",
+      "Drew the dark curtains carefully down over each window."
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Dr. Houghton",
+      "Professor Warren Rice",
+      "Dr. Francis Morgan"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 51,
+        "quote": "During the ensuing weeks Dr. Armitage set about to collect all possible data on Wilbur Whateley and the formless presences around Dunwich.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 51,
+        "quote": "He got in communication with Dr. Houghton of Aylesbury, who had attended Old Whateley in his last illness, and found much to ponder over in the grandfather's last words as quoted by the physician.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 52,
+        "quote": "Dr. Armitage was among those who witnessed its monstrous prologue.",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 52,
+        "quote": "Armitage had issued warnings of the keenest intensity to all librarians having charge of the dreaded volume.",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 53,
+        "quote": "Dr. Armitage was awakened suddenly by the wild, fierce cries of the savage watchdog on the college campus.",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 54,
+        "quote": "Armitage hastened into some clothing and rushed across the street and lawn to the college buildings",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 54,
+        "quote": "he brushed back the crowd with authority as he unlocked the vestibule door",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 54,
+        "quote": "these two he motioned to accompany him inside",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 55,
+        "quote": "Armitage summoned up his courage and snapped the switch",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 58,
+        "quote": "Dr. Armitage made no written record of its mouthings, but asserts confidently that nothing in English was uttered.",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 60,
+        "quote": "Dr. Armitage shouted to the men outside that no one must be admitted till the police or medical examiner came.",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 60,
+        "quote": "drew the dark curtains carefully down over each one",
+        "context": "Chapter 6"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Wilbur Whateley",
+    "aliases": [
+      "Whateley",
+      "the thing"
+    ],
+    "facts": [
+      "Made a grotesque trip to Cambridge and frantic efforts to borrow or copy from the Necronomicon at the Widener Library.",
+      "His efforts had been in vain because of Armitage's warnings.",
+      "Was shockingly nervous at Cambridge, anxious for the book yet anxious to get home again.",
+      "The dying thing was almost nine feet tall and the dog had torn off its clothing and some of its skin.",
+      "Was partly human, with very manlike hands and head, and a goatish, chinless face with the stamp of the Whateleys upon it.",
+      "The torso and lower parts of the body were teratologically fabulous.",
+      "Above the waist the chest had the leathery, reticulated hide of a crocodile or alligator and the back was piebald with yellow and black.",
+      "Below the waist the skin was thickly covered with coarse black fur, with a score of long greenish-gray tentacles with red sucking mouths protruding from the abdomen.",
+      "Had rudimentary eyes deep set on each hip, and in lieu of a tail a trunk or feeler with purple annular markings.",
+      "Had no genuine blood, only fetid greenish-yellow ichor.",
+      "Mumbled disjointed fragments evidently taken from the Necronomicon, including the words 'Yog-Sothoth, Yog-Sothoth'.",
+      "The really human elements in Wilbur Whateley must have been very small.",
+      "Apparently had no skull or bony skeleton in any true or stable sense.",
+      "Had taken somewhat after his unknown father."
+    ],
+    "typeGuess": "other",
+    "fate": "Shrank and disintegrated until only a sticky whitish mass remained on the painted boards, and the monstrous odor nearly disappeared.",
+    "relatedNames": [
+      "Dr. Armitage",
+      "Old Whateley",
+      "Professor Warren Rice",
+      "Dr. Francis Morgan",
+      "Yog-Sothoth"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 52,
+        "quote": "his frantic efforts to borrow or copy from the Necronomicon at the Widener Library",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 52,
+        "quote": "Wilbur had been shockingly nervous at Cambridge; anxious for the book, yet almost equally anxious to get home again, as if he feared the results of being away long.",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 56,
+        "quote": "The thing that lay half-bent on its side in a fetid pool of greenish-yellow ichor and tarry stickiness was almost nine feet tall, and the dog had torn off all the clothing and some of the skin.",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 56,
+        "quote": "It was partly human, beyond a doubt, with very manlike hands and head, and the goatish, chinless face had the stamp of the Whateleys upon it.",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 57,
+        "quote": "The skin was thickly covered with coarse black fur, and from the abdomen a score of long greenish-gray tentacles with red sucking mouths protruded limply.",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 57,
+        "quote": "Of genuine blood there was none; only the fetid greenish-yellow ichor which trickled along the painted floor beyond the radius of the stickiness",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 58,
+        "quote": "Yog-Sothoth, Yog-Sothoth....",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 61,
+        "quote": "the really human elements in Wilbur Whateley must have been very small",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 61,
+        "quote": "When the medical examiner came, there was only a sticky whitish mass on the painted boards, and the monstrous odor had nearly disappeared.",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 61,
+        "quote": "He had taken somewhat after his unknown father.",
+        "context": "Chapter 6"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Old Whateley",
+    "aliases": [
+      "the grandfather"
+    ],
+    "facts": [
+      "Dr. Houghton of Aylesbury had attended Old Whateley in his last illness.",
+      "His last words were quoted by the physician and gave Dr. Armitage much to ponder."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Dr. Houghton",
+      "Wilbur Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 51,
+        "quote": "He got in communication with Dr. Houghton of Aylesbury, who had attended Old Whateley in his last illness, and found much to ponder over in the grandfather's last words as quoted by the physician.",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Dr. Houghton",
+    "aliases": [
+      "the physician"
+    ],
+    "facts": [
+      "Was of Aylesbury and had attended Old Whateley in his last illness.",
+      "Quoted the grandfather's last words to Dr. Armitage."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Old Whateley",
+      "Dr. Armitage"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 51,
+        "quote": "He got in communication with Dr. Houghton of Aylesbury, who had attended Old Whateley in his last illness, and found much to ponder over in the grandfather's last words as quoted by the physician.",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Professor Warren Rice",
+    "aliases": [
+      "Professor Rice"
+    ],
+    "facts": [
+      "Was among the men to whom Armitage had told some of his conjectures and misgivings.",
+      "Was motioned by Armitage to accompany him inside the library.",
+      "Declares that he wholly lost consciousness for an instant, though he did not stumble or fall.",
+      "Witnessed the shrinkage and disintegration of the thing on the floor along with Dr. Armitage."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Dr. Armitage",
+      "Dr. Francis Morgan",
+      "Wilbur Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 54,
+        "quote": "Among the others he saw Professor Warren Rice and Dr. Francis Morgan, men to whom he had told some of his conjectures and misgivings; and these two he motioned to accompany him inside.",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 55,
+        "quote": "Professor Rice declares that he wholly lost consciousness for an instant, though he did not stumble or fall.",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 61,
+        "quote": "before the eyes of Dr. Armitage and Professor Rice",
+        "context": "Chapter 6"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Dr. Francis Morgan",
+    "aliases": [
+      "Dr. Morgan"
+    ],
+    "facts": [
+      "Was among the men to whom Armitage had told some of his conjectures and misgivings.",
+      "Was motioned by Armitage to accompany him inside the library.",
+      "Met the arriving policemen in the vestibule and urged them to postpone entrance to the reading-room until the examiner came."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Dr. Armitage",
+      "Professor Warren Rice"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 54,
+        "quote": "Among the others he saw Professor Warren Rice and Dr. Francis Morgan, men to whom he had told some of his conjectures and misgivings; and these two he motioned to accompany him inside.",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 60,
+        "quote": "Dr. Morgan, meeting them in the vestibule, was urging them for their own sakes to postpone entrance to the stench-filled reading-room till the examiner came and the prostrate thing could be covered up.",
+        "context": "Chapter 6"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Earl Sawyer",
+    "aliases": [],
+    "facts": [
+      "Tended the horse and cattle during Wilbur's absence.",
+      "Had developed a wofully acute case of nerves."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Wilbur Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 62,
+        "quote": "Earl Sawyer, who tended the horse and cattle during Wilbur's absence, had developed a wofully acute case of nerves.",
+        "context": "Chapter 7"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Yog-Sothoth",
+    "aliases": [],
+    "facts": [
+      "The dying thing mumbled the name 'Yog-Sothoth' twice among disjointed fragments evidently taken from the Necronomicon."
+    ],
+    "typeGuess": null,
+    "relatedNames": [
+      "Wilbur Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 58,
+        "quote": "Yog-Sothoth, Yog-Sothoth....",
+        "context": "Chapter 6"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Dunwich Village",
+    "aliases": [
+      "Dunwich"
+    ],
+    "facts": [
+      "A visit to Dunwich Village failed to bring out much that was new for Dr. Armitage's investigation.",
+      "Men were sent to Dunwich and Aylesbury to look up property and notify heirs of Wilbur Whateley.",
+      "The countryside was in great agitation because of growing rumblings beneath the domed hills and the stench and sounds from Whateley's farmhouse."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Dr. Armitage",
+      "Wilbur Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 51,
+        "quote": "A visit to Dunwich Village failed to bring out much that was new",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 62,
+        "quote": "men were sent to Dunwich and Aylesbury to look up property and notify any who might be heirs of the late Wilbur Whateley",
+        "context": "Chapter 7"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 62,
+        "quote": "They found the countryside in great agitation, both because of the growing rumblings beneath the domed hills, and because of the unwonted stench and the surging, lapping sounds which came increasingly from the great empty shell formed by Whateley's boarded-up farmhouse.",
+        "context": "Chapter 7"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Aylesbury",
+    "aliases": [],
+    "facts": [
+      "Dr. Houghton, who attended Old Whateley in his last illness, was of Aylesbury.",
+      "Men were sent to Dunwich and Aylesbury to look up property and notify heirs.",
+      "A ponderous report was filed at the court-house in Aylesbury regarding litigations over heirship."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Dr. Houghton",
+      "Wilbur Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 51,
+        "quote": "He got in communication with Dr. Houghton of Aylesbury",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 62,
+        "quote": "They filed a ponderous report at the court-house in Aylesbury, and litigations concerning heirship are said to be still in progress amongst the innumerable Whateleys",
+        "context": "Chapter 7"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Cambridge",
+    "aliases": [],
+    "facts": [
+      "Wilbur Whateley made a grotesque trip to Cambridge and made frantic efforts to borrow or copy from the Necronomicon there.",
+      "Wilbur had been shockingly nervous at Cambridge."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Wilbur Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 52,
+        "quote": "He had heard, meanwhile, of Whateley's grotesque trip to Cambridge, and of his frantic efforts to borrow or copy from the Necronomicon at the Widener Library.",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 52,
+        "quote": "Wilbur had been shockingly nervous at Cambridge",
+        "context": "Chapter 6"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Widener Library",
+    "aliases": [],
+    "facts": [
+      "Wilbur Whateley made frantic efforts to borrow or copy from the Necronomicon at the Widener Library.",
+      "Dr. Armitage had issued warnings to all librarians having charge of the Necronomicon there."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Dr. Armitage"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 52,
+        "quote": "his frantic efforts to borrow or copy from the Necronomicon at the Widener Library",
+        "context": "Chapter 6"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 52,
+        "quote": "Armitage had issued warnings of the keenest intensity to all librarians having charge of the dreaded volume.",
+        "context": "Chapter 6"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Arkham",
+    "aliases": [],
+    "facts": [
+      "A scream rang out that roused half the sleepers of Arkham and haunted their dreams ever afterward."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 53,
+        "quote": "such a scream as roused half the sleepers of Arkham and haunted their dreams ever afterward",
+        "context": "Chapter 6"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Miskatonic valley",
+    "aliases": [
+      "upper Miskatonic valley"
+    ],
+    "facts": [
+      "Dr. Armitage felt something ought to be done about the lurking terrors of the upper Miskatonic valley.",
+      "Litigations concerning heirship of Wilbur Whateley's estate are said to be still in progress amongst the innumerable Whateleys of the upper Miskatonic valley."
+    ],
+    "typeGuess": "region",
+    "relatedNames": [
+      "Wilbur Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 51,
+        "quote": "the lurking terrors of the upper Miskatonic valley",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 62,
+        "quote": "litigations concerning heirship are said to be still in progress amongst the innumerable Whateleys, decayed and undecayed, of the upper Miskatonic valley",
+        "context": "Chapter 7"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Whateley's farmhouse",
+    "aliases": [
+      "Whateley's boarded-up farmhouse"
+    ],
+    "facts": [
+      "Was a great empty shell that produced an unwonted stench and surging, lapping sounds.",
+      "Officials devised excuses not to enter the noisome boarded place and confined their survey of the newly mended sheds to a single visit."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Wilbur Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 62,
+        "quote": "the unwonted stench and the surging, lapping sounds which came increasingly from the great empty shell formed by Whateley's boarded-up farmhouse",
+        "context": "Chapter 7"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 62,
+        "quote": "The officials devised excuses not to enter the noisome boarded place; and were glad to confine their survey of the deceased's living quarters, the newly mended sheds, to a single visit.",
+        "context": "Chapter 7"
+      }
+    ]
+  }
+]

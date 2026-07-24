@@ -1,0 +1,21 @@
+{
+  "slug": "squire-sawyer-whateley",
+  "name": "Squire Sawyer Whateley",
+  "role": "other",
+  "summary": "Squire Sawyer Whateley, chairman of the local draft board in 1917, struggled to find enough physically sound young Dunwich men to fill even a development-camp quota, an early hint of the region's degeneracy.",
+  "description": "When war came in 1917, Squire Sawyer Whateley, as chairman of the local draft board, had hard work finding a quota of young Dunwich men fit even to be sent to a development camp — a telling sign of the region's inbred decline.",
+  "locations": [
+    "dunwich"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 24,
+      "quote": "In 1917 the war came, and Squire Sawyer Whateley, as chairman of the local draft board, had hard work finding a quota of young Dunwich men fit even to be sent to a development camp.",
+      "context": "Chapter 3"
+    }
+  ]
+}

@@ -1,0 +1,555 @@
+[
+  {
+    "kind": "location",
+    "name": "Col' Spring Glen",
+    "aliases": [
+      "Cold Spring Glen",
+      "the glen"
+    ],
+    "facts": [
+      "Described as no healthy nor decent place",
+      "Whippoorwills and fireflies there never act like creatures of God",
+      "Strange sounds could be heard rushing and talking in the air there between the rock falls and Bear's Den",
+      "Whatever burst loose upon the world had gone down into the great sinister ravine",
+      "All the trees on the banks were bent and broken and a great avenue had been gouged in the underbrush",
+      "Only a distant fetor came from below, no sound",
+      "Three dogs seemed cowed and reluctant when near the glen",
+      "Elmer Frye's house was on the eastern edge of Cold Spring Glen",
+      "Monstrous tracks seemed to argue a passage in two directions between Cold Spring Glen and Sentinel Hill",
+      "The Frye place stood at the head of the glen and was destroyed"
+    ],
+    "typeGuess": "region",
+    "relatedNames": [
+      "Bear's Den",
+      "Sentinel Hill",
+      "Elmer Frye"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 71,
+        "quote": "I allus says Col' Spring Glen ain't no healthy nor decent place. The whippoorwills an' fireflies there never did act like they was creaters o' Gawd, an' they's them as says ye kin hear strange things a-rushin' an' a-talkin' in the air daown thar ef ye stand in the right place, atween the rock falls an' Bear's Den.",
+        "context": "Chapter 7"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 73,
+        "quote": "Whatever had burst loose upon the world had assuredly gone down into the great sinister ravine; for all the trees on the banks were bent and broken, and a great avenue had been gouged in the precipice-hanging underbrush.",
+        "context": "Chapter 7"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 74,
+        "quote": "a frightful stench and the savage barking of the dogs awakened the household at Elmer Frye's, on the eastern edge of Cold Spring Glen",
+        "context": "Chapter 7"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 77,
+        "quote": "as if the moving mountain had come from Cold Spring Glen and returned to it along the same path",
+        "context": "Chapter 7"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 79,
+        "quote": "a hastily assembled group of armed men trudged out to the Frye place at the head of the glen",
+        "context": "Chapter 7"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Bear's Den",
+    "aliases": [],
+    "facts": [
+      "Strange sounds could be heard in the air near this landmark within Cold Spring Glen"
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Col' Spring Glen"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 71,
+        "quote": "they's them as says ye kin hear strange things a-rushin' an' a-talkin' in the air daown thar ef ye stand in the right place, atween the rock falls an' Bear's Den",
+        "context": "Chapter 7"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Dunwich",
+    "aliases": [],
+    "facts": [
+      "Three-quarters of the men and boys of Dunwich trooped between the Whateley ruins and Cold Spring Glen",
+      "The editor of the Aylesbury Transcript was accustomed to wild tales from Dunwich",
+      "The next day all the countryside was in a panic",
+      "The Elmer Fryes had been erased from Dunwich"
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Col' Spring Glen",
+      "Elmer Frye"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 73,
+        "quote": "By that noon fully three-quarters of the men and boys of Dunwich were trooping over the roads and meadows between the new-made Whateley ruins and Cold Spring Glen",
+        "context": "Chapter 7"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 79,
+        "quote": "The Elmer Fryes had been erased from Dunwich.",
+        "context": "Chapter 7"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Aylesbury",
+    "aliases": [],
+    "facts": [
+      "The Aylesbury Transcript published a humorous item about the tracks",
+      "Earl Sawyer suggested that help be asked from Aylesbury"
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Earl Sawyer"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 73,
+        "quote": "Someone telephoned the news to the Aylesbury Transcript; but the editor, accustomed to wild tales from Dunwich, did no more than concoct a humorous paragraph about it",
+        "context": "Chapter 7"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 75,
+        "quote": "Earl Sawyer suggested that help be asked from Aylesbury or Arkham, but others maintained it would be of no use.",
+        "context": "Chapter 7"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Arkham",
+    "aliases": [],
+    "facts": [
+      "Earl Sawyer suggested that help be asked from Arkham",
+      "The manuscript diary of Wilbur Whateley was being studied behind a closed door of a shelf-lined room in Arkham",
+      "The manuscript had been delivered to Miskatonic University for translation"
+    ],
+    "typeGuess": "city",
+    "relatedNames": [
+      "Miskatonic University",
+      "Dr. Armitage",
+      "Wilbur Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 75,
+        "quote": "Earl Sawyer suggested that help be asked from Aylesbury or Arkham, but others maintained it would be of no use.",
+        "context": "Chapter 7"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 80,
+        "quote": "a quieter yet even more spiritually poignant phase of the horror had been blackly unwinding itself behind the closed door of a shelf-lined room in Arkham",
+        "context": "Chapter 8"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Miskatonic University",
+    "aliases": [],
+    "facts": [
+      "The manuscript diary of Wilbur Whateley was delivered there for translation",
+      "Experts in ancient and modern languages there were puzzled by the manuscript's alphabet"
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Dr. Armitage",
+      "Arkham"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 80,
+        "quote": "The curious manuscript record or diary of Wilbur Whateley, delivered to Miskatonic University for translation, had caused much worry and bafflement among the experts in languages both ancient and modern",
+        "context": "Chapter 8"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Sentinel Hill",
+    "aliases": [],
+    "facts": [
+      "Fresh monstrous tracks were found in the road skirting Sentinel Hill",
+      "A thirty-foot swath of crushed shrubbery led steeply upward from the base of the hill",
+      "The horror could scale a sheer stony cliff of almost complete verticality on the hill",
+      "The trail ended or reversed at the hill's summit",
+      "The Whateleys used to build hellish fires and chant rituals by a table-like stone atop the hill on May Eve and Hallowmass",
+      "The stone was found with a thick fetid tarry deposit like that on the ruined Whateley farmhouse floor"
+    ],
+    "typeGuess": "region",
+    "relatedNames": [
+      "Col' Spring Glen",
+      "Old Zebulon Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 77,
+        "quote": "early explorers noted with horror a fresh set of the monstrous tracks in the road skirting Sentinel Hill",
+        "context": "Chapter 7"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 78,
+        "quote": "It was here that the Whateleys used to build their hellish fires and chant their hellish rituals by the table-like stone on May Eve and Hallowmass.",
+        "context": "Chapter 7"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Whateley farmhouse",
+    "aliases": [
+      "new-made Whateley ruins",
+      "ruined Whateley farmhouse"
+    ],
+    "facts": [
+      "Tarry stickiness was observed on the floor of the ruined farmhouse when the horror escaped",
+      "The farmhouse had become a strange noisome wreck"
+    ],
+    "typeGuess": "ruin",
+    "relatedNames": [
+      "Col' Spring Glen"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 73,
+        "quote": "examining in horror the vast, monstrous prints, the maimed Bishop cattle, the strange, noisome wreck of the farmhouse",
+        "context": "Chapter 7"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 78,
+        "quote": "the same tarry stickiness observed on the floor of the ruined Whateley farmhouse when the horror escaped",
+        "context": "Chapter 7"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Frye place",
+    "aliases": [
+      "Elmer Frye's",
+      "Frye farmyard"
+    ],
+    "facts": [
+      "One side of the old red barn had completely caved in",
+      "Only about a quarter of the cattle could be found and identified",
+      "The house had caved in like an egg-shell and nothing living or dead could be discovered amongst the ruins"
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Elmer Frye",
+      "Col' Spring Glen"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 75,
+        "quote": "one side of the old red barn had completely caved in. Of the cattle, only about a quarter could be found and identified.",
+        "context": "Chapter 7"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 79,
+        "quote": "There were more swaths and monstrous prints, but there was no longer any house. It had caved in like an egg-shell, and amongst the ruins nothing living or dead could be discovered—only a stench and a tarry stickiness.",
+        "context": "Chapter 7"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Mis' Corey",
+    "aliases": [],
+    "facts": [
+      "The tracks had not yet reached her house as of the speaker's account"
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Luther"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 71,
+        "quote": "ef they was on the glen rud this side o' the glen, an' ain't got to your haouse yet, I calc'late they must go into the glen itself",
+        "context": "Chapter 7"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Luther",
+    "aliases": [
+      "your Luther"
+    ],
+    "facts": [
+      "He observed the big tracks but it was unclear whether he took account of where they led"
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Mis' Corey"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 71,
+        "quote": "Did your Luther take accaount o' whar them big tracks led tew?",
+        "context": "Chapter 7"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Elmer Frye",
+    "aliases": [
+      "the Elmer Fryes"
+    ],
+    "facts": [
+      "His household was awakened by a stench and barking dogs about 2 in the morning",
+      "He lit a lantern through force of habit but knew it would be death to go outside",
+      "His family and farm were later destroyed, with the house caved in and no one found"
+    ],
+    "typeGuess": "witness",
+    "fate": "He and his household were erased from Dunwich when their house caved in and nothing living or dead could be found amongst the ruins.",
+    "relatedNames": [
+      "Mrs. Frye",
+      "Selina Frye",
+      "Col' Spring Glen",
+      "Frye place"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 74,
+        "quote": "a frightful stench and the savage barking of the dogs awakened the household at Elmer Frye's, on the eastern edge of Cold Spring Glen",
+        "context": "Chapter 7"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 74,
+        "quote": "Frye lit a lantern through force of habit, but knew it would be death to go out into that black farmyard.",
+        "context": "Chapter 7"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 79,
+        "quote": "The Elmer Fryes had been erased from Dunwich.",
+        "context": "Chapter 7"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Mrs. Frye",
+    "aliases": [],
+    "facts": [
+      "She proposed telephoning the neighbors when the noise began"
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Elmer Frye"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 74,
+        "quote": "Mrs. Frye proposed telephoning the neighbors, and Elmer was about to agree when the noise of splintering wood burst in upon their deliberations.",
+        "context": "Chapter 7"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Selina Frye",
+    "aliases": [],
+    "facts": [
+      "She tottered to the telephone and spread news of the second phase of the horror"
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Elmer Frye"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 74,
+        "quote": "Selina Frye tottered to the telephone and spread what news she could of the second phase of the horror",
+        "context": "Chapter 7"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Earl Sawyer",
+    "aliases": [],
+    "facts": [
+      "He suggested that help be asked from Aylesbury or Arkham"
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Aylesbury",
+      "Arkham"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 75,
+        "quote": "Earl Sawyer suggested that help be asked from Aylesbury or Arkham, but others maintained it would be of no use.",
+        "context": "Chapter 7"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Old Zebulon Whateley",
+    "aliases": [
+      "Zebulon"
+    ],
+    "facts": [
+      "He was of a branch that hovered about half-way between soundness and decadence",
+      "He made darkly wild suggestions about rites that ought to be practised on the hilltops",
+      "He came of a line where tradition ran strong, with memories of chantings in the great stone circles connected with Wilbur and his grandfather",
+      "He was not with the group at Sentinel Hill and could have done justice to the situation or suggested a plausible explanation"
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Sentinel Hill"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 75,
+        "quote": "Old Zebulon Whateley, of a branch that hovered about half-way between soundness and decadence, made darkly wild suggestions about rites that ought to be practised on the hilltops.",
+        "context": "Chapter 7"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 75,
+        "quote": "his memories of chantings in the great stone circles were not altogether connected with Wilbur and his grandfather",
+        "context": "Chapter 7"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 78,
+        "quote": "Only old Zebulon, who was not with the group, could have done justice to the situation or suggested a plausible explanation.",
+        "context": "Chapter 7"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Seth Bishop",
+    "aliases": [],
+    "facts": [
+      "His household reported excitement among the dogs and vague sounds and stenches from afar"
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Elmer Frye"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 77,
+        "quote": "In the morning both the Frye and the Seth Bishop households reported excitement among the dogs and vague sounds and stenches from afar",
+        "context": "Chapter 7"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Dr. Armitage",
+    "aliases": [
+      "Armitage"
+    ],
+    "facts": [
+      "The old ledger was given wholly into his charge because of his peculiar interest in the Whateley matter and his wide linguistic learning",
+      "He had an idea the alphabet might be esoterically used by certain forbidden cults derived from Saracenic wizards",
+      "He believed the writer would scarcely have used another speech than his own, so he assumed the manuscript's bulk was in English",
+      "He fortified himself with cryptography lore, studying works of Trithemius, Porta, De Vigenere, Falconer, Davys, Thicknesse, Blair, von Marten, and Klüber",
+      "He concluded the code of the manuscript was one of great antiquity, handed down through a long line of mystical experimenters",
+      "By September he determined that the text was indeed in English"
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Miskatonic University",
+      "Arkham"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 80,
+        "quote": "The old ledger was at length given wholly into the charge of Dr. Armitage, both because of his peculiar interest in the Whateley matter, and because of his wide linguistic learning and skill in the mystical formulæ of antiquity and the Middle Ages.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 81,
+        "quote": "Armitage had an idea that the alphabet might be something esoterically used by certain forbidden cults which have come down from old times, and which have inherited many forms and traditions from the wizards of the Saracenic world.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 82,
+        "quote": "Armitage concluded that the code of the manuscript was one of great antiquity, no doubt handed down through a long line of mystical experimenters.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 82,
+        "quote": "it became obvious that the text was indeed in English",
+        "context": "Chapter 8"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Wilbur Whateley",
+    "aliases": [],
+    "facts": [
+      "His curious manuscript record or diary was delivered to Miskatonic University for translation",
+      "Its alphabet caused worry and bafflement among language experts, resembling heavily shaded Arabic used in Mesopotamia but otherwise unknown"
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Dr. Armitage",
+      "Miskatonic University",
+      "Old Zebulon Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 80,
+        "quote": "The curious manuscript record or diary of Wilbur Whateley, delivered to Miskatonic University for translation, had caused much worry and bafflement among the experts in languages both ancient and modern",
+        "context": "Chapter 8"
+      }
+    ]
+  }
+]

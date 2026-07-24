@@ -1,0 +1,35 @@
+{
+  "slug": "dr-houghton",
+  "name": "Dr. Houghton",
+  "role": "witness",
+  "summary": "Dr. Houghton of Aylesbury was the physician summoned to Old Whateley's deathbed on Lammas Night, 1924, and later a key informant for Dr. Armitage's investigation into the Whateley family.",
+  "description": "Dr. Houghton of Aylesbury was hastily summoned by Wilbur Whateley on Lammas Night, 1924, and found Old Whateley in a very grave state, with cardiac action and stertorous breathing signaling an end not far off; he was chiefly disturbed by the uncanny, unnatural chattering of whippoorwills timed to the dying man's breath, and drew shrunken lids over the old man's eyes as the birds fell silent.\n\nYears later Dr. Armitage got in communication with Houghton, who had attended Old Whateley in his last illness, and found much to ponder in the grandfather's dying words as quoted by the physician.",
+  "locations": [
+    "dunwich",
+    "dunwich/whateley-farmhouse",
+    "aylesbury"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 29,
+      "quote": "He found Old Whateley in a very grave state, with a cardiac action and stertorous breathing that told of an end not far off.",
+      "context": "Chapter 4"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 34,
+      "quote": "Dr. Houghton drew shrunken lids over the glazing gray eyes as the tumult of birds faded imperceptibly to silence.",
+      "context": "Chapter 4"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 51,
+      "quote": "He got in communication with Dr. Houghton of Aylesbury, who had attended Old Whateley in his last illness, and found much to ponder over in the grandfather's last words as quoted by the physician.",
+      "context": "Chapter 5"
+    }
+  ]
+}

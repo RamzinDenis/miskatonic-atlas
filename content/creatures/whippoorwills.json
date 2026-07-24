@@ -1,0 +1,34 @@
+{
+  "slug": "whippoorwills",
+  "name": "whippoorwills",
+  "classification": "entity",
+  "summary": "The whippoorwills of Dunwich are numerous night birds feared by the natives as psychopomps that try to catch the souls of the dying in time with their labored breathing.",
+  "description": "The natives of Dunwich are mortally afraid of the numerous whippoorwills which grow vocal on warm nights; it is vowed that the birds are psychopomps lying in wait for the souls of the dying, timing their eery cries in unison with the sufferer's struggling breath. If they catch the fleeing soul when it leaves the body, they instantly flutter away chittering in demoniac laughter; if they fail, they subside gradually into a disappointed silence.\n\nOld Whateley, dying on Lammas Night 1924, noticed a growing number of them coming from Cold Spring Glen to chirp under his window, and believed they whistled in tune with his breathing, getting ready to catch his soul — vowing that if they succeeded they would sing and laugh till break of day, but if not, they would quiet down. On the night of his death a seemingly limitless legion of them cried in repetitions timed diabolically to his wheezing gasps, unsettling even the visiting physician.",
+  "locations": [
+    "dunwich",
+    "dunwich/cold-spring-glen"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 9,
+      "quote": "It is vowed that the birds are psychopomps lying in wait for the souls of the dying, and that they time their eery cries in unison with the sufferer's struggling breath.",
+      "context": "Chapter 1"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 28,
+      "quote": "They whistle jest in tune with my breathin' naow, an' I guess they're gittin' ready to ketch my soul. They know it's a-goin' aout, an' dun't calc'late to miss it. Yew'll know, boys, arter I'm gone, whether they git me er not. Ef they dew, they'll keep up a-singin' an' laffin' till break o' day. Ef they dun't, they'll kinder quiet daown like.",
+      "context": "Chapter 4"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 29,
+      "quote": "The doctor, though, was chiefly disturbed by the chattering night birds outside; a seemingly limitless legion of whippoorwills that cried their endless message in repetitions timed diabolically to the wheezing gasps of the dying man.",
+      "context": "Chapter 4"
+    }
+  ]
+}

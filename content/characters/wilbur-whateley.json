@@ -1,0 +1,39 @@
+{
+  "slug": "wilbur-whateley",
+  "name": "Wilbur Whateley",
+  "role": "cultist",
+  "summary": "Wilbur Whateley was the goatish, unnaturally precocious son of the albino Lavinia Whateley, groomed by his grandfather to open the gates to Yog-Sothoth; he grew to nearly eight feet before dying grotesquely at Miskatonic University while seeking the Necronomicon, and was ultimately revealed to have had a monstrous twin.",
+  "description": "Wilbur Whateley was born at 5 a.m. on Sunday, February 2, 1913, in the Whateley farmhouse four miles from Dunwich village, a dark, goatish-looking infant in contrast to his albino mother. He walked at seven months, talked fluently at eleven months, and by his fourth year looked like a boy of ten; dogs abhorred him and he was forced to carry a pistol to travel safely. Under his grandfather Old Whateley's instruction he devoured the family's ancient books, once shrieking the name of Yog-Sothoth within a circle of stones so that the hills shook, and treated his mother with growing contempt, forbidding her the hills before she vanished in 1926.\n\nBy 1925 he stood six and three-quarters feet tall and corresponded with librarians of forbidden lore; by 1927 he exceeded seven feet and was moving his books into farmyard sheds. In the winter of 1927–28 he made his first trip outside Dunwich, appearing in Arkham almost eight feet tall to seek the Necronomicon at Miskatonic University, and later made a frantic, fruitless trip to Harvard's Widener Library. Librarian Henry Armitage refused to lend him the book after glimpsing the monstrous formula he sought.\n\nOn August 2, 1928, Wilbur was killed by a savage guard dog while attempting to steal the Necronomicon from the Miskatonic library at night. His body, witnessed by Armitage and Professor Rice, proved almost inhuman — leathery, furred, tentacled, without true blood, skull, or skeleton — and shrank to a sticky whitish mass within hours. Armitage later revealed that the creature loosed upon Dunwich that same season was Wilbur's twin brother, begotten with him by Yog-Sothoth, and that Wilbur himself had carried enough of that same otherness to make his death 'a pretty terrible sight.'",
+  "locations": [
+    "dunwich",
+    "dunwich/whateley-farmhouse",
+    "dunwich/sentinel-hill",
+    "arkham",
+    "harvard",
+    "arkham/miskatonic-university"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "fate": "Died on August 2, 1928, attacked by a guard dog while attempting to steal the Necronomicon from Miskatonic University's library; his body then shrank and disintegrated into a sticky whitish mass, revealing he had no true human skull or skeleton and had taken after his unknown, non-human father.",
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 11,
+      "quote": "It was in the township of Dunwich, in a large and partly inhabited farmhouse set against a hillside four miles from the village and a mile and a half from any other dwelling, that Wilbur Whateley was born at 5 a. m. on Sunday, the second of February, 1913.",
+      "context": "Chapter 2"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 56,
+      "quote": "The thing that lay half-bent on its side in a fetid pool of greenish-yellow ichor and tarry stickiness was almost nine feet tall, and the dog had torn off all the clothing and some of the skin.",
+      "context": "Chapter 6"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 149,
+      "quote": "It grew fast and big from the same reason that Wilbur grew fast and big—but it beat him because it had a greater share of the outsideness in it. You needn't ask how Wilbur called it out of the air. He didn't call it out. It was his twin brother, but it looked more like the father than he did.",
+      "context": "Chapter 10"
+    }
+  ]
+}

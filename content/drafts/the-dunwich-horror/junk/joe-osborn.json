@@ -1,0 +1,41 @@
+{
+  "slug": "joe-osborn",
+  "name": "Joe Osborn",
+  "role": "other",
+  "summary": "Joe Osborn was a Dunwich local who guided Dr. Armitage's party in the right direction up Sentinel Hill and later pressed the Arkham men to explain what the horror had truly been.",
+  "description": "When Armitage inadvertently took a wrong direction, Joe Osborn warned him and walked ahead to show the right one. Later, after the creature's destruction, Osborn interrupted old Zebulon Whateley to press the Arkham men for an explanation of what the thing had been and how young Wizard Whateley had called it out of the air.",
+  "locations": [
+    "dunwich",
+    "dunwich/sentinel-hill"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 117,
+      "quote": "When Armitage inadvertently took a wrong direction, Joe Osborn warned him and walked ahead to show the right one.",
+      "context": "Chapter 9"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 146,
+      "quote": "What was it, anyhaow, an' haowever did young Wizard Whateley call it aout o' the air it come from?",
+      "context": "Chapter 10"
+    }
+  ],
+  "_draft": {
+    "aliases": [],
+    "occurrences": 2,
+    "windows": [
+      "w111-122",
+      "w141-149"
+    ],
+    "facts": [
+      "Warned Armitage of a wrong direction and walked ahead to show the right one.",
+      "Interrupted Zebulon Whateley to press the Arkham men for an explanation."
+    ],
+    "needsReview": []
+  }
+}

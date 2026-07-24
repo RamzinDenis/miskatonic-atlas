@@ -1,0 +1,42 @@
+{
+  "slug": "curtis-whateley",
+  "name": "Curtis Whateley",
+  "role": "witness",
+  "summary": "Curtis Whateley, of the undecayed branch of the family, was among the Dunwich men who tracked the invisible horror up Sentinel Hill, and the only one to glimpse it clearly through a telescope before collapsing in terror.",
+  "description": "Curtis Whateley, of the undecayed branch, was holding the telescope when Dr. Armitage's party detoured from the monster's swath toward the altar-stone. Straining his vision as Professor Rice sprayed the creature, he glimpsed it fully before dropping the instrument into the mud with a piercing shriek, gasping out a fragmented description: something bigger than a barn, made of squirming ropes, shaped like a monstrous hen's egg, jelly-like, with dozens of legs like hogsheads, bulging eyes, and ten or twenty mouths like stovepipes, all gray with blue or purple rings.\n\nAs his senses returned after the creature's destruction, Curtis recalled one final, more terrible detail — a half-shaped face atop the thing, with red eyes and crinkly albino hair and no chin, resembling old Wizard Whateley himself, only yards and yards across. This final memory proved too much for him, and he collapsed completely, unable to say more; Fred Farr and Will Hutchins carried him to the roadside.",
+  "locations": [
+    "dunwich",
+    "dunwich/sentinel-hill",
+    "dunwich/whateley-farmhouse"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "fate": "Collapsed after witnessing the creature atop Sentinel Hill and could speak no further of what he saw.",
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 129,
+      "quote": "Bigger 'n a barn ... all made o' squirmin' ropes ... hull thing sort o' shaped like a hen's egg bigger'n anything, with dozens o' legs like hogsheads that haff shut up when they step ... nothin' solid abaout it—all like jelly, an' made o' sep'rit wrigglin' ropes pushed clost together ... great bulgin' eyes all over it ... ten or twenty maouths or trunks a-stickin' aout all along the sides, big as stovepipes, an' all a-tossin' an' openin' an' shuttin' ... all gray, with kinder blue or purple rings ... an' Gawd in Heaven—that haff face on top!...",
+      "context": "Chapter 10"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 142,
+      "quote": "Oh, oh, my Gawd, that haff face ... that haff face on top of it ... that face with the red eyes an' crinkly albino hair, an' no chin, like the Whateleys.... It was a octopus, centipede, spider kind o' thing, but they was a haff-shaped man's face on top of it, an' it looked like Wizard Whateley's, only it was yards an' yards acrost....",
+      "context": "Chapter 10"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 130,
+      "quote": "This final memory, whatever it was, proved too much for poor Curtis, and he collapsed completely before he could say more.",
+      "context": "Chapter 10"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 15,
+      "quote": "Old Whateley had bought of his son Curtis",
+      "context": "Chapter 2"
+    }
+  ]
+}

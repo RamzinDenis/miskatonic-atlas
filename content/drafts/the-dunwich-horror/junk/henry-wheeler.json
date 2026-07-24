@@ -1,0 +1,52 @@
+{
+  "slug": "henry-wheeler",
+  "name": "Henry Wheeler",
+  "role": "witness",
+  "summary": "Henry Wheeler rescued the dropped telescope after Curtis Whateley's collapse and used it to watch the three Arkham scholars chant their incantation against the horror atop Sentinel Hill.",
+  "description": "After Curtis Whateley dropped the telescope in terror, only Henry Wheeler thought to rescue it and wipe it clean of mud. Trembling, he turned it on the mountain, whispering 'I guess he's sayin' the spell' as he watched a figure raising its hands rhythmically, and saw through the glass that the men from Arkham were all raising their arms in the incantation. He later strained his eye at the telescope but saw only the three grotesquely silhouetted human figures moving their arms furiously as the incantation drew to its culmination.",
+  "locations": [
+    "dunwich",
+    "dunwich/sentinel-hill"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 128,
+      "quote": "only Henry Wheeler thought to rescue the fallen telescope and wipe it clean of mud",
+      "context": "Chapter 10"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 131,
+      "quote": "I guess he's sayin' the spell,\" whispered Wheeler as he snatched back the telescope.",
+      "context": "Chapter 10"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 136,
+      "quote": "Henry Wheeler strained his eye at the telescope, but saw only the three grotesquely silhouetted human figures on the peak, all moving their arms furiously in strange gestures as their incantation drew near its culmination.",
+      "context": "Chapter 10"
+    }
+  ],
+  "_draft": {
+    "aliases": [
+      "Wheeler"
+    ],
+    "occurrences": 2,
+    "windows": [
+      "w121-132",
+      "w131-142"
+    ],
+    "facts": [
+      "Rescued the fallen telescope and wiped it clean after Curtis dropped it.",
+      "Turned the rescued telescope on the mountain.",
+      "Whispered that he guessed the man was saying the spell.",
+      "Saw the Arkham men raising their arms in rhythmic incantation.",
+      "Later saw only the three silhouetted figures moving their arms furiously."
+    ],
+    "needsReview": []
+  }
+}

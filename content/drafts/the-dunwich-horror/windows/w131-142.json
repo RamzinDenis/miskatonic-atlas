@@ -1,0 +1,281 @@
+[
+  {
+    "kind": "character",
+    "name": "Earl Sawyer",
+    "aliases": [],
+    "facts": [
+      "Took the telescope and reported the three figures as standing on the topmost ridge, virtually level with the altar-stone but at a considerable distance from it.",
+      "Said one figure seemed to be raising its hands above its head at rhythmic intervals."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Wheeler"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 131,
+        "quote": "Earl Sawyer now took the telescope and reported the three figures as standing on the topmost ridge, virtually level with the altar-stone but at a considerable distance from it.",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Wheeler",
+    "aliases": [
+      "Henry Wheeler"
+    ],
+    "facts": [
+      "Whispered 'I guess he's sayin' the spell' as he snatched back the telescope.",
+      "Saw through the glass that the men from Arkham were all raising their arms in the rhythmic incantation.",
+      "Strained his eye at the telescope but saw only the three grotesquely silhouetted human figures on the peak moving their arms furiously in strange gestures."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Earl Sawyer"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 131,
+        "quote": "\"I guess he's sayin' the spell,\" whispered Wheeler as he snatched back the telescope.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 132,
+        "quote": "The chanting of the men from Arkham now became unmistakable, and Wheeler saw through the glass that they were all raising their arms in the rhythmic incantation.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 136,
+        "quote": "Henry Wheeler strained his eye at the telescope, but saw only the three grotesquely silhouetted human figures on the peak, all moving their arms furiously in strange gestures as their incantation drew near its culmination.",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Armitage",
+    "aliases": [],
+    "facts": [
+      "Said 'The thing has gone for ever.'",
+      "Stated that it had been split up into what it was originally made of, and could never exist again.",
+      "Said it was an impossibility in a normal world and only the least fraction was really matter in any sense known.",
+      "Said it was like its father, and most of it had gone back to him in some vague realm or dimension outside the material universe.",
+      "Said only the most accursed rites of human blasphemy could have called the being forth for a moment on the hills."
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": [
+      "The thing"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 140,
+        "quote": "\"The thing has gone for ever,\" Armitage said. \"It has been split up into what it was originally made of, and can never exist again. It was an impossibility in a normal world. Only the least fraction was really matter in any sense we know. It was like its father—and most of it has gone back to him in some vague realm or dimension outside our material universe; some vague abyss out of which only the most accursed rites of human blasphemy could ever have called him for a moment on the hills.\"",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Curtis Whateley",
+    "aliases": [],
+    "facts": [
+      "Was only just regaining consciousness when the Arkham men came slowly down the mountain in the beams of sunlight.",
+      "His scattered senses began to knit back into a sort of continuity after a pause, so that he put his hands to his head with a moan.",
+      "Described seeing a half face with red eyes and crinkly albino hair and no chin, like the Whateleys, atop an octopus, centipede, spider kind of body.",
+      "Said the half-face looked like Wizard Whateley's, only yards and yards across."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Wizard Whateley",
+      "The thing"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 139,
+        "quote": "Curtis Whateley was only just regaining consciousness when the Arkham men came slowly down the mountain in the beams of a sunlight once more brilliant and untainted.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 141,
+        "quote": "There was a brief silence, and in that pause the scattered senses of poor Curtis Whateley began to knit back into a sort of continuity; so that he put his hands to his head with a moan.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 142,
+        "quote": "\"Oh, oh, my Gawd, that haff face ... that haff face on top of it ... that face with the red eyes an' crinkly albino hair, an' no chin, like the Whateleys.... It was a octopus, centipede, spider kind o' thing, but they was a haff-shaped man's face on top of it, an' it looked like Wizard Whateley's, only it was yards an' yards acrost....\"",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Wizard Whateley",
+    "aliases": [],
+    "facts": [
+      "Curtis Whateley said the half-shaped face on the creature looked like Wizard Whateley's, only yards and yards across."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "The thing",
+      "Curtis Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 142,
+        "quote": "an' it looked like Wizard Whateley's, only it was yards an' yards acrost....",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Yog-Sothoth",
+    "aliases": [],
+    "facts": [
+      "The name 'Yog-Sothoth' was uttered amid the hideous croaking chant that rang out of space.",
+      "The chant included the cries 'FATHER! FATHER! YOG-SOTHOTH!'"
+    ],
+    "typeGuess": "great-old-one",
+    "relatedNames": [
+      "The thing"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 135,
+        "quote": "\"Ygnaiih ... ygnaiih ... thflthkh'ngha ... Yog-Sothoth....\" rang the hideous croaking out of space.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 137,
+        "quote": "\"Eh-ya-ya-ya-yahaah ... e'yaya-yayaaaa ... ngh'aaaa ... ngh'aaaa ... h'yuh ... h'yuh ... HELP! HELP! ... ff—ff—ff—FATHER! FATHER! YOG-SOTHOTH!...\"",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "The thing",
+    "aliases": [
+      "it",
+      "him"
+    ],
+    "facts": [
+      "Produced deep, cracked, raucous vocal sounds not born from any human throat, seemingly from the altar-stone on the peak.",
+      "Its half-articulate croakings grew in stark, utter, ultimate frenzy before culminating in indisputably English syllables and cries of 'FATHER! FATHER! YOG-SOTHOTH!'",
+      "A single lightning bolt shot from the purple zenith to the altar-stone, followed by a terrific report and a tidal wave of viewless force and indescribable stench sweeping down from the hill.",
+      "Armitage said the thing had gone for ever, split up into what it was originally made of, and could never exist again.",
+      "Was an impossibility in a normal world; only the least fraction was really matter in any sense known.",
+      "Was like its father, and most of it went back to him in some vague realm or dimension outside the material universe.",
+      "Curtis Whateley described it as having a half-shaped face with red eyes, crinkly albino hair, and no chin, like the Whateleys, atop an octopus, centipede, spider kind of body, yards and yards across."
+    ],
+    "typeGuess": "entity",
+    "fate": "Split up into what it was originally made of and can never exist again; most of it returned to its father in a vague realm or dimension outside the material universe.",
+    "relatedNames": [
+      "Yog-Sothoth",
+      "Armitage",
+      "Curtis Whateley",
+      "Wizard Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 134,
+        "quote": "Without warning came those deep, cracked, raucous vocal sounds which will never leave the memory of the stricken group who heard them. Not from any human throat were they born, for the organs of man can yield no such acoustic perversions.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 138,
+        "quote": "A single lightning bolt shot from the purple zenith to the altar-stone, and a great tidal wave of viewless force and indescribable stench swept down from the hill to all the countryside.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 140,
+        "quote": "\"The thing has gone for ever,\" Armitage said. \"It has been split up into what it was originally made of, and can never exist again. It was an impossibility in a normal world. Only the least fraction was really matter in any sense we know. It was like its father—and most of it has gone back to him in some vague realm or dimension outside our material universe.\"",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 142,
+        "quote": "It was a octopus, centipede, spider kind o' thing, but they was a haff-shaped man's face on top of it, an' it looked like Wizard Whateley's, only it was yards an' yards acrost....",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the altar-stone",
+    "aliases": [
+      "altar-stone on the peak",
+      "that fearsome hill"
+    ],
+    "facts": [
+      "Located on the topmost ridge/peak, level with the figures observed through the telescope.",
+      "A mistiness was fancied around the altar-stone during a lightning flash.",
+      "The deep vocal sounds seemed unmistakably to have their source at the altar-stone on the peak.",
+      "A single lightning bolt shot from the purple zenith to the altar-stone.",
+      "The vegetation on and around that hill never came right again after the event, remaining queer and unholy to this day."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "The thing"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 131,
+        "quote": "Earl Sawyer now took the telescope and reported the three figures as standing on the topmost ridge, virtually level with the altar-stone but at a considerable distance from it.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 133,
+        "quote": "Then the lightning flashed again, somewhat brighter than before, and the crowd fancied that it had showed a certain mistiness around the altar-stone on the distant height.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 138,
+        "quote": "A single lightning bolt shot from the purple zenith to the altar-stone, and a great tidal wave of viewless force and indescribable stench swept down from the hill to all the countryside.",
+        "context": "Chapter 10"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 139,
+        "quote": "The stench left quickly, but the vegetation never came right again. To this day there is something queer and unholy about the growths on and around that fearsome hill.",
+        "context": "Chapter 10"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Dunwich",
+    "aliases": [],
+    "facts": [
+      "The men of Dunwich braced themselves tensely against some imponderable menace with which the atmosphere seemed surcharged."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 133,
+        "quote": "The whippoorwills continued their irregular pulsation, and the men of Dunwich braced themselves tensely against some imponderable menace with which the atmosphere seemed surcharged.",
+        "context": "Chapter 10"
+      }
+    ]
+  }
+]

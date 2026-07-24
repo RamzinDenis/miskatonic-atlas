@@ -1,0 +1,34 @@
+{
+  "slug": "reverend-abijah-hoadley",
+  "name": "Reverend Abijah Hoadley",
+  "role": "witness",
+  "summary": "A Congregational minister newly arrived at Dunwich Village in 1747, Abijah Hoadley preached a notorious sermon on the palpable presence of Satan and his imps in the hills, then vanished without further trace.",
+  "description": "In 1747 the Reverend Abijah Hoadley, newly come to the Congregational Church at Dunwich Village, preached a memorable sermon on the close presence of Satan and his imps, describing a very plain discourse of evil powers he claimed to have caught in the hill behind his house — a rattling and rolling, groaning, screeching, and hissing unlike anything of this earth.\n\nHoadley disappeared soon after delivering this sermon, though its text, printed in Springfield, survives to this day as one of the earliest written testimonies to the unnatural forces haunting the Dunwich countryside.",
+  "locations": [
+    "dunwich"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "fate": "Disappeared soon after delivering his sermon on the presence of Satan and his imps.",
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 6,
+      "quote": "In 1747 the Reverend Abijah Hoadley, newly come to the Congregational Church at Dunwich Village, preached a memorable sermon on the close presence of Satan and his imps, in which he said:",
+      "context": "Chapter 1"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 7,
+      "quote": "I myself did not more than a Fortnight ago catch a very plain Discourse of evill Powers in the Hill behind my House; wherein there were a Rattling and Rolling, Groaning, Screeching, and Hissing, such as no Things of this Earth cou'd raise up",
+      "context": "Chapter 1"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 8,
+      "quote": "Mr. Hoadley disappeared soon after delivering this sermon; but the text, printed in Springfield, is still extant.",
+      "context": "Chapter 1"
+    }
+  ]
+}

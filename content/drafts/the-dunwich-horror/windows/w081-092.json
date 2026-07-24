@@ -1,0 +1,467 @@
+[
+  {
+    "kind": "character",
+    "name": "Dr. Armitage",
+    "aliases": [
+      "Armitage"
+    ],
+    "facts": [
+      "He attacked the manuscript with the preliminary assumption that the bulk of it was in English.",
+      "He fortified himself with the massed lore of cryptography, drawing upon the fullest resources of his own library.",
+      "On the evening of September second he read for the first time a continuous passage of Wilbur Whateley's annals.",
+      "He nervously telephoned his wife he would not be home.",
+      "Professor Rice and Dr. Morgan came to see him and departed trembling and ashen-gray.",
+      "His physician, Dr. Hartwell, insisted that he cease work, but he refused.",
+      "That evening he finished his terrible perusal of the diary and sank back exhausted.",
+      "He gathered up his scribbled notes and sealed them in a great envelope, which he placed in his inside coat pocket.",
+      "Dr. Hartwell was summoned at once and put him to bed.",
+      "He slept but was partly delirious the next day.",
+      "He shouted that the Elder Things wished to strip the earth and drag it away from the solar system and cosmos of matter.",
+      "He had a sound physique despite his seventy-three years.",
+      "He summoned Rice and Morgan for a conference at the library.",
+      "All three of them had seen the body of Wilbur Whateley lying on the floor of a room in that building.",
+      "All day Sunday he was busy comparing formulae and mixing chemicals obtained from the college laboratory.",
+      "By Tuesday he had a definite line of action mapped out and believed he would try a trip to Dunwich within a week."
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Professor Rice",
+      "Dr. Morgan",
+      "Dr. Hartwell",
+      "Dunwich",
+      "Elder Things"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 81,
+        "quote": "Accordingly he attacked the manuscript with the preliminary assumption that the bulk of it was in English.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 82,
+        "quote": "All through late August he fortified himself with the massed lore of cryptography, drawing upon the fullest resources of his own library",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 83,
+        "quote": "On the evening of September second the last major barrier gave way, and Dr. Armitage read for the first time a continuous passage of Wilbur Whateley's annals.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 85,
+        "quote": "He had nervously telephoned his wife he would not be home",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 86,
+        "quote": "On the morning of September fourth Professor Rice and Dr. Morgan insisted on seeing him for a while, and departed trembling and ashen-gray.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 86,
+        "quote": "Some time before noon his physician, Dr. Hartwell, called to see him and insisted that he cease work. He refused",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 87,
+        "quote": "That evening, just as twilight fell, he finished his terrible perusal and sank back exhausted.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 87,
+        "quote": "Weakly rising, he gathered up the scribbled papers and sealed them all in a great envelope, which he immediately placed in his inside coat pocket.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 87,
+        "quote": "Dr. Hartwell was summoned at once. As the doctor put him to bed",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 88,
+        "quote": "Dr. Armitage slept, but was partly delirious the next day.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 88,
+        "quote": "He would shout that the world was in danger, since the Elder Things wished to strip it and drag it away from the solar system and cosmos of matter into some other plane or phase of entity from which it had once fallen, vigintillions of eons ago.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 90,
+        "quote": "But Armitage had a sound physique despite his seventy-three years, and slept off his disorder that night without developing any real fever.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 90,
+        "quote": "All three had seen the body of Wilbur Whateley as it lay on the floor in a room of that very building",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 91,
+        "quote": "all day Sunday Armitage was busy comparing formulæ and mixing chemicals obtained from the college laboratory.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 92,
+        "quote": "By Tuesday he had a definite line of action mapped out, and believed he would try a trip to Dunwich within a week.",
+        "context": "Chapter 8"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Wilbur Whateley",
+    "aliases": [
+      "Wilbur"
+    ],
+    "facts": [
+      "Dr. Armitage read for the first time a continuous passage of his annals, which was in truth a diary.",
+      "The diary was couched in a style showing the mixed occult erudition and general illiteracy of the strange being who wrote it.",
+      "An entry dated November 26, 1916 was written by a child of three and a half who looked like a lad of twelve or thirteen.",
+      "In the diary he described learning the Aklo for the Sabaoth and shooting Elam Hutchins's collie Jack when it tried to bite him.",
+      "His grandfather kept him saying the Dho formula, after which he believed he saw the inner city at the 2 magnetic poles.",
+      "He had come to his death on the second of August at the place referred to in Armitage's ravings.",
+      "All three men (Armitage, Rice, Morgan) had seen his body lying on the floor of a room in the library building."
+    ],
+    "typeGuess": "cultist",
+    "fate": "He came to his death on the second of August, and his body was seen lying on the floor of a room in the library building by Armitage, Rice, and Morgan.",
+    "relatedNames": [
+      "Dr. Armitage",
+      "Elam Hutchins",
+      "Grandfather",
+      "Dunwich"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 83,
+        "quote": "Dr. Armitage read for the first time a continuous passage of Wilbur Whateley's annals. It was in truth a diary, as all had thought; and it was couched in a style clearly showing the mixed occult erudition and general illiteracy of the strange being who wrote it.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 83,
+        "quote": "It was written, he remembered, by a child of three and a half who looked like a lad of twelve or thirteen.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 84,
+        "quote": "Today learned the Aklo for the Sabaoth",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 84,
+        "quote": "Shot Elam Hutchins's collie Jack when he went to bite me, and Elam says he would kill me if he dast.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 84,
+        "quote": "Grandfather kept me saying the Dho formula last night, and I think I saw the inner city at the 2 magnetic poles.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 89,
+        "quote": "It hasn't been fed since the second of August, when Wilbur came here to his death",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 90,
+        "quote": "All three had seen the body of Wilbur Whateley as it lay on the floor in a room of that very building",
+        "context": "Chapter 8"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Professor Rice",
+    "aliases": [
+      "Rice"
+    ],
+    "facts": [
+      "He and Dr. Morgan insisted on seeing Armitage for a while, and departed trembling and ashen-gray.",
+      "Armitage spoke of the imperative need of a long conference with him and Morgan.",
+      "He was summoned by Armitage for a conference at the library and tortured his brain in speculation and debate with Armitage and Morgan.",
+      "He had seen the body of Wilbur Whateley lying on the floor of a room in that building."
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": [
+      "Dr. Armitage",
+      "Dr. Morgan",
+      "Wilbur Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 86,
+        "quote": "On the morning of September fourth Professor Rice and Dr. Morgan insisted on seeing him for a while, and departed trembling and ashen-gray.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 88,
+        "quote": "he in his calmer moments spoke of the imperative need of a long conference with Rice and Morgan",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 90,
+        "quote": "Saturday afternoon he felt able to go over to the library and summon Rice and Morgan for a conference, and the rest of that day and evening the three men tortured their brains in the wildest speculation and the most desperate debate.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 90,
+        "quote": "All three had seen the body of Wilbur Whateley as it lay on the floor in a room of that very building",
+        "context": "Chapter 8"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Dr. Morgan",
+    "aliases": [
+      "Morgan"
+    ],
+    "facts": [
+      "He and Professor Rice insisted on seeing Armitage for a while, and departed trembling and ashen-gray.",
+      "Armitage spoke of the imperative need of a long conference with him and Rice.",
+      "He was summoned by Armitage for a conference at the library and tortured his brain in speculation and debate with Armitage and Rice.",
+      "He had seen the body of Wilbur Whateley lying on the floor of a room in that building."
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": [
+      "Dr. Armitage",
+      "Professor Rice",
+      "Wilbur Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 86,
+        "quote": "On the morning of September fourth Professor Rice and Dr. Morgan insisted on seeing him for a while, and departed trembling and ashen-gray.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 88,
+        "quote": "he in his calmer moments spoke of the imperative need of a long conference with Rice and Morgan",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 90,
+        "quote": "Saturday afternoon he felt able to go over to the library and summon Rice and Morgan for a conference, and the rest of that day and evening the three men tortured their brains in the wildest speculation and the most desperate debate.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 90,
+        "quote": "All three had seen the body of Wilbur Whateley as it lay on the floor in a room of that very building",
+        "context": "Chapter 8"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Dr. Hartwell",
+    "aliases": [],
+    "facts": [
+      "He was Armitage's physician.",
+      "He called to see Armitage and insisted that he cease work, but Armitage refused.",
+      "He was summoned at once and put Armitage to bed.",
+      "Armitage made no explanations to him."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Dr. Armitage"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 86,
+        "quote": "Some time before noon his physician, Dr. Hartwell, called to see him and insisted that he cease work.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 87,
+        "quote": "As the doctor put him to bed he could only mutter over and over again, \"But what, in God's name, can we do?\"",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 88,
+        "quote": "He made no explanations to Hartwell",
+        "context": "Chapter 8"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Elam Hutchins",
+    "aliases": [
+      "Elam"
+    ],
+    "facts": [
+      "Wilbur Whateley shot his collie Jack when the dog tried to bite him.",
+      "Elam said he would kill Wilbur if he dared."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Wilbur Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 84,
+        "quote": "Shot Elam Hutchins's collie Jack when he went to bite me, and Elam says he would kill me if he dast.",
+        "context": "Chapter 8"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Grandfather",
+    "aliases": [],
+    "facts": [
+      "He kept Wilbur saying the Dho formula at night.",
+      "Wilbur believed Grandfather would be dead by the time the earth was cleared off."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Wilbur Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 84,
+        "quote": "Grandfather kept me saying the Dho formula last night, and I think I saw the inner city at the 2 magnetic poles.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 84,
+        "quote": "I guess Grandfather will be dead then, so I shall have to learn all the angles of the planes and all the formulas between the Yr and the Nhhngr.",
+        "context": "Chapter 8"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Dunwich",
+    "aliases": [],
+    "facts": [
+      "Armitage believed he would try a trip to Dunwich within a week.",
+      "A facetious Associated Press item said the bootleg whisky of Dunwich had raised up a record-breaking monster.",
+      "An earth-threatening entity left behind by Wilbur Whateley was to burst forth in a few hours and become the memorable Dunwich horror."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Dr. Armitage"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 92,
+        "quote": "By Tuesday he had a definite line of action mapped out, and believed he would try a trip to Dunwich within a week.",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 92,
+        "quote": "telling what a record-breaking monster the bootleg whisky of Dunwich had raised up",
+        "context": "Chapter 8"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 91,
+        "quote": "the earth-threatening entity which, unknown to him, was to burst forth in a few hours and become the memorable Dunwich horror.",
+        "context": "Chapter 8"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Arkham",
+    "aliases": [],
+    "facts": [
+      "The Arkham Advertiser is a newspaper in which a facetious item about the Dunwich monster appeared."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 92,
+        "quote": "Tucked obscurely away in a corner of the Arkham Advertiser was a facetious little item from the Associated Press",
+        "context": "Chapter 8"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Elder Things",
+    "aliases": [],
+    "facts": [
+      "They wished to strip the earth and drag it away from the solar system and cosmos of matter into some other plane or phase of entity.",
+      "They had once fallen from that other plane vigintillions of eons ago."
+    ],
+    "typeGuess": "race",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 88,
+        "quote": "He would shout that the world was in danger, since the Elder Things wished to strip it and drag it away from the solar system and cosmos of matter into some other plane or phase of entity from which it had once fallen, vigintillions of eons ago.",
+        "context": "Chapter 8"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "the entity",
+    "aliases": [
+      "the Dunwich horror"
+    ],
+    "facts": [
+      "It was left behind by Wilbur Whateley.",
+      "Unknown to Armitage, it was to burst forth in a few hours and become the memorable Dunwich horror.",
+      "Armitage doubted the efficacy of any material agent in stamping it out."
+    ],
+    "typeGuess": "entity",
+    "relatedNames": [
+      "Wilbur Whateley",
+      "Dunwich"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 91,
+        "quote": "the more he was inclined to doubt the efficacy of any material agent in stamping out the entity which Wilbur Whateley had left behind him—the earth-threatening entity which, unknown to him, was to burst forth in a few hours and become the memorable Dunwich horror.",
+        "context": "Chapter 8"
+      }
+    ]
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "slug": "will-hutchins",
+  "name": "Will Hutchins",
+  "role": "other",
+  "summary": "Will Hutchins helped carry the terrified, collapsed Curtis Whateley to the roadside after his glimpse of the horror on Sentinel Hill.",
+  "description": "Will Hutchins, together with Fred Farr, carried the collapsed Curtis Whateley to the roadside and laid him on the damp grass after his terrifying glimpse of the creature.",
+  "locations": [
+    "dunwich",
+    "dunwich/sentinel-hill"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 130,
+      "quote": "Fred Farr and Will Hutchins carried him to the roadside and laid him on the damp grass.",
+      "context": "Chapter 10"
+    }
+  ],
+  "_draft": {
+    "aliases": [],
+    "occurrences": 1,
+    "windows": [
+      "w121-132"
+    ],
+    "facts": [
+      "Helped carry the collapsed Curtis Whateley to the roadside."
+    ],
+    "needsReview": []
+  }
+}

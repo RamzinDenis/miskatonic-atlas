@@ -1,0 +1,41 @@
+{
+  "slug": "fred-farr",
+  "name": "Fred Farr",
+  "role": "witness",
+  "summary": "Fred Farr was among the Dunwich men gathered near the Frye ruins, and later helped carry the stricken Curtis Whateley to safety after his glimpse of the horror on Sentinel Hill.",
+  "description": "Fred Farr stood near the Frye ruins when Sam Hutchins nudged him toward the deep hollow that had swallowed the State Police. Later, atop Sentinel Hill, he and Will Hutchins carried the collapsed, terror-stricken Curtis Whateley to the roadside after his glimpse of the horror.",
+  "locations": [
+    "dunwich",
+    "dunwich/sentinel-hill"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 94,
+      "quote": "Then old Sam Hutchins thought of something and turned pale, nudging Fred Farr and pointing to the dank, deep hollow that yawned close by.",
+      "context": "Chapter 9"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 130,
+      "quote": "Fred Farr and Will Hutchins carried him to the roadside and laid him on the damp grass.",
+      "context": "Chapter 10"
+    }
+  ],
+  "_draft": {
+    "aliases": [],
+    "occurrences": 2,
+    "windows": [
+      "w091-102",
+      "w121-132"
+    ],
+    "facts": [
+      "Was nudged by Sam Hutchins toward the deep hollow near the Frye ruins.",
+      "Helped carry the collapsed Curtis Whateley to the roadside."
+    ],
+    "needsReview": []
+  }
+}

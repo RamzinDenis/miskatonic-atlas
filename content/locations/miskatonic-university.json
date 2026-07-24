@@ -1,0 +1,36 @@
+{
+  "slug": "miskatonic-university",
+  "name": "Miskatonic University",
+  "parentSlug": "arkham",
+  "type": "building",
+  "summary": "The university at Arkham where Dr. Henry Armitage taught, whose library kept a dreaded Latin Necronomicon under lock and key and to which Wilbur Whateley's own manuscript diary was later sent for translation.",
+  "description": "Some of the Whateleys and Bishops still send their eldest sons to Harvard and Miskatonic, though those sons seldom return to the moldering gambrel roofs under which they and their ancestors were born. The university's library kept under lock and key a dreaded volume — the Necronomicon of the mad Arab Alhazred, in Olaus Wormius' Latin version as printed in Spain in the seventeenth century — whose text spoke of Kadath in the cold waste having known the Old Ones. Correspondence failed to win Wilbur Whateley the loan of this book, so, since Miskatonic's copy was nearest to him geographically, he set out in person, shabby, dirty, bearded, and uncouth of dialect, to consult it; having never seen a city before, he had no thought save to find his way to the university grounds, where he passed heedlessly by a great white-fanged watchdog that barked with unnatural fury and tugged frantically at its chain. Dr. Armitage himself heard the same watchdog's savage yelping and studied Whateley's gorilla-like lope as he crossed the bit of campus visible from his window.\n\nYears later, Wilbur Whateley's curious manuscript diary, along with his collection of strange books, was delivered to Miskatonic University for study and possible translation, causing much worry and bafflement among experts in languages both ancient and modern.",
+  "realWorld": "Fictional university in Arkham, Massachusetts",
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "connectedTo": [
+    "dunwich",
+    "harvard"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 41,
+      "quote": "this dark and goatish gargoyle appeared one day in Arkham in quest of the dreaded volume kept under lock and key at the college library—the hideous Necronomicon of the mad Arab Alhazred in Olaus Wormius' Latin version, as printed in Spain in the Seventeenth Century.",
+      "context": "Chapter 5"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 49,
+      "quote": "Armitage heard the savage yelping of the great watchdog, and studied Whateley's gorilla-like lope as he crossed the bit of campus visible from the window.",
+      "context": "Chapter 5"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 80,
+      "quote": "The curious manuscript record or diary of Wilbur Whateley, delivered to Miskatonic University for translation, had caused much worry and bafflement among the experts in languages both ancient and modern",
+      "context": "Chapter 8"
+    }
+  ]
+}

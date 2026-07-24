@@ -1,0 +1,34 @@
+{
+  "slug": "arkham",
+  "name": "Arkham",
+  "type": "town",
+  "summary": "The city home to Miskatonic University, from which Dr. Henry Armitage, Professor Rice, and Dr. Morgan set out to confront the Dunwich horror; also the city Wilbur Whateley visited in his quest for the Necronomicon.",
+  "description": "Wilbur Whateley, who had never seen a city before, appeared one day in Arkham in quest of the dreaded Necronomicon kept under lock and key at the Miskatonic University library, passing heedlessly by a great white-fanged watchdog on the university grounds. Years later a scream rang out in Arkham that roused half its sleepers and haunted their dreams ever afterward, while a quieter but no less poignant phase of the horror unwound behind the closed door of a shelf-lined room where Wilbur's manuscript diary was studied.\n\nA facetious item in the Arkham Advertiser joked about the 'record-breaking monster' the bootleg whisky of Dunwich had supposedly raised up, not knowing how near the truth lay. When the horror broke loose, Earl Sawyer suggested that help be asked from Aylesbury or Arkham, and it was three men from Arkham — Dr. Armitage, Professor Rice, and Dr. Morgan — who at last motored out to Dunwich and, without telling the frightened natives what to expect, climbed Sentinel Hill to end the terror.",
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "connectedTo": [
+    "dunwich",
+    "aylesbury"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 41,
+      "quote": "this dark and goatish gargoyle appeared one day in Arkham in quest of the dreaded volume kept under lock and key at the college library",
+      "context": "Chapter 5"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 53,
+      "quote": "such a scream as roused half the sleepers of Arkham and haunted their dreams ever afterward",
+      "context": "Chapter 6"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 93,
+      "quote": "Friday morning Armitage, Rice and Morgan set out by motor for Dunwich, arriving at the village about 1 in the afternoon.",
+      "context": "Chapter 9"
+    }
+  ]
+}

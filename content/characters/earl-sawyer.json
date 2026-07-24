@@ -1,0 +1,35 @@
+{
+  "slug": "earl-sawyer",
+  "name": "Earl Sawyer",
+  "role": "witness",
+  "summary": "Earl Sawyer, common-law husband of Mamie Bishop, was a Dunwich farmer who repeatedly brushed against the Whateley mystery — smelling its stench at the farmhouse, tending Wilbur's stock during his absence, and ultimately guiding Armitage's party up Sentinel Hill to confront the horror.",
+  "description": "Earl Sawyer, common-law husband of Mamie Bishop, once stepped into the abandoned tool-house after a cattle-selling call on Old Whateley and was discomposed by a stench unlike anything sane or of this earth, comparable only to odors near the Indian stone circles on the hills; he later called reporters' attention to the same stench trickling from the Whateley farmhouse's sealed upper story, and told loungers at Osborn's of renewed carpentry there. During Wilbur's absence in the winter of 1927-28 he tended the horse and cattle, and after Wilbur's death he suggested seeking help from Aylesbury or Arkham.\n\nWhen the Dunwich horror was finally cornered, Earl Sawyer gave Dr. Armitage's party directions to Seth Bishop's place, took the telescope to report the three Arkham men's positions on Sentinel Hill, and pointed out the moving grass that betrayed the creature's ascent toward the altar-stone.",
+  "locations": [
+    "dunwich",
+    "dunwich/whateley-farmhouse",
+    "dunwich/sentinel-hill"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 21,
+      "quote": "when Earl Sawyer once stepped within after a cattle-selling call on Old Whateley he was quite discomposed by the singular odor he encountered—such a stench, he averred, as he had never before smelt in all his life except near the Indian circles on the hills, and which could not come from anything sane or of this earth.",
+      "context": "Chapter 3"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 121,
+      "quote": "Gawd almighty, the grass an' bushes is a-movin'! It's a-goin' up—slow-like—creepin' up ter the top this minute, heaven only knows what fer!",
+      "context": "Chapter 9"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 116,
+      "quote": "I guess ye kin git to Seth Bishop's quickest by cuttin' acrost the lower medder here, wadin' the brook at the low place, an' climbin' through Carrier's mowin' an' the timber-lot beyont.",
+      "context": "Chapter 9"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "zeb-whateley",
+  "name": "Zeb Whateley",
+  "role": "witness",
+  "summary": "Zeb Whateley was the Dunwich man manning the telephone when the panicked calls describing the horror's second attack passed along the party line.",
+  "description": "Zeb Whateley heard the telephone ringing about an hour before the crisis meeting and was calling folks up while everybody listened in, helping to spread word of the unfolding horror across Dunwich.",
+  "locations": [
+    "dunwich"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 103,
+      "quote": "Zeb Whateley here heerd the 'phone a-ringin'",
+      "context": "Chapter 9"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 106,
+      "quote": "Zeb here was callin' folks up an' everybody was a-listenin' in",
+      "context": "Chapter 9"
+    }
+  ],
+  "_draft": {
+    "aliases": [
+      "Zeb"
+    ],
+    "occurrences": 1,
+    "windows": [
+      "w101-112"
+    ],
+    "facts": [
+      "Heard the telephone ringing about an hour before the meeting.",
+      "Was calling folks up on the telephone while everybody listened in."
+    ],
+    "needsReview": [
+      {
+        "field": "identity",
+        "reason": "Possibly identical to 'Old Zebulon Whateley' (a nickname match), but no window explicitly equates them.",
+        "candidates": [
+          "zeb-whateley",
+          "old-zebulon-whateley"
+        ]
+      }
+    ]
+  }
+}

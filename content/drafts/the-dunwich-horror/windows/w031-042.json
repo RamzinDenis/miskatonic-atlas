@@ -1,0 +1,558 @@
+[
+  {
+    "kind": "character",
+    "name": "Wilbur",
+    "aliases": [
+      "Willy"
+    ],
+    "facts": [
+      "He was addressed by his dying grandfather as 'Willy'.",
+      "His grandfather told him to open the gates to Yog-Sothoth using a chant on page 751 of the complete edition.",
+      "His grandfather told him fire from earth cannot burn 'it'.",
+      "He was a scholar of tremendous erudition in his one-sided way.",
+      "He was known by correspondence to many librarians in distant places where rare and forbidden books are kept.",
+      "He was more and more hated and dreaded around Dunwich because of certain youthful disappearances suspected to be his doing.",
+      "He was able to silence inquiry through fear or through use of old-time gold that went forth for cattle-buying, as in his grandfather's time.",
+      "His height reached the normal adult limit and seemed inclined to wax beyond that figure.",
+      "In 1925 he was fully six and three-quarters feet tall when a scholarly correspondent from Miskatonic University called upon him.",
+      "He treated his half-deformed albino mother with growing contempt.",
+      "He forbade his mother to go to the hills with him on May Eve and Hallowmass.",
+      "In the summer of 1927 he repaired two sheds in the farmyard and began moving his books and effects out to them.",
+      "He was closing all doors and windows on the ground floor of the farmhouse and taking out partitions, as he and his grandfather had done upstairs four years before.",
+      "He was living in one of the sheds and seemed unusually worried and tremulous.",
+      "People suspected him of knowing something about his mother's disappearance.",
+      "His height had increased to more than seven feet and showed no signs of ceasing its development.",
+      "In the following winter he made his first trip outside the Dunwich region.",
+      "Correspondence with several great libraries failed to get him the loan of a book he desperately wanted, so he set out in person to consult the copy at Miskatonic.",
+      "He was almost eight feet tall and carried a cheap new valise from Osborn's general store when he appeared in Arkham.",
+      "He was described as a dark and goatish gargoyle.",
+      "He sought the Necronomicon of the mad Arab Alhazred in Olaus Wormius' Latin version, printed in Spain in the Seventeenth Century.",
+      "He had never seen a city before.",
+      "He passed heedlessly by a great white-fanged watchdog that barked at him with unnatural fury.",
+      "He had with him a priceless but imperfect copy of Dr. Dee's English version bequeathed by his grandfather.",
+      "He began to collate the two texts to find a passage that would come on the 751st page of his own defective volume.",
+      "He told the librarian Henry Armitage he was looking for a formula or incantation containing the name Yog-Sothoth.",
+      "He found discrepancies, duplications, and ambiguities in the text that made determination difficult.",
+      "His grandfather muttered 'They didn't git him' after the death scene."
+    ],
+    "typeGuess": "cultist",
+    "relatedNames": [
+      "Lavinia Whateley",
+      "Yog-Sothoth",
+      "Henry Armitage",
+      "Old Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 31,
+        "quote": "\"More space, Willy, more space soon. Yew grows—an' that grows faster. It'll be ready to sarve ye soon, boy. Open up the gates to Yog-Sothoth with the long chant that ye'll find on page 751 of the complete edition, an' then put a match to the prison. Fire from airth can't burn it nohaow!\"",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 35,
+        "quote": "\"They didn't git him,\" he muttered in his heavy bass voice.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 36,
+        "quote": "Wilbur was by this time a scholar of really tremendous erudition in his one-sided way, and was quietly known by correspondence to many librarians in distant places where rare and forbidden books of old days are kept.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 36,
+        "quote": "In 1925, when a scholarly correspondent from Miskatonic University called upon him one day and departed pale and puzzled, he was fully six and three-quarters feet tall.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 37,
+        "quote": "Through all the years Wilbur had treated his half-deformed albino mother with a growing contempt, finally forbidding her to go to the hills with him on May Eve and Hallowmass",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 40,
+        "quote": "In the summer of 1927 Wilbur repaired two sheds in the farmyard and began moving his books and effects out to them.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 40,
+        "quote": "His height had increased to more than seven feet, and showed no signs of ceasing its development.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "Almost eight feet tall, and carrying a cheap new valise from Osborn's general store, this dark and goatish gargoyle appeared one day in Arkham in quest of the dreaded volume kept under lock and key at the college library—the hideous Necronomicon of the mad Arab Alhazred in Olaus Wormius' Latin version, as printed in Spain in the Seventeenth Century.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "He had never seen a city before, but had no thought save to find his way to the university grounds; where, indeed, he passed heedlessly by the great white-fanged watchdog that barked with unnatural fury and enmity, and tugged frantically at its stout chain.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 42,
+        "quote": "Wilbur had with him the priceless but imperfect copy of Dr. Dee's English version which his grandfather had bequeathed him, and upon receiving access to the Latin copy he at once began to collate the two texts with the aim of discovering a certain passage which would have come on the 751st page of his own defective volume.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 42,
+        "quote": "He was looking, he had to admit, for a kind of formula or incantation containing the frightful name Yog-Sothoth, and it puzzled him to find discrepancies, duplications, and ambiguities which made the matter of determination far from easy.",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Lavinia",
+    "aliases": [
+      "Lavinia Whateley",
+      "the twisted albino",
+      "poor creature"
+    ],
+    "facts": [
+      "She screamed at the way the whippoorwills followed the change during her father's death.",
+      "She sobbed at her father's death.",
+      "She was Wilbur's mother, half-deformed and albino.",
+      "In 1926 she complained to Mamie Bishop of being afraid of Wilbur.",
+      "She said there was more about him than she could tell, and more than she herself knew.",
+      "That Hallowe'en she was never seen again.",
+      "People generally suspected Wilbur of knowing something about his mother's disappearance."
+    ],
+    "typeGuess": "other",
+    "fate": "She disappeared after that Hallowe'en and was never seen again.",
+    "relatedNames": [
+      "Wilbur",
+      "Mamie Bishop"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 34,
+        "quote": "But speech gave place to gasps again, and Lavinia screamed at the way the whippoorwills followed the change.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 37,
+        "quote": "Through all the years Wilbur had treated his half-deformed albino mother with a growing contempt, finally forbidding her to go to the hills with him on May Eve and Hallowmass; and in 1926 the poor creature complained to Mamie Bishop of being afraid of him.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 38,
+        "quote": "\"They's more abaout him as I knows than I kin tell ye, Mamie,\" she said, \"an' naowadays they's more nor what I know myself. I vaow afur Gawd, I dun't know what he wants nor what he's a-tryin' to dew.\"",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 39,
+        "quote": "None of the countryfolk seemed to have died—but poor Lavinia Whateley, the twisted albino, was never seen again.",
+        "context": "Chapter 4"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Dr. Houghton",
+    "aliases": [],
+    "facts": [
+      "He drew shrunken lids over the glazing gray eyes of the dying man as the tumult of birds faded imperceptibly to silence."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 34,
+        "quote": "Dr. Houghton drew shrunken lids over the glazing gray eyes as the tumult of birds faded imperceptibly to silence.",
+        "context": "Chapter 4"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Mamie Bishop",
+    "aliases": [
+      "Mamie"
+    ],
+    "facts": [
+      "Lavinia complained to her in 1926 of being afraid of Wilbur."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Lavinia"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 37,
+        "quote": "in 1926 the poor creature complained to Mamie Bishop of being afraid of him.",
+        "context": "Chapter 4"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Earl Sawyer",
+    "aliases": [],
+    "facts": [
+      "He told the loungers at Osborn's that more carpentry was going on in the Whateley farmhouse.",
+      "He thought Wilbur seemed unusually worried and tremulous."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Wilbur"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 40,
+        "quote": "Soon afterward Earl Sawyer told the loungers at Osborn's that more carpentry was going on in the Whateley farmhouse.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 40,
+        "quote": "He was living in one of the sheds, and Sawyer thought he seemed unusually worried and tremulous.",
+        "context": "Chapter 4"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Henry Armitage",
+    "aliases": [
+      "Dr. Armitage"
+    ],
+    "facts": [
+      "He was the erudite librarian, A. M. Miskatonic, Ph. D. Princeton, Litt. D. Johns Hopkins.",
+      "He had once called at the Whateley farm.",
+      "He politely plied Wilbur with questions.",
+      "He looked involuntarily over Wilbur's shoulder at the open pages of the Latin Necronomicon as Wilbur copied a formula.",
+      "The left-hand page he looked at contained monstrous threats to the peace and sanity of the world."
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": [
+      "Wilbur"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 42,
+        "quote": "This much he could not civilly refrain from telling the librarian—the same erudite Henry Armitage (A. M. Miskatonic, Ph. D. Princeton, Litt. D. Johns Hopkins) who had once called at the farm, and who now politely plied him with questions.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 42,
+        "quote": "As he copied the formula he finally chose, Dr. Armitage looked involuntarily over his shoulder at the open pages; the left-hand one of which, in the Latin version, contained such monstrous threats to the peace and sanity of the world.",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Yog-Sothoth",
+    "aliases": [],
+    "facts": [
+      "The dying grandfather instructed Wilbur to open the gates to Yog-Sothoth with a long chant found on page 751 of the complete edition.",
+      "Wilbur was looking for a formula or incantation containing the frightful name Yog-Sothoth."
+    ],
+    "typeGuess": "great-old-one",
+    "relatedNames": [
+      "Wilbur"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 31,
+        "quote": "Open up the gates to Yog-Sothoth with the long chant that ye'll find on page 751 of the complete edition, an' then put a match to the prison.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 33,
+        "quote": "ef it busts quarters or gits aout afore ye opens to Yog-Sothoth, it's all over an' no use. Only them from beyont kin make it multiply an' work.... Only them, the old uns as wants to come back....",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 42,
+        "quote": "He was looking, he had to admit, for a kind of formula or incantation containing the frightful name Yog-Sothoth",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Dunwich",
+    "aliases": [
+      "the Dunwich region"
+    ],
+    "facts": [
+      "Wilbur was more and more hated and dreaded around Dunwich because of certain youthful disappearances suspected to be his doing.",
+      "Wilbur's trip outside the Dunwich region was described as an event no less strange than his first."
+    ],
+    "typeGuess": "region",
+    "relatedNames": [
+      "Wilbur"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 36,
+        "quote": "He was more and more hated and dreaded around Dunwich because of certain youthful disappearances which suspicion laid vaguely at his door",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "The following winter brought an event no less strange than Wilbur's first trip outside the Dunwich region.",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Sentinel Hill",
+    "aliases": [],
+    "facts": [
+      "That Hallowe'en, fire burned on Sentinel Hill as usual."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 39,
+        "quote": "That Hallowe'en the hill noises sounded louder than ever, and fire burned on Sentinel Hill as usual",
+        "context": "Chapter 4"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the Whateley farmhouse",
+    "aliases": [
+      "the farmhouse",
+      "the farm"
+    ],
+    "facts": [
+      "Vast flocks of unnaturally belated whippoorwills seemed to be assembled near the unlighted Whateley farmhouse that Hallowe'en.",
+      "In summer 1927, more carpentry was going on in the Whateley farmhouse.",
+      "Wilbur was closing all doors and windows on the ground floor and taking out partitions, as he and his grandfather had done upstairs four years before.",
+      "Henry Armitage had once called at the farm."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Wilbur",
+      "Earl Sawyer",
+      "Henry Armitage"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 39,
+        "quote": "people paid more attention to the rhythmical screaming of vast flocks of unnaturally belated whippoorwills which seemed to be assembled near the unlighted Whateley farmhouse",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 40,
+        "quote": "Soon afterward Earl Sawyer told the loungers at Osborn's that more carpentry was going on in the Whateley farmhouse. Wilbur was closing all the doors and windows on the ground floor, and seemed to be taking out partitions as he and his grandfather had done upstairs four years before.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 42,
+        "quote": "the same erudite Henry Armitage (A. M. Miskatonic, Ph. D. Princeton, Litt. D. Johns Hopkins) who had once called at the farm",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Osborn's",
+    "aliases": [
+      "Osborn's general store"
+    ],
+    "facts": [
+      "Earl Sawyer told the loungers at Osborn's that more carpentry was going on in the Whateley farmhouse.",
+      "Wilbur carried a cheap new valise from Osborn's general store."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Earl Sawyer",
+      "Wilbur"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 40,
+        "quote": "Soon afterward Earl Sawyer told the loungers at Osborn's that more carpentry was going on in the Whateley farmhouse.",
+        "context": "Chapter 4"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "Almost eight feet tall, and carrying a cheap new valise from Osborn's general store, this dark and goatish gargoyle appeared one day in Arkham",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Widener Library",
+    "aliases": [],
+    "facts": [
+      "Correspondence with the Widener Library at Harvard failed to get Wilbur the loan of a book he desperately wanted."
+    ],
+    "typeGuess": "building",
+    "realWorld": "Widener Library, Harvard University",
+    "relatedNames": [
+      "Wilbur"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "Correspondence with the Widener Library at Harvard, the Bibliotheque Nationale in Paris, the British Museum, the University of Buenos Aires, and the Library of Miskatonic University at Arkham had failed to get him the loan of a book he desperately wanted",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Bibliotheque Nationale",
+    "aliases": [],
+    "facts": [
+      "Correspondence with the Bibliotheque Nationale in Paris failed to get Wilbur the loan of a book he desperately wanted."
+    ],
+    "typeGuess": "building",
+    "realWorld": "Bibliothèque Nationale, Paris",
+    "relatedNames": [
+      "Wilbur"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "Correspondence with the Widener Library at Harvard, the Bibliotheque Nationale in Paris, the British Museum, the University of Buenos Aires, and the Library of Miskatonic University at Arkham had failed to get him the loan of a book he desperately wanted",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "British Museum",
+    "aliases": [],
+    "facts": [
+      "Correspondence with the British Museum failed to get Wilbur the loan of a book he desperately wanted."
+    ],
+    "typeGuess": "building",
+    "realWorld": "British Museum, London",
+    "relatedNames": [
+      "Wilbur"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "Correspondence with the Widener Library at Harvard, the Bibliotheque Nationale in Paris, the British Museum, the University of Buenos Aires, and the Library of Miskatonic University at Arkham had failed to get him the loan of a book he desperately wanted",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "University of Buenos Aires",
+    "aliases": [],
+    "facts": [
+      "Correspondence with the University of Buenos Aires failed to get Wilbur the loan of a book he desperately wanted."
+    ],
+    "typeGuess": "building",
+    "realWorld": "University of Buenos Aires",
+    "relatedNames": [
+      "Wilbur"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "Correspondence with the Widener Library at Harvard, the Bibliotheque Nationale in Paris, the British Museum, the University of Buenos Aires, and the Library of Miskatonic University at Arkham had failed to get him the loan of a book he desperately wanted",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the Library of Miskatonic University at Arkham",
+    "aliases": [
+      "Miskatonic"
+    ],
+    "facts": [
+      "Correspondence with the Library of Miskatonic University at Arkham failed to get Wilbur the loan of a book he desperately wanted.",
+      "Wilbur set out in person to consult the copy at Miskatonic, which was nearest to him geographically.",
+      "The dreaded volume was kept under lock and key at the college library.",
+      "Wilbur had no thought save to find his way to the university grounds.",
+      "A great white-fanged watchdog barked with unnatural fury as Wilbur passed."
+    ],
+    "typeGuess": "building",
+    "realWorld": "Miskatonic University, Arkham (fictional)",
+    "relatedNames": [
+      "Wilbur",
+      "Henry Armitage"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "so at length he set out in person, shabby, dirty, bearded, and uncouth of dialect, to consult the copy at Miskatonic, which was the nearest to him geographically.",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "this dark and goatish gargoyle appeared one day in Arkham in quest of the dreaded volume kept under lock and key at the college library",
+        "context": "Chapter 5"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "He had never seen a city before, but had no thought save to find his way to the university grounds; where, indeed, he passed heedlessly by the great white-fanged watchdog that barked with unnatural fury and enmity, and tugged frantically at its stout chain.",
+        "context": "Chapter 5"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Arkham",
+    "aliases": [],
+    "facts": [
+      "Wilbur had never seen a city before, but appeared one day in Arkham.",
+      "Wilbur was shabby, dirty, bearded, and uncouth of dialect when he arrived."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Wilbur"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 41,
+        "quote": "Almost eight feet tall, and carrying a cheap new valise from Osborn's general store, this dark and goatish gargoyle appeared one day in Arkham in quest of the dreaded volume kept under lock and key at the college library",
+        "context": "Chapter 5"
+      }
+    ]
+  }
+]

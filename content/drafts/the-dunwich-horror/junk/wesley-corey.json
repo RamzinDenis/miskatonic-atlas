@@ -1,0 +1,33 @@
+{
+  "slug": "wesley-corey",
+  "name": "Wesley Corey",
+  "role": "witness",
+  "summary": "Wesley Corey was among the Dunwich onlookers who took turns with the telescope during the standoff on Sentinel Hill, reporting that Armitage was preparing the sprayer for the final confrontation.",
+  "description": "Wesley Corey, who had taken the telescope, cried out that Armitage was adjusting the sprayer which Rice held, and that something must be about to happen.",
+  "locations": [
+    "dunwich",
+    "dunwich/sentinel-hill"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 125,
+      "quote": "Then Wesley Corey, who had taken the glass, cried out that Armitage was adjusting the sprayer which Rice held, and that something must be about to happen.",
+      "context": "Chapter 10"
+    }
+  ],
+  "_draft": {
+    "aliases": [],
+    "occurrences": 1,
+    "windows": [
+      "w121-132"
+    ],
+    "facts": [
+      "Took the telescope and reported Armitage adjusting the sprayer that Rice held."
+    ],
+    "needsReview": []
+  }
+}

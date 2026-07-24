@@ -1,0 +1,428 @@
+[
+  {
+    "kind": "character",
+    "name": "Zeb Whateley",
+    "aliases": [
+      "Zeb"
+    ],
+    "facts": [
+      "Zeb Whateley heard the telephone ringing about an hour before the meeting.",
+      "Zeb Whateley was calling folks up on the telephone while everybody was listening in."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Mis' Corey",
+      "Luther",
+      "Seth Bishop",
+      "Sally"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 103,
+        "quote": "Zeb Whateley here heerd the 'phone a-ringin'",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 106,
+        "quote": "Zeb here was callin' folks up an' everybody was a-listenin' in",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Mis' Corey",
+    "aliases": [
+      "George's wife"
+    ],
+    "facts": [
+      "Mis' Corey is George's wife.",
+      "Mis' Corey lives down by the junction."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "George",
+      "Luther",
+      "Zeb Whateley"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 103,
+        "quote": "it was Mis' Corey, George's wife that lives daown by the junction",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "George",
+    "aliases": [],
+    "facts": [
+      "George is Mis' Corey's husband."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Mis' Corey"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 103,
+        "quote": "it was Mis' Corey, George's wife",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Luther",
+    "aliases": [
+      "the hired boy"
+    ],
+    "facts": [
+      "Luther was the hired boy driving in the cows from the storm after the big bolt.",
+      "Luther saw all the trees bending at the mouth of the glen.",
+      "Luther smelt the same awful smell he had smelt when he found the big tracks the previous Monday.",
+      "Luther heard a swishing, lapping sound greater than what bending trees and bushes could make.",
+      "Luther heard the trees along the road pushed to one side amid stomping and splashing in the mud.",
+      "Luther did not see anything at all, only the bending trees and underbrush.",
+      "Luther heard creaking and straining on the bridge where Bishop's Brook goes under the road.",
+      "Luther stepped up to look at the ground where the sound had first been heard.",
+      "Luther found the ground was mud and water, with prints as big as barrels like those seen the previous Monday."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Mis' Corey",
+      "Bishop's Brook",
+      "Wizard Whateley's",
+      "Sentinel Hill"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 103,
+        "quote": "the hired boy Luther was aout drivin' in the caows from the storm arter the big bolt, when he see all the trees a-bendin' at the maouth o' the glen",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 104,
+        "quote": "Then fur ahead where Bishop's Brook goes under the rud he heerd a awful creakin' an' strainin' on the bridge",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 104,
+        "quote": "Luther he had the guts ter step up whar he'd heerd it fust an' look at the graound",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 104,
+        "quote": "they was still some o' them awful prints big as bar'ls like he seen Monday",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Seth Bishop",
+    "aliases": [
+      "ol' Seth Bishop"
+    ],
+    "facts": [
+      "A call from Seth Bishop's house interrupted the party line.",
+      "Seth Bishop was heard yelling along with Chauncey during the incident."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Sally",
+      "Cha'ncey"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 106,
+        "quote": "a call from Seth Bishop's cut in",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 107,
+        "quote": "Cha'ncey an' ol' Seth Bishop a-yellin', tew",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Sally",
+    "aliases": [
+      "his haousekeeper Sally"
+    ],
+    "facts": [
+      "Sally is Seth Bishop's housekeeper.",
+      "Sally saw the trees bending beside the road accompanied by a mushy sound like an elephant treading, heading toward the house.",
+      "Sally spoke suddenly of a fearful smell.",
+      "Sally reported that the shed down the road had caved in as if blown by the storm, though the wind was not strong enough to do that.",
+      "Sally yelled that the front yard picket fence had crumpled up with no sign of what caused it.",
+      "Sally shrieked that something heavy had struck the house repeatedly, though nothing could be seen out the front windows.",
+      "Sally yelled 'O help, the haouse is a-cavin' in'."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Seth Bishop",
+      "Cha'ncey"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 106,
+        "quote": "His haousekeeper Sally was carryin' on fit ter kill—she'd jest seed the trees a-bendin' beside the rud, an' says they was a kind o' mushy saound, like a elephant puffin' an' treadin', a-headin' fer the haouse",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 107,
+        "quote": "the shed daown the rud hed jest caved in like the storm hed blowed it over, only the wind wa'n't strong enough to dew that",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 107,
+        "quote": "the front yard picket fence bed jest crumpled up, though they wa'n't no sign o' what done it",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 109,
+        "quote": "Sally she yelled aout, 'O help, the haouse is a-cavin' in'",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Cha'ncey",
+    "aliases": [
+      "her boy Cha'ncey"
+    ],
+    "facts": [
+      "Chauncey is Sally's boy.",
+      "Chauncey was screaming that the smell was the same as what he smelt at the Whateley ruins the previous Monday morning.",
+      "Chauncey was heard yelling along with Seth Bishop during the incident."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Sally",
+      "Seth Bishop"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 106,
+        "quote": "her boy Cha'ncey was a-screamin' as haow it was jest like what he smelt up to the Whateley rewins Monday mornin'",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 107,
+        "quote": "everybody on the line could hear Cha'ncey an' ol' Seth Bishop a-yellin', tew",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Elmer Frye",
+    "aliases": [],
+    "facts": [
+      "Elmer Frye's place was previously 'took' by the same kind of phenomenon."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 109,
+        "quote": "jest like when Elmer Frye's place was took, only wuss",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Armitage",
+    "aliases": [],
+    "facts": [
+      "Armitage was shaken but had barely enough poise to prompt the speaker.",
+      "Armitage saw that the time for positive action had come and spoke decisively to the frightened rustics."
+    ],
+    "typeGuess": "scholar",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 108,
+        "quote": "Armitage, shaken as he was, had barely poise enough to prompt the speaker",
+        "context": "Chapter 9"
+      },
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 112,
+        "quote": "Armitage saw that the time for positive action had come, and spoke decisively to the faltering group of frightened rustics",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Bishop's Brook",
+    "aliases": [],
+    "facts": [
+      "Bishop's Brook goes under the road.",
+      "Luther heard creaking and straining on the bridge where Bishop's Brook goes under the road."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Luther"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 104,
+        "quote": "fur ahead where Bishop's Brook goes under the rud he heerd a awful creakin' an' strainin' on the bridge",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Wizard Whateley's",
+    "aliases": [],
+    "facts": [
+      "The road leads towards Wizard Whateley's and Sentinel Hill."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Sentinel Hill",
+      "Luther"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 104,
+        "quote": "on the rud towards Wizard Whateley's an' Sentinel Hill",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Sentinel Hill",
+    "aliases": [],
+    "facts": [
+      "Sentinel Hill lies along the road beyond Wizard Whateley's."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Wizard Whateley's"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 104,
+        "quote": "on the rud towards Wizard Whateley's an' Sentinel Hill",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Whateley rewins",
+    "aliases": [
+      "Whateley ruins"
+    ],
+    "facts": [
+      "Chauncey smelled the same fearful smell at the Whateley ruins the previous Monday morning."
+    ],
+    "typeGuess": "ruin",
+    "relatedNames": [
+      "Cha'ncey"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 106,
+        "quote": "jest like what he smelt up to the Whateley rewins Monday mornin'",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Seth Bishop's",
+    "aliases": [
+      "Seth Bishop's place"
+    ],
+    "facts": [
+      "A call from Seth Bishop's house interrupted the telephone line."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Seth Bishop",
+      "Sally"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 106,
+        "quote": "a call from Seth Bishop's cut in",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Corey's place",
+    "aliases": [],
+    "facts": [
+      "The group gathered at Corey's place with Fords and wagons and able-bodied men before going to see Armitage."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Mis' Corey"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 111,
+        "quote": "We that heerd it got aout Fords an' wagons an' raounded up as many able-bodied men-folks as we could get, at Corey's place, an' come up here ter see what yew thought best ter dew",
+        "context": "Chapter 9"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Elmer Frye's place",
+    "aliases": [],
+    "facts": [
+      "Elmer Frye's place was previously 'took' by the same kind of phenomenon, though the current incident was said to be worse."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Elmer Frye"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-dunwich-horror",
+        "paragraph": 109,
+        "quote": "jest like when Elmer Frye's place was took, only wuss",
+        "context": "Chapter 9"
+      }
+    ]
+  }
+]

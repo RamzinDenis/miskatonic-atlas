@@ -1,0 +1,37 @@
+{
+  "slug": "henry-armitage",
+  "name": "Henry Armitage",
+  "role": "scholar",
+  "summary": "Henry Armitage, the erudite Miskatonic University librarian, uncovered the truth of Wilbur Whateley's monstrous nature through the boy's forbidden diary and, with Professor Rice and Dr. Morgan, destroyed the invisible horror atop Sentinel Hill.",
+  "description": "Henry Armitage (A.M. Miskatonic, Ph.D. Princeton, Litt.D. Johns Hopkins) was the Miskatonic University librarian who had once called at the Whateley farm; when the towering Wilbur Whateley arrived seeking the Necronomicon in 1927, Armitage politely questioned him and, glimpsing the monstrous formula he sought, refused to lend him the book. After Wilbur's death and the horrifying discovery of his non-human body, Armitage spent months decoding Wilbur's cipher diary, working himself into collapse before recognizing the danger the world faced from the 'Elder Things' and the entity Wilbur had left behind.\n\nIn September 1928, Armitage traveled to Dunwich with Professor Rice and Dr. Morgan, studied the sinister altar-stone on Sentinel Hill, and led the vigil that tracked the invisible horror to its lair. Armed with memorized formulae and a chemical sprayer, he directed the climactic incantation that revealed and destroyed the creature, afterward explaining to the terrified townsfolk that 'the thing' had been split back into the otherworldly substance from which it came, its greater part returning to its monstrous father in a realm outside the material universe. He resolved to burn Wilbur's diary and urged that the altar-stone and standing stone circles of the region be dynamited and pulled down.",
+  "locations": [
+    "arkham/miskatonic-university",
+    "arkham",
+    "dunwich",
+    "dunwich/sentinel-hill",
+    "boston"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 42,
+      "quote": "the same erudite Henry Armitage (A. M. Miskatonic, Ph. D. Princeton, Litt. D. Johns Hopkins) who had once called at the farm, and who now politely plied him with questions.",
+      "context": "Chapter 5"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 113,
+      "quote": "It's invisible—I knew it would be—but there's a powder in this long-distance sprayer that might make it show up for a second.",
+      "context": "Chapter 9"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 140,
+      "quote": "The thing has gone for ever,\" Armitage said. \"It has been split up into what it was originally made of, and can never exist again. It was an impossibility in a normal world. Only the least fraction was really matter in any sense we know. It was like its father—and most of it has gone back to him in some vague realm or dimension outside our material universe; some vague abyss out of which only the most accursed rites of human blasphemy could ever have called him for a moment on the hills.",
+      "context": "Chapter 10"
+    }
+  ]
+}

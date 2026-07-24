@@ -1,0 +1,42 @@
+{
+  "slug": "silas-bishop",
+  "name": "Silas Bishop",
+  "role": "witness",
+  "summary": "Silas Bishop, of the undecayed Bishops, was startled one night to see young Wilbur running unclothed up Sentinel Hill ahead of his mother shortly before a strange blaze appeared on the summit.",
+  "description": "Silas Bishop, of the undecayed Bishops, was rounding up a stray heifer when he fleetingly spied two figures running up Sentinel Hill by lantern-light — Wilbur running sturdily ahead of his mother — about an hour before a blaze was seen atop the hill. He nearly forgot his errand, and thought both figures were entirely unclothed.",
+  "locations": [
+    "dunwich",
+    "dunwich/sentinel-hill"
+  ],
+  "appearsIn": [
+    "the-dunwich-horror"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 17,
+      "quote": "Considerable talk was started when Silas Bishop—of the undecayed Bishops—mentioned having seen the boy running sturdily up that hill ahead of his mother about an hour before the blaze was remarked.",
+      "context": "Chapter 2"
+    },
+    {
+      "storySlug": "the-dunwich-horror",
+      "paragraph": 17,
+      "quote": "the astonished watcher seemed to think they were entirely unclothed",
+      "context": "Chapter 2"
+    }
+  ],
+  "_draft": {
+    "aliases": [],
+    "occurrences": 1,
+    "windows": [
+      "w011-022"
+    ],
+    "facts": [
+      "Was of the undecayed Bishops.",
+      "Saw the boy Wilbur running sturdily up Sentinel Hill ahead of his mother.",
+      "Was rounding up a stray heifer when he saw the two figures.",
+      "Thought the two figures were entirely unclothed."
+    ],
+    "needsReview": []
+  }
+}
