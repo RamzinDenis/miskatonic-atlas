@@ -6,6 +6,7 @@ import {
   SLUG_RE,
   buildReviewState,
   checkQuotes,
+  givenNameCount,
   loadSearchables,
   updateLog,
   validateDraft,
@@ -32,6 +33,54 @@ import {
 export const dynamic = "force-dynamic";
 
 const ROOT = process.cwd();
+
+/** Fold a confirmed duplicate into the survivor: union the reference arrays and
+    sources, and absorb the duplicate's name + `_draft` aliases/facts/windows.
+    The survivor keeps its own identity fields (name, role, summary). */
+function foldDuplicate(
+  survivor: Record<string, unknown>,
+  dup: Record<string, unknown>,
+): void {
+  const uniqStrings = (arr: unknown[]): string[] => [
+    ...new Set(arr.filter((x): x is string => typeof x === "string")),
+  ];
+
+  for (const field of ["appearsIn", "connectedTo", "locations"]) {
+    if (Array.isArray(survivor[field]) || Array.isArray(dup[field])) {
+      survivor[field] = uniqStrings([
+        ...((survivor[field] as unknown[]) ?? []),
+        ...((dup[field] as unknown[]) ?? []),
+      ]);
+    }
+  }
+
+  const sSources = Array.isArray(survivor.sources)
+    ? (survivor.sources as Record<string, unknown>[])
+    : [];
+  const seen = new Set(sSources.map((s) => s.quote));
+  for (const s of (Array.isArray(dup.sources) ? dup.sources : []) as Record<string, unknown>[]) {
+    if (!seen.has(s.quote)) {
+      sSources.push(s);
+      seen.add(s.quote);
+    }
+  }
+  survivor.sources = sSources;
+
+  const sd = (survivor._draft ?? {}) as Record<string, unknown>;
+  const dd = (dup._draft ?? {}) as Record<string, unknown>;
+  const dupName = typeof dup.name === "string" ? [dup.name] : [];
+  sd.aliases = uniqStrings([
+    ...((sd.aliases as unknown[]) ?? []),
+    ...dupName,
+    ...((dd.aliases as unknown[]) ?? []),
+  ]).filter((a) => a !== survivor.name);
+  sd.facts = uniqStrings([...((sd.facts as unknown[]) ?? []), ...((dd.facts as unknown[]) ?? [])]);
+  sd.windows = uniqStrings([...((sd.windows as unknown[]) ?? []), ...((dd.windows as unknown[]) ?? [])]);
+  if (typeof sd.occurrences === "number" || typeof dd.occurrences === "number") {
+    sd.occurrences = (Number(sd.occurrences) || 0) + (Number(dd.occurrences) || 0);
+  }
+  survivor._draft = sd;
+}
 
 function prod(): boolean {
   return process.env.NODE_ENV === "production";
@@ -127,6 +176,64 @@ export async function POST(request: Request) {
       }
       updateLog(story, `${kind}/${slug}`, { verdict });
       return Response.json({ ok: true });
+    }
+
+    case "merge": {
+      const story = guardStory(body.story);
+      const kind = guardKind(body.kind);
+      const slug = guardSlug(body.slug); // survivor
+      const dup = guardSlug(body.dup); // duplicate to fold in and junk
+      if (!story || !kind || !slug || !dup) return bad("bad story/kind/slug/dup");
+      if (slug === dup) return bad("cannot merge a draft into itself");
+
+      const dir = path.join(DRAFTS, story, "merged", kind);
+      const survivorFile = path.join(dir, `${slug}.json`);
+      const dupFile = path.join(dir, `${dup}.json`);
+      if (!fs.existsSync(survivorFile) || !fs.existsSync(dupFile)) {
+        return bad("no such draft", 404);
+      }
+
+      const aEntity = JSON.parse(fs.readFileSync(survivorFile, "utf8")) as Record<string, unknown>;
+      const bEntity = JSON.parse(fs.readFileSync(dupFile, "utf8")) as Record<string, unknown>;
+
+      // The survivor is the fuller-named entity (more given names; ties → more
+      // sources, then the one the user opened) — so "Selina Frye" absorbs
+      // "Mrs. Frye" no matter which side the merge was clicked from.
+      const score = (e: Record<string, unknown>, fallback: string): [number, number] => [
+        givenNameCount(typeof e.name === "string" ? e.name : fallback),
+        Array.isArray(e.sources) ? e.sources.length : 0,
+      ];
+      const [ag, asrc] = score(aEntity, slug);
+      const [bg, bsrc] = score(bEntity, dup);
+      const keepA = ag > bg || (ag === bg && asrc >= bsrc);
+
+      const survivorSlug = keepA ? slug : dup;
+      const absorbedSlug = keepA ? dup : slug;
+      const survivor = keepA ? aEntity : bEntity;
+      const absorbed = keepA ? bEntity : aEntity;
+      const survivorFilePath = keepA ? survivorFile : dupFile;
+      const absorbedFilePath = keepA ? dupFile : survivorFile;
+
+      foldDuplicate(survivor, absorbed);
+      fs.writeFileSync(survivorFilePath, JSON.stringify(survivor, null, 2) + "\n");
+
+      // The absorbed duplicate goes to junk/, logged as a junk verdict.
+      const junkDir = path.join(DRAFTS, story, "junk");
+      fs.mkdirSync(junkDir, { recursive: true });
+      const target = path.join(junkDir, `${absorbedSlug}.json`);
+      fs.rmSync(target, { force: true }); // renameSync won't overwrite on Windows
+      fs.renameSync(absorbedFilePath, target);
+
+      updateLog(story, `${kind}/${absorbedSlug}`, { verdict: "junk" });
+      updateLog(story, `${kind}/${survivorSlug}`, { edited: true });
+
+      return Response.json({
+        ok: true,
+        survivor: survivorSlug,
+        raw: JSON.stringify(survivor, null, 2) + "\n",
+        errors: validateDraft(kind, survivorSlug, survivor),
+        quotes: checkQuotes(survivor, loadSearchables()),
+      });
     }
 
     case "restore": {

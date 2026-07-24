@@ -53,6 +53,12 @@ export interface Draft {
   slug: string;
   raw: string;
   quotes: QuoteCheck[];
+  /** Containment parent (ADR-0003) — lets the desk nest sub-locations. */
+  parentSlug?: string;
+  /** Same-kind drafts that look like the same entity — surfaced for the human
+      to confirm a merge (the merge step under-coreferences title/nickname/
+      appositive variants across windows). Computed at review time, not stored. */
+  duplicateOf?: { slug: string; name: string }[];
 }
 
 export interface Junked {
@@ -123,14 +129,25 @@ export function checkQuotes(
 }
 
 function knownSlugs(): {
-  locations: Set<string>;
+  /** location slug → its parentSlug (undefined for a top-level location). */
+  locations: Map<string, string | undefined>;
   stories: Set<string>;
 } {
-  const locations = new Set<string>();
+  const locations = new Map<string, string | undefined>();
   const addDir = (dir: string, isLocations: boolean) => {
     if (!fs.existsSync(dir)) return;
     for (const f of fs.readdirSync(dir).filter((x) => x.endsWith(".json"))) {
-      if (isLocations) locations.add(f.replace(/\.json$/, ""));
+      if (!isLocations) continue;
+      const slug = f.replace(/\.json$/, "");
+      let parent: string | undefined;
+      try {
+        const o = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
+        if (typeof o.parentSlug === "string") parent = o.parentSlug;
+      } catch {
+        // Broken JSON is reported by the per-draft schema check.
+      }
+      // content/ is scanned before drafts, so a merged draft overrides it.
+      locations.set(slug, parent);
     }
   };
   const storyDirs = fs.existsSync(DRAFTS)
@@ -170,15 +187,39 @@ export function validateDraft(
   }
 
   const known = knownSlugs();
-  const refChecks: [string, readonly string[], ReadonlySet<string>][] = [
-    ["appearsIn", (entity.appearsIn as string[]) ?? [], known.stories],
-    ["connectedTo", (entity.connectedTo as string[]) ?? [], known.locations],
-    ["locations", (entity.locations as string[]) ?? [], known.locations],
-  ];
-  for (const [field, slugs, set] of refChecks) {
-    for (const s of slugs) {
-      if (!set.has(s)) errors.push(`${field} → unknown slug "${s}"`);
+  for (const s of (entity.appearsIn as string[]) ?? []) {
+    if (!known.stories.has(s)) errors.push(`appearsIn → unknown slug "${s}"`);
+  }
+
+  // A (possibly composite `parentSlug/slug`) location reference, mirroring
+  // scripts/check-drafts.mts: file must exist, a sub-location must be cited by
+  // its composite id, and the prefix must match its actual parent (ADR-0003).
+  const locationRefError = (ref: string): string | null => {
+    const i = ref.lastIndexOf("/");
+    const slug = i === -1 ? ref : ref.slice(i + 1);
+    if (!known.locations.has(slug)) return `unknown location "${ref}"`;
+    const parent = known.locations.get(slug);
+    if (i === -1) {
+      return parent ? `"${ref}" is a sub-location — use "${parent}/${slug}"` : null;
     }
+    return ref.slice(0, i) === parent
+      ? null
+      : `"${ref}" — parent mismatch (expected "${parent ?? "—"}/${slug}")`;
+  };
+  for (const field of ["connectedTo", "locations"] as const) {
+    for (const ref of (entity[field] as string[]) ?? []) {
+      const msg = locationRefError(ref);
+      if (msg) errors.push(`${field} → ${msg}`);
+    }
+  }
+
+  // Containment invariants: parent resolves, no self-parent, depth ≤ 2.
+  if (kind === "locations" && typeof entity.parentSlug === "string") {
+    const p = entity.parentSlug;
+    if (p === result.data.slug) errors.push("parentSlug points at itself");
+    else if (!known.locations.has(p)) errors.push(`parentSlug → unknown location "${p}"`);
+    else if (known.locations.get(p))
+      errors.push(`parentSlug "${p}" is itself a sub-location — nesting is two levels only`);
   }
   return errors;
 }
@@ -213,6 +254,117 @@ export function updateLog(
   fs.writeFileSync(logPath(story), JSON.stringify(log, null, 2) + "\n");
 }
 
+interface DupRec {
+  slug: string;
+  name: string;
+  nameKey: string;
+  givens: string[];
+  surname: string;
+  paras: Set<number>;
+  nSources: number;
+}
+
+// Honorifics/titles are not given names — dropping them keeps "Old Whateley"
+// and "Old Zebulon Whateley" from matching on the shared word "Old", and marks
+// a title-only reference ("Mrs. Frye") by leaving it with no given token.
+const TITLES = new Set([
+  "mr", "mrs", "ms", "miss", "mister", "dr", "doctor", "old", "ol", "young",
+  "poor", "sir", "professor", "prof", "captain", "capt", "rev", "reverend",
+  "squire", "aunt", "uncle", "goodwife", "goodman", "widow",
+]);
+
+function nameTokens(name: string): string[] {
+  return name
+    .toLowerCase()
+    .split(/\s+/)
+    .map((t) => t.replace(/[^a-z0-9]/g, ""))
+    .filter(Boolean);
+}
+
+/** How many given-name tokens (surname and honorifics excluded) a name carries
+    — a proxy for name completeness when picking a merge survivor. */
+export function givenNameCount(name: string): number {
+  const toks = nameTokens(name);
+  return toks.slice(0, -1).filter((t) => !TITLES.has(t)).length;
+}
+
+function dupRec(slug: string, raw: string): DupRec | null {
+  let o: Record<string, unknown>;
+  try {
+    o = JSON.parse(raw);
+  } catch {
+    return null;
+  }
+  const name = typeof o.name === "string" ? o.name : slug;
+  const toks = nameTokens(name);
+  const sources = Array.isArray(o.sources) ? (o.sources as SourceLike[]) : [];
+  const paras = new Set<number>();
+  for (const s of sources) if (typeof s.paragraph === "number") paras.add(s.paragraph);
+  return {
+    slug,
+    name,
+    nameKey: toks.join(" "),
+    surname: toks.length ? toks[toks.length - 1] : "",
+    // Given names = tokens before the surname, minus honorifics.
+    givens: toks.slice(0, -1).filter((t) => !TITLES.has(t)),
+    paras,
+    nSources: sources.length,
+  };
+}
+
+type DupKind = "name" | "nickname" | "title" | null;
+
+/**
+ * How, if at all, do two same-kind drafts look like the same entity? A
+ * deliberately loose suspicion for the human to confirm, not an auto-merge —
+ * tuned to catch the common fragmentation without flagging distinct
+ * same-surname locals:
+ *  - "name": identical name ("Curtis Whateley" twice);
+ *  - "nickname": shared surname + a nickname/prefix given ("Zeb" ⊂ "Zebulon");
+ *  - "title": a title-only reference ("Mrs. Frye") sharing a surname and one
+ *    scene with a named person ("Selina Frye", ¶74).
+ */
+function duplicateKind(a: DupRec, b: DupRec): DupKind {
+  if (a.slug === b.slug) return null;
+  if (a.nameKey && a.nameKey === b.nameKey) return "name";
+  const sharedSurname = a.surname.length >= 3 && a.surname === b.surname;
+  if (!sharedSurname) return null;
+  for (const ga of a.givens) {
+    for (const gb of b.givens) {
+      if (ga.length >= 3 && gb.length >= 3 && (ga.startsWith(gb) || gb.startsWith(ga)))
+        return "nickname";
+    }
+  }
+  if (
+    a.nSources <= 2 &&
+    b.nSources <= 2 &&
+    (a.givens.length === 0 || b.givens.length === 0)
+  ) {
+    for (const p of a.paras) if (b.paras.has(p)) return "title";
+  }
+  return null;
+}
+
+/** Attach duplicate suspects to each draft, comparing within the same kind. */
+function tagDuplicates(drafts: Draft[]): void {
+  const recs = drafts.map((d) => ({ d, rec: dupRec(d.slug, d.raw) }));
+  for (const { d, rec } of recs) {
+    if (!rec) continue;
+    const dups: { slug: string; name: string }[] = [];
+    for (const o of recs) {
+      if (!o.rec || o.d.kind !== d.kind || o.d.slug === d.slug) continue;
+      const k = duplicateKind(rec, o.rec);
+      if (!k) continue;
+      // "title" is one-directional: only the title-only reference itself
+      // ("Mrs. Frye") lists its named candidates, so a distinct named person in
+      // the same scene ("Elmer Frye") is never flagged as a duplicate itself.
+      if (k === "title" && rec.givens.length > 0) continue;
+      dups.push({ slug: o.d.slug, name: o.rec.name });
+    }
+    if (dups.length) d.duplicateOf = dups;
+  }
+}
+
 export function buildReviewState(): ReviewState {
   const texts = loadSearchables();
 
@@ -229,12 +381,15 @@ export function buildReviewState(): ReviewState {
         for (const f of fs.readdirSync(dir).filter((x) => x.endsWith(".json")).sort()) {
           const raw = fs.readFileSync(path.join(dir, f), "utf8");
           let quotes: QuoteCheck[] = [];
+          let parentSlug: string | undefined;
           try {
-            quotes = checkQuotes(JSON.parse(raw), texts);
+            const parsed = JSON.parse(raw);
+            quotes = checkQuotes(parsed, texts);
+            if (typeof parsed.parentSlug === "string") parentSlug = parsed.parentSlug;
           } catch {
             // Broken JSON still gets listed — the UI shows the parse failure.
           }
-          drafts.push({ kind, slug: f.replace(/\.json$/, ""), raw, quotes });
+          drafts.push({ kind, slug: f.replace(/\.json$/, ""), raw, quotes, parentSlug });
         }
       }
 
@@ -250,6 +405,7 @@ export function buildReviewState(): ReviewState {
       }
 
       if (drafts.length > 0 || junk.length > 0) {
+        tagDuplicates(drafts);
         stories.push({ story, drafts, junk, log: readLog(story) });
       }
     }

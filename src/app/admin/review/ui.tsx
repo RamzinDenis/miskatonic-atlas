@@ -45,6 +45,33 @@ function parseEntity(raw: string): Record<string, unknown> | null {
   }
 }
 
+/** Order location drafts so each sub-location follows its parent, tagged with a
+    nesting depth for indentation (ADR-0003). Children whose parent is absent
+    from this list (e.g. already promoted to content/) show at the top level. */
+function orderByContainment(drafts: Draft[]): { d: Draft; depth: number }[] {
+  const children = new Map<string, Draft[]>();
+  const tops: Draft[] = [];
+  for (const d of drafts) {
+    if (d.parentSlug) {
+      const arr = children.get(d.parentSlug) ?? [];
+      arr.push(d);
+      children.set(d.parentSlug, arr);
+    } else {
+      tops.push(d);
+    }
+  }
+  const out: { d: Draft; depth: number }[] = [];
+  const emitted = new Set<string>();
+  const walk = (d: Draft, depth: number) => {
+    out.push({ d, depth });
+    emitted.add(d.slug);
+    for (const c of children.get(d.slug) ?? []) walk(c, depth + 1);
+  };
+  for (const d of tops) walk(d, 0);
+  for (const d of drafts) if (!emitted.has(d.slug)) out.push({ d, depth: 0 });
+  return out;
+}
+
 export function ReviewClient({ initial }: { initial: ReviewState }) {
   const [data, setData] = useState<ReviewState>(initial);
   const [tab, setTab] = useState<"drafts" | "curation">("drafts");
@@ -155,6 +182,34 @@ export function ReviewClient({ initial }: { initial: ReviewState }) {
     [story, draft, post, load],
   );
 
+  const mergeDuplicate = useCallback(
+    async (dupSlug: string) => {
+      if (!story || !draft) return;
+      const res = await post({
+        action: "merge",
+        story: story.story,
+        kind: draft.kind,
+        slug: draft.slug,
+        dup: dupSlug,
+      });
+      if (!res) return;
+      if (res.error) {
+        setReport({ errors: [String(res.error)] });
+        return;
+      }
+      // The server keeps the fuller-named entity, which may not be the open one.
+      const survivor = typeof res.survivor === "string" ? res.survivor : draft.slug;
+      setSelected({ kind: draft.kind, slug: survivor });
+      if (typeof res.raw === "string") setEditorText(res.raw);
+      setReport({
+        errors: (res.errors as string[]) ?? [],
+        quotes: res.quotes as QuoteCheck[],
+      });
+      await load();
+    },
+    [story, draft, post, load],
+  );
+
   const restore = useCallback(
     async (slug: string) => {
       if (!story) return;
@@ -249,12 +304,18 @@ export function ReviewClient({ initial }: { initial: ReviewState }) {
               {["locations", "characters", "creatures"].map((kind) => {
                 const items = story.drafts.filter((d) => d.kind === kind);
                 if (items.length === 0) return null;
+                // Locations nest sub-locations under their parent (ADR-0003);
+                // the other kinds stay flat.
+                const entries =
+                  kind === "locations"
+                    ? orderByContainment(items)
+                    : items.map((d) => ({ d, depth: 0 }));
                 return (
                   <section key={kind}>
                     <h2 className="sticky top-0 bg-neutral-950 px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wider text-neutral-500">
                       {KIND_LABEL[kind]} · {items.length}
                     </h2>
-                    {items.map((d) => {
+                    {entries.map(({ d, depth }) => {
                       const entity = parseEntity(d.raw);
                       const block = entity?._draft as DraftBlock | undefined;
                       const pending = block?.needsReview?.length ?? 0;
@@ -264,11 +325,13 @@ export function ReviewClient({ initial }: { initial: ReviewState }) {
                         <button
                           key={d.slug}
                           onClick={() => select(d)}
+                          style={depth > 0 ? { paddingLeft: `${0.75 + depth * 1.15}rem` } : undefined}
                           className={`flex w-full items-center gap-2 px-3 py-1.5 text-left ${
                             active ? "bg-neutral-800" : "hover:bg-neutral-900"
                           }`}
                         >
                           <span className="min-w-0 flex-1 truncate">
+                            {depth > 0 && <span className="text-neutral-600">↳ </span>}
                             {(entity?.name as string) ?? d.slug}
                             {!entity && (
                               <span className="text-red-400"> (broken JSON)</span>
@@ -282,6 +345,14 @@ export function ReviewClient({ initial }: { initial: ReviewState }) {
                           {pending > 0 && (
                             <span className="rounded bg-amber-900/60 px-1.5 text-xs text-amber-300">
                               {pending}
+                            </span>
+                          )}
+                          {d.duplicateOf && d.duplicateOf.length > 0 && (
+                            <span
+                              className="rounded bg-fuchsia-900/60 px-1.5 text-xs text-fuchsia-300"
+                              title={`possible duplicate: ${d.duplicateOf.map((x) => x.slug).join(", ")}`}
+                            >
+                              ⧉
                             </span>
                           )}
                           {missing > 0 && (
@@ -330,6 +401,11 @@ export function ReviewClient({ initial }: { initial: ReviewState }) {
                 report={report}
                 onSave={saveDraft}
                 onVerdict={giveVerdict}
+                onMerge={mergeDuplicate}
+                onOpen={(s) => {
+                  const d = story.drafts.find((x) => x.kind === draft.kind && x.slug === s);
+                  if (d) select(d);
+                }}
               />
             ) : (
               <div className="p-8 text-neutral-500">
@@ -362,6 +438,8 @@ function DraftDetail({
   report,
   onSave,
   onVerdict,
+  onMerge,
+  onOpen,
 }: {
   draft: Draft;
   busy: boolean;
@@ -370,6 +448,8 @@ function DraftDetail({
   report: { errors: string[]; quotes?: QuoteCheck[] } | null;
   onSave: () => void;
   onVerdict: (v: "as-is" | "edited" | "junk") => void;
+  onMerge: (dupSlug: string) => void;
+  onOpen: (slug: string) => void;
 }) {
   // Render from the editor state when it parses, so candidate clicks and
   // manual edits are reflected immediately; fall back to the file on disk.
@@ -451,6 +531,42 @@ function DraftDetail({
           </button>
         </span>
       </div>
+
+      {draft.duplicateOf && draft.duplicateOf.length > 0 && (
+        <section className="mb-3 rounded border border-fuchsia-900/70 bg-fuchsia-950/25 px-3 py-2">
+          <div className="mb-1 text-fuchsia-300">
+            Possible duplicate(s) — same entity? Confirm before merging.
+          </div>
+          <ul className="space-y-1">
+            {draft.duplicateOf.map((d) => (
+              <li key={d.slug} className="flex items-center gap-2">
+                <span className="min-w-0 flex-1 truncate">
+                  {d.name} <code className="text-xs text-neutral-500">{d.slug}</code>
+                </span>
+                <button
+                  onClick={() => onOpen(d.slug)}
+                  className="shrink-0 rounded border border-neutral-700 px-1.5 py-0.5 text-xs text-neutral-300 hover:bg-neutral-800"
+                >
+                  open
+                </button>
+                <button
+                  onClick={() => onMerge(d.slug)}
+                  disabled={busy}
+                  title="Same person — merge the two drafts"
+                  className="shrink-0 rounded border border-fuchsia-700 bg-fuchsia-900/40 px-1.5 py-0.5 text-xs text-fuchsia-200 hover:bg-fuchsia-800/60 disabled:opacity-40"
+                >
+                  same person →
+                </button>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-1 text-xs text-neutral-500">
+            “same person” merges the two: the fuller name is kept, the other
+            becomes an alias and is junked. Distinct namesakes — keep both and
+            ignore.
+          </p>
+        </section>
+      )}
 
       {block?.needsReview && block.needsReview.length > 0 && (
         <section className="mb-3 space-y-2">
