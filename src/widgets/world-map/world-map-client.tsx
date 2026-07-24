@@ -468,6 +468,40 @@ export default function WorldMapClient({
     }
   };
 
+  /** Dev-only picker ops that touch content/locations/*.json then refresh. */
+  const postOp = async (body: Record<string, unknown>) => {
+    setSaving(true);
+    setSaveError(null);
+    try {
+      const res = await fetch("/admin/coords/save", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      if (!res.ok) throw new Error(await res.text());
+      router.refresh();
+    } catch (e) {
+      setSaveError((e as Error).message);
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  /** First pass: provisional coordinates for the whole placement queue. */
+  const seedQueue = () => postOp({ seed: true });
+
+  /** Send a pin back to the queue (drop its `map`). */
+  const unplace = (slug: string) => {
+    setSelected(null);
+    return postOp({ unplace: [slug] });
+  };
+
+  const setProminence = (slug: string, value: "major" | "minor") => {
+    // Optimistic so the toggle label flips before the refresh lands.
+    setSelected((prev) => (prev && prev.slug === slug ? { ...prev, prominence: value } : prev));
+    return postOp({ prominence: [{ slug, value }] });
+  };
+
   const handleMapClick = (point: PixelPoint) => {
     if (picker) {
       const inside =
@@ -902,6 +936,39 @@ export default function WorldMapClient({
           <span className="text-xs uppercase tracking-widest text-muted">
             Coordinate picker · dev only
           </span>
+          {selected && (
+            <div className="mt-3 border-b border-line pb-3">
+              <p className="text-sm font-medium">
+                {selected.name}
+                <span className="ml-2 text-xs uppercase tracking-widest text-muted">
+                  {selected.prominence ?? "major"}
+                </span>
+              </p>
+              <div className="mt-2 flex gap-2">
+                <button
+                  type="button"
+                  disabled={saving}
+                  onClick={() =>
+                    setProminence(
+                      selected.slug,
+                      selected.prominence === "minor" ? "major" : "minor",
+                    )
+                  }
+                  className="rounded-md border border-line px-3 py-1.5 text-sm transition-colors hover:border-accent disabled:opacity-50"
+                >
+                  → {selected.prominence === "minor" ? "major" : "minor"}
+                </button>
+                <button
+                  type="button"
+                  disabled={saving}
+                  onClick={() => unplace(selected.slug)}
+                  className="rounded-md border border-line px-3 py-1.5 text-sm text-muted transition-colors hover:border-accent disabled:opacity-50"
+                >
+                  ⌫ off map
+                </button>
+              </div>
+            </div>
+          )}
           {unplaced.length > 0 && (
             <div className="mt-3 border-b border-line pb-3">
               <p className="text-xs uppercase tracking-widest text-muted">
@@ -935,8 +1002,17 @@ export default function WorldMapClient({
                   ? saving
                     ? "Saving…"
                     : "Click the chart to place it (Esc to cancel)."
-                  : "Pick a location, then click the chart."}
+                  : "Pick a location, then click the chart — or seed them all at once."}
               </p>
+              <button
+                type="button"
+                disabled={saving}
+                onClick={seedQueue}
+                title="Provisional pins near each location's parent / connection / New England — then drag to refine"
+                className="mt-2 w-full rounded-md border border-accent px-3 py-1.5 text-sm text-accent transition-colors hover:bg-accent/10 disabled:opacity-50"
+              >
+                {saving ? "Seeding…" : `Seed queue (${unplaced.length}) near anchors`}
+              </button>
               {saveError && Object.keys(moves).length === 0 && (
                 <p className="mt-1 text-xs text-red-400">{saveError}</p>
               )}

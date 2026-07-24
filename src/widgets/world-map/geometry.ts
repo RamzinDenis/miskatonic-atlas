@@ -67,6 +67,8 @@ export interface MapLocation extends PixelPoint {
   type: string;
   summary: string;
   figures: MapFigure[];
+  /** Editorial weight — the picker toggles it; the public map is major-only. */
+  prominence?: "major" | "minor";
 }
 
 /** A location still off the chart — the picker's placement queue. */

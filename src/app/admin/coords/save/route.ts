@@ -1,10 +1,15 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { getSeedPlacements } from "@/shared/lib/content";
 
 /**
- * Dev-only companion of /admin/coords: receives pin drags and writes the
- * new `map` coordinates back into content/locations/*.json. Only the `map`
- * field is touched — the file is parsed and re-printed as-is otherwise.
+ * Dev-only companion of /admin/coords. Four operations on
+ * content/locations/*.json, each touching only the fields it owns; the file is
+ * otherwise parsed and re-printed as-is:
+ *   moves       — write new `map` coordinates (pin drags / queue placement)
+ *   seed        — first-pass provisional `map` for every unplaced location
+ *   unplace     — remove `map` (send a pin back to the placement queue)
+ *   prominence  — set major/minor (major carries no field, per the schema default)
  */
 
 interface Move {
@@ -15,36 +20,93 @@ interface Move {
 
 const SLUG_RE = /^[a-z0-9-]+$/;
 
+function locationsDir() {
+  return path.join(process.cwd(), "content", "locations");
+}
+
+async function readLocation(slug: string): Promise<Record<string, unknown> | null> {
+  try {
+    return JSON.parse(await fs.readFile(path.join(locationsDir(), `${slug}.json`), "utf8"));
+  } catch {
+    return null;
+  }
+}
+
+async function writeLocation(slug: string, data: Record<string, unknown>) {
+  await fs.writeFile(
+    path.join(locationsDir(), `${slug}.json`),
+    JSON.stringify(data, null, 2) + "\n",
+  );
+}
+
+async function applyMoves(moves: Move[]): Promise<Response> {
+  for (const move of moves) {
+    if (!SLUG_RE.test(move.slug)) return new Response(`Bad slug "${move.slug}"`, { status: 400 });
+    if (!Number.isFinite(move.x) || !Number.isFinite(move.y)) {
+      return new Response(`Bad coordinates for "${move.slug}"`, { status: 400 });
+    }
+    const location = await readLocation(move.slug);
+    if (!location) return new Response(`No location file for "${move.slug}"`, { status: 404 });
+    location.map = { x: Math.round(move.x), y: Math.round(move.y) };
+    await writeLocation(move.slug, location);
+  }
+  return Response.json({ saved: moves.length });
+}
+
 export async function POST(request: Request) {
   if (process.env.NODE_ENV === "production") {
     return new Response("Not found", { status: 404 });
   }
 
-  const { moves } = (await request.json()) as { moves: Move[] };
-  if (!Array.isArray(moves) || moves.length === 0) {
-    return new Response("No moves given", { status: 400 });
+  const body = (await request.json()) as {
+    moves?: Move[];
+    seed?: boolean;
+    unplace?: string[];
+    prominence?: { slug: string; value: "major" | "minor" }[];
+  };
+
+  // Seed: provisional first-pass coordinates for the whole placement queue.
+  if (body.seed === true) {
+    return applyMoves(getSeedPlacements());
   }
 
-  const dir = path.join(process.cwd(), "content", "locations");
-  for (const move of moves) {
-    if (!SLUG_RE.test(move.slug)) {
-      return new Response(`Bad slug "${move.slug}"`, { status: 400 });
+  // Unplace: drop `map` so the pin returns to the queue.
+  if (Array.isArray(body.unplace)) {
+    for (const slug of body.unplace) {
+      if (!SLUG_RE.test(slug)) return new Response(`Bad slug "${slug}"`, { status: 400 });
+      const location = await readLocation(slug);
+      if (!location) return new Response(`No location file for "${slug}"`, { status: 404 });
+      delete location.map;
+      await writeLocation(slug, location);
     }
-    if (!Number.isFinite(move.x) || !Number.isFinite(move.y)) {
-      return new Response(`Bad coordinates for "${move.slug}"`, { status: 400 });
-    }
-
-    const file = path.join(dir, `${move.slug}.json`);
-    let location: Record<string, unknown>;
-    try {
-      location = JSON.parse(await fs.readFile(file, "utf8"));
-    } catch {
-      return new Response(`No location file for "${move.slug}"`, { status: 404 });
-    }
-
-    location.map = { x: Math.round(move.x), y: Math.round(move.y) };
-    await fs.writeFile(file, JSON.stringify(location, null, 2) + "\n");
+    return Response.json({ unplaced: body.unplace.length });
   }
 
-  return Response.json({ saved: moves.length });
+  // Prominence: minor gets the field (before `summary`, in schema order); major
+  // drops it — matching scripts/set-prominence.mts and the review route.
+  if (Array.isArray(body.prominence)) {
+    for (const { slug, value } of body.prominence) {
+      if (!SLUG_RE.test(slug)) return new Response(`Bad slug "${slug}"`, { status: 400 });
+      if (value !== "major" && value !== "minor") {
+        return new Response(`Bad prominence for "${slug}"`, { status: 400 });
+      }
+      const location = await readLocation(slug);
+      if (!location) return new Response(`No location file for "${slug}"`, { status: 404 });
+      const updated: Record<string, unknown> = {};
+      for (const [key, val] of Object.entries(location)) {
+        if (key === "prominence") continue;
+        if (key === "summary" && value === "minor") updated.prominence = "minor";
+        updated[key] = val;
+      }
+      await writeLocation(slug, updated);
+    }
+    return Response.json({ ok: true });
+  }
+
+  // Default: pin moves.
+  if (Array.isArray(body.moves) && body.moves.length > 0) {
+    return applyMoves(body.moves);
+  }
+
+  return new Response("No operation given", { status: 400 });
 }

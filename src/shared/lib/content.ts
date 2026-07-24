@@ -294,11 +294,77 @@ function toMapLocation(content: AtlasContent) {
         type: location.type,
         summary: location.summary,
         figures,
+        prominence: location.prominence,
         x: location.map.x,
         y: location.map.y,
       },
     ];
   };
+}
+
+/**
+ * A provisional first-pass placement for every location that has no `map` yet
+ * (the /admin/coords "Seed queue" button): anchor each near a related placed
+ * pin — its containment parent, else a placed connection, else the New England
+ * default (Boston) — with a small deterministic fan-out so siblings don't
+ * stack. Rough on purpose; the editor drags each to its real spot afterward.
+ */
+export function getSeedPlacements(): { slug: string; x: number; y: number }[] {
+  const content = loadContent();
+  const placed = new Map<string, { x: number; y: number }>();
+  for (const l of content.locations) if (l.map) placed.set(l.slug, { x: l.map.x, y: l.map.y });
+  // Snapshot: connectedTo may anchor only to pins that existed before seeding,
+  // so a chain of thematic links (Harvard↔Paris) can't drag a whole cluster
+  // abroad. Containment (parentSlug) still chains through freshly-seeded pins.
+  const originalPlaced = new Set(placed.keys());
+  const bySlug = new Map(content.locations.map((l) => [l.slug, l]));
+  const sharesStory = (a: Location, b: Location) =>
+    a.appearsIn.some((s) => b.appearsIn.includes(s));
+
+  // New England fallback for anything with no placed relation at all.
+  const neDefault = placed.get("boston") ?? placed.get("new-england") ?? { x: 2525, y: 1235 };
+  const counter = new Map<string, number>();
+  const offset = (key: string): { x: number; y: number } => {
+    const n = counter.get(key) ?? 0;
+    counter.set(key, n + 1);
+    const angle = n * 2.399963; // golden angle — even, deterministic fan-out
+    const radius = 34 + n * 12;
+    return { x: Math.round(Math.cos(angle) * radius), y: Math.round(Math.sin(angle) * radius) };
+  };
+
+  // A same-story connection already on the chart — geographic neighbours
+  // co-occur; far thematic links usually don't share a story.
+  const connAnchor = (l: Location): { at: { x: number; y: number }; key: string } | null => {
+    for (const ref of l.connectedTo) {
+      const s = refSlug(ref);
+      const target = bySlug.get(s);
+      if (originalPlaced.has(s) && target && sharesStory(l, target))
+        return { at: placed.get(s)!, key: s };
+    }
+    return null;
+  };
+
+  const result: { slug: string; x: number; y: number }[] = [];
+  const unplaced = content.locations.filter((l) => !l.map);
+  const seed = (l: Location, base: { x: number; y: number }, key: string) => {
+    const o = offset(key);
+    const p = { x: base.x + o.x, y: base.y + o.y };
+    result.push({ slug: l.slug, ...p });
+    placed.set(l.slug, p);
+  };
+  // Top-level first: anchor to a same-story pin, else New England.
+  for (const l of unplaced) {
+    if (l.parentSlug) continue;
+    const anc = connAnchor(l);
+    seed(l, anc ? anc.at : neDefault, anc ? anc.key : "__ne__");
+  }
+  // Then sub-locations cluster around their now-placed parent.
+  for (const l of unplaced) {
+    if (!l.parentSlug) continue;
+    const parent = placed.get(l.parentSlug);
+    seed(l, parent ?? neDefault, parent ? l.parentSlug : "__ne__");
+  }
+  return result;
 }
 
 /** Major locations that have map coordinates, shaped for the WorldMap widget. */
