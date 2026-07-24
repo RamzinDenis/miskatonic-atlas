@@ -11,6 +11,7 @@ import {
   type Location,
   type Story,
 } from "../schemas.ts"; // relative + extension so Node can run this file directly (scripts/validate.mts)
+import { MAPS } from "../maps.ts"; // relative + extension for the same reason
 import type {
   MapFigure,
   MapLegendGroup,
@@ -131,6 +132,10 @@ function checkIntegrity(content: AtlasContent, errors: string[]) {
 
   for (const location of content.locations) {
     const from = `content/locations/${location.slug}.json`;
+    // A placement must name a registered chart (src/shared/maps.ts).
+    if (location.map && !MAPS[location.map.mapId]) {
+      errors.push(`${from}: map.mapId → unknown chart "${location.map.mapId}"`);
+    }
     checkRefs(from, "appearsIn", location.appearsIn, storySlugs, "story", errors);
     checkLocationRefs(from, "connectedTo", location.connectedTo);
     checkRefs(from, "sources", location.sources.map((s) => s.storySlug), storySlugs, "story", errors);
@@ -274,9 +279,11 @@ export function getCreaturesAt(locationSlug: string): Creature[] {
   return loadContent().creatures.filter((c) => c.locations.some((l) => refSlug(l) === locationSlug));
 }
 
-function toMapLocation(content: AtlasContent) {
+function toMapLocation(content: AtlasContent, mapId: string) {
   return (location: Location): MapLocation[] => {
-    if (!location.map) return [];
+    // Each location lives on exactly one chart (docs/regional-map.md): a pin
+    // appears only on the map its `map.mapId` names.
+    if (!location.map || location.map.mapId !== mapId) return [];
     // The preview panel is map navigation, so it follows the prominence rule:
     // only major figures are listed (minor ones stay on the location page).
     const figures: MapFigure[] = [
@@ -309,10 +316,11 @@ function toMapLocation(content: AtlasContent) {
  * default (Boston) — with a small deterministic fan-out so siblings don't
  * stack. Rough on purpose; the editor drags each to its real spot afterward.
  */
-export function getSeedPlacements(): { slug: string; x: number; y: number }[] {
+export function getSeedPlacements(): { slug: string; mapId: string; x: number; y: number }[] {
   const content = loadContent();
-  const placed = new Map<string, { x: number; y: number }>();
-  for (const l of content.locations) if (l.map) placed.set(l.slug, { x: l.map.x, y: l.map.y });
+  const placed = new Map<string, { mapId: string; x: number; y: number }>();
+  for (const l of content.locations)
+    if (l.map) placed.set(l.slug, { mapId: l.map.mapId, x: l.map.x, y: l.map.y });
   // Snapshot: connectedTo may anchor only to pins that existed before seeding,
   // so a chain of thematic links (Harvard↔Paris) can't drag a whole cluster
   // abroad. Containment (parentSlug) still chains through freshly-seeded pins.
@@ -322,7 +330,8 @@ export function getSeedPlacements(): { slug: string; x: number; y: number }[] {
     a.appearsIn.some((s) => b.appearsIn.includes(s));
 
   // New England fallback for anything with no placed relation at all.
-  const neDefault = placed.get("boston") ?? placed.get("new-england") ?? { x: 2525, y: 1235 };
+  const neDefault = placed.get("boston") ??
+    placed.get("new-england") ?? { mapId: "world", x: 2525, y: 1235 };
   const counter = new Map<string, number>();
   const offset = (key: string): { x: number; y: number } => {
     const n = counter.get(key) ?? 0;
@@ -334,7 +343,9 @@ export function getSeedPlacements(): { slug: string; x: number; y: number }[] {
 
   // A same-story connection already on the chart — geographic neighbours
   // co-occur; far thematic links usually don't share a story.
-  const connAnchor = (l: Location): { at: { x: number; y: number }; key: string } | null => {
+  const connAnchor = (
+    l: Location,
+  ): { at: { mapId: string; x: number; y: number }; key: string } | null => {
     for (const ref of l.connectedTo) {
       const s = refSlug(ref);
       const target = bySlug.get(s);
@@ -344,11 +355,13 @@ export function getSeedPlacements(): { slug: string; x: number; y: number }[] {
     return null;
   };
 
-  const result: { slug: string; x: number; y: number }[] = [];
+  const result: { slug: string; mapId: string; x: number; y: number }[] = [];
   const unplaced = content.locations.filter((l) => !l.map);
-  const seed = (l: Location, base: { x: number; y: number }, key: string) => {
+  // A seed lands on its anchor's chart: sub-locations of a regionally-pinned
+  // parent cluster on the regional map, not on the world scan.
+  const seed = (l: Location, base: { mapId: string; x: number; y: number }, key: string) => {
     const o = offset(key);
-    const p = { x: base.x + o.x, y: base.y + o.y };
+    const p = { mapId: base.mapId, x: base.x + o.x, y: base.y + o.y };
     result.push({ slug: l.slug, ...p });
     placed.set(l.slug, p);
   };
@@ -367,10 +380,16 @@ export function getSeedPlacements(): { slug: string; x: number; y: number }[] {
   return result;
 }
 
-/** Major locations that have map coordinates, shaped for the WorldMap widget. */
-export function getMapLocations(): MapLocation[] {
+/**
+ * Major locations pinned on the given chart, shaped for the WorldMap widget.
+ * Sub-locations never pin publicly (ADR-0003 — their anchor is a section of
+ * the parent's page); placing one in the picker only feeds its page inset.
+ */
+export function getMapLocations(mapId = "world"): MapLocation[] {
   const content = loadContent();
-  return majorOnly(content.locations).flatMap(toMapLocation(content));
+  return majorOnly(content.locations)
+    .filter((l) => !l.parentSlug)
+    .flatMap(toMapLocation(content, mapId));
 }
 
 /**
@@ -379,13 +398,15 @@ export function getMapLocations(): MapLocation[] {
  * off the shared map — plus the placement queue of locations that have no
  * `map` yet (fresh from review promotion).
  */
-export function getPickerLocations(): {
+export function getPickerLocations(mapId = "world"): {
   placed: MapLocation[];
   unplaced: UnplacedLocation[];
 } {
   const content = loadContent();
   return {
-    placed: content.locations.flatMap(toMapLocation(content)),
+    placed: content.locations.flatMap(toMapLocation(content, mapId)),
+    // The queue is chart-agnostic: an unplaced location can be pinned on
+    // whichever chart the picker is currently showing.
     unplaced: content.locations
       .filter((l) => !l.map)
       .map(({ slug, name, type }) => ({ slug, name, type }))
@@ -394,16 +415,20 @@ export function getPickerLocations(): {
 }
 
 /** The legend panel: the chart's stories in order of publication, each with
-    its charted major locations A→Z. */
-export function getMapLegend(): MapLegendGroup[] {
+    its charted major locations A→Z. A story belongs to the charts its places
+    are actually pinned on — one with no pins here is another sheet's story. */
+export function getMapLegend(mapId = "world"): MapLegendGroup[] {
   const content = loadContent();
-  return [...content.stories].sort((a, b) => a.year - b.year).map((story) => ({
-    slug: story.slug,
-    title: story.title,
-    year: story.year,
-    locations: majorOnly(content.locations)
-      .filter((l) => l.appearsIn.includes(story.slug))
-      .flatMap(toMapLocation(content))
-      .sort((a, b) => a.name.localeCompare(b.name, "en")),
-  }));
+  return [...content.stories]
+    .sort((a, b) => a.year - b.year)
+    .map((story) => ({
+      slug: story.slug,
+      title: story.title,
+      year: story.year,
+      locations: majorOnly(content.locations)
+        .filter((l) => !l.parentSlug && l.appearsIn.includes(story.slug))
+        .flatMap(toMapLocation(content, mapId))
+        .sort((a, b) => a.name.localeCompare(b.name, "en")),
+    }))
+    .filter((group) => group.locations.length > 0);
 }

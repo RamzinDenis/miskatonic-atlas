@@ -1,52 +1,17 @@
-/**
- * Basemap: Colton's "Map of the World on Mercator's Projection" (1852
- * pocket-map issue), Geographicus scan via Wikimedia Commons, public domain.
- * Downscaled to 4096×2950 as public/maps/world.jpg.
- *
- * Content stores map positions as pixels of that image (x right, y down
- * from the top-left corner), so points survive re-tinting of the basemap
- * but not re-cropping/re-scaling it.
- *
- * Grid calibration of the scan (used to place locations by coordinates
- * given in the stories; re-derive if world.jpg is ever regenerated):
- *   longitude — linear, 9.63 px/deg, reference meridian W150° at x = 1765
- *   latitude  — Mercator, equator at y = 1715, R = 9.63·180/π ≈ 551.7 px/rad
- *   y(φ) = 1715 − R·ln(tan(45° + φ/2)), φ north-positive
- * e.g. R'lyeh, canon "S. Latitude 47° 9', W. Longitude 126° 43'" → (1989, 2231).
- */
-export const WORLD_MAP = {
-  id: "world",
-  /** The scan itself — the source everything below is cut from, never served. */
-  url: "/maps/world.jpg",
-  /** Ageing sheet (scripts/generate-wear.mjs), multiplied over the scan. */
-  wearUrl: "/maps/world-wear.webp",
-  /** A 128px thumb of the sheet, under it until a real copy arrives. */
-  lqipUrl: "/maps/world-lqip.webp",
-  /** Quarter-size scan for the static insets on content pages. */
-  insetUrl: "/maps/world-1024.webp",
-  width: 4096,
-  height: 2950,
-} as const;
+import { WORLD_MAP, type AtlasMap } from "@/shared/maps";
 
 /**
- * The chart at three sizes (scripts/build-map-images.mjs), smallest first.
- * Nothing needs the full scan to look at the whole world: at an overview
- * the sheet is squeezed into a viewport, and four fifths of the pixels are
- * thrown away in the resampling. The widget picks the rung the screen can
- * actually show and climbs it when a close-up asks for more.
+ * Pixel geometry of the atlas' charts. The charts themselves — sizes, image
+ * ladders, the registry — live in src/shared/maps.ts (pure data, shared with
+ * Node-run scripts); this module holds the math and the widget-facing shapes.
  *
- * A ladder rather than a tile pyramid on purpose: tiles are for maps too
- * large to hold whole, and pay for it with a coarse level visibly swapped
- * for a fine one and a grid rebuilt on every frame of a zoom. This sheet is
- * one bitmap at any moment, resampled by the GPU and nothing else.
+ * Content stores map positions as pixels of a chart's source image (x right,
+ * y down from the top-left corner), so points survive re-tinting of a
+ * basemap but not re-cropping/re-scaling it.
  */
-export const SHEETS = [
-  { width: 1024, url: "/maps/world-1024.webp" },
-  { width: 2048, url: "/maps/world-2048.webp" },
-  { width: WORLD_MAP.width, url: WORLD_MAP.url },
-] as const;
 
-export type ChartSheetSource = (typeof SHEETS)[number];
+export { MAPS, WORLD_MAP, chartPath, getAtlasMap } from "@/shared/maps";
+export type { AtlasMap, MapSheet } from "@/shared/maps";
 
 export interface PixelPoint {
   x: number;
@@ -90,23 +55,40 @@ export interface MapLegendGroup {
  * Image pixels → Leaflet CRS.Simple coordinates. The image overlay spans
  * [[0, 0], [height, width]], so "lat" grows upwards while y grows downwards.
  */
-export function pixelToLatLng({ x, y }: PixelPoint): [number, number] {
-  return [WORLD_MAP.height - y, x];
+export function pixelToLatLng(
+  { x, y }: PixelPoint,
+  map: AtlasMap = WORLD_MAP,
+): [number, number] {
+  return [map.height - y, x];
 }
 
 /** Inverse of {@link pixelToLatLng}, rounded to whole image pixels. */
-export function latLngToPixel(lat: number, lng: number): PixelPoint {
-  return { x: Math.round(lng), y: Math.round(WORLD_MAP.height - lat) };
+export function latLngToPixel(
+  lat: number,
+  lng: number,
+  map: AtlasMap = WORLD_MAP,
+): PixelPoint {
+  return { x: Math.round(lng), y: Math.round(map.height - lat) };
 }
 
-/* Grid calibration of the scan — the constants from the header comment. */
+/*
+ * Grid calibration of the world scan (used to place locations by coordinates
+ * given in the stories; re-derive if world.jpg is ever regenerated):
+ *   longitude — linear, 9.63 px/deg, reference meridian W150° at x = 1765
+ *   latitude  — Mercator, equator at y = 1715, R = 9.63·180/π ≈ 551.7 px/rad
+ *   y(φ) = 1715 − R·ln(tan(45° + φ/2)), φ north-positive
+ * e.g. R'lyeh, canon "S. Latitude 47° 9', W. Longitude 126° 43'" → (1989, 2231).
+ *
+ * The world chart is the only calibrated one (AtlasMap.calibrated): fictional
+ * geography has no degree grid, so callers gate every degree readout on it.
+ */
 const PX_PER_LON_DEG = 9.63;
 const REF_MERIDIAN = { lonDeg: -150, x: 1765 };
 const EQUATOR_Y = 1715;
 const MERCATOR_R = (PX_PER_LON_DEG * 180) / Math.PI;
 
 /**
- * Image pixels → geographic degrees by the grid calibration (north- and
+ * World-chart pixels → geographic degrees by the grid calibration (north- and
  * east-positive). Longitude is wrapped to (−180°, 180°]: the scan runs past
  * the antimeridian on both edges.
  */

@@ -18,18 +18,24 @@ export default function Home() {
           on screen instead of the last. */}
       <link rel="preload" as="image" href={WORLD_MAP.lqipUrl} />
 
-      <WorldMap locations={getMapLocations()} legend={getMapLegend()} />
+      <WorldMap
+        chart={WORLD_MAP}
+        locations={getMapLocations()}
+        legend={getMapLegend()}
+      />
 
       <SiteHeader floating />
 
-      <a
-        href="https://commons.wikimedia.org/wiki/File:1852_Colton%27s_Map_of_the_World_on_Mercator%27s_Projection_(_Pocket_Map_)_-_Geographicus_-_World-colton-1852.jpg"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="absolute bottom-2 right-2 z-[1000] rounded px-2 py-1 text-[11px] text-muted/80 transition-colors hover:text-muted"
-      >
-        Basemap: Colton, 1852 — Wikimedia Commons, public domain
-      </a>
+      {WORLD_MAP.attribution && (
+        <a
+          href={WORLD_MAP.attribution.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute bottom-2 right-2 z-[1000] rounded px-2 py-1 text-[11px] text-muted/80 transition-colors hover:text-muted"
+        >
+          {WORLD_MAP.attribution.label}
+        </a>
+      )}
     </div>
   );
 }

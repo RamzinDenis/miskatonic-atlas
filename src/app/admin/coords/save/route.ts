@@ -1,12 +1,14 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { getSeedPlacements } from "@/shared/lib/content";
+import { MAPS } from "@/shared/maps";
 
 /**
  * Dev-only companion of /admin/coords. Four operations on
  * content/locations/*.json, each touching only the fields it owns; the file is
  * otherwise parsed and re-printed as-is:
- *   moves       — write new `map` coordinates (pin drags / queue placement)
+ *   moves       — write new `map` coordinates (pin drags / queue placement),
+ *                 on the chart the move names (mapId defaults to "world")
  *   seed        — first-pass provisional `map` for every unplaced location
  *   unplace     — remove `map` (send a pin back to the placement queue)
  *   prominence  — set major/minor (major carries no field, per the schema default)
@@ -14,6 +16,7 @@ import { getSeedPlacements } from "@/shared/lib/content";
 
 interface Move {
   slug: string;
+  mapId?: string;
   x: number;
   y: number;
 }
@@ -45,9 +48,15 @@ async function applyMoves(moves: Move[]): Promise<Response> {
     if (!Number.isFinite(move.x) || !Number.isFinite(move.y)) {
       return new Response(`Bad coordinates for "${move.slug}"`, { status: 400 });
     }
+    const mapId = move.mapId ?? "world";
+    if (!MAPS[mapId]) return new Response(`Unknown mapId "${mapId}"`, { status: 400 });
     const location = await readLocation(move.slug);
     if (!location) return new Response(`No location file for "${move.slug}"`, { status: 404 });
-    location.map = { x: Math.round(move.x), y: Math.round(move.y) };
+    // The schema defaults mapId to "world", so world placements stay bare.
+    location.map =
+      mapId === "world"
+        ? { x: Math.round(move.x), y: Math.round(move.y) }
+        : { mapId, x: Math.round(move.x), y: Math.round(move.y) };
     await writeLocation(move.slug, location);
   }
   return Response.json({ saved: moves.length });

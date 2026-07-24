@@ -167,6 +167,12 @@ body {
   filter: sepia(0.6) saturate(0.62) brightness(0.8) contrast(1.07);
 }
 
+/* Generated "art" sheets (maps.ts tone: "art") are aged at birth — only a
+   light touch to sit them in the dark binding, not the full scan tint. */
+.world-map .atlas-scan--art {
+  filter: sepia(0.15) saturate(0.88) brightness(0.95) contrast(1.03);
+}
+
 /* The wear sheet darkens the tinted scan below it; white stays neutral. */
 .world-map .atlas-wear {
   mix-blend-mode: multiply;

@@ -16,6 +16,7 @@ import {
   Fragment,
   useCallback,
   useEffect,
+  useMemo,
   useRef,
   useState,
   type CSSProperties,
@@ -32,10 +33,12 @@ import {
 import { getPlateThumb } from "@/widgets/plates";
 import { ChartSheet, chartIsWarm } from "./chart-sheet";
 import {
-  WORLD_MAP,
+  MAPS,
+  chartPath,
   formatDegrees,
   latLngToPixel,
   pixelToLatLng,
+  type AtlasMap,
   type MapLegendGroup,
   type MapLocation,
   type PixelPoint,
@@ -62,11 +65,6 @@ import {
   type RouteLeg,
 } from "./routes";
 
-const IMAGE_BOUNDS: LatLngBoundsExpression = [
-  [0, 0],
-  [WORLD_MAP.height, WORLD_MAP.width],
-];
-
 /** Zoom the legend flies to — close enough to read the chart around a pin. */
 const FOCUS_ZOOM = -0.5;
 
@@ -74,21 +72,21 @@ const FOCUS_ZOOM = -0.5;
  * Panning must stay within the chart: zooming out stops at "whole map
  * visible", so the image can never float loose inside the viewport.
  */
-function applyFitZoomLimit(map: LeafletMap) {
-  const fitZoom = map.getBoundsZoom(IMAGE_BOUNDS, false);
+function applyFitZoomLimit(map: LeafletMap, bounds: LatLngBoundsExpression) {
+  const fitZoom = map.getBoundsZoom(bounds, false);
   map.setMinZoom(fitZoom);
   if (map.getZoom() < fitZoom) map.setZoom(fitZoom);
 }
 
-function FitZoomLimit() {
+function FitZoomLimit({ bounds }: { bounds: LatLngBoundsExpression }) {
   const map = useMapEvents({
     resize() {
-      applyFitZoomLimit(map);
+      applyFitZoomLimit(map, bounds);
     },
   });
   useEffect(() => {
-    applyFitZoomLimit(map);
-  }, [map]);
+    applyFitZoomLimit(map, bounds);
+  }, [map, bounds]);
   return null;
 }
 
@@ -320,9 +318,11 @@ function LegendGlyph({ type }: { type: string }) {
  * so the page itself stays fully static.
  */
 function DeepLinkFocus({
+  chart,
   locations,
   onSelect,
 }: {
+  chart: AtlasMap;
   locations: MapLocation[];
   onSelect: (location: MapLocation) => void;
 }) {
@@ -336,29 +336,33 @@ function DeepLinkFocus({
     if (!target) return;
     onSelect(target);
     map.setView(
-      pixelToLatLng(target),
+      pixelToLatLng(target, chart),
       Math.max(map.getZoom(), FOCUS_ZOOM),
       { animate: false },
     );
-  }, [map, locations, onSelect]);
+  }, [map, chart, locations, onSelect]);
   return null;
 }
 
 /** Clicks on empty map: close the preview panel, or pick coordinates. */
 function MapClicks({
+  chart,
   onClick,
 }: {
+  chart: AtlasMap;
   onClick: (point: PixelPoint) => void;
 }) {
   useMapEvents({
     click(e) {
-      onClick(latLngToPixel(e.latlng.lat, e.latlng.lng));
+      onClick(latLngToPixel(e.latlng.lat, e.latlng.lng, chart));
     },
   });
   return null;
 }
 
 interface Props {
+  /** The chart this widget draws — an entry of the MAPS registry. */
+  chart: AtlasMap;
   locations: MapLocation[];
   /** Story sections of the legend panel; omit to render the bare chart. */
   legend?: MapLegendGroup[];
@@ -369,6 +373,7 @@ interface Props {
 }
 
 export default function WorldMapClient({
+  chart,
   locations,
   legend,
   picker = false,
@@ -376,6 +381,16 @@ export default function WorldMapClient({
 }: Props) {
   const router = useRouter();
   const mapRef = useRef<LeafletMap | null>(null);
+  /* The voyage tracks and the annotator's beasts are drawn in world-chart
+     pixels — they belong to that copy alone and stay off any other sheet. */
+  const worldChart = chart.id === "world";
+  const bounds = useMemo<LatLngBoundsExpression>(
+    () => [
+      [0, 0],
+      [chart.height, chart.width],
+    ],
+    [chart],
+  );
   const [selected, setSelected] = useState<MapLocation | null>(null);
   const [selectedLeg, setSelectedLeg] = useState<RouteLeg | null>(null);
   const [labelsShown, setLabelsShown] = useState(false);
@@ -384,7 +399,7 @@ export default function WorldMapClient({
      small marks arrive first and hover for a moment over the dark binding.
      A chart already in the cache starts printed, so a reader coming back
      from a location page doesn't sit through the marks fading up again. */
-  const [paperReady, setPaperReady] = useState(chartIsWarm);
+  const [paperReady, setPaperReady] = useState(() => chartIsWarm(chart));
   /* Stable: ChartTiles holds a leaflet layer, and a new identity here would
      tear the chart down and rebuild it on every selection and every zoom. */
   const handlePaperReady = useCallback(() => setPaperReady(true), []);
@@ -416,8 +431,12 @@ export default function WorldMapClient({
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
+  // The schema defaults mapId to "world", so the world chart's snippet
+  // (and its JSON files) stay free of the field.
   const snippet = picked
-    ? `"map": { "x": ${picked.x}, "y": ${picked.y} }`
+    ? worldChart
+      ? `"map": { "x": ${picked.x}, "y": ${picked.y} }`
+      : `"map": { "mapId": "${chart.id}", "x": ${picked.x}, "y": ${picked.y} }`
     : "";
 
   const copySnippet = async () => {
@@ -434,7 +453,7 @@ export default function WorldMapClient({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          moves: Object.entries(moves).map(([slug, p]) => ({ slug, ...p })),
+          moves: Object.entries(moves).map(([slug, p]) => ({ slug, mapId: chart.id, ...p })),
         }),
       });
       if (!res.ok) throw new Error(await res.text());
@@ -456,7 +475,7 @@ export default function WorldMapClient({
       const res = await fetch("/admin/coords/save", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ moves: [{ slug, ...point }] }),
+        body: JSON.stringify({ moves: [{ slug, mapId: chart.id, ...point }] }),
       });
       if (!res.ok) throw new Error(await res.text());
       setPlacing(null);
@@ -506,9 +525,9 @@ export default function WorldMapClient({
     if (picker) {
       const inside =
         point.x >= 0 &&
-        point.x <= WORLD_MAP.width &&
+        point.x <= chart.width &&
         point.y >= 0 &&
-        point.y <= WORLD_MAP.height;
+        point.y <= chart.height;
       if (placing && inside && !saving) {
         void placeAt(placing, point);
         return;
@@ -578,38 +597,41 @@ export default function WorldMapClient({
       <MapContainer
         ref={mapRef}
         crs={CRS.Simple}
-        bounds={IMAGE_BOUNDS}
-        maxBounds={IMAGE_BOUNDS}
+        bounds={bounds}
+        maxBounds={bounds}
         maxBoundsViscosity={1}
         minZoom={-2}
-        maxZoom={1}
+        maxZoom={chart.maxZoom ?? 1}
         zoomSnap={0.25}
         zoomDelta={0.5}
         zoomControl={false}
         attributionControl={false}
         className="h-full w-full"
       >
-        <ChartSheet bounds={IMAGE_BOUNDS} onReady={handlePaperReady} />
+        <ChartSheet chart={chart} bounds={bounds} onReady={handlePaperReady} />
         {/* The copy's biography — scorch, creases, stains — multiplied over
             the pristine scan so it pans and zooms as part of the paper. It
             has to share the chart's pane: multiply blends only within a
             stacking context, and every leaflet pane is one of its own, so
             from a pane above there would be nothing to darken and the sheet
             would turn into an opaque lid over the whole chart. */}
-        <ImageOverlay
-          url={WORLD_MAP.wearUrl}
-          bounds={IMAGE_BOUNDS}
-          className="atlas-wear"
-          zIndex={2}
-        />
+        {chart.wearUrl && (
+          <ImageOverlay
+            url={chart.wearUrl}
+            bounds={bounds}
+            className="atlas-wear"
+            zIndex={2}
+          />
+        )}
         <ZoomControl position="topright" />
-        <FitZoomLimit />
+        <FitZoomLimit bounds={bounds} />
         <ZoomWatcher
           onZoom={(zoom) => setLabelsShown(zoom >= LABEL_MIN_ZOOM)}
         />
-        <MapClicks onClick={handleMapClick} />
+        <MapClicks chart={chart} onClick={handleMapClick} />
         {!picker && (
           <DeepLinkFocus
+            chart={chart}
             locations={locations}
             onSelect={(location) => {
               setSelected(location);
@@ -622,7 +644,7 @@ export default function WorldMapClient({
         {locations.map((location) => (
           <Marker
             key={location.slug}
-            position={pixelToLatLng(moves[location.slug] ?? location)}
+            position={pixelToLatLng(moves[location.slug] ?? location, chart)}
             icon={locationIcon(location, selected?.slug === location.slug)}
             alt={location.name}
             draggable={picker}
@@ -635,7 +657,7 @@ export default function WorldMapClient({
                 const at = (e.target as LeafletMarker).getLatLng();
                 setMoves((prev) => ({
                   ...prev,
-                  [location.slug]: latLngToPixel(at.lat, at.lng),
+                  [location.slug]: latLngToPixel(at.lat, at.lng, chart),
                 }));
               },
             }}
@@ -645,9 +667,10 @@ export default function WorldMapClient({
             and leaflet needs sole ownership of that element's transitions
             (see globals.css) — so they wait by not existing yet. */}
         {!picker &&
+          worldChart &&
           paperReady &&
           ROUTE_LEGS.map((leg) => {
-            const positions = leg.points.map(pixelToLatLng);
+            const positions = leg.points.map((p) => pixelToLatLng(p));
             const label = legLabelPlacement(leg);
             const active = selectedLeg?.id === leg.id;
             return (
@@ -685,6 +708,7 @@ export default function WorldMapClient({
             );
           })}
         {!picker &&
+          worldChart &&
           MONSTERS.map((monster) => (
             <Marker
               key={monster.slug}
@@ -697,7 +721,7 @@ export default function WorldMapClient({
             />
           ))}
         {picker && picked && (
-          <Marker position={pixelToLatLng(picked)} icon={pickedIcon} />
+          <Marker position={pixelToLatLng(picked, chart)} icon={pickedIcon} />
         )}
       </MapContainer>
 
@@ -722,56 +746,61 @@ export default function WorldMapClient({
                 {/* One shared key for the whole sheet: the stories are a
                     compact register at its head, not sections of their own —
                     every sign below explains marks of any story. */}
-                <section>
-                  <div
-                    className="text-center text-base leading-none text-muted"
-                    aria-hidden="true"
-                  >
-                    ❧
-                  </div>
-                  <h2 className="mt-1.5 text-center text-xs uppercase tracking-widest text-muted">
-                    Stories of this chart
-                  </h2>
-                  <div className="parchment-rule mt-2" />
-                  <ul className="mt-3 space-y-1.5">
-                    {legend.map((story) => (
-                      <li
-                        key={story.slug}
-                        className="flex items-baseline justify-between gap-3 text-sm"
-                      >
-                        <Link
-                          href={`/stories/${story.slug}`}
-                          className="font-display italic leading-snug transition-colors hover:text-accent"
+                <div
+                  className="text-center text-base leading-none text-muted"
+                  aria-hidden="true"
+                >
+                  ❧
+                </div>
+
+                {legend.length > 0 && (
+                  <section className="mt-1.5">
+                    <h2 className="text-center text-xs uppercase tracking-widest text-muted">
+                      Stories of this chart
+                    </h2>
+                    <div className="parchment-rule mt-2" />
+                    <ul className="mt-3 space-y-1.5">
+                      {legend.map((story) => (
+                        <li
+                          key={story.slug}
+                          className="flex items-baseline justify-between gap-3 text-sm"
                         >
-                          {story.title}
-                        </Link>
-                        <span className="text-xs tracking-widest text-muted">
-                          {story.year}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
+                          <Link
+                            href={`/stories/${story.slug}`}
+                            className="font-display italic leading-snug transition-colors hover:text-accent"
+                          >
+                            {story.title}
+                          </Link>
+                          <span className="text-xs tracking-widest text-muted">
+                            {story.year}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
 
                 {/* Each sign is explained once, as a chart's key would —
                     the pins themselves carry the place names. */}
-                <section className="mt-6">
-                  <h2 className="text-center text-xs uppercase tracking-widest text-muted">
-                    Explanation
-                  </h2>
-                  <div className="parchment-rule mt-2" />
-                  <ul className="mt-3 space-y-1.5">
-                    {legendTypes.map((type) => (
-                      <li
-                        key={type}
-                        className="flex items-center gap-2.5 text-sm capitalize"
-                      >
-                        <LegendGlyph type={type} />
-                        <span>{type}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
+                {legendTypes.length > 0 && (
+                  <section className="mt-6">
+                    <h2 className="text-center text-xs uppercase tracking-widest text-muted">
+                      Explanation
+                    </h2>
+                    <div className="parchment-rule mt-2" />
+                    <ul className="mt-3 space-y-1.5">
+                      {legendTypes.map((type) => (
+                        <li
+                          key={type}
+                          className="flex items-center gap-2.5 text-sm capitalize"
+                        >
+                          <LegendGlyph type={type} />
+                          <span>{type}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
 
                 {legend.some((story) => story.slug === ROUTE_STORY_SLUG) && (
                   <section className="mt-6">
@@ -822,6 +851,35 @@ export default function WorldMapClient({
                   </section>
                 )}
 
+                {/* The atlas' other sheets — the way an antique chart points
+                    at its companion inset. The current one is no link. */}
+                {Object.keys(MAPS).length > 1 && (
+                  <section className="mt-6">
+                    <h2 className="text-center text-xs uppercase tracking-widest text-muted">
+                      Charts of the atlas
+                    </h2>
+                    <div className="parchment-rule mt-2" />
+                    <ul className="mt-3 space-y-1.5">
+                      {Object.values(MAPS).map((m) => (
+                        <li key={m.id} className="text-sm">
+                          {m.id === chart.id ? (
+                            <span className="font-display italic text-muted">
+                              {m.title} — this sheet
+                            </span>
+                          ) : (
+                            <Link
+                              href={chartPath(m.id)}
+                              className="font-display italic transition-colors hover:text-accent"
+                            >
+                              {m.title} →
+                            </Link>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                )}
+
                 <div
                   className="mt-5 text-center text-sm leading-none text-muted"
                   aria-hidden="true"
@@ -850,9 +908,11 @@ export default function WorldMapClient({
             </button>
           </div>
           <h2 className="cap-first mt-1 font-display text-2xl">{selected.name}</h2>
-          <p className="mt-0.5 text-xs tracking-widest text-muted">
-            {formatDegrees(selected)}
-          </p>
+          {chart.calibrated && (
+            <p className="mt-0.5 text-xs tracking-widest text-muted">
+              {formatDegrees(selected)}
+            </p>
+          )}
           <div className="parchment-rule mt-2" />
           {(() => {
             const thumb = getPlateThumb("locations", selected.slug);
@@ -936,6 +996,25 @@ export default function WorldMapClient({
           <span className="text-xs uppercase tracking-widest text-muted">
             Coordinate picker · dev only
           </span>
+          {Object.keys(MAPS).length > 1 && (
+            <div className="mt-2 flex flex-wrap gap-2">
+              {/* Plain anchors: the picker page reads ?map= server-side, so
+                  switching charts is a full reload with fresh picker data. */}
+              {Object.values(MAPS).map((m) => (
+                <a
+                  key={m.id}
+                  href={m.id === "world" ? "/admin/coords" : `/admin/coords?map=${m.id}`}
+                  className={`rounded-md border px-2 py-1 text-xs transition-colors ${
+                    m.id === chart.id
+                      ? "border-accent text-accent"
+                      : "border-line text-muted hover:border-accent"
+                  }`}
+                >
+                  {m.title}
+                </a>
+              ))}
+            </div>
+          )}
           {selected && (
             <div className="mt-3 border-b border-line pb-3">
               <p className="text-sm font-medium">

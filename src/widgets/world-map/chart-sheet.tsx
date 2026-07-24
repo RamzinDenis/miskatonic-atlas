@@ -3,11 +3,7 @@
 import type { LatLngBoundsExpression } from "leaflet";
 import { useCallback, useRef, useState } from "react";
 import { ImageOverlay, useMap, useMapEvents } from "react-leaflet";
-import {
-  SHEETS,
-  WORLD_MAP,
-  type ChartSheetSource,
-} from "./geometry";
+import type { AtlasMap, MapSheet } from "./geometry";
 
 /**
  * Past 2× the screen has more pixels than the eye has receptors for a
@@ -18,17 +14,17 @@ const MAX_DENSITY = 2;
 
 /**
  * An overview never pulls the full scan, even where the density would
- * justify it: the reader has asked to see the whole world, which is the one
+ * justify it: the reader has asked to see the whole chart, which is the one
  * view where detail is invisible by definition. It arrives on the first
  * close-up instead.
  */
 const OVERVIEW_CEILING = 2048;
 
 /** The smallest copy that still has a pixel for every pixel on screen. */
-function pickSheet(zoom: number, ceiling = Infinity): ChartSheetSource {
+function pickSheet(chart: AtlasMap, zoom: number, ceiling = Infinity): MapSheet {
   const density = Math.min(window.devicePixelRatio || 1, MAX_DENSITY);
-  const needed = WORLD_MAP.width * 2 ** zoom * density;
-  const usable = SHEETS.filter((sheet) => sheet.width <= ceiling);
+  const needed = chart.width * 2 ** zoom * density;
+  const usable = chart.sheets.filter((sheet) => sheet.width <= ceiling);
   return (
     usable.find((sheet) => sheet.width >= needed) ?? usable[usable.length - 1]
   );
@@ -42,9 +38,9 @@ function pickSheet(zoom: number, ceiling = Infinity): ChartSheetSource {
  */
 const fetched = new Set<string>();
 
-/** The best copy already in hand for an overview, if there is one. */
-function warmSheet(): ChartSheetSource | undefined {
-  return SHEETS.filter(
+/** The best copy already in hand for an overview of this chart, if any. */
+function warmSheet(chart: AtlasMap): MapSheet | undefined {
+  return chart.sheets.filter(
     (sheet) => sheet.width <= OVERVIEW_CEILING && fetched.has(sheet.url),
   ).pop();
 }
@@ -53,8 +49,8 @@ function warmSheet(): ChartSheetSource | undefined {
  * Whether the chart can be printed whole on the first frame — read by the
  * widget so a return visit skips the fade the first visit needs.
  */
-export function chartIsWarm(): boolean {
-  return warmSheet() !== undefined;
+export function chartIsWarm(chart: AtlasMap): boolean {
+  return warmSheet(chart) !== undefined;
 }
 
 /**
@@ -65,16 +61,18 @@ export function chartIsWarm(): boolean {
  * detail bought with another download.
  */
 export function ChartSheet({
+  chart,
   bounds,
   onReady,
 }: {
+  chart: AtlasMap;
   bounds: LatLngBoundsExpression;
   onReady: () => void;
 }) {
   const map = useMap();
   const [sheet, setSheet] = useState(() => {
-    const wanted = pickSheet(map.getZoom(), OVERVIEW_CEILING);
-    const warm = warmSheet();
+    const wanted = pickSheet(chart, map.getZoom(), OVERVIEW_CEILING);
+    const warm = warmSheet(chart);
     // A copy already fetched costs nothing to show and is never coarser
     // than the rung this view asks for.
     return warm && warm.width > wanted.width ? warm : wanted;
@@ -82,19 +80,22 @@ export function ChartSheet({
   const shown = useRef(sheet);
   const fetching = useRef<string | null>(null);
 
-  const considerUpgrade = useCallback((zoom: number) => {
-    const wanted = pickSheet(zoom);
-    if (wanted.width <= shown.current.width) return;
-    if (fetching.current === wanted.url) return;
-    fetching.current = wanted.url;
-    const copy = new Image();
-    copy.onload = () => {
-      fetched.add(wanted.url);
-      shown.current = wanted;
-      setSheet(wanted);
-    };
-    copy.src = wanted.url;
-  }, []);
+  const considerUpgrade = useCallback(
+    (zoom: number) => {
+      const wanted = pickSheet(chart, zoom);
+      if (wanted.width <= shown.current.width) return;
+      if (fetching.current === wanted.url) return;
+      fetching.current = wanted.url;
+      const copy = new Image();
+      copy.onload = () => {
+        fetched.add(wanted.url);
+        shown.current = wanted;
+        setSheet(wanted);
+      };
+      copy.src = wanted.url;
+    },
+    [chart],
+  );
 
   const handleLoad = useCallback(() => {
     fetched.add(shown.current.url);
@@ -107,20 +108,23 @@ export function ChartSheet({
     },
   });
 
+  /* "art" sheets arrive already aged — the scan tint would drown them. */
+  const toneClass = `atlas-scan${chart.tone === "art" ? " atlas-scan--art" : ""}`;
+
   return (
     <>
       {/* The thumb below: the paper is there from the first frame, and a
           copy still in flight has aged paper under it, not the binding. */}
       <ImageOverlay
-        url={WORLD_MAP.lqipUrl}
+        url={chart.lqipUrl}
         bounds={bounds}
-        className="atlas-scan"
+        className={toneClass}
         zIndex={0}
       />
       <ImageOverlay
         url={sheet.url}
         bounds={bounds}
-        className="atlas-scan"
+        className={toneClass}
         zIndex={1}
         eventHandlers={{ load: handleLoad }}
       />

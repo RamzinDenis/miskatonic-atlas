@@ -10,6 +10,7 @@ import {
   getTopLocations,
   locationHref,
 } from "@/shared/lib/content";
+import { chartPath } from "@/shared/maps";
 import type { Location } from "@/shared/schemas";
 import { ChipSection, Description, SourcesSection } from "@/shared/ui/sections";
 import { getPlate } from "@/widgets/plates";
@@ -50,10 +51,15 @@ function LocationBody({ location }: { location: Location }) {
 
       {location.map && (
         <MapInset
-          x={location.map.x}
-          y={location.map.y}
+          map={location.map}
           name={location.name}
-          chartHref={location.prominence === "major" ? `/?focus=${location.slug}` : undefined}
+          chartHref={
+            // Majors only, and never sub-locations: a child has no public pin
+            // to focus (ADR-0003) — its inset alone shows where it lies.
+            location.prominence === "major" && !location.parentSlug
+              ? `${chartPath(location.map.mapId)}?focus=${location.slug}`
+              : undefined
+          }
         />
       )}
 
