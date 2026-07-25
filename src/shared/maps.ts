@@ -130,6 +130,30 @@ export const MAPS: Record<string, AtlasMap> = {
     tone: "art",
     markerStyle: "annotation",
   },
+  /**
+   * The desert sheet of the Arabian theatre (ADR-0004): generated dune-sea
+   * chart drawn strictly after "The Nameless City" (plus Irem's one Castro
+   * sentence in "The Call of Cthulhu"). Uncalibrated like every generated
+   * sheet; the underworld (the mummy corridor, the abyss) is interior and
+   * stays on the location's own page. Top-level pins only.
+   */
+  desert: {
+    id: "desert",
+    title: "The Desert of Araby",
+    url: "/maps/desert-1448.webp",
+    lqipUrl: "/maps/desert-lqip.webp",
+    insetUrl: "/maps/desert-1024.webp",
+    width: 1448,
+    height: 1086,
+    sheets: [
+      { width: 1024, url: "/maps/desert-1024.webp" },
+      { width: 1448, url: "/maps/desert-1448.webp" },
+    ],
+    // Same generator ceiling as the other sheets (~1450px source).
+    maxZoom: 0.5,
+    tone: "art",
+    markerStyle: "annotation",
+  },
 };
 
 export function getAtlasMap(mapId: string): AtlasMap {

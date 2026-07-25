@@ -32,7 +32,7 @@ const MAPS = path.join(ROOT, "public", "maps");
    an id whose source (jpg or png) is not in public/maps/ yet is skipped with
    a note. A png source additionally gets a full-width webp as the ladder's
    top rung — the png stays in the repo as the cutting source only. */
-const SOURCES = ["new-england", "pacific"];
+const SOURCES = ["new-england", "pacific", "desert"];
 
 /** Must match `sheets` in the src/shared/maps.ts registry. */
 const RUNGS = [1024, 2048];
