@@ -151,6 +151,203 @@ creature, no monster, nothing visible where the horror is. The terror is that
 there is nothing to see.
 ```
 
+## The Festival + The Colour Out of Space — очередь 25.07
+
+Два рассказа дали четыре существа; правило 3 пропускает три гравюры-маски.
+**Цвет остаётся утраченной пластиной по самому тексту** — «almost impossible
+to describe... it was only by analogy that they called it colour at all»
+(¶17), «not any colour of our earth or heavens»: чёрная тушь не печатает
+не-цвет, и это та же осмысленная граница, что у Йог-Сотота. Его явление
+печатает вклейка Plate X — свечением, а не фигурой.
+
+Реестр бестиария: все четверо занесены с латынью (registry.ts), у трёх
+`art` заполнится после генерации. Номера вклеек: VIII ещё за Данвичем
+(выше), Festival — **IX**, Colour — **X**.
+
+### 1. Hybrid Winged Things — гравюра-маска (жанр А)
+
+Референсы: `public/plates/monster-cthulhu.png` + `monster-tornasuk.png`.
+Драфт эффектов: `["breath", "ink-shiver", "gaze-tilt"]`. Кандидат в
+маргиналии: море у Кингспорта на листе new-england (чистая бумага волн;
+твари прилетают из-под его церкви) — решение за владельцем, иначе
+`BESTIARY_ONLY`.
+
+```
+Highly detailed black-and-white ink engraving in the manner of a 19th-century
+natural-history plate: dense crosshatching and stippling, pure black India ink
+on a plain pure-white background. A single isolated figure, complete and
+uncropped, centered with clear white margins on every side. No frame, no
+border, no caption, no lettering, no signature, no background scenery.
+Square canvas.
+
+Subject, drawn strictly after the text of H. P. Lovecraft's "The Festival"
+and nothing else:
+
+"there flopped rhythmically a horde of tame, trained, hybrid winged things
+that no sound eye could ever wholly grasp, or sound brain ever wholly
+remember. They were not altogether crows, nor moles, nor buzzards, nor ants,
+nor vampire bats, nor decomposed human beings, but something I cannot and
+must not recall. They flopped limply along, half with their webbed feet and
+half with their membranous appendages"
+
+A single hybrid winged beast the size of a large vulture, crouched mid-flop
+on its webbed feet, one ragged membranous wing half spread. Its anatomy
+refuses to settle: the beaked-and-eyed head is not altogether a crow's, the
+blunt velvety muzzle beneath not altogether a mole's, the naked neck not
+altogether a buzzard's; jointed ant-like plates show along the belly, the
+wing is a vampire bat's stretched skin, and the sagging limbs have a hint of
+a decomposed human arm. Every part almost resolves into a known animal and
+fails. NOT a clean bat, NOT a bird, NOT a gargoyle — a limp, wrong composite
+caught between all of them.
+```
+
+### 2. The Amorphous Flute-Player — гравюра-маска (жанр А)
+
+Референсы: те же + `public/plates/monster-white-polypous-thing.png`
+(ближайшая родня по бесформенности). Драфт эффектов: `["breath",
+"ink-shiver"]` — глаз, чтобы вести взглядом, у него нет. `BESTIARY_ONLY`:
+тварь подземная, на листах ей не место.
+
+```
+Highly detailed black-and-white ink engraving in the manner of a 19th-century
+natural-history plate: dense crosshatching and stippling, pure black India ink
+on a plain pure-white background. A single isolated figure, complete and
+uncropped, centered with clear white margins on every side. No frame, no
+border, no caption, no lettering, no signature, no background scenery.
+Square canvas.
+
+Subject, drawn strictly after the text of H. P. Lovecraft's "The Festival"
+and nothing else:
+
+"I saw something amorphously squatted far away from the light, piping
+noisomely on a flute; and as the thing piped I thought I heard noxious
+muffled flutterings in the fetid darkness where I could not see."
+
+A single shapeless mass squatted like a mound of heaped dark matter, its
+outline slumping and undefined, half dissolving into hatched shadow at the
+edges — no face, no visible eyes, no limbs that resolve cleanly. From the
+front of the mass two boneless flaps like rudimentary arms hold a crude
+reed flute to a puckered opening that is not quite a mouth. The whole figure
+sags under its own weight as if it could roll away. NOT a hooded human
+figure, NOT an octopus — an amorphous squatting heap that plays a flute.
+```
+
+### 3. The Meteorite — гравюра-маска (жанр А)
+
+Единственный минерал фолио — и потому гравюра ему полагается как образцу
+в кабинете натуралиста, рядом с птицей Данвича. Референсы: те же. Драфт
+эффектов: `["ink-shiver", "vermilion-pulse"]` — камень не дышит, но глобула
+тлеет. `BESTIARY_ONLY`.
+
+```
+Highly detailed black-and-white ink engraving in the manner of a 19th-century
+natural-history plate: dense crosshatching and stippling, pure black India ink
+on a plain pure-white background. A single isolated figure, complete and
+uncropped, centered with clear white margins on every side. No frame, no
+border, no caption, no lettering, no signature, no background scenery.
+Square canvas.
+
+Subject, drawn strictly after the text of H. P. Lovecraft's "The Colour Out
+of Space" and nothing else:
+
+"the big brownish mound above the ripped earth and charred grass near the
+archaic well-sweep in his front yard"; "It was oddly soft, almost plastic";
+"They had uncovered what seemed to be the side of a large coloured globule
+embedded in the substance. ... Its texture was glossy, and upon tapping it
+appeared to promise both brittleness and hollowness."
+
+A single meteor stone drawn as a mineralogical specimen: an irregular
+dwindling lump, its surface soft-looking and almost plastic rather than
+crystalline, rendered in dense stipple with slick, half-melted contours.
+One flank is gouged open by hammer and chisel, and in the fresh cut lies
+the exposed side of a large embedded globule — perfectly smooth, glossy
+and hollow-looking, rendered in a lighter, glassier tone than the dull
+matrix around it, as if it shone with a gleam the ink cannot name. A few
+chisel marks and detached fragments lie at its base as a minimal pedestal.
+NOT a cratered cannonball asteroid — a soft, wrong, shrinking stone with a
+glassy bubble in its wound.
+```
+
+### 4. Plate IX «Йольский обряд» — вклейка (жанр Б)
+
+Хозяин — страница рассказа `stories/the-festival` (как Plate IV у Зова);
+альтернатива — `locations/the-great-white-church`, если захочется держать
+вклейку у места. Твари и флейтист в кадр не входят — до их выхода; жуть
+держат пламя, грибы и толпа.
+
+Референсы: `src/widgets/plates/rlyeh.png` + `swamp-ritual.png`.
+
+```
+A full-page wood-engraved book plate in the manner of Gustave Doré: fine
+parallel hatching, deep rich blacks, dramatic light, engraved on lightly
+toned antique paper, enclosed in a thin single-rule border like an
+illustration from a 19th-century edition. No text, no caption, no lettering,
+no signature anywhere on the plate.
+
+Subject, drawn strictly after the text of H. P. Lovecraft's "The Festival"
+and nothing else:
+
+"suddenly there spread out before me the boundless vista of an inner world—a
+vast fungous shore litten by a belching column of sick greenish flame and
+washed by a wide oily river that flowed from abysses frightful and
+unsuspected"
+
+"I looked at that unhallowed Erebus of titan toadstools, leprous fire and
+slimy water, and saw the cloaked throngs forming a semicircle around the
+blazing pillar."
+
+A vast cavern world under an unseen stone sky: a fungous shore crowded with
+titan toadstools taller than men, washed by a wide oily river that slides
+out of darkness. At the center a belching column of cold flame rises from
+the rock, casting a sick corpse-light that makes no shadows dance — the one
+light source of the scene. Around the blazing pillar a throng of hooded,
+cloaked figures stands in a wide silent semicircle, faces hidden, some
+casting handfuls of glistening vegetation into the water. In the foreground
+a single unhooded man has sunk to his knees at the edge of the light,
+staring. The far reaches of the cavern and the river's source dissolve into
+engraved blackness.
+```
+
+### 5. Plate X «деревья, что тянулись к небу» — вклейка (жанр Б)
+
+Хозяин — страница рассказа `stories/the-colour-out-of-space`; альтернатива —
+`locations/the-blasted-heath`. Сцена выбрана как явление цвета без цвета:
+силуэты и свечение печатаются тушью, сам не-цвет остаётся утраченным — в
+паре с решением по бестиарию.
+
+Референсы: те же.
+
+```
+A full-page wood-engraved book plate in the manner of Gustave Doré: fine
+parallel hatching, deep rich blacks, dramatic light, engraved on lightly
+toned antique paper, enclosed in a thin single-rule border like an
+illustration from a 19th-century edition. No text, no caption, no lettering,
+no signature anywhere on the plate.
+
+Subject, drawn strictly after the text of H. P. Lovecraft's "The Colour Out
+of Space" and nothing else:
+
+"that shaft of unknown and unholy iridescence from the slimy depths in
+front"
+
+"in a fearsome instant of deeper darkness the watchers saw wriggling at the
+treetop height a thousand tiny points of faint and unhallowed radiance,
+tipping each bough like the fire of St. Elmo or the flames that come down
+on the apostles' heads at Pentecost. It was a monstrous constellation of
+unnatural light, like a glutted swarm of corpse-fed fireflies"
+
+A ruined New England farmyard at night under a moon half buried in cloud.
+From the mouth of an old stone well with an archaic well-sweep rises a
+straight shaft of pale unearthly light, faintly iridescent, dissolving into
+the sky. Around the yard the shrivelled orchard trees claw upward with
+branch silhouettes twisted like grasping fingers — though nothing else in
+the scene stirs — and every bough-tip carries a tiny point of radiance, a
+monstrous constellation of unnatural light scattered through the black
+branches. In the foreground corner, the dark gambrel silhouette of the
+farmhouse with a lit window crowded with small watching figures. Deep
+engraved blacks everywhere the light does not reach.
+```
+
 ## The Nameless City — сгенерировано 23.07, промпты сохранены для истории
 
 ### 1. ~~The Crawling Reptiles — гравюра-маска (жанр А)~~

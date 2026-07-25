@@ -175,6 +175,35 @@ export const BESTIARY: BestiaryPlate[] = [
     epithet: "The Fish-God of the ancient Philistine legend",
     art: null,
   },
+  /* The next three await their engravings (docs/engravings-queue.md,
+     25.07) — art fills in when the owner's masks land. */
+  {
+    slug: "hybrid-winged-things",
+    latin: "Volucris tartarea",
+    epithet: "Not altogether crows, nor moles, nor buzzards",
+    art: null,
+  },
+  {
+    slug: "amorphous-flute-player",
+    latin: "Tibicen informis",
+    epithet: "Piping noisomely beyond the light",
+    art: null,
+  },
+  {
+    slug: "the-meteorite",
+    latin: "Aerolithus contrahens",
+    epithet: "A piece of the great outside",
+    art: null,
+  },
+  {
+    /* A wanting plate by the story's own decree: "it was only by analogy
+       that they called it colour at all" — black ink cannot print the
+       un-colour, so the folio never will. Plate X shows its light instead. */
+    slug: "the-colour-out-of-space",
+    latin: "Color extraneus",
+    epithet: "A frightful messenger from unformed realms of infinity",
+    art: null,
+  },
 ];
 
 /** The creature content the folio needs — structural, so the widget never
