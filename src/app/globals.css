@@ -564,10 +564,12 @@ a:focus-visible > .chart-tile {
   box-shadow: inset 0 0 40px rgba(8, 6, 2, 0.55);
 }
 
-/* The tint sits on the scan layer only, so the pin keeps its ink color. */
+/* The tint sits on the scan layer only, so the pin keeps its ink color.
+   Placement comes from the --inset-* variables set by map-inset.tsx. */
 .map-inset-scan {
   position: absolute;
-  inset: 0;
+  left: var(--inset-left, 0);
+  top: var(--inset-top, 0);
   background-repeat: no-repeat;
   filter: sepia(0.6) saturate(0.62) brightness(0.85) contrast(1.07);
 }
@@ -602,8 +604,8 @@ a:focus-visible > .chart-tile {
 /* "You are here" on the excerpt — printed straight in vermilion. */
 .map-inset-pin {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: calc(var(--inset-left, 0px) + var(--inset-x, 50%));
+  top: calc(var(--inset-top, 0px) + var(--inset-y, 50%));
   transform: translate(-50%, -50%);
   color: var(--ink-accent);
 }

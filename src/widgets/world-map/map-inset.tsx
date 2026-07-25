@@ -30,12 +30,22 @@ export function MapInset({
   chartHref?: string;
 }) {
   const chart = getAtlasMap(map.mapId);
-  const { x, y } = map;
-  // background-position: `calc(50% + Npx)` resolves the percentage against
-  // (container − image), so N = imageSize/2 − point·scale centers the pin
-  // regardless of the container's width.
-  const offsetX = (chart.width * INSET_SCALE) / 2 - x * INSET_SCALE;
-  const offsetY = (chart.height * INSET_SCALE) / 2 - y * INSET_SCALE;
+  const sheetW = chart.width * INSET_SCALE;
+  const sheetH = chart.height * INSET_SCALE;
+  const pinX = map.x * INSET_SCALE;
+  const pinY = map.y * INSET_SCALE;
+  // The sheet layer is a positioned child of the strip: `50% − pin` centers
+  // the pin, and the clamp keeps the sheet's edges at or past the strip's —
+  // a pin near a margin gets an off-center crop instead of blank backing.
+  // The ring is anchored to the same variables, so it follows the pin
+  // wherever the crop settles. (Valid while the sheet outsizes the strip,
+  // which the article column guarantees.)
+  const inset = {
+    "--inset-left": `clamp(calc(100% - ${sheetW}px), calc(50% - ${pinX}px), 0px)`,
+    "--inset-top": `clamp(calc(100% - ${sheetH}px), calc(50% - ${pinY}px), 0px)`,
+    "--inset-x": `${pinX}px`,
+    "--inset-y": `${pinY}px`,
+  } as React.CSSProperties;
 
   return (
     <figure className="mt-10">
@@ -43,13 +53,15 @@ export function MapInset({
         className="map-inset h-44 w-full rounded-sm"
         role="img"
         aria-label={`Excerpt of the chart around ${name}`}
+        style={inset}
       >
         <div
           className="map-inset-scan"
           style={{
             backgroundImage: `url(${chart.insetUrl})`,
-            backgroundSize: `${chart.width * INSET_SCALE}px ${chart.height * INSET_SCALE}px`,
-            backgroundPosition: `calc(50% + ${offsetX}px) calc(50% + ${offsetY}px)`,
+            width: `${sheetW}px`,
+            height: `${sheetH}px`,
+            backgroundSize: `${sheetW}px ${sheetH}px`,
           }}
         />
         <span className="atlas-pin map-inset-pin">
