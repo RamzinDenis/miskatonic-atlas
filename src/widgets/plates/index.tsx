@@ -4,6 +4,7 @@ import alert from "./alert.jpg";
 import legrasseIdol from "./legrasse-idol.png";
 import monolithRite from "./monolith-rite.png";
 import rlyeh from "./rlyeh.png";
+import sentinelRite from "./sentinel-rite.png";
 import swampRitual from "./swamp-ritual.png";
 import theNamelessCity from "./the-nameless-city.png";
 import wellRadiance from "./well-radiance.png";
@@ -98,6 +99,16 @@ const plates: Record<string, PlateDef> = {
     quote:
       "I was traveling in a parched and terrible valley under the moon, and afar I saw it protruding uncannily above the sands as parts of a corpse might protrude from an ill-made grave.",
     attribution: "The Nameless City (1921)",
+  },
+  "stories/the-dunwich-horror": {
+    numeral: "VIII",
+    storySlug: "the-dunwich-horror",
+    image: sentinelRite,
+    alt: "Engraved plate of the spell on Sentinel Hill: tiny figures among standing stones on a bare summit, the middle one with arms raised under a stroke of lightning, watched from the shadowed road below by a huddled crowd with a telescope — and nothing visible where the horror is",
+    caption: "The spell on the summit, seen from the road below, drawn after the text:",
+    quote:
+      "One figure, he said, seemed to be raising its hands above its head at rhythmic intervals; and as Sawyer mentioned the circumstance the crowd seemed to hear a faint, half-musical sound from the distance, as if a loud chant were accompanying the gestures.",
+    attribution: "The Dunwich Horror (1929) — Chapter 10",
   },
   "stories/the-festival": {
     numeral: "IX",

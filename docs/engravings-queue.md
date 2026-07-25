@@ -102,7 +102,11 @@ tail slightly spread. Nothing supernatural is added — an ordinary bird, drawn
 from life, caught mid-call.
 ```
 
-### 3. Plate VIII «заклинание на вершине» — вклейка (жанр Б)
+### 3. ~~Plate VIII «заклинание на вершине» — вклейка (жанр Б)~~
+
+Сгенерирована и подключена 25.07: `sentinel-rite.png` →
+`stories/the-dunwich-horror` (цитата ¶131, Chapter 10). Очередь Данвича
+закрыта целиком.
 
 Следующий свободный номер — **VIII** (I–VII заняты). Хозяин — страница
 рассказа `stories/the-dunwich-horror` (как Plate IV у «Зова Ктулху»);
