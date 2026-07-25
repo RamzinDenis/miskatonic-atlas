@@ -6,7 +6,9 @@ import monolithRite from "./monolith-rite.png";
 import rlyeh from "./rlyeh.png";
 import swampRitual from "./swamp-ritual.png";
 import theNamelessCity from "./the-nameless-city.png";
+import wellRadiance from "./well-radiance.png";
 import wilcoxBasRelief from "./wilcox-bas-relief.jpg";
+import yuleRite from "./yule-rite.png";
 
 /**
  * Plates — editorial engravings on entity and story pages (CONTEXT.md:
@@ -96,6 +98,26 @@ const plates: Record<string, PlateDef> = {
     quote:
       "I was traveling in a parched and terrible valley under the moon, and afar I saw it protruding uncannily above the sands as parts of a corpse might protrude from an ill-made grave.",
     attribution: "The Nameless City (1921)",
+  },
+  "stories/the-festival": {
+    numeral: "IX",
+    storySlug: "the-festival",
+    image: yuleRite,
+    alt: "Engraved plate of the Yule-rite: a cavern of titan toadstools where hooded figures ring a belching column of cold flame beside an oily river, watched by a lone man fallen to his knees",
+    caption: "The rite in the cavern under Kingsport, drawn after the text:",
+    quote:
+      "I looked at that unhallowed Erebus of titan toadstools, leprous fire and slimy water, and saw the cloaked throngs forming a semicircle around the blazing pillar.",
+    attribution: "The Festival (1925)",
+  },
+  "stories/the-colour-out-of-space": {
+    numeral: "X",
+    storySlug: "the-colour-out-of-space",
+    image: wellRadiance,
+    alt: "Engraved plate of the blasted farmyard at night: a shaft of pale light rising from the stone well while twisted trees claw at the sky, every bough tipped with points of radiance, watchers crowded at a lit farmhouse window",
+    caption: "The night the colour went home, drawn after the text:",
+    quote:
+      "in a fearsome instant of deeper darkness the watchers saw wriggling at the treetop height a thousand tiny points of faint and unhallowed radiance, tipping each bough like the fire of St. Elmo or the flames that come down on the apostles' heads at Pentecost.",
+    attribution: "The Colour Out of Space (1927)",
   },
   "characters/henry-anthony-wilcox": {
     numeral: "V",

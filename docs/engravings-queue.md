@@ -275,7 +275,9 @@ NOT a cratered cannonball asteroid — a soft, wrong, shrinking stone with a
 glassy bubble in its wound.
 ```
 
-### 4. Plate IX «Йольский обряд» — вклейка (жанр Б)
+### 4. ~~Plate IX «Йольский обряд» — вклейка (жанр Б)~~
+
+Сгенерирована и подключена 25.07: `yule-rite.png` → `stories/the-festival`.
 
 Хозяин — страница рассказа `stories/the-festival` (как Plate IV у Зова);
 альтернатива — `locations/the-great-white-church`, если захочется держать
@@ -315,7 +317,10 @@ staring. The far reaches of the cavern and the river's source dissolve into
 engraved blackness.
 ```
 
-### 5. Plate X «деревья, что тянулись к небу» — вклейка (жанр Б)
+### 5. ~~Plate X «деревья, что тянулись к небу» — вклейка (жанр Б)~~
+
+Сгенерирована и подключена 25.07: `well-radiance.png` →
+`stories/the-colour-out-of-space`.
 
 Хозяин — страница рассказа `stories/the-colour-out-of-space`; альтернатива —
 `locations/the-blasted-heath`. Сцена выбрана как явление цвета без цвета:
