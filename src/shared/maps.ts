@@ -50,7 +50,19 @@ export interface AtlasMap {
    * tint would drown its hand-tinted color.
    */
   tone?: "scan" | "art";
+  /**
+   * Which placed locations get a public pin. The default "top-level" hides
+   * sub-locations (ADR-0003): on a world chart a landmark inside a town is
+   * noise. A close-up regional sheet is the opposite — its whole point is
+   * the landmarks — so it declares "all" and pins children too.
+   */
+  pins?: "top-level" | "all";
   attribution?: { label: string; href: string };
+}
+
+/** True when the chart pins sub-locations too (pins: "all"). */
+export function chartShowsChildren(mapId: string): boolean {
+  return MAPS[mapId]?.pins === "all";
 }
 
 /**
@@ -109,6 +121,8 @@ export const MAPS: Record<string, AtlasMap> = {
     // ×1.4 so the engraving never dissolves into upscale blur.
     maxZoom: 0.5,
     tone: "art",
+    // A close-up sheet lives on its landmarks: sub-locations pin publicly.
+    pins: "all",
   },
 };
 

@@ -11,7 +11,7 @@ import {
   type Location,
   type Story,
 } from "../schemas.ts"; // relative + extension so Node can run this file directly (scripts/validate.mts)
-import { MAPS } from "../maps.ts"; // relative + extension for the same reason
+import { chartShowsChildren, MAPS } from "../maps.ts"; // relative + extension for the same reason
 import type {
   MapFigure,
   MapLegendGroup,
@@ -406,7 +406,7 @@ export function getSeedPlacements(
 export function getMapLocations(mapId = "world"): MapLocation[] {
   const content = loadContent();
   return majorOnly(content.locations)
-    .filter((l) => !l.parentSlug)
+    .filter((l) => !l.parentSlug || chartShowsChildren(mapId))
     .flatMap(toMapLocation(content, mapId));
 }
 
@@ -444,7 +444,7 @@ export function getMapLegend(mapId = "world"): MapLegendGroup[] {
       title: story.title,
       year: story.year,
       locations: majorOnly(content.locations)
-        .filter((l) => !l.parentSlug && l.appearsIn.includes(story.slug))
+        .filter((l) => (!l.parentSlug || chartShowsChildren(mapId)) && l.appearsIn.includes(story.slug))
         .flatMap(toMapLocation(content, mapId))
         .sort((a, b) => a.name.localeCompare(b.name, "en")),
     }))
