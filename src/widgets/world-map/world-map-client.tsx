@@ -926,37 +926,58 @@ export default function WorldMapClient({
         </div>
       )}
 
-      {/* The atlas' sheets as a toggle of framed tiles — the chart switcher
-          lives in its own corner, apart from the legend's key. The current
+      {/* The atlas' sheets as a toggle of framed, lettered tiles in a
+          cartouche of their own, apart from the legend's key — a nameless
+          strip of miniatures read as decoration, not navigation. The current
           sheet is no link; its frame is the annotator's vermilion. */}
       {!picker && Object.keys(MAPS).length > 1 && (
         <nav
           aria-label="Charts of the atlas"
-          className="absolute bottom-6 right-4 z-[1000] flex flex-col items-end gap-2"
+          className="parchment absolute bottom-6 right-4 z-[1000] rounded-sm p-2"
         >
-          {Object.values(MAPS).map((m) =>
-            m.id === chart.id ? (
-              <span
-                key={m.id}
-                aria-current="page"
-                title={`${m.title} — this sheet`}
-                className="chart-tile chart-tile--current"
-                style={{ backgroundImage: `url(${m.insetUrl})` }}
-              >
-                <span className="sr-only">{m.title} — this sheet</span>
-              </span>
-            ) : (
-              <Link
-                key={m.id}
-                href={chartPath(m.id)}
-                title={m.title}
-                className="chart-tile"
-                style={{ backgroundImage: `url(${m.insetUrl})` }}
-              >
-                <span className="sr-only">{m.title}</span>
-              </Link>
-            ),
-          )}
+          <div className="legend-cartouche px-3 pb-3 pt-2">
+            <h2 className="text-center text-xs uppercase tracking-widest text-muted">
+              Charts
+            </h2>
+            <div className="parchment-rule mt-2" />
+            <div className="mt-3 flex flex-col gap-3">
+              {Object.values(MAPS).map((m) =>
+                m.id === chart.id ? (
+                  <span
+                    key={m.id}
+                    aria-current="page"
+                    title={`${m.title} — this sheet`}
+                    className="flex flex-col items-center gap-1"
+                  >
+                    <span
+                      className="chart-tile chart-tile--current"
+                      style={{ backgroundImage: `url(${m.insetUrl})` }}
+                    />
+                    <span className="font-display text-[13px] italic leading-none text-accent">
+                      {m.shortTitle}
+                    </span>
+                    <span className="sr-only">{m.title} — this sheet</span>
+                  </span>
+                ) : (
+                  <Link
+                    key={m.id}
+                    href={chartPath(m.id)}
+                    title={m.title}
+                    className="group flex flex-col items-center gap-1"
+                  >
+                    <span
+                      className="chart-tile"
+                      style={{ backgroundImage: `url(${m.insetUrl})` }}
+                    />
+                    <span className="font-display text-[13px] italic leading-none transition-colors group-hover:text-accent">
+                      {m.shortTitle}
+                    </span>
+                    <span className="sr-only">{m.title}</span>
+                  </Link>
+                ),
+              )}
+            </div>
+          </div>
         </nav>
       )}
 

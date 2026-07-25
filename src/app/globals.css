@@ -511,8 +511,8 @@ body {
     transform 0.15s ease;
 }
 
-a.chart-tile:hover,
-a.chart-tile:focus-visible {
+a:hover > .chart-tile,
+a:focus-visible > .chart-tile {
   border-color: var(--ink-accent);
   filter: sepia(0.1) saturate(1);
   transform: scale(1.06);

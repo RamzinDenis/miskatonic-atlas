@@ -20,6 +20,8 @@ export interface AtlasMap {
   id: string;
   /** Display name, as a chart heading: "The South Pacific". */
   title: string;
+  /** One-word name for tight lettering (the chart toggle): "Pacific". */
+  shortTitle: string;
   /** The full-size source everything below is cut from, never served whole. */
   url: string;
   /** A 128px thumb of the sheet, under it until a real copy arrives. */
@@ -97,6 +99,7 @@ export const MAPS: Record<string, AtlasMap> = {
   "new-england": {
     id: "new-england",
     title: "The Miskatonic Country",
+    shortTitle: "Miskatonic",
     url: "/maps/new-england-1448.webp",
     lqipUrl: "/maps/new-england-lqip.webp",
     insetUrl: "/maps/new-england-1024.webp",
@@ -124,6 +127,7 @@ export const MAPS: Record<string, AtlasMap> = {
   pacific: {
     id: "pacific",
     title: "The South Pacific",
+    shortTitle: "Pacific",
     url: "/maps/pacific-1448.webp",
     lqipUrl: "/maps/pacific-lqip.webp",
     insetUrl: "/maps/pacific-1024.webp",
@@ -149,6 +153,7 @@ export const MAPS: Record<string, AtlasMap> = {
   desert: {
     id: "desert",
     title: "The Desert of Araby",
+    shortTitle: "Araby",
     stories: ["the-nameless-city"],
     url: "/maps/desert-1448.webp",
     lqipUrl: "/maps/desert-lqip.webp",
