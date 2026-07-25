@@ -4,10 +4,6 @@
   "type": "city",
   "summary": "The Massachusetts city named at the head of the account as home of the late Francis Wayland Thurston and the place to which Professor Angell's files and boxes were moved for study; it was also where Dr. Henry Armitage consulted students of archaic lore while investigating the Dunwich horror, and the city to which the traveler who uncovered the truth of the blasted heath returned to resign his position.",
   "description": "Boston stands at the very head of the record: the account itself was found among the papers of the late Francis Wayland Thurston, of Boston.\n\nIt was also the working seat of the investigation. As his grand-uncle's heir and executor, the narrator was expected to go over Professor Angell's papers with some thoroughness, and for that purpose moved the professor's entire set of files and boxes to his quarters in Boston.\n\nDecades later, while piecing together the meaning of Wilbur Whateley's diary and the Dunwich terrors, Dr. Henry Armitage of Miskatonic University held talks with several students of archaic lore in Boston, an inquiry that left him with a growing and unpleasant amazement.\n\nStill later, the surveyor who had gone west to Arkham on business and learned the true history of the blasted heath from Ammi Pierce returned to Boston the very next day, resigning his position rather than remain near the accursed valley.",
-  "map": {
-    "x": 2525,
-    "y": 1235
-  },
   "realWorld": "Boston, Massachusetts, USA",
   "appearsIn": [
     "the-call-of-cthulhu",

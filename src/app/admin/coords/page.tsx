@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPickerLocations } from "@/shared/lib/content";
-import { MAPS, WORLD_MAP } from "@/shared/maps";
+import { FRONT_CHART_ID, MAPS, getAtlasMap } from "@/shared/maps";
 import { WorldMap } from "@/widgets/world-map";
 
 export const metadata: Metadata = {
@@ -20,7 +20,8 @@ export default async function CoordsPage({ searchParams }: PageProps<"/admin/coo
   if (process.env.NODE_ENV === "production") notFound();
 
   const { map } = await searchParams;
-  const chart = MAPS[typeof map === "string" ? map : "world"] ?? WORLD_MAP;
+  const chart =
+    MAPS[typeof map === "string" ? map : FRONT_CHART_ID] ?? getAtlasMap(FRONT_CHART_ID);
   const { placed, unplaced } = getPickerLocations(chart.id);
   return (
     <div className="relative h-dvh">

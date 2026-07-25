@@ -1,10 +1,7 @@
 /**
- * Cuts the world chart down to the sizes a screen actually uses.
- *
- *   public/maps/world-1024.webp — 186 KB, phones and the page insets
- *   public/maps/world-2048.webp — 803 KB, the usual desktop overview
- *   public/maps/world.jpg       — 3.6 MB, the scan itself, for close-ups
- *   public/maps/world-lqip.webp — 2 KB, the sheet while a copy is in flight
+ * Cuts every chart of the registry down to the sizes a screen actually uses:
+ * a webp resolution ladder, a quarter-size inset copy, and a 128px lqip
+ * thumb shown while a real copy is in flight.
  *
  * Why a ladder and not a tile pyramid: tiles are for maps too large to ever
  * hold — a world that has to be fetched a window at a time. This chart is
@@ -35,7 +32,7 @@ const MAPS = path.join(ROOT, "public", "maps");
    an id whose source (jpg or png) is not in public/maps/ yet is skipped with
    a note. A png source additionally gets a full-width webp as the ladder's
    top rung — the png stays in the repo as the cutting source only. */
-const SOURCES = ["world", "new-england", "pacific"];
+const SOURCES = ["new-england", "pacific"];
 
 /** Must match `sheets` in the src/shared/maps.ts registry. */
 const RUNGS = [1024, 2048];

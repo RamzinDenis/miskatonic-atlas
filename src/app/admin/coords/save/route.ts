@@ -8,7 +8,7 @@ import { MAPS } from "@/shared/maps";
  * content/locations/*.json, each touching only the fields it owns; the file is
  * otherwise parsed and re-printed as-is:
  *   moves       — write new `map` coordinates (pin drags / queue placement),
- *                 on the chart the move names (mapId defaults to "world")
+ *                 on the chart the move names
  *   seed        — first-pass provisional `map` for every unplaced location,
  *                 the unanchored ones landing on the chart the picker is open on
  *   unplace     — remove `map` (send a pin back to the placement queue)
@@ -17,7 +17,7 @@ import { MAPS } from "@/shared/maps";
 
 interface Move {
   slug: string;
-  mapId?: string;
+  mapId: string;
   x: number;
   y: number;
 }
@@ -49,15 +49,11 @@ async function applyMoves(moves: Move[]): Promise<Response> {
     if (!Number.isFinite(move.x) || !Number.isFinite(move.y)) {
       return new Response(`Bad coordinates for "${move.slug}"`, { status: 400 });
     }
-    const mapId = move.mapId ?? "world";
-    if (!MAPS[mapId]) return new Response(`Unknown mapId "${mapId}"`, { status: 400 });
+    const mapId = move.mapId;
+    if (!mapId || !MAPS[mapId]) return new Response(`Unknown mapId "${mapId}"`, { status: 400 });
     const location = await readLocation(move.slug);
     if (!location) return new Response(`No location file for "${move.slug}"`, { status: 404 });
-    // The schema defaults mapId to "world", so world placements stay bare.
-    location.map =
-      mapId === "world"
-        ? { x: Math.round(move.x), y: Math.round(move.y) }
-        : { mapId, x: Math.round(move.x), y: Math.round(move.y) };
+    location.map = { mapId, x: Math.round(move.x), y: Math.round(move.y) };
     await writeLocation(move.slug, location);
   }
   return Response.json({ saved: moves.length });
@@ -79,7 +75,7 @@ export async function POST(request: Request) {
   // Seed: provisional first-pass coordinates for the whole placement queue,
   // on the chart the picker is open on.
   if (body.seed === true) {
-    const mapId = body.mapId ?? "world";
+    const mapId = body.mapId ?? "";
     if (!MAPS[mapId]) return new Response(`Unknown mapId "${mapId}"`, { status: 400 });
     return applyMoves(getSeedPlacements(mapId));
   }

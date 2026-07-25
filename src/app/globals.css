@@ -173,12 +173,6 @@ body {
   filter: sepia(0.15) saturate(0.88) brightness(0.95) contrast(1.03);
 }
 
-/* The wear sheet darkens the tinted scan below it; white stays neutral. */
-.world-map .atlas-wear {
-  mix-blend-mode: multiply;
-  pointer-events: none;
-}
-
 /*
  * Nothing is marked on a sheet that isn't there: pins and beasts wait for
  * the chart itself, or they arrive long before it and hover for a moment

@@ -11,7 +11,7 @@ import {
   type Location,
   type Story,
 } from "../schemas.ts"; // relative + extension so Node can run this file directly (scripts/validate.mts)
-import { chartShowsChildren, MAPS } from "../maps.ts"; // relative + extension for the same reason
+import { FRONT_CHART_ID, MAPS, chartShowsChildren, getAtlasMap } from "../maps.ts"; // relative + extension for the same reason
 import type {
   MapFigure,
   MapLegendGroup,
@@ -325,11 +325,11 @@ function toMapLocation(content: AtlasContent, mapId: string) {
  * `mapId` is the chart the picker is open on, and it decides only where the
  * *unanchored* land: a fresh cluster whose whole story is still unpinned (the
  * Dunwich country on an empty regional sheet) belongs on the chart the editor
- * is actually curating, not on the world scan. Anchored seeds still follow
+ * is actually curating. Anchored seeds still follow
  * their anchor onto whatever chart it sits on.
  */
 export function getSeedPlacements(
-  mapId = "world",
+  mapId: string,
 ): { slug: string; mapId: string; x: number; y: number }[] {
   const content = loadContent();
   const placed = new Map<string, { mapId: string; x: number; y: number }>();
@@ -343,19 +343,14 @@ export function getSeedPlacements(
   const sharesStory = (a: Location, b: Location) =>
     a.appearsIn.some((s) => b.appearsIn.includes(s));
 
-  // Fallback for anything with no placed relation at all: the New England
-  // landmarks when they are on this very chart (the world scan's case), else
-  // the middle of the open sheet — a regional chart with nothing pinned yet
-  // has no landmark to hang off.
-  const chart = MAPS[mapId] ?? MAPS.world;
-  const onChart = (p: { mapId: string; x: number; y: number } | undefined) =>
-    p && p.mapId === chart.id ? p : undefined;
-  const fallback = onChart(placed.get("boston")) ??
-    onChart(placed.get("new-england")) ?? {
-      mapId: chart.id,
-      x: Math.round(chart.width / 2),
-      y: Math.round(chart.height / 2),
-    };
+  // Fallback for anything with no placed relation at all: the middle of the
+  // open sheet — a chart with nothing pinned yet has no landmark to hang off.
+  const chart = MAPS[mapId] ?? getAtlasMap(FRONT_CHART_ID);
+  const fallback = {
+    mapId: chart.id,
+    x: Math.round(chart.width / 2),
+    y: Math.round(chart.height / 2),
+  };
   const counter = new Map<string, number>();
   const offset = (key: string): { x: number; y: number } => {
     const n = counter.get(key) ?? 0;
@@ -382,7 +377,7 @@ export function getSeedPlacements(
   const result: { slug: string; mapId: string; x: number; y: number }[] = [];
   const unplaced = content.locations.filter((l) => !l.map);
   // A seed lands on its anchor's chart: sub-locations of a regionally-pinned
-  // parent cluster on the regional map, not on the world scan.
+  // parent cluster on that parent's own sheet.
   const seed = (l: Location, base: { mapId: string; x: number; y: number }, key: string) => {
     const o = offset(key);
     const p = { mapId: base.mapId, x: base.x + o.x, y: base.y + o.y };
@@ -409,7 +404,7 @@ export function getSeedPlacements(
  * Sub-locations never pin publicly (ADR-0003 — their anchor is a section of
  * the parent's page); placing one in the picker only feeds its page inset.
  */
-export function getMapLocations(mapId = "world"): MapLocation[] {
+export function getMapLocations(mapId: string): MapLocation[] {
   const content = loadContent();
   return majorOnly(content.locations)
     .filter((l) => !l.parentSlug || chartShowsChildren(mapId))
@@ -422,7 +417,7 @@ export function getMapLocations(mapId = "world"): MapLocation[] {
  * off the shared map — plus the placement queue of locations that have no
  * `map` yet (fresh from review promotion).
  */
-export function getPickerLocations(mapId = "world"): {
+export function getPickerLocations(mapId: string): {
   placed: MapLocation[];
   unplaced: UnplacedLocation[];
 } {
@@ -441,7 +436,7 @@ export function getPickerLocations(mapId = "world"): {
 /** The legend panel: the chart's stories in order of publication, each with
     its charted major locations A→Z. A story belongs to the charts its places
     are actually pinned on — one with no pins here is another sheet's story. */
-export function getMapLegend(mapId = "world"): MapLegendGroup[] {
+export function getMapLegend(mapId: string): MapLegendGroup[] {
   const content = loadContent();
   return [...content.stories]
     .sort((a, b) => a.year - b.year)

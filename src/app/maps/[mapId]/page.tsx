@@ -1,23 +1,22 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getMapLegend, getMapLocations } from "@/shared/lib/content";
-import { MAPS } from "@/shared/maps";
+import { FRONT_CHART_ID, MAPS } from "@/shared/maps";
 import { SiteHeader } from "@/shared/ui/site-header";
 import { WorldMap } from "@/widgets/world-map";
 
 /**
- * A regional chart of the atlas — any MAPS entry besides the world, which is
+ * A chart of the atlas — any MAPS entry besides the front chart, which is
  * the front page. Same full-bleed presentation as the frontispiece; the
- * world-only layers (voyage tracks, marginalia beasts) gate themselves off
- * inside the widget. Until a regional basemap is registered this route
- * simply builds no pages.
+ * chart-bound layers (voyage tracks, marginalia beasts) key themselves by
+ * chart id inside the widget.
  */
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
   return Object.keys(MAPS)
-    .filter((mapId) => mapId !== "world")
+    .filter((mapId) => mapId !== FRONT_CHART_ID)
     .map((mapId) => ({ mapId }));
 }
 
@@ -32,7 +31,7 @@ export async function generateMetadata({
 export default async function RegionalMapPage({ params }: PageProps<"/maps/[mapId]">) {
   const { mapId } = await params;
   const chart = MAPS[mapId];
-  if (!chart || mapId === "world") notFound();
+  if (!chart || mapId === FRONT_CHART_ID) notFound();
 
   return (
     <div className="relative h-dvh overflow-hidden">
@@ -45,17 +44,6 @@ export default async function RegionalMapPage({ params }: PageProps<"/maps/[mapI
       />
 
       <SiteHeader floating />
-
-      {chart.attribution && (
-        <a
-          href={chart.attribution.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="absolute bottom-2 right-2 z-[1000] rounded px-2 py-1 text-[11px] text-muted/80 transition-colors hover:text-muted"
-        >
-          {chart.attribution.label}
-        </a>
-      )}
     </div>
   );
 }

@@ -7,7 +7,7 @@ export const SourceRef = z.object({
 });
 
 export const MapPoint = z.object({
-  mapId: z.string().default("world"),
+  mapId: z.string(),
   x: z.number(),
   y: z.number(),
   /**

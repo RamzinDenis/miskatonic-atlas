@@ -7,22 +7,13 @@ import type { ShipKind } from "./route-glyphs";
  * passages; nothing here enters content JSON or the extraction pipeline.
  *
  * A route is a presentation layer, so the "one location — one chart" rule
- * does not bind it: the registry below keys legs by chart id, and the same
- * voyage may print an overview version on the world scan and a detailed one
- * on the sea sheet (docs/pacific-map.md №7). Points are pixels of the
- * owning chart's source image.
- *
- * World scan: fixes with canon coordinates in the text are placed by the
- * grid calibration documented in geometry.ts:
- *   the Emma–Alert encounter, "S. Latitude 49° 51´, W. Longitude 128° 34´"
- *     → (1971, 2270)
- *   the derelict Alert sighted, "S. Latitude 34° 21', W. Longitude 152° 17'"
- *     → (1743, 2068)
- * The pacific sheet is uncalibrated: its fixes sit by the drawn geography
- * (ports, R'lyeh), keeping the canon bearings between them — the encounter
- * south-west of R'lyeh, the drift north-west of it.
- * Every other point only shapes the line between fixes (a storm bend, a
- * drift wobble) and carries no factual claim — so no date is lettered there.
+ * does not bind it: the registry below keys legs by chart id. Points are
+ * pixels of the owning chart's source image. The sheets are uncalibrated:
+ * fixes sit by the drawn geography (ports, R'lyeh), keeping the canon
+ * bearings between them — the encounter south-west of R'lyeh, the drift
+ * north-west of it. Every other point only shapes the line between fixes
+ * (a storm bend, a drift wobble) and carries no factual claim — so no date
+ * is lettered there.
  */
 
 /**
@@ -79,116 +70,9 @@ const OXBLOOD_INK = "#4a2430";
 /** The story whose voyage the tracks below chart. */
 export const ROUTE_STORY_SLUG = "the-call-of-cthulhu";
 
-/** The voyage of the Emma and the Alert — the world scan's overview legs. */
-const WORLD_ROUTE_LEGS: RouteLeg[] = [
-  {
-    id: "emma",
-    vessel: "Emma",
-    ship: "schooner",
-    course:
-      "Schooner Emma of Auckland, bound for Callao — thrown south by the great storm to the encounter at 49° 51′ S, 128° 34′ W.",
-    points: [
-      { x: 1426, y: 2097 },
-      { x: 1700, y: 1985 },
-      { x: 1880, y: 2100 },
-      { x: 1971, y: 2270 },
-    ],
-    dash: "11 7",
-    color: UMBER_INK,
-    cap: "butt",
-    labelSegment: 0,
-    fixes: [
-      { x: 1426, y: 2097, label: "Feb. 20", dx: 18, dy: 18 },
-      { x: 1971, y: 2270, label: "Mch. 22", dx: -30, dy: 12 },
-    ],
-    quotes: [
-      "He is Gustaf Johansen, a Norwegian of some intelligence, and had been second mate of the two-masted schooner Emma of Auckland, which sailed for Callao February 20th, with a complement of eleven men.",
-      "The Emma, he says, was delayed and thrown widely south of her course by the great storm of March 1st, and on March 22d, in S. Latitude 49° 51´, W. Longitude 128° 34´, encountered the Alert, manned by a queer and evil-looking crew of Kanakas and half-castes.",
-    ],
-    attribution: "The Call of Cthulhu (1928) — Chapter 3, The Madness from the Sea",
-  },
-  {
-    id: "alert",
-    vessel: "Alert",
-    ship: "steam-yacht",
-    course:
-      "The captured yacht Alert under Second Mate Johansen — ahead on the original course, to the risen island.",
-    points: [
-      { x: 1971, y: 2270 },
-      { x: 1989, y: 2231 },
-    ],
-    dash: "4 6",
-    color: PRUSSIAN_INK,
-    cap: "butt",
-    labelSegment: 0,
-    fixes: [
-      { x: 1989, y: 2231, label: "Mch. 23", dx: 32, dy: 12 },
-    ],
-    quotes: [
-      "Three of the Emma's men, including Capt. Collins and First Mate Green, were killed; and the remaining eight under Second Mate Johansen proceeded to navigate the captured yacht, going ahead in their original direction to see if any reason for their ordering back had existed.",
-      "The next day, it appears, they raised and landed on a small island, although none is known to exist in that part of the ocean.",
-    ],
-    attribution: "The Call of Cthulhu (1928) — Chapter 3, The Madness from the Sea",
-  },
-  {
-    id: "johansen-adrift",
-    vessel: "Johansen adrift",
-    ship: "derelict",
-    course:
-      "Johansen and Briden beaten about by the storm — the derelict Alert, adrift until sighted at 34° 21′ S, 152° 17′ W.",
-    points: [
-      { x: 1989, y: 2231 },
-      { x: 1925, y: 2208 },
-      { x: 1868, y: 2148 },
-      { x: 1802, y: 2122 },
-      { x: 1743, y: 2068 },
-    ],
-    dash: "2 7",
-    color: GRAPHITE_INK,
-    cap: "round",
-    labelSegment: 2,
-    fixes: [
-      { x: 1743, y: 2068, label: "Apr. 12", dx: 2, dy: -18 },
-    ],
-    quotes: [
-      "Later, it seems, he and one companion boarded the yacht and tried to manage her, but were beaten about by the storm of April 2nd.",
-      "The Morrison Co.'s freighter Vigilant, bound from Valparaiso, arrived this morning at its wharf in Darling Harbour, having in tow the battled and disabled but heavily armed steam yacht Alert of Dunedin, N. Z., which was sighted April 12th in S. Latitude 34° 21', W. Longitude 152° 17', with one living and one dead man aboard.",
-    ],
-    attribution: "The Call of Cthulhu (1928) — Chapter 3, The Madness from the Sea",
-  },
-  {
-    id: "vigilant",
-    vessel: "Vigilant",
-    ship: "freighter",
-    course:
-      "Freighter Vigilant out of Valparaiso, driven south of her course — the derelict taken in tow to Darling Harbour, Sydney.",
-    points: [
-      { x: 2520, y: 2053 },
-      { x: 2160, y: 2145 },
-      { x: 1743, y: 2068 },
-      { x: 1450, y: 2052 },
-      { x: 1189, y: 2066 },
-    ],
-    dash: "14 6 4 6",
-    color: OXBLOOD_INK,
-    cap: "butt",
-    labelSegment: 0,
-    fixes: [
-      { x: 2520, y: 2053, label: "Mch. 25", dx: 6, dy: -16 },
-      { x: 1189, y: 2066, label: "Apr. 18", dx: 10, dy: 22 },
-    ],
-    quotes: [
-      "The Vigilant left Valparaiso March 25th, and on April 2d was driven considerably south of her course by exceptionally heavy storms and monster waves. On April 12th the derelict was sighted; and though apparently deserted, was found upon boarding to contain one survivor in a half-delirious condition and one man who had evidently been dead for more than a week.",
-    ],
-    attribution: "The Call of Cthulhu (1928) — Chapter 3, The Madness from the Sea",
-  },
-];
-
 /**
- * The same four passages in the sea sheet's own pixels (1448×1086) — room
- * enough for the storm bends the world overview straightens out. Same
- * vessels, same inks, same quotes: a reader crossing between sheets meets
- * one voyage, drawn at two scales.
+ * The voyage of the Emma and the Alert in the sea sheet's pixels
+ * (1448×1086) — the one charted voyage of the atlas.
  */
 /* The drawn R'lyeh is a pictorial giant (rocks and breaking foam spanning
    roughly x 710–1215, y 520–980 of the sheet): every track below treats it
@@ -197,7 +81,17 @@ const WORLD_ROUTE_LEGS: RouteLeg[] = [
    corridor north of the island, never across the rocks. */
 const PACIFIC_ROUTE_LEGS: RouteLeg[] = [
   {
-    ...WORLD_ROUTE_LEGS[0],
+    id: "emma",
+    vessel: "Emma",
+    ship: "schooner",
+    dash: "11 7",
+    color: UMBER_INK,
+    cap: "butt",
+    quotes: [
+      "He is Gustaf Johansen, a Norwegian of some intelligence, and had been second mate of the two-masted schooner Emma of Auckland, which sailed for Callao February 20th, with a complement of eleven men.",
+      "The Emma, he says, was delayed and thrown widely south of her course by the great storm of March 1st, and on March 22d, in S. Latitude 49° 51´, W. Longitude 128° 34´, encountered the Alert, manned by a queer and evil-looking crew of Kanakas and half-castes.",
+    ],
+    attribution: "The Call of Cthulhu (1928) — Chapter 3, The Madness from the Sea",
     course:
       "Schooner Emma of Auckland, bound for Callao — thrown widely south of her course by the great storm of March 1st, to the encounter at 49° 51′ S, 128° 34′ W.",
     points: [
@@ -213,7 +107,19 @@ const PACIFIC_ROUTE_LEGS: RouteLeg[] = [
     ],
   },
   {
-    ...WORLD_ROUTE_LEGS[1],
+    id: "alert",
+    vessel: "Alert",
+    ship: "steam-yacht",
+    dash: "4 6",
+    color: PRUSSIAN_INK,
+    cap: "butt",
+    course:
+      "The captured yacht Alert under Second Mate Johansen — ahead on the original course, to the risen island.",
+    quotes: [
+      "Three of the Emma's men, including Capt. Collins and First Mate Green, were killed; and the remaining eight under Second Mate Johansen proceeded to navigate the captured yacht, going ahead in their original direction to see if any reason for their ordering back had existed.",
+      "The next day, it appears, they raised and landed on a small island, although none is known to exist in that part of the ocean.",
+    ],
+    attribution: "The Call of Cthulhu (1928) — Chapter 3, The Madness from the Sea",
     points: [
       { x: 790, y: 865 },
       { x: 840, y: 820 },
@@ -224,7 +130,19 @@ const PACIFIC_ROUTE_LEGS: RouteLeg[] = [
     ],
   },
   {
-    ...WORLD_ROUTE_LEGS[2],
+    id: "johansen-adrift",
+    vessel: "Johansen adrift",
+    ship: "derelict",
+    dash: "2 7",
+    color: GRAPHITE_INK,
+    cap: "round",
+    course:
+      "Johansen and Briden beaten about by the storm — the derelict Alert, adrift until sighted at 34° 21′ S, 152° 17′ W.",
+    quotes: [
+      "Later, it seems, he and one companion boarded the yacht and tried to manage her, but were beaten about by the storm of April 2nd.",
+      "The Morrison Co.'s freighter Vigilant, bound from Valparaiso, arrived this morning at its wharf in Darling Harbour, having in tow the battled and disabled but heavily armed steam yacht Alert of Dunedin, N. Z., which was sighted April 12th in S. Latitude 34° 21', W. Longitude 152° 17', with one living and one dead man aboard.",
+    ],
+    attribution: "The Call of Cthulhu (1928) — Chapter 3, The Madness from the Sea",
     points: [
       { x: 840, y: 820 },
       { x: 760, y: 790 },
@@ -238,7 +156,16 @@ const PACIFIC_ROUTE_LEGS: RouteLeg[] = [
     ],
   },
   {
-    ...WORLD_ROUTE_LEGS[3],
+    id: "vigilant",
+    vessel: "Vigilant",
+    ship: "freighter",
+    dash: "14 6 4 6",
+    color: OXBLOOD_INK,
+    cap: "butt",
+    quotes: [
+      "The Vigilant left Valparaiso March 25th, and on April 2d was driven considerably south of her course by exceptionally heavy storms and monster waves. On April 12th the derelict was sighted; and though apparently deserted, was found upon boarding to contain one survivor in a half-delirious condition and one man who had evidently been dead for more than a week.",
+    ],
+    attribution: "The Call of Cthulhu (1928) — Chapter 3, The Madness from the Sea",
     course:
       "Freighter Vigilant out of Valparaiso, driven south of her course by the storm of April 2nd — the derelict taken in tow to Darling Harbour, Sydney.",
     points: [
@@ -257,13 +184,8 @@ const PACIFIC_ROUTE_LEGS: RouteLeg[] = [
   },
 ];
 
-/**
- * Voyage tracks by chart id — a sheet not listed here sails empty. The
- * world keeps its overview legs untouched; the sea sheet carries the same
- * voyages in its own detail.
- */
+/** Voyage tracks by chart id — a sheet not listed here sails empty. */
 export const ROUTE_LEGS_BY_CHART: Record<string, RouteLeg[]> = {
-  world: WORLD_ROUTE_LEGS,
   pacific: PACIFIC_ROUTE_LEGS,
 };
 

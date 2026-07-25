@@ -22,7 +22,6 @@ import {
   type CSSProperties,
 } from "react";
 import {
-  ImageOverlay,
   MapContainer,
   Marker,
   Polyline,
@@ -35,7 +34,6 @@ import { ChartSheet, chartIsWarm } from "./chart-sheet";
 import {
   MAPS,
   chartPath,
-  formatDegrees,
   latLngToPixel,
   pixelToLatLng,
   type AtlasMap,
@@ -427,7 +425,7 @@ export default function WorldMapClient({
      The annotator's beasts likewise name their chart (monsters.ts). */
   const chartLegs = routeLegs(chart.id);
   const chartMonsters = useMemo(
-    () => MONSTERS.filter((monster) => (monster.mapId ?? "world") === chart.id),
+    () => MONSTERS.filter((monster) => monster.mapId === chart.id),
     [chart.id],
   );
   const bounds = useMemo<LatLngBoundsExpression>(
@@ -477,12 +475,8 @@ export default function WorldMapClient({
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  // The schema defaults mapId to "world", so the world chart's snippet
-  // (and its JSON files) stay free of the field.
   const snippet = picked
-    ? chart.id === "world"
-      ? `"map": { "x": ${picked.x}, "y": ${picked.y} }`
-      : `"map": { "mapId": "${chart.id}", "x": ${picked.x}, "y": ${picked.y} }`
+    ? `"map": { "mapId": "${chart.id}", "x": ${picked.x}, "y": ${picked.y} }`
     : "";
 
   const copySnippet = async () => {
@@ -659,20 +653,6 @@ export default function WorldMapClient({
         className="h-full w-full"
       >
         <ChartSheet chart={chart} bounds={bounds} onReady={handlePaperReady} />
-        {/* The copy's biography — scorch, creases, stains — multiplied over
-            the pristine scan so it pans and zooms as part of the paper. It
-            has to share the chart's pane: multiply blends only within a
-            stacking context, and every leaflet pane is one of its own, so
-            from a pane above there would be nothing to darken and the sheet
-            would turn into an opaque lid over the whole chart. */}
-        {chart.wearUrl && (
-          <ImageOverlay
-            url={chart.wearUrl}
-            bounds={bounds}
-            className="atlas-wear"
-            zIndex={2}
-          />
-        )}
         <ZoomControl position="topright" />
         <FitZoomLimit bounds={bounds} />
         <ZoomWatcher
@@ -991,11 +971,6 @@ export default function WorldMapClient({
             </button>
           </div>
           <h2 className="cap-first mt-1 font-display text-2xl">{selected.name}</h2>
-          {chart.calibrated && (
-            <p className="mt-0.5 text-xs tracking-widest text-muted">
-              {formatDegrees(selected)}
-            </p>
-          )}
           <div className="parchment-rule mt-2" />
           {(() => {
             const thumb = getPlateThumb("locations", selected.slug);
@@ -1086,7 +1061,7 @@ export default function WorldMapClient({
               {Object.values(MAPS).map((m) => (
                 <a
                   key={m.id}
-                  href={m.id === "world" ? "/admin/coords" : `/admin/coords?map=${m.id}`}
+                  href={`/admin/coords?map=${m.id}`}
                   className={`rounded-md border px-2 py-1 text-xs transition-colors ${
                     m.id === chart.id
                       ? "border-accent text-accent"

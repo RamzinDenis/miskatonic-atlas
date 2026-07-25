@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { WORLD_MAP } from "./geometry";
+import { getAtlasMap } from "./geometry";
 import { SHIP_ART, SHIP_INK, shipMaskUrl } from "./route-glyphs";
 import {
   ROUTE_LEGS_BY_CHART,
@@ -9,9 +9,10 @@ import {
   shipFits,
 } from "./routes";
 
-/* The story-page inset stays the world overview: its whole point is the
-   voyage at a glance, and the sea sheet's detail lives on its own page. */
-const ROUTE_LEGS = ROUTE_LEGS_BY_CHART.world;
+/* The story-page inset excerpts the sea sheet — the chart that carries the
+   voyage's tracks. */
+const CHART = getAtlasMap("pacific");
+const ROUTE_LEGS = ROUTE_LEGS_BY_CHART.pacific;
 
 /** Map dash patterns are screen px at base zoom; the inset's viewBox units
  * are scan pixels, roughly twice as large on screen. */
@@ -37,7 +38,7 @@ function labelFits(leg: (typeof ROUTE_LEGS)[number]): boolean {
 /**
  * The voyage on a story page: a static excerpt of the chart with the dashed
  * tracks drawn in SVG — no leaflet. The SVG viewBox is the crop window in
- * world.jpg pixels, so track points transfer to it verbatim. The marks
+ * the sheet's own pixels, so track points transfer to it verbatim. The marks
  * speak the live chart's language: the ✕ of a fix and the vessel's
  * silhouette, both in the track's own ink on a cleared patch of paper.
  */
@@ -70,15 +71,15 @@ export function RouteInset({ storySlug }: { storySlug: string }) {
               __html: `<radialGradient id="route-inset-clearing"><stop offset="0%" stop-color="rgba(238, 226, 197, 0.92)"/><stop offset="55%" stop-color="rgba(238, 226, 197, 0.7)"/><stop offset="100%" stop-color="rgba(238, 226, 197, 0)"/></radialGradient><filter id="route-inset-ship-ink" x="-10%" y="-10%" width="120%" height="120%"><feFlood flood-color="${SHIP_INK}"/><feComposite in2="SourceAlpha" operator="in"/></filter>`,
             }}
           />
-          {/* The quarter-size scan, drawn at the scan's own dimensions: the
-              svg scales it back up, and the story page is spared the 3.6 MB
-              original for a figure this size. */}
+          {/* The quarter-size copy, drawn at the sheet's own dimensions: the
+              svg scales it back up, and the story page is spared the full
+              source for a figure this size. */}
           <image
-            href={WORLD_MAP.insetUrl}
+            href={CHART.insetUrl}
             x="0"
             y="0"
-            width={WORLD_MAP.width}
-            height={WORLD_MAP.height}
+            width={CHART.width}
+            height={CHART.height}
             className="route-inset-scan"
           />
           {ROUTE_LEGS.map((leg) => {

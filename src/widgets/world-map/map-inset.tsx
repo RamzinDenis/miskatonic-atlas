@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { formatDegrees, getAtlasMap } from "./geometry";
+import { getAtlasMap } from "./geometry";
 
 /**
  * A static excerpt of the chart on a location page: the scan cropped around
@@ -58,8 +58,8 @@ export function MapInset({
       </div>
       <figcaption className="mt-2 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 text-xs uppercase tracking-widest text-muted">
         {/* Fictional geography has no degree grid — the chart's name stands
-            where the world chart prints coordinates. */}
-        <span>{chart.calibrated ? formatDegrees({ x, y }) : chart.title}</span>
+            where a surveyed chart would print coordinates. */}
+        <span>{chart.title}</span>
         {chartHref && (
           <Link
             href={chartHref}
