@@ -46,6 +46,15 @@ export type MonsterKind =
  *                       Dunwich village, where the engraving leaves the paper
  *                       pale: the one land in that country the drawing reads
  *                       on, and the hill the thing was driven up in the end
+ *
+ * The sea sheet (pacific) carries its own copies of the theatre's two
+ * beasts — marginalia are presentation, per chart, like routes; the world
+ * copy of each stays where the annotator first drew it:
+ *   Cthulhu (pacific)  — open water south-west of the drawn R'lyeh, below
+ *                        the Emma's terminal fix and clear of the island's
+ *                        breaking foam
+ *   The Thing (pacific) — the empty sea south of the black risen plain,
+ *                        above the Vigilant's corridor
  */
 export interface MapMonster {
   /** Creature content slug — doubles as the mask file name. */
@@ -93,6 +102,22 @@ export const MONSTERS: MapMonster[] = [
     name: "The Thing",
     storySlug: "dagon",
     at: { x: 1960, y: 1890 },
+    art: { w: 66, h: 58 },
+  },
+  {
+    slug: "cthulhu",
+    name: "Cthulhu",
+    storySlug: "the-call-of-cthulhu",
+    mapId: "pacific",
+    at: { x: 740, y: 995 },
+    art: { w: 74, h: 75 },
+  },
+  {
+    slug: "the-thing",
+    name: "The Thing",
+    storySlug: "dagon",
+    mapId: "pacific",
+    at: { x: 860, y: 380 },
     art: { w: 66, h: 58 },
   },
   {
