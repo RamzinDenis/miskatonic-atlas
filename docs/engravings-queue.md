@@ -164,7 +164,14 @@ to describe... it was only by analogy that they called it colour at all»
 `art` заполнится после генерации. Номера вклеек: VIII ещё за Данвичем
 (выше), Festival — **IX**, Colour — **X**.
 
-### 1. Hybrid Winged Things — гравюра-маска (жанр А)
+**Маски 1–3 сгенерированы и подключены 25.07** (aspect: твари 0.870,
+флейтист 0.748, метеорит 0.858). Твари и флейтист — `BESTIARY_ONLY`
+(кандидатуру тварей в маргиналии моря у Кингспорта владелец не брал);
+метеорит — маргиналия new-england у колодца пустоши (300, 690), решение
+владельца «камень на карту — по канону». Остались вклейки IX–X (ниже) и
+VIII за Данвичем.
+
+### 1. ~~Hybrid Winged Things — гравюра-маска (жанр А)~~
 
 Референсы: `public/plates/monster-cthulhu.png` + `monster-tornasuk.png`.
 Драфт эффектов: `["breath", "ink-shiver", "gaze-tilt"]`. Кандидат в
@@ -201,7 +208,7 @@ fails. NOT a clean bat, NOT a bird, NOT a gargoyle — a limp, wrong composite
 caught between all of them.
 ```
 
-### 2. The Amorphous Flute-Player — гравюра-маска (жанр А)
+### 2. ~~The Amorphous Flute-Player — гравюра-маска (жанр А)~~
 
 Референсы: те же + `public/plates/monster-white-polypous-thing.png`
 (ближайшая родня по бесформенности). Драфт эффектов: `["breath",
@@ -232,7 +239,7 @@ sags under its own weight as if it could roll away. NOT a hooded human
 figure, NOT an octopus — an amorphous squatting heap that plays a flute.
 ```
 
-### 3. The Meteorite — гравюра-маска (жанр А)
+### 3. ~~The Meteorite — гравюра-маска (жанр А)~~
 
 Единственный минерал фолио — и потому гравюра ему полагается как образцу
 в кабинете натуралиста, рядом с птицей Данвича. Референсы: те же. Драфт

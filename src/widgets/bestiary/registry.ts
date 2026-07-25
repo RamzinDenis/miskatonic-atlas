@@ -140,6 +140,41 @@ export const BESTIARY: BestiaryPlate[] = [
     },
   },
   {
+    slug: "hybrid-winged-things",
+    latin: "Volucris tartarea",
+    epithet: "Not altogether crows, nor moles, nor buzzards",
+    art: {
+      mask: "/bestiary/hybrid-winged-things.webp",
+      thumb: "/bestiary/hybrid-winged-things-thumb.png",
+      aspect: 0.87,
+      effects: ["breath", "ink-shiver", "gaze-tilt"],
+    },
+  },
+  {
+    slug: "amorphous-flute-player",
+    latin: "Tibicen informis",
+    epithet: "Piping noisomely beyond the light",
+    art: {
+      mask: "/bestiary/amorphous-flute-player.webp",
+      thumb: "/bestiary/amorphous-flute-player-thumb.png",
+      aspect: 0.748,
+      effects: ["breath", "ink-shiver"],
+    },
+  },
+  {
+    /* The folio's one mineral, engraved like a cabinet specimen — its
+       marginalia twin lies beside the well on the Miskatonic sheet. */
+    slug: "the-meteorite",
+    latin: "Aerolithus contrahens",
+    epithet: "A piece of the great outside",
+    art: {
+      mask: "/bestiary/the-meteorite.webp",
+      thumb: "/maps/monsters/the-meteorite.png",
+      aspect: 0.858,
+      effects: ["ink-shiver", "vermilion-pulse"],
+    },
+  },
+  {
     slug: "great-old-ones",
     latin: "Prisci siderei",
     epithet: "Star-born rulers of the elder earth",
@@ -173,26 +208,6 @@ export const BESTIARY: BestiaryPlate[] = [
     slug: "dagon",
     latin: "Dagon philistaeus",
     epithet: "The Fish-God of the ancient Philistine legend",
-    art: null,
-  },
-  /* The next three await their engravings (docs/engravings-queue.md,
-     25.07) — art fills in when the owner's masks land. */
-  {
-    slug: "hybrid-winged-things",
-    latin: "Volucris tartarea",
-    epithet: "Not altogether crows, nor moles, nor buzzards",
-    art: null,
-  },
-  {
-    slug: "amorphous-flute-player",
-    latin: "Tibicen informis",
-    epithet: "Piping noisomely beyond the light",
-    art: null,
-  },
-  {
-    slug: "the-meteorite",
-    latin: "Aerolithus contrahens",
-    epithet: "A piece of the great outside",
     art: null,
   },
   {

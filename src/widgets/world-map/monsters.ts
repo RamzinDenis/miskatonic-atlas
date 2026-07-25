@@ -7,7 +7,8 @@ export type MonsterKind =
   | "cthulhu"
   | "the-thing"
   | "the-crawling-reptiles-of-the-nameless-city"
-  | "the-dunwich-horror";
+  | "the-dunwich-horror"
+  | "the-meteorite";
 
 /**
  * Monsters — the annotator's marginalia on the chart. Pure presentation,
@@ -36,6 +37,9 @@ export type MonsterKind =
  *                    on, and the hill the thing was driven up in the end
  *   Cthulhu        — the sea sheet, at the drawn R'lyeh by the landing
  *   The Thing      — the sea sheet, on the risen plain at the monolith
+ *   The Meteorite   — the Miskatonic sheet, on the ashen clearing of the
+ *                    blasted heath beside the well, where the stone bedded
+ *                    itself — the one marginalia that is not a beast
  *   The Crawling Reptiles — the desert sheet, in the pale dunes where the
  *                    sand-cloud from the black temple mouth spends itself:
  *                    the horde rides out of the abyss on that very wind
@@ -94,5 +98,13 @@ export const MONSTERS: MapMonster[] = [
     mapId: "new-england",
     at: { x: 400, y: 180 },
     art: { w: 72, h: 74 },
+  },
+  {
+    slug: "the-meteorite",
+    name: "The Meteorite",
+    storySlug: "the-colour-out-of-space",
+    mapId: "new-england",
+    at: { x: 300, y: 690 },
+    art: { w: 46, h: 39 },
   },
 ];
