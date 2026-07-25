@@ -36,9 +36,12 @@ export type MonsterKind =
  *                    on, and the hill the thing was driven up in the end
  *   Cthulhu        — the sea sheet, at the drawn R'lyeh by the landing
  *   The Thing      — the sea sheet, on the risen plain at the monolith
+ *   The Crawling Reptiles — the desert sheet, in the pale dunes where the
+ *                    sand-cloud from the black temple mouth spends itself:
+ *                    the horde rides out of the abyss on that very wind
  *
- * Beasts of the retired world scan (tornasuk, Black-winged Ones, the
- * Crawling Reptiles) wait in public/maps/monsters/ for their theatres.
+ * Beasts of the retired world scan (tornasuk, Black-winged Ones) wait in
+ * public/maps/monsters/ for their theatres.
  */
 export interface MapMonster {
   /** Creature content slug — doubles as the mask file name. */
@@ -75,6 +78,14 @@ export const MONSTERS: MapMonster[] = [
     mapId: "pacific",
     at: { x: 955, y: 120 },
     art: { w: 66, h: 58 },
+  },
+  {
+    slug: "the-crawling-reptiles-of-the-nameless-city",
+    name: "The Crawling Reptiles",
+    storySlug: "the-nameless-city",
+    mapId: "desert",
+    at: { x: 890, y: 820 },
+    art: { w: 74, h: 56 },
   },
   {
     slug: "the-dunwich-horror",
