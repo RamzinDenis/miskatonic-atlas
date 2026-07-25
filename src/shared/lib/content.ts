@@ -435,10 +435,14 @@ export function getPickerLocations(mapId: string): {
 
 /** The legend panel: the chart's stories in order of publication, each with
     its charted major locations A→Z. A story belongs to the charts its places
-    are actually pinned on — one with no pins here is another sheet's story. */
+    are actually pinned on — one with no pins here is another sheet's story —
+    unless the chart declares its theatre's stories itself (maps.ts): then a
+    mere mention of a shared place cannot drag a foreign story onto it. */
 export function getMapLegend(mapId: string): MapLegendGroup[] {
   const content = loadContent();
+  const theatre = getAtlasMap(mapId).stories;
   return [...content.stories]
+    .filter((story) => !theatre || theatre.includes(story.slug))
     .sort((a, b) => a.year - b.year)
     .map((story) => ({
       slug: story.slug,

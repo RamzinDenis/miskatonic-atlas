@@ -50,6 +50,15 @@ export interface AtlasMap {
    */
   pins?: "top-level" | "all";
   /**
+   * The stories of this chart's theatre (ADR-0004). When declared, the
+   * legend groups only these; without it every story with a placed major
+   * location shows. The gate exists for shared locations: Irem stands on
+   * the desert sheet as the Nameless City's neighbour, and Castro's one
+   * sentence about it must not drag "The Call of Cthulhu" onto a chart
+   * whose theatre it is not.
+   */
+  stories?: readonly string[];
+  /**
    * How a location is marked. "vignette" (default) — the engraved glyph on
    * a paper clearing, made for a sheet whose etching is background. On a
    * generated close-up the artwork itself draws the places, and a badge
@@ -140,6 +149,7 @@ export const MAPS: Record<string, AtlasMap> = {
   desert: {
     id: "desert",
     title: "The Desert of Araby",
+    stories: ["the-nameless-city"],
     url: "/maps/desert-1448.webp",
     lqipUrl: "/maps/desert-lqip.webp",
     insetUrl: "/maps/desert-1024.webp",
