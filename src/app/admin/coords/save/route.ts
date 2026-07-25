@@ -9,7 +9,8 @@ import { MAPS } from "@/shared/maps";
  * otherwise parsed and re-printed as-is:
  *   moves       — write new `map` coordinates (pin drags / queue placement),
  *                 on the chart the move names (mapId defaults to "world")
- *   seed        — first-pass provisional `map` for every unplaced location
+ *   seed        — first-pass provisional `map` for every unplaced location,
+ *                 the unanchored ones landing on the chart the picker is open on
  *   unplace     — remove `map` (send a pin back to the placement queue)
  *   prominence  — set major/minor (major carries no field, per the schema default)
  */
@@ -70,13 +71,17 @@ export async function POST(request: Request) {
   const body = (await request.json()) as {
     moves?: Move[];
     seed?: boolean;
+    mapId?: string;
     unplace?: string[];
     prominence?: { slug: string; value: "major" | "minor" }[];
   };
 
-  // Seed: provisional first-pass coordinates for the whole placement queue.
+  // Seed: provisional first-pass coordinates for the whole placement queue,
+  // on the chart the picker is open on.
   if (body.seed === true) {
-    return applyMoves(getSeedPlacements());
+    const mapId = body.mapId ?? "world";
+    if (!MAPS[mapId]) return new Response(`Unknown mapId "${mapId}"`, { status: 400 });
+    return applyMoves(getSeedPlacements(mapId));
   }
 
   // Unplace: drop `map` so the pin returns to the queue.

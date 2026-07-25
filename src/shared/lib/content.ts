@@ -312,11 +312,19 @@ function toMapLocation(content: AtlasContent, mapId: string) {
 /**
  * A provisional first-pass placement for every location that has no `map` yet
  * (the /admin/coords "Seed queue" button): anchor each near a related placed
- * pin — its containment parent, else a placed connection, else the New England
- * default (Boston) — with a small deterministic fan-out so siblings don't
- * stack. Rough on purpose; the editor drags each to its real spot afterward.
+ * pin — its containment parent, else a placed connection — with a small
+ * deterministic fan-out so siblings don't stack. Rough on purpose; the editor
+ * drags each to its real spot afterward.
+ *
+ * `mapId` is the chart the picker is open on, and it decides only where the
+ * *unanchored* land: a fresh cluster whose whole story is still unpinned (the
+ * Dunwich country on an empty regional sheet) belongs on the chart the editor
+ * is actually curating, not on the world scan. Anchored seeds still follow
+ * their anchor onto whatever chart it sits on.
  */
-export function getSeedPlacements(): { slug: string; mapId: string; x: number; y: number }[] {
+export function getSeedPlacements(
+  mapId = "world",
+): { slug: string; mapId: string; x: number; y: number }[] {
   const content = loadContent();
   const placed = new Map<string, { mapId: string; x: number; y: number }>();
   for (const l of content.locations)
@@ -329,9 +337,19 @@ export function getSeedPlacements(): { slug: string; mapId: string; x: number; y
   const sharesStory = (a: Location, b: Location) =>
     a.appearsIn.some((s) => b.appearsIn.includes(s));
 
-  // New England fallback for anything with no placed relation at all.
-  const neDefault = placed.get("boston") ??
-    placed.get("new-england") ?? { mapId: "world", x: 2525, y: 1235 };
+  // Fallback for anything with no placed relation at all: the New England
+  // landmarks when they are on this very chart (the world scan's case), else
+  // the middle of the open sheet — a regional chart with nothing pinned yet
+  // has no landmark to hang off.
+  const chart = MAPS[mapId] ?? MAPS.world;
+  const onChart = (p: { mapId: string; x: number; y: number } | undefined) =>
+    p && p.mapId === chart.id ? p : undefined;
+  const fallback = onChart(placed.get("boston")) ??
+    onChart(placed.get("new-england")) ?? {
+      mapId: chart.id,
+      x: Math.round(chart.width / 2),
+      y: Math.round(chart.height / 2),
+    };
   const counter = new Map<string, number>();
   const offset = (key: string): { x: number; y: number } => {
     const n = counter.get(key) ?? 0;
@@ -365,17 +383,17 @@ export function getSeedPlacements(): { slug: string; mapId: string; x: number; y
     result.push({ slug: l.slug, ...p });
     placed.set(l.slug, p);
   };
-  // Top-level first: anchor to a same-story pin, else New England.
+  // Top-level first: anchor to a same-story pin, else the open chart.
   for (const l of unplaced) {
     if (l.parentSlug) continue;
     const anc = connAnchor(l);
-    seed(l, anc ? anc.at : neDefault, anc ? anc.key : "__ne__");
+    seed(l, anc ? anc.at : fallback, anc ? anc.key : "__fallback__");
   }
   // Then sub-locations cluster around their now-placed parent.
   for (const l of unplaced) {
     if (!l.parentSlug) continue;
     const parent = placed.get(l.parentSlug);
-    seed(l, parent ?? neDefault, parent ? l.parentSlug : "__ne__");
+    seed(l, parent ?? fallback, parent ? l.parentSlug : "__fallback__");
   }
   return result;
 }

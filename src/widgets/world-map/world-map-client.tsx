@@ -506,8 +506,12 @@ export default function WorldMapClient({
     }
   };
 
-  /** First pass: provisional coordinates for the whole placement queue. */
-  const seedQueue = () => postOp({ seed: true });
+  /**
+   * First pass: provisional coordinates for the whole placement queue. The
+   * open chart goes along — anything without a placed anchor lands here,
+   * not on the world scan.
+   */
+  const seedQueue = () => postOp({ seed: true, mapId: chart.id });
 
   /** Send a pin back to the queue (drop its `map`). */
   const unplace = (slug: string) => {
