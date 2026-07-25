@@ -152,8 +152,9 @@ async function main() {
     process.exit(1);
   }
   const mergedDir = path.join(ROOT, "content", "drafts", slug, "merged");
-  if (fs.existsSync(mergedDir) && fs.readdirSync(mergedDir).length > 0 && !force) {
-    console.error(`${mergedDir} is not empty — use --force to re-merge`);
+  const reviewPath = path.join(ROOT, "content", "drafts", slug, "REVIEW.md");
+  if (fs.existsSync(reviewPath) && !force) {
+    console.error(`${reviewPath} exists — merge already completed, use --force to re-merge`);
     process.exit(1);
   }
 
@@ -242,22 +243,35 @@ async function main() {
     .map((f) => f.replace(/\.json$/, ""));
 
   async function runWave(label: string, prompt: string): Promise<unknown> {
-    console.log(`merging ${label}…`);
-    const stream = client.messages.stream({
-      model: MODEL,
-      max_tokens: MAX_TOKENS,
-      output_config: { format: zodOutputFormat(label === "wave 1 (locations)" ? MergeWave1Output : MergeWave2Output) },
-      messages: [{ role: "user", content: prompt }],
-    });
-    const message = await stream.finalMessage();
-    usage.input += message.usage.input_tokens;
-    usage.output += message.usage.output_tokens;
-    if (message.stop_reason !== "end_turn") {
-      throw new Error(`${label}: stop_reason ${message.stop_reason}`);
+    // Mid-stream drops (ECONNRESET → "terminated") are not retried by the SDK,
+    // only connection failures before the response starts — so retry here.
+    for (let attempt = 1; ; attempt++) {
+      console.log(`merging ${label}…${attempt > 1 ? ` (attempt ${attempt})` : ""}`);
+      try {
+        const stream = client.messages.stream({
+          model: MODEL,
+          max_tokens: MAX_TOKENS,
+          output_config: { format: zodOutputFormat(label === "wave 1 (locations)" ? MergeWave1Output : MergeWave2Output) },
+          messages: [{ role: "user", content: prompt }],
+        });
+        const message = await stream.finalMessage();
+        usage.input += message.usage.input_tokens;
+        usage.output += message.usage.output_tokens;
+        if (message.stop_reason !== "end_turn") {
+          throw new Error(`${label}: stop_reason ${message.stop_reason}`);
+        }
+        const text = message.content.find((b) => b.type === "text");
+        if (!text) throw new Error(`${label}: no text block in response`);
+        return JSON.parse(text.text);
+      } catch (err) {
+        const transient =
+          err instanceof Anthropic.APIConnectionError ||
+          (err instanceof Error && /terminated|ECONNRESET|ETIMEDOUT|socket hang up/i.test(err.message));
+        if (!transient || attempt >= 3) throw err;
+        console.log(`  ${label}: connection dropped (${(err as Error).message}), retrying…`);
+        await new Promise((r) => setTimeout(r, 2000 * attempt));
+      }
     }
-    const text = message.content.find((b) => b.type === "text");
-    if (!text) throw new Error(`${label}: no text block in response`);
-    return JSON.parse(text.text);
   }
 
   function writeEntities(kind: Kind, drafts: Record<string, unknown>[]): string[] {
@@ -283,19 +297,35 @@ async function main() {
       `Existing story slugs (valid in appearsIn): ${storySlugs.join(", ")}`,
     ].join("\n\n");
 
-  // Wave 1 — locations.
-  const w1Matches = matchingExisting(all.filter((o) => o.kind === "location"), registries.locations);
-  const w1Prompt = [
-    preamble("This wave merges LOCATION occurrences only."),
-    `Registry of existing content slugs (the only pre-existing slugs valid in connectedTo):\n${registryLines("locations", registries.locations)}`,
-    w1Matches.length > 0
-      ? `Existing entities matching occurrence names — enrich these: start from the JSON, keep its fields, add new facts and sources:\n${JSON.stringify(w1Matches.map((e) => e.json), null, 2)}`
-      : "No occurrence matches an existing entity — all merged locations are new.",
-    `Location occurrences by window:\n\n${occurrenceBlocks(byWindow, ["location"])}`,
-  ].join("\n\n");
+  // Wave 1 — locations. Resumable: if a previous run already wrote
+  // merged/locations (and then died in wave 2), reuse the files instead of
+  // paying for the wave again; --force always re-runs it.
+  const w1Dir = path.join(mergedDir, "locations");
+  let wave1Locations: Record<string, unknown>[];
+  if (!force && fs.existsSync(w1Dir) && fs.readdirSync(w1Dir).some((f) => f.endsWith(".json"))) {
+    wave1Locations = fs
+      .readdirSync(w1Dir)
+      .filter((f) => f.endsWith(".json"))
+      .sort()
+      .map((f) => JSON.parse(fs.readFileSync(path.join(w1Dir, f), "utf8")));
+    console.log(
+      `wave 1 (locations) — reusing ${wave1Locations.length} entities from merged/locations/`,
+    );
+  } else {
+    const w1Matches = matchingExisting(all.filter((o) => o.kind === "location"), registries.locations);
+    const w1Prompt = [
+      preamble("This wave merges LOCATION occurrences only."),
+      `Registry of existing content slugs (the only pre-existing slugs valid in connectedTo):\n${registryLines("locations", registries.locations)}`,
+      w1Matches.length > 0
+        ? `Existing entities matching occurrence names — enrich these: start from the JSON, keep its fields, add new facts and sources:\n${JSON.stringify(w1Matches.map((e) => e.json), null, 2)}`
+        : "No occurrence matches an existing entity — all merged locations are new.",
+      `Location occurrences by window:\n\n${occurrenceBlocks(byWindow, ["location"])}`,
+    ].join("\n\n");
 
-  const wave1 = MergeWave1Output.parse(await runWave("wave 1 (locations)", w1Prompt));
-  writeEntities("locations", wave1.locations);
+    const wave1 = MergeWave1Output.parse(await runWave("wave 1 (locations)", w1Prompt));
+    writeEntities("locations", wave1.locations);
+    wave1Locations = wave1.locations;
+  }
 
   // Wave 2 — characters + creatures, with wave-1 slugs in context.
   const peopleOccurrences = all.filter((o) => o.kind !== "location");
@@ -307,7 +337,7 @@ async function main() {
     preamble("This wave merges CHARACTER and CREATURE occurrences (locations are already merged)."),
     `Location slugs valid in the "locations" field:\n${registryLines("locations", [
       ...registries.locations,
-      ...wave1.locations.map((l) => ({ slug: l.slug, name: l.name })),
+      ...wave1Locations.map((l) => ({ slug: String(l.slug), name: String(l.name) })),
     ])}`,
     `Registry of existing content slugs:\n${registryLines("characters", registries.characters)}\n${registryLines("creatures", registries.creatures)}`,
     w2Matches.length > 0
@@ -330,7 +360,7 @@ async function main() {
       );
     }
   };
-  collect("location", wave1.locations);
+  collect("location", wave1Locations);
   collect("character", wave2.characters);
   collect("creature", wave2.creatures);
 
@@ -348,6 +378,20 @@ ${rows.join("\n")}
 `;
   fs.writeFileSync(path.join(ROOT, "content", "drafts", slug, "REVIEW.md"), review);
   console.log(`  REVIEW.md (${rows.length} entities)`);
+
+  // Post-merge gate: the pre-merge gate only covers the merge INPUT (windows +
+  // existing content). The merge LLM writes fresh sources into merged/ and can
+  // truncate or restitch a quote — verify its own output too, so broken quotes
+  // surface here and not in /admin/review.
+  console.log("\nverify-quotes gate (merge output)…");
+  const verifyOut = spawnSync(process.execPath, ["scripts/verify-quotes.mts", "--story", slug], {
+    stdio: "inherit",
+    cwd: ROOT,
+  });
+  if (verifyOut.status !== 0) {
+    console.error(`\nthe merge wrote broken "${slug}" quotes — fix the merged/ files above before review`);
+    process.exitCode = 1;
+  }
 
   const cost = (usage.input / 1e6) * USD_PER_MTOK.input + (usage.output / 1e6) * USD_PER_MTOK.output;
   console.log(
