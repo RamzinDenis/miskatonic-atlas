@@ -94,25 +94,40 @@ function FitZoomLimit({ bounds }: { bounds: LatLngBoundsExpression }) {
  * Chart vignettes by kind of feature, drawn the way this scan draws its own
  * ships and compass rose: bold black engraving sitting on a cleared patch
  * of paper (the .atlas-pin clearing), which is what keeps a mark legible on
- * Colton's dense etching. A steepled New England skyline for towns, a
- * broken column for ruins, waves with a crossed fix for open sea, a
- * mountain range for regions. Drawn in currentColor so CSS states re-ink
- * them (engraving black at rest, vermilion when chosen), and roughened by
- * the shared turbulence filter (route-glyphs.ts) so the vector edge sits in
- * the etched scan instead of floating over it. The same markup feeds the
- * legend, which is what keys the symbols to the chart.
+ * Colton's dense etching.
+ *
+ * Every type in the schema's enum carries its own sign — a key whose rows
+ * repeat a symbol explains nothing. They are told apart by silhouette, not
+ * by detail, because the legend prints them at 17px: a steepled skyline for
+ * a city against two low gambrel cottages for a town (the city's vertical
+ * spire is the whole difference); a pedimented portico for the single named
+ * hall or library; a hachured range for a region, kept distinct from the
+ * town's roofs by having no walls under its peaks; a broken column with a
+ * fallen drum for a ruin; waves with a crossed fix for open sea; a field
+ * cairn — low and squat where the ruin is tall and narrow — for whatever
+ * fits no other kind. The bare circle-and-dot is now only the fallback for
+ * a type this map has never heard of.
+ *
+ * Drawn in currentColor so CSS states re-ink them (engraving black at rest,
+ * vermilion when chosen), and roughened by the shared turbulence filter
+ * (route-glyphs.ts) so the vector edge sits in the etched scan instead of
+ * floating over it. The same markup feeds the legend, which is what keys
+ * the symbols to the chart.
  */
 
 const VIGNETTES: Record<string, string> = {
   city: `<g filter="url(#atlas-ink-rough)" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 24h17"/><path d="M9.2 24v-9.8L11.8 8l2.6 6.2V24"/><path d="M11.8 8V5.2"/><path d="M11.8 5.2l2.4 1-2.4 1z" fill="currentColor" stroke="none"/><path d="M14.4 18h5.9v6"/><path d="M13.9 18l2.6-2.6 3.8 2.6"/><path d="M17.1 24v-2.3" stroke-width="1.2"/></g>`,
+  town: `<g filter="url(#atlas-ink-rough)" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 24h20"/><path d="M6.2 24v-8h7.2v8"/><path d="M5 16 9.8 12.2 14.6 16"/><path d="M12.1 13.4V10.2M11.2 10.2h1.9" stroke-width="1.2"/><path d="M15.6 24v-6.2h5.6V24"/><path d="M14.6 17.8 18.4 14.8 22.2 17.8"/><path d="M8.6 24v-3.4h2.2V24" stroke-width="1.2"/></g>`,
+  building: `<g filter="url(#atlas-ink-rough)" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5.2 24.2h17.6"/><path d="M7 21.6h14"/><path d="M9.7 21.6v-6.6M14 21.6v-6.6M18.3 21.6v-6.6" stroke-width="1.5"/><path d="M6.6 15h14.8"/><path d="M6.6 15 14 8.8 21.4 15"/><circle cx="14" cy="12.6" r="1" fill="currentColor" stroke="none"/></g>`,
+  region: `<g filter="url(#atlas-ink-rough)" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3.2 22 10.6 10l4.3 6.9 3.5-5.5L24.8 22z"/><path d="M8.3 15.7l-1.9 3M10.3 17.2l-1.7 2.7M20 17l-1.5 2.8" stroke-width="1.2"/></g>`,
   ruin: `<g filter="url(#atlas-ink-rough)" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.6 24.5h14M6.8 21.7h10"/><path d="M9.3 21.7V10.2l2.1-2.6 1.7 2.2 2.4-3.4.8 4v11.3"/><path d="M12.6 12.6v9.1" stroke-width="1.2"/><ellipse cx="22" cy="22.6" rx="2.6" ry="1.7"/></g>`,
   sea: `<g filter="url(#atlas-ink-rough)" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3.6l4 4M16 3.6l-4 4"/><path d="M3.4 15q3.5-3.8 7 0t7 0t7 0"/><path d="M6.4 20.6q3.5-3.8 7 0t7 0"/></g>`,
-  region: `<g filter="url(#atlas-ink-rough)" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3.2 22 10.6 10l4.3 6.9 3.5-5.5L24.8 22z"/><path d="M8.3 15.7l-1.9 3M10.3 17.2l-1.7 2.7M20 17l-1.5 2.8" stroke-width="1.2"/></g>`,
+  other: `<g filter="url(#atlas-ink-rough)" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5.6 24h16.8"/><path d="M7.6 24 8.6 18.6l4-.9 1.3 6.3z"/><path d="M14.6 24l.6-5 4-.4.9 5.4z"/><path d="M10.4 18.2l1.4-4.2 4.2.6.2 4z"/></g>`,
   default: `<g filter="url(#atlas-ink-rough)"><circle cx="14" cy="14" r="6" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="14" cy="14" r="1.5" fill="currentColor"/></g>`,
 };
 
-/* Display order of the legend's key, matching the schema's type enum;
-   types without a vignette of their own share the default sign. */
+/* Display order of the legend's key, matching the schema's type enum —
+   VIGNETTES carries a sign for every entry, so `default` never shows here. */
 const LOCATION_TYPE_ORDER = [
   "city",
   "town",
