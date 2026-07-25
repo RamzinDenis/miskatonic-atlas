@@ -33,7 +33,16 @@ export async function generateMetadata({
 
 /** The shared body of a location, rendered for the parent article and for each
     sub-location section alike. */
-function LocationBody({ location }: { location: Location }) {
+function LocationBody({
+  location,
+  inset = true,
+}: {
+  location: Location;
+  /** Sub-location sections drop their inset when the parent already printed
+      one — a town and its landmarks are the same crop of the same sheet,
+      and one page needs it once. */
+  inset?: boolean;
+}) {
   const connected = location.connectedTo.flatMap((ref) => {
     const loc = getLocation(ref);
     return loc ? [{ href: locationHref(ref), label: loc.name }] : [];
@@ -49,7 +58,7 @@ function LocationBody({ location }: { location: Location }) {
 
       <Description text={location.description} />
 
-      {location.map && (
+      {inset && location.map && (
         <MapInset
           map={location.map}
           name={location.name}
@@ -164,7 +173,7 @@ export default async function LocationPage({ params }: PageProps<"/locations/[sl
                 <p className="mt-1 text-sm text-muted">Real-world: {child.realWorld}</p>
               )}
             </header>
-            <LocationBody location={child} />
+            <LocationBody location={child} inset={!location.map} />
           </section>
         ))}
 
