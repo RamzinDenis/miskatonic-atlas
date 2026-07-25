@@ -111,7 +111,7 @@ export const MONSTERS: MapMonster[] = [
     name: "Cthulhu",
     storySlug: "the-call-of-cthulhu",
     mapId: "pacific",
-    at: { x: 790, y: 985 },
+    at: { x: 850, y: 730 },
     art: { w: 74, h: 75 },
   },
   {
@@ -119,7 +119,7 @@ export const MONSTERS: MapMonster[] = [
     name: "The Thing",
     storySlug: "dagon",
     mapId: "pacific",
-    at: { x: 955, y: 360 },
+    at: { x: 955, y: 120 },
     art: { w: 66, h: 58 },
   },
   {
