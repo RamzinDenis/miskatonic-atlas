@@ -14,7 +14,8 @@ import { WindowOutput, type Occurrence } from "../src/shared/draft-schemas.ts";
  * Usage: npm run extract -- <storySlug> [--force]
  *   - windows of 12 paragraphs, overlap 2, each an isolated context
  *   - existing window files are skipped; --force reruns everything
- *   - finishes by running verify-quotes and fails on broken quotes
+ *   - finishes by running verify-quotes --story <slug>: broken quotes of this
+ *     story are fatal, debris from other stories is reported as pre-existing
  */
 
 const MODEL = "claude-sonnet-5";
@@ -208,12 +209,12 @@ async function main() {
   }
 
   console.log("\nrunning verify-quotes…");
-  const verify = spawnSync(process.execPath, ["scripts/verify-quotes.mts"], {
+  const verify = spawnSync(process.execPath, ["scripts/verify-quotes.mts", "--story", slug], {
     stdio: "inherit",
     cwd: ROOT,
   });
   if (verify.status !== 0) {
-    console.error("verify-quotes failed — fix or drop the broken occurrences before merge");
+    console.error(`verify-quotes failed — fix or drop the broken "${slug}" occurrences before merge`);
     process.exit(verify.status ?? 1);
   }
   console.log(`\nnext: npm run merge -- ${slug}`);

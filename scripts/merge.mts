@@ -1,7 +1,9 @@
 import fs from "node:fs";
 import path from "node:path";
+import { spawnSync } from "node:child_process";
 import Anthropic from "@anthropic-ai/sdk";
 import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
+import { z } from "zod";
 import {
   MergeWave1Output,
   MergeWave2Output,
@@ -18,7 +20,12 @@ import {
  * deterministically from the merged data, the LLM never writes it.
  *
  * Usage: npm run merge -- <storySlug> [--force]
- * Precondition: npm run verify-quotes is green over the window files.
+ * Gate: verify-quotes --story <slug> runs first and aborts the merge (before
+ * any LLM call) if the story's quotes are broken.
+ * Missing content/stories/<slug>.json is created automatically (title from
+ * the normalized corpus, year from the raw frontmatter, summary via one small
+ * LLM call) — appearsIn validates against that registry, and creating the
+ * file used to be a manual step that kept being forgotten.
  * Afterwards: npm run check-drafts, then human review in /admin/review.
  */
 
@@ -29,6 +36,8 @@ const MAX_TOKENS = 64000;
 const ROOT = process.cwd();
 const KINDS = ["locations", "characters", "creatures"] as const;
 type Kind = (typeof KINDS)[number];
+
+const StorySummaryOutput = z.object({ summary: z.string() });
 
 interface RegistryEntry {
   slug: string;
@@ -146,6 +155,17 @@ async function main() {
     process.exit(1);
   }
 
+  console.log("verify-quotes gate…");
+  const verify = spawnSync(process.execPath, ["scripts/verify-quotes.mts", "--story", slug], {
+    stdio: "inherit",
+    cwd: ROOT,
+  });
+  if (verify.status !== 0) {
+    console.error(`\nbroken "${slug}" quotes — fix or drop them, then re-run merge`);
+    process.exit(1);
+  }
+  console.log("");
+
   const byWindow = new Map<string, Occurrence[]>();
   for (const f of fs.readdirSync(windowsDir).filter((x) => x.endsWith(".json")).sort()) {
     byWindow.set(
@@ -154,7 +174,7 @@ async function main() {
     );
   }
   const all = [...byWindow.values()].flat();
-  console.log(`${slug}: ${byWindow.size} windows, ${all.length} occurrences (assumes verify-quotes is green)\n`);
+  console.log(`${slug}: ${byWindow.size} windows, ${all.length} occurrences\n`);
 
   const sections = playbookSections();
   const registries = {
@@ -162,12 +182,62 @@ async function main() {
     characters: readRegistry("characters"),
     creatures: readRegistry("creatures"),
   };
-  const storySlugs = fs
-    .readdirSync(path.join(ROOT, "content", "stories"))
-    .map((f) => f.replace(/\.json$/, ""));
 
   const client = new Anthropic();
   const usage = { input: 0, output: 0 };
+
+  const story = JSON.parse(
+    fs.readFileSync(path.join(ROOT, "corpus", "normalized", `${slug}.json`), "utf8"),
+  ) as { title: string; paragraphs: { text: string }[] };
+
+  const storyPath = path.join(ROOT, "content", "stories", `${slug}.json`);
+  if (!fs.existsSync(storyPath)) {
+    const frontmatter = fs.readFileSync(path.join(ROOT, "corpus", "raw", `${slug}.md`), "utf8");
+    const year = Number(/^year:\s*"?(\d{4})/m.exec(frontmatter)?.[1]);
+    if (!Number.isInteger(year)) {
+      console.error(`no year: in corpus/raw/${slug}.md frontmatter — add it and re-run`);
+      process.exit(1);
+    }
+    const examples = fs
+      .readdirSync(path.join(ROOT, "content", "stories"))
+      .filter((f) => f.endsWith(".json"))
+      .map(
+        (f) =>
+          JSON.parse(fs.readFileSync(path.join(ROOT, "content", "stories", f), "utf8"))
+            .summary as string,
+      );
+    console.log(`content/stories/${slug}.json is missing — writing it (summary via ${MODEL})…`);
+    const summaryPrompt = [
+      `Write the index summary of the story "${story.title}" for a literary atlas: one long sentence (a colon and semicolons are welcome), present tense, spoilers allowed, no surrounding quotation marks.`,
+      examples.length > 0
+        ? `Match the voice of the existing summaries:\n${examples.map((s) => `- ${s}`).join("\n")}`
+        : "",
+      `Full story text:\n\n${story.paragraphs.map((p) => p.text).join("\n\n")}`,
+    ]
+      .filter(Boolean)
+      .join("\n\n");
+    const response = await client.messages.create({
+      model: MODEL,
+      max_tokens: 1000,
+      thinking: { type: "disabled" },
+      output_config: { format: zodOutputFormat(StorySummaryOutput) },
+      messages: [{ role: "user", content: summaryPrompt }],
+    });
+    usage.input += response.usage.input_tokens;
+    usage.output += response.usage.output_tokens;
+    const text = response.content.find((b) => b.type === "text");
+    if (!text) throw new Error("story summary: no text block in response");
+    const { summary } = StorySummaryOutput.parse(JSON.parse(text.text));
+    fs.writeFileSync(
+      storyPath,
+      JSON.stringify({ slug, title: story.title, year, summary }, null, 2) + "\n",
+    );
+    console.log(`  content/stories/${slug}.json (year ${year})\n`);
+  }
+
+  const storySlugs = fs
+    .readdirSync(path.join(ROOT, "content", "stories"))
+    .map((f) => f.replace(/\.json$/, ""));
 
   async function runWave(label: string, prompt: string): Promise<unknown> {
     console.log(`merging ${label}…`);
@@ -262,10 +332,7 @@ async function main() {
   collect("character", wave2.characters);
   collect("creature", wave2.creatures);
 
-  const storyTitle = (JSON.parse(
-    fs.readFileSync(path.join(ROOT, "corpus", "normalized", `${slug}.json`), "utf8"),
-  ) as { title: string }).title;
-  const review = `# Review — ${storyTitle}, extraction run
+  const review = `# Review — ${story.title}, extraction run
 
 Generated ${new Date().toISOString().slice(0, 10)} by \`npm run merge -- ${slug}\` from \`merged/\`.
 Mark a verdict for every entity in /admin/review (or by hand below); the verdicts are the gate counters.

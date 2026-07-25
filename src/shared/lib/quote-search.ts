@@ -64,3 +64,55 @@ export function findQuote(story: SearchableStory, quote: string): number[] {
   }
   return matched;
 }
+
+/** Shortest anchor worth diagnosing — below this a "match" is coincidence. */
+const MIN_ANCHOR = 12;
+const CLIP = 45;
+
+/** Longest prefix (or suffix) of `needle` that occurs somewhere in `full`. */
+function longestMatch(full: string, needle: string, side: "start" | "end"): number {
+  let lo = 0;
+  let hi = needle.length;
+  while (lo < hi) {
+    const mid = Math.ceil((lo + hi) / 2);
+    const piece = side === "start" ? needle.slice(0, mid) : needle.slice(needle.length - mid);
+    if (full.includes(piece)) lo = mid;
+    else hi = mid - 1;
+  }
+  return lo;
+}
+
+export interface QuoteDivergence {
+  /** Which end of the quote anchors in the text. */
+  anchor: "start" | "end";
+  /** Folded chars that match around that anchor. */
+  matched: number;
+  /** Quote and text around the divergence point; ◆ separates matched from unmatched. */
+  quoteAround: string;
+  textAround: string;
+}
+
+/**
+ * Explain why a not-found quote fails: anchor its longest matching prefix or
+ * suffix in the text and show both sides at the point they diverge. Null when
+ * no anchor of at least MIN_ANCHOR folded chars matches anywhere.
+ */
+export function diagnoseQuote(story: SearchableStory, quote: string): QuoteDivergence | null {
+  const needle = fold(quote);
+  const pre = longestMatch(story.full, needle, "start");
+  const suf = longestMatch(story.full, needle, "end");
+  if (Math.max(pre, suf) < MIN_ANCHOR) return null;
+
+  // Divergence offset inside the quote, and where its matched part sits in the text.
+  const d = pre >= suf ? pre : needle.length - suf;
+  const pos =
+    pre >= suf
+      ? story.full.indexOf(needle.slice(0, pre)) + pre
+      : story.full.indexOf(needle.slice(d));
+  return {
+    anchor: pre >= suf ? "start" : "end",
+    matched: Math.max(pre, suf),
+    quoteAround: `…${needle.slice(Math.max(0, d - CLIP), d)}◆${needle.slice(d, d + CLIP)}…`,
+    textAround: `…${story.full.slice(Math.max(0, pos - CLIP), pos)}◆${story.full.slice(pos, pos + CLIP)}…`,
+  };
+}
