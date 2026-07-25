@@ -50,11 +50,13 @@ export type MonsterKind =
  * The sea sheet (pacific) carries its own copies of the theatre's two
  * beasts — marginalia are presentation, per chart, like routes; the world
  * copy of each stays where the annotator first drew it:
- *   Cthulhu (pacific)  — open water south-west of the drawn R'lyeh, below
- *                        the Emma's terminal fix and clear of the island's
- *                        breaking foam
- *   The Thing (pacific) — the empty sea south of the black risen plain,
- *                        above the Vigilant's corridor
+ *   Cthulhu (pacific)  — surfacing right beneath the Emma–Alert encounter
+ *                        fix, in the clear water between the "Mch. 22"
+ *                        date and the island's breaking foam
+ *   The Thing (pacific) — off the mouth of the canyon that cuts the black
+ *                        risen plain — the water it rose from — close under
+ *                        the monolith without inking over the plain, above
+ *                        the Vigilant's corridor
  */
 export interface MapMonster {
   /** Creature content slug — doubles as the mask file name. */
@@ -109,7 +111,7 @@ export const MONSTERS: MapMonster[] = [
     name: "Cthulhu",
     storySlug: "the-call-of-cthulhu",
     mapId: "pacific",
-    at: { x: 740, y: 995 },
+    at: { x: 790, y: 985 },
     art: { w: 74, h: 75 },
   },
   {
@@ -117,7 +119,7 @@ export const MONSTERS: MapMonster[] = [
     name: "The Thing",
     storySlug: "dagon",
     mapId: "pacific",
-    at: { x: 860, y: 380 },
+    at: { x: 955, y: 360 },
     art: { w: 66, h: 58 },
   },
   {
