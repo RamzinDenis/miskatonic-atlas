@@ -144,12 +144,31 @@ function vignetteSvg(type: string): string {
   return `<svg class="atlas-pin-glyph" viewBox="0 0 28 28" aria-hidden="true"><defs>${INK_ROUGH_FILTER}</defs>${VIGNETTES[type] ?? VIGNETTES.default}</svg>`;
 }
 
-function locationIcon(location: MapLocation, active: boolean) {
+function locationIcon(location: MapLocation, active: boolean, style?: AtlasMap["markerStyle"]) {
+  if (style === "annotation") return annotationIcon(location, active);
   return divIcon({
     className: "atlas-pin-wrap",
     html: `<span class="atlas-pin${active ? " atlas-pin--active" : ""}">${vignetteSvg(location.type)}<span class="atlas-pin-label">${location.name}</span></span>`,
     iconSize: [28, 28],
     iconAnchor: [14, 14],
+  });
+}
+
+/*
+ * Annotation marks (markerStyle: "annotation"): on a generated close-up the
+ * artwork itself draws every place, so a glyph on a paper clearing would
+ * bury exactly what it points at. The mark is the lettered name itself with
+ * a small fix-point at the exact spot — the way the scan letters its own
+ * features. Hover and selection reprint in vermilion, as everywhere.
+ */
+function annotationIcon(location: MapLocation, active: boolean) {
+  const s = 12;
+  const town = location.type === "town" || location.type === "city";
+  return divIcon({
+    className: "atlas-pin-wrap",
+    html: `<span class="atlas-annot${active ? " atlas-annot--active" : ""}" style="width:${s}px;height:${s}px"><span class="atlas-annot-fix"></span><span class="atlas-annot-label${town ? " atlas-annot-label--town" : ""}">${location.name}</span></span>`,
+    iconSize: [s, s],
+    iconAnchor: [s / 2, s / 2],
   });
 }
 
@@ -669,7 +688,7 @@ export default function WorldMapClient({
           <Marker
             key={location.slug}
             position={pixelToLatLng(moves[location.slug] ?? location, chart)}
-            icon={locationIcon(location, selected?.slug === location.slug)}
+            icon={locationIcon(location, selected?.slug === location.slug, chart.markerStyle)}
             alt={location.name}
             draggable={picker}
             eventHandlers={{
@@ -805,7 +824,7 @@ export default function WorldMapClient({
 
                 {/* Each sign is explained once, as a chart's key would —
                     the pins themselves carry the place names. */}
-                {legendTypes.length > 0 && (
+                {legendTypes.length > 0 && chart.markerStyle !== "annotation" && (
                   <section className="mt-6">
                     <h2 className="text-center text-xs uppercase tracking-widest text-muted">
                       Explanation
@@ -821,6 +840,30 @@ export default function WorldMapClient({
                           <span>{type}</span>
                         </li>
                       ))}
+                    </ul>
+                  </section>
+                )}
+
+                {/* Annotation sheets carry no glyphs — the key explains the
+                    lettering itself: settlements in capitals, the rest in
+                    the smaller italic. */}
+                {legendTypes.length > 0 && chart.markerStyle === "annotation" && (
+                  <section className="mt-6">
+                    <h2 className="text-center text-xs uppercase tracking-widest text-muted">
+                      Explanation
+                    </h2>
+                    <div className="parchment-rule mt-2" />
+                    <ul className="mt-3 space-y-1.5 text-sm">
+                      <li className="flex items-center gap-2.5">
+                        <span className="legend-annot-fix" aria-hidden />
+                        <span style={{ fontVariant: "small-caps", letterSpacing: "0.14em" }}>
+                          Settlement
+                        </span>
+                      </li>
+                      <li className="flex items-center gap-2.5">
+                        <span className="legend-annot-fix" aria-hidden />
+                        <span className="italic">Landmark</span>
+                      </li>
                     </ul>
                   </section>
                 )}

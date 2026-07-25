@@ -57,6 +57,14 @@ export interface AtlasMap {
    * the landmarks — so it declares "all" and pins children too.
    */
   pins?: "top-level" | "all";
+  /**
+   * How a location is marked. "vignette" (default) — the engraved glyph on
+   * a paper clearing, made for the scan whose etching is background. On a
+   * generated close-up the artwork itself draws the places, and a badge
+   * would bury exactly what it points at — "annotation" instead circles
+   * the feature in the margin-annotator's ink and letters the name beside.
+   */
+  markerStyle?: "vignette" | "annotation";
   attribution?: { label: string; href: string };
 }
 
@@ -123,6 +131,7 @@ export const MAPS: Record<string, AtlasMap> = {
     tone: "art",
     // A close-up sheet lives on its landmarks: sub-locations pin publicly.
     pins: "all",
+    markerStyle: "annotation",
   },
 };
 
