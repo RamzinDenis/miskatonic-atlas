@@ -33,7 +33,15 @@ export const SHIP_ART: Record<ShipKind, { w: number; h: number }> = {
   freighter: { w: 52, h: 18 },
 };
 
-/** The vessel's alpha mask, painted in its track's ink wherever it sails. */
+/**
+ * The printed ink of every vessel silhouette — the near-black of the
+ * chart's own engraved genre ships, not the hand-tinted ink of its track:
+ * a ship is a picture of the vessel, the line under it is the survey.
+ * Selection still reprints the silhouette in vermilion with its leg.
+ */
+export const SHIP_INK = "#2b1e08";
+
+/** The vessel's alpha mask, painted in the printed ship ink (SHIP_INK). */
 export function shipMaskUrl(kind: ShipKind): string {
   return `/maps/ships/${kind}.png`;
 }

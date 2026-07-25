@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { WORLD_MAP } from "./geometry";
-import { SHIP_ART, shipMaskUrl } from "./route-glyphs";
+import { SHIP_ART, SHIP_INK, shipMaskUrl } from "./route-glyphs";
 import {
   ROUTE_LEGS_BY_CHART,
   ROUTE_STORY_SLUG,
@@ -62,14 +62,12 @@ export function RouteInset({ storySlug }: { storySlug: string }) {
           role="img"
           aria-label="Chart of the voyage: the Emma out of Auckland, the captured Alert to R'lyeh, Johansen adrift, and the Vigilant towing the derelict to Sydney"
         >
-          {/* The tint filters fill each vessel's mask with its track's ink —
-              the SVG twin of the live chart's mask-ink treatment. */}
+          {/* The tint filter fills every vessel's mask with the printed
+              ship ink (SHIP_INK) — the SVG twin of the live chart's
+              mask-ink treatment; the tracks keep their survey colors. */}
           <defs
             dangerouslySetInnerHTML={{
-              __html: `<radialGradient id="route-inset-clearing"><stop offset="0%" stop-color="rgba(238, 226, 197, 0.92)"/><stop offset="55%" stop-color="rgba(238, 226, 197, 0.7)"/><stop offset="100%" stop-color="rgba(238, 226, 197, 0)"/></radialGradient>${ROUTE_LEGS.map(
-                (leg) =>
-                  `<filter id="route-inset-tint-${leg.id}" x="-10%" y="-10%" width="120%" height="120%"><feFlood flood-color="${leg.color}"/><feComposite in2="SourceAlpha" operator="in"/></filter>`,
-              ).join("")}`,
+              __html: `<radialGradient id="route-inset-clearing"><stop offset="0%" stop-color="rgba(238, 226, 197, 0.92)"/><stop offset="55%" stop-color="rgba(238, 226, 197, 0.7)"/><stop offset="100%" stop-color="rgba(238, 226, 197, 0)"/></radialGradient><filter id="route-inset-ship-ink" x="-10%" y="-10%" width="120%" height="120%"><feFlood flood-color="${SHIP_INK}"/><feComposite in2="SourceAlpha" operator="in"/></filter>`,
             }}
           />
           {/* The quarter-size scan, drawn at the scan's own dimensions: the
@@ -118,7 +116,7 @@ export function RouteInset({ storySlug }: { storySlug: string }) {
                       y={-SHIP_ART[leg.ship].h / 2}
                       width={SHIP_ART[leg.ship].w}
                       height={SHIP_ART[leg.ship].h}
-                      filter={`url(#route-inset-tint-${leg.id})`}
+                      filter="url(#route-inset-ship-ink)"
                     />
                   </g>
                 )}

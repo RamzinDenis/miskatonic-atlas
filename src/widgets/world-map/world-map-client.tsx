@@ -53,6 +53,7 @@ import {
 import {
   INK_ROUGH_FILTER,
   SHIP_ART,
+  SHIP_INK,
   shipMaskUrl,
 } from "./route-glyphs";
 import {
@@ -247,7 +248,7 @@ function routeShipIcon(leg: RouteLeg, active: boolean) {
   const flip = placement.flip ? " scaleX(-1)" : "";
   return divIcon({
     className: "atlas-route-ship-wrap",
-    html: `<span class="atlas-route-ship" style="color:${active ? TRACK_ACCENT : leg.color};width:${art.w}px;height:${art.h}px;transform:translate(-50%,-50%) rotate(${placement.angleDeg}deg) translateY(-14px)${flip}"><span class="mask-ink" style="--ink-mask:url('${shipMaskUrl(leg.ship)}')"></span></span>`,
+    html: `<span class="atlas-route-ship" style="color:${active ? TRACK_ACCENT : SHIP_INK};width:${art.w}px;height:${art.h}px;transform:translate(-50%,-50%) rotate(${placement.angleDeg}deg) translateY(-14px)${flip}"><span class="mask-ink" style="--ink-mask:url('${shipMaskUrl(leg.ship)}')"></span></span>`,
     iconSize: [0, 0],
     iconAnchor: [0, 0],
   });
@@ -300,7 +301,7 @@ function LegendShip({ leg }: { leg: RouteLeg }) {
       className="legend-ship mask-ink"
       style={
         {
-          color: leg.color,
+          color: SHIP_INK,
           "--ink-mask": `url('${shipMaskUrl(leg.ship)}')`,
         } as CSSProperties
       }
