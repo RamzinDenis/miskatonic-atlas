@@ -35,12 +35,13 @@ const MONSTERS = [
   "black-winged-ones",
   "the-thing",
   "the-crawling-reptiles-of-the-nameless-city",
+  "the-dunwich-horror",
 ];
 
 /* Beasts engraved for the bestiary alone, with no marginalia on the chart:
    their small mask has nowhere to live under maps/, so it is written beside
    the plate-size one and the register points the ribbon at it. */
-const BESTIARY_ONLY = ["white-polypous-thing"];
+const BESTIARY_ONLY = ["white-polypous-thing", "whippoorwills"];
 const SHIPS = {
   "ship-emma": "schooner",
   "ship-alert": "steam-yacht",

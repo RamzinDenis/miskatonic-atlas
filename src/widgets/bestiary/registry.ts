@@ -115,9 +115,52 @@ export const BESTIARY: BestiaryPlate[] = [
     },
   },
   {
+    slug: "the-dunwich-horror",
+    latin: "Progenies dunvicensis",
+    epithet: "Bigger than a barn, and all of squirming ropes",
+    art: {
+      mask: "/bestiary/the-dunwich-horror.webp",
+      thumb: "/maps/monsters/the-dunwich-horror.png",
+      aspect: 1.036,
+      effects: ["breath", "ink-shiver", "gaze-tilt", "vermilion-pulse"],
+    },
+  },
+  {
+    /* The one ordinary animal in the folio, so the one plate with no
+       marginalia twin: a bird of the Dunwich nights belongs on the page,
+       not adrift in the Atlantic where the chart keeps its beasts. */
+    slug: "whippoorwills",
+    latin: "Caprimulgus psychopompus",
+    epithet: "Lying in wait for the souls of the dying",
+    art: {
+      mask: "/bestiary/whippoorwills.webp",
+      thumb: "/bestiary/whippoorwills-thumb.png",
+      aspect: 0.643,
+      effects: ["ink-shiver", "gaze-tilt"],
+    },
+  },
+  {
     slug: "great-old-ones",
     latin: "Prisci siderei",
     epithet: "Star-born rulers of the elder earth",
+    art: null,
+  },
+  {
+    slug: "yog-sothoth",
+    latin: "Ianitor portarum",
+    epithet: "The gate, the key, and the guardian of the gate",
+    art: null,
+  },
+  {
+    slug: "the-old-ones",
+    latin: "Antiqui interstitiales",
+    epithet: "Not in the spaces we know, but between them",
+    art: null,
+  },
+  {
+    slug: "elder-things",
+    latin: "Priores lapsi",
+    epithet: "They wished to strip the earth and drag it away",
     art: null,
   },
   {
