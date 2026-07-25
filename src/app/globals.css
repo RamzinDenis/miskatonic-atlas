@@ -488,6 +488,41 @@ body {
   border: 3px double var(--paper-line);
 }
 
+/*
+ * The chart toggle: the atlas' sheets as square framed tiles in a corner of
+ * their own, apart from the legend's key. Each tile prints the sheet's own
+ * quarter-size copy behind the cartouche's double rule; the current sheet
+ * is rimmed in the annotator's vermilion and links nowhere.
+ */
+.chart-tile {
+  display: block;
+  width: 3.25rem;
+  height: 3.25rem;
+  border: 3px double var(--paper-line);
+  border-radius: 2px;
+  background-color: var(--paper);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.35);
+  filter: sepia(0.25) saturate(0.85);
+  transition:
+    border-color 0.15s ease,
+    filter 0.15s ease,
+    transform 0.15s ease;
+}
+
+a.chart-tile:hover,
+a.chart-tile:focus-visible {
+  border-color: var(--ink-accent);
+  filter: sepia(0.1) saturate(1);
+  transform: scale(1.06);
+}
+
+.chart-tile--current {
+  border-color: var(--ink-accent);
+  cursor: default;
+}
+
 .legend-glyph {
   flex: none;
   width: 17px;

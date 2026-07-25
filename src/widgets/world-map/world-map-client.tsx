@@ -914,35 +914,6 @@ export default function WorldMapClient({
                   </section>
                 )}
 
-                {/* The atlas' other sheets — the way an antique chart points
-                    at its companion inset. The current one is no link. */}
-                {Object.keys(MAPS).length > 1 && (
-                  <section className="mt-6">
-                    <h2 className="text-center text-xs uppercase tracking-widest text-muted">
-                      Charts of the atlas
-                    </h2>
-                    <div className="parchment-rule mt-2" />
-                    <ul className="mt-3 space-y-1.5">
-                      {Object.values(MAPS).map((m) => (
-                        <li key={m.id} className="text-sm">
-                          {m.id === chart.id ? (
-                            <span className="font-display italic text-muted">
-                              {m.title} — this sheet
-                            </span>
-                          ) : (
-                            <Link
-                              href={chartPath(m.id)}
-                              className="font-display italic transition-colors hover:text-accent"
-                            >
-                              {m.title} →
-                            </Link>
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                  </section>
-                )}
-
                 <div
                   className="mt-5 text-center text-sm leading-none text-muted"
                   aria-hidden="true"
@@ -953,6 +924,40 @@ export default function WorldMapClient({
             </nav>
           )}
         </div>
+      )}
+
+      {/* The atlas' sheets as a toggle of framed tiles — the chart switcher
+          lives in its own corner, apart from the legend's key. The current
+          sheet is no link; its frame is the annotator's vermilion. */}
+      {!picker && Object.keys(MAPS).length > 1 && (
+        <nav
+          aria-label="Charts of the atlas"
+          className="absolute bottom-6 right-4 z-[1000] flex flex-col items-end gap-2"
+        >
+          {Object.values(MAPS).map((m) =>
+            m.id === chart.id ? (
+              <span
+                key={m.id}
+                aria-current="page"
+                title={`${m.title} — this sheet`}
+                className="chart-tile chart-tile--current"
+                style={{ backgroundImage: `url(${m.insetUrl})` }}
+              >
+                <span className="sr-only">{m.title} — this sheet</span>
+              </span>
+            ) : (
+              <Link
+                key={m.id}
+                href={chartPath(m.id)}
+                title={m.title}
+                className="chart-tile"
+                style={{ backgroundImage: `url(${m.insetUrl})` }}
+              >
+                <span className="sr-only">{m.title}</span>
+              </Link>
+            ),
+          )}
+        </nav>
       )}
 
       {!picker && selected && (
