@@ -1,0 +1,32 @@
+{
+  "slug": "nahum-gardner",
+  "name": "Nahum Gardner",
+  "role": "other",
+  "summary": "Nahum Gardner was the farmer on whose land a meteorite fell, setting off a year of blighted crops, poisoned water, and the madness and death of his entire family. He died describing the colour that had lived in his well and consumed his wife and sons, his body disintegrating as he spoke.",
+  "description": "Nahum owned the trim white farmhouse amid fertile orchards where the blasted heath later formed. A meteorite fell from the sky and bedded itself beside his well; he reported the stone to the town and to Ammi Pierce, noting that it had shrunk overnight and glowed faintly, though the professors insisted stones do not shrink. He was a lean, genial man of about fifty living with his wife and three sons, and lightning struck the strange, magnetic stone's furrow six times within an hour.\n\nOver the following year his orchard fruit grew to abnormal size but proved bitter and inedible, and he came to believe the meteorite had poisoned his soil. Disturbed by strange footprints in the snow, he ploughed only his upland fields and drove his cows uplands after their milk turned bad. His wife went mad and was eventually locked in the attic, and he came to believe she glowed faintly in the dark like the surrounding vegetation; his horses went mad and had to be shot.\n\nHis son Zenas cut down blasphemous-looking flowers in the yard; his son Thaddeus went mad after visiting the well and died mysteriously in a locked attic room; his youngest son Merwin vanished one night fetching water, leaving only a crushed lantern behind. Found by Ammi weeks later, mentally broken, Nahum could only murmur \"In the well—he lives in the well—\" of Zenas. As his body collapsed, greyed, and disintegrated, he described a colour that lived in the well, had come from the meteorite, burned and sucked the life from everything, and had taken his wife and sons one by one before it would come for him too. He died completely caved in, his last words warning that whatever remained \"can't git away.\"",
+  "locations": [
+    "the-blasted-heath",
+    "the-blasted-heath/the-well"
+  ],
+  "appearsIn": [
+    "the-colour-out-of-space"
+  ],
+  "fate": "Died in his ruined kitchen after being consumed by the colour from the well; his body rapidly collapsed, greyed, and disintegrated into dust following his final words.",
+  "sources": [
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 20,
+      "quote": "He was a lean, genial person of about fifty, living with his wife and three sons on the pleasant farmstead in the valley."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 48,
+      "quote": "\"Nothin' ... nothin' ... the colour ... it burns ... cold an' wet, but it burns ... it lived in the well.... I seen it ... a kind o' smoke ... jest like the flowers last spring ... the well shone at night...."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 49,
+      "quote": "That which spoke could speak no more because it had completely caved in."
+    }
+  ]
+}

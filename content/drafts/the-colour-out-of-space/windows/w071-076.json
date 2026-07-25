@@ -1,0 +1,291 @@
+[
+  {
+    "kind": "character",
+    "name": "Ammi",
+    "aliases": [
+      "Ammi Pierce"
+    ],
+    "facts": [
+      "The narrator considers Ammi the only person willing to question or speak about the strange events.",
+      "Ammi told the narrator his tale before the narrator's one lone walk.",
+      "The narrator doubts Ammi consciously lied to him.",
+      "The narrator does not think Ammi's tale was all a freak of madness as the townsfolk warned.",
+      "Ammi saw much of the thing and was insidiously influenced by it.",
+      "Ammi has never been able to move away from the region.",
+      "Ammi recalled Nahum's dying words about not being able to get away.",
+      "The narrator calls Ammi a good old man.",
+      "The narrator worries Ammi may become a grey, twisted, brittle monstrosity.",
+      "The narrator plans to write the chief engineer to keep a sharp watch on Ammi when the reservoir gang gets to work."
+    ],
+    "typeGuess": "witness",
+    "fate": "Still alive but feared by the narrator to be at risk of becoming a monstrous, twisted being due to lingering influence.",
+    "relatedNames": [
+      "The Narrator",
+      "Nahum"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 74,
+        "quote": "There was no one but Ammi to question; for Arkham people will not talk about the strange days, and all three professors who saw the aerolite and its coloured globule are dead."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 76,
+        "quote": "I doubt very much if Ammi consciously lied to me, and I do not think his tale was all a freak of madness as the townsfolk had forewarned."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 76,
+        "quote": "He saw so much of the thing—and its influence was so insidious. Why has he never been able to move away?"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 76,
+        "quote": "Ammi is such a good old man—when the reservoir gang gets to work I must write the chief engineer to keep a sharp watch on him."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 76,
+        "quote": "I would hate to think of him as the grey, twisted, brittle monstrosity which persists more and more in troubling my sleep."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "The narrator took one lone walk before Ammi told him his tale.",
+      "The narrator experienced an odd timidity about the deep skies above during his walk and wished for clouds to gather.",
+      "The narrator has no opinion to offer on the phenomenon and admits he does not know what it was.",
+      "The narrator believes there was something wrong with the sunlight he saw above the well.",
+      "The narrator says he shall be glad to see the water come, referring to a reservoir that will flood the area.",
+      "The narrator hopes nothing will happen to Ammi.",
+      "The narrator plans to write the chief engineer to keep watch on Ammi once the reservoir gang begins work.",
+      "The narrator is troubled in his sleep by the thought of Ammi becoming a monstrosity."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Ammi",
+      "Nahum"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 73,
+        "quote": "I myself am curious about the sensation I derived from my one lone walk before Ammi told me his tale. When twilight came I had vaguely wished some clouds would gather, for odd timidity about the deep skyey voids above had crept into my soul."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 74,
+        "quote": "Do not ask me for my opinion. I do not know—that is all."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 76,
+        "quote": "I shall be glad to see the water come. Meanwhile I hope nothing will happen to Ammi."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Nahum",
+    "aliases": [
+      "Nahum's"
+    ],
+    "facts": [
+      "People went queer in the years after Nahum's 'taking'.",
+      "The narrator recalls Nahum's dying words: \"can't git away—draws ye—ye know summ'at's comin', but 'tain't no use—\""
+    ],
+    "typeGuess": "witness",
+    "fate": "Died, with his final words describing an inescapable compulsion tied to the phenomenon.",
+    "relatedNames": [
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 73,
+        "quote": "They say the mental influences are very bad, too; numbers went queer in the years after Nahum's taking, and always they lacked the power to get away."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 76,
+        "quote": "How clearly he recalled those dying words of Nahum's—\"can't git away—draws ye—ye know summ'at's comin', but 'tain't no use—\""
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Arkham",
+    "aliases": [],
+    "facts": [
+      "Arkham people will not talk about the strange days.",
+      "There is a current Arkham tale about fat oaks that shine and move at night.",
+      "All three professors from Arkham who saw the aerolite and its coloured globule are dead."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Ammi",
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 74,
+        "quote": "There was no one but Ammi to question; for Arkham people will not talk about the strange days, and all three professors who saw the aerolite and its coloured globule are dead."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 74,
+        "quote": "One of the current Arkham tales is about fat oaks that shine and move as they ought not to do at night."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the disused well",
+    "aliases": [
+      "that miasmal brink",
+      "the well"
+    ],
+    "facts": [
+      "City men and college chemists have not analyzed the water from the disused well.",
+      "The narrator believes something wrong with the sunlight seen above the well's brink.",
+      "The narrator suspects one of the coloured globules is still down the well.",
+      "The narrator suspects some kind of growth or nourishment may still be occurring there."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 72,
+        "quote": "They might be even queerer if city men and college chemists could be interested enough to analyze the water from that disused well, or the grey dust that no wind seems ever to disperse."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 74,
+        "quote": "No doubt it is still down the well—I know there was something wrong with the sunlight I saw above that miasmal brink."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the blasted heath",
+    "aliases": [
+      "that spot",
+      "the silent valley",
+      "the grotesque country",
+      "the dark realm",
+      "those deep ravines"
+    ],
+    "facts": [
+      "The blight on the blasted heath is said to be spreading, perhaps an inch a year.",
+      "The colour of neighboring herbage is said not to be quite right in spring.",
+      "Wild things leave queer prints in the light winter snow there.",
+      "Snow never seems as heavy on the blasted heath as elsewhere.",
+      "Horses grow skittish in the silent valley.",
+      "Hunters cannot depend on their dogs too near the splotch of greyish dust.",
+      "Numbers of people went queer in the years after Nahum's taking and lacked the power to leave.",
+      "The stronger-minded folk all left the region; only foreigners tried to live in the crumbling old homesteads, but could not stay.",
+      "Foreigners who tried to live there had horrible dreams at night and told wild, weird stories of whispered magic.",
+      "No traveler has ever escaped a sense of strangeness in the deep ravines.",
+      "Artists shiver as they paint the thick woods whose mystery is as much of the spirits as of the eye.",
+      "Fat oaks there reportedly shine and move at night in a way they ought not.",
+      "The narrator expects a reservoir to be built that will flood the area with water."
+    ],
+    "typeGuess": "region",
+    "fate": "A reservoir gang is expected to come and the water is expected to submerge the area.",
+    "relatedNames": [
+      "Nahum",
+      "Ammi",
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 72,
+        "quote": "Botanists, too, ought to study the stunted flora on the borders of that spot, for they might shed light on the country notion that the blight is spreading—little by little, perhaps an inch a year."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 72,
+        "quote": "Snow never seems quite so heavy on the blasted heath as it is elsewhere. Horses—the few that are left in this motor age—grow skittish in the silent valley; and hunters cannot depend on their dogs too near the splotch of greyish dust."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 73,
+        "quote": "Then the stronger-minded folk all left the region, and only the foreigners tried to live in the crumbling old homesteads. They could not stay, though; and one sometimes wonders what insight beyond ours their wild, weird stories of whispered magic have given them."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 73,
+        "quote": "No traveler has ever escaped a sense of strangeness in those deep ravines, and artists shiver as they paint thick woods whose mystery is as much of the spirits as of the eye."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 76,
+        "quote": "I shall be glad to see the water come."
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "the colour out of space",
+    "aliases": [
+      "a gas",
+      "a frightful messenger",
+      "demon hatchling",
+      "the thing"
+    ],
+    "facts": [
+      "In terms of matter it might be called a gas, but it obeyed laws not of our cosmos.",
+      "It was no fruit of worlds and suns visible to telescopes and photographic plates.",
+      "It was no breath from skies whose motions astronomers measure.",
+      "It is described as a frightful messenger from unformed realms of infinity beyond all Nature as known.",
+      "Its mere existence is said to stun the brain and numb observers with black extra-cosmic gulfs.",
+      "There were other globules of the thing besides the one described by Ammi.",
+      "One globule must have fed itself and escaped; another was probably too late to escape.",
+      "The narrator believes it must be tethered to something, such as tree roots, or it would spread quickly.",
+      "Something terrible came to the hills and valleys on the meteor and something terrible still remains."
+    ],
+    "typeGuess": "entity",
+    "fate": "Presumed still partly present (possibly in the well or tethered to trees) though most of it apparently escaped or dissipated; the area is to be flooded by a reservoir.",
+    "relatedNames": [
+      "Ammi",
+      "The Narrator",
+      "Nahum"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 74,
+        "quote": "There were other globules—depend upon that. One must have fed itself and escaped, and probably there was another which was too late."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 74,
+        "quote": "But whatever demon hatchling is there, it must be tethered to something or else it would quickly spread. Is it fastened to the roots of those trees that claw the air?"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 75,
+        "quote": "What it is, only God knows. In terms of matter I suppose the thing Ammi described would be called a gas, but this gas obeyed laws that are not of our cosmos."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 75,
+        "quote": "It was just a colour out of space—a frightful messenger from unformed realms of infinity beyond all Nature as we know it; from realms whose mere existence stuns the brain and numbs us with the black extra-cosmic gulfs it throws open before our frenzied eyes."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 76,
+        "quote": "Something terrible came to the hills and valleys on that meteor, and something terrible—though I know not in what proportion—still remains."
+      }
+    ]
+  }
+]

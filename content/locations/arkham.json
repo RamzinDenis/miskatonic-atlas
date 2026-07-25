@@ -2,8 +2,8 @@
   "slug": "arkham",
   "name": "Arkham",
   "type": "town",
-  "summary": "The city home to Miskatonic University, from which Dr. Henry Armitage, Professor Rice, and Dr. Morgan set out to confront the Dunwich horror; also the city Wilbur Whateley visited in his quest for the Necronomicon, and the location of St. Mary's Hospital where the narrator of the Kingsport festival was sent for care.",
-  "description": "Wilbur Whateley, who had never seen a city before, appeared one day in Arkham in quest of the dreaded Necronomicon kept under lock and key at the Miskatonic University library, passing heedlessly by a great white-fanged watchdog on the university grounds. Years later a scream rang out in Arkham that roused half its sleepers and haunted their dreams ever afterward, while a quieter but no less poignant phase of the horror unwound behind the closed door of a shelf-lined room where Wilbur's manuscript diary was studied.\n\nA facetious item in the Arkham Advertiser joked about the 'record-breaking monster' the bootleg whisky of Dunwich had supposedly raised up, not knowing how near the truth lay. When the horror broke loose, Earl Sawyer suggested that help be asked from Aylesbury or Arkham, and it was three men from Arkham — Dr. Armitage, Professor Rice, and Dr. Morgan — who at last motored out to Dunwich and, without telling the frightened natives what to expect, climbed Sentinel Hill to end the terror.\n\nArkham was also home to St. Mary's Hospital, where a delirious young man was sent for better care after a harrowing night in Kingsport; there broadminded doctors lent their influence toward obtaining for him the carefully sheltered copy of the Necronomicon kept in the library of Miskatonic University.",
+  "summary": "The city home to Miskatonic University, from which Dr. Henry Armitage, Professor Rice, and Dr. Morgan set out to confront the Dunwich horror; also the city Wilbur Whateley visited in his quest for the Necronomicon, the location of St. Mary's Hospital where the narrator of the Kingsport festival was sent for care, and the old witch-haunted town from which travelers set out toward the grey desolation known as the blasted heath.",
+  "description": "Wilbur Whateley, who had never seen a city before, appeared one day in Arkham in quest of the dreaded Necronomicon kept under lock and key at the Miskatonic University library, passing heedlessly by a great white-fanged watchdog on the university grounds. Years later a scream rang out in Arkham that roused half its sleepers and haunted their dreams ever afterward, while a quieter but no less poignant phase of the horror unwound behind the closed door of a shelf-lined room where Wilbur's manuscript diary was studied.\n\nA facetious item in the Arkham Advertiser joked about the 'record-breaking monster' the bootleg whisky of Dunwich had supposedly raised up, not knowing how near the truth lay. When the horror broke loose, Earl Sawyer suggested that help be asked from Aylesbury or Arkham, and it was three men from Arkham — Dr. Armitage, Professor Rice, and Dr. Morgan — who at last motored out to Dunwich and, without telling the frightened natives what to expect, climbed Sentinel Hill to end the terror.\n\nArkham was also home to St. Mary's Hospital, where a delirious young man was sent for better care after a harrowing night in Kingsport; there broadminded doctors lent their influence toward obtaining for him the carefully sheltered copy of the Necronomicon kept in the library of Miskatonic University.\n\n## The Blasted Heath\n\nArkham is a very old town full of witch legends, and travelers were warned that the hills to its west were evil long before a meteorite ever fell there. When a great rock dropped from the sky and bedded itself beside the well at the Nahum Gardner place, all Arkham heard of it by night, and the town's newspapers, with collegiate sponsorship behind the story, sent reporters out to interview the family. A city veterinary from Arkham later examined the Gardners' diseased swine but was openly baffled, and Arkham's own city folk only laughed when told the family's stranger troubles. It was to Arkham that Ammi Pierce rode at last to report that the Gardner family was no more, and it is in Arkham, among the men who saw what followed, that strange days are still never talked about; a current town tale merely whispers of fat oaks that shine and move at night, though the three Miskatonic professors who once examined the fallen stone are all long dead. The town's new city water supply is slated to come from a reservoir to be built over the heath itself, and even before the meteorite fell, the western woods near Arkham already held a measure of dread — surpassed only by a small island in the Miskatonic where, by old report, the devil once held court beside a stone altar older than the Indians.",
   "map": {
     "mapId": "new-england",
     "x": 738,
@@ -11,11 +11,13 @@
   },
   "appearsIn": [
     "the-dunwich-horror",
-    "the-festival"
+    "the-festival",
+    "the-colour-out-of-space"
   ],
   "connectedTo": [
     "dunwich",
-    "aylesbury"
+    "aylesbury",
+    "the-blasted-heath"
   ],
   "sources": [
     {
@@ -40,6 +42,21 @@
       "storySlug": "the-festival",
       "paragraph": 28,
       "quote": "they sent me to St. Mary’s Hospital in Arkham, where I could have better care"
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 4,
+      "quote": "They told me this in Arkham, and because that is a very old town full of witch legends I thought the evil must be something which grandmas had whispered to children through centuries."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 11,
+      "quote": "And by night all Arkham had heard of the great rock that fell out of the sky and bedded itself in the ground beside the well at the Nahum Gardner place."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 50,
+      "quote": "he set out at once for Arkham and notified the authorities that the Gardner family was no more"
     }
   ]
 }

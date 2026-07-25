@@ -1,0 +1,311 @@
+[
+  {
+    "kind": "character",
+    "name": "Ammi",
+    "aliases": [
+      "Ammi's"
+    ],
+    "facts": [
+      "Ammi drove out in his buggy to the farmhouse with the six men.",
+      "Ammi did not want the well searched but told the men about it under questioning.",
+      "Ammi recognized the colour of the glow from the well as the same he had seen before.",
+      "Ammi had seen the colour in the aerolite two summers before, in the crazy vegetation, and in the attic room that morning.",
+      "A clammy current of vapour of that colour had brushed past Ammi in the attic without harming him.",
+      "Ammi recalled Nahum's last words describing a thing that came from a place where things are not as they are here.",
+      "Ammi warned the wagon driver not to go outside, saying Nahum spoke of something living in the well that sucks life out.",
+      "Ammi quoted Nahum as saying the thing grew from a round ball like the meteor stone, sucks and burns, is a cloud of colour, feeds on everything living, and grows stronger.",
+      "Ammi restrained the driver on impulse, forgetting he himself had been unharmed by the vapour in the attic.",
+      "Ammi shook and had to tug and point to draw notice to the growing luminosity of the trees, lacking a controllable voice.",
+      "Ammi quenched the lamp for better seeing when the horses broke free."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Nahum",
+      "Merwin",
+      "Zenas"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 51,
+        "quote": "The six men drove out in a democrat-wagon, following Ammi's buggy, and arrived at the pest-ridden farmhouse about four o'clock."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 53,
+        "quote": "Ammi would not have told the men about the well if he had thought they meant to do anything then and there."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 55,
+        "quote": "He had seen that colour before, and feared to think what it might mean. He had seen it in the nasty brittle globule in that aerolite two summers ago, had seen it in the crazy vegetation of the springtime, and had thought he had seen it for an instant that very morning against the small barred window of that terrible attic room where nameless things had happened."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 57,
+        "quote": "\"Dun't go out thar,\" he whispered. \"They's more to this nor what we know. Nahum said somethin' lived in the well that sucks your life out."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 58,
+        "quote": "Ammi had restrained the driver on impulse, forgetting how uninjured he himself was after the clammy brushing of that coloured vapour in the attic room, but perhaps it is just as well that he acted as he did."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 62,
+        "quote": "Ammi shook no less, and had to tug and point for lack of a controllable voice when he wished to draw notice to the growing luminosity of the trees."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Nahum",
+    "aliases": [],
+    "facts": [
+      "Nahum had feared something down in the well, so much that he never searched it for Merwin or Zenas.",
+      "Nahum was taken by something of the strange colour.",
+      "Nahum said at the last that the thing was like the globule and the plants.",
+      "Nahum said something lived in the well that sucks your life out.",
+      "Nahum said the thing must have grown from a round ball like the one in the meteor stone that fell a year before.",
+      "Nahum said it sucks and burns and is a cloud of colour that can hardly be seen.",
+      "Nahum thought the thing feeds on everything living and gets stronger all the time.",
+      "Nahum said he had seen it that last week.",
+      "Nahum believed the thing was something from beyond, not made in any way of God's world."
+    ],
+    "typeGuess": "other",
+    "fate": "taken by something of the strange colour",
+    "relatedNames": [
+      "Ammi",
+      "Merwin",
+      "Zenas"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 53,
+        "quote": "he admitted that Nahum had feared something down there—so much so that he had never even thought of searching it for Merwin or Zenas."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 55,
+        "quote": "and then poor Nahum had been taken by something of that colour. He had said so at the last—said it was like the globule and the plants."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 57,
+        "quote": "Nahum said somethin' lived in the well that sucks your life out. He said it must be some'at growed from a round ball like one we all seen in the meteor stone that fell a year ago June."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Merwin",
+    "aliases": [],
+    "facts": [
+      "Merwin's remains were found in the well, mainly skeletal.",
+      "Merwin suffered from the grey brittle death.",
+      "The men could not find a convincing explanation for the unaccountable deaths of Merwin and Zenas in the well."
+    ],
+    "typeGuess": "other",
+    "fate": "died, remains found skeletal in the well",
+    "relatedNames": [
+      "Zenas",
+      "Nahum",
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 53,
+        "quote": "Merwin and Zenas were both there, in part, though the vestiges were mainly skeletal."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 54,
+        "quote": "could find no convincing common element to link the strange vegetable conditions, the unknown disease of livestock and humans, and the unaccountable deaths of Merwin and Zenas in the tainted well."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Zenas",
+    "aliases": [],
+    "facts": [
+      "Zenas's remains were found in the well, mainly skeletal.",
+      "Zenas suffered from the grey brittle death.",
+      "The men could not explain what peculiar madness made both boys jump into the well."
+    ],
+    "typeGuess": "other",
+    "fate": "died, remains found skeletal in the well",
+    "relatedNames": [
+      "Merwin",
+      "Nahum",
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 53,
+        "quote": "Merwin and Zenas were both there, in part, though the vestiges were mainly skeletal."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 54,
+        "quote": "But what peculiar madness could have made both boys jump into the well? Their deeds were so similar—and the fragments showed that they had both suffered from the grey brittle death."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the pest-ridden farmhouse",
+    "aliases": [
+      "the old house",
+      "the ancient sitting-room",
+      "the farm"
+    ],
+    "facts": [
+      "The six men and Ammi arrived at the farmhouse about four o'clock.",
+      "The whole aspect of the farm had a grey desolation.",
+      "Two crumbling objects were found in the attic and under a red checked tablecloth on the floor below.",
+      "The men conferred in the ancient sitting-room after exploring the well.",
+      "The trees and grounds of the farm yard began glowing with strange light.",
+      "Wooden sheds and beehives near the stone wall on the west began to shine."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Ammi",
+      "Nahum"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 51,
+        "quote": "The six men drove out in a democrat-wagon, following Ammi's buggy, and arrived at the pest-ridden farmhouse about four o'clock."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 54,
+        "quote": "everyone went indoors and conferred in the ancient sitting-room while the intermittent light of a spectral half-moon played wanly on the grey desolation outside."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 62,
+        "quote": "presently a policeman dumbly pointed to some wooden sheds and beehives near the stone wall on the west. They were commencing to shine, too"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the well",
+    "aliases": [
+      "the black pit",
+      "the stony curb by the great sweep"
+    ],
+    "facts": [
+      "Ammi had never thought to search the well for Merwin or Zenas because Nahum feared something down there.",
+      "The men emptied and explored the well, hauling up rank water.",
+      "The water in the well was phenomenally low.",
+      "Remains of Merwin and Zenas, a small deer, a large dog, and bones of smaller animals were found in the well.",
+      "The ooze at the bottom of the well seemed porous and bubbling with no solid obstruction found in the mud.",
+      "A glow appeared about the well at night, shooting up from the black pit like a searchlight beam.",
+      "The glow from the well had the same queer colour Ammi had seen before.",
+      "The shaft of phosphorescence from the well grew brighter and eventually poured out and flowed into the sky."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Ammi",
+      "Nahum",
+      "Merwin",
+      "Zenas"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 53,
+        "quote": "There is no need to speak too exactly of what they found. Merwin and Zenas were both there, in part, though the vestiges were mainly skeletal."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 55,
+        "quote": "this new glow was something definite and distinct, and appeared to shoot up from the black pit like a softened ray from a searchlight, giving dull reflections in the little ground pools where the water had been emptied."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 61,
+        "quote": "It was no longer shining out; it was pouring out; and as the shapeless stream of unplaceable colour left the well it seemed to flow directly into the sky."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Arkham",
+    "aliases": [],
+    "facts": [
+      "Strange days from that night are never talked about in Arkham because of what the men agreed to keep secret."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 60,
+        "quote": "it is because of the thing which every man of that party agreed in whispering later on, that strange days are never talked about in Arkham."
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "the colour",
+    "aliases": [
+      "the blasphemy from beyond",
+      "that same nameless intrusion",
+      "the thing"
+    ],
+    "facts": [
+      "The colour was found in the meteor two summers before the well incident.",
+      "It appeared in the crazy vegetation of the springtime.",
+      "It appeared as a clammy vapour that brushed past Ammi in the attic without harming him.",
+      "Nahum said it lived in the well and sucks life out, and burns.",
+      "Nahum described it as a cloud of colour that can hardly be seen and cannot be identified.",
+      "Nahum believed it grew from a round ball like the one in the meteor stone.",
+      "Nahum thought it feeds on everything living and gets stronger all the time.",
+      "It was described as not made in any way of God's world, something from beyond.",
+      "It had not so far hurt any human of unweakened mind, according to the narration.",
+      "It caused a shaft of unknown and unholy iridescence to shoot from the well.",
+      "It caused the high boughs of trees to twitch and claw at the sky despite no wind.",
+      "It appeared as a thousand tiny points of faint radiance tipping the treetops, like a monstrous constellation of unnatural light.",
+      "It eventually poured out of the well and flowed directly into the sky.",
+      "Its presence caused horses to become frantic and eventually break free.",
+      "It caused the well-sweep wood, sheds, and beehives to begin shining."
+    ],
+    "typeGuess": "entity",
+    "relatedNames": [
+      "Ammi",
+      "Nahum",
+      "Merwin",
+      "Zenas"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 57,
+        "quote": "He said it must be some'at growed from a round ball like one we all seen in the meteor stone that fell a year ago June. Sucks an' burns, he said, an' is jest a cloud of colour like that light out thar now, that ye can hardly see an' can't tell what it is."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 58,
+        "quote": "though the blasphemy from beyond had not so far hurt any human of unweakened mind, there is no telling what it might not have done at that last moment"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 60,
+        "quote": "the high bare boughs of all the trees in the yard were moving. They were twitching morbidly and spasmodically, clawing in convulsive and epileptic madness at the moonlit clouds"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 61,
+        "quote": "the watchers saw wriggling at the treetop height a thousand tiny points of faint and unhallowed radiance, tipping each bough like the fire of St. Elmo or the flames that come down on the apostles' heads at Pentecost. It was a monstrous constellation of unnatural light"
+      }
+    ]
+  }
+]

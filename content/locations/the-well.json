@@ -1,0 +1,34 @@
+{
+  "slug": "the-well",
+  "name": "the Well",
+  "parentSlug": "the-blasted-heath",
+  "type": "other",
+  "summary": "The disused well on the ruined Gardner farm, into which the alien colour was said to retreat between its depredations and from which it finally erupted skyward on the night the farm was destroyed.",
+  "description": "Nahum Gardner, in his final ravings, insisted that 'it' lived in the well behind his house, that it shone at night, and that whatever had taken his family finally went down into it after finishing with him. Ammi Pierce, tying his horse near its coping on his last visit, heard a liquid splash he took for the well and later confirmed through a window that no stone was missing from its rim. Though Ammi had reason to suspect the vanished farmhands Merwin and Zenas had gone into the well, fear of what Nahum said lurked there kept anyone from searching it — until the officials who came to close up the farm finally emptied and explored the shaft themselves, hauling up phenomenally low, rank water. In the porous, bubbling ooze at the bottom they found the skeletal remains of Merwin and Zenas alongside the bones of a small deer, a large dog, and lesser animals, with no solid obstruction anywhere in the mud.\n\nThat same night, a searchlight-like glow rose from the well's black depths — the same queer colour Ammi had glimpsed before — and grew steadily brighter until it stopped merely shining and began to pour out of the well entirely, flowing directly up into the sky. When the farm was destroyed in the cataclysm that followed, the well's rim was one of the few things left standing amid the bricks, stones, and scattered litter of the ruin. A man who had once been lowered into the well swore there was no bottom at all, only ooze, bubbles, and the feeling of something lurking beneath; Ammi believed to his last days that a final remnant of the colour still lurked down there, and the narrator, though hoping the water remains always very deep, vows he will never drink from it — suspecting some wrongness in the very sunlight above its miasmal brink, and wondering whether some growth or nourishment still continues, unstudied, in its depths.",
+  "map": {
+    "mapId": "new-england",
+    "x": 265,
+    "y": 665
+  },
+  "appearsIn": [
+    "the-colour-out-of-space"
+  ],
+  "connectedTo": [],
+  "sources": [
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 48,
+      "quote": "it lived in the well.... I seen it ... a kind o' smoke ... jest like the flowers last spring ... the well shone at night...."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 61,
+      "quote": "It was no longer shining out; it was pouring out; and as the shapeless stream of unplaceable colour left the well it seemed to flow directly into the sky."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 63,
+      "quote": "\"It was awful,\" he added. \"There was no bottom at all. Just ooze and bubbles and the feeling of something lurking under there.\""
+    }
+  ]
+}

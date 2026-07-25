@@ -3,8 +3,8 @@
   "name": "Miskatonic University",
   "parentSlug": "arkham",
   "type": "building",
-  "summary": "The university at Arkham where Dr. Henry Armitage taught, whose library kept a dreaded Latin Necronomicon under lock and key, later loaned in part to the delirious survivor of Kingsport's festival, and to which Wilbur Whateley's own manuscript diary was sent for translation.",
-  "description": "Some of the Whateleys and Bishops still send their eldest sons to Harvard and Miskatonic, though those sons seldom return to the moldering gambrel roofs under which they and their ancestors were born. The university's library kept under lock and key a dreaded volume — the Necronomicon of the mad Arab Alhazred, in Olaus Wormius' Latin version as printed in Spain in the seventeenth century — whose text spoke of Kadath in the cold waste having known the Old Ones. Correspondence failed to win Wilbur Whateley the loan of this book, so, since Miskatonic's copy was nearest to him geographically, he set out in person, shabby, dirty, bearded, and uncouth of dialect, to consult it; having never seen a city before, he had no thought save to find his way to the university grounds, where he passed heedlessly by a great white-fanged watchdog that barked with unnatural fury and tugged frantically at its chain. Dr. Armitage himself heard the same watchdog's savage yelping and studied Whateley's gorilla-like lope as he crossed the bit of campus visible from his window.\n\nYears later, Wilbur Whateley's curious manuscript diary, along with his collection of strange books, was delivered to Miskatonic University for study and possible translation, causing much worry and bafflement among experts in languages both ancient and modern. The same carefully sheltered copy of the Necronomicon was later lent, through the influence of broadminded doctors at St. Mary's Hospital, to a young survivor of the events at Kingsport.",
+  "summary": "The university at Arkham where Dr. Henry Armitage taught, whose library kept a dreaded Latin Necronomicon under lock and key, later loaned in part to the delirious survivor of Kingsport's festival, sent Wilbur Whateley's own manuscript diary for translation, and dispatched professors and laboratory chemists to examine the strange meteorite and dust that doomed the Gardner farm.",
+  "description": "Some of the Whateleys and Bishops still send their eldest sons to Harvard and Miskatonic, though those sons seldom return to the moldering gambrel roofs under which they and their ancestors were born. The university's library kept under lock and key a dreaded volume — the Necronomicon of the mad Arab Alhazred, in Olaus Wormius' Latin version as printed in Spain in the seventeenth century — whose text spoke of Kadath in the cold waste having known the Old Ones. Correspondence failed to win Wilbur Whateley the loan of this book, so, since Miskatonic's copy was nearest to him geographically, he set out in person, shabby, dirty, bearded, and uncouth of dialect, to consult it; having never seen a city before, he had no thought save to find his way to the university grounds, where he passed heedlessly by a great white-fanged watchdog that barked with unnatural fury and tugged frantically at its chain. Dr. Armitage himself heard the same watchdog's savage yelping and studied Whateley's gorilla-like lope as he crossed the bit of campus visible from his window.\n\nYears later, Wilbur Whateley's curious manuscript diary, along with his collection of strange books, was delivered to Miskatonic University for study and possible translation, causing much worry and bafflement among experts in languages both ancient and modern. The same carefully sheltered copy of the Necronomicon was later lent, through the influence of broadminded doctors at St. Mary's Hospital, to a young survivor of the events at Kingsport.\n\n## The Meteorite of the Gardner Farm\n\nWhen a great stone fell from the sky onto the Nahum Gardner farm, three professors from Miskatonic University hastened out the very next morning to examine the weird visitor from unknown stellar space and carried a specimen back to the university for testing; at the end of their tests, the college's own scientists were forced to admit they could not place the substance at all. Years afterward, when the Gardner family met its terrible end, two phials of dust taken from the victims' remains were brought to the university's laboratory, where, under the spectroscope, they gave off an unknown spectrum strangely similar to that of the original meteor.",
   "map": {
     "mapId": "new-england",
     "x": 674,
@@ -13,7 +13,8 @@
   "realWorld": "Fictional university in Arkham, Massachusetts",
   "appearsIn": [
     "the-dunwich-horror",
-    "the-festival"
+    "the-festival",
+    "the-colour-out-of-space"
   ],
   "connectedTo": [
     "dunwich",
@@ -36,6 +37,16 @@
       "storySlug": "the-festival",
       "paragraph": 28,
       "quote": "even lent me their influence in obtaining the carefully sheltered copy of Alhazred’s objectionable “Necronomicon” from the library of Miskatonic University"
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 12,
+      "quote": "He and his wife had gone with the three professors from Miskatonic University who hastened out the next morning to see the weird visitor from unknown stellar space"
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 51,
+      "quote": "here it develops that a very puzzling aftermath occurred at the college laboratory where the two phials of dust were finally taken"
     }
   ]
 }

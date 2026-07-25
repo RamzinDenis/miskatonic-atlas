@@ -1,0 +1,27 @@
+{
+  "slug": "merwin",
+  "name": "Merwin",
+  "role": "other",
+  "summary": "Merwin, the youngest of Nahum Gardner's sons, vanished one night while fetching water from the family's well; his skeletal remains were later found within it.",
+  "description": "As the horror on the farm deepened, Merwin grew increasingly imaginative and restless, fancying that his mad mother and brother spoke in some terrible language not of earth. His screams and sobbing grew worse as Thaddeus's condition worsened, and Ammi tried in vain to calm his hysteria; he had been \"going to pieces\" for days, screaming at everything, before his disappearance.\n\nHe went out late one night with a lantern and pail for well water and never returned; only a crushed, half-melted lantern and a bent, fused pail were found near the well afterward. His skeletal remains were later recovered from the well itself, alongside those of his brother Zenas, his dying father naming him among those the colour had \"got.\"",
+  "locations": [
+    "the-blasted-heath",
+    "the-blasted-heath/the-well"
+  ],
+  "appearsIn": [
+    "the-colour-out-of-space"
+  ],
+  "fate": "Vanished one night while fetching water from the well; his skeletal remains were later recovered from the well itself.",
+  "sources": [
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 39,
+      "quote": "He had gone out late at night with a lantern and pail for water, and had never come back."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 53,
+      "quote": "Merwin and Zenas were both there, in part, though the vestiges were mainly skeletal."
+    }
+  ]
+}

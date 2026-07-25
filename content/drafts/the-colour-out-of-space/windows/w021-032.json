@@ -1,0 +1,326 @@
+[
+  {
+    "kind": "character",
+    "name": "Nahum",
+    "aliases": [
+      "Nahum Gardner"
+    ],
+    "facts": [
+      "Vowed his orchards were prospering as never before after the harvest began ripening abnormally.",
+      "His entire fruit crop grew to phenomenal size but was unfit to eat due to bitterness and sickishness.",
+      "Believed the meteorite had poisoned his soil.",
+      "Was thankful most of his other crops were in the upland lot along the road.",
+      "Began to look worried as winter came.",
+      "Was disturbed about certain footprints in the snow that seemed wrong in nature and arrangement.",
+      "Ploughed and sowed the ten-acre pasture and upland lot but did nothing with the land around the house.",
+      "Hoped the summer's strange growths would draw the poison from the soil.",
+      "Had grown used to a sense of something near him waiting to be heard.",
+      "Took saxifrage blossoms to Arkham and showed them to the editor of the Gazette, who mocked rustic fears.",
+      "Had the cows driven to the uplands after the milk began to be bad, which stopped the problem.",
+      "Did not send his wife to the county asylum but let her wander the house.",
+      "Decided to keep his wife locked in the attic after the boys grew afraid of her.",
+      "Got the mad notion that his wife was slightly luminous in the dark, like the nearby vegetation."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Mrs. Gardner",
+      "Thaddeus",
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 21,
+        "quote": "Nahum vowed that his orchards were prospering as never before."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 21,
+        "quote": "Quick to connect events, he declared that the meteorite had poisoned the soil, and thanked Heaven that most of the other crops were in the upland lot along the road."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 23,
+        "quote": "Nahum himself gave the most definite statement of anyone when he said he was disturbed about certain footprints in the snow."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 28,
+        "quote": "Nahum ploughed and sowed the ten-acre pasture and the upland lot, but did nothing with the land around the house. He knew it would be of no use, and hoped that the summer's strange growths would draw all the poison from the soil."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 32,
+        "quote": "Nahum did not send her to the county asylum, but let her wander about the house as long as she was harmless to herself and others."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 32,
+        "quote": "he decided to keep her locked in the attic"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 32,
+        "quote": "Nahum got the mad notion that she was slightly luminous in the dark, as he now clearly saw was the case with the nearby vegetation."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Ammi",
+    "aliases": [],
+    "facts": [
+      "Saw Nahum less often than usual and observed he had begun to look worried.",
+      "Drove past Nahum's house in his sleigh on the way back from Clark's Corners one night.",
+      "Saw a rabbit run across the road whose leaps were longer than he or his horse liked.",
+      "His horse almost ran away and was brought up by a firm rein.",
+      "Gave Nahum's tales more respect after this experience.",
+      "Wondered why the Gardner dogs seemed cowed and quivering every morning.",
+      "Was the only person who still visited Nahum's place, though his visits were becoming fewer and fewer.",
+      "Sometimes did the Gardners' errands in town when school closed."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Nahum"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 23,
+        "quote": "Ammi saw Nahum less often than usual, and observed that he had begun to look worried."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 23,
+        "quote": "one night when he drove past Nahum's house in his sleigh on the way back from Clark's Corners. There had been a moon, and a rabbit had run across the road; and the leaps of that rabbit were longer than either Ammi or his horse liked."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 31,
+        "quote": "Ammi was now the only person who ever visited the place, and his visits were becoming fewer and fewer."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Thaddeus",
+    "aliases": [
+      "Nahum's second son Thaddeus"
+    ],
+    "facts": [
+      "Was Nahum's second son, a lad of fifteen.",
+      "Swore that the trees swayed even when there was no wind, though even the gossips would not credit this.",
+      "Was later shown to have been right about the trees.",
+      "Was an especially sensitive youth who suffered the most from the shunning and gossip.",
+      "Nearly fainted at the way his mother made faces at him."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Nahum",
+      "Mrs. Gardner"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 27,
+        "quote": "Nahum's second son Thaddeus, a lad of fifteen, swore that they swayed also when there was no wind; but even the gossips would not credit this."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 28,
+        "quote": "Thaddeus, an especially sensitive youth, suffered the most."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 30,
+        "quote": "It was then that they all owned that Thaddeus had been right about the trees."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 32,
+        "quote": "Thaddeus nearly fainted at the way she made faces at him"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Mrs. Gardner",
+    "aliases": [
+      "Nahum's wife"
+    ],
+    "facts": [
+      "The shunning of the house by neighbours told on her more than on Nahum.",
+      "Was the next to see the moving boughs of the maple from the window.",
+      "News of her madness stole around; it happened in June, about the anniversary of the meteor's fall.",
+      "Screamed about things in the air which she could not describe, using only verbs and pronouns, no nouns.",
+      "Ranted that something was taken away, something was fastening on her, and the walls and windows shifted.",
+      "Was allowed to wander the house until the boys grew afraid of her, then was locked in the attic.",
+      "By July had ceased to speak and crawled on all fours.",
+      "Nahum got the mad notion she was slightly luminous in the dark like the vegetation."
+    ],
+    "typeGuess": "other",
+    "fate": "Went mad, was locked in the attic, ceased to speak, and crawled on all fours; believed to be growing luminous in the dark.",
+    "relatedNames": [
+      "Nahum",
+      "Thaddeus"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 28,
+        "quote": "The shunning of his house by neighbours told on him, of course; but it told on his wife more."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 30,
+        "quote": "Mrs. Gardner was the next to see it from the window as she watched the swollen boughs of a maple against a moonlit sky."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 31,
+        "quote": "no one was surprised when the news of Mrs. Gardner's madness stole around."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 32,
+        "quote": "the poor woman screamed about things in the air which she could not describe. In her raving there was not a single specific noun, but only verbs and pronouns."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 32,
+        "quote": "By July she had ceased to speak and crawled on all fours"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Nahum's",
+    "aliases": [
+      "Nahum's house",
+      "Nahum's place",
+      "the Gardner place"
+    ],
+    "facts": [
+      "The snow melted faster around Nahum's than anywhere else.",
+      "Skunk-cabbages of monstrous size and strange colour grew in the mud by the woods across the road from the property.",
+      "Trees around Nahum's budded prematurely and swayed ominously at night.",
+      "All the orchard trees blossomed in strange colours and a bizarre growth sprang up through the stony soil of the yard and pasturage.",
+      "Disuse of the road past the house began in April, leading to its ultimate abandonment.",
+      "Insects came in May, and the place became a nightmare of buzzing and crawling.",
+      "A luminosity was seen inhering in the vegetation of the farm at night, glimpsed by a windmill salesman from Bolton.",
+      "The grass and leaves went grey and brittle by late May.",
+      "Located near Meadow Hill and not far from where the McGregor boys bagged a peculiar woodchuck."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Nahum",
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 25,
+        "quote": "People vowed that the snow melted faster around Nahum's than it did anywhere else"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 28,
+        "quote": "April brought a kind of madness to the country folk, and began that disuse of the road past Nahum's which led to its ultimate abandonment."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 30,
+        "quote": "In May the insects came, and Nahum's place became a nightmare of buzzing and crawling."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 30,
+        "quote": "around a farm in the valley which everyone knew from the account must be Nahum's, the darkness had been less thick. A dim though distinct luminosity seemed to inhere in all the vegetation, grass, leaves, and blossoms alike"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Clark's Corners",
+    "aliases": [],
+    "facts": [
+      "Ammi drove back from Clark's Corners in his sleigh on the night he saw the unnaturally leaping rabbit.",
+      "Potter's general store, where an awed discussion took place in early March, is located at Clark's Corners."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 23,
+        "quote": "one night when he drove past Nahum's house in his sleigh on the way back from Clark's Corners"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 25,
+        "quote": "early in March there was an awed discussion in Potter's general store at Clark's Corners."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Meadow Hill",
+    "aliases": [],
+    "facts": [
+      "The McGregor boys who shot the peculiar woodchuck were from Meadow Hill."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 24,
+        "quote": "In February the McGregor boys from Meadow Hill were out shooting woodchucks, and not far from the Gardner place bagged a very peculiar specimen."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Arkham",
+    "aliases": [],
+    "facts": [
+      "Nahum took saxifrage blossoms to Arkham to show the editor of the Gazette.",
+      "The Arkham Gazette printed a short paragraph about the windmill salesman's account of the luminosity near Nahum's farm."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Nahum"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 27,
+        "quote": "Nahum took some blossoms to Arkham and showed them to the editor of the Gazette"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 30,
+        "quote": "What he told in Arkham was given a short paragraph in the Gazette; and it was there that all the farmers, Nahum included, saw it first."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Bolton",
+    "aliases": [],
+    "facts": [
+      "A timid windmill salesman who glimpsed the luminosity near Nahum's farm was from Bolton."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 30,
+        "quote": "what they could not see was glimpsed by a timid windmill salesman from Bolton who drove by one night in ignorance of the country legends."
+      }
+    ]
+  }
+]

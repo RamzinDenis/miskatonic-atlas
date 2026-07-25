@@ -1,0 +1,327 @@
+[
+  {
+    "kind": "location",
+    "name": "Arkham",
+    "aliases": [],
+    "facts": [
+      "Arkham is a very old town full of witch legends.",
+      "People in Arkham told the narrator the hills west of the town were evil.",
+      "Old people in Arkham evasively muttered about 'strange days'.",
+      "All Arkham heard by night of the great rock that fell from the sky.",
+      "The new city water of Arkham will come from the reservoir being built over the blasted heath."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "The Narrator",
+      "Ammi Pierce",
+      "Nahum Gardner",
+      "the blasted heath"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 4,
+        "quote": "They told me this in Arkham, and because that is a very old town full of witch legends I thought the evil must be something which grandmas had whispered to children through centuries."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 11,
+        "quote": "And by night all Arkham had heard of the great rock that fell out of the sky and bedded itself in the ground beside the well at the Nahum Gardner place."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 10,
+        "quote": "nothing could bribe me to drink the new city water of Arkham."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the blasted heath",
+    "aliases": [
+      "that grey blasted heath"
+    ],
+    "facts": [
+      "It lies west of Arkham at the bottom of a spacious valley.",
+      "It is five acres of grey desolation where nothing new has ever grown.",
+      "There is no vegetation of any kind on the expanse, only fine grey dust or ash which no wind seems to blow about.",
+      "The trees near it are sickly and stunted, with many dead trunks rotting at the rim.",
+      "Tumbled bricks and stones of an old chimney and cellar lie near it, along with an abandoned well.",
+      "It lies largely north of the old road line but encroaches a little on the other side.",
+      "It is where the Nahum Gardner house once stood.",
+      "It will eventually be flooded under a new reservoir."
+    ],
+    "typeGuess": "region",
+    "fate": "Will be submerged under the waters of a new reservoir.",
+    "relatedNames": [
+      "Nahum Gardner",
+      "Arkham",
+      "the Nahum Gardner place"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 6,
+        "quote": "But even all this was not so bad as the blasted heath. I knew it the moment I came upon it at the bottom of a spacious valley; for no other name could fit such thing, or any other thing fit such a name."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 6,
+        "quote": "There was no vegetation of any kind on that broad expanse, but only a fine grey dust or ash which no wind seemed ever to blow about."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 11,
+        "quote": "That was the house which had stood where the blasted heath was to come—the trim white Nahum Gardner house amidst its fertile gardens and orchards."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 3,
+        "quote": "Then the dark woods will be cut down and the blasted heath will slumber far below blue waters whose surface will mirror the sky and ripple in the sun."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Ammi Pierce",
+    "aliases": [
+      "old Ammi",
+      "Ammi"
+    ],
+    "facts": [
+      "His head has been a little queer for years.",
+      "He is the only old-timer who still remains in the area near the blasted heath.",
+      "He is the only one who still talks of the strange days.",
+      "His house is near the open fields and travelled roads around Arkham.",
+      "He never told foreigners of anything he recalls from the strange days.",
+      "He lived alone in an ancient tottering cottage where the trees begin to get very thick.",
+      "He was not glad to see the narrator when the narrator knocked.",
+      "He was far brighter and more educated than the narrator expected.",
+      "He showed relief at the doom of the dark ancient valleys because his home lay outside the bounds of the future lake.",
+      "He said the valleys were better under water now, since the strange days.",
+      "He told the narrator the story of the strange days, beginning with the meteorite.",
+      "He was forty years old at the time the meteorite fell.",
+      "He and his wife went with three professors from Miskatonic University to see the meteorite.",
+      "He went to Nahum Gardner's on the way when Nahum came to town to tell people about the stone.",
+      "His mind had snapped a trifle by the end of the events, according to the narrator's impression."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "The Narrator",
+      "Nahum Gardner",
+      "Mrs. Pierce",
+      "Arkham"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 2,
+        "quote": "Ammi, whose head has been a little queer for years, is the only one who still remains, or who ever talks of the strange days; and he dares to do this because his house is so near the open fields and the travelled roads around Arkham."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 7,
+        "quote": "having heard that he lived alone in the ancient tottering cottage where the trees first begin to get very thick"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 8,
+        "quote": "He was far brighter and more educated than I had been led to think, and before I knew it had grasped quite as much of the subject as any man I had talked with in Arkham."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 8,
+        "quote": "Relief was all that he showed; relief at the doom of the dark ancient valleys through which he had roamed all his life. They were better under water now—better under water since the strange days."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 12,
+        "quote": "Ammi was forty then, and all the queer things were fixed very strongly in his mind. He and his wife had gone with the three professors from Miskatonic University who hastened out the next morning to see the weird visitor from unknown stellar space"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "He went into the hills and vales to survey for the new reservoir.",
+      "He was told in Arkham that the place was evil.",
+      "He saw the dark westward tangle of glens and slopes for himself in the morning.",
+      "He walked past the blasted heath because his business took him through and past it.",
+      "He walked circuitously back to town by the curving southern road at twilight, dreading to repass the blasted heath.",
+      "He asked old people in Arkham about the blasted heath and the 'strange days'.",
+      "He sought out Ammi Pierce the next morning after hearing others dismiss Ammi's tales as crazy.",
+      "He feigned a matter of business to get Ammi talking, mentioning his surveying work.",
+      "He heard the whole story from Ammi and shivered again and again despite the summer day.",
+      "He hurried back before sunset to his hotel, unwilling to be outside after dark.",
+      "He returned to Boston the next day to give up his position.",
+      "He does not believe he would like to visit that country by night, especially when certain stars are out.",
+      "Nothing could bribe him to drink the new city water of Arkham."
+    ],
+    "typeGuess": "protagonist",
+    "relatedNames": [
+      "Ammi Pierce",
+      "Arkham",
+      "the blasted heath"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 4,
+        "quote": "When I went into the hills and vales to survey for the new reservoir they told me the place was evil."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 6,
+        "quote": "I felt an odd reluctance about approaching, and did so at last only because my business took me through and past it."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 7,
+        "quote": "I sought him out the next morning, having heard that he lived alone in the ancient tottering cottage where the trees first begin to get very thick."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 10,
+        "quote": "I hurried back before sunset to my hotel, unwilling to have the stars come out above me in the open; and the next day returned to Boston to give up my position."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 10,
+        "quote": "nothing could bribe me to drink the new city water of Arkham."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Nahum Gardner",
+    "aliases": [
+      "Nahum"
+    ],
+    "facts": [
+      "He owned the trim white house amidst fertile gardens and orchards where the blasted heath was to come.",
+      "A great rock (meteorite) fell out of the sky and bedded itself in the ground beside the well at his place.",
+      "He came to town to tell people about the stone and dropped in at Ammi Pierce's on the way.",
+      "He had called the meteorite very large the day before, but it had shrunk by the time the professors arrived.",
+      "He pointed out the big brownish mound above the ripped earth and charred grass near his archaic well-sweep.",
+      "He declared the stone had glowed faintly in the night.",
+      "He lent the professors an old pail from his kitchen to carry a specimen of the stone."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Ammi Pierce",
+      "the blasted heath"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 11,
+        "quote": "That was the house which had stood where the blasted heath was to come—the trim white Nahum Gardner house amidst its fertile gardens and orchards."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 12,
+        "quote": "Nahum had come to town to tell people about the stone, and had dropped in at Ammi Pierce's on the way."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 12,
+        "quote": "It had shrunk, Nahum said as he pointed out the big brownish mound above the ripped earth and charred grass near the archaic well-sweep in his front yard; but the wise men answered that stones do not shrink."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 12,
+        "quote": "Its heat lingered persistently, and Nahum declared it had glowed faintly in the night."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Mrs. Pierce",
+    "aliases": [
+      "his wife"
+    ],
+    "facts": [
+      "She was Ammi Pierce's wife.",
+      "She went with Ammi and the three professors to see the meteorite.",
+      "She remarked that the fragment of stone was growing smaller and burning the bottom of the pail."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Ammi Pierce"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 12,
+        "quote": "He and his wife had gone with the three professors from Miskatonic University who hastened out the next morning to see the weird visitor from unknown stellar space"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 12,
+        "quote": "they stopped at Ammi's to rest, and seemed thoughtful when Mrs. Pierce remarked that the fragment was growing smaller and burning the bottom of the pail."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Miskatonic University",
+    "aliases": [],
+    "facts": [
+      "Three professors from Miskatonic University hastened out to see the meteorite the morning after it fell.",
+      "The professors took a specimen of the stone back to the college for testing."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Ammi Pierce",
+      "Nahum Gardner"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 12,
+        "quote": "He and his wife had gone with the three professors from Miskatonic University who hastened out the next morning to see the weird visitor from unknown stellar space"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the small island in the Miskatonic",
+    "aliases": [],
+    "facts": [
+      "It is a small island in the Miskatonic river.",
+      "The devil was said to have held court there beside a curious stone altar older than the Indians.",
+      "Before the strange days, these western woods were not feared half so much as this island."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 11,
+        "quote": "even then these western woods were not feared half so much as the small island in the Miskatonic where the devil held court beside a curious stone altar older than the Indians."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Boston",
+    "aliases": [],
+    "facts": [
+      "The narrator returned to Boston the day after hearing Ammi's story, to give up his position."
+    ],
+    "typeGuess": "city",
+    "realWorld": "Boston, Massachusetts",
+    "relatedNames": [
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 10,
+        "quote": "and the next day returned to Boston to give up my position"
+      }
+    ]
+  }
+]

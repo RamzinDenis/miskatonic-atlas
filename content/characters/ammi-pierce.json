@@ -1,0 +1,33 @@
+{
+  "slug": "ammi-pierce",
+  "name": "Ammi Pierce",
+  "role": "witness",
+  "summary": "Ammi Pierce is the last old-timer living near the blasted heath outside Arkham, the sole witness willing to recount the horror that befell the Gardner farm after a meteorite fell there. Having been brushed by the colour's vapour and having watched its final eruption into the sky, he has never fully recovered and avoids the region to this day.",
+  "description": "Ammi's head has been \"a little queer for years,\" and he alone remains near the open fields and travelled roads around Arkham willing to speak of the strange days. He lived alone in an ancient, tottering cottage where the trees begin to thicken, and was forty years old when the meteorite fell, going with his wife and three Miskatonic University professors to see it. Far brighter and more educated than expected, he showed only relief that the doomed valleys he had roamed all his life would soon lie under the new reservoir.\n\nAs the horror on the Gardner farm deepened, Ammi's visits there grew rarer even as he remained the family's only friend. He advised Nahum to dig a new well, comforted the family after Thaddeus's death, and searched for the vanished Merwin, finding only a crushed lantern and fused pail by the well. After two weeks of silence he returned to find Nahum dying and, upon searching the attic, discovered Mrs. Gardner's remains transformed into a crumbling monstrosity. A hateful current of coloured vapour brushed him without harm. He notified the Arkham authorities and led officers, a coroner, and a veterinarian back to the farm, warning them away from the well before witnessing his horse Hero die and the colour's final eruption into the night sky.\n\nBecause he recognized the colour from the meteorite's globule and the vegetation of the previous spring, Ammi has never been quite right since; he has avoided the ruined farm for forty-four years and will be glad when the reservoir finally floods it. The narrator, fearing for him, resolves to have the reservoir engineers keep a watchful eye on the old man.",
+  "locations": [
+    "arkham",
+    "the-blasted-heath",
+    "the-blasted-heath/the-well"
+  ],
+  "appearsIn": [
+    "the-colour-out-of-space"
+  ],
+  "fate": "Survived the horror but was permanently affected by contact with the colour's vapour; he has never returned to the ruined farm in the forty-four years since, and the narrator fears he may eventually succumb to the same fate as its other victims.",
+  "sources": [
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 2,
+      "quote": "Ammi, whose head has been a little queer for years, is the only one who still remains, or who ever talks of the strange days; and he dares to do this because his house is so near the open fields and the travelled roads around Arkham."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 47,
+      "quote": "\"What was it, Nahum—what was it?\" He whispered, and the cleft, bulging lips were just able to crackle out a final answer."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 69,
+      "quote": "And because Ammi recognized that colour, and knew that this last faint remnant must still lurk down there in the well, he has never been quite right since."
+    }
+  ]
+}

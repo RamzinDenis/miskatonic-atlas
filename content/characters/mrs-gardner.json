@@ -1,0 +1,31 @@
+{
+  "slug": "mrs-gardner",
+  "name": "Mrs. Gardner",
+  "role": "other",
+  "summary": "Mrs. Gardner, Nahum's wife, was driven mad by the horrors afflicting the family farm, and was eventually locked away in the attic where she slowly transformed into a luminous, crumbling horror.",
+  "description": "The neighbours' shunning of the Gardner house told on Mrs. Gardner more than on her husband. She was the first to notice the swollen, swaying boughs of a maple outside her window even when there was no wind, and went mad in June, about the anniversary of the meteor's fall, screaming about things in the air she could not describe — her raving containing no nouns, only verbs and pronouns, as she claimed something was fastening on her and that the walls and windows were shifting.\n\nNahum let her wander the house harmlessly until their sons grew afraid of her, then locked her in the attic. By July she had ceased to speak and crawled on all fours, and Nahum came to believe she was slightly luminous in the dark, like the surrounding vegetation; he later worried aloud that her face was beginning to take on \"that colour\" toward night. When Ammi finally searched the attic, he found her transformed into a dark, crumbling shape and screamed at the sight — her fate said to share \"the nameless fate of young Thaddeus and the livestock.\"",
+  "locations": [
+    "the-blasted-heath"
+  ],
+  "appearsIn": [
+    "the-colour-out-of-space"
+  ],
+  "fate": "Died in her attic room, having become a crumbling, faintly luminous monstrosity sharing the same nameless fate as her son Thaddeus and the farm's livestock.",
+  "sources": [
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 32,
+      "quote": "the poor woman screamed about things in the air which she could not describe. In her raving there was not a single specific noun, but only verbs and pronouns."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 42,
+      "quote": "When he did enter he saw something dark in the corner, and upon seeing it more clearly he screamed outright."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 42,
+      "quote": "the blasphemous monstrosity which confronted him, and which all too clearly had shared the nameless fate of young Thaddeus and the livestock"
+    }
+  ]
+}

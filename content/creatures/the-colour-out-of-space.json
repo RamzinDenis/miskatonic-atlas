@@ -1,0 +1,32 @@
+{
+  "slug": "the-colour-out-of-space",
+  "name": "The Colour Out of Space",
+  "classification": "entity",
+  "summary": "The colour out of space was an alien entity that arrived within a meteorite on the Gardner farm, spreading through the soil, water, and vegetation before consuming the family's minds and bodies one by one and finally erupting from the well in a burst of unearthly light that shot into the night sky.",
+  "description": "The colour first manifested within the globule embedded in the meteorite and in the abnormal vegetation that grew the following spring, and later came to live in the Gardner well, making it shine at night. Nahum, dying, described it as something that came from the stone, was like the flowers, and \"beats down your mind\" before it burns and sucks the life from its victims; a momentary cloud of it brushed Ammi in the attic without harm, and it made the staircase woodwork glow faintly. It had, so far, never directly harmed a human of unweakened mind.\n\nAt its climax the colour pervaded the farmhouse with phosphorescence — floor, windows, corner-posts, mantel, doors, and furniture all glowing — while the boughs of every tree in the yard twitched and clawed at the sky despite no wind, tipped with a thousand points of unhallowed radiance likened to St. Elmo's fire or Pentecostal flames. It caused Ammi's horse Hero to scream and die, and it was said, through a witness's dying testimony, to have grown from the stone and fed on the minds and bodies of Thad, Merwin, Zenas, Nabby, and finally Nahum himself, all of whom had drunk the tainted water. It then shot vertically into the sky like a rocket, leaving no trail, vanishing through a round hole in the clouds and melting into the Milky Way near Cygnus and Deneb, the farm erupting briefly in a cataclysm of unnatural sparks.\n\nDescribed as \"not any colour of our earth or heavens,\" it is theorized to have been, in terms of matter, a kind of gas obeying laws not of this cosmos — a frightful messenger from unformed realms of infinity whose mere existence stuns the brain. A last faint remnant was seen to rise and sink back into the well, and other globules of the thing may have existed, one perhaps escaping and another arriving too late; the narrator speculates that whatever remains must be tethered to something, perhaps the roots of the still-twitching trees, or it would have already spread.",
+  "locations": [
+    "the-blasted-heath/the-well",
+    "the-blasted-heath"
+  ],
+  "appearsIn": [
+    "the-colour-out-of-space"
+  ],
+  "fate": "Most of it shot vertically into the sky and vanished into the Milky Way near Cygnus and Deneb, but a last faint remnant sank back down into the well; the narrator believes some part of it may still be tethered to the trees or lurking in the well itself.",
+  "sources": [
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 48,
+      "quote": "\"Nothin' ... nothin' ... the colour ... it burns ... cold an' wet, but it burns ... it lived in the well.... I seen it ... a kind o' smoke ... jest like the flowers last spring ... the well shone at night...."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 63,
+      "quote": "It come from that stone—it growed down thar—it got everything livin'—it fed itself on 'em, mind and body—Thad an' Merwin, Zenas an' Nabby—Nahum was the last—they all drunk the water—it got strong on 'em—it come from beyond, whar things ain't like they be here—now it's goin' home—"
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 75,
+      "quote": "It was just a colour out of space—a frightful messenger from unformed realms of infinity beyond all Nature as we know it; from realms whose mere existence stuns the brain and numbs us with the black extra-cosmic gulfs it throws open before our frenzied eyes."
+    }
+  ]
+}

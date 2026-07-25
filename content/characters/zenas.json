@@ -1,0 +1,32 @@
+{
+  "slug": "zenas",
+  "name": "Zenas",
+  "role": "other",
+  "summary": "Zenas, Nahum Gardner's oldest son, grew increasingly vacant as the horror on the farm intensified, eventually vanishing; his skeletal remains were later found in the well beside his brother Merwin's.",
+  "description": "Zenas, Nahum's oldest son, cut down the blasphemous-looking roses, zinnias, and hollyhocks that had grown in the front yard. By October he had come to do nothing but stare into space and obey his broken father's simple orders, a blank mental state Ammi considered mercifully numbed against the horror around him.\n\nHe vanished without explanation; his father's only answer when questioned was \"In the well—he lives in the well—\". His skeletal remains were later recovered from the well alongside his brother Merwin's, the investigators unable to explain what madness had led both boys to jump in.",
+  "locations": [
+    "the-blasted-heath",
+    "the-blasted-heath/the-well"
+  ],
+  "appearsIn": [
+    "the-colour-out-of-space"
+  ],
+  "fate": "Disappeared and was later found dead, his skeletal remains recovered from the well alongside his brother Merwin's.",
+  "sources": [
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 33,
+      "quote": "the roses and zinnias and hollyhocks in the front yard were such blasphemous-looking things that Nahum's oldest boy Zenas cut them down"
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 41,
+      "quote": "Questioning tactfully, Ammi could get no clear data at all about the missing Zenas. \"In the well—he lives in the well—\" was all that the clouded father would say."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 54,
+      "quote": "But what peculiar madness could have made both boys jump into the well? Their deeds were so similar—and the fragments showed that they had both suffered from the grey brittle death."
+    }
+  ]
+}

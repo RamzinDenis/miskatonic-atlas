@@ -1,0 +1,44 @@
+{
+  "slug": "hero",
+  "name": "Hero",
+  "classification": "entity",
+  "summary": "Hero was Ammi Pierce's horse, tethered outside the Gardner farmhouse during the colour's final eruption, and died from its effects before being buried the next day.",
+  "description": "Hero, Ammi Pierce's horse, was tethered near the farmhouse on the night the colour finally burst from the well. As the phenomenon intensified, the horse emitted a sound unlike anything heard from a horse before, then died, found lying inert between the splintered shafts of the buggy. His body was towed away and buried by the men who returned to the farm the following day.",
+  "locations": [
+    "the-blasted-heath"
+  ],
+  "appearsIn": [
+    "the-colour-out-of-space"
+  ],
+  "fate": "Died from the effects of the colour and was buried the day after the horror at the farm.",
+  "sources": [
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 64,
+      "quote": "there came from poor tethered Hero such a sound as no man before or since ever heard from a horse"
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 70,
+      "quote": "Save for Ammi's dead horse, which they towed away and buried, and the buggy which they shortly returned to him, everything that had ever been living had gone."
+    }
+  ],
+  "_draft": {
+    "aliases": [
+      "poor tethered Hero",
+      "the hapless beast"
+    ],
+    "occurrences": 1,
+    "windows": [
+      "w061-072"
+    ],
+    "facts": [
+      "Was Ammi Pierce's horse, tethered outside during the climax of the colour's escape.",
+      "Made a sound no man before or since ever heard from a horse.",
+      "Died, found lying huddled inert on the moonlit ground between the splintered shafts of the buggy.",
+      "Was buried the next day.",
+      "His body was towed away and buried by the men who returned to the farm."
+    ],
+    "needsReview": []
+  }
+}

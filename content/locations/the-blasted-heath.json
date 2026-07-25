@@ -1,0 +1,50 @@
+{
+  "slug": "the-blasted-heath",
+  "name": "the Blasted Heath",
+  "type": "region",
+  "summary": "A five-acre stretch of grey, lifeless desolation west of Arkham — all that remains of the Nahum Gardner farm after a fallen meteorite loosed an alien colour that consumed the family, their livestock, and finally the land itself; a reservoir is expected to submerge the site for good.",
+  "description": "West of Arkham, at the bottom of a spacious valley, lies a grey desolation that country folk call the blasted heath — five eldritch acres of dusty ash where nothing has grown since. It was not always so: the ground was once the trim white farmhouse and fertile orchards of Nahum Gardner, until a great meteorite fell from the sky and bedded itself in the earth beside the farm's well. Three professors from Miskatonic University came out the next morning to examine the stone, which defied every attempt at analysis. In the year that followed, the farm changed by slow degrees: the snow melted faster there than anywhere else, skunk-cabbages of monstrous size and unnatural colour choked the mud by the nearby woods, trees budded out of season and swayed at night without wind, and by May the orchard blossomed in impossible hues while insects swarmed the place in a nightmare of buzzing and crawling. In February, boys from Meadow Hill out shooting woodchucks had already bagged one oddly deformed specimen not far from the farm, and a windmill salesman from Bolton, ignorant of the local legends, glimpsed a dim luminosity inhering in all the farm's vegetation one night as he drove past. By summer's end the grass and leaves had gone uniformly grey and brittle, the well water turned foul, and the livestock — poultry, hogs, cows, dogs, and cats — sickened, vanished, or died outright.\n\nBy autumn no smoke rose from the ancient chimney of the farmhouse, most of which had stood since before 1700, and when officers, a coroner, a medical examiner, and a city veterinary from Arkham at last drove out to the pest-ridden farmhouse, they found the whole property gripped by grey desolation, its vines falling in brittle wreckage from the walls and its bare trees clawing at the sky with a studied malevolence. Two crumbling, half-skeletal remains — the bodies of the vanished farmhands Merwin and Zenas — were found in a locked attic room and beneath a tablecloth on the floor below, and that same night the farm's trees, sheds, and beehives began to glow with the same nameless colour that had haunted the property for months, until the whole farm shone with the hideous unknown blend of hue and finally erupted in a cataclysm of unnatural sparks and substance. When the survivors returned the next morning, nothing remained but the bricks of the chimney, the stones of the cellar, scattered mineral and metallic litter, and the rim of the well — the rest given over entirely to the five eldritch acres of dusty grey desert now known as the blasted heath.\n\nThe blight is said to be spreading by inches every year: neighbouring herbage never quite recovers its proper colour, snow never lies as heavy on the heath as elsewhere, horses grow skittish in the silent valley, and hunters dare not trust their dogs near the grey dust. Numbers of people who once lived nearby went strange in mind or lost the will to leave the district; the stronger of them departed for good, leaving only foreign settlers to brave the crumbling old homesteads, and even they could not stay, driven off by horrible dreams and whispered tales of magic. No traveler escapes a sense of wrongness in the region's deep ravines, and artists shiver at the thick woods there, said locally to hide oaks that shine and move at night as they should not. A reservoir is expected to be built to supply Arkham's new water system, and in time its waters are expected to cover the heath entirely — a fate the few who know the place's history are glad to see coming.\n\n## Chapman's Brook\n\nA rustic bridge carries the north road over Chapman's Brook just below the farm; Nahum Gardner once kept a ten-acre pasture across the brook where he worked at his haying, and it was over the same bridge that Ammi Pierce and the men fleeing the farm's final destruction groped their way home through the dark.\n\n## Clark's Corners\n\nThe nearest hamlet to the Gardner farm, Clark's Corners is home to Potter's general store, where an awed discussion of the family's troubles was held as early as March; Ammi Pierce passed through the crossroads regularly, once returning from there by sleigh on the night he glimpsed an unnaturally leaping rabbit near the farm.\n\n## The Small Island in the Miskatonic\n\nLong before the meteorite fell, the western woods around the Gardner place already held a measure of dread, though less than a small island in the Miskatonic River where, by old report, the devil once held court beside a curious stone altar older than the Indians themselves.",
+  "map": {
+    "mapId": "new-england",
+    "x": 195,
+    "y": 595
+  },
+  "appearsIn": [
+    "the-colour-out-of-space"
+  ],
+  "connectedTo": [
+    "arkham"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 6,
+      "quote": "But even all this was not so bad as the blasted heath. I knew it the moment I came upon it at the bottom of a spacious valley; for no other name could fit such thing, or any other thing fit such a name."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 70,
+      "quote": "Five eldritch acres of dusty grey desert remained, nor has anything ever grown there since. To this day it sprawls open to the sky like a great spot eaten by acid in the woods and fields, and the few who have ever dared glimpse it in spite of the rural tales have named it \"the blasted heath.\""
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 67,
+      "quote": "When they looked back toward the valley and the distant Gardner place at the bottom they saw a fearsome sight. All the farm was shining with the hideous unknown blend of colour; trees, buildings, and even such grass and herbage as had not been wholly changed to lethal grey brittleness."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 65,
+      "quote": "The moon went under some very black clouds as they crossed the rustic bridge over Chapman's Brook, and it was blind groping from there to the open meadows."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 25,
+      "quote": "early in March there was an awed discussion in Potter's general store at Clark's Corners."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 11,
+      "quote": "even then these western woods were not feared half so much as the small island in the Miskatonic where the devil held court beside a curious stone altar older than the Indians."
+    }
+  ]
+}

@@ -1,0 +1,467 @@
+[
+  {
+    "kind": "character",
+    "name": "Ammi",
+    "aliases": [
+      "Ammi"
+    ],
+    "facts": [
+      "Ammi tried keys on a ring to open the locked attic door",
+      "Ammi found the attic dark, stinking, and could see something dark in the corner",
+      "Ammi screamed upon seeing the thing in the attic",
+      "Ammi felt himself brushed by a hateful current of vapour and saw strange colours",
+      "Ammi would give no added particulars of what he saw in the attic",
+      "Ammi left nothing capable of motion in the attic room and locked it behind him",
+      "Ammi heard a thud, a choked-off scream, and dragging and sucking sounds while descending the stairs",
+      "Ammi noticed the woodwork of the staircase was faintly luminous",
+      "Ammi's horse and buggy ran off in fright while he was on the stairs",
+      "Ammi heard a liquid splash he thought came from the well",
+      "Ammi picked up a heavy stick in the attic",
+      "Ammi encountered the dying, disintegrating remains of Nahum in the kitchen area",
+      "Ammi asked Nahum what it was and received a final dying answer",
+      "Ammi laid a red checked tablecloth over what was left of Nahum",
+      "Ammi fled through the fields and woods back to his home, avoiding the well",
+      "Ammi looked at the well through a window and saw no stone was missing from the rim",
+      "Ammi reached his house and found his wife anxious because the horses and buggy had arrived without him",
+      "Ammi went to Arkham and notified authorities that the Gardner family was no more",
+      "Ammi told the authorities of the deaths of Nahum and Nabby and the disappearance of Merwin and Zenas",
+      "Ammi was compelled to lead three officers, the coroner, medical examiner, and veterinary back to the Gardner farm",
+      "Ammi feared the fall of night over the farm but was comforted by having others with him"
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Nahum",
+      "Zenas",
+      "Nabby",
+      "Thaddeus",
+      "Merwin",
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 41,
+        "quote": "Leaving the harmless babbler on the couch, he took the keys from their nail beside the door and climbed the creaking stairs to the attic."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 42,
+        "quote": "When he did enter he saw something dark in the corner, and upon seeing it more clearly he screamed outright."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 44,
+        "quote": "Ammi walked conscious through that low doorway and locked the accursed secret behind him."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 45,
+        "quote": "Indubitably there was a sort of heavy dragging, and a most detestably sticky noise as of some fiendish and unclean species of suction."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 47,
+        "quote": "\"What was it, Nahum—what was it?\" He whispered, and the cleft, bulging lips were just able to crackle out a final answer."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 49,
+        "quote": "Ammi laid a red checked tablecloth over what was left and reeled out the back door into the fields."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 50,
+        "quote": "he set out at once for Arkham and notified the authorities that the Gardner family was no more."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 50,
+        "quote": "Ammi was compelled to take three officers to the Gardner farm, together with the coroner, the medical examiner, and the veterinary who had treated the diseased animals."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Nahum",
+    "aliases": [
+      "poor Nahum"
+    ],
+    "facts": [
+      "Nahum spoke only clouded, unclear words about the missing Zenas, saying he 'lives in the well'",
+      "Nahum was surprised when asked about Nabby, saying 'here she is'",
+      "Nahum's dying words described a colour that lived in the well, burned, and sucked the life out of things",
+      "Nahum said the colour came in a stone (the meteor) and that a round thing dug out of the stone was smashed by men from the college",
+      "Nahum said Thad, Merwin, and Zenas were taken by the thing",
+      "Nahum said the thing beats down your mind and gets you, and burns and sucks",
+      "Nahum said his head was no good and he didn't know how long since he had fed Nabby",
+      "Nahum warned Ammi to look out because the thing would do something more",
+      "Nahum was found dying, still alive after a fashion, with his body in collapse, greying, and disintegrating",
+      "Nahum's body was brittle and scaling with dry fragments",
+      "Nahum completely caved in after speaking his final words"
+    ],
+    "typeGuess": "witness",
+    "fate": "Nahum died, his body rapidly collapsing, greying, and disintegrating into dust after speaking his final words.",
+    "relatedNames": [
+      "Ammi",
+      "Zenas",
+      "Nabby",
+      "Thaddeus",
+      "Merwin"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 41,
+        "quote": "\"In the well—he lives in the well—\" was all that the clouded father would say."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 41,
+        "quote": "\"Nabby? Why, here she is!\" was the surprised response of poor Nahum"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 47,
+        "quote": "Everything had happened in the last half-hour, but collapse, greying, and disintegration were already far advanced."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 48,
+        "quote": "\"Nothin' ... nothin' ... the colour ... it burns ... cold an' wet, but it burns ... it lived in the well.... I seen it ... a kind o' smoke ... jest like the flowers last spring ... the well shone at night...."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 49,
+        "quote": "That which spoke could speak no more because it had completely caved in."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Zenas",
+    "aliases": [],
+    "facts": [
+      "Zenas was missing and Nahum could give no clear data about him",
+      "Nahum said Zenas never came back from the well and 'was took'",
+      "Nahum said Zenas was a big boy, full of life, and the thing must have gotten strong on him"
+    ],
+    "typeGuess": "other",
+    "fate": "Zenas disappeared, apparently taken by the thing in the well.",
+    "relatedNames": [
+      "Nahum",
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 41,
+        "quote": "Questioning tactfully, Ammi could get no clear data at all about the missing Zenas."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 48,
+        "quote": "Zenas never come back from the well ... can't git away ... draws ye"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 48,
+        "quote": "must a' got strong on Zenas ... he was a big boy, full o' life"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Nabby",
+    "aliases": [
+      "the mad wife"
+    ],
+    "facts": [
+      "Nabby is Nahum's wife, described as mad",
+      "Ammi found Nabby, implied to be the shape in the attic corner, sharing the nameless fate of Thaddeus and the livestock",
+      "Nahum worried about how long it had been since he fed her and said the thing would get her if they weren't careful",
+      "Nahum said her face was getting to have that colour sometimes towards night"
+    ],
+    "typeGuess": "other",
+    "fate": "Implied to have died in the attic, sharing the fate of the crumbling monstrosity found there.",
+    "relatedNames": [
+      "Nahum",
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 41,
+        "quote": "Then there flashed across the visitor's mind a sudden thought of the mad wife, and he changed his line of inquiry."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 42,
+        "quote": "the blasphemous monstrosity which confronted him, and which all too clearly had shared the nameless fate of young Thaddeus and the livestock"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 48,
+        "quote": "whar's Nabby, Ammi? ... my head's no good ... dun't know how long sence I fed her ... it'll git her ef we ain't keerful ... jest a colour ... her face is gittin' to hev that colour sometimes towards night"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Thaddeus",
+    "aliases": [
+      "Thad",
+      "young Thaddeus"
+    ],
+    "facts": [
+      "Thaddeus shared the same nameless fate as the monstrosity in the attic and the livestock",
+      "Nahum's dying words mentioned Thad among those taken by the colour"
+    ],
+    "typeGuess": "other",
+    "fate": "Died from the same affliction as the livestock and the thing in the attic.",
+    "relatedNames": [
+      "Nahum",
+      "Zenas",
+      "Merwin",
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 42,
+        "quote": "the blasphemous monstrosity which confronted him, and which all too clearly had shared the nameless fate of young Thaddeus and the livestock"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 48,
+        "quote": "Thad an' Merwin an' Zenas ... everything alive ... suckin' the life out of everything"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Merwin",
+    "aliases": [],
+    "facts": [
+      "Merwin was mentioned by Nahum as one taken along with Thad and Zenas",
+      "Ammi reported that Merwin had disappeared"
+    ],
+    "typeGuess": "other",
+    "fate": "Disappeared, presumed taken by the colour.",
+    "relatedNames": [
+      "Nahum",
+      "Zenas",
+      "Thaddeus",
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 48,
+        "quote": "Thad an' Merwin an' Zenas ... everything alive ... suckin' the life out of everything"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 50,
+        "quote": "He also stated that Merwin and Zenas had disappeared."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "The narrator states that Ammi would give him no added particulars of the attic scene",
+      "The narrator gathered from Ammi's account that no moving thing was left in the attic room"
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 44,
+        "quote": "Ammi would give me no added particulars of this scene, but the shape in the corners does not re-appear in his tale as a moving object."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 44,
+        "quote": "I gathered that no moving thing was left in that attic room, and that to leave anything capable of motion there would have been a deed so monstrous as to damn any accountable being to eternal torment."
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "the colour",
+    "aliases": [
+      "it",
+      "a kind o' smoke",
+      "the thing"
+    ],
+    "facts": [
+      "Nahum said the colour lived in the well",
+      "Nahum said it burns, is cold and wet, and sucks the life out of everything",
+      "Nahum said the colour was like the flowers and plants that grew in the spring",
+      "Nahum said it came in the stone (the meteor)",
+      "Nahum said a round thing dug out of the stone by college men was the same colour and was smashed",
+      "Nahum said there must have been more of them, like seeds, that grew",
+      "Nahum said the colour beats down your mind and then gets you",
+      "Nahum said it comes from some place where things aren't as they are here, per one of the professors",
+      "The well shone at night because of the colour's presence",
+      "A momentary cloud seemed to eclipse the attic window and a hateful current of vapour brushed Ammi",
+      "Strange colours danced before Ammi's eyes in the attic",
+      "The woodwork of the staircase glowed with a faint but unmistakable luminosity",
+      "Something made a liquid splash sound in the well after finishing with Nahum",
+      "Specimens of dust taken from the two victims gave off an unknown spectrum under a spectroscope, with bands like those of the meteor, before the property vanished within a month"
+    ],
+    "typeGuess": "entity",
+    "relatedNames": [
+      "Nahum",
+      "Ammi",
+      "Zenas",
+      "Nabby",
+      "Thaddeus",
+      "Merwin"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 48,
+        "quote": "\"Nothin' ... nothin' ... the colour ... it burns ... cold an' wet, but it burns ... it lived in the well...."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 48,
+        "quote": "it come from some place whar things ain't as they is here ... one o' them professors said so"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 45,
+        "quote": "the faint but unmistakable luminosity of all the woodwork in sight; steps, sides, exposed laths, and beams alike"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 49,
+        "quote": "something which went into the well after it had done with poor Nahum...."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 51,
+        "quote": "Under the spectroscope both samples gave off an unknown spectrum, in which many of the baffling bands were precisely like those which the strange meteor had yielded in the previous year."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the Gardner farm",
+    "aliases": [
+      "the pest-ridden farmhouse",
+      "that accursed place"
+    ],
+    "facts": [
+      "The farmhouse contained a locked attic room with a small window half-obscured by wooden bars",
+      "Most of the house was built before 1700",
+      "The farm had a well near which Ammi's horse had been tied",
+      "The whole aspect of the farm had a grey desolation",
+      "Officers, the coroner, the medical examiner, and the veterinary drove out to the farm and arrived about four o'clock"
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Ammi",
+      "Nahum",
+      "Nabby"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 46,
+        "quote": "God! how old the house was! Most of it built before 1700."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 51,
+        "quote": "The six men drove out in a democrat-wagon, following Ammi's buggy, and arrived at the pest-ridden farmhouse about four o'clock."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 51,
+        "quote": "The whole aspect of the farm with its grey desolation was terrible enough, but those two crumbling objects were beyond all bounds."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the well",
+    "aliases": [],
+    "facts": [
+      "Nahum said the colour lived in the well",
+      "The well shone at night according to Nahum",
+      "Ammi had left his horse tied near the well",
+      "Ammi heard a liquid splash he thought came from the well",
+      "Ammi later saw through a window that no stone was missing from the well's rim",
+      "Something went into the well after finishing with Nahum"
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Nahum",
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 46,
+        "quote": "A sort of liquid splash—water—it must have been the well. He had left Hero untied near it, and a buggy-wheel must have brushed the coping and knocked in a stone."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 49,
+        "quote": "He had looked at it through the window, and had seen that no stone was missing from the rim."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 48,
+        "quote": "it lived in the well.... I seen it ... a kind o' smoke ... jest like the flowers last spring ... the well shone at night...."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Arkham",
+    "aliases": [],
+    "facts": [
+      "Ammi went to Arkham to notify the authorities that the Gardner family was no more"
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 50,
+        "quote": "he set out at once for Arkham and notified the authorities that the Gardner family was no more"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the college laboratory",
+    "aliases": [
+      "the college"
+    ],
+    "facts": [
+      "The two phials of dust from the victims were taken to the college laboratory for analysis",
+      "Under the spectroscope at the laboratory, the samples gave off an unknown spectrum similar to that of the meteor"
+    ],
+    "typeGuess": "building",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 51,
+        "quote": "here it develops that a very puzzling aftermath occurred at the college laboratory where the two phials of dust were finally taken"
+      }
+    ]
+  }
+]

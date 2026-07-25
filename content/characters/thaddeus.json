@@ -1,0 +1,32 @@
+{
+  "slug": "thaddeus",
+  "name": "Thaddeus",
+  "role": "other",
+  "summary": "Thaddeus, Nahum Gardner's sensitive second son, was the first to notice the unnatural swaying of the farm's trees, and later went mad after an encounter with the colour at the well, dying inexplicably in a locked attic room.",
+  "description": "Thaddeus, Nahum's second son, was a sensitive lad of fifteen who swore that the farm's trees swayed even when there was no wind — a claim the gossips at first refused to credit, though he was later shown to have been right. He suffered the most among the family from the neighbourhood's shunning and gossip, and nearly fainted at the way his mad mother made faces at him.\n\nHe went mad in September after a visit to the well, returning empty-handed, shrieking, and whispering about \"the moving colours down there.\" Allowed to run about for a week until he began stumbling and hurting himself, he was shut in an attic room across the hall from his mother's, screaming at her from behind their locked doors in a way that terrified his younger brother Merwin. He died in his attic room in a way that could not be told, despite the barred window and locked door remaining intact, and was buried by his father in the family plot, his death later said to share the same nameless fate as his mother and the livestock.",
+  "locations": [
+    "the-blasted-heath",
+    "the-blasted-heath/the-well"
+  ],
+  "appearsIn": [
+    "the-colour-out-of-space"
+  ],
+  "fate": "Died mysteriously in his locked attic room after going mad from an encounter with the colour at the well; buried by his father.",
+  "sources": [
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 27,
+      "quote": "Nahum's second son Thaddeus, a lad of fifteen, swore that they swayed also when there was no wind; but even the gossips would not credit this."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 35,
+      "quote": "Thaddeus went mad in September after a visit to the well. He had gone with a pail and had come back empty-handed, shrieking and waving his arms, and sometimes lapsing into an inane titter or a whisper about \"the moving colours down there.\""
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 38,
+      "quote": "The death had come to poor Thaddeus in his attic room, and it had come in a way which could not be told."
+    }
+  ]
+}

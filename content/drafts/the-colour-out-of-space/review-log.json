@@ -1,0 +1,72 @@
+{
+  "decisions": {
+    "locations/arkham": {
+      "verdict": "as-is",
+      "at": "2026-07-25T10:37:40.375Z"
+    },
+    "locations/miskatonic-university": {
+      "verdict": "as-is",
+      "at": "2026-07-25T10:37:43.163Z"
+    },
+    "locations/boston": {
+      "verdict": "as-is",
+      "at": "2026-07-25T10:37:46.177Z"
+    },
+    "locations/the-blasted-heath": {
+      "edited": true,
+      "at": "2026-07-25T10:38:01.333Z",
+      "verdict": "as-is"
+    },
+    "locations/the-well": {
+      "verdict": "as-is",
+      "at": "2026-07-25T10:38:41.652Z"
+    },
+    "characters/ammi-pierce": {
+      "verdict": "as-is",
+      "at": "2026-07-25T10:38:44.651Z"
+    },
+    "characters/merwin": {
+      "verdict": "as-is",
+      "at": "2026-07-25T10:38:47.835Z"
+    },
+    "characters/nahum-gardner": {
+      "edited": true,
+      "at": "2026-07-25T10:44:28.597Z",
+      "verdict": "as-is"
+    },
+    "characters/mrs-gardner": {
+      "verdict": "as-is",
+      "at": "2026-07-25T10:39:53.684Z"
+    },
+    "characters/mrs-pierce": {
+      "verdict": "as-is",
+      "at": "2026-07-25T10:39:56.438Z"
+    },
+    "creatures/the-meteorite": {
+      "verdict": "as-is",
+      "at": "2026-07-25T10:40:43.187Z"
+    },
+    "creatures/hero": {
+      "verdict": "junk",
+      "at": "2026-07-25T10:40:47.717Z"
+    },
+    "characters/the-narrator-of-the-colour-out-of-space": {
+      "edited": true,
+      "at": "2026-07-25T10:41:21.845Z",
+      "verdict": "as-is"
+    },
+    "characters/thaddeus": {
+      "edited": true,
+      "at": "2026-07-25T10:41:12.781Z",
+      "verdict": "as-is"
+    },
+    "characters/zenas": {
+      "verdict": "as-is",
+      "at": "2026-07-25T10:41:16.078Z"
+    },
+    "creatures/the-colour-out-of-space": {
+      "verdict": "as-is",
+      "at": "2026-07-25T10:43:52.145Z"
+    }
+  }
+}

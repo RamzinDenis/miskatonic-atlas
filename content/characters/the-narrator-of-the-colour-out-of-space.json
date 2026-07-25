@@ -1,0 +1,32 @@
+{
+  "slug": "the-narrator-of-the-colour-out-of-space",
+  "name": "The Narrator (The Colour Out of Space)",
+  "role": "witness",
+  "summary": "The unnamed narrator, a surveyor sent to assess the valley for a new reservoir, sought out Ammi Pierce after hearing rumors of 'strange days,' and came away disturbed enough to resign his post and warn against ever visiting the region again.",
+  "description": "Sent into the hills and vales to survey for a new reservoir, the narrator was warned in Arkham that the place was evil, and dreaded passing the blasted heath even as his work required it. After hearing others dismiss Ammi Pierce's tales as madness, he sought the old man out himself.\n\nAmmi's account left him shivering despite the summer day; he hurried back to his hotel before dark and returned to Boston the next day to give up his position, resolving never again to drink the new city water of Arkham. A lone walk before hearing the tale left him with an odd, inexplicable timidity about the open sky, and he was troubled by the way sunlight changed colour near the mouth of an abandoned well.\n\nHe offers no personal theory of what the phenomenon was, admitting only that he does not know, but believes something terrible still remains in the hills and valleys even though the bulk of it seemingly departed. He hopes the new reservoir will flood and blot out the region, and worries for Ammi, planning to have the reservoir's engineers watch over him lest he succumb to the same fate as the colour's other victims.",
+  "locations": [
+    "arkham",
+    "boston",
+    "the-blasted-heath"
+  ],
+  "appearsIn": [
+    "the-colour-out-of-space"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 4,
+      "quote": "When I went into the hills and vales to survey for the new reservoir they told me the place was evil."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 74,
+      "quote": "Do not ask me for my opinion. I do not know—that is all."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 76,
+      "quote": "Ammi is such a good old man—when the reservoir gang gets to work I must write the chief engineer to keep a sharp watch on him."
+    }
+  ]
+}

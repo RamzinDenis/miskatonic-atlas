@@ -1,0 +1,321 @@
+[
+  {
+    "kind": "creature",
+    "name": "the unknown colour",
+    "aliases": [
+      "that same nameless intrusion",
+      "the hideous thing",
+      "that alien and undimensioned rainbow of cryptic poison",
+      "the great morbidity",
+      "that colour"
+    ],
+    "facts": [
+      "It manifested as a shaft of phosphorescence pouring from the well and flowing into the sky.",
+      "It made treetops glow with a thousand tiny points of unhallowed radiance.",
+      "It caused wooden structures, sheds, and beehives to shine.",
+      "It spread onto everything organic that had been near the well.",
+      "A witness said it 'growed down thar' from a stone, fed on the minds and bodies of Thad, Merwin, Zenas, Nabby, and Nahum, who all drank the water, and was now 'goin' home'.",
+      "It made a sound come from the horse Hero, which then died.",
+      "It pervaded the sitting room with faint phosphorescence, glowing on the floor, windows, corner-posts, mantel, doors and furniture.",
+      "It caused the farm's trees, buildings, grass and herbage to shine with a hideous unknown blend of colour.",
+      "It shot vertically up toward the sky like a rocket or meteor, leaving no trail, and disappeared through a round hole in the clouds.",
+      "It melted into the Milky Way near the stars of Cygnus and Deneb.",
+      "After it vanished, the farm erupted in a cataclysm of unnatural sparks and substance.",
+      "A last faint remnant of it was seen by Ammi to feebly rise and then sink back down into the well.",
+      "It is described as 'not any colour of our earth or heavens.'"
+    ],
+    "typeGuess": "entity",
+    "fate": "Most of it shot into the sky and vanished into the Milky Way, but a last faint remnant sank back down into the well and, according to Ammi, still lurks there.",
+    "relatedNames": [
+      "Ammi",
+      "Nahum",
+      "Hero"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 61,
+        "quote": "the watchers saw wriggling at the treetop height a thousand tiny points of faint and unhallowed radiance, tipping each bough like the fire of St. Elmo or the flames that come down on the apostles' heads at Pentecost"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 61,
+        "quote": "its colour was that same nameless intrusion which Ammi had come to recognise and dread"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 63,
+        "quote": "It come from that stone—it growed down thar—it got everything livin'—it fed itself on 'em, mind and body—Thad an' Merwin, Zenas an' Nabby—Nahum was the last—they all drunk the water—it got strong on 'em—it come from beyond, whar things ain't like they be here—now it's goin' home—"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 68,
+        "quote": "Then without warning the hideous thing shot vertically up toward the sky like a rocket or meteor, leaving behind no trail and disappearing through a round and curiously regular hole in the clouds"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 69,
+        "quote": "he had seen something feebly rise, only to sink down again upon the place from which the great shapeless horror had shot into the sky. It was just a colour—but not any colour of our earth or heavens."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Ammi",
+    "aliases": [],
+    "facts": [
+      "Ammi recognized and dreaded the nameless colour.",
+      "Ammi shook and had to tug and point for lack of a controllable voice.",
+      "Ammi quenched the lamp for better seeing.",
+      "Ammi turned away from the window in horror and nausea when Hero screamed.",
+      "Ammi's horse Hero died, lying huddled inert on the ground.",
+      "Ammi showed the group the back door and the path up through the fields.",
+      "Ammi stared blankly at the stars of Cygnus after the colour vanished.",
+      "Ammi begged the other men to see him inside his own kitchen instead of continuing to town.",
+      "Ammi did not wish to cross the blighted woods alone to his home.",
+      "Ammi looked back and saw a last faint remnant of the colour rise and sink back into the well.",
+      "Because Ammi recognized that colour, he has never been quite right since.",
+      "Ammi would never go near the place again.",
+      "It is forty-four years since the horror happened, and Ammi has never returned there.",
+      "Ammi will be glad when the new reservoir blots out the place."
+    ],
+    "typeGuess": "witness",
+    "fate": "Was permanently psychologically affected ('never been quite right since') and avoids the place forever.",
+    "relatedNames": [
+      "the unknown colour",
+      "Hero",
+      "Nahum"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 61,
+        "quote": "its colour was that same nameless intrusion which Ammi had come to recognise and dread"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 64,
+        "quote": "Ammi turned away from the window in horror and nausea. Words could not convey it—when Ammi looked out again the hapless beast lay huddled inert on the moonlit ground between the splintered shafts of the buggy."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 69,
+        "quote": "And because Ammi recognized that colour, and knew that this last faint remnant must still lurk down there in the well, he has never been quite right since."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 70,
+        "quote": "Ammi would never go near the place again. It is forty-four years now since the horror happened, but he has never been there, and will be glad when the new reservoir blots it out."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "The narrator states he does not like the way the sunlight changed colour around the mouth of the abandoned well he passed.",
+      "He hopes the water will always be very deep, but says he will never drink it.",
+      "He does not think he shall visit the Arkham country hereafter."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 70,
+        "quote": "I shall be glad, too, for I do not like the way the sunlight changed colour around the mouth of that abandoned well I passed. I hope the water will always be very deep—but even so, I shall never drink it. I do not think I shall visit the Arkham country hereafter."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Nahum",
+    "aliases": [
+      "Nahum's"
+    ],
+    "facts": [
+      "A witness said Nahum was 'the last' of those who drank the water and were fed upon by the colour.",
+      "The ruined farm is referred to as 'down there at Nahum's'."
+    ],
+    "typeGuess": "other",
+    "fate": "Implied to have been consumed by the colour, being described as its last victim.",
+    "relatedNames": [
+      "the unknown colour"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 63,
+        "quote": "Nahum was the last—they all drunk the water"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 68,
+        "quote": "it would be no use waiting for the moon to show what was left down there at Nahum's"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "Hero",
+    "aliases": [
+      "poor tethered Hero",
+      "the hapless beast"
+    ],
+    "facts": [
+      "Hero was Ammi's horse, tethered outside during the events.",
+      "Hero made a sound no man before or since ever heard from a horse.",
+      "Hero lay huddled inert on the moonlit ground between the splintered shafts of the buggy.",
+      "Hero was buried the next day.",
+      "Hero's body was towed away and buried by the returning men."
+    ],
+    "typeGuess": "entity",
+    "fate": "Died from the effects of the colour and was buried the next day.",
+    "relatedNames": [
+      "Ammi",
+      "the unknown colour"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 64,
+        "quote": "there came from poor tethered Hero such a sound as no man before or since ever heard from a horse"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 64,
+        "quote": "That was the last of Hero till they buried him next day."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 70,
+        "quote": "Save for Ammi's dead horse, which they towed away and buried, and the buggy which they shortly returned to him, everything that had ever been living had gone."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the Gardner place",
+    "aliases": [
+      "that doomed and accursed farm",
+      "that stricken, far-away spot",
+      "the place",
+      "Nahum's"
+    ],
+    "facts": [
+      "The farm was at the bottom of a valley visible from high ground.",
+      "All the farm was shining with an unknown blend of colour, including trees, buildings, grass and herbage.",
+      "A cataclysm of unnatural sparks and substance burst up from the farm.",
+      "After the event, three men returned the next morning and found no real ruins, only bricks of a chimney, stones of a cellar, mineral and metallic litter, and the rim of the well.",
+      "Five eldritch acres of dusty grey desert remained where the farm had been.",
+      "Nothing has ever grown there since.",
+      "It is now called 'the blasted heath' by the few who dare glimpse it.",
+      "A new reservoir is expected to eventually blot out the place."
+    ],
+    "typeGuess": "ruin",
+    "fate": "Destroyed, leaving only a grey desert wasteland known as 'the blasted heath', to be eventually submerged by a reservoir.",
+    "relatedNames": [
+      "Ammi",
+      "Nahum",
+      "the unknown colour"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 67,
+        "quote": "When they looked back toward the valley and the distant Gardner place at the bottom they saw a fearsome sight. All the farm was shining with the hideous unknown blend of colour; trees, buildings, and even such grass and herbage as had not been wholly changed to lethal grey brittleness."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 70,
+        "quote": "Five eldritch acres of dusty grey desert remained, nor has anything ever grown there since. To this day it sprawls open to the sky like a great spot eaten by acid in the woods and fields, and the few who have ever dared glimpse it in spite of the rural tales have named it \"the blasted heath.\""
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the well",
+    "aliases": [
+      "that nefandous well",
+      "that disused well",
+      "the mouth of that abandoned well"
+    ],
+    "facts": [
+      "A shaft of phosphorescence poured out of the well and flowed into the sky.",
+      "A man who had been in the well said there was no bottom at all, just ooze and bubbles and the feeling of something lurking under there.",
+      "The rim of the well was one of the few things remaining after the farm's destruction.",
+      "The narrator hopes the water in the well will always be very deep but says he will never drink it.",
+      "A last faint remnant of the colour was believed by Ammi to still lurk down in the well."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "the unknown colour",
+      "Ammi",
+      "the Gardner place"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 63,
+        "quote": "\"It was awful,\" he added. \"There was no bottom at all. Just ooze and bubbles and the feeling of something lurking under there.\""
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 70,
+        "quote": "Only the bricks of the chimney, the stones of the cellar, some mineral and metallic litter here and there, and the rim of that nefandous well."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 69,
+        "quote": "knew that this last faint remnant must still lurk down there in the well"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Chapman's Brook",
+    "aliases": [],
+    "facts": [
+      "The group crossed a rustic bridge over Chapman's Brook while fleeing the farm."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 65,
+        "quote": "The moon went under some very black clouds as they crossed the rustic bridge over Chapman's Brook, and it was blind groping from there to the open meadows."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Arkham",
+    "aliases": [
+      "the Arkham country"
+    ],
+    "facts": [
+      "The seven shaking men trudged back toward Arkham by the north road.",
+      "The narrator does not think he shall visit the Arkham country hereafter."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 69,
+        "quote": "Too awed even to hint theories, the seven shaking men trudged back toward Arkham by the north road."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 70,
+        "quote": "I do not think I shall visit the Arkham country hereafter."
+      }
+    ]
+  }
+]

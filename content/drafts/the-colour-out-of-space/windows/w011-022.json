@@ -1,0 +1,283 @@
+[
+  {
+    "kind": "character",
+    "name": "Ammi",
+    "aliases": [
+      "old Ammi",
+      "Ammi Pierce"
+    ],
+    "facts": [
+      "Ammi said the events began with the meteorite.",
+      "Ammi was forty years old at the time of the meteorite's fall.",
+      "Ammi and his wife accompanied the three professors from Miskatonic University to see the meteorite.",
+      "Ammi had nothing but praise for Nahum Gardner after all the years.",
+      "Nahum dropped in at Ammi Pierce's on the way to town to tell people about the stone.",
+      "Ammi had difficulty recalling all the solvents used in testing but recognized some as the narrator mentioned them."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Nahum Gardner",
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 11,
+        "quote": "It all began, old Ammi said, with the meteorite."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 12,
+        "quote": "Nahum had come to town to tell people about the stone, and had dropped in at Ammi Pierce's on the way. Ammi was forty then, and all the queer things were fixed very strongly in his mind."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 14,
+        "quote": "Ammi had difficulty in recalling all these things, but recognized some solvents as I mentioned them in the usual order of use."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 20,
+        "quote": "He and Ammi exchanged visits frequently, as did their wives; and Ammi had nothing but praise for him after all these years."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Nahum Gardner",
+    "aliases": [
+      "Nahum"
+    ],
+    "facts": [
+      "Nahum came to town to tell people about the stone.",
+      "The meteorite fell and bedded itself in the ground beside the well at the Nahum Gardner place.",
+      "Nahum said the stone had shrunk since the day before, though the professors said stones do not shrink.",
+      "Nahum declared the stone had glowed faintly in the night.",
+      "Nahum said the stone had 'drawn the lightning' during a thunderstorm.",
+      "Nahum saw the lightning strike the furrow in his front yard six times within an hour.",
+      "Nahum became a kind of local celebrity after reporters came to talk with him and his family.",
+      "Nahum was a lean, genial person of about fifty, living with his wife and three sons on the farmstead in the valley.",
+      "Nahum talked often of the meteorite in the weeks following.",
+      "Nahum worked hard at his haying in the ten-acre pasture across Chapman's Brook that July and August.",
+      "The labour tired Nahum more than in other years, and he felt age beginning to tell on him.",
+      "Nahum vowed his orchards were prospering as never before with fruit growing to phenomenal size and gloss.",
+      "Nahum's fruit crop, though abundant, was found to be bitter, sickish, and inedible.",
+      "Nahum declared that the meteorite had poisoned the soil.",
+      "Nahum thanked Heaven that most of his other crops were in the upland lot along the road."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 11,
+        "quote": "the great rock that fell out of the sky and bedded itself in the ground beside the well at the Nahum Gardner place"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 12,
+        "quote": "It had shrunk, Nahum said as he pointed out the big brownish mound above the ripped earth and charred grass near the archaic well-sweep in his front yard; but the wise men answered that stones do not shrink."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 19,
+        "quote": "The stone, magnetic as it had been, must have had some peculiar electrical property; for it had \"drawn the lightning,\" as Nahum said, with a singular persistence. Six times within an hour the farmer saw the lightning strike the furrow in the front yard"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 20,
+        "quote": "He was a lean, genial person of about fifty, living with his wife and three sons on the pleasant farmstead in the valley."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 21,
+        "quote": "Quick to connect events, he declared that the meteorite had poisoned the soil, and thanked Heaven that most of the other crops were in the upland lot along the road."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Nahum Gardner place",
+    "aliases": [
+      "the trim white Nahum Gardner house",
+      "the blasted heath"
+    ],
+    "facts": [
+      "A great rock fell out of the sky and bedded itself in the ground beside the well at this place.",
+      "The house stood where the blasted heath was to come.",
+      "The house was described as trim and white, amidst fertile gardens and orchards."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Nahum Gardner"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 11,
+        "quote": "That was the house which had stood where the blasted heath was to come—the trim white Nahum Gardner house amidst its fertile gardens and orchards."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Arkham",
+    "aliases": [],
+    "facts": [
+      "By night all Arkham had heard of the great rock that fell out of the sky.",
+      "The Arkham papers made much of the incident with its collegiate sponsoring and sent reporters to talk with Nahum Gardner and his family."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Nahum Gardner"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 11,
+        "quote": "And by night all Arkham had heard of the great rock that fell out of the sky and bedded itself in the ground beside the well at the Nahum Gardner place."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 20,
+        "quote": "As was natural, the Arkham papers made much of the incident with its collegiate sponsoring, and sent reporters to talk with Nahum Gardner and his family."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Miskatonic University",
+    "aliases": [
+      "the college"
+    ],
+    "facts": [
+      "Three professors from Miskatonic University hastened out to see the meteorite.",
+      "The specimen was taken back to the college for testing.",
+      "The college scientists were forced to own they could not place the substance."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 12,
+        "quote": "He and his wife had gone with the three professors from Miskatonic University who hastened out the next morning to see the weird visitor from unknown stellar space"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 18,
+        "quote": "at the end of the tests the college scientists were forced to own that they could not place it"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the small island in the Miskatonic",
+    "aliases": [],
+    "facts": [
+      "The devil was said to hold court beside a curious stone altar older than the Indians on this small island in the Miskatonic.",
+      "This island was feared even before the strange days of the meteorite, more than the western woods were."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 11,
+        "quote": "these western woods were not feared half so much as the small island in the Miskatonic where the devil held court beside a curious stone altar older than the Indians"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Chapman's Brook",
+    "aliases": [],
+    "facts": [
+      "Nahum had a ten-acre pasture across Chapman's Brook where he worked hard at his haying."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Nahum Gardner"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 20,
+        "quote": "Nahum worked hard at his haying in the ten-acre pasture across Chapman's Brook"
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "the meteorite",
+    "aliases": [
+      "the great rock",
+      "the stony messenger from the stars",
+      "the weird visitor from unknown stellar space",
+      "the strange stone",
+      "that cryptic vestige of the fathomless gulfs outside"
+    ],
+    "facts": [
+      "It fell out of the sky in a white noontide cloud, a string of explosions in the air, and a pillar of smoke from the valley.",
+      "It bedded itself in the ground beside the well at the Nahum Gardner place.",
+      "It was a big brownish mound above ripped earth and charred grass.",
+      "It shrank in size day by day, though professors said stones do not shrink.",
+      "Its heat lingered persistently and it glowed faintly at night.",
+      "It was oddly soft, almost plastic, and was gouged rather than chipped for a specimen.",
+      "A specimen refused to grow cool even in an old pail, and shrank, burning the bottom of the pail.",
+      "A specimen faded wholly away when placed in a glass beaker, and the beaker vanished too.",
+      "The professors talked of the stone's affinity for silicon.",
+      "It showed no occluded gases when heated on charcoal, was wholly negative in the borax bead, and proved non-volatile at any producible temperature.",
+      "On an anvil it appeared highly malleable, and in the dark its luminosity was very marked.",
+      "When heated before the spectroscope it displayed shining bands unlike any known colours of the normal spectrum.",
+      "Water, hydrochloric acid, nitric acid, and aqua regia did nothing to it.",
+      "It was magnetic and showed faint traces of Widmanstatten figures found on meteoric iron after immersion in acid solvents.",
+      "Chips of it left in a glass beaker vanished overnight leaving only a charred spot.",
+      "It had shrunk from about seven feet across to scarcely five feet in a day.",
+      "A large coloured globule was found embedded within its substance.",
+      "The globule's colour was almost impossible to describe and resembled bands in the meteor's spectrum.",
+      "The globule was glossy, brittle, and hollow, and burst with a nervous little pop when struck with a hammer, leaving a hollow spherical space about three inches across, with nothing emitted.",
+      "A second specimen was almost plastic, had heat, magnetism, slight luminosity, cooled slightly in powerful acids, had an unknown spectrum, wasted away in air, and attacked silicon compounds with mutual destruction.",
+      "The scientists concluded it was nothing of this earth, but a piece of the great outside, obedient to outside laws.",
+      "During a thunderstorm it 'drew the lightning' with singular persistence, being struck six times within an hour.",
+      "After the storm, nothing remained but a ragged pit by the well-sweep, half-choked with caved-in earth; digging found nothing.",
+      "A fragment kept cased in lead in the laboratory lasted a week and then vanished with no residue left behind."
+    ],
+    "typeGuess": "entity",
+    "fate": "It vanished completely, both the specimens and the original mass, leaving no residue or trace.",
+    "relatedNames": [
+      "Nahum Gardner",
+      "Ammi",
+      "Miskatonic University"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 11,
+        "quote": "Then there had come that white noontide cloud, that string of explosions in the air, and that pillar of smoke from the valley far in the wood."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 13,
+        "quote": "how it had faded wholly away when they put it in a glass beaker. The beaker had gone, too, and the wise men talked of the strange stone's affinity for silicon."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 17,
+        "quote": "One of the professors gave it a smart blow with a hammer, and it burst with a nervous little pop. Nothing was emitted, and all trace of the thing vanished with the puncturing."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 18,
+        "quote": "It was nothing of this earth, but a piece of the great outside; and as such dowered with outside properties and obedient to outside laws."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 19,
+        "quote": "That fragment lasted a week, at the end of which nothing of value had been learned of it. When it had gone, no residue was left behind"
+      }
+    ]
+  }
+]

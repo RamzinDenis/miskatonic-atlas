@@ -1,0 +1,26 @@
+{
+  "slug": "mrs-pierce",
+  "name": "Mrs. Pierce",
+  "role": "witness",
+  "summary": "Mrs. Pierce, Ammi's wife, accompanied him to view the meteorite and later bore witness to Nahum Gardner's desperate accounts of the horror unfolding at the farm.",
+  "description": "Mrs. Pierce accompanied her husband Ammi and the three Miskatonic University professors to see the meteorite when it first fell, remarking that the fragment carried away in a pail was growing smaller and burning through its bottom.\n\nYears later, when Nahum burst into the Pierce kitchen in Ammi's absence to report Merwin's disappearance, she listened to his desperate tale in a clutching fright and could offer no explanation for what had happened; she grew anxious when the horses and buggy later arrived home without her husband.",
+  "locations": [
+    "arkham",
+    "the-blasted-heath"
+  ],
+  "appearsIn": [
+    "the-colour-out-of-space"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 12,
+      "quote": "they stopped at Ammi's to rest, and seemed thoughtful when Mrs. Pierce remarked that the fragment was growing smaller and burning the bottom of the pail."
+    },
+    {
+      "storySlug": "the-colour-out-of-space",
+      "paragraph": 39,
+      "quote": "Three days later Nahum burst into Ammi's kitchen in the early morning, and in the absence of his host stammered out a desperate tale once more, while Mrs. Pierce listened in a clutching fright."
+    }
+  ]
+}

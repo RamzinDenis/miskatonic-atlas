@@ -1,0 +1,377 @@
+[
+  {
+    "kind": "character",
+    "name": "Nahum",
+    "aliases": [
+      "Nahum Gardner"
+    ],
+    "facts": [
+      "Had the cows driven to the uplands after the milk turned bad, which ended that trouble.",
+      "His farm's vegetation went grey and brittle over the course of the year.",
+      "Did not send his wife to the county asylum but let her wander the house while harmless.",
+      "Locked his wife in the attic when the boys grew afraid of her.",
+      "Got the notion his wife was slightly luminous in the dark.",
+      "Borrowed a horse from Ammi for haying because his own horses had gone mad and had to be shot.",
+      "His oldest boy Zenas cut down blasphemous-looking flowers in the yard.",
+      "Feared the trees would die before the poison was out of the soil.",
+      "Ignored Ammi's warning to dig a new well.",
+      "Continued to use the tainted well water with his boys.",
+      "Was brave about his second child (Thaddeus) going mad.",
+      "Shut Thaddeus in an attic room across the hall from his wife's room.",
+      "Was at his wit's end over the mysterious livestock deaths.",
+      "Dug a grave in the family plot and buried what was left of Thaddeus after his death in the attic room.",
+      "Told Ammi that his wife was getting very feeble.",
+      "Burst into Ammi's kitchen to report that Merwin had vanished in the night.",
+      "Searched all night for Merwin and found a crushed, half-fused lantern and pail near the well.",
+      "Said Merwin's disappearance must be a judgment of some sort though he had always walked uprightly.",
+      "Asked Ammi to look after his wife and Zenas if they did not survive him.",
+      "Was found alive but weak, lying on a couch in the kitchen, mentally broken after two weeks with no contact.",
+      "Could give no clear answer about Zenas except 'In the well—he lives in the well—'.",
+      "Responded that his wife (Nabby) was right there when Ammi asked about her, showing his mind had given way."
+    ],
+    "typeGuess": "other",
+    "fate": "His mind broke entirely ('the hapless farmer's mind was proof against more sorrow') after the loss of his wife, sons, and livestock.",
+    "relatedNames": [
+      "Ammi",
+      "Mrs. Gardner",
+      "Thaddeus",
+      "Merwin",
+      "Zenas",
+      "Gardner place"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 31,
+        "quote": "Then Nahum had the cows driven to the uplands, after which this trouble ceased."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 32,
+        "quote": "Nahum did not send her to the county asylum, but let her wander about the house as long as she was harmless to herself and others."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 38,
+        "quote": "On the nineteenth of October Nahum staggered into Ammi's house with hideous news."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 40,
+        "quote": "But Nahum was alive, after all. He was weak, and lying in a couch in the low-ceiled kitchen, but perfectly conscious and able to give simple orders to Zenas."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 41,
+        "quote": "\"In the well—he lives in the well—\" was all that the clouded father would say."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Mrs. Gardner",
+    "aliases": [
+      "Nabby"
+    ],
+    "facts": [
+      "Went mad in June, about the anniversary of the meteor's fall.",
+      "Screamed about things in the air she could not describe, using only verbs and pronouns.",
+      "Was locked in the attic when the boys grew afraid of her and Thaddeus nearly fainted at her expressions.",
+      "By July had ceased to speak and crawled on all fours.",
+      "Nahum thought she was slightly luminous in the dark.",
+      "Had spells of terrific screaming by September.",
+      "Had made pets of the five cats before they left.",
+      "Was said by Nahum to be getting very feeble.",
+      "Ammi found her in a locked attic room, dark inside, with an unbearable stench.",
+      "Ammi screamed upon seeing something dark in the corner of her room, which had shared the fate of Thaddeus and the livestock."
+    ],
+    "typeGuess": "other",
+    "fate": "Found by Ammi in her attic room having become a crumbling, slowly moving horror, sharing 'the nameless fate of young Thaddeus and the livestock.'",
+    "relatedNames": [
+      "Nahum",
+      "Thaddeus",
+      "Merwin",
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 32,
+        "quote": "the poor woman screamed about things in the air which she could not describe. In her raving there was not a single specific noun, but only verbs and pronouns."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 32,
+        "quote": "By July she had ceased to speak and crawled on all fours, and before that month was over Nahum got the mad notion that she was slightly luminous in the dark"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 41,
+        "quote": "\"Nabby? Why, here she is!\" was the surprised response of poor Nahum"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 42,
+        "quote": "When he did enter he saw something dark in the corner, and upon seeing it more clearly he screamed outright."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Thaddeus",
+    "aliases": [
+      "Thad"
+    ],
+    "facts": [
+      "Nearly fainted at the way his mad mother made faces at him.",
+      "Went mad in September after a visit to the well.",
+      "Came back from the well empty-handed, shrieking and waving his arms, whispering about 'the moving colours down there.'",
+      "Was let to run about for a week until he began stumbling and hurting himself.",
+      "Was shut in an attic room across the hall from his mother's.",
+      "Screamed at his mother from behind their locked doors in a way that terrified Merwin.",
+      "Died in his attic room in a way that could not be told, with the barred window and locked door intact.",
+      "Was buried by Nahum in the family plot."
+    ],
+    "typeGuess": "other",
+    "fate": "Died in his locked attic room under mysterious circumstances similar to the livestock deaths; buried by his father.",
+    "relatedNames": [
+      "Nahum",
+      "Mrs. Gardner",
+      "Merwin",
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 35,
+        "quote": "Thaddeus went mad in September after a visit to the well. He had gone with a pail and had come back empty-handed, shrieking and waving his arms, and sometimes lapsing into an inane titter or a whisper about \"the moving colours down there.\""
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 38,
+        "quote": "The death had come to poor Thaddeus in his attic room, and it had come in a way which could not be told."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Merwin",
+    "aliases": [],
+    "facts": [
+      "Fancied his mother and brother talked in some terrible language that was not of earth as they screamed at each other.",
+      "Was getting frightfully imaginative, with restlessness worsened after Thaddeus was shut away.",
+      "His screams were answered faintly from the attic on the night Ammi visited after Thaddeus's death.",
+      "Ammi tried to calm his hysterical sobbing.",
+      "Went out late at night with a lantern and pail for water and never came back.",
+      "Had been going to pieces for days and screamed at everything before he disappeared.",
+      "A crushed, melted lantern and a bent, half-fused pail were found near the well after his disappearance."
+    ],
+    "typeGuess": "other",
+    "fate": "Vanished one night going to fetch water from the well; only a melted lantern and fused pail were found, and he was never seen again.",
+    "relatedNames": [
+      "Nahum",
+      "Mrs. Gardner",
+      "Thaddeus",
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 35,
+        "quote": "especially to little Merwin, who fancied they talked in some terrible language that was not of earth"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 39,
+        "quote": "He had gone out late at night with a lantern and pail for water, and had never come back."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 39,
+        "quote": "There was a crushed and apparently somewhat melted mass of iron which had certainly been the lantern; while a bent pail and twisted iron hoops beside it, both half-fused, seemed to hint at the remnants of the pail."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Zenas",
+    "aliases": [],
+    "facts": [
+      "Was Nahum's oldest boy.",
+      "Cut down the blasphemous-looking roses, zinnias, and hollyhocks in the front yard.",
+      "By October had come to do nothing but stare into space and obey what his father told him.",
+      "Ammi thought his fate (mental state) was very merciful.",
+      "Was given simple orders by his weak father Nahum.",
+      "Went missing by the time Ammi found Nahum broken; Ammi could get no clear data about him.",
+      "Nahum said of him 'In the well—he lives in the well—'."
+    ],
+    "typeGuess": "other",
+    "fate": "Missing/unaccounted for; his father could only say 'In the well—he lives in the well—' when asked about him.",
+    "relatedNames": [
+      "Nahum",
+      "Mrs. Gardner",
+      "Thaddeus",
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 33,
+        "quote": "the roses and zinnias and hollyhocks in the front yard were such blasphemous-looking things that Nahum's oldest boy Zenas cut them down"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 38,
+        "quote": "He had come of late to do nothing but stare into space and obey what his father told him; and Ammi thought that his fate was very merciful."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 41,
+        "quote": "Questioning tactfully, Ammi could get no clear data at all about the missing Zenas. \"In the well—he lives in the well—\" was all that the clouded father would say."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Ammi",
+    "aliases": [
+      "Ammi Pierce"
+    ],
+    "facts": [
+      "Was the only person who ever visited the Gardner place, and his visits became fewer and fewer.",
+      "Advised Nahum to dig another well on higher ground because the water was no longer good.",
+      "Consoled Nahum along with his wife after Thaddeus's death, shuddering as they did so.",
+      "Accompanied Nahum home with the greatest reluctance and tried to calm Merwin.",
+      "Left before nightfall because he could not stay when the vegetation's glow began.",
+      "Was said to be lucky for not being more imaginative, or he might have turned a total maniac.",
+      "Heard Nahum's tale about Merwin's disappearance from Nahum in his kitchen.",
+      "Went two weeks without seeing Nahum, then visited the Gardner farm out of worry.",
+      "Found Nahum alive but mentally broken on a couch in the kitchen.",
+      "Took keys and searched the attic, unlocking the one locked door among four.",
+      "Found Mrs. Gardner's remains/monstrosity in the attic room and screamed outright.",
+      "Felt himself brushed by a hateful current of vapour and saw strange colours dance before his eyes upon opening the door."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Nahum",
+      "Mrs. Gardner",
+      "Thaddeus",
+      "Merwin",
+      "Zenas",
+      "Mrs. Pierce"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 31,
+        "quote": "Ammi was now the only person who ever visited the place, and his visits were becoming fewer and fewer."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 34,
+        "quote": "Ammi advised his friend to dig another well on higher ground to use till the soil was good again."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 38,
+        "quote": "Ammi accompanied Nahum home with the greatest reluctance, and did what he might to calm the hysterical sobbing of little Merwin."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 40,
+        "quote": "he overcame his fears and paid the Gardner place a visit"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 42,
+        "quote": "When he did enter he saw something dark in the corner, and upon seeing it more clearly he screamed outright."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "Mrs. Pierce",
+    "aliases": [],
+    "facts": [
+      "Listened in a clutching fright as Nahum stammered out his tale about Merwin in the absence of her husband Ammi.",
+      "Was blank upon hearing of Merwin's disappearance."
+    ],
+    "typeGuess": "witness",
+    "relatedNames": [
+      "Ammi",
+      "Nahum"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 39,
+        "quote": "Three days later Nahum burst into Ammi's kitchen in the early morning, and in the absence of his host stammered out a desperate tale once more, while Mrs. Pierce listened in a clutching fright."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 39,
+        "quote": "Nahum was past imagining, Mrs. Pierce was blank, and Ammi, when he had reached home and heard the tale, could give no guess."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the Gardner place",
+    "aliases": [
+      "the farm",
+      "the Gardner farm"
+    ],
+    "facts": [
+      "Its grass and leaves went grey and brittle over the course of a year following the meteor's fall.",
+      "The well water there turned no longer good, with an evil taste.",
+      "Livestock there suffered mysterious mortality: poultry, hogs, cows, dogs and cats all died or vanished.",
+      "By October there was no smoke from its great chimney.",
+      "Its grass and leaves were greyish and withered, with vines falling in brittle wreckage from archaic walls and gables.",
+      "Its great bare trees clawed at the grey November sky with a studied malevolence.",
+      "Had an attic with four rooms, one of which was kept locked."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Nahum",
+      "Mrs. Gardner",
+      "Ammi"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 31,
+        "quote": "The grass had so far seemed untouched, and the cows were freely pastured in the lot near the house, but toward the end of May the milk began to be bad."
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 40,
+        "quote": "There was no smoke from the great chimney, and for a moment the visitor was apprehensive of the worst. The aspect of the whole farm was shocking—greyish withered grass and leaves on the ground, vines falling in brittle wreckage from archaic walls and gables, and great bare trees clawing up at the grey November sky with a studied malevolence"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Arkham",
+    "aliases": [],
+    "facts": [
+      "Had a city veterinary who came to examine the diseased swine but was openly baffled.",
+      "Its city people would laugh at everything if told the strange news of the Gardners."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "Nahum"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 36,
+        "quote": "the city veterinary from Arkham was openly baffled"
+      },
+      {
+        "storySlug": "the-colour-out-of-space",
+        "paragraph": 39,
+        "quote": "No use, either, in telling the city people at Arkham who laughed at everything."
+      }
+    ]
+  }
+]
