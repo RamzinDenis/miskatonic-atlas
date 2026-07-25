@@ -387,8 +387,15 @@ body {
 }
 
 .atlas-annot:hover,
+.leaflet-marker-icon:focus-visible .atlas-annot,
 .atlas-annot--active {
   color: var(--ink-accent);
+}
+
+/* Keyboard focus rides the same highlight as hover — leaflet's own focus
+   ring would frame an invisible 12px box, so it is replaced, not doubled. */
+.leaflet-marker-icon:focus-visible {
+  outline: none;
 }
 
 .atlas-annot-fix {
@@ -397,12 +404,18 @@ body {
   border-radius: 50%;
   border: 2px solid currentColor;
   background: rgba(238, 226, 197, 0.55);
-  transition: transform 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
 }
 
+/* Hover-highlight v1 (docs/pacific-map.md №3): a soft ink halo swells out
+   of the fix-point, as if the annotator pressed harder right there. */
 .atlas-annot:hover .atlas-annot-fix,
+.leaflet-marker-icon:focus-visible .atlas-annot-fix,
 .atlas-annot--active .atlas-annot-fix {
   transform: scale(1.3);
+  box-shadow:
+    0 0 0 4px color-mix(in srgb, currentColor 16%, transparent),
+    0 0 14px 7px color-mix(in srgb, currentColor 22%, transparent);
 }
 
 .atlas-annot-label {
@@ -438,8 +451,21 @@ body {
   letter-spacing: 0.14em;
 }
 
+/* The log-book line under an annotation's name — smaller, upright, spaced
+   like the dates the tracks letter, whatever style the name itself is set in. */
+.atlas-annot-sub {
+  display: block;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  margin-top: 1px;
+}
+
 .world-map--labels .atlas-annot-label,
 .atlas-annot:hover .atlas-annot-label,
+.leaflet-marker-icon:focus-visible .atlas-annot-label,
 .atlas-annot--active .atlas-annot-label {
   opacity: 1;
 }

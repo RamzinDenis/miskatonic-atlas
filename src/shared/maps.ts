@@ -133,6 +133,31 @@ export const MAPS: Record<string, AtlasMap> = {
     pins: "all",
     markerStyle: "annotation",
   },
+  /**
+   * The sea sheet of the southern theatre (docs/pacific-map.md, ADR-0004):
+   * generated open-ocean chart drawn strictly after "The Call of Cthulhu"
+   * and "Dagon". The sheet is uncalibrated — R'lyeh's canonical degrees are
+   * a fact of its annotation, not of the chart. Top-level pins only: the
+   * theatre has no sub-locations.
+   */
+  pacific: {
+    id: "pacific",
+    title: "The South Pacific",
+    url: "/maps/pacific-1448.webp",
+    lqipUrl: "/maps/pacific-lqip.webp",
+    insetUrl: "/maps/pacific-1024.webp",
+    width: 1448,
+    height: 1086,
+    sheets: [
+      { width: 1024, url: "/maps/pacific-1024.webp" },
+      { width: 1448, url: "/maps/pacific-1448.webp" },
+    ],
+    // Same generator ceiling as new-england (~1450px source): cap the
+    // close-up so the engraving never dissolves into upscale blur.
+    maxZoom: 0.5,
+    tone: "art",
+    markerStyle: "annotation",
+  },
 };
 
 export function getAtlasMap(mapId: string): AtlasMap {

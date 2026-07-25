@@ -34,6 +34,8 @@ export interface MapLocation extends PixelPoint {
   figures: MapFigure[];
   /** Editorial weight — the picker toggles it; the public map is major-only. */
   prominence?: "major" | "minor";
+  /** Log-book line lettered under an annotation's name (schemas.ts MapPoint). */
+  sublabel?: string;
 }
 
 /** A location still off the chart — the picker's placement queue. */

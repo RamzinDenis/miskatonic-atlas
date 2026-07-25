@@ -136,6 +136,11 @@ function checkIntegrity(content: AtlasContent, errors: string[]) {
     if (location.map && !MAPS[location.map.mapId]) {
       errors.push(`${from}: map.mapId → unknown chart "${location.map.mapId}"`);
     }
+    // A sublabel is a factual claim lettered on the chart — it must be
+    // vouched for by a quoted source (docs/pacific-map.md №4).
+    if (location.map?.sublabel && location.sources.length === 0) {
+      errors.push(`${from}: map.sublabel with no quoted source to vouch for it`);
+    }
     checkRefs(from, "appearsIn", location.appearsIn, storySlugs, "story", errors);
     checkLocationRefs(from, "connectedTo", location.connectedTo);
     checkRefs(from, "sources", location.sources.map((s) => s.storySlug), storySlugs, "story", errors);
@@ -304,6 +309,7 @@ function toMapLocation(content: AtlasContent, mapId: string) {
         prominence: location.prominence,
         x: location.map.x,
         y: location.map.y,
+        sublabel: location.map.sublabel,
       },
     ];
   };

@@ -56,10 +56,10 @@ import {
   shipMaskUrl,
 } from "./route-glyphs";
 import {
-  ROUTE_LEGS,
   ROUTE_STORY_SLUG,
   legLabelPlacement,
   legShipPlacement,
+  routeLegs,
   shipFits,
   type RouteFix,
   type RouteLeg,
@@ -164,9 +164,15 @@ function locationIcon(location: MapLocation, active: boolean, style?: AtlasMap["
 function annotationIcon(location: MapLocation, active: boolean) {
   const s = 12;
   const town = location.type === "town" || location.type === "city";
+  /* The sublabel is a log-book line under the name — canon degrees on an
+     uncalibrated sheet print as a fact of the annotation, not of the chart
+     (docs/pacific-map.md №4). */
+  const sub = location.sublabel
+    ? `<span class="atlas-annot-sub">${location.sublabel}</span>`
+    : "";
   return divIcon({
     className: "atlas-pin-wrap",
-    html: `<span class="atlas-annot${active ? " atlas-annot--active" : ""}" style="width:${s}px;height:${s}px"><span class="atlas-annot-fix"></span><span class="atlas-annot-label${town ? " atlas-annot-label--town" : ""}">${location.name}</span></span>`,
+    html: `<span class="atlas-annot${active ? " atlas-annot--active" : ""}" style="width:${s}px;height:${s}px"><span class="atlas-annot-fix"></span><span class="atlas-annot-label${town ? " atlas-annot-label--town" : ""}">${location.name}${sub}</span></span>`,
     iconSize: [s, s],
     iconAnchor: [s / 2, s / 2],
   });
@@ -415,10 +421,10 @@ export default function WorldMapClient({
 }: Props) {
   const router = useRouter();
   const mapRef = useRef<LeafletMap | null>(null);
-  /* The voyage tracks are logged in world-chart pixels — they belong to that
-     copy alone and stay off any other sheet. The annotator's beasts are not
-     so bound: each names the chart it was drawn on (monsters.ts). */
-  const worldChart = chart.id === "world";
+  /* Voyage tracks are logged in the pixels of the chart that carries them —
+     the per-chart registry (routes.ts) says which legs this sheet sails.
+     The annotator's beasts likewise name their chart (monsters.ts). */
+  const chartLegs = routeLegs(chart.id);
   const chartMonsters = useMemo(
     () => MONSTERS.filter((monster) => (monster.mapId ?? "world") === chart.id),
     [chart.id],
@@ -473,7 +479,7 @@ export default function WorldMapClient({
   // The schema defaults mapId to "world", so the world chart's snippet
   // (and its JSON files) stay free of the field.
   const snippet = picked
-    ? worldChart
+    ? chart.id === "world"
       ? `"map": { "x": ${picked.x}, "y": ${picked.y} }`
       : `"map": { "mapId": "${chart.id}", "x": ${picked.x}, "y": ${picked.y} }`
     : "";
@@ -593,7 +599,7 @@ export default function WorldMapClient({
     selectLeg(leg);
     const map = mapRef.current;
     if (!map) return;
-    map.flyToBounds(latLngBounds(leg.points.map((p) => pixelToLatLng(p))), {
+    map.flyToBounds(latLngBounds(leg.points.map((p) => pixelToLatLng(p, chart))), {
       padding: [70, 70],
       maxZoom: 0,
       duration: 1.1,
@@ -693,6 +699,17 @@ export default function WorldMapClient({
             draggable={picker}
             eventHandlers={{
               click: () => {
+                /* Annotation sheets: the first tap/click highlights the mark
+                   and opens its preview, the second opens the page — the
+                   hover-highlight contract of docs/pacific-map.md №3. */
+                if (
+                  !picker &&
+                  chart.markerStyle === "annotation" &&
+                  selected?.slug === location.slug
+                ) {
+                  router.push(`/locations/${location.slug}`);
+                  return;
+                }
                 setSelectedLeg(null);
                 setSelected(location);
               },
@@ -710,10 +727,9 @@ export default function WorldMapClient({
             and leaflet needs sole ownership of that element's transitions
             (see globals.css) — so they wait by not existing yet. */}
         {!picker &&
-          worldChart &&
           paperReady &&
-          ROUTE_LEGS.map((leg) => {
-            const positions = leg.points.map((p) => pixelToLatLng(p));
+          chartLegs.map((leg) => {
+            const positions = leg.points.map((p) => pixelToLatLng(p, chart));
             const label = legLabelPlacement(leg);
             const active = selectedLeg?.id === leg.id;
             return (
@@ -727,7 +743,7 @@ export default function WorldMapClient({
                 {leg.fixes.map((fix) => (
                   <Marker
                     key={fix.label}
-                    position={pixelToLatLng(fix)}
+                    position={pixelToLatLng(fix, chart)}
                     icon={routeDateIcon(fix, leg, active)}
                     interactive={false}
                     keyboard={false}
@@ -735,14 +751,14 @@ export default function WorldMapClient({
                 ))}
                 {shipFits(leg) && (
                   <Marker
-                    position={pixelToLatLng(legShipPlacement(leg).at)}
+                    position={pixelToLatLng(legShipPlacement(leg).at, chart)}
                     icon={routeShipIcon(leg, active)}
                     alt={`The ${leg.vessel}`}
                     eventHandlers={{ click: () => selectLeg(leg) }}
                   />
                 )}
                 <Marker
-                  position={pixelToLatLng(label.at)}
+                  position={pixelToLatLng(label.at, chart)}
                   icon={routeLabelIcon(leg, label.angleDeg, active)}
                   alt={`Track of the ${leg.vessel}`}
                   eventHandlers={{ click: () => selectLeg(leg) }}
@@ -868,14 +884,14 @@ export default function WorldMapClient({
                   </section>
                 )}
 
-                {legend.some((story) => story.slug === ROUTE_STORY_SLUG) && (
+                {chartLegs.length > 0 && legend.some((story) => story.slug === ROUTE_STORY_SLUG) && (
                   <section className="mt-6">
                     <h2 className="text-center text-xs uppercase tracking-widest text-muted">
                       Voyage tracks
                     </h2>
                     <div className="parchment-rule mt-2" />
                     <ul className="mt-3 space-y-1.5">
-                      {ROUTE_LEGS.map((leg) => (
+                      {chartLegs.map((leg) => (
                         <li key={leg.id}>
                           <button
                             type="button"

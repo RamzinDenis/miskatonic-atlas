@@ -10,6 +10,13 @@ export const MapPoint = z.object({
   mapId: z.string().default("world"),
   x: z.number(),
   y: z.number(),
+  /**
+   * A second, smaller line lettered under the annotation's name — a fact of
+   * the content, not of the sheet (docs/pacific-map.md №4): R'lyeh's canon
+   * degrees print as a log-book line on an uncalibrated chart. The claim
+   * must be vouched for by a quote in the location's `sources`.
+   */
+  sublabel: z.string().optional(),
 });
 
 /**

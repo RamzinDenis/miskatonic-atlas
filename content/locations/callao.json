@@ -3,8 +3,9 @@
   "name": "Callao",
   "type": "city",
   "map": {
-    "x": 2467,
-    "y": 1832
+    "mapId": "pacific",
+    "x": 1285,
+    "y": 318
   },
   "prominence": "minor",
   "summary": "The port for which the schooner Emma of Auckland sailed on February 20th with a complement of eleven men.",

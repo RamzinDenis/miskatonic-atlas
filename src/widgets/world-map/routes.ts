@@ -2,16 +2,25 @@ import type { PixelPoint } from "./geometry";
 import type { ShipKind } from "./route-glyphs";
 
 /**
- * Routes — editorial voyage tracks on the chart (CONTEXT.md: «Маршрут»).
+ * Routes — editorial voyage tracks on the charts (CONTEXT.md: «Маршрут»).
  * Pure presentation, like plates: the editor places the fixes after quoted
  * passages; nothing here enters content JSON or the extraction pipeline.
  *
- * Points are pixels of world.jpg. Fixes with canon coordinates in the
- * text are placed by the grid calibration documented in geometry.ts:
+ * A route is a presentation layer, so the "one location — one chart" rule
+ * does not bind it: the registry below keys legs by chart id, and the same
+ * voyage may print an overview version on the world scan and a detailed one
+ * on the sea sheet (docs/pacific-map.md №7). Points are pixels of the
+ * owning chart's source image.
+ *
+ * World scan: fixes with canon coordinates in the text are placed by the
+ * grid calibration documented in geometry.ts:
  *   the Emma–Alert encounter, "S. Latitude 49° 51´, W. Longitude 128° 34´"
  *     → (1971, 2270)
  *   the derelict Alert sighted, "S. Latitude 34° 21', W. Longitude 152° 17'"
  *     → (1743, 2068)
+ * The pacific sheet is uncalibrated: its fixes sit by the drawn geography
+ * (ports, R'lyeh), keeping the canon bearings between them — the encounter
+ * south-west of R'lyeh, the drift north-west of it.
  * Every other point only shapes the line between fixes (a storm bend, a
  * drift wobble) and carries no factual claim — so no date is lettered there.
  */
@@ -70,8 +79,8 @@ const OXBLOOD_INK = "#4a2430";
 /** The story whose voyage the tracks below chart. */
 export const ROUTE_STORY_SLUG = "the-call-of-cthulhu";
 
-/** The voyage of the Emma and the Alert — the one route of the atlas so far. */
-export const ROUTE_LEGS: RouteLeg[] = [
+/** The voyage of the Emma and the Alert — the world scan's overview legs. */
+const WORLD_ROUTE_LEGS: RouteLeg[] = [
   {
     id: "emma",
     vessel: "Emma",
@@ -174,6 +183,88 @@ export const ROUTE_LEGS: RouteLeg[] = [
     attribution: "The Call of Cthulhu (1928) — Chapter 3, The Madness from the Sea",
   },
 ];
+
+/**
+ * The same four passages in the sea sheet's own pixels (1448×1086) — room
+ * enough for the storm bends the world overview straightens out. Same
+ * vessels, same inks, same quotes: a reader crossing between sheets meets
+ * one voyage, drawn at two scales.
+ */
+const PACIFIC_ROUTE_LEGS: RouteLeg[] = [
+  {
+    ...WORLD_ROUTE_LEGS[0],
+    course:
+      "Schooner Emma of Auckland, bound for Callao — thrown widely south of her course by the great storm of March 1st, to the encounter at 49° 51′ S, 128° 34′ W.",
+    points: [
+      { x: 495, y: 775 },
+      { x: 700, y: 660 },
+      { x: 850, y: 680 },
+      { x: 955, y: 800 },
+    ],
+    labelSegment: 0,
+    fixes: [
+      { x: 495, y: 775, label: "Feb. 20", dx: 20, dy: 18 },
+      { x: 955, y: 800, label: "Mch. 22", dx: -34, dy: 14 },
+    ],
+  },
+  {
+    ...WORLD_ROUTE_LEGS[1],
+    points: [
+      { x: 955, y: 800 },
+      { x: 995, y: 710 },
+    ],
+    labelSegment: 0,
+    fixes: [
+      { x: 995, y: 710, label: "Mch. 23", dx: 34, dy: 14 },
+    ],
+  },
+  {
+    ...WORLD_ROUTE_LEGS[2],
+    points: [
+      { x: 995, y: 710 },
+      { x: 935, y: 650 },
+      { x: 880, y: 575 },
+      { x: 815, y: 520 },
+      { x: 760, y: 470 },
+    ],
+    labelSegment: 2,
+    fixes: [
+      { x: 760, y: 470, label: "Apr. 12", dx: 2, dy: -18 },
+    ],
+  },
+  {
+    ...WORLD_ROUTE_LEGS[3],
+    course:
+      "Freighter Vigilant out of Valparaiso, driven south of her course by the storm of April 2nd — the derelict taken in tow to Darling Harbour, Sydney.",
+    points: [
+      { x: 1340, y: 720 },
+      { x: 1120, y: 790 },
+      { x: 900, y: 590 },
+      { x: 760, y: 470 },
+      { x: 470, y: 460 },
+      { x: 200, y: 555 },
+    ],
+    labelSegment: 1,
+    fixes: [
+      { x: 1340, y: 720, label: "Mch. 25", dx: 8, dy: -16 },
+      { x: 200, y: 555, label: "Apr. 18", dx: 12, dy: 24 },
+    ],
+  },
+];
+
+/**
+ * Voyage tracks by chart id — a sheet not listed here sails empty. The
+ * world keeps its overview legs untouched; the sea sheet carries the same
+ * voyages in its own detail.
+ */
+export const ROUTE_LEGS_BY_CHART: Record<string, RouteLeg[]> = {
+  world: WORLD_ROUTE_LEGS,
+  pacific: PACIFIC_ROUTE_LEGS,
+};
+
+export function routeLegs(mapId: string): RouteLeg[] {
+  return ROUTE_LEGS_BY_CHART[mapId] ?? [];
+}
 
 /**
  * Midpoint and heading of one track segment. Pixel space has y down, exactly

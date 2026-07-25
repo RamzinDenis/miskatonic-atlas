@@ -3,8 +3,9 @@
   "name": "Valparaiso",
   "type": "city",
   "map": {
-    "x": 2520,
-    "y": 2053
+    "mapId": "pacific",
+    "x": 1340,
+    "y": 720
   },
   "prominence": "minor",
   "summary": "The Chilean port from which the Morrison Co.'s freighter Vigilant was bound when she arrived at Sydney towing the derelict Alert; the Vigilant left Valparaiso on March 25th.",

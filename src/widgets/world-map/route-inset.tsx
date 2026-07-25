@@ -2,12 +2,16 @@ import Link from "next/link";
 import { WORLD_MAP } from "./geometry";
 import { SHIP_ART, shipMaskUrl } from "./route-glyphs";
 import {
-  ROUTE_LEGS,
+  ROUTE_LEGS_BY_CHART,
   ROUTE_STORY_SLUG,
   legLabelPlacement,
   legShipPlacement,
   shipFits,
 } from "./routes";
+
+/* The story-page inset stays the world overview: its whole point is the
+   voyage at a glance, and the sea sheet's detail lives on its own page. */
+const ROUTE_LEGS = ROUTE_LEGS_BY_CHART.world;
 
 /** Map dash patterns are screen px at base zoom; the inset's viewBox units
  * are scan pixels, roughly twice as large on screen. */
