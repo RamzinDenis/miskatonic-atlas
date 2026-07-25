@@ -37,6 +37,7 @@ const MONSTERS = [
   "the-crawling-reptiles-of-the-nameless-city",
   "the-dunwich-horror",
   "the-meteorite",
+  "hybrid-winged-things",
 ];
 
 /* Beasts engraved for the bestiary alone, with no marginalia on the chart:
@@ -45,7 +46,6 @@ const MONSTERS = [
 const BESTIARY_ONLY = [
   "white-polypous-thing",
   "whippoorwills",
-  "hybrid-winged-things",
   "amorphous-flute-player",
 ];
 const SHIPS = {

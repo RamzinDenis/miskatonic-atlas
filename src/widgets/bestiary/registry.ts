@@ -145,7 +145,7 @@ export const BESTIARY: BestiaryPlate[] = [
     epithet: "Not altogether crows, nor moles, nor buzzards",
     art: {
       mask: "/bestiary/hybrid-winged-things.webp",
-      thumb: "/bestiary/hybrid-winged-things-thumb.png",
+      thumb: "/maps/monsters/hybrid-winged-things.png",
       aspect: 0.87,
       effects: ["breath", "ink-shiver", "gaze-tilt"],
     },

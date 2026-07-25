@@ -8,7 +8,8 @@ export type MonsterKind =
   | "the-thing"
   | "the-crawling-reptiles-of-the-nameless-city"
   | "the-dunwich-horror"
-  | "the-meteorite";
+  | "the-meteorite"
+  | "hybrid-winged-things";
 
 /**
  * Monsters — the annotator's marginalia on the chart. Pure presentation,
@@ -43,6 +44,9 @@ export type MonsterKind =
  *   The Crawling Reptiles — the desert sheet, in the pale dunes where the
  *                    sand-cloud from the black temple mouth spends itself:
  *                    the horde rides out of the abyss on that very wind
+ *   Hybrid Winged Things — the Miskatonic sheet, over the open sea off
+ *                    Kingsport: the beasts that flop up from under its
+ *                    church, drawn on the one blank water of that chart
  *
  * Beasts of the retired world scan (tornasuk, Black-winged Ones) wait in
  * public/maps/monsters/ for their theatres.
@@ -106,5 +110,13 @@ export const MONSTERS: MapMonster[] = [
     mapId: "new-england",
     at: { x: 300, y: 690 },
     art: { w: 46, h: 39 },
+  },
+  {
+    slug: "hybrid-winged-things",
+    name: "Hybrid Winged Things",
+    storySlug: "the-festival",
+    mapId: "new-england",
+    at: { x: 1240, y: 955 },
+    art: { w: 72, h: 63 },
   },
 ];
