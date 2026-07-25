@@ -113,6 +113,8 @@ function toDiskEntity(
     slug: draft.slug,
     name: draft.name,
     ...(keep.nameRu !== undefined && { nameRu: keep.nameRu }),
+    ...(keep.parentSlug !== undefined && { parentSlug: keep.parentSlug }),
+    ...(keep.subtitle !== undefined && { subtitle: keep.subtitle }),
     ...(kind === "locations" && { type: draft.type }),
     ...(kind === "characters" && { role: draft.role }),
     ...(kind === "creatures" && { classification: draft.classification }),
