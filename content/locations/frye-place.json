@@ -30,5 +30,10 @@
       "quote": "They shook their heads at the visitors' plan to stand guard at the Frye ruins near the glen; and as they left, had little expectancy of ever seeing the watchers again.",
       "context": "Chapter 9"
     }
-  ]
+  ],
+  "map": {
+    "mapId": "new-england",
+    "x": 588,
+    "y": 318
+  }
 }

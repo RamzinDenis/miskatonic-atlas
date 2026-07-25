@@ -34,5 +34,10 @@
       "quote": "The day was pleasant, but even in the brightest sunlight a kind of quiet dread and portent seemed to hover about the strangely domed hills and the deep, shadowy ravines of the stricken region.",
       "context": "Chapter 9"
     }
-  ]
+  ],
+  "map": {
+    "mapId": "new-england",
+    "x": 372,
+    "y": 268
+  }
 }

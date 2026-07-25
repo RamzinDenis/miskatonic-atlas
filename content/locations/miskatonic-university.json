@@ -32,5 +32,10 @@
       "quote": "The curious manuscript record or diary of Wilbur Whateley, delivered to Miskatonic University for translation, had caused much worry and bafflement among the experts in languages both ancient and modern",
       "context": "Chapter 8"
     }
-  ]
+  ],
+  "map": {
+    "mapId": "new-england",
+    "x": 674,
+    "y": 690
+  }
 }

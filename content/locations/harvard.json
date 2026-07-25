@@ -33,5 +33,10 @@
       "quote": "Armitage had issued warnings of the keenest intensity to all librarians having charge of the dreaded volume.",
       "context": "Chapter 6"
     }
-  ]
+  ],
+  "map": {
+    "mapId": "new-england",
+    "x": 662,
+    "y": 928
+  }
 }

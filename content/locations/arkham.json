@@ -30,5 +30,10 @@
       "quote": "Friday morning Armitage, Rice and Morgan set out by motor for Dunwich, arriving at the village about 1 in the afternoon.",
       "context": "Chapter 9"
     }
-  ]
+  ],
+  "map": {
+    "mapId": "new-england",
+    "x": 738,
+    "y": 658
+  }
 }

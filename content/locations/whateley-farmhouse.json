@@ -31,5 +31,10 @@
       "quote": "As the men passed the site of Wilbur Whateley's abode they shuddered visibly, and seemed again to mix hesitancy with their zeal.",
       "context": "Chapter 9"
     }
-  ]
+  ],
+  "map": {
+    "mapId": "new-england",
+    "x": 516,
+    "y": 338
+  }
 }

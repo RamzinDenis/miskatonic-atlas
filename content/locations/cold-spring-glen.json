@@ -31,5 +31,10 @@
       "quote": "I telled 'em not ter go daown into the glen, an' I never thought nobody'd dew it with them tracks an' that smell an' the whippoorwills a-screechin' daown thar in the dark o' noonday....",
       "context": "Chapter 9"
     }
-  ]
+  ],
+  "map": {
+    "mapId": "new-england",
+    "x": 640,
+    "y": 293
+  }
 }
