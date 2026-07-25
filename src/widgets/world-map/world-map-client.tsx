@@ -396,9 +396,14 @@ export default function WorldMapClient({
 }: Props) {
   const router = useRouter();
   const mapRef = useRef<LeafletMap | null>(null);
-  /* The voyage tracks and the annotator's beasts are drawn in world-chart
-     pixels — they belong to that copy alone and stay off any other sheet. */
+  /* The voyage tracks are logged in world-chart pixels — they belong to that
+     copy alone and stay off any other sheet. The annotator's beasts are not
+     so bound: each names the chart it was drawn on (monsters.ts). */
   const worldChart = chart.id === "world";
+  const chartMonsters = useMemo(
+    () => MONSTERS.filter((monster) => (monster.mapId ?? "world") === chart.id),
+    [chart.id],
+  );
   const bounds = useMemo<LatLngBoundsExpression>(
     () => [
       [0, 0],
@@ -584,7 +589,7 @@ export default function WorldMapClient({
     const map = mapRef.current;
     if (!map) return;
     map.flyTo(
-      pixelToLatLng(monster.at),
+      pixelToLatLng(monster.at, chart),
       Math.max(map.getZoom(), FOCUS_ZOOM),
       { duration: 1.1 },
     );
@@ -604,7 +609,7 @@ export default function WorldMapClient({
   /* Beasts of the stories this legend lists — each marginalia keys to the
      story whose annotator drew it, so a new story brings its own beasts. */
   const legendMonsters = legend
-    ? MONSTERS.filter((monster) =>
+    ? chartMonsters.filter((monster) =>
         legend.some((story) => story.slug === monster.storySlug),
       )
     : [];
@@ -727,11 +732,10 @@ export default function WorldMapClient({
             );
           })}
         {!picker &&
-          worldChart &&
-          MONSTERS.map((monster) => (
+          chartMonsters.map((monster) => (
             <Marker
               key={monster.slug}
-              position={pixelToLatLng(monster.at)}
+              position={pixelToLatLng(monster.at, chart)}
               icon={monsterIcon(monster)}
               alt={monster.name}
               eventHandlers={{

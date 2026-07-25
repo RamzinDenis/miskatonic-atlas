@@ -6,7 +6,8 @@ export type MonsterKind =
   | "black-winged-ones"
   | "cthulhu"
   | "the-thing"
-  | "the-crawling-reptiles-of-the-nameless-city";
+  | "the-crawling-reptiles-of-the-nameless-city"
+  | "the-dunwich-horror";
 
 /**
  * Monsters — the annotator's marginalia on the chart. Pure presentation,
@@ -21,7 +22,14 @@ export type MonsterKind =
  * them like every other mark. `art` is the display size in screen px;
  * keep its aspect in step with the mask's (the build script prints it).
  *
- * Points are pixels of world.jpg:
+ * A beast needs blank paper under it, not merely empty geography: inked over
+ * engraved forest or hachured slope the silhouette turns to a dark blot
+ * (tried on the regional chart — three wooded spots all failed). Open water
+ * is the usual answer, which is why the world sheet's five all swim; but any
+ * pale unprinted ground serves, and on the Miskatonic sheet the bald crown
+ * of a dome holds the drawing as well as the sea does.
+ *
+ * Points are pixels of the beast's own chart (`mapId`):
  *   tornasuk         — Baffin Bay, off the Greenland cult's coast
  *   Black-winged Ones — open Pacific off Tehuantepec: the Gulf of Mexico
  *                       itself is too small on this sheet to hold the beast
@@ -34,6 +42,10 @@ export type MonsterKind =
  *                       the desert around the pin is cramped against the
  *                       sheet's engraved border, so the beast haunts the
  *                       nearest open water, clear of the border and the fold
+ *   Dunwich Horror   — squatting on the bare crown of the domed hill above
+ *                       Dunwich village, where the engraving leaves the paper
+ *                       pale: the one land in that country the drawing reads
+ *                       on, and the hill the thing was driven up in the end
  */
 export interface MapMonster {
   /** Creature content slug — doubles as the mask file name. */
@@ -42,6 +54,8 @@ export interface MapMonster {
   /** The story the annotator read before drawing this beast — keys the
       legend's "Here be monsters" rows to their stories. */
   storySlug: string;
+  /** Chart this beast is drawn on (src/shared/maps.ts); defaults to world. */
+  mapId?: string;
   at: PixelPoint;
   /** Display size on the chart, screen px. */
   art: { w: number; h: number };
@@ -87,5 +101,13 @@ export const MONSTERS: MapMonster[] = [
     storySlug: "the-nameless-city",
     at: { x: 3745, y: 1655 },
     art: { w: 62, h: 47 },
+  },
+  {
+    slug: "the-dunwich-horror",
+    name: "The Dunwich Horror",
+    storySlug: "the-dunwich-horror",
+    mapId: "new-england",
+    at: { x: 400, y: 180 },
+    art: { w: 72, h: 74 },
   },
 ];
