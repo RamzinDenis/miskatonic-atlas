@@ -1,0 +1,31 @@
+{
+  "slug": "st-marys-hospital",
+  "name": "St. Mary's Hospital",
+  "parentSlug": "arkham",
+  "type": "building",
+  "summary": "A hospital in Arkham to which the narrator was transferred for better care after falling delirious in Kingsport, where broadminded doctors helped him obtain the Necronomicon from Miskatonic University's library.",
+  "description": "After the narrator went delirious at hearing that the Kingsport hospital stood near the old churchyard on Central Hill, he was sent to St. Mary's Hospital in Arkham for better care. He found the doctors there broadminded, and they even lent their influence toward obtaining for him the carefully sheltered copy of Alhazred's Necronomicon from the library of Miskatonic University.",
+  "map": {
+    "mapId": "new-england",
+    "x": 760,
+    "y": 640
+  },
+  "appearsIn": [
+    "the-festival"
+  ],
+  "connectedTo": [
+    "arkham/miskatonic-university"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-festival",
+      "paragraph": 28,
+      "quote": "they sent me to St. Mary’s Hospital in Arkham, where I could have better care"
+    },
+    {
+      "storySlug": "the-festival",
+      "paragraph": 28,
+      "quote": "I liked it there, for the doctors were broadminded, and even lent me their influence in obtaining the carefully sheltered copy of Alhazred’s objectionable “Necronomicon” from the library of Miskatonic University."
+    }
+  ]
+}

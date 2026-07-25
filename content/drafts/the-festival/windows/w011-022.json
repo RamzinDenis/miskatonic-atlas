@@ -1,0 +1,311 @@
+[
+  {
+    "kind": "character",
+    "name": "the old man",
+    "aliases": [
+      "the sinister man"
+    ],
+    "facts": [
+      "He beckoned the narrator into a candlelit room with seventeenth-century furniture.",
+      "His face never moved its eyes and had skin too like wax, seeming like a mask rather than a face.",
+      "His flabby hands were curiously gloved.",
+      "He wrote on a tablet telling the narrator to wait before being led to the place of festival.",
+      "He left the narrator with a chair, table, and pile of books.",
+      "He returned booted and dressed in a loose antique costume and sat on the settle so the narrator could not see him.",
+      "At 11 o'clock he stood up, went to a carved chest, and got two hooded cloaks, donning one himself.",
+      "He draped the other cloak around the old woman.",
+      "He picked up the Necronomicon the narrator had been reading and beckoned the narrator to follow, drawing his hood over his face.",
+      "He pulled at the narrator's sleeve in the church, wanting him not to be last.",
+      "He went before the narrator along with the old spinning woman.",
+      "In the crypt he squirmed to a point beside the flame and made stiff ceremonial motions to the semicircle.",
+      "He held the Necronomicon above his head during the ritual, prompting groveling obeisance from the throng.",
+      "He made a signal to the half-seen flute-player, changing its drone to another key, precipitating an unthinkable horror."
+    ],
+    "typeGuess": "cultist",
+    "relatedNames": [
+      "The Narrator",
+      "the old woman",
+      "Necronomicon"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 11,
+        "quote": "He beckoned me into a low, candlelit room with massive exposed rafters and dark, stiff, sparse furniture of the seventeenth century."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 11,
+        "quote": "Finally I was sure it was not a face at all, but a fiendishly cunning mask."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 13,
+        "quote": "the old man came back booted and dressed in a loose antique costume, and sat down on that very bench, so that I could not see him"
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 13,
+        "quote": "the old man stood up, glided to a massive carved chest in a corner, and got two hooded cloaks, one of which he donned, and the other of which he draped round the old woman"
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 22,
+        "quote": "The man who had brought me now squirmed to a point directly beside the hideous flame, and made stiff ceremonial motions to the semicircle he faced."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 22,
+        "quote": "Then the old man made a signal to the half-seen flute-player in the darkness, which player thereupon changed its feeble drone to a scarce louder drone in another key; precipitating as it did so a horror unthinkable and unexpected."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "the old woman",
+    "aliases": [
+      "a bent old woman",
+      "the bonneted old woman",
+      "the old spinning woman"
+    ],
+    "facts": [
+      "She sat back toward the narrator, silently spinning at a spinning-wheel despite the festive season.",
+      "She wore a loose wrapper and a deep poke-bonnet.",
+      "She continued spinning while the narrator read the books.",
+      "She ceased her spinning when the old man draped a hooded cloak around her at 11 o'clock.",
+      "She went before the narrator toward the church, described as lamely creeping."
+    ],
+    "typeGuess": "cultist",
+    "relatedNames": [
+      "the old man",
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 11,
+        "quote": "a bent old woman in loose wrapper and deep poke-bonnet sat back toward me, silently spinning despite the festive season"
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 13,
+        "quote": "the other of which he draped round the old woman, who was ceasing her monotonous spinning"
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 17,
+        "quote": "the sinister man and the old spinning woman before me"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [
+      "I"
+    ],
+    "facts": [
+      "He was led into the low candlelit room and felt fear at the old man's blandly terrifying face.",
+      "He was left with a chair, table, and pile of books, including the Necronomicon.",
+      "He read intently from the Necronomicon and became tremblingly absorbed by a hideous thought and legend within it.",
+      "He fancied he heard a window near the settle closing as if stealthily opened.",
+      "He was beckoned by the old man and followed him out into the town at 11 o'clock.",
+      "He followed the voiceless guides through the ancient town, jostled by throngs he could not see clearly.",
+      "He recognized the great white church atop the hill as one he had seen earlier from the road when looking at Kingsport.",
+      "He determined to be the last to enter the church, and noticed the snow bore no mark of passing feet, not even his own.",
+      "He followed the throng down through a trapdoor in the vaults, down a spiral staircase, into the bowels of the hill.",
+      "He realized they had passed beneath the earth of Kingsport itself.",
+      "He witnessed the Yule-rite performed by the cloaked throng around a pillar of flame in an underground cavern.",
+      "He shared in the obeisances of the rite because he had been summoned by the writings of his forefathers.",
+      "He was transfixed with dread at a horror caused by a change in the flute-player's drone."
+    ],
+    "typeGuess": "protagonist",
+    "relatedNames": [
+      "the old man",
+      "the old woman",
+      "Necronomicon"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 11,
+        "quote": "I did not like everything about what I saw, and felt again the fear I had had."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 13,
+        "quote": "because an old tradition of my father’s had summoned me to strange feastings, I resolved to expect queer things"
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 15,
+        "quote": "I had seen it from the road’s crest when I looked at Kingsport in the new dusk, and it had made me shiver because Aldebaran had seemed to balance itself a moment on the ghostly spire."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 17,
+        "quote": "I waited till the crowd had oozed into the black doorway, and till all the stragglers had followed. The old man was pulling at my sleeve, but I was determined to be the last."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 18,
+        "quote": "I knew we must have passed down through the mountain and beneath the earth of Kingsport itself, and I shivered that a town should be so aged and maggoty with subterraneous evil."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 22,
+        "quote": "I shared all the obeisances because I had been summoned to this festival by the writings of my forefathers."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 22,
+        "quote": "At this horror I sank nearly to the lichened earth, transfixed with a dread not of this nor any world, but only of the mad spaces between the stars."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Kingsport",
+    "aliases": [
+      "that incredibly ancient town",
+      "the town"
+    ],
+    "facts": [
+      "The narrator had seen the great white church from the road's crest when he looked at Kingsport in the new dusk.",
+      "The town was old and tortuous, with a moonless network of streets, creaking signs, antediluvian gables, and diamond-paned windows.",
+      "Cowled, cloaked figures poured from every doorway forming processions toward a great white church on a hill in the center of the town.",
+      "The town was invisible in the dark when viewed from the churchyard, though the harbor's stars could be glimpsed.",
+      "The narrator realized they had passed down through the mountain and beneath the earth of Kingsport itself."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 15,
+        "quote": "I had seen it from the road’s crest when I looked at Kingsport in the new dusk, and it had made me shiver because Aldebaran had seemed to balance itself a moment on the ghostly spire."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 14,
+        "quote": "We went out into the moonless and tortuous network of that incredibly ancient town"
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 18,
+        "quote": "I knew we must have passed down through the mountain and beneath the earth of Kingsport itself, and I shivered that a town should be so aged and maggoty with subterraneous evil."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the great white church",
+    "aliases": [
+      "the church",
+      "that swarming temple of unknown darkness"
+    ],
+    "facts": [
+      "It perched at the top of a high hill in the center of the town where all the travelers converged.",
+      "There was an open space around it, partly a churchyard with spectral shafts and partly a half-paved square with archaic houses.",
+      "Death-fires danced over the tombs near it, revealing gruesome vistas but casting no shadows.",
+      "The throng streamed into the black doorway of the church and up the aisle between high white pews to a trapdoor of the vaults just before the pulpit.",
+      "The vaults contained a tomb with an aperture leading down an ominous, narrow spiral staircase of rough-hewn stone into the bowels of the hill."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Kingsport",
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 15,
+        "quote": "where perched a great white church"
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 16,
+        "quote": "There was an open space around the church; partly a churchyard with spectral shafts, and partly a half-paved square swept nearly bare of snow by the wind, and lined with unwholesomely archaic houses having peaked roofs and overhanging gables. Death-fires danced over the tombs, revealing gruesome vistas, though queerly failing to cast any shadows."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 18,
+        "quote": "They had streamed up the aisle between the high white pews to the trapdoor of the vaults which yawned loathsomely open just before the pulpit, and were now squirming noiselessly in."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 18,
+        "quote": "in a moment we were all descending an ominous staircase of rough-hewn stone; a narrow spiral staircase damp and peculiarly odorous, that wound endlessly down into the bowels of the hill"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "the inner world",
+    "aliases": [
+      "that unhallowed Erebus",
+      "Stygian grotto"
+    ],
+    "facts": [
+      "It was a boundless vista revealed after the passage grew broader, described as a vast fungous shore.",
+      "It was lit by a belching column of sick greenish flame.",
+      "It was washed by a wide oily river flowing from unsuspected abysses to join the blackest gulfs of immemorial ocean.",
+      "The cloaked throngs formed a semicircle around the blazing pillar there to perform the Yule-rite.",
+      "A flaming column there cast no shadows, and coated the nitrous stone above with venomous verdigris, giving off no warmth, only clamminess of death and corruption."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "The Narrator",
+      "the old man"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 19,
+        "quote": "there spread out before me the boundless vista of an inner world—a vast fungous shore litten by a belching column of sick greenish flame and washed by a wide oily river that flowed from abysses frightful and unsuspected to join the blackest gulfs of immemorial ocean"
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 21,
+        "quote": "Fainting and gasping, I looked at that unhallowed Erebus of titan toadstools, leprous fire and slimy water, and saw the cloaked throngs forming a semicircle around the blazing pillar."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 21,
+        "quote": "But what frightened me most was that flaming column; spouting volcanically from depths profound and inconceivable, casting no shadows as healthy flame should, and coating the nitrous stone above with a nasty, venomous verdigris."
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "the thing",
+    "aliases": [
+      "something amorphously squatted",
+      "the half-seen flute-player"
+    ],
+    "facts": [
+      "It was squatted far away from the light, piping noisomely on a flute.",
+      "As it piped, the narrator thought he heard noxious muffled flutterings in the fetid darkness where he could not see.",
+      "It changed its feeble drone to a scarce louder drone in another key at the old man's signal, precipitating a horror unthinkable and unexpected."
+    ],
+    "typeGuess": "entity",
+    "relatedNames": [
+      "the old man",
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 21,
+        "quote": "I saw this, and I saw something amorphously squatted far away from the light, piping noisomely on a flute; and as the thing piped I thought I heard noxious muffled flutterings in the fetid darkness where I could not see."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 22,
+        "quote": "Then the old man made a signal to the half-seen flute-player in the darkness, which player thereupon changed its feeble drone to a scarce louder drone in another key; precipitating as it did so a horror unthinkable and unexpected."
+      }
+    ]
+  }
+]

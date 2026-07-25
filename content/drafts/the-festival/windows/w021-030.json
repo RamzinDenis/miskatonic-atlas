@@ -1,0 +1,338 @@
+[
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "He watched the cloaked throngs perform the Yule-rite around a pillar of flame.",
+      "He shared in the obeisances because he had been summoned to the festival by the writings of his forefathers.",
+      "He refused when the old man motioned him to seize an animal and ride like the rest.",
+      "He flung himself into the oily underground river rather than face the old man after the waxen mask fell.",
+      "He was found half-frozen in Kingsport Harbor at dawn, clinging to a drifting spar.",
+      "He was told he had taken the wrong fork of the hill road and fallen over the cliffs at Orange Point.",
+      "He went delirious at hearing the hospital stood near the old churchyard on Central Hill.",
+      "He was sent to St. Mary's Hospital in Arkham for better care.",
+      "The doctors lent him their influence in obtaining a copy of Alhazred's Necronomicon from the library of Miskatonic University.",
+      "The doctors diagnosed him with a psychosis and urged him to get his obsessions off his mind.",
+      "He read the hideous chapter again and recognized it as not new to him.",
+      "His dreams are filled with terror because of phrases he dare not quote."
+    ],
+    "typeGuess": "protagonist",
+    "fate": "Institutionalized at St. Mary's Hospital in Arkham for psychosis after his ordeal.",
+    "relatedNames": [
+      "The Old Man",
+      "Kingsport",
+      "Arkham",
+      "Necronomicon"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 22,
+        "quote": "I shared all the obeisances because I had been summoned to this festival by the writings of my forefathers."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 25,
+        "quote": "I flung myself into the oily underground river that bubbled somewhere to the caves of the sea"
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 27,
+        "quote": "At the hospital they told me I had been found half-frozen in Kingsport Harbor at dawn, clinging to the drifting spar that accident sent to save me."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 28,
+        "quote": "When I went delirious at hearing that the hospital stood near the old churchyard on Central Hill, they sent me to St. Mary’s Hospital in Arkham, where I could have better care."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 28,
+        "quote": "They said something about a “psychosis,” and agreed that I had better get my harassing obsessions off my mind."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "The old man",
+    "aliases": [
+      "The man who had brought me"
+    ],
+    "facts": [
+      "He squirmed to a point directly beside the flame and made stiff ceremonial motions to the semicircle.",
+      "He held above his head the abhorrent Necronomicon during the ritual.",
+      "He made a signal to the half-seen flute-player in the darkness.",
+      "He remained behind because the narrator refused to seize an animal and ride off.",
+      "He produced a stylus and tablet and wrote that he was the true deputy of the narrator's fathers who had founded the Yule worship in that place.",
+      "He wrote that it had been decreed the narrator should come back and that the most secret mysteries were yet to be performed.",
+      "He wrote this in a very ancient hand.",
+      "He pulled from his robe a seal ring and a watch, both bearing the narrator's family arms, as proof of his claim.",
+      "The narrator knew from old papers that the watch had been buried with his great-great-great-great-grandfather in 1698.",
+      "He drew back his hood and pointed to the family resemblance in his face.",
+      "The narrator believed the face was merely a devilish waxen mask.",
+      "When one of the flying things tried to escape he turned quickly to stop it, dislodging the waxen mask from what should have been his head."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "The Narrator",
+      "Necronomicon"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 22,
+        "quote": "The man who had brought me now squirmed to a point directly beside the hideous flame, and made stiff ceremonial motions to the semicircle he faced."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 24,
+        "quote": "the old man produced his stylus and tablet and wrote that he was the true deputy of my fathers who had founded the Yule worship in this ancient place"
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 24,
+        "quote": "he pulled from his loose robe a seal ring and a watch, both with my family arms, to prove that he was what he said. But it was a hideous proof, because I knew from old papers that that watch had been buried with my great-great-great-great-grandfather in 1698."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 25,
+        "quote": "the suddenness of his motion dislodged the waxen mask from what should have been his head"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "The old spinning woman",
+    "aliases": [],
+    "facts": [
+      "She had gone with the throng before the narrator staggered to his feet."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 24,
+        "quote": "The old spinning woman had gone with the throng, and the old man remained only because I had refused when he motioned me to seize an animal and ride like the rest."
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "hybrid winged things",
+    "aliases": [
+      "tame, trained, hybrid winged things",
+      "the flopping animals",
+      "the beasts"
+    ],
+    "facts": [
+      "They flopped rhythmically out of the blackness beyond the cold flame.",
+      "They were not altogether crows, nor moles, nor buzzards, nor ants, nor vampire bats, nor decomposed human beings.",
+      "They moved half with webbed feet and half with membranous wings.",
+      "The cowled celebrants seized and mounted them and rode off along the unlighted river into pits and galleries.",
+      "Two of the beasts remained standing by after the throng departed.",
+      "They scratched restlessly at the lichens and grew restless like the old man."
+    ],
+    "typeGuess": "entity",
+    "relatedNames": [
+      "The old man",
+      "The old spinning woman"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 23,
+        "quote": "there flopped rhythmically a horde of tame, trained, hybrid winged things that no sound eye could ever wholly grasp, or sound brain ever wholly remember"
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 23,
+        "quote": "They were not altogether crows, nor moles, nor buzzards, nor ants, nor vampire bats, nor decomposed human beings, but something I cannot and must not recall."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 24,
+        "quote": "I saw when I staggered to my feet that the amorphous flute-player had rolled out of sight, but that two of the beasts were patiently standing by."
+      }
+    ]
+  },
+  {
+    "kind": "creature",
+    "name": "amorphously squatted thing",
+    "aliases": [
+      "the flute-player",
+      "the amorphous flute-player"
+    ],
+    "facts": [
+      "It squatted far away from the light, piping noisomely on a flute.",
+      "As it piped, noxious muffled flutterings could be heard in the fetid darkness.",
+      "It changed its feeble drone to a scarce louder drone in another key at the old man's signal, precipitating an unthinkable horror.",
+      "It had rolled out of sight by the time the narrator staggered to his feet."
+    ],
+    "typeGuess": "entity",
+    "relatedNames": [
+      "The old man"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 21,
+        "quote": "I saw something amorphously squatted far away from the light, piping noisomely on a flute"
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 22,
+        "quote": "the old man made a signal to the half-seen flute-player in the darkness, which player thereupon changed its feeble drone to a scarce louder drone in another key; precipitating as it did so a horror unthinkable and unexpected"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Kingsport",
+    "aliases": [
+      "Kingsport Harbor"
+    ],
+    "facts": [
+      "The narrator was found half-frozen in Kingsport Harbor at dawn, clinging to a drifting spar.",
+      "He was told he had fallen over the cliffs at Orange Point, deduced from footprints in the snow.",
+      "The hospital there had a broad window showing a sea of roofs, only about one in five ancient, with trolleys and motors in the streets below.",
+      "The hospital stood near the old churchyard on Central Hill.",
+      "The narrator's insistence that everything was wrong contrasted with their insistence that this was Kingsport."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 27,
+        "quote": "At the hospital they told me I had been found half-frozen in Kingsport Harbor at dawn, clinging to the drifting spar that accident sent to save me."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 27,
+        "quote": "They told me I had taken the wrong fork of the hill road the night before, and fallen over the cliffs at Orange Point—a thing they deducted from prints found in the snow."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 27,
+        "quote": "They insisted that this was Kingsport, and I could not deny it."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 28,
+        "quote": "When I went delirious at hearing that the hospital stood near the old churchyard on Central Hill"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Orange Point",
+    "aliases": [],
+    "facts": [
+      "The narrator was said to have fallen over the cliffs at Orange Point."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Kingsport"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 27,
+        "quote": "They told me I had taken the wrong fork of the hill road the night before, and fallen over the cliffs at Orange Point—a thing they deducted from prints found in the snow."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Central Hill",
+    "aliases": [
+      "the old churchyard on Central Hill"
+    ],
+    "facts": [
+      "The hospital in Kingsport stood near the old churchyard on Central Hill."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Kingsport"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 28,
+        "quote": "When I went delirious at hearing that the hospital stood near the old churchyard on Central Hill, they sent me to St. Mary’s Hospital in Arkham, where I could have better care."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "St. Mary's Hospital",
+    "aliases": [],
+    "facts": [
+      "It is located in Arkham.",
+      "The narrator was sent there for better care after going delirious.",
+      "The doctors there were broadminded and lent their influence to obtain the Necronomicon for him."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Arkham",
+      "The Narrator",
+      "Necronomicon"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 28,
+        "quote": "they sent me to St. Mary’s Hospital in Arkham, where I could have better care"
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 28,
+        "quote": "I liked it there, for the doctors were broadminded, and even lent me their influence in obtaining the carefully sheltered copy of Alhazred’s objectionable “Necronomicon” from the library of Miskatonic University."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Arkham",
+    "aliases": [],
+    "facts": [
+      "St. Mary's Hospital, where the narrator was sent for better care, is in Arkham.",
+      "Miskatonic University's library, from which the Necronomicon was obtained, is presumably associated with Arkham."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "St. Mary's Hospital",
+      "Miskatonic University"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 28,
+        "quote": "they sent me to St. Mary’s Hospital in Arkham, where I could have better care"
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Miskatonic University",
+    "aliases": [],
+    "facts": [
+      "It has a library from which a carefully sheltered copy of the Necronomicon was obtained."
+    ],
+    "typeGuess": "building",
+    "relatedNames": [
+      "Arkham"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 28,
+        "quote": "even lent me their influence in obtaining the carefully sheltered copy of Alhazred’s objectionable “Necronomicon” from the library of Miskatonic University"
+      }
+    ]
+  }
+]

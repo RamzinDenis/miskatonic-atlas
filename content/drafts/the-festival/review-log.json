@@ -1,0 +1,48 @@
+{
+  "decisions": {
+    "locations/arkham": {
+      "verdict": "as-is",
+      "at": "2026-07-25T09:36:46.257Z"
+    },
+    "locations/kingsport": {
+      "verdict": "as-is",
+      "at": "2026-07-25T09:36:50.571Z"
+    },
+    "locations/miskatonic-university": {
+      "verdict": "as-is",
+      "at": "2026-07-25T09:36:52.530Z"
+    },
+    "locations/st-marys-hospital": {
+      "verdict": "as-is",
+      "at": "2026-07-25T09:36:55.606Z"
+    },
+    "locations/the-great-white-church": {
+      "verdict": "as-is",
+      "at": "2026-07-25T09:36:57.410Z"
+    },
+    "locations/the-inner-world": {
+      "verdict": "as-is",
+      "at": "2026-07-25T09:37:00.136Z"
+    },
+    "characters/the-narrator-of-the-festival": {
+      "verdict": "as-is",
+      "at": "2026-07-25T09:37:06.341Z"
+    },
+    "characters/the-old-man-of-the-festival": {
+      "verdict": "as-is",
+      "at": "2026-07-25T09:37:08.419Z"
+    },
+    "characters/the-old-woman-of-the-festival": {
+      "verdict": "as-is",
+      "at": "2026-07-25T09:37:10.130Z"
+    },
+    "creatures/amorphous-flute-player": {
+      "verdict": "as-is",
+      "at": "2026-07-25T09:37:16.318Z"
+    },
+    "creatures/hybrid-winged-things": {
+      "verdict": "as-is",
+      "at": "2026-07-25T09:37:17.802Z"
+    }
+  }
+}

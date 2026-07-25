@@ -1,0 +1,35 @@
+{
+  "slug": "the-narrator-of-the-festival",
+  "name": "The Narrator (The Festival)",
+  "role": "protagonist",
+  "summary": "An unnamed man travels to ancestral Kingsport to keep a centuries-old Yuletide festival, witnessing a subterranean rite of cloaked cultists and monstrous beasts before fleeing in horror. He is later found half-drowned in the harbor and hospitalized for psychosis in Arkham.",
+  "description": "The narrator was a descendant of the dark, furtive folk who had settled Kingsport generations before New England itself, drawn back by an ancestral summons to keep the centennial festival his people had performed since ancient times so that memory of primal secrets would not be forgotten. Though he had never seen the town, he recognized it from old maps and found the seventh house on Green Lane, built before 1650, that had belonged to his family.\n\nAdmitted by a bland-faced, dumb old man and left to wait in a candlelit room with a silently spinning old woman, he read from a pile of moldy books, including a Latin Necronomicon, before being led at eleven o'clock through the frozen streets and down through a trapdoor beneath the town's Great White Church into caverns under Kingsport itself. There he witnessed a Yule-rite performed around a pillar of flame by a cloaked throng astride hybrid winged beasts, and shared in its obeisances as one summoned by his forefathers' writings, until a horror at the flute-player's changed drone and the sight of the old man's dislodged waxen mask sent him fleeing into an underground river.\n\nHe was found half-frozen in Kingsport Harbor at dawn clinging to a drifting spar, told he had fallen from the cliffs at Orange Point, and, growing delirious upon learning the hospital stood near the old churchyard on Central Hill, was transferred to St. Mary's Hospital in Arkham, where doctors diagnosed a psychosis and obtained him a copy of the Necronomicon from Miskatonic University's library to face down his obsessions.",
+  "locations": [
+    "kingsport",
+    "kingsport/the-great-white-church",
+    "arkham",
+    "arkham/st-marys-hospital",
+    "arkham/miskatonic-university"
+  ],
+  "appearsIn": [
+    "the-festival"
+  ],
+  "fate": "Institutionalized at St. Mary's Hospital in Arkham for psychosis after his ordeal.",
+  "sources": [
+    {
+      "storySlug": "the-festival",
+      "paragraph": 2,
+      "quote": "I was far from home, and the spell of the eastern sea was upon me."
+    },
+    {
+      "storySlug": "the-festival",
+      "paragraph": 18,
+      "quote": "I knew we must have passed down through the mountain and beneath the earth of Kingsport itself, and I shivered that a town should be so aged and maggoty with subterraneous evil."
+    },
+    {
+      "storySlug": "the-festival",
+      "paragraph": 28,
+      "quote": "When I went delirious at hearing that the hospital stood near the old churchyard on Central Hill, they sent me to St. Mary’s Hospital in Arkham, where I could have better care."
+    }
+  ]
+}

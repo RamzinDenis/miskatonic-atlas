@@ -1,0 +1,35 @@
+{
+  "slug": "kingsport",
+  "name": "Kingsport",
+  "type": "town",
+  "summary": "Kingsport is the narrator's ancestral, dream-haunted seaport town in New England, where his family returns once a century to keep an ancient, once-forbidden festival, and from whose frozen harbor he was later pulled half-drowned after a night of horrors beneath the town.",
+  "description": "Kingsport is an ancient seaport town that the narrator had never seen in waking life but had often dreamed of; his people dwelt there in elder days and kept the festival when it was forbidden, commanding their descendants to return and observe it once every century, having themselves come as dark, furtive folk from southern gardens before learning the tongue of the blue-eyed fishers who lived there. Seen from the crest of the hill road in the winter dusk, the town spreads out frostily with ancient vanes, steeples, ridgepoles, chimneypots, wharves, small bridges, willow trees, and graveyards, its endless labyrinth of steep, narrow, crooked streets climbing to a dizzy, church-crowned central peak, and its ceaseless maze of colonial houses piled and scattered at all angles like a child's disordered blocks, while the sea pounds against its rotting wharves. On a bleak, windswept summit beside the road at the hill's crest lies a burying-ground where black gravestones stick through the snow; four of the narrator's own kinsmen were hanged there for witchcraft in 1692. The town's old Puritan folk keep Christmas customs, and its streets — Back Street, Circle Court, Green Lane, and the square before the Market House — are lined with houses whose high doors are reached by double flights of steps with iron railings, and which have no sidewalks.\n\n## Green Lane\n\nGreen Lane leads off behind the Market House, its one full flagstone pavement crossed by the narrator on his way home. The narrator's ancestral house stands seventh on the left, its ancient peaked roof and jutting second story built before 1650; the street itself is narrow and grass-grown, and the overhanging upper story of the house nearly meets the overhanging house opposite, so that passage beneath is almost like walking through a tunnel.\n\nOn the appointed festival night, cowled and cloaked figures poured from every doorway in Kingsport's moonless, tortuous network of streets — a town of creaking signs, antediluvian gables, and diamond-paned windows — forming processions that converged on the great white church crowning the central hill; the narrator followed them down through the mountain and beneath the earth of Kingsport itself, marveling that a town could be so aged and maggoty with subterraneous evil. He was later found half-frozen in Kingsport Harbor at dawn, clinging to a drifting spar, and was told he had taken the wrong fork of the hill road and fallen from the cliffs at Orange Point, as footprints in the snow seemed to show. The hospital where he recovered stood near the old churchyard on Central Hill and offered a view of a sea of roofs, only about one in five truly ancient, with trolleys and motors running in the streets below — a modernity that clashed with all he insisted he had seen; when he went delirious at the news of where he lay, he was sent on to St. Mary's Hospital in Arkham for better care.",
+  "map": {
+    "mapId": "new-england",
+    "x": 1040,
+    "y": 780
+  },
+  "appearsIn": [
+    "the-festival"
+  ],
+  "connectedTo": [
+    "arkham"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-festival",
+      "paragraph": 4,
+      "quote": "Then beyond the hill’s crest I saw Kingsport outspread frostily in the gloaming; snowy Kingsport with its ancient vanes and steeples, ridgepoles and chimneypots, wharves and small bridges, willow trees and graveyards; endless labyrinths of steep, narrow, crooked streets, and dizzy church-crowned central peak that time durst not touch"
+    },
+    {
+      "storySlug": "the-festival",
+      "paragraph": 5,
+      "quote": "Beside the road at its crest a still higher summit rose, bleak and windswept, and I saw that it was a burying-ground where black gravestones stuck ghoulishly through the snow like the decayed fingernails of a gigantic corpse."
+    },
+    {
+      "storySlug": "the-festival",
+      "paragraph": 27,
+      "quote": "At the hospital they told me I had been found half-frozen in Kingsport Harbor at dawn, clinging to the drifting spar that accident sent to save me."
+    }
+  ]
+}

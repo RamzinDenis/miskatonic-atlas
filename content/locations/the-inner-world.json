@@ -1,0 +1,30 @@
+{
+  "slug": "the-inner-world",
+  "name": "the Inner World",
+  "type": "region",
+  "summary": "A vast subterranean realm beneath Kingsport, reached by a spiral staircase from the great white church's vaults, where a fungous shore is lit by a shadowless column of sickly green flame beside an oily river flowing to the sea, and where the cloaked townsfolk gather each century to perform their forbidden Yule-rite.",
+  "description": "Beyond the vaults beneath the great white church, the narrow stone staircase opens onto the boundless vista of an inner world: a vast fungous shore lit by a belching column of sick greenish flame and washed by a wide, oily river that flows from unsuspected abysses to join the blackest gulfs of immemorial ocean. Titan toadstools, leprous fire, and slimy water compose an unhallowed Erebus in which the cloaked throngs form a semicircle around the blazing pillar to perform their Yule-rite.\n\nThe flaming column itself spouts volcanically from depths profound and inconceivable, casting no shadows as healthy flame should, and coating the nitrous stone above it with a nasty, venomous verdigris; it gives off no warmth, only the clamminess of death and corruption.",
+  "appearsIn": [
+    "the-festival"
+  ],
+  "connectedTo": [
+    "kingsport/the-great-white-church"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-festival",
+      "paragraph": 19,
+      "quote": "there spread out before me the boundless vista of an inner world—a vast fungous shore litten by a belching column of sick greenish flame and washed by a wide oily river that flowed from abysses frightful and unsuspected to join the blackest gulfs of immemorial ocean"
+    },
+    {
+      "storySlug": "the-festival",
+      "paragraph": 21,
+      "quote": "But what frightened me most was that flaming column; spouting volcanically from depths profound and inconceivable, casting no shadows as healthy flame should, and coating the nitrous stone above with a nasty, venomous verdigris."
+    }
+  ],
+  "map": {
+    "mapId": "new-england",
+    "x": 1130,
+    "y": 758
+  }
+}

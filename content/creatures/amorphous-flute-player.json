@@ -1,0 +1,26 @@
+{
+  "slug": "amorphous-flute-player",
+  "name": "The Amorphous Flute-Player",
+  "classification": "entity",
+  "summary": "A shapeless, flute-piping entity that provides the music for the underground Yule-rite beneath Kingsport, its change of key triggering an unspeakable horror.",
+  "description": "An amorphous shape squatted in the darkness beyond the ring of cold flame during the underground Yule-rite beneath Kingsport, piping noisomely on a flute whose noxious muffled flutterings answered from the fetid dark where nothing could be clearly seen.\n\nAt a signal from the old man who led the rite, the thing shifted its feeble drone into another key, precipitating a horror unthinkable and unexpected that transfixed the narrator with a dread not of this world. By the time the narrator staggered back to his feet, the amorphous flute-player had rolled out of sight, leaving only two of its patient winged beasts standing by.",
+  "locations": [
+    "kingsport/the-great-white-church",
+    "kingsport"
+  ],
+  "appearsIn": [
+    "the-festival"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-festival",
+      "paragraph": 21,
+      "quote": "I saw something amorphously squatted far away from the light, piping noisomely on a flute; and as the thing piped I thought I heard noxious muffled flutterings in the fetid darkness where I could not see."
+    },
+    {
+      "storySlug": "the-festival",
+      "paragraph": 22,
+      "quote": "the old man made a signal to the half-seen flute-player in the darkness, which player thereupon changed its feeble drone to a scarce louder drone in another key; precipitating as it did so a horror unthinkable and unexpected"
+    }
+  ]
+}

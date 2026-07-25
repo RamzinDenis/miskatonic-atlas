@@ -1,0 +1,31 @@
+{
+  "slug": "the-old-woman-of-the-festival",
+  "name": "The Old Woman (The Festival)",
+  "role": "cultist",
+  "summary": "A silent, cloaked old woman who spins endlessly in the ancestral house before joining the old man and the narrator in Kingsport's subterranean Yule-rite.",
+  "description": "A bent old woman found silently spinning at a wheel in the candlelit house on Green Lane, dressed in a loose wrapper and deep poke-bonnet, who never spoke to the narrator during his wait there.\n\nAt eleven o'clock the old man draped a hooded cloak about her, ending her monotonous spinning, and she went before the narrator toward the Great White Church, described as lamely creeping through the streets. She took part in the underground Yule-rite and had already departed with the mounted throng by the time the narrator staggered to his feet after the ritual's horror.",
+  "locations": [
+    "kingsport",
+    "kingsport/the-great-white-church"
+  ],
+  "appearsIn": [
+    "the-festival"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-festival",
+      "paragraph": 11,
+      "quote": "a bent old woman in loose wrapper and deep poke-bonnet sat back toward me, silently spinning despite the festive season"
+    },
+    {
+      "storySlug": "the-festival",
+      "paragraph": 13,
+      "quote": "the other of which he draped round the old woman, who was ceasing her monotonous spinning"
+    },
+    {
+      "storySlug": "the-festival",
+      "paragraph": 24,
+      "quote": "The old spinning woman had gone with the throng, and the old man remained only because I had refused when he motioned me to seize an animal and ride like the rest."
+    }
+  ]
+}

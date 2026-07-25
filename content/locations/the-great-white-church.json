@@ -1,0 +1,36 @@
+{
+  "slug": "the-great-white-church",
+  "name": "the Great White Church",
+  "parentSlug": "kingsport",
+  "type": "building",
+  "summary": "A spectral white church crowning the central hill of Kingsport, the gathering point for cowled townsfolk on the night of the festival, whose vaults concealed a spiral staircase descending into a hidden inner world.",
+  "description": "The great white church perches atop a high hill in the center of Kingsport, where all the cowled and cloaked figures of the festival night converge. Around it lies an open space, part churchyard studded with spectral shafts, part half-paved square swept nearly bare of snow and lined with archaic, peak-roofed houses with overhanging gables; death-fires dance over the nearby tombs, revealing gruesome vistas while queerly casting no shadows.\n\nThe throng streams through the church's black doorway and up the aisle between high white pews to a trapdoor in the vaults that yawns open just before the pulpit, squirming down into it one by one. Beyond the trapdoor a tomb opens onto an ominous, narrow spiral staircase of rough-hewn stone, damp and peculiarly odorous, that winds endlessly down through the vaults into the bowels of the hill and, as the narrator discovered, beneath Kingsport itself into a hidden inner world.",
+  "map": {
+    "mapId": "new-england",
+    "x": 1085,
+    "y": 712
+  },
+  "appearsIn": [
+    "the-festival"
+  ],
+  "connectedTo": [
+    "the-inner-world"
+  ],
+  "sources": [
+    {
+      "storySlug": "the-festival",
+      "paragraph": 16,
+      "quote": "There was an open space around the church; partly a churchyard with spectral shafts, and partly a half-paved square swept nearly bare of snow by the wind, and lined with unwholesomely archaic houses having peaked roofs and overhanging gables. Death-fires danced over the tombs, revealing gruesome vistas, though queerly failing to cast any shadows."
+    },
+    {
+      "storySlug": "the-festival",
+      "paragraph": 18,
+      "quote": "They had streamed up the aisle between the high white pews to the trapdoor of the vaults which yawned loathsomely open just before the pulpit, and were now squirming noiselessly in."
+    },
+    {
+      "storySlug": "the-festival",
+      "paragraph": 18,
+      "quote": "in a moment we were all descending an ominous staircase of rough-hewn stone; a narrow spiral staircase damp and peculiarly odorous, that wound endlessly down into the bowels of the hill"
+    }
+  ]
+}

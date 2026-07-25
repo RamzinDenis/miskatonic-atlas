@@ -2,10 +2,16 @@
   "slug": "arkham",
   "name": "Arkham",
   "type": "town",
-  "summary": "The city home to Miskatonic University, from which Dr. Henry Armitage, Professor Rice, and Dr. Morgan set out to confront the Dunwich horror; also the city Wilbur Whateley visited in his quest for the Necronomicon.",
-  "description": "Wilbur Whateley, who had never seen a city before, appeared one day in Arkham in quest of the dreaded Necronomicon kept under lock and key at the Miskatonic University library, passing heedlessly by a great white-fanged watchdog on the university grounds. Years later a scream rang out in Arkham that roused half its sleepers and haunted their dreams ever afterward, while a quieter but no less poignant phase of the horror unwound behind the closed door of a shelf-lined room where Wilbur's manuscript diary was studied.\n\nA facetious item in the Arkham Advertiser joked about the 'record-breaking monster' the bootleg whisky of Dunwich had supposedly raised up, not knowing how near the truth lay. When the horror broke loose, Earl Sawyer suggested that help be asked from Aylesbury or Arkham, and it was three men from Arkham — Dr. Armitage, Professor Rice, and Dr. Morgan — who at last motored out to Dunwich and, without telling the frightened natives what to expect, climbed Sentinel Hill to end the terror.",
+  "summary": "The city home to Miskatonic University, from which Dr. Henry Armitage, Professor Rice, and Dr. Morgan set out to confront the Dunwich horror; also the city Wilbur Whateley visited in his quest for the Necronomicon, and the location of St. Mary's Hospital where the narrator of the Kingsport festival was sent for care.",
+  "description": "Wilbur Whateley, who had never seen a city before, appeared one day in Arkham in quest of the dreaded Necronomicon kept under lock and key at the Miskatonic University library, passing heedlessly by a great white-fanged watchdog on the university grounds. Years later a scream rang out in Arkham that roused half its sleepers and haunted their dreams ever afterward, while a quieter but no less poignant phase of the horror unwound behind the closed door of a shelf-lined room where Wilbur's manuscript diary was studied.\n\nA facetious item in the Arkham Advertiser joked about the 'record-breaking monster' the bootleg whisky of Dunwich had supposedly raised up, not knowing how near the truth lay. When the horror broke loose, Earl Sawyer suggested that help be asked from Aylesbury or Arkham, and it was three men from Arkham — Dr. Armitage, Professor Rice, and Dr. Morgan — who at last motored out to Dunwich and, without telling the frightened natives what to expect, climbed Sentinel Hill to end the terror.\n\nArkham was also home to St. Mary's Hospital, where a delirious young man was sent for better care after a harrowing night in Kingsport; there broadminded doctors lent their influence toward obtaining for him the carefully sheltered copy of the Necronomicon kept in the library of Miskatonic University.",
+  "map": {
+    "mapId": "new-england",
+    "x": 738,
+    "y": 658
+  },
   "appearsIn": [
-    "the-dunwich-horror"
+    "the-dunwich-horror",
+    "the-festival"
   ],
   "connectedTo": [
     "dunwich",
@@ -29,11 +35,11 @@
       "paragraph": 93,
       "quote": "Friday morning Armitage, Rice and Morgan set out by motor for Dunwich, arriving at the village about 1 in the afternoon.",
       "context": "Chapter 9"
+    },
+    {
+      "storySlug": "the-festival",
+      "paragraph": 28,
+      "quote": "they sent me to St. Mary’s Hospital in Arkham, where I could have better care"
     }
-  ],
-  "map": {
-    "mapId": "new-england",
-    "x": 738,
-    "y": 658
-  }
+  ]
 }

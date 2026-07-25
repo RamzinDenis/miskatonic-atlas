@@ -1,0 +1,207 @@
+[
+  {
+    "kind": "character",
+    "name": "The Narrator",
+    "aliases": [],
+    "facts": [
+      "He was far from home and felt drawn by the spell of the eastern sea.",
+      "His fathers had called him to the old town beyond the hill.",
+      "He traveled through shallow, new-fallen snow toward the ancient town he had never seen but often dreamed of.",
+      "He came at the Yuletide (Christmas) to the ancient sea town where his people had dwelt and kept festival in the elder time.",
+      "His people commanded their sons to keep festival once every century so that memory of primal secrets not be forgotten.",
+      "His people were old, older than the land's settlement three hundred years before.",
+      "His people were dark, furtive folk who came from opiate southern gardens of orchids and spoke another tongue before learning the tongue of the blue-eyed fishers.",
+      "He was the only one who came back that night to the old fishing town as legend bade, for only the poor and the lonely remember.",
+      "He had four kinsmen hanged for witchcraft in 1692, though he did not know where.",
+      "He had seen maps of the town and knew where to find the home of his people.",
+      "He was told he should be known and welcomed in the town, for village legend lives long.",
+      "He walked through Back Street to Circle Court, across the one full flagstone pavement, to Green Lane behind the Market House.",
+      "He sought the seventh house on the left in Green Lane, built before 1650, home of his people.",
+      "He was strange to New England and had never known such a scene before.",
+      "He felt fear gathering in him because of the strangeness of his heritage, the bleakness of the evening, and the queerness of the silence in the town.",
+      "He was afraid when his knock was answered because he had not heard footsteps before the door creaked open.",
+      "He was reassured at first by the bland face of the old man who answered the door.",
+      "He was let into a low, candlelit room with seventeenth-century furniture.",
+      "He grew more afraid the more he looked at the old man's bland face, suspecting it was a mask.",
+      "He was told by the old man's written note that he must wait before being led to the place of festival.",
+      "He sat down to read from a pile of hoary, moldy books left by the old man, including the Necronomicon in Olaus Wormius' Latin translation, which he had never seen before but had heard monstrous things whispered of."
+    ],
+    "typeGuess": "protagonist",
+    "relatedNames": [
+      "Kingsport"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 2,
+        "quote": "I was far from home, and the spell of the eastern sea was upon me."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 3,
+        "quote": "I was the only one who came back that night to the old fishing town as legend bade, for only the poor and the lonely remember."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 5,
+        "quote": "They had hanged four kinsmen of mine for witchcraft in 1692, but I did not know just where."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 7,
+        "quote": "I hastened through Back Street to Circle Court, and across the fresh snow on the one full flagstone pavement in the town, to where Green Lane leads off behind the Market House."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 10,
+        "quote": "When I sounded the archaic iron knocker I was half afraid."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 12,
+        "quote": "the unmentionable “Necronomicon” of the mad Arab Abdul Alhazred, in Olaus Wormius’ forbidden Latin translation: a book which I had never seen, but of which I had heard monstrous things whispered."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Kingsport",
+    "aliases": [
+      "the old town",
+      "the ancient sea town",
+      "the old fishing town",
+      "aged town"
+    ],
+    "facts": [
+      "It is a very ancient town the narrator had never seen but often dreamed of.",
+      "The narrator's people dwelt there and kept festival in the elder time when festival was forbidden.",
+      "His people commanded their sons to keep festival once every century there.",
+      "The narrator's people had come as dark, furtive folk from southern gardens before learning the tongue of the blue-eyed fishers who lived there.",
+      "Kingsport is outspread frostily with ancient vanes, steeples, ridgepoles, chimneypots, wharves, small bridges, willow trees, and graveyards.",
+      "It has endless labyrinths of steep, narrow, crooked streets and a dizzy church-crowned central peak.",
+      "It has ceaseless mazes of colonial houses piled and scattered at all angles like a child's disordered blocks.",
+      "The sea pounds against its rotting wharves.",
+      "A burying-ground with black gravestones lies on a bleak, windswept summit beside the road at the hill's crest.",
+      "Four of the narrator's kinsmen were hanged there for witchcraft in 1692.",
+      "The town has old Puritan folk with Christmas customs.",
+      "It has streets including Back Street, Circle Court, Green Lane, and a Market House.",
+      "Green Lane has one full flagstone pavement leading off behind the Market House.",
+      "Houses in the town have high doors reached by double flights of steps with iron railings, with no sidewalks."
+    ],
+    "typeGuess": "town",
+    "relatedNames": [
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 4,
+        "quote": "Then beyond the hill’s crest I saw Kingsport outspread frostily in the gloaming; snowy Kingsport with its ancient vanes and steeples, ridgepoles and chimneypots, wharves and small bridges, willow trees and graveyards; endless labyrinths of steep, narrow, crooked streets, and dizzy church-crowned central peak that time durst not touch"
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 5,
+        "quote": "Beside the road at its crest a still higher summit rose, bleak and windswept, and I saw that it was a burying-ground where black gravestones stuck ghoulishly through the snow like the decayed fingernails of a gigantic corpse."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 7,
+        "quote": "I hastened through Back Street to Circle Court, and across the fresh snow on the one full flagstone pavement in the town, to where Green Lane leads off behind the Market House."
+      }
+    ]
+  },
+  {
+    "kind": "location",
+    "name": "Green Lane",
+    "aliases": [],
+    "facts": [
+      "It leads off behind the Market House.",
+      "The narrator's people's home is the seventh house on the left in Green Lane.",
+      "The house there has an ancient peaked roof and jutting second story, all built before 1650.",
+      "The street is narrow and grass-grown, with the upper part of the house overhanging it and nearly meeting the house opposite."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "Kingsport",
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 7,
+        "quote": "I was eager to knock at the door of my people, the seventh house on the left in Green Lane, with an ancient peaked roof and jutting second story, all built before 1650."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 8,
+        "quote": "The upper part overhung the narrow, grass-grown street and nearly met the overhanging part of the house opposite, so that I was almost in a tunnel, with the low stone doorstep wholly free from snow."
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "the old man",
+    "aliases": [],
+    "facts": [
+      "He was gowned and slippered, answering the door of the house in Green Lane.",
+      "He had a bland face that at first reassured the narrator.",
+      "He was dumb and communicated by writing with a stylus and wax tablet.",
+      "He wrote a quaint and ancient welcome to the narrator.",
+      "His face's blandness increasingly terrified the narrator, whose eyes never moved and skin seemed too like wax, until the narrator was sure it was not a face at all but a fiendishly cunning mask.",
+      "His hands were flabby and curiously gloved.",
+      "He wrote that the narrator must wait a while before being led to the place of festival.",
+      "He beckoned the narrator into a low, candlelit room with seventeenth-century furniture.",
+      "He left the room after pointing the narrator to a chair, table, and pile of books."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 10,
+        "quote": "the gowned, slippered old man in the doorway had a bland face that reassured me; and though he made signs that he was dumb, he wrote a quaint and ancient welcome with the stylus and wax tablet he carried."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 11,
+        "quote": "Finally I was sure it was not a face at all, but a fiendishly cunning mask."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 12,
+        "quote": "Pointing to a chair, table, and pile of books, the old man now left, the room"
+      }
+    ]
+  },
+  {
+    "kind": "character",
+    "name": "the bonneted old woman",
+    "aliases": [
+      "a bent old woman"
+    ],
+    "facts": [
+      "She sat back toward the narrator at a spinning-wheel in the candlelit room.",
+      "She wore a loose wrapper and deep poke-bonnet.",
+      "She was silently spinning despite the festive season.",
+      "She continued her silent spinning throughout the narrator's time in the room, without speaking to him."
+    ],
+    "typeGuess": "other",
+    "relatedNames": [
+      "The Narrator"
+    ],
+    "sources": [
+      {
+        "storySlug": "the-festival",
+        "paragraph": 11,
+        "quote": "There was a cavernous fireplace and a spinning-wheel at which a bent old woman in loose wrapper and deep poke-bonnet sat back toward me, silently spinning despite the festive season."
+      },
+      {
+        "storySlug": "the-festival",
+        "paragraph": 12,
+        "quote": "No one spoke to me, but I could hear the creaking of signs in the wind outside, and the whir of the wheel as the bonneted old woman continued her silent spinning, spinning."
+      }
+    ]
+  }
+]
