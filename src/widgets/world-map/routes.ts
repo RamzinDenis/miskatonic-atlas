@@ -190,6 +190,11 @@ const WORLD_ROUTE_LEGS: RouteLeg[] = [
  * vessels, same inks, same quotes: a reader crossing between sheets meets
  * one voyage, drawn at two scales.
  */
+/* The drawn R'lyeh is a pictorial giant (rocks and breaking foam spanning
+   roughly x 710–1215, y 520–980 of the sheet): every track below treats it
+   as a coastline — legs end at the waterline south-west of the citadel
+   (Johansen's mud-bank landing) and the tow passes through the open-water
+   corridor north of the island, never across the rocks. */
 const PACIFIC_ROUTE_LEGS: RouteLeg[] = [
   {
     ...WORLD_ROUTE_LEGS[0],
@@ -197,39 +202,39 @@ const PACIFIC_ROUTE_LEGS: RouteLeg[] = [
       "Schooner Emma of Auckland, bound for Callao — thrown widely south of her course by the great storm of March 1st, to the encounter at 49° 51′ S, 128° 34′ W.",
     points: [
       { x: 495, y: 775 },
-      { x: 700, y: 660 },
-      { x: 850, y: 680 },
-      { x: 955, y: 800 },
+      { x: 640, y: 680 },
+      { x: 730, y: 770 },
+      { x: 790, y: 865 },
     ],
     labelSegment: 0,
     fixes: [
       { x: 495, y: 775, label: "Feb. 20", dx: 20, dy: 18 },
-      { x: 955, y: 800, label: "Mch. 22", dx: -34, dy: 14 },
+      { x: 790, y: 865, label: "Mch. 22", dx: -36, dy: 12 },
     ],
   },
   {
     ...WORLD_ROUTE_LEGS[1],
     points: [
-      { x: 955, y: 800 },
-      { x: 995, y: 710 },
+      { x: 790, y: 865 },
+      { x: 840, y: 820 },
     ],
     labelSegment: 0,
     fixes: [
-      { x: 995, y: 710, label: "Mch. 23", dx: 34, dy: 14 },
+      { x: 840, y: 820, label: "Mch. 23", dx: -40, dy: -14 },
     ],
   },
   {
     ...WORLD_ROUTE_LEGS[2],
     points: [
-      { x: 995, y: 710 },
-      { x: 935, y: 650 },
-      { x: 880, y: 575 },
-      { x: 815, y: 520 },
-      { x: 760, y: 470 },
+      { x: 840, y: 820 },
+      { x: 760, y: 790 },
+      { x: 700, y: 700 },
+      { x: 670, y: 590 },
+      { x: 650, y: 480 },
     ],
     labelSegment: 2,
     fixes: [
-      { x: 760, y: 470, label: "Apr. 12", dx: 2, dy: -18 },
+      { x: 650, y: 480, label: "Apr. 12", dx: 4, dy: -18 },
     ],
   },
   {
@@ -238,10 +243,10 @@ const PACIFIC_ROUTE_LEGS: RouteLeg[] = [
       "Freighter Vigilant out of Valparaiso, driven south of her course by the storm of April 2nd — the derelict taken in tow to Darling Harbour, Sydney.",
     points: [
       { x: 1340, y: 720 },
-      { x: 1120, y: 790 },
-      { x: 900, y: 590 },
-      { x: 760, y: 470 },
-      { x: 470, y: 460 },
+      { x: 1230, y: 560 },
+      { x: 1000, y: 470 },
+      { x: 650, y: 480 },
+      { x: 420, y: 490 },
       { x: 200, y: 555 },
     ],
     labelSegment: 1,
