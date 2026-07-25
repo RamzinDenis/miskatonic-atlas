@@ -97,10 +97,17 @@ export default async function LocationPage({ params }: PageProps<"/locations/[sl
 
   const children = getChildLocations(location.slug);
   const appearsIn = location.appearsIn.flatMap((s) => getStory(s) ?? []);
+  // Back to the sheet this place is charted on — an unplaced parent borrows
+  // its first placed child's; only a theatre-less location falls back to the
+  // front chart.
+  const homeChart = location.map ?? children.find((child) => child.map)?.map;
 
   return (
     <div className="mx-auto w-full max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
-      <Link href="/" className="text-sm text-muted transition-colors hover:text-accent">
+      <Link
+        href={homeChart ? chartPath(homeChart.mapId) : "/"}
+        className="text-sm text-muted transition-colors hover:text-accent"
+      >
         ← Map
       </Link>
 

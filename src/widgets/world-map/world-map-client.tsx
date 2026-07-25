@@ -688,7 +688,7 @@ export default function WorldMapClient({
                   chart.markerStyle === "annotation" &&
                   selected?.slug === location.slug
                 ) {
-                  router.push(`/locations/${location.slug}`);
+                  router.push(location.href);
                   return;
                 }
                 setSelectedLeg(null);
@@ -1035,7 +1035,7 @@ export default function WorldMapClient({
             </p>
           )}
           <Link
-            href={`/locations/${selected.slug}`}
+            href={selected.href}
             className="mt-4 inline-block text-sm italic text-accent transition-colors hover:text-foreground"
           >
             Open location →

@@ -28,6 +28,9 @@ export interface MapFigure {
 /** A location as the map widget needs it — plain and serializable. */
 export interface MapLocation extends PixelPoint {
   slug: string;
+  /** Page of the location: its own route, or its section of the parent's
+      page for a sub-location (ADR-0003 — children have no routes). */
+  href: string;
   name: string;
   type: string;
   summary: string;

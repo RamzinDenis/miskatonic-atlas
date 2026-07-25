@@ -302,6 +302,9 @@ function toMapLocation(content: AtlasContent, mapId: string) {
     return [
       {
         slug: location.slug,
+        href: locationHref(
+          location.parentSlug ? `${location.parentSlug}/${location.slug}` : location.slug,
+        ),
         name: location.name,
         type: location.type,
         summary: location.summary,
