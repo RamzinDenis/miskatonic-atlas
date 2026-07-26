@@ -762,6 +762,40 @@ a:focus-visible > .chart-tile {
   color: var(--ink-accent);
 }
 
+/* On a phone the overview zoom (past the lettering threshold — no
+   .world-map--labels on the widget) prints the drawn marks compact: at
+   the full-sheet letterbox beasts and vessels otherwise tower over the
+   whole country. Two discrete states flipped once at the threshold, an
+   eased transform each way — chasing the zoom continuously fought
+   leaflet's own gesture animation and read as marks jumping about the
+   paper. The vessel keeps more of its size (thin rigging dissolves before
+   a beast's bulk) and scales whole — silhouette AND paper clearing, or
+   the full-size clearing reads as a pale blot; both carry the transform
+   themselves because the ship's inline course rotation occupies the
+   parent span. Larger screens never letterbox that hard and keep every
+   mark full-size. */
+@media (max-width: 639px) {
+  .atlas-monster {
+    transition:
+      color 0.15s ease,
+      transform 0.3s ease;
+  }
+
+  .atlas-route-ship .mask-ink,
+  .atlas-route-ship::before {
+    transition: transform 0.3s ease;
+  }
+
+  .world-map:not(.world-map--labels) .atlas-monster {
+    transform: scale(0.4);
+  }
+
+  .world-map:not(.world-map--labels) .atlas-route-ship .mask-ink,
+  .world-map:not(.world-map--labels) .atlas-route-ship::before {
+    transform: scale(0.6);
+  }
+}
+
 /* An engraving as an alpha mask filled with the current ink — the raster
    twin of drawing in currentColor (see build-monster-masks.mjs). Beasts
    and vessels alike paint through it. */
