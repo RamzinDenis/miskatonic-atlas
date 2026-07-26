@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getStories, getStory, getStoryEntities } from "@/shared/lib/content";
+import { SITE_URL } from "@/shared/site";
 import { ChipSection } from "@/shared/ui/sections";
 import { getPlate, getStoryPlates } from "@/widgets/plates";
 import { RouteInset } from "@/widgets/world-map/route-inset";
@@ -29,8 +30,25 @@ export default async function StoryPage({ params }: PageProps<"/stories/[slug]">
   const { locations, characters, creatures } = getStoryEntities(slug);
   const storyPlates = getStoryPlates(slug);
 
+  /* The story's CreativeWork node: the one entity type whose real-world
+     identity (a published text with an author and a year) schema.org can
+     state honestly — fictional places and beasts stay unmarked. */
+  const jsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "ShortStory",
+    name: story.title,
+    author: { "@type": "Person", name: "H. P. Lovecraft" },
+    datePublished: String(story.year),
+    description: story.summary,
+    url: `${SITE_URL}/stories/${story.slug}`,
+  });
+
   return (
     <div className="mx-auto w-full max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLd }}
+      />
       <Link href="/" className="text-sm text-muted transition-colors hover:text-accent">
         ← Map
       </Link>
