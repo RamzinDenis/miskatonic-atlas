@@ -12,8 +12,21 @@ import {
   type PixelPoint,
 } from "./geometry";
 
-/** Zoom the legend flies to — close enough to read the chart around a pin. */
-export const FOCUS_ZOOM = -0.5;
+/**
+ * Zoom a focus lands at: the sheet just covering the frame — the first zoom
+ * at which the pin can actually stand at the centre. Any farther out the
+ * whole sheet fits the viewport and maxBounds pins the view in place, so a
+ * fixed focus constant quietly stopped moving the map on desktop viewports.
+ * getBoundsZoom is clamped by the chart's own close-up ceiling (maxZoom),
+ * and a reader already zoomed closer stays where they are.
+ */
+export function focusZoom(map: LeafletMap, chart: AtlasMap): number {
+  const bounds: LatLngBoundsExpression = [
+    [0, 0],
+    [chart.height, chart.width],
+  ];
+  return Math.max(map.getZoom(), map.getBoundsZoom(bounds, true));
+}
 
 /**
  * Feature lettering is printed, but an overview sheet with every name set
@@ -94,11 +107,9 @@ export function DeepLinkFocus({
     const target = slug ? locations.find((l) => l.slug === slug) : undefined;
     if (!target) return;
     onSelect(target);
-    map.setView(
-      pixelToLatLng(target, chart),
-      Math.max(map.getZoom(), FOCUS_ZOOM),
-      { animate: false },
-    );
+    map.setView(pixelToLatLng(target, chart), focusZoom(map, chart), {
+      animate: false,
+    });
   }, [map, chart, locations, onSelect]);
   return null;
 }
