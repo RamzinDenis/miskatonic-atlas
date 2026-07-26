@@ -42,6 +42,16 @@ export function AuthorsSignup({ formId }: { formId: string }) {
 
   return (
     <form onSubmit={onSubmit} className="mt-6">
+      {/* Formspree's honeypot: humans never see it, dumb bots fill it, and
+          such submissions are dropped without spending the monthly quota. */}
+      <input
+        type="text"
+        name="_gotcha"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+      />
       <div className="flex flex-wrap gap-3">
         <input
           type="email"
