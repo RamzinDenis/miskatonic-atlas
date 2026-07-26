@@ -17,6 +17,17 @@ const ART_CACHE =
     : "public, max-age=0";
 
 const nextConfig: NextConfig = {
+  /**
+   * The admin tooling (/admin/coords picker, /admin/review) writes to the
+   * repo's files and has no auth — it exists for the editor's machine only.
+   * Its routes use the `.dev.tsx`/`.dev.ts` extensions, which a production
+   * build does not recognize: the deploy contains no admin code at all (and
+   * stays fully static — no lambdas), instead of shipping guarded 404s.
+   */
+  pageExtensions:
+    process.env.NODE_ENV === "production"
+      ? ["ts", "tsx"]
+      : ["dev.ts", "dev.tsx", "ts", "tsx"],
   async headers() {
     return ["maps", "plates", "bestiary", "paper"].map((dir) => ({
       source: `/${dir}/:path*`,

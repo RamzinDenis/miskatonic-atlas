@@ -16,7 +16,13 @@ export const metadata: Metadata = {
  * queue is shared, so a queued location lands on whichever chart is open.
  * Compiled out of production builds entirely.
  */
-export default async function CoordsPage({ searchParams }: PageProps<"/admin/coords">) {
+export default async function CoordsPage({
+  searchParams,
+}: {
+  // Not PageProps<"/admin/coords">: the route is compiled out of production
+  // builds, so the generated AppRoutes type no longer carries its path.
+  searchParams: Promise<{ map?: string }>;
+}) {
   if (process.env.NODE_ENV === "production") notFound();
 
   const { map } = await searchParams;
