@@ -32,6 +32,9 @@
   },
   "devDependencies": {
     "@anthropic-ai/sdk": "^0.113.0",
+    "@emnapi/core": "^1.11.3",
+    "@emnapi/runtime": "^1.11.3",
+    "@emnapi/wasi-threads": "^2.0.1",
     "@tailwindcss/postcss": "^4",
     "@types/leaflet": "^1.9.21",
     "@types/node": "^20",

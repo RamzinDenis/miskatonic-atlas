@@ -17,6 +17,9 @@ jobs:
         with:
           node-version: 22
           cache: npm
+      # @emnapi/* sit in devDependencies only so the lockfile carries their
+      # top-level entries: the bundled wasm deps of @tailwindcss/oxide otherwise
+      # break `npm ci` on linux (tailwindlabs/tailwindcss#20324).
       - run: npm ci
       - run: npm run lint
       - run: npm run typecheck
