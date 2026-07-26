@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getStories, getStory, getStoryEntities } from "@/shared/lib/content";
+import { metaDescription } from "@/shared/lib/meta";
 import { SITE_URL } from "@/shared/site";
 import { ChipSection } from "@/shared/ui/sections";
 import { getPlate, getStoryPlates } from "@/widgets/plates";
@@ -19,7 +20,9 @@ export async function generateMetadata({
 }: PageProps<"/stories/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const story = getStory(slug);
-  return story ? { title: story.title, description: story.summary } : {};
+  return story
+    ? { title: story.title, description: metaDescription(story.summary) }
+    : {};
 }
 
 export default async function StoryPage({ params }: PageProps<"/stories/[slug]">) {

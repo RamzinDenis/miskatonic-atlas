@@ -10,6 +10,7 @@ import {
   getTopLocations,
   locationHref,
 } from "@/shared/lib/content";
+import { metaDescription } from "@/shared/lib/meta";
 import { chartPath, chartShowsChildren } from "@/shared/maps";
 import type { Location } from "@/shared/schemas";
 import { ChipSection, Description, SourcesSection } from "@/shared/ui/sections";
@@ -28,7 +29,9 @@ export async function generateMetadata({
 }: PageProps<"/locations/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const location = getLocation(slug);
-  return location ? { title: location.name, description: location.summary } : {};
+  return location
+    ? { title: location.name, description: metaDescription(location.summary) }
+    : {};
 }
 
 /** Deep link of a location's inset onto the full chart. Majors only; a

@@ -8,6 +8,7 @@ import {
   getStory,
   locationHref,
 } from "@/shared/lib/content";
+import { metaDescription } from "@/shared/lib/meta";
 import { ChipSection, Description, SourcesSection } from "@/shared/ui/sections";
 import { BestiaryFigure } from "@/widgets/bestiary/figure";
 import { LostPlate } from "@/widgets/bestiary/lost-plate";
@@ -32,7 +33,9 @@ export async function generateMetadata({
 }: PageProps<"/creatures/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const creature = getCreature(slug);
-  return creature ? { title: creature.name, description: creature.summary } : {};
+  return creature
+    ? { title: creature.name, description: metaDescription(creature.summary) }
+    : {};
 }
 
 export default async function CreaturePage({ params }: PageProps<"/creatures/[slug]">) {

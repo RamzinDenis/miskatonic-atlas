@@ -7,6 +7,7 @@ import {
   getStory,
   locationHref,
 } from "@/shared/lib/content";
+import { metaDescription } from "@/shared/lib/meta";
 import { EntityArticle } from "@/widgets/entity-article";
 import { getPlate } from "@/widgets/plates";
 
@@ -21,7 +22,9 @@ export async function generateMetadata({
 }: PageProps<"/characters/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const character = getCharacter(slug);
-  return character ? { title: character.name, description: character.summary } : {};
+  return character
+    ? { title: character.name, description: metaDescription(character.summary) }
+    : {};
 }
 
 export default async function CharacterPage({ params }: PageProps<"/characters/[slug]">) {
