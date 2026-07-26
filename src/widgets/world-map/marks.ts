@@ -72,9 +72,11 @@ function vignetteSvg(type: string): string {
 export function locationIcon(
   location: MapLocation,
   active: boolean,
-  style?: AtlasMap["markerStyle"],
+  chart: AtlasMap,
 ) {
-  if (style === "annotation") return annotationIcon(location, active);
+  if (chart.markerStyle === "annotation") {
+    return annotationIcon(location, active, chart);
+  }
   return divIcon({
     className: "atlas-pin-wrap",
     html: `<span class="atlas-pin${active ? " atlas-pin--active" : ""}">${vignetteSvg(location.type)}<span class="atlas-pin-label">${location.name}</span></span>`,
@@ -90,9 +92,12 @@ export function locationIcon(
  * a small fix-point at the exact spot — the way the scan letters its own
  * features. Hover and selection reprint in vermilion, as everywhere.
  */
-function annotationIcon(location: MapLocation, active: boolean) {
+function annotationIcon(location: MapLocation, active: boolean, chart: AtlasMap) {
   const s = 12;
   const town = location.type === "town" || location.type === "city";
+  /* A name letters to the right of its fix; near the sheet's right edge it
+     would run off the paper (Valparaiso), so there it letters to the left. */
+  const flip = location.x > chart.width * 0.85;
   /* The sublabel is a log-book line under the name — canon degrees on an
      uncalibrated sheet print as a fact of the annotation, not of the chart
      (docs/pacific-map.md №4). */
@@ -101,7 +106,7 @@ function annotationIcon(location: MapLocation, active: boolean) {
     : "";
   return divIcon({
     className: "atlas-pin-wrap",
-    html: `<span class="atlas-annot${active ? " atlas-annot--active" : ""}" style="width:${s}px;height:${s}px"><span class="atlas-annot-fix"></span><span class="atlas-annot-label${town ? " atlas-annot-label--town" : ""}">${location.name}${sub}</span></span>`,
+    html: `<span class="atlas-annot${active ? " atlas-annot--active" : ""}" style="width:${s}px;height:${s}px"><span class="atlas-annot-fix"></span><span class="atlas-annot-label${town ? " atlas-annot-label--town" : ""}${flip ? " atlas-annot-label--flip" : ""}">${location.name}${sub}</span></span>`,
     iconSize: [s, s],
     iconAnchor: [s / 2, s / 2],
   });

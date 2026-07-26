@@ -470,6 +470,14 @@ body {
     0 0 10px rgba(238, 226, 197, 0.7);
 }
 
+/* Mirrored lettering for a fix at the sheet's right edge: the name sits to
+   the left of its point instead of running off the paper. */
+.atlas-annot-label--flip {
+  left: auto;
+  right: calc(100% + 7px);
+  text-align: right;
+}
+
 /* Chart lettering hierarchy: settlements upright in spaced capitals — the
    way the scan sets its own town names — landmarks in the smaller italic. */
 .atlas-annot-label--town {

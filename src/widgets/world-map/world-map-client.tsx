@@ -340,7 +340,7 @@ export default function WorldMapClient({
           <Marker
             key={location.slug}
             position={pixelToLatLng(moves[location.slug] ?? location, chart)}
-            icon={locationIcon(location, selected?.slug === location.slug, chart.markerStyle)}
+            icon={locationIcon(location, selected?.slug === location.slug, chart)}
             alt={location.name}
             draggable={picker}
             eventHandlers={{
