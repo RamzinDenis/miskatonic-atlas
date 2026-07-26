@@ -69,10 +69,15 @@ const FOCUS_ZOOM = -0.5;
 
 /**
  * Panning must stay within the chart: zooming out stops at "whole map
- * visible", so the image can never float loose inside the viewport.
+ * visible", so the image can never float loose inside the viewport. A
+ * portrait phone letterboxes the wide sheet into a strip at that fit —
+ * below the lettering threshold, with the marginalia beasts towering over
+ * the shrunken country — so there the floor is "viewport filled" instead:
+ * the sheet always covers the screen and its edges are reached by panning.
  */
 function applyFitZoomLimit(map: LeafletMap, bounds: LatLngBoundsExpression) {
-  const fitZoom = map.getBoundsZoom(bounds, false);
+  const cover = !window.matchMedia("(min-width: 640px)").matches;
+  const fitZoom = map.getBoundsZoom(bounds, cover);
   map.setMinZoom(fitZoom);
   if (map.getZoom() < fitZoom) map.setZoom(fitZoom);
 }
@@ -457,8 +462,12 @@ export default function WorldMapClient({
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
   // This component only renders client-side (ssr: false), so the viewport
-  // is known on first render: the legend starts open except on phones.
+  // is known on first render: the legend and the region toggle start open
+  // except on phones, where either cartouche would cover half the sheet.
   const [legendOpen, setLegendOpen] = useState(
+    () => window.matchMedia("(min-width: 640px)").matches,
+  );
+  const [regionsOpen, setRegionsOpen] = useState(
     () => window.matchMedia("(min-width: 640px)").matches,
   );
 
@@ -927,58 +936,71 @@ export default function WorldMapClient({
       )}
 
       {/* The atlas' sheets as a toggle of framed, lettered tiles in a
-          cartouche of their own, apart from the legend's key — a nameless
-          strip of miniatures read as decoration, not navigation. The current
-          sheet is no link; its frame is the annotator's vermilion. */}
+          cartouche of their own, apart from the legend's key. Collapsible
+          like the legend, behind a "Regions" button — the reader's word,
+          not the chart's: "Charts" beside the header's "Map" read as two
+          names for one thing. The current sheet is no link; its frame is
+          the annotator's vermilion. */}
       {!picker && Object.keys(MAPS).length > 1 && (
-        <nav
-          aria-label="Charts of the atlas"
-          className="parchment absolute bottom-6 right-4 z-[1000] rounded-sm p-2"
-        >
-          <div className="legend-cartouche px-3 pb-3 pt-2">
-            <h2 className="text-center text-xs uppercase tracking-widest text-muted">
-              Charts
-            </h2>
-            <div className="parchment-rule mt-2" />
-            <div className="mt-3 flex flex-col gap-3">
-              {Object.values(MAPS).map((m) =>
-                m.id === chart.id ? (
-                  <span
-                    key={m.id}
-                    aria-current="page"
-                    title={`${m.title} — this sheet`}
-                    className="flex flex-col items-center gap-1"
-                  >
-                    <span
-                      className="chart-tile chart-tile--current"
-                      style={{ backgroundImage: `url(${m.insetUrl})` }}
-                    />
-                    <span className="font-display text-[13px] italic leading-none text-accent">
-                      {m.shortTitle}
-                    </span>
-                    <span className="sr-only">{m.title} — this sheet</span>
-                  </span>
-                ) : (
-                  <Link
-                    key={m.id}
-                    href={chartPath(m.id)}
-                    title={m.title}
-                    className="group flex flex-col items-center gap-1"
-                  >
-                    <span
-                      className="chart-tile"
-                      style={{ backgroundImage: `url(${m.insetUrl})` }}
-                    />
-                    <span className="font-display text-[13px] italic leading-none transition-colors group-hover:text-accent">
-                      {m.shortTitle}
-                    </span>
-                    <span className="sr-only">{m.title}</span>
-                  </Link>
-                ),
-              )}
-            </div>
-          </div>
-        </nav>
+        <div className="absolute bottom-6 right-4 z-[1000] flex flex-col items-end">
+          {regionsOpen && (
+            <nav
+              aria-label="Regions of the atlas"
+              className="parchment mb-2 rounded-sm p-2"
+            >
+              <div className="legend-cartouche px-3 pb-3 pt-2">
+                {/* On a phone the cartouche must not eat the chart: the tiles
+                    shrink (globals.css) and sit in a row along the sheet's
+                    foot. */}
+                <div className="mt-1 flex flex-row gap-2.5 sm:flex-col sm:gap-3">
+                  {Object.values(MAPS).map((m) =>
+                    m.id === chart.id ? (
+                      <span
+                        key={m.id}
+                        aria-current="page"
+                        title={`${m.title} — this sheet`}
+                        className="flex flex-col items-center gap-1"
+                      >
+                        <span
+                          className="chart-tile chart-tile--current"
+                          style={{ backgroundImage: `url(${m.insetUrl})` }}
+                        />
+                        <span className="font-display text-[11px] italic leading-none text-accent sm:text-[13px]">
+                          {m.shortTitle}
+                        </span>
+                        <span className="sr-only">{m.title} — this sheet</span>
+                      </span>
+                    ) : (
+                      <Link
+                        key={m.id}
+                        href={chartPath(m.id)}
+                        title={m.title}
+                        className="group flex flex-col items-center gap-1"
+                      >
+                        <span
+                          className="chart-tile"
+                          style={{ backgroundImage: `url(${m.insetUrl})` }}
+                        />
+                        <span className="font-display text-[11px] italic leading-none transition-colors group-hover:text-accent sm:text-[13px]">
+                          {m.shortTitle}
+                        </span>
+                        <span className="sr-only">{m.title}</span>
+                      </Link>
+                    ),
+                  )}
+                </div>
+              </div>
+            </nav>
+          )}
+          <button
+            type="button"
+            onClick={() => setRegionsOpen((open) => !open)}
+            aria-expanded={regionsOpen}
+            className="parchment rounded-sm px-3 py-1.5 text-xs uppercase tracking-widest text-muted transition-colors hover:text-accent"
+          >
+            Regions {regionsOpen ? "−" : "+"}
+          </button>
+        </div>
       )}
 
       {!picker && selected && (

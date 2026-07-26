@@ -523,6 +523,15 @@ a:focus-visible > .chart-tile {
   cursor: default;
 }
 
+/* On a phone the cartouche shares the sheet with everything else: smaller
+   tiles, set in a row (the widget lays them horizontally under 640px). */
+@media (max-width: 639px) {
+  .chart-tile {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
 .legend-glyph {
   flex: none;
   width: 17px;
