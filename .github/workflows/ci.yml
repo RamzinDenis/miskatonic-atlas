@@ -22,6 +22,10 @@ jobs:
       # break `npm ci` on linux (tailwindlabs/tailwindcss#20324).
       - run: npm ci
       - run: npm run lint
+      # PageProps and the image-module declarations are generated types
+      # (.next/types, next-env.d.ts) — on a fresh runner they don't exist
+      # until `next typegen` writes them.
+      - run: npx next typegen
       - run: npm run typecheck
       - run: npm test
       - run: npm run verify-quotes
