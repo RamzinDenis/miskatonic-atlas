@@ -9,6 +9,12 @@ import {
   MergeWave2Output,
   type Occurrence,
 } from "../src/shared/draft-schemas.ts";
+import {
+  matchingExisting,
+  toDiskEntity,
+  type Kind,
+  type RegistryEntry,
+} from "./merge-lib.mts";
 
 /**
  * LLM merge step over the Anthropic SDK (docs/plan-extract-sdk.md). Folds the
@@ -34,16 +40,8 @@ const USD_PER_MTOK = { input: 2, output: 10 }; // Sonnet 5 intro pricing through
 const MAX_TOKENS = 64000;
 
 const ROOT = process.cwd();
-const KINDS = ["locations", "characters", "creatures"] as const;
-type Kind = (typeof KINDS)[number];
 
 const StorySummaryOutput = z.object({ summary: z.string() });
-
-interface RegistryEntry {
-  slug: string;
-  name: string;
-  json: Record<string, unknown>;
-}
 
 function playbookSections(): string {
   const playbook = fs.readFileSync(path.join(ROOT, "prompts", "merge.md"), "utf8");
@@ -65,25 +63,6 @@ function readRegistry(kind: Kind): RegistryEntry[] {
     });
 }
 
-/** Loose name folding for enrichment matching (mirrors the playbook's identity rule). */
-function foldName(s: string): string {
-  return s
-    .toLowerCase()
-    .replace(/['’]/g, "")
-    .replace(/[^a-z0-9]+/g, " ")
-    .trim()
-    .replace(/^the /, "");
-}
-
-function matchingExisting(occurrences: Occurrence[], registry: RegistryEntry[]): RegistryEntry[] {
-  const seen = new Set<string>();
-  for (const o of occurrences) {
-    seen.add(foldName(o.name));
-    for (const a of o.aliases) seen.add(foldName(a));
-  }
-  return registry.filter((e) => seen.has(foldName(e.name)) || seen.has(foldName(e.slug)));
-}
-
 function registryLines(kind: Kind, entries: { slug: string; name: string }[]): string {
   if (entries.length === 0) return `- ${kind}: (none)`;
   return `- ${kind}: ${entries.map((e) => `${e.slug} ("${e.name}")`).join(", ")}`;
@@ -97,44 +76,6 @@ function occurrenceBlocks(byWindow: Map<string, Occurrence[]>, kinds: string[]):
     blocks.push(`### ${windowId}\n${JSON.stringify(subset, null, 2)}`);
   }
   return blocks.join("\n\n");
-}
-
-type DiskEntity = Record<string, unknown>;
-
-/** Field order of the content/ files; nulls dropped, existing-only fields preserved. */
-function toDiskEntity(
-  draft: Record<string, unknown>,
-  kind: Kind,
-  existing: RegistryEntry | undefined,
-): DiskEntity {
-  const keep = (existing?.json ?? {}) as Record<string, unknown>;
-  const val = (k: string) => (draft[k] === null ? undefined : draft[k]);
-  const entity: DiskEntity = {
-    slug: draft.slug,
-    name: draft.name,
-    ...(keep.nameRu !== undefined && { nameRu: keep.nameRu }),
-    ...(keep.parentSlug !== undefined && { parentSlug: keep.parentSlug }),
-    ...(keep.subtitle !== undefined && { subtitle: keep.subtitle }),
-    ...(kind === "locations" && { type: draft.type }),
-    ...(kind === "characters" && { role: draft.role }),
-    ...(kind === "creatures" && { classification: draft.classification }),
-    ...(keep.prominence !== undefined && { prominence: keep.prominence }),
-    summary: draft.summary,
-    description: draft.description,
-    ...(kind === "locations" && keep.map !== undefined && { map: keep.map }),
-    ...(kind === "locations" && val("realWorld") !== undefined && { realWorld: val("realWorld") }),
-    ...(kind !== "locations" && { locations: draft.locations }),
-    appearsIn: draft.appearsIn,
-    ...(kind === "locations" && { connectedTo: draft.connectedTo }),
-    ...(kind !== "locations" && val("fate") !== undefined && { fate: val("fate") }),
-    sources: (draft.sources as { context: string | null }[]).map((s) => ({
-      ...s,
-      ...(s.context === null ? { context: undefined } : {}),
-    })),
-    ...(keep.image !== undefined && { image: keep.image }),
-    _draft: draft._draft,
-  };
-  return JSON.parse(JSON.stringify(entity)); // strip undefined
 }
 
 async function main() {
