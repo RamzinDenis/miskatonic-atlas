@@ -26,10 +26,13 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
+/* Sources live outside public/ on purpose: the cutting originals are build
+   inputs only and must not ride along into the deploy. */
+const SRC = path.join(ROOT, "assets", "maps");
 const MAPS = path.join(ROOT, "public", "maps");
 
 /* Every chart of the registry (src/shared/maps.ts) gets the same treatment;
-   an id whose source (jpg or png) is not in public/maps/ yet is skipped with
+   an id whose source (jpg or png) is not in assets/maps/ yet is skipped with
    a note. A png source additionally gets a full-width webp as the ladder's
    top rung — the png stays in the repo as the cutting source only. */
 const SOURCES = ["new-england", "pacific", "desert"];
@@ -44,12 +47,12 @@ const QUALITY = 72;
 for (const id of SOURCES) {
   const source = ["jpg", "png"]
     .map((ext) => `${id}.${ext}`)
-    .find((name) => fs.existsSync(path.join(MAPS, name)));
+    .find((name) => fs.existsSync(path.join(SRC, name)));
   if (!source) {
-    console.log(`skip ${id} — no ${id}.jpg/png in public/maps/ yet`);
+    console.log(`skip ${id} — no ${id}.jpg/png in assets/maps/ yet`);
     continue;
   }
-  const scan = path.join(MAPS, source);
+  const scan = path.join(SRC, source);
 
   const { width, height } = await sharp(scan).metadata();
   console.log(`${source}: ${width}×${height} (register these in src/shared/maps.ts)`);

@@ -1,16 +1,17 @@
 /**
  * Chart-mark masks from the raster engravings.
  *
- * Sources: public/plates/{monster,ship}-<name>.png — engravings (black ink
- * on white) generated for the world map's beasts and vessels. They are too
- * heavy to ship as-is and carry a white ground the chart must not get;
+ * Sources: assets/plates/{monster,ship}-<name>.png — engravings (black ink
+ * on white) generated for the world map's beasts and vessels. They live
+ * outside public/ (build inputs only, never deployed), are too heavy to
+ * ship as-is and carry a white ground the chart must not get;
  * this script turns each into a small alpha mask: ink density → alpha,
  * paper → transparent. The map paints a mask via CSS mask-image with
  * background-color: currentColor (the story-page inset tints it with an
  * feFlood filter), so the site keeps re-inking every mark — iron-gall or
  * track ink at rest, vermilion when chosen — exactly as it did the SVGs.
  *
- * Output: public/maps/monsters/<slug>.png, public/maps/ships/<kind>.png and
+ * Output: public/maps/monsters/<slug>.webp, public/maps/ships/<kind>.png and
  * public/bestiary/<slug>.webp — the same beasts a second time, large enough
  * for the bestiary's showcase and leaves (webp: an alpha png that size runs
  * to half a megabyte). Prints trimmed aspect ratios — monsters.ts,
@@ -26,7 +27,7 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
-const SRC = path.join(ROOT, "public", "plates");
+const SRC = path.join(ROOT, "assets", "plates");
 
 /* Beasts keep their creature slug; vessels map source file → ShipKind. */
 const MONSTERS = [
@@ -95,12 +96,15 @@ async function buildMask(source, out, size, { gamma = 0.8, gain = 1 } = {}) {
   );
 }
 
+/* Chart marks were lossless png at first; webp with the same alpha curve
+   weighs a third as much and prints identically at marginalia size
+   (Lighthouse flagged the two biggest beasts at ~50 KB each). */
 const monsterDir = path.join(ROOT, "public", "maps", "monsters");
 await mkdir(monsterDir, { recursive: true });
 for (const slug of MONSTERS) {
   await buildMask(
     path.join(SRC, `monster-${slug}.png`),
-    path.join(monsterDir, `${slug}.png`),
+    path.join(monsterDir, `${slug}.webp`),
     MONSTER_SIZE,
   );
 }

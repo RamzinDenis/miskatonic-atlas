@@ -67,7 +67,7 @@ export interface MapMonster {
 
 /** The beast's alpha mask, painted in currentColor wherever it appears. */
 export function monsterMaskUrl(slug: MonsterKind): string {
-  return `/maps/monsters/${slug}.png`;
+  return `/maps/monsters/${slug}.webp`;
 }
 
 export const MONSTERS: MapMonster[] = [

@@ -173,9 +173,11 @@ export function routeShipIcon(leg: RouteLeg, active: boolean) {
   const placement = legShipPlacement(leg);
   const art = SHIP_ART[leg.ship];
   const flip = placement.flip ? " scaleX(-1)" : "";
+  /* The sr-only name is the button's accessible name: leaflet only writes
+     `alt` onto img icons, so a divIcon button is nameless without it. */
   return divIcon({
     className: "atlas-route-ship-wrap",
-    html: `<span class="atlas-route-ship" style="color:${active ? TRACK_ACCENT : SHIP_INK};width:${art.w}px;height:${art.h}px;transform:translate(-50%,-50%) rotate(${placement.angleDeg}deg) translateY(-14px)${flip}"><span class="mask-ink" style="--ink-mask:url('${shipMaskUrl(leg.ship)}')"></span></span>`,
+    html: `<span class="atlas-route-ship" style="color:${active ? TRACK_ACCENT : SHIP_INK};width:${art.w}px;height:${art.h}px;transform:translate(-50%,-50%) rotate(${placement.angleDeg}deg) translateY(-14px)${flip}"><span class="mask-ink" style="--ink-mask:url('${shipMaskUrl(leg.ship)}')"></span><span class="sr-only">The ${leg.vessel} — voyage track</span></span>`,
     iconSize: [0, 0],
     iconAnchor: [0, 0],
   });

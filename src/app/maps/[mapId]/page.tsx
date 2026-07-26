@@ -35,7 +35,9 @@ export default async function RegionalMapPage({ params }: PageProps<"/maps/[mapI
 
   return (
     <div className="relative h-dvh overflow-hidden">
+      {/* Thumb + overview copy with the HTML, as on the frontispiece. */}
       <link rel="preload" as="image" href={chart.lqipUrl} />
+      <link rel="preload" as="image" href={chart.sheets[chart.sheets.length - 1].url} />
 
       <WorldMap
         chart={chart}
