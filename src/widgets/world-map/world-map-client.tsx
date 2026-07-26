@@ -4,6 +4,7 @@ import "leaflet/dist/leaflet.css";
 import {
   CRS,
   latLngBounds,
+  svg,
   type LatLngBoundsExpression,
   type Map as LeafletMap,
   type Marker as LeafletMarker,
@@ -97,6 +98,11 @@ export default function WorldMapClient({
     ],
     [chart],
   );
+  /* Leaflet's svg pane only covers the viewport plus 10% by default, so a
+     pan past that edge visibly reprints the voyage tracks — constant on a
+     phone, where the cover zoom shows half the sheet. Two viewports of
+     padding keep the whole chart's ink drawn at once. */
+  const inkRenderer = useMemo(() => svg({ padding: 2 }), []);
   const [selected, setSelected] = useState<MapLocation | null>(null);
   const [selectedLeg, setSelectedLeg] = useState<RouteLeg | null>(null);
   const [labelsShown, setLabelsShown] = useState(false);
@@ -299,6 +305,7 @@ export default function WorldMapClient({
       <MapContainer
         ref={mapRef}
         crs={CRS.Simple}
+        renderer={inkRenderer}
         bounds={bounds}
         maxBounds={bounds}
         maxBoundsViscosity={1}

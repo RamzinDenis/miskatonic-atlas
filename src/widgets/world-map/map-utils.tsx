@@ -24,20 +24,17 @@ export const LABEL_MIN_ZOOM = -1;
 
 /**
  * Panning must stay within the chart: zooming out stops at "whole map
- * visible", so the image can never float loose inside the viewport. A
- * portrait phone letterboxes the wide sheet into a strip at that fit —
- * below the lettering threshold, with the marginalia beasts towering over
- * the shrunken country — so there the floor is "viewport filled" instead:
- * the sheet always covers the screen and its edges are reached by panning.
+ * visible", so the image can never float loose inside the viewport — on
+ * every device, so a phone can still pinch out to the full sheet.
  */
 function applyFitZoomLimit(map: LeafletMap, bounds: LatLngBoundsExpression) {
-  const cover = !window.matchMedia("(min-width: 640px)").matches;
-  const fitZoom = map.getBoundsZoom(bounds, cover);
+  const fitZoom = map.getBoundsZoom(bounds, false);
   map.setMinZoom(fitZoom);
   if (map.getZoom() < fitZoom) map.setZoom(fitZoom);
 }
 
 export function FitZoomLimit({ bounds }: { bounds: LatLngBoundsExpression }) {
+  const covered = useRef(false);
   const map = useMapEvents({
     resize() {
       applyFitZoomLimit(map, bounds);
@@ -45,6 +42,19 @@ export function FitZoomLimit({ bounds }: { bounds: LatLngBoundsExpression }) {
   });
   useEffect(() => {
     applyFitZoomLimit(map, bounds);
+    /* A portrait phone letterboxes the wide sheet into a strip at the fit
+       zoom — below the lettering threshold, with the marginalia beasts
+       towering over the shrunken country. So a phone OPENS at "viewport
+       filled" instead (once, not on every resize): the sheet covers the
+       screen and the lettering is up, while zooming out to the whole
+       sheet stays available. Runs before DeepLinkFocus mounts, so a
+       /?focus= link still lands on its pin. */
+    if (!covered.current) {
+      covered.current = true;
+      if (!window.matchMedia("(min-width: 640px)").matches) {
+        map.setZoom(map.getBoundsZoom(bounds, true), { animate: false });
+      }
+    }
   }, [map, bounds]);
   return null;
 }
