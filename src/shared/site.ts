@@ -24,10 +24,10 @@ export const CONTACT_EMAIL = "d.ramzin96@gmail.com";
  * Umami Cloud website id (cloud.umami.is → your site → Website ID).
  * Empty until the account exists; the tracker is not rendered without it.
  */
-export const UMAMI_WEBSITE_ID = "";
+export const UMAMI_WEBSITE_ID = "b4391bb6-c396-4f57-94e3-1d9f1bdb8133";
 
 /**
  * Formspree form id (formspree.io → your form → the token after /f/).
  * While empty, the about page falls back to a mailto link.
  */
-export const FORMSPREE_FORM_ID = "";
+export const FORMSPREE_FORM_ID = "xkodkwke";
