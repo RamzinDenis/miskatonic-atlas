@@ -27,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     { url: `${SITE_URL}/contents`, priority: 0.8 },
     { url: `${SITE_URL}/creatures`, priority: 0.8 },
+    { url: `${SITE_URL}/about`, priority: 0.5 },
     ...getStories().map(({ slug }) => ({
       url: `${SITE_URL}/stories/${slug}`,
       priority: 0.7,

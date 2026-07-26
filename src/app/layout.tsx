@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Old_Standard_TT, Playfair_Display } from "next/font/google";
-import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/shared/site";
+import {
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_URL,
+  UMAMI_WEBSITE_ID,
+} from "@/shared/site";
 import "./globals.css";
 
 // Period faces: Old Standard follows the "modern" text types of XIX-century
@@ -65,6 +70,14 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: WEBSITE_JSON_LD }}
         />
+        {/* Cookieless visit counter — absent entirely until the id is set. */}
+        {UMAMI_WEBSITE_ID && (
+          <script
+            defer
+            src="https://cloud.umami.is/script.js"
+            data-website-id={UMAMI_WEBSITE_ID}
+          />
+        )}
       </body>
     </html>
   );

@@ -24,8 +24,14 @@ export function SiteHeader({ floating = false }: { floating?: boolean }) {
         >
           Miskatonic Atlas
         </Link>
-        <nav className="flex gap-4 text-xs uppercase tracking-widest sm:gap-6">
-          <Link href="/" className="text-muted transition-colors hover:text-accent">
+        <nav className="flex gap-3 text-xs uppercase tracking-widest sm:gap-6">
+          {/* The masthead itself opens the chart, so the phone drops the
+              duplicate item; on wide screens Map stays as the plain word
+              a first-time reader looks for. */}
+          <Link
+            href="/"
+            className="hidden text-muted transition-colors hover:text-accent sm:inline"
+          >
             Map
           </Link>
           <Link
@@ -39,6 +45,12 @@ export function SiteHeader({ floating = false }: { floating?: boolean }) {
             className="text-muted transition-colors hover:text-accent"
           >
             Index
+          </Link>
+          <Link
+            href="/about"
+            className="text-muted transition-colors hover:text-accent"
+          >
+            About
           </Link>
         </nav>
       </div>
