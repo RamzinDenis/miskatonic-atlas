@@ -7,8 +7,10 @@ import path from "node:path";
  * major via the schema default, so majors get no extra field and no diff.
  * Idempotent; run `npm run validate` after.
  *
- * The list is the editorial decision made in chat on 2026-07-15 — extraction
- * never sets prominence (see CONTEXT.md).
+ * The list is the editorial decision made in chat — extraction never sets
+ * prominence (see CONTEXT.md, ADR-0005). Rounds: Phase 3 curation 2026-07-15;
+ * Festival + Colour 2026-07-26. Entities later revised into junk drop off the
+ * list entirely (bat-winged-devils).
  */
 
 const MINOR: Record<string, string[]> = {
@@ -37,6 +39,7 @@ const MINOR: Record<string, string[]> = {
     "philippines",
     "san-francisco",
     "south-america",
+    "st-marys-hospital",
     "tulane-university",
     "valparaiso",
   ],
@@ -50,14 +53,21 @@ const MINOR: Record<string, string[]> = {
     "guerrera",
     "hawkins",
     "joseph-d-galvez",
+    "merwin",
+    "mrs-gardner",
+    "mrs-pierce",
     "parker",
     "rodriguez",
+    "thaddeus",
+    "the-old-woman-of-the-festival",
     "william-briden",
+    "zenas",
   ],
   creatures: [
-    "bat-winged-devils",
+    "amorphous-flute-player",
     "black-spirits-of-earth",
     "black-winged-ones",
+    "hybrid-winged-things",
     "tornasuk",
     "white-polypous-thing",
   ],
