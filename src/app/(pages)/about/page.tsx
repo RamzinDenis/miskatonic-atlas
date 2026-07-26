@@ -7,6 +7,7 @@ import {
   GITHUB_URL,
   SITE_NAME,
 } from "@/shared/site";
+import { AuthorsSignup } from "./signup-form";
 
 export const metadata: Metadata = {
   title: "About",
@@ -97,26 +98,7 @@ export default function AboutPage() {
           </p>
 
           {FORMSPREE_FORM_ID ? (
-            <form
-              action={`https://formspree.io/f/${FORMSPREE_FORM_ID}`}
-              method="POST"
-              className="mt-6 flex flex-wrap gap-3"
-            >
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="your@email.com"
-                aria-label="Your email"
-                className="min-w-0 flex-1 border border-line bg-surface px-4 py-2 text-base outline-none transition-colors focus:border-accent"
-              />
-              <button
-                type="submit"
-                className="border border-line bg-surface px-5 py-2 text-xs uppercase tracking-widest transition-colors hover:border-accent hover:text-accent"
-              >
-                Keep me posted
-              </button>
-            </form>
+            <AuthorsSignup formId={FORMSPREE_FORM_ID} />
           ) : (
             <p className="mt-6">
               <a
