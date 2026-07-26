@@ -54,7 +54,7 @@ export const BESTIARY: BestiaryPlate[] = [
     epithet: "The dreamer in the sunken city",
     art: {
       mask: "/bestiary/cthulhu.webp",
-      thumb: "/maps/monsters/cthulhu.png",
+      thumb: "/maps/monsters/cthulhu.webp",
       aspect: 1.008,
       effects: ["breath", "gaze-tilt", "vermilion-pulse"],
     },
@@ -65,7 +65,7 @@ export const BESTIARY: BestiaryPlate[] = [
     epithet: "Supreme elder devil of the ice",
     art: {
       mask: "/bestiary/tornasuk.webp",
-      thumb: "/maps/monsters/tornasuk.png",
+      thumb: "/maps/monsters/tornasuk.webp",
       aspect: 0.924,
       effects: ["ink-shiver", "gaze-tilt"],
     },
@@ -76,7 +76,7 @@ export const BESTIARY: BestiaryPlate[] = [
     epithet: "Killers out of the haunted wood",
     art: {
       mask: "/bestiary/black-winged-ones.webp",
-      thumb: "/maps/monsters/black-winged-ones.png",
+      thumb: "/maps/monsters/black-winged-ones.webp",
       aspect: 0.993,
       effects: ["breath", "ink-shiver", "gaze-tilt"],
     },
@@ -98,7 +98,7 @@ export const BESTIARY: BestiaryPlate[] = [
     epithet: "Vast, Polyphemus-like, and loathsome",
     art: {
       mask: "/bestiary/the-thing.webp",
-      thumb: "/maps/monsters/the-thing.png",
+      thumb: "/maps/monsters/the-thing.webp",
       aspect: 0.88,
       effects: ["breath", "ink-shiver", "gaze-tilt"],
     },
@@ -109,7 +109,7 @@ export const BESTIARY: BestiaryPlate[] = [
     epithet: "Outside all established categories",
     art: {
       mask: "/bestiary/the-crawling-reptiles-of-the-nameless-city.webp",
-      thumb: "/maps/monsters/the-crawling-reptiles-of-the-nameless-city.png",
+      thumb: "/maps/monsters/the-crawling-reptiles-of-the-nameless-city.webp",
       aspect: 0.765,
       effects: ["breath", "ink-shiver", "gaze-tilt"],
     },
@@ -120,7 +120,7 @@ export const BESTIARY: BestiaryPlate[] = [
     epithet: "Bigger than a barn, and all of squirming ropes",
     art: {
       mask: "/bestiary/the-dunwich-horror.webp",
-      thumb: "/maps/monsters/the-dunwich-horror.png",
+      thumb: "/maps/monsters/the-dunwich-horror.webp",
       aspect: 1.036,
       effects: ["breath", "ink-shiver", "gaze-tilt", "vermilion-pulse"],
     },
@@ -145,7 +145,7 @@ export const BESTIARY: BestiaryPlate[] = [
     epithet: "Not altogether crows, nor moles, nor buzzards",
     art: {
       mask: "/bestiary/hybrid-winged-things.webp",
-      thumb: "/maps/monsters/hybrid-winged-things.png",
+      thumb: "/maps/monsters/hybrid-winged-things.webp",
       aspect: 0.87,
       effects: ["breath", "ink-shiver", "gaze-tilt"],
     },
@@ -169,7 +169,7 @@ export const BESTIARY: BestiaryPlate[] = [
     epithet: "A piece of the great outside",
     art: {
       mask: "/bestiary/the-meteorite.webp",
-      thumb: "/maps/monsters/the-meteorite.png",
+      thumb: "/maps/monsters/the-meteorite.webp",
       aspect: 0.858,
       effects: ["ink-shiver", "vermilion-pulse"],
     },
