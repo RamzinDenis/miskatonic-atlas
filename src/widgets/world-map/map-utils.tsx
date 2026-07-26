@@ -1,5 +1,7 @@
 import {
+  type LatLng,
   type LatLngBoundsExpression,
+  type LatLngExpression,
   type Map as LeafletMap,
 } from "leaflet";
 import { useEffect, useRef } from "react";
@@ -26,6 +28,29 @@ export function focusZoom(map: LeafletMap, chart: AtlasMap): number {
     [chart.height, chart.width],
   ];
   return Math.max(map.getZoom(), map.getBoundsZoom(bounds, true));
+}
+
+/**
+ * Where a focus flight can actually end. maxBounds shoves any centre that
+ * would expose margin back inside — but only after the animation, on
+ * moveend, so a beast drawn near the sheet edge got a smooth flight ending
+ * in a jerk. Clamp the target with the same routine Leaflet corrects with
+ * (private, but the only way the two computations can't drift apart), so
+ * the flight lands exactly where the map would have settled.
+ */
+export function focusCenter(
+  map: LeafletMap,
+  target: LatLngExpression,
+  zoom: number,
+): LatLng {
+  const limiting = map as unknown as {
+    _limitCenter(
+      center: LatLngExpression,
+      zoom: number,
+      bounds?: LatLngBoundsExpression,
+    ): LatLng;
+  };
+  return limiting._limitCenter(target, zoom, map.options.maxBounds);
 }
 
 /**

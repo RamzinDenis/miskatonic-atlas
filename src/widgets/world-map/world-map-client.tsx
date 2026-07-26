@@ -34,6 +34,7 @@ import { LegendPanel } from "./legend-panel";
 import {
   DeepLinkFocus,
   FitZoomLimit,
+  focusCenter,
   focusZoom,
   LABEL_MIN_ZOOM,
   MapClicks,
@@ -280,7 +281,8 @@ export default function WorldMapClient({
   const focusMonster = (monster: MapMonster) => {
     const map = mapRef.current;
     if (!map) return;
-    map.flyTo(pixelToLatLng(monster.at, chart), focusZoom(map, chart), {
+    const zoom = focusZoom(map, chart);
+    map.flyTo(focusCenter(map, pixelToLatLng(monster.at, chart), zoom), zoom, {
       duration: 1.1,
     });
     if (!window.matchMedia("(min-width: 640px)").matches) {
