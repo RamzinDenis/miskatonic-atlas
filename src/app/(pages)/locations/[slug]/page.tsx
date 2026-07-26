@@ -31,6 +31,18 @@ export async function generateMetadata({
   return location ? { title: location.name, description: location.summary } : {};
 }
 
+/** Deep link of a location's inset onto the full chart. Majors only; a
+    sub-location links out only when its chart pins children (pins: "all") —
+    elsewhere it has no public pin to focus (ADR-0003) and its inset alone
+    shows where it lies. */
+function insetChartHref(location: Location): string | undefined {
+  return location.map &&
+    location.prominence === "major" &&
+    (!location.parentSlug || chartShowsChildren(location.map.mapId))
+    ? `${chartPath(location.map.mapId)}?focus=${location.slug}`
+    : undefined;
+}
+
 /** The shared body of a location, rendered for the parent article and for each
     sub-location section alike. */
 function LocationBody({
@@ -62,15 +74,7 @@ function LocationBody({
         <MapInset
           map={location.map}
           name={location.name}
-          chartHref={
-            // Majors only; a sub-location links out only when its chart pins
-            // children (pins: "all") — elsewhere it has no public pin to
-            // focus (ADR-0003) and its inset alone shows where it lies.
-            location.prominence === "major" &&
-            (!location.parentSlug || chartShowsChildren(location.map.mapId))
-              ? `${chartPath(location.map.mapId)}?focus=${location.slug}`
-              : undefined
-          }
+          chartHref={insetChartHref(location)}
         />
       )}
 
@@ -135,7 +139,11 @@ export default async function LocationPage({ params }: PageProps<"/locations/[sl
           <div className="parchment-rule mt-5" />
         </header>
 
-        <LocationBody location={location} />
+        {/* One inset serves the whole page (a town and its landmarks are the
+            same crop of the same sheet). With sub-locations it closes the
+            article instead of opening it, so the chart excerpt arrives once
+            every place it covers has been read — not before the first. */}
+        <LocationBody location={location} inset={children.length === 0} />
 
         {children.length > 0 && (
           <section className="mt-12">
@@ -176,6 +184,14 @@ export default async function LocationPage({ params }: PageProps<"/locations/[sl
             <LocationBody location={child} inset={!location.map} />
           </section>
         ))}
+
+        {children.length > 0 && location.map && (
+          <MapInset
+            map={location.map}
+            name={location.name}
+            chartHref={insetChartHref(location)}
+          />
+        )}
 
         {appearsIn.length > 0 && (
           <section className="mt-12">
