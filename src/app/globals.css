@@ -54,9 +54,21 @@ body {
   --line: var(--paper-line);
   color: var(--ink);
   background:
-    radial-gradient(ellipse at 18% -2%, rgba(255, 250, 230, 0.45), transparent 55%),
-    radial-gradient(ellipse at 100% 100%, rgba(112, 82, 40, 0.16), transparent 55%),
-    radial-gradient(ellipse at 0% 100%, rgba(112, 82, 40, 0.1), transparent 45%),
+    radial-gradient(
+      ellipse at 18% -2%,
+      rgba(255, 250, 230, 0.45),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 100% 100%,
+      rgba(112, 82, 40, 0.16),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 0% 100%,
+      rgba(112, 82, 40, 0.1),
+      transparent 45%
+    ),
     var(--paper);
   box-shadow:
     0 0 0 1px rgba(8, 6, 2, 0.7),
@@ -215,11 +227,27 @@ body {
   --paper-soft: #c1ab79;
   --paper-line: #8f7a4e;
   background:
-    radial-gradient(ellipse at 18% -2%, rgba(255, 246, 214, 0.16), transparent 55%),
-    radial-gradient(ellipse at 100% 100%, rgba(94, 66, 28, 0.3), transparent 55%),
+    radial-gradient(
+      ellipse at 18% -2%,
+      rgba(255, 246, 214, 0.16),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 100% 100%,
+      rgba(94, 66, 28, 0.3),
+      transparent 55%
+    ),
     radial-gradient(ellipse at 0% 100%, rgba(94, 66, 28, 0.2), transparent 45%),
-    radial-gradient(ellipse 40% 26% at 82% 12%, rgba(114, 84, 38, 0.18), transparent 70%),
-    radial-gradient(ellipse 34% 22% at 10% 55%, rgba(114, 84, 38, 0.15), transparent 70%),
+    radial-gradient(
+      ellipse 40% 26% at 82% 12%,
+      rgba(114, 84, 38, 0.18),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 34% 22% at 10% 55%,
+      rgba(114, 84, 38, 0.15),
+      transparent 70%
+    ),
     var(--paper);
   box-shadow:
     0 0 0 1px rgba(8, 6, 2, 0.75),
@@ -338,7 +366,9 @@ body {
   font-size: 13px;
   letter-spacing: 0.08em;
   color: #2b1e08;
-  transition: opacity 0.25s ease, color 0.15s ease;
+  transition:
+    opacity 0.25s ease,
+    color 0.15s ease;
   text-shadow:
     -1px -1px 0 rgba(238, 226, 197, 0.9),
     1px -1px 0 rgba(238, 226, 197, 0.9),
@@ -398,7 +428,9 @@ body {
   border-radius: 50%;
   border: 2px solid currentColor;
   background: rgba(238, 226, 197, 0.55);
-  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
 }
 
 /* Hover-highlight v1 (docs/pacific-map.md №3): a soft ink halo swells out
@@ -426,7 +458,9 @@ body {
   font-size: 12.5px;
   letter-spacing: 0.06em;
   color: inherit;
-  transition: opacity 0.25s ease, color 0.15s ease;
+  transition:
+    opacity 0.25s ease,
+    color 0.15s ease;
   text-shadow:
     -1px -1px 0 rgba(238, 226, 197, 0.9),
     1px -1px 0 rgba(238, 226, 197, 0.9),
@@ -699,7 +733,6 @@ a:focus-visible > .chart-tile {
   );
 }
 
-
 /* Logged dates beside their fixes, in the ink of their track (inlined). */
 .atlas-route-date {
   position: absolute;
@@ -787,7 +820,7 @@ a:focus-visible > .chart-tile {
   }
 
   .world-map:not(.world-map--labels) .atlas-monster {
-    transform: scale(0.4);
+    transform: scale(0.5);
   }
 
   .world-map:not(.world-map--labels) .atlas-route-ship .mask-ink,
@@ -828,7 +861,9 @@ a:focus-visible > .chart-tile {
   font-size: 12px;
   letter-spacing: 0.07em;
   color: #4a3018;
-  transition: opacity 0.25s ease, color 0.15s ease;
+  transition:
+    opacity 0.25s ease,
+    color 0.15s ease;
   text-shadow:
     -1px -1px 0 rgba(238, 226, 197, 0.85),
     1px -1px 0 rgba(238, 226, 197, 0.85),
@@ -884,7 +919,8 @@ a:focus-visible > .chart-tile {
 }
 
 .bestiary-tilt {
-  transform: rotateY(calc(var(--gx, 0) * 6deg)) rotateX(calc(var(--gy, 0) * -5deg));
+  transform: rotateY(calc(var(--gx, 0) * 6deg))
+    rotateX(calc(var(--gy, 0) * -5deg));
 }
 
 /* Pointer gone: straighten up slowly instead of snapping back. */
@@ -1082,6 +1118,24 @@ a:focus-visible > .chart-tile {
   border-top: 1px solid var(--paper-line);
   overflow-x: auto;
   scroll-snap-type: x proximity;
+  /* A hairline in the sheet's own sepia instead of the OS scrollbar.
+     Chromium and Firefox take the two properties; Safari, which knows
+     neither, takes the -webkit- rules below and ignores nothing else. */
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--paper-line) 65%, transparent) transparent;
+}
+
+.bestiary-ribbon::-webkit-scrollbar {
+  height: 5px;
+}
+
+.bestiary-ribbon::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.bestiary-ribbon::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--paper-line) 65%, transparent);
+  border-radius: 9999px;
 }
 
 .bestiary-thumb {
@@ -1094,7 +1148,9 @@ a:focus-visible > .chart-tile {
   scroll-snap-align: center;
   text-align: center;
   opacity: 0.7;
-  transition: opacity 0.2s ease, color 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
 }
 
 .bestiary-thumb:hover {
