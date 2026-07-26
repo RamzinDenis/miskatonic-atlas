@@ -1,0 +1,25 @@
+# Quality gates on every push and PR: the same commands a developer runs
+# locally. `build` includes the prebuild `validate` (content integrity), so a
+# broken slug reference or quote fails CI the same way it fails a deploy.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run verify-quotes
+      - run: npm run build

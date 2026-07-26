@@ -132,7 +132,7 @@ MVP зафиксирован 2026-07-13 по итогам grilling-сессии,
 Проект уже пригоден для резюме (ADR + глоссарий, LLM-пайплайн с машинной верификацией цитат, strict TS без единого `any`/`@ts-ignore`, Conventional Commits). Подавать как **data-пайплайн** («LLM-извлечение сущностей с верификацией каждого факта по первоисточнику; целостность на билде»), а не как «сайт с картой». Перед показом закрыть, по убыванию отдачи:
 
 1. **Юнит-тесты на чистую логику** — `src/shared/lib/quote-search.ts`, `scripts/merge.mts`, geometry-хелперы карты. Самые дешёвые тесты; сейчас покрытие нулевое — главный минус в глазах интервьюера. **Сделано 2026-07-26:** vitest, 30 тестов (quote-search, схемы/ADR-0005, геометрия, merge-хелперы, вынесенные в `scripts/merge-lib.mts`); `npm test` / `test:watch` / `typecheck`.
-2. **CI** — GitHub Actions: lint + `tsc --noEmit` + `validate` на PR; добавить скрипт `typecheck` в `package.json` (~1 час).
+2. **CI** — GitHub Actions: lint + `tsc --noEmit` + `validate` на PR; добавить скрипт `typecheck` в `package.json` (~1 час). **Сделано 2026-07-26:** `.github/workflows/ci.yml` — lint, typecheck, test, verify-quotes (1751 цитата), build (включая prebuild-validate) на push в main и PR; первый прогон проверить после push.
 3. **Декомпозиция `world-map-client.tsx`** (1241 строка) — вынести виньетки/легенду/маршруты; либо быть готовым объяснить на интервью.
 4. **Admin-роуты вне продакшна** — `/admin/review` и `/admin/coords` пишут в ФС без авторизации; исключить из прод-билда на Vercel.
 5. **Имя репозитория** — `book-linter` не совпадает с проектом (`miskatonic-atlas`); переименовать на GitHub.
