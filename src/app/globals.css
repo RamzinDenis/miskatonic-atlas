@@ -184,9 +184,17 @@ body {
   font: inherit;
 }
 
-/* The thumb blown up behind the map, toned to match the sheet that will
-   replace it. Dropped the moment the chart itself is printed, so the
-   margins around the sheet go back to being bare binding. */
+/*
+ * The thumb behind the map, toned to match the sheet that will replace it
+ * and laid out the way that sheet is about to land — otherwise the swap is
+ * a visible jump in scale. A phone opens at "viewport filled" and a wider
+ * screen fits the whole sheet (see FitZoomLimit in map-utils), so the thumb
+ * covers below the breakpoint and is contained above it. Leaflet's zoomSnap
+ * makes its fit a quarter-step coarser than `contain`, so the sheet still
+ * arrives a touch smaller than the thumb — small enough not to read as
+ * movement. Dropped the moment the chart is printed, and the margins go
+ * back to being bare binding.
+ */
 .world-map::before {
   content: "";
   position: absolute;
@@ -194,8 +202,15 @@ body {
   z-index: 0;
   background-image: var(--chart-thumb);
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   filter: sepia(0.6) saturate(0.62) brightness(0.8) contrast(1.07);
+}
+
+@media (min-width: 640px) {
+  .world-map::before {
+    background-size: contain;
+  }
 }
 
 .world-map--art::before {
