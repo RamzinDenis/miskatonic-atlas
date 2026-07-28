@@ -276,6 +276,98 @@ export function getStoryEntities(storySlug: string): {
   };
 }
 
+export interface CompanyFigure {
+  href: string;
+  name: string;
+  kind: "characters" | "creatures";
+}
+
+export interface CompanyAtPlace {
+  href: string;
+  name: string;
+  figures: CompanyFigure[];
+}
+
+/**
+ * The places an entity is put in, each carrying the company the *same story*
+ * puts there (ADR-0006). Two entities are company when they share a location
+ * **and** a story: the atlas holds six tales that reuse real towns, and
+ * without the story test a Boston line would put Thurston next to Armitage,
+ * who never met him. Places keep their editorial order and are listed even
+ * when nobody else stands there — this is the entity's list of locations,
+ * grown a second column, not a separate «related» section.
+ */
+export function getCompany(
+  entity: Pick<Character, "slug" | "locations" | "appearsIn">,
+  self: "characters" | "creatures",
+): CompanyAtPlace[] {
+  const content = loadContent();
+  const stories = new Set(entity.appearsIn);
+  const sharesStory = (e: { appearsIn: string[] }) => e.appearsIn.some((s) => stories.has(s));
+  const byName = (a: CompanyFigure, b: CompanyFigure) => a.name.localeCompare(b.name, "en");
+
+  /**
+   * The atlas disambiguates the nameless narrators by their tale — «The
+   * Narrator (The Colour Out of Space)». Among the company of an entity from
+   * that same tale the parenthesis distinguishes nothing and reads as a
+   * source credit, so it comes off here and stays everywhere else (Index,
+   * the map, anywhere the tales are mixed).
+   */
+  const titlesHere = new Set(
+    entity.appearsIn.flatMap((slug) => {
+      const story = content.stories.find((s) => s.slug === slug);
+      return story ? [story.title] : [];
+    }),
+  );
+  const plainName = (name: string) => {
+    const open = name.lastIndexOf(" (");
+    if (open === -1 || !name.endsWith(")")) return name;
+    return titlesHere.has(name.slice(open + 2, -1)) ? name.slice(0, open) : name;
+  };
+
+  return entity.locations.flatMap((ref) => {
+    const location = getLocation(ref);
+    if (!location) return [];
+    const here = (e: { locations: string[] }) =>
+      e.locations.some((l) => refSlug(l) === location.slug);
+    const isSelf = (kind: string, slug: string) => kind === self && slug === entity.slug;
+
+    const figures: CompanyFigure[] = [
+      ...content.characters
+        .filter((c) => here(c) && sharesStory(c) && !isSelf("characters", c.slug))
+        .map((c) => ({
+          href: `/characters/${c.slug}`,
+          name: plainName(c.name),
+          kind: "characters" as const,
+        }))
+        .sort(byName),
+      ...content.creatures
+        .filter((c) => here(c) && sharesStory(c) && !isSelf("creatures", c.slug))
+        .map((c) => ({
+          href: `/creatures/${c.slug}`,
+          name: plainName(c.name),
+          kind: "creatures" as const,
+        }))
+        .sort(byName),
+    ];
+
+    return [{ href: locationHref(ref), name: location.name, figures }];
+  });
+}
+
+/** The size of the atlas, printed as its imprint line on the front chart. */
+export function getAtlasTally() {
+  const content = loadContent();
+  const entities = [...content.locations, ...content.characters, ...content.creatures];
+  return {
+    locations: content.locations.length,
+    characters: content.characters.length,
+    creatures: content.creatures.length,
+    stories: content.stories.length,
+    quotations: entities.reduce((n, e) => n + e.sources.length, 0),
+  };
+}
+
 export function getCharactersAt(locationSlug: string): Character[] {
   return loadContent().characters.filter((c) => c.locations.some((l) => refSlug(l) === locationSlug));
 }

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { CompanyAtPlace, CompanyFigure } from "@/shared/lib/content";
 
 /** Shared building blocks of entity pages: chip link lists and source quotes. */
 
@@ -43,6 +44,86 @@ export function ChipSection({ title, items }: { title: string; items: ChipItem[]
             >
               {item.label}
             </Link>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+/**
+ * An entity's places with the company each one holds (ADR-0006) — the
+ * character's and the creature's answer to the cross-references a location
+ * page has always printed. Rows keep the entity's own order of places; a
+ * place with nobody else in it still prints, because this section *is* the
+ * list of locations. Company is set in a running line rather than in chips:
+ * a Dunwich figure shares its village with twenty others, and twenty boxes
+ * would read as a wall where a printed line reads as a crowd.
+ *
+ * Persons and beasts are set on lines of their own under a small-caps label.
+ * Run together they misread: a beast can be named for the tale it comes from
+ * («The Colour Out of Space» is both a story and a creature here), and in
+ * italics at the end of a line of people it looks like a source credit
+ * rather than a member of the company.
+ */
+function CompanyLine({
+  label,
+  figures,
+}: {
+  label: string;
+  figures: CompanyFigure[];
+}) {
+  if (figures.length === 0) return null;
+  return (
+    <p className="mt-1 text-sm leading-relaxed text-muted">
+      <span className="mr-2 text-[11px] uppercase tracking-widest text-muted/70">
+        {label}
+      </span>
+      {figures.map((figure, i) => (
+        <span key={figure.href}>
+          {i > 0 && <span className="mx-1.5">·</span>}
+          <Link
+            href={figure.href}
+            className={`cap-first transition-colors hover:text-accent ${
+              figure.kind === "creatures" ? "font-serif italic" : ""
+            }`}
+          >
+            {figure.name}
+          </Link>
+        </span>
+      ))}
+    </p>
+  );
+}
+
+export function CompanySection({
+  title,
+  places,
+}: {
+  title: string;
+  places: CompanyAtPlace[];
+}) {
+  if (places.length === 0) return null;
+  return (
+    <section className="mt-10">
+      <h2 className="font-display text-2xl">{title}</h2>
+      <ul className="mt-4 space-y-4">
+        {places.map((place) => (
+          <li key={place.href} className="border-l-2 border-line pl-4">
+            <Link
+              href={place.href}
+              className="cap-first font-display text-lg transition-colors hover:text-accent"
+            >
+              {place.name}
+            </Link>
+            <CompanyLine
+              label="Persons"
+              figures={place.figures.filter((f) => f.kind === "characters")}
+            />
+            <CompanyLine
+              label="Creatures"
+              figures={place.figures.filter((f) => f.kind === "creatures")}
+            />
           </li>
         ))}
       </ul>

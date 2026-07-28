@@ -1,8 +1,9 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { ChartLink } from "@/widgets/world-map/chart-link";
+import type { CompanyAtPlace } from "@/shared/lib/content";
 import {
-  ChipSection,
+  CompanySection,
   Description,
   SourcesSection,
   type SourceItem,
@@ -23,7 +24,8 @@ export interface EntityArticleProps {
   plate?: ReactNode;
   description: string;
   fate?: string;
-  locations: { href: string; name: string }[];
+  /** The character's places, each with the company the same tale puts there. */
+  places: CompanyAtPlace[];
   stories: { slug: string; title: string; year: number }[];
   sources: SourceItem[];
 }
@@ -35,7 +37,7 @@ export function EntityArticle({
   plate,
   description,
   fate,
-  locations,
+  places,
   stories,
   sources,
 }: EntityArticleProps) {
@@ -67,10 +69,7 @@ export function EntityArticle({
         </p>
       )}
 
-      <ChipSection
-        title="Locations"
-        items={locations.map((l) => ({ href: l.href, label: l.name }))}
-      />
+      <CompanySection title="Locations" places={places} />
 
       <SourcesSection sources={sources} />
 

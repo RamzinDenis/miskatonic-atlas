@@ -2,14 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
+  getCompany,
   getCreature,
   getCreatures,
-  getLocation,
   getStory,
-  locationHref,
 } from "@/shared/lib/content";
 import { metaDescription } from "@/shared/lib/meta";
-import { ChipSection, Description, SourcesSection } from "@/shared/ui/sections";
+import { CompanySection, Description, SourcesSection } from "@/shared/ui/sections";
 import { BestiaryFigure } from "@/widgets/bestiary/figure";
 import { LostPlate } from "@/widgets/bestiary/lost-plate";
 import { bestiaryFolio } from "@/widgets/bestiary/registry";
@@ -49,10 +48,9 @@ export default async function CreaturePage({ params }: PageProps<"/creatures/[sl
   const plate = bestiaryFolio(getCreatures()).find((entry) => entry.slug === slug)!;
   const fig = plate.fig;
 
-  const haunts = creature.locations.flatMap((ref) => {
-    const loc = getLocation(ref);
-    return loc ? [{ href: locationHref(ref), label: loc.name }] : [];
-  });
+  /* Its haunts, each naming who observed the beast there — the naturalist's
+     leaf keeps the witnesses under the range, as such leaves always did. */
+  const haunts = getCompany(creature, "creatures");
   const appearsIn = creature.appearsIn.flatMap((s) => getStory(s) ?? []);
 
   return (
@@ -108,7 +106,7 @@ export default async function CreaturePage({ params }: PageProps<"/creatures/[sl
           </p>
         )}
 
-        <ChipSection title="Haunts" items={haunts} />
+        <CompanySection title="Haunts" places={haunts} />
 
         <SourcesSection
           sources={creature.sources.map((source) => {

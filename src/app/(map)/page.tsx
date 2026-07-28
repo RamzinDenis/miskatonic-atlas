@@ -1,5 +1,6 @@
 import { getMapLegend, getMapLocations } from "@/shared/lib/content";
 import { FRONT_CHART_ID, getAtlasMap } from "@/shared/maps";
+import { ChartImprint } from "@/shared/ui/imprint";
 import { SiteHeader } from "@/shared/ui/site-header";
 import { WorldMap } from "@/widgets/world-map";
 
@@ -27,6 +28,7 @@ export default function Home() {
       />
 
       <SiteHeader floating />
+      <ChartImprint />
     </div>
   );
 }

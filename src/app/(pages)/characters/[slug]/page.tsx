@@ -3,9 +3,8 @@ import { notFound } from "next/navigation";
 import {
   getCharacter,
   getCharacters,
-  getLocation,
+  getCompany,
   getStory,
-  locationHref,
 } from "@/shared/lib/content";
 import { metaDescription } from "@/shared/lib/meta";
 import { EntityArticle } from "@/widgets/entity-article";
@@ -40,10 +39,7 @@ export default async function CharacterPage({ params }: PageProps<"/characters/[
       plate={getPlate("characters", character.slug, true)}
       description={character.description}
       fate={character.fate}
-      locations={character.locations.flatMap((s) => {
-        const loc = getLocation(s);
-        return loc ? [{ href: locationHref(s), name: loc.name }] : [];
-      })}
+      places={getCompany(character, "characters")}
       stories={character.appearsIn.flatMap((s) => getStory(s) ?? [])}
       sources={character.sources.map((source) => {
         const story = getStory(source.storySlug);
