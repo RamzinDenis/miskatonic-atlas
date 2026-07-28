@@ -204,8 +204,10 @@ body {
 .world-map .leaflet-overlay-pane img.atlas-scan:first-child {
   box-shadow:
     0 0 0 1px rgba(8, 6, 2, 0.9),
-    0 3px 10px rgba(0, 0, 0, 0.65),
-    0 18px 55px rgba(0, 0, 0, 0.6);
+    0 2px 3px rgba(0, 0, 0, 0.8),
+    0 14px 28px rgba(0, 0, 0, 0.7),
+    0 38px 80px rgba(0, 0, 0, 0.6),
+    0 70px 160px rgba(0, 0, 0, 0.5);
 }
 
 /*
@@ -219,7 +221,15 @@ body {
  * regions nav so it can be there on the first frame.
  */
 .world-map .leaflet-container {
-  background: #0e0c08;
+  /* The pool of light the sheet lies in: a black shadow on a near-black
+     binding is invisible, so the pedestal is made of light, not dark —
+     the field brightens toward where the paper rests and falls off to
+     the binding at the window's edge. */
+  background: radial-gradient(
+    ellipse 70% 66% at 50% 47%,
+    #241d10,
+    #0e0c08 86%
+  );
   font: inherit;
 }
 
@@ -295,17 +305,6 @@ body {
     inset 1px 0 0 rgba(255, 246, 216, 0.08),
     inset -1px 0 0 rgba(15, 9, 3, 0.5),
     inset 0 -2px 10px rgba(15, 9, 3, 0.45);
-}
-
-/* The neat line: a double rule printed on the field just inside the
-   window, the way a bound plate is ruled around its mat. On the vignette
-   (not the grain) so the gilt is not multiplied away against the dark. */
-.world-map-vignette::after {
-  content: "";
-  position: absolute;
-  inset: 10px;
-  border: 3px double rgba(195, 158, 102, 0.28);
-  border-radius: 1px;
 }
 
 /*
