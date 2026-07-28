@@ -1294,12 +1294,14 @@ a:focus-visible > .chart-tile {
 
 .chart-unroll-roll--left {
   right: 50%;
-  animation: chart-unroll-left 1.35s cubic-bezier(0.36, 0.02, 0.2, 1) forwards;
+  /* Linear here on purpose: every stage of the keyframes carries its own
+     curve (see below), and a shorthand curve would only fight them. */
+  animation: chart-unroll-left 1.35s linear forwards;
 }
 
 .chart-unroll-roll--right {
   left: 50%;
-  animation: chart-unroll-right 1.35s cubic-bezier(0.36, 0.02, 0.2, 1) forwards;
+  animation: chart-unroll-right 1.35s linear forwards;
 }
 
 .chart-unroll-roll--left::after {
@@ -1355,20 +1357,47 @@ a:focus-visible > .chart-tile {
   }
 }
 
+/*
+ * The weight of the volume, written as stages rather than as one curve. A
+ * single ease-out spends its whole tail creeping the last stretch, which
+ * reads as the animation running out of budget; a heavy board instead
+ * gathers speed, all but stops as it comes down (the hitch at 74–82%: a
+ * tenth of a second in which it moves a single percent), and then settles
+ * the rest in one short fall. The timing function is declared per stage —
+ * the shorthand's curve only governs the run-up.
+ */
 @keyframes chart-unroll-left {
-  from {
+  0% {
     transform: translateX(0);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.62, 0.92);
   }
-  to {
+  74% {
+    transform: translateX(-92%);
+    animation-timing-function: linear;
+  }
+  82% {
+    transform: translateX(-93%);
+    animation-timing-function: cubic-bezier(0.24, 0.72, 0.3, 1);
+  }
+  100% {
     transform: translateX(-101%);
   }
 }
 
 @keyframes chart-unroll-right {
-  from {
+  0% {
     transform: translateX(0);
+    animation-timing-function: cubic-bezier(0.42, 0, 0.62, 0.92);
   }
-  to {
+  74% {
+    transform: translateX(92%);
+    animation-timing-function: linear;
+  }
+  82% {
+    transform: translateX(93%);
+    animation-timing-function: cubic-bezier(0.24, 0.72, 0.3, 1);
+  }
+  100% {
     transform: translateX(101%);
   }
 }
