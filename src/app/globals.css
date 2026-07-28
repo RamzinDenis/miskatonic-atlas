@@ -1325,9 +1325,14 @@ a:focus-visible > .chart-tile {
  * their transition property (see .world-map .leaflet-marker-pane above), and
  * a mask leaves both untouched. The class is dropped once the rolls are off,
  * so nothing masked survives into ordinary use of the chart.
+ *
+ * The tracks are reached through the renderer's `svg` and NOT through the
+ * overlay pane that holds it: the chart sheet is an ImageOverlay and lives
+ * in that same pane, so masking the pane blanks the map itself and the dark
+ * binding shows through — the sheet must never be what the wave uncovers.
  */
 .world-map--unrolling .leaflet-marker-pane,
-.world-map--unrolling .leaflet-overlay-pane {
+.world-map--unrolling .leaflet-overlay-pane > svg {
   -webkit-mask-image: radial-gradient(
     ellipse 60% 220% at 50% 50%,
     #000 55%,
