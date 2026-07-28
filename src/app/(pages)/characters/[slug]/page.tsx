@@ -37,7 +37,7 @@ export default async function CharacterPage({ params }: PageProps<"/characters/[
       name={character.name}
       badge={character.role}
       summary={character.summary}
-      plate={getPlate("characters", character.slug)}
+      plate={getPlate("characters", character.slug, true)}
       description={character.description}
       fate={character.fate}
       locations={character.locations.flatMap((s) => {

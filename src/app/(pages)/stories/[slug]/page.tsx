@@ -68,7 +68,7 @@ export default async function StoryPage({ params }: PageProps<"/stories/[slug]">
 
       <p className="drop-cap-p mt-6 text-lg leading-relaxed">{story.summary}</p>
 
-      {getPlate("stories", story.slug)}
+      {getPlate("stories", story.slug, true)}
 
       <RouteInset storySlug={story.slug} />
 

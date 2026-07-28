@@ -52,12 +52,17 @@ function insetChartHref(location: Location): string | undefined {
 function LocationBody({
   location,
   inset = true,
+  lead = false,
 }: {
   location: Location;
   /** Sub-location sections drop their inset when the parent already printed
       one — a town and its landmarks are the same crop of the same sheet,
       and one page needs it once. */
   inset?: boolean;
+  /** The body that opens the page: its plate is the first engraving a
+      reader sees, so it is worth preloading. A sub-location's plate is
+      somewhere below the fold and stays lazy. */
+  lead?: boolean;
 }) {
   const connected = location.connectedTo.flatMap((ref) => {
     const loc = getLocation(ref);
@@ -70,7 +75,7 @@ function LocationBody({
     <>
       <p className="mt-6 text-lg leading-relaxed">{location.summary}</p>
 
-      {getPlate("locations", location.slug)}
+      {getPlate("locations", location.slug, lead)}
 
       <Description text={location.description} />
 
@@ -147,7 +152,7 @@ export default async function LocationPage({ params }: PageProps<"/locations/[sl
             same crop of the same sheet). With sub-locations it closes the
             article instead of opening it, so the chart excerpt arrives once
             every place it covers has been read — not before the first. */}
-        <LocationBody location={location} inset={children.length === 0} />
+        <LocationBody location={location} inset={children.length === 0} lead />
 
         {children.length > 0 && (
           <section className="mt-12">

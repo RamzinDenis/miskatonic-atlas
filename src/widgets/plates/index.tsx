@@ -142,7 +142,7 @@ const plates: Record<string, PlateDef> = {
   },
 };
 
-function Plate({ def }: { def: PlateDef }) {
+function Plate({ def, priority }: { def: PlateDef; priority: boolean }) {
   if (!def.image) return null;
   return (
     <figure className="mt-8">
@@ -151,6 +151,7 @@ function Plate({ def }: { def: PlateDef }) {
           src={def.image}
           alt={def.alt}
           placeholder="blur"
+          priority={priority}
           sizes="(max-width: 640px) 100vw, 448px"
           className="block h-auto w-full"
         />
@@ -167,13 +168,23 @@ function Plate({ def }: { def: PlateDef }) {
   );
 }
 
-/** The plate for a page, or null — most pages have none. */
+/**
+ * The plate for a page, or null — most pages have none.
+ *
+ * `priority` is for the page whose plate is its first image: next/image is
+ * lazy by default, so an engraving standing under the header is only
+ * discovered once the browser has laid the page out, and the reader watches
+ * its blur for a beat. Preloading it with the document removes that beat.
+ * A plate further down the page must stay lazy — pulling an engraving the
+ * reader may never scroll to would take bandwidth from the one on screen.
+ */
 export function getPlate(
   kind: "locations" | "characters" | "creatures" | "stories",
   slug: string,
+  priority = false,
 ): ReactNode {
   const def = plates[`${kind}/${slug}`];
-  return def && def.image ? <Plate def={def} /> : null;
+  return def && def.image ? <Plate def={def} priority={priority} /> : null;
 }
 
 export interface PlateThumb {
