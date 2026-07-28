@@ -169,9 +169,41 @@ body {
   top: 3.25rem;
 }
 
+/*
+ * The binding is painted by the widget's own box, not by leaflet's: a chart
+ * mounting for the first time in a session needs a moment to draw its
+ * sheet, and an opaque map container would make that moment a flash of
+ * black. Transparent, it lets the thumb underlay below show through.
+ */
+.world-map {
+  background-color: #0e0c08;
+}
+
 .world-map .leaflet-container {
-  background: #0e0c08;
+  background: transparent;
   font: inherit;
+}
+
+/* The thumb blown up behind the map, toned to match the sheet that will
+   replace it. Dropped the moment the chart itself is printed, so the
+   margins around the sheet go back to being bare binding. */
+.world-map::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--chart-thumb);
+  background-position: center;
+  background-size: cover;
+  filter: sepia(0.6) saturate(0.62) brightness(0.8) contrast(1.07);
+}
+
+.world-map--art::before {
+  filter: sepia(0.15) saturate(0.88) brightness(0.95) contrast(1.03);
+}
+
+.world-map--printed::before {
+  content: none;
 }
 
 /* The Lovecraft tint lives on the site, not in the PD scan itself. */

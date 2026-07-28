@@ -17,6 +17,7 @@ import {
   useRef,
   useState,
   useEffect,
+  type CSSProperties,
 } from "react";
 import { MapContainer, Marker, Polyline, ZoomControl } from "react-leaflet";
 import { ChartSheet, chartIsWarm } from "./chart-sheet";
@@ -300,7 +301,14 @@ export default function WorldMapClient({
 
   return (
     <div
-      className={`world-map absolute inset-0${labelsShown ? " world-map--labels" : ""}${paperReady ? " world-map--printed" : ""}`}
+      className={`world-map absolute inset-0${labelsShown ? " world-map--labels" : ""}${paperReady ? " world-map--printed" : ""}${chart.tone === "art" ? " world-map--art" : ""}`}
+      /* The thumb, blown up to fill the frame, stands behind the leaflet
+         map until the sheet is printed: a chart opened for the first time
+         this session takes a moment to draw, and that moment should show
+         aged paper rather than the bare binding. Once printed the underlay
+         is dropped and the binding shows through the sheet's margins as
+         before. */
+      style={{ "--chart-thumb": `url(${chart.lqipUrl})` } as CSSProperties}
     >
       <MapContainer
         ref={mapRef}
