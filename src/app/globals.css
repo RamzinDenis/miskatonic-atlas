@@ -170,55 +170,18 @@ body {
 }
 
 /*
- * The binding is painted by the widget's own box, not by leaflet's: a chart
- * mounting for the first time in a session needs a moment to draw its
- * sheet, and an opaque map container would make that moment a flash of
- * black. Transparent, it lets the thumb underlay below show through.
+ * The binding a chart sits in. Nothing stands in for the sheet while it
+ * loads: a second copy of the paper outside leaflet is laid out by CSS
+ * while the real one is laid out by getBoundsZoom, and the two cannot be
+ * made to agree — the swap reads as the sheet jumping in size, which is
+ * worse than the moment of bare binding it was meant to cover. The stand-in
+ * that does agree is the thumb ImageOverlay inside the map (chart-sheet),
+ * drawn to the same bounds as the sheet; it is warmed on hover from the
+ * regions nav so it can be there on the first frame.
  */
-.world-map {
-  background-color: #0e0c08;
-}
-
 .world-map .leaflet-container {
-  background: transparent;
+  background: #0e0c08;
   font: inherit;
-}
-
-/*
- * The thumb behind the map, toned to match the sheet that will replace it
- * and laid out the way that sheet is about to land — otherwise the swap is
- * a visible jump in scale. A phone opens at "viewport filled" and a wider
- * screen fits the whole sheet (see FitZoomLimit in map-utils), so the thumb
- * covers below the breakpoint and is contained above it. Leaflet's zoomSnap
- * makes its fit a quarter-step coarser than `contain`, so the sheet still
- * arrives a touch smaller than the thumb — small enough not to read as
- * movement. Dropped the moment the chart is printed, and the margins go
- * back to being bare binding.
- */
-.world-map::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background-image: var(--chart-thumb);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: sepia(0.6) saturate(0.62) brightness(0.8) contrast(1.07);
-}
-
-@media (min-width: 640px) {
-  .world-map::before {
-    background-size: contain;
-  }
-}
-
-.world-map--art::before {
-  filter: sepia(0.15) saturate(0.88) brightness(0.95) contrast(1.03);
-}
-
-.world-map--printed::before {
-  content: none;
 }
 
 /* The Lovecraft tint lives on the site, not in the PD scan itself. */
