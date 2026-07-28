@@ -33,6 +33,7 @@ import {
 } from "./geometry";
 import { LegendPanel } from "./legend-panel";
 import {
+  claimGreeting,
   DeepLinkFocus,
   FitZoomLimit,
   focusCenter,
@@ -78,10 +79,6 @@ interface Props {
   picker?: boolean;
   /** Picker only: the placement queue — locations with no `map` yet. */
   unplaced?: UnplacedLocation[];
-  /** Play the opening gesture when this chart prints for the first time.
-      Set by the frontispiece only: a sheet opened from Regions is a reader
-      already under way, and pulling his view about would be a rude greeting. */
-  opening?: boolean;
 }
 
 export default function WorldMapClient({
@@ -90,7 +87,6 @@ export default function WorldMapClient({
   legend,
   picker = false,
   unplaced = [],
-  opening = false,
 }: Props) {
   const router = useRouter();
   const mapRef = useRef<LeafletMap | null>(null);
@@ -125,10 +121,25 @@ export default function WorldMapClient({
   /* A cached sheet is a reader coming back, not arriving: no greeting. */
   const [startedWarm] = useState(() => chartIsWarm(chart));
   const [paperReady, setPaperReady] = useState(startedWarm);
-  const [arrival] = useState(() => greetingAllowed());
+  /* Any chart may greet, but only the session's first (claimGreeting), and
+     only a cold one met without a deep-link errand. Claimed in an effect
+     with a stable owner token: StrictMode renders twice, and a claim made
+     in a lazy initialiser would beat its own second pass. */
+  const [arrival, setArrival] = useState(false);
+  const greetingOwner = useRef({});
+  useEffect(() => {
+    if (
+      !picker &&
+      claimGreeting(greetingOwner.current) &&
+      !startedWarm &&
+      greetingAllowed()
+    ) {
+      setArrival(true);
+    }
+  }, [picker, startedWarm]);
   /* The opening — rolls parting, camera drawing back — waits for the paper:
      a greeting over the bare binding is a jerk, not a greeting. */
-  const greeting = opening && !picker && !startedWarm && arrival && paperReady;
+  const greeting = arrival && paperReady;
   const [opened, setOpened] = useState(false);
   const handleOpened = useCallback(() => setOpened(true), []);
   /* Stable: ChartTiles holds a leaflet layer, and a new identity here would

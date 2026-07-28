@@ -106,9 +106,9 @@ const OPENING_SECONDS = 1.8;
  * camera's draw-back alike. Motion stays away where it would be wrong or
  * unwelcome: a `?focus=` deep link has its own place to land and must not be
  * overruled, and a reduced-motion setting means what it says. The caller adds
- * the rest of the test — the frontispiece only, and only on a cold sheet
- * (see `startedWarm`), since greeting a reader on every return from a
- * location page turns a greeting into a tic.
+ * the rest of the test — a cold sheet (see `startedWarm`) holding the
+ * session's greeting (claimGreeting), since greeting a reader on every
+ * return from a location page turns a greeting into a tic.
  *
  * Touches `window`, so call it from an effect or a lazy initialiser.
  */
@@ -120,9 +120,29 @@ export function greetingAllowed(): boolean {
 }
 
 /**
- * The opening gesture of the front chart: the sheet prints a little closer
- * than it rests, then draws back to its resting frame while the wrapping
- * rolls off it. A reader who has just arrived learns in under two seconds
+ * The atlas greets once a session, and the greeting belongs to the first
+ * chart the reader meets — whether or not the ceremony actually plays
+ * there. A sheet that arrives warm, or lands focused by a deep link, has
+ * still been met; unrolling the *second* sheet of the journey would be the
+ * misplaced ceremony this latch exists to prevent. The case is routine on
+ * a phone: Regions is tapped, not hovered, so nothing warms the next sheet
+ * and every switch used to qualify as a cold arrival.
+ *
+ * Module state, so a hard reload — a new visit — starts the claim afresh.
+ * Claiming is idempotent per owner token: StrictMode runs everything
+ * twice, and both passes of one widget must hear the same answer.
+ */
+let greetingOwner: unknown = null;
+
+export function claimGreeting(owner: unknown): boolean {
+  greetingOwner ??= owner;
+  return greetingOwner === owner;
+}
+
+/**
+ * The opening gesture of a chart: the sheet prints a little closer than it
+ * rests, then draws back to its resting frame while the wrapping rolls off
+ * it. A reader who has just arrived learns in under two seconds
  * that the chart is a thing that moves — that it can be pushed, pulled and
  * opened — without being told so in words.
  *
