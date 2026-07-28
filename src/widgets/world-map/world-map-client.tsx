@@ -340,7 +340,9 @@ export default function WorldMapClient({
 
   return (
     <div
-      className={`world-map absolute inset-0${labelsShown ? " world-map--labels" : ""}${paperReady ? " world-map--printed" : ""}${greeting && !opened ? " world-map--unrolling" : ""}`}
+      /* Position only: the frame's geometry — the passe-partout inset —
+         lives in globals.css («The passe-partout»). */
+      className={`world-map absolute${labelsShown ? " world-map--labels" : ""}${paperReady ? " world-map--printed" : ""}${greeting && !opened ? " world-map--unrolling" : ""}`}
     >
       <MapContainer
         ref={mapRef}
