@@ -40,6 +40,7 @@ export function ChipSection({ title, items }: { title: string; items: ChipItem[]
           <li key={item.href}>
             <Link
               href={item.href}
+              transitionTypes={["nav-forward"]}
               className="cap-first inline-block rounded-md border border-line bg-surface px-4 py-2 text-sm transition-colors hover:border-accent"
             >
               {item.label}
@@ -84,6 +85,7 @@ function CompanyLine({
           {i > 0 && <span className="mx-1.5">·</span>}
           <Link
             href={figure.href}
+            transitionTypes={["nav-forward"]}
             className={`cap-first transition-colors hover:text-accent ${
               figure.kind === "creatures" ? "font-serif italic" : ""
             }`}
@@ -112,6 +114,7 @@ export function CompanySection({
           <li key={place.href} className="border-l-2 border-line pl-4">
             <Link
               href={place.href}
+              transitionTypes={["nav-forward"]}
               className="cap-first font-display text-lg transition-colors hover:text-accent"
             >
               {place.name}

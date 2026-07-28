@@ -18,6 +18,15 @@ const ART_CACHE =
 
 const nextConfig: NextConfig = {
   /**
+   * React's <ViewTransition> — the leaves of the atlas turn instead of being
+   * replaced (docs/01-app/02-guides/view-transitions.md). Experimental in
+   * Next; a browser without the View Transitions API simply swaps the page
+   * as before, so nothing here is load-bearing.
+   */
+  experimental: {
+    viewTransition: true,
+  },
+  /**
    * The admin tooling (/admin/coords picker, /admin/review) writes to the
    * repo's files and has no auth — it exists for the editor's machine only.
    * Its routes use the `.dev.tsx`/`.dev.ts` extensions, which a production

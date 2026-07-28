@@ -1426,3 +1426,87 @@ a:focus-visible > .chart-tile {
     transform: translateX(101%);
   }
 }
+
+/* --- Turning the leaves ------------------------------------------------- */
+
+/*
+ * Page turns (src/shared/ui/transitions.ts). Horizontal direction carries
+ * the reader's place in the book: deeper in, the leaf he leaves slides left
+ * and the new one comes from the right; coming back out, the other way.
+ *
+ * The timing is deliberately asymmetric — the old leaf goes quickly so it
+ * stops competing for attention, the new one arrives slower and only after
+ * the old one has left. 44px of travel is enough to read as direction
+ * without making the eye chase anything across the sheet.
+ */
+::view-transition-old(.nav-forward) {
+  --leaf-shift: -44px;
+  animation:
+    140ms ease-in both leaf-fade reverse,
+    360ms ease-in-out both leaf-slide reverse;
+}
+
+::view-transition-new(.nav-forward) {
+  --leaf-shift: 44px;
+  animation:
+    200ms ease-out 140ms both leaf-fade,
+    360ms ease-in-out both leaf-slide;
+}
+
+::view-transition-old(.nav-back) {
+  --leaf-shift: 44px;
+  animation:
+    140ms ease-in both leaf-fade reverse,
+    360ms ease-in-out both leaf-slide reverse;
+}
+
+::view-transition-new(.nav-back) {
+  --leaf-shift: -44px;
+  animation:
+    200ms ease-out 140ms both leaf-fade,
+    360ms ease-in-out both leaf-slide;
+}
+
+@keyframes leaf-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes leaf-slide {
+  from {
+    translate: var(--leaf-shift);
+  }
+  to {
+    translate: 0;
+  }
+}
+
+/* The masthead holds still and stays on top; showing both its old and new
+   snapshot at once would flash the title twice. */
+::view-transition-group(site-header) {
+  animation: none;
+  z-index: 100;
+}
+
+::view-transition-old(site-header) {
+  display: none;
+}
+
+::view-transition-new(site-header) {
+  animation: none;
+}
+
+/* Sliding pages are the commonest trigger of motion sickness: a reader who
+   asked for less motion gets the plain swap the browser does without us. */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+  }
+}

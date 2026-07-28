@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ViewTransition } from "react";
+import { LEAVE_CHART } from "@/shared/ui/transitions";
 import { getMapLegend, getMapLocations } from "@/shared/lib/content";
 import { FRONT_CHART_ID, MAPS } from "@/shared/maps";
 import { SiteHeader } from "@/shared/ui/site-header";
@@ -34,6 +36,9 @@ export default async function RegionalMapPage({ params }: PageProps<"/maps/[mapI
   if (!chart || mapId === FRONT_CHART_ID) notFound();
 
   return (
+    /* Leaves like a leaf, arrives without animation — the frontispiece
+       explains why (the widget mounts only in the browser). */
+    <ViewTransition exit={LEAVE_CHART} enter="none" default="none">
     <div className="relative h-dvh overflow-hidden">
       {/* Thumb + overview copy with the HTML, as on the frontispiece. */}
       <link rel="preload" as="image" href={chart.lqipUrl} />
@@ -47,5 +52,6 @@ export default async function RegionalMapPage({ params }: PageProps<"/maps/[mapI
 
       <SiteHeader floating />
     </div>
+    </ViewTransition>
   );
 }

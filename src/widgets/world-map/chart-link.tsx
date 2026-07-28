@@ -37,6 +37,9 @@ export function ChartLink({
       href={focus ? `${chartPath(chartId)}?focus=${focus}` : chartPath(chartId)}
       onMouseEnter={warm}
       onFocus={warm}
+      /* The chart is where a reader comes back to, never deeper in: the leaf
+         he is on leaves to the right, the way a page turns back. */
+      transitionTypes={["nav-back"]}
       {...props}
     />
   );

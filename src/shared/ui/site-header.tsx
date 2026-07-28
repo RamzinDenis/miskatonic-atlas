@@ -8,6 +8,10 @@ import { ChartLink } from "@/widgets/world-map/chart-link";
 export function SiteHeader({ floating = false }: { floating?: boolean }) {
   return (
     <header
+      /* The masthead is the reader's fixed point while a leaf turns under
+         it: named here, held still in globals.css. A masthead that slides
+         with the content reads as the whole viewport moving. */
+      style={{ viewTransitionName: "site-header" }}
       className={
         floating
           ? "site-header-floating absolute inset-x-0 top-0 z-[1100]"
