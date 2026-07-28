@@ -166,48 +166,54 @@ body {
 
 /*
  * The passe-partout. The chart used to run full-bleed, and every attempt
- * to make the sheet read as raised paper died of that: at the fit zoom the
- * bitmap fills the window, and a shadow with nowhere to fall is invisible.
- * The margin has to be *made* — a field of binding around the map, and the
- * map itself a plate lying on it: contact shadow close in, soft lift
- * further out, a hairline of light along the top where the room's light
- * would catch a raised edge (the light lives on the vignette element).
+ * to make the sheet read as raised paper died of that: at the fit zoom
+ * the bitmap fills the window, and a shadow with nowhere to fall is
+ * invisible. The margin has to be *made* — a field of binding around the
+ * map, the map itself a plate lying on it, the masthead standing on the
+ * binding above instead of floating over the paper.
  *
- * The top field clears the masthead, which now stands on the binding
- * instead of floating over the paper. The foot is deeper where the imprint
- * line prints under the plate (sm+), as a plate's caption would — and the
- * deeper foot holds on the regional sheets too, so the frame does not jump
- * between two charts mid-dissolve.
+ * The first fitting went further — a pedestal zoom that held the sheet a
+ * snap step back from the frame — and paid a sixth of the sheet's size
+ * for it, which a large display refuses: lettering drawn for the full
+ * frame turns small for nothing. This fitting keeps the sheet at full
+ * size. The field is as thin as still reads as a field (at 1920 the loss
+ * is a rounding error), and the depth comes from light instead: the
+ * plate's shadow on the page, a hairline of light along its top edge,
+ * and the sheet's own shadow where a letterbox bares the binding inside.
  */
 .world-map {
-  inset: 3.1rem 0.45rem 0.45rem;
+  inset: 3.1rem 0.4rem 0.4rem;
   border-radius: 3px;
   overflow: hidden;
   box-shadow:
     0 0 0 1px rgba(8, 6, 2, 0.95),
     0 2px 8px rgba(0, 0, 0, 0.6),
-    0 18px 50px rgba(0, 0, 0, 0.55),
-    0 40px 110px rgba(0, 0, 0, 0.4);
+    0 18px 50px rgba(0, 0, 0, 0.5),
+    0 40px 110px rgba(0, 0, 0, 0.35);
 }
 
 @media (min-width: 640px) {
   .world-map {
-    inset: 3.4rem 0.9rem 2.2rem;
+    inset: 3.4rem 0.75rem 0.75rem;
   }
 }
 
 /*
- * The sheet's own shadow, riding pan and zoom with the paper. On the thumb
- * overlay only: the thumb is always mounted under the full copy at the same
- * bounds, and a shadow on both would print double-dark.
+ * The sheet's own shadow, riding pan and zoom with the paper. On the
+ * thumb overlay only: the thumb is always mounted under the full copy at
+ * the same bounds, and a shadow on both would print double-dark.
  */
 .world-map .leaflet-overlay-pane img.atlas-scan:first-child {
   box-shadow:
     0 0 0 1px rgba(8, 6, 2, 0.9),
-    0 2px 3px rgba(0, 0, 0, 0.8),
-    0 14px 28px rgba(0, 0, 0, 0.7),
-    0 38px 80px rgba(0, 0, 0, 0.6),
-    0 70px 160px rgba(0, 0, 0, 0.5);
+    0 3px 10px rgba(0, 0, 0, 0.65),
+    0 18px 55px rgba(0, 0, 0, 0.55);
+}
+
+/* The masthead stands on the binding above the plate now, so leaflet's
+   top-anchored controls need no clearance beyond their own margin. */
+.world-map .leaflet-top {
+  top: 0;
 }
 
 /*
@@ -222,13 +228,13 @@ body {
  */
 .world-map .leaflet-container {
   /* The pool of light the sheet lies in: a black shadow on a near-black
-     binding is invisible, so the pedestal is made of light, not dark —
-     the field brightens toward where the paper rests and falls off to
-     the binding at the window's edge. */
+     binding is invisible, so where the letterbox bares the binding the
+     field brightens toward the paper's resting place and falls off to
+     the window's edge — the shadow gets ground to fall on. */
   background: radial-gradient(
     ellipse 70% 66% at 50% 47%,
-    #241d10,
-    #0e0c08 86%
+    #1f1910,
+    #0e0c08 85%
   );
   font: inherit;
 }
@@ -239,11 +245,9 @@ body {
 }
 
 /* Generated "art" sheets (maps.ts tone: "art") are aged at birth — only a
-   light touch to sit them in the dark binding, not the full scan tint.
-   Contrast leans a shade harder than the scans': it is what gives the
-   drawn hatching the bitten-line weight of an engraving. */
+   light touch to sit them in the dark binding, not the full scan tint. */
 .world-map .atlas-scan--art {
-  filter: sepia(0.22) saturate(0.8) brightness(0.93) contrast(1.12);
+  filter: sepia(0.15) saturate(0.88) brightness(0.95) contrast(1.03);
 }
 
 /*
@@ -266,11 +270,11 @@ body {
 
 /*
  * The tooth of the paper: fractal noise and the faint verticals of laid
- * stock, multiplied over the whole plate. This is what keeps the sheet
- * from reading as a screenshot behind glass — a print has grain before it
- * has anything else. Static by intent: the tooth belongs to the plate's
- * face, like the vignette, and a texture that panned with the map would
- * cost a re-composite on every frame of a drag.
+ * stock, multiplied over the whole plate — quiet, but it is what keeps
+ * the sheet from reading as a screenshot behind glass. Static by intent:
+ * the tooth belongs to the plate's face, like the vignette, and a
+ * texture that panned with the map would cost a re-composite on every
+ * frame of a drag.
  */
 .world-map-grain {
   position: absolute;
@@ -278,17 +282,18 @@ body {
   z-index: 799; /* under the vignette, over the map panes */
   pointer-events: none;
   background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
     repeating-linear-gradient(
       90deg,
-      rgba(40, 25, 8, 0.06) 0 1px,
+      rgba(40, 25, 8, 0.045) 0 1px,
       transparent 1px 26px
     );
   mix-blend-mode: multiply;
 }
 
 /* The vignette doubles as the plate's light: a bright hairline along the
-   top edge, a shaded fall-off at the foot — the raised face of the paper. */
+   top edge where the room's light would catch a raised face, a shaded
+   fall-off at the foot. */
 .world-map-vignette {
   position: absolute;
   inset: 0;
@@ -301,10 +306,10 @@ body {
     rgba(8, 6, 2, 0.6) 100%
   );
   box-shadow:
-    inset 0 1px 0 rgba(255, 246, 216, 0.16),
-    inset 1px 0 0 rgba(255, 246, 216, 0.08),
+    inset 0 1px 0 rgba(255, 246, 216, 0.14),
+    inset 1px 0 0 rgba(255, 246, 216, 0.07),
     inset -1px 0 0 rgba(15, 9, 3, 0.5),
-    inset 0 -2px 10px rgba(15, 9, 3, 0.45);
+    inset 0 -2px 10px rgba(15, 9, 3, 0.4);
 }
 
 /*

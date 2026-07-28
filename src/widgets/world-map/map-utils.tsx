@@ -56,35 +56,23 @@ export function focusCenter(
 /**
  * Feature lettering is printed, but an overview sheet with every name set
  * at once is noise: names fade in from this zoom on (hover and selection
- * always show one). The legend keeps the full list at any zoom. Shifted a
- * snap step down with the resting frame (PEDESTAL_AIR), so the frames
- * that carried lettering before the pedestal still carry it.
+ * always show one). The legend keeps the full list at any zoom.
  */
-export const LABEL_MIN_ZOOM = -1.25;
+export const LABEL_MIN_ZOOM = -1;
 
 /**
- * The sheet's resting frame sits one zoom step back from "whole map
- * visible": a rim of binding shows on every side, and the paper lies on
- * its pool of light as a plate on a pedestal — a sheet pressed edge to
- * edge into the window reads as wallpaper, and its shadow has nowhere to
- * fall. One snap step exactly, because setZoom rounds to zoomSnap and any
- * finer number would silently round away.
- */
-const PEDESTAL_AIR = 0.25;
-
-/**
- * Panning must stay within the chart: zooming out stops at the resting
- * frame, so the image can never float loose inside the viewport — on
+ * Panning must stay within the chart: zooming out stops at "whole map
+ * visible", so the image can never float loose inside the viewport — on
  * every device, so a phone can still pinch out to the full sheet.
  */
 function applyFitZoomLimit(map: LeafletMap, bounds: LatLngBoundsExpression) {
-  const restZoom = map.getBoundsZoom(bounds, false) - PEDESTAL_AIR;
-  map.setMinZoom(restZoom);
-  if (map.getZoom() < restZoom) map.setZoom(restZoom);
+  const fitZoom = map.getBoundsZoom(bounds, false);
+  map.setMinZoom(fitZoom);
+  if (map.getZoom() < fitZoom) map.setZoom(fitZoom);
 }
 
 export function FitZoomLimit({ bounds }: { bounds: LatLngBoundsExpression }) {
-  const opened = useRef(false);
+  const covered = useRef(false);
   const map = useMapEvents({
     resize() {
       applyFitZoomLimit(map, bounds);
@@ -92,20 +80,16 @@ export function FitZoomLimit({ bounds }: { bounds: LatLngBoundsExpression }) {
   });
   useEffect(() => {
     applyFitZoomLimit(map, bounds);
-    /* The opening view, set once rather than on every resize. A desktop
-       opens at the resting frame — the whole sheet floating on the
-       binding. A portrait phone letterboxes the wide sheet into a strip
-       there — below the lettering threshold, with the marginalia beasts
-       towering over the shrunken country — so it OPENS at "viewport
-       filled" instead: the sheet covers the screen and the lettering is
-       up, while zooming out to the resting frame stays available. Runs
-       before DeepLinkFocus mounts, so a /?focus= link still lands on its
-       pin. */
-    if (!opened.current) {
-      opened.current = true;
-      if (window.matchMedia("(min-width: 640px)").matches) {
-        map.setZoom(map.getMinZoom(), { animate: false });
-      } else {
+    /* A portrait phone letterboxes the wide sheet into a strip at the fit
+       zoom — below the lettering threshold, with the marginalia beasts
+       towering over the shrunken country. So a phone OPENS at "viewport
+       filled" instead (once, not on every resize): the sheet covers the
+       screen and the lettering is up, while zooming out to the whole
+       sheet stays available. Runs before DeepLinkFocus mounts, so a
+       /?focus= link still lands on its pin. */
+    if (!covered.current) {
+      covered.current = true;
+      if (!window.matchMedia("(min-width: 640px)").matches) {
         map.setZoom(map.getBoundsZoom(bounds, true), { animate: false });
       }
     }

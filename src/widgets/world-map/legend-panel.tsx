@@ -102,7 +102,7 @@ export function LegendPanel({
     legend.some((story) => story.locations.some((l) => l.type === type)),
   );
 
-  /* top-4: the masthead stands on the binding above the frame now, so the
+  /* top-4: the masthead stands on the binding above the plate now, so the
      cartouche needs no clearance beyond the plate's own margin. */
   return (
     <div className="absolute left-4 top-4 z-[1000] flex max-h-[calc(100%-6rem)] flex-col items-start">
