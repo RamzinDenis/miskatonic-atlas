@@ -472,6 +472,7 @@ export default function WorldMapClient({
         )}
       </MapContainer>
 
+      <div className="world-map-grain" aria-hidden="true" />
       <div className="world-map-vignette" aria-hidden="true" />
 
       <ChartUnroll run={greeting} onDone={handleOpened} />

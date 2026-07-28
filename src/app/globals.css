@@ -229,9 +229,11 @@ body {
 }
 
 /* Generated "art" sheets (maps.ts tone: "art") are aged at birth — only a
-   light touch to sit them in the dark binding, not the full scan tint. */
+   light touch to sit them in the dark binding, not the full scan tint.
+   Contrast leans a shade harder than the scans': it is what gives the
+   drawn hatching the bitten-line weight of an engraving. */
 .world-map .atlas-scan--art {
-  filter: sepia(0.15) saturate(0.88) brightness(0.95) contrast(1.03);
+  filter: sepia(0.22) saturate(0.8) brightness(0.93) contrast(1.12);
 }
 
 /*
@@ -252,6 +254,29 @@ body {
   opacity: 1;
 }
 
+/*
+ * The tooth of the paper: fractal noise and the faint verticals of laid
+ * stock, multiplied over the whole plate. This is what keeps the sheet
+ * from reading as a screenshot behind glass — a print has grain before it
+ * has anything else. Static by intent: the tooth belongs to the plate's
+ * face, like the vignette, and a texture that panned with the map would
+ * cost a re-composite on every frame of a drag.
+ */
+.world-map-grain {
+  position: absolute;
+  inset: 0;
+  z-index: 799; /* under the vignette, over the map panes */
+  pointer-events: none;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    repeating-linear-gradient(
+      90deg,
+      rgba(40, 25, 8, 0.06) 0 1px,
+      transparent 1px 26px
+    );
+  mix-blend-mode: multiply;
+}
+
 /* The vignette doubles as the plate's light: a bright hairline along the
    top edge, a shaded fall-off at the foot — the raised face of the paper. */
 .world-map-vignette {
@@ -270,6 +295,17 @@ body {
     inset 1px 0 0 rgba(255, 246, 216, 0.08),
     inset -1px 0 0 rgba(15, 9, 3, 0.5),
     inset 0 -2px 10px rgba(15, 9, 3, 0.45);
+}
+
+/* The neat line: a double rule printed on the field just inside the
+   window, the way a bound plate is ruled around its mat. On the vignette
+   (not the grain) so the gilt is not multiplied away against the dark. */
+.world-map-vignette::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 3px double rgba(195, 158, 102, 0.28);
+  border-radius: 1px;
 }
 
 /*
