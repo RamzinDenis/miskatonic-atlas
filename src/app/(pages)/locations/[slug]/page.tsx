@@ -14,6 +14,7 @@ import { metaDescription } from "@/shared/lib/meta";
 import { chartPath, chartShowsChildren } from "@/shared/maps";
 import type { Location } from "@/shared/schemas";
 import { ChipSection, Description, SourcesSection } from "@/shared/ui/sections";
+import { ChartLink } from "@/widgets/world-map/chart-link";
 import { getPlate } from "@/widgets/plates";
 import { MapInset } from "@/widgets/world-map/map-inset";
 
@@ -120,12 +121,12 @@ export default async function LocationPage({ params }: PageProps<"/locations/[sl
 
   return (
     <div className="mx-auto w-full max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
-      <Link
-        href={homeChart ? chartPath(homeChart.mapId) : "/"}
+      <ChartLink
+        chartId={homeChart?.mapId}
         className="text-sm text-muted transition-colors hover:text-accent"
       >
         ← Map
-      </Link>
+      </ChartLink>
 
       <article className="parchment mt-4 px-6 py-10 sm:px-12 sm:py-12">
         <header>

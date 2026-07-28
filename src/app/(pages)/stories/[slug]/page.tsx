@@ -6,6 +6,7 @@ import { getStories, getStory, getStoryEntities } from "@/shared/lib/content";
 import { metaDescription } from "@/shared/lib/meta";
 import { SITE_URL } from "@/shared/site";
 import { ChipSection } from "@/shared/ui/sections";
+import { ChartLink } from "@/widgets/world-map/chart-link";
 import { getPlate, getStoryPlates } from "@/widgets/plates";
 import { RouteInset } from "@/widgets/world-map/route-inset";
 
@@ -52,9 +53,9 @@ export default async function StoryPage({ params }: PageProps<"/stories/[slug]">
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLd }}
       />
-      <Link href="/" className="text-sm text-muted transition-colors hover:text-accent">
+      <ChartLink className="text-sm text-muted transition-colors hover:text-accent">
         ← Map
-      </Link>
+      </ChartLink>
 
       <article className="parchment mt-4 px-6 py-10 sm:px-12 sm:py-12">
       <header>

@@ -1,17 +1,6 @@
 import Link from "next/link";
 import { MAPS, chartPath } from "./geometry";
-
-/**
- * Pull the target sheet's thumb before the click. `<Link>` prefetches the
- * route, not the paper — and the page's `rel="preload"` only helps a full
- * load, since on a client navigation that tag lands in the head at the very
- * moment the new chart mounts. Pointing at a tile happens hundreds of
- * milliseconds earlier, which is enough for the thumb to be decoded and the
- * chart to open on paper rather than on the binding.
- */
-function warmThumb(url: string) {
-  new Image().src = url;
-}
+import { warmChart } from "./sheets";
 
 /**
  * The atlas' sheets as a toggle of framed, lettered tiles in a cartouche of
@@ -63,8 +52,12 @@ export function RegionsNav({
                     key={m.id}
                     href={chartPath(m.id)}
                     title={m.title}
-                    onMouseEnter={() => warmThumb(m.lqipUrl)}
-                    onFocus={() => warmThumb(m.lqipUrl)}
+                    /* The widget's chunk is here already — this nav is
+                       drawn by it. What the next sheet still needs is its
+                       paper, and pointing at a tile buys the time to
+                       fetch it. */
+                    onMouseEnter={() => warmChart(m)}
+                    onFocus={() => warmChart(m)}
                     className="group flex flex-col items-center gap-1"
                   >
                     <span

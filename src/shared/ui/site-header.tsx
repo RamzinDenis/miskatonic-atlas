@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ChartLink } from "@/widgets/world-map/chart-link";
 
 /**
  * The atlas masthead. Inner pages render it as a normal document header;
@@ -18,22 +19,19 @@ export function SiteHeader({ floating = false }: { floating?: boolean }) {
           floating ? "py-3" : "py-4"
         }`}
       >
-        <Link
-          href="/"
-          className="whitespace-nowrap font-display text-base tracking-wide text-accent sm:text-lg"
-        >
+        {/* Both ways back to the chart warm it on the way: the masthead is
+            on every page, and most of those pages have never loaded the map
+            widget. */}
+        <ChartLink className="whitespace-nowrap font-display text-base tracking-wide text-accent sm:text-lg">
           Miskatonic Atlas
-        </Link>
+        </ChartLink>
         <nav className="flex gap-3 text-xs uppercase tracking-widest sm:gap-6">
           {/* The masthead itself opens the chart, so the phone drops the
               duplicate item; on wide screens Map stays as the plain word
               a first-time reader looks for. */}
-          <Link
-            href="/"
-            className="hidden text-muted transition-colors hover:text-accent sm:inline"
-          >
+          <ChartLink className="hidden text-muted transition-colors hover:text-accent sm:inline">
             Map
-          </Link>
+          </ChartLink>
           <Link
             href="/creatures"
             className="text-muted transition-colors hover:text-accent"

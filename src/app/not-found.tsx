@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { SiteHeader } from "@/shared/ui/site-header";
+import { ChartLink } from "@/widgets/world-map/chart-link";
 
 export const metadata: Metadata = {
   title: "Uncharted",
@@ -25,12 +25,9 @@ export default function NotFound() {
             No entry of the atlas answers to this address. Whatever stood here
             has sunk beneath the waves, or was never dredged up at all.
           </p>
-          <Link
-            href="/"
-            className="mt-6 inline-block italic text-accent transition-colors hover:text-foreground"
-          >
+          <ChartLink className="mt-6 inline-block italic text-accent transition-colors hover:text-foreground">
             ← Back to the chart
-          </Link>
+          </ChartLink>
           <div className="fleuron" aria-hidden="true">
             ❦
           </div>

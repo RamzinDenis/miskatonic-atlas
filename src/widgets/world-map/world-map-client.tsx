@@ -19,7 +19,7 @@ import {
   useEffect,
 } from "react";
 import { MapContainer, Marker, Polyline, ZoomControl } from "react-leaflet";
-import { ChartSheet, chartIsWarm } from "./chart-sheet";
+import { ChartSheet } from "./chart-sheet";
 import {
   MAPS,
   latLngToPixel,
@@ -52,6 +52,7 @@ import {
 } from "./marks";
 import { MONSTERS, type MapMonster } from "./monsters";
 import { PickerPanel } from "./picker-panel";
+import { chartIsWarm } from "./sheets";
 import { LocationPreview, TrackPreview } from "./previews";
 import { RegionsNav } from "./regions-nav";
 import { legLabelPlacement, legShipPlacement, routeLegs, shipFits, type RouteLeg } from "./routes";

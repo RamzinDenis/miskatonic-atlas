@@ -7,6 +7,7 @@ import {
   GITHUB_URL,
   SITE_NAME,
 } from "@/shared/site";
+import { ChartLink } from "@/widgets/world-map/chart-link";
 import { AuthorsSignup } from "./signup-form";
 
 export const metadata: Metadata = {
@@ -27,9 +28,9 @@ export default function AboutPage() {
 
   return (
     <div className="mx-auto w-full max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
-      <Link href="/" className="text-sm text-muted transition-colors hover:text-accent">
+      <ChartLink className="text-sm text-muted transition-colors hover:text-accent">
         ← Map
-      </Link>
+      </ChartLink>
 
       <article className="parchment mt-4 px-6 py-10 sm:px-12 sm:py-12">
         <header>

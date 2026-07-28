@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { ChartLink } from "@/widgets/world-map/chart-link";
 import {
   ChipSection,
   Description,
@@ -40,9 +41,9 @@ export function EntityArticle({
 }: EntityArticleProps) {
   return (
     <div className="mx-auto w-full max-w-3xl px-4 py-10 sm:px-6 sm:py-14">
-      <Link href="/" className="text-sm text-muted transition-colors hover:text-accent">
+      <ChartLink className="text-sm text-muted transition-colors hover:text-accent">
         ← Map
-      </Link>
+      </ChartLink>
 
       <article className="parchment mt-4 px-6 py-10 sm:px-12 sm:py-12">
       <header>
