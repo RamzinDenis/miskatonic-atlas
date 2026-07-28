@@ -1430,31 +1430,42 @@ a:focus-visible > .chart-tile {
 /* --- Turning the leaves ------------------------------------------------- */
 
 /*
- * Page turns. Written against the ROOT pseudo-elements rather than against
- * the classes React assigns (`::view-transition-old(.nav-forward)`): class
- * selectors inside view-transition pseudo-elements landed in browsers long
- * after the API itself, and where they are missing the transition still runs
- * — silently, with no animation attached and nothing in the console. The
- * root snapshots are as old as the API, so the turn plays everywhere the
- * transition plays at all.
+ * Page turns. Written against the NAMED snapshots of the leaf boundary
+ * (leaf-turn.tsx) — not against transition-type classes, which Tailwind's
+ * build strips from view-transition selectors, and not against the root
+ * snapshots, which React cancels outright when no boundary of its own is
+ * animating. The name is the one argument that both the build and React
+ * leave alone. The full story is told on LeafTurn.
  *
  * The price is that both directions read the same: the leaf leaving fades
  * and drifts left, the leaf arriving comes up from the right. Direction is
  * still declared on the links (transitions.ts) and costs nothing to keep —
- * the day class selectors are safe to lean on, the two directions can be
- * split apart again without touching a single component.
+ * the day Next delivers transition types, the two directions can be split
+ * apart again without touching a single component.
  *
  * Timing is asymmetric on purpose: the old leaf goes quickly so it stops
  * competing for attention, the new one arrives more slowly and only once the
  * old one is gone.
  */
-::view-transition-old(root) {
+/* Two leaves rarely stand the same height; morphing the frame between them
+   reads as the paper stretching. The frame holds, only the sheets move. */
+::view-transition-group(leaf),
+::view-transition-group(quire) {
+  animation: none;
+}
+
+/* The quire — the whole block of leaves ((pages)/layout.tsx) — turns with
+   the same gesture as a single leaf: it leaves when the reader goes to the
+   chart, arrives when he comes back. Within the book only the leaf moves. */
+::view-transition-old(leaf),
+::view-transition-old(quire) {
   animation:
     150ms ease-in both leaf-fade reverse,
     340ms ease-in-out both leaf-out;
 }
 
-::view-transition-new(root) {
+::view-transition-new(leaf),
+::view-transition-new(quire) {
   animation:
     210ms ease-out 130ms both leaf-fade,
     340ms ease-in-out both leaf-in;
@@ -1513,17 +1524,33 @@ a:focus-visible > .chart-tile {
   }
 }
 
-/* The chart is held still for the same reason as the masthead: its widget
-   mounts only in the browser, so an arriving snapshot of it is bare binding
-   sliding into view. Named on the page, animated nowhere. */
+/* The chart's arriving side is held still: its widget mounts only in the
+   browser, so an arriving snapshot of it is bare binding — the widget
+   prints the sheet itself once it's there. The *departing* side is fully
+   drawn, and that one leaves like paper: the old sheet dissolves over
+   whatever comes under it — the next sheet (Regions: warmed on hover, so
+   it's already printed underneath and the two cross-fade) or the leaf of a
+   location or creature sliding in. */
 ::view-transition-group(chart-sheet) {
   animation: none;
 }
 
 ::view-transition-old(chart-sheet) {
-  display: none;
+  /* Above the new sheet in the pair — a fade-out under an opaque sibling
+     would not be seen at all. */
+  z-index: 1;
+  animation: 340ms ease-in-out both chart-dissolve;
 }
 
 ::view-transition-new(chart-sheet) {
   animation: none;
+}
+
+@keyframes chart-dissolve {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

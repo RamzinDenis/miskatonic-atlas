@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ViewTransition } from "react";
 import { getMapLegend, getMapLocations } from "@/shared/lib/content";
 import { FRONT_CHART_ID, MAPS } from "@/shared/maps";
 import { SiteHeader } from "@/shared/ui/site-header";
@@ -34,22 +35,32 @@ export default async function RegionalMapPage({ params }: PageProps<"/maps/[mapI
   if (!chart || mapId === FRONT_CHART_ID) notFound();
 
   return (
-    /* Held still through a page turn — the frontispiece explains why. */
-    <div
-      style={{ viewTransitionName: "chart-sheet" }}
-      className="relative h-dvh overflow-hidden"
+    /* A real boundary named like the frontispiece's — the frontispiece
+       explains why. One sheet leaving pairs with the next arriving. */
+    <ViewTransition
+      name="chart-sheet"
+      share="auto"
+      enter="auto"
+      exit="auto"
+      default="none"
     >
-      {/* Thumb + overview copy with the HTML, as on the frontispiece. */}
-      <link rel="preload" as="image" href={chart.lqipUrl} />
-      <link rel="preload" as="image" href={chart.sheets[chart.sheets.length - 1].url} />
+      <div className="relative h-dvh overflow-hidden">
+        {/* Thumb + overview copy with the HTML, as on the frontispiece. */}
+        <link rel="preload" as="image" href={chart.lqipUrl} />
+        <link
+          rel="preload"
+          as="image"
+          href={chart.sheets[chart.sheets.length - 1].url}
+        />
 
-      <WorldMap
-        chart={chart}
-        locations={getMapLocations(chart.id)}
-        legend={getMapLegend(chart.id)}
-      />
+        <WorldMap
+          chart={chart}
+          locations={getMapLocations(chart.id)}
+          legend={getMapLegend(chart.id)}
+        />
 
-      <SiteHeader floating />
-    </div>
+        <SiteHeader floating />
+      </div>
+    </ViewTransition>
   );
 }
