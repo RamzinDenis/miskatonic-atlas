@@ -20,6 +20,7 @@ import {
 } from "react";
 import { MapContainer, Marker, Polyline, ZoomControl } from "react-leaflet";
 import { ChartSheet } from "./chart-sheet";
+import { ChartUnroll } from "./chart-unroll";
 import {
   MAPS,
   latLngToPixel,
@@ -36,8 +37,10 @@ import {
   FitZoomLimit,
   focusCenter,
   focusZoom,
+  greetingAllowed,
   LABEL_MIN_ZOOM,
   MapClicks,
+  OpeningGesture,
   ZoomWatcher,
 } from "./map-utils";
 import {
@@ -74,6 +77,10 @@ interface Props {
   picker?: boolean;
   /** Picker only: the placement queue — locations with no `map` yet. */
   unplaced?: UnplacedLocation[];
+  /** Play the opening gesture when this chart prints for the first time.
+      Set by the frontispiece only: a sheet opened from Regions is a reader
+      already under way, and pulling his view about would be a rude greeting. */
+  opening?: boolean;
 }
 
 export default function WorldMapClient({
@@ -82,6 +89,7 @@ export default function WorldMapClient({
   legend,
   picker = false,
   unplaced = [],
+  opening = false,
 }: Props) {
   const router = useRouter();
   const mapRef = useRef<LeafletMap | null>(null);
@@ -113,7 +121,15 @@ export default function WorldMapClient({
      small marks arrive first and hover for a moment over the dark binding.
      A chart already in the cache starts printed, so a reader coming back
      from a location page doesn't sit through the marks fading up again. */
-  const [paperReady, setPaperReady] = useState(() => chartIsWarm(chart));
+  /* A cached sheet is a reader coming back, not arriving: no greeting. */
+  const [startedWarm] = useState(() => chartIsWarm(chart));
+  const [paperReady, setPaperReady] = useState(startedWarm);
+  const [arrival] = useState(() => greetingAllowed());
+  /* The opening — rolls parting, camera drawing back — waits for the paper:
+     a greeting over the bare binding is a jerk, not a greeting. */
+  const greeting = opening && !picker && !startedWarm && arrival && paperReady;
+  const [opened, setOpened] = useState(false);
+  const handleOpened = useCallback(() => setOpened(true), []);
   /* Stable: ChartTiles holds a leaflet layer, and a new identity here would
      tear the chart down and rebuild it on every selection and every zoom. */
   const handlePaperReady = useCallback(() => setPaperReady(true), []);
@@ -301,7 +317,7 @@ export default function WorldMapClient({
 
   return (
     <div
-      className={`world-map absolute inset-0${labelsShown ? " world-map--labels" : ""}${paperReady ? " world-map--printed" : ""}`}
+      className={`world-map absolute inset-0${labelsShown ? " world-map--labels" : ""}${paperReady ? " world-map--printed" : ""}${greeting && !opened ? " world-map--unrolling" : ""}`}
     >
       <MapContainer
         ref={mapRef}
@@ -325,6 +341,7 @@ export default function WorldMapClient({
           onZoom={(zoom) => setLabelsShown(zoom >= LABEL_MIN_ZOOM)}
         />
         <MapClicks chart={chart} onClick={handleMapClick} />
+        <OpeningGesture run={greeting} />
         {!picker && (
           <DeepLinkFocus
             chart={chart}
@@ -431,6 +448,8 @@ export default function WorldMapClient({
       </MapContainer>
 
       <div className="world-map-vignette" aria-hidden="true" />
+
+      <ChartUnroll run={greeting} onDone={handleOpened} />
 
       {legend && !picker && (
         <LegendPanel

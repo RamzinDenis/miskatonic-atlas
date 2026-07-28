@@ -31,6 +31,8 @@ export function WorldMap(props: {
   picker?: boolean;
   /** Picker only: locations awaiting a spot on the chart. */
   unplaced?: UnplacedLocation[];
+  /** Frontispiece only: play the opening gesture on a first, cold visit. */
+  opening?: boolean;
 }) {
   return <WorldMapClient {...props} />;
 }

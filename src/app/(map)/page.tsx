@@ -25,6 +25,7 @@ export default function Home() {
         chart={chart}
         locations={getMapLocations(chart.id)}
         legend={getMapLegend(chart.id)}
+        opening
       />
 
       <SiteHeader floating />
