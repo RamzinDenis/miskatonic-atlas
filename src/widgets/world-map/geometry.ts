@@ -35,6 +35,9 @@ export interface MapLocation extends PixelPoint {
   type: string;
   summary: string;
   figures: MapFigure[];
+  /** Places on this same sheet the stories tie this one to — the marks that
+      answer when this one is chosen. Both directions, pinned here only. */
+  connectedTo: string[];
   /** Editorial weight — the picker toggles it; the public map is major-only. */
   prominence?: "major" | "minor";
   /** Log-book line lettered under an annotation's name (schemas.ts MapPoint). */

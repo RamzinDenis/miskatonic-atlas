@@ -69,17 +69,28 @@ function vignetteSvg(type: string): string {
   return `<svg class="atlas-pin-glyph" viewBox="0 0 28 28" aria-hidden="true"><defs>${INK_ROUGH_FILTER}</defs>${VIGNETTES[type] ?? VIGNETTES.default}</svg>`;
 }
 
+/**
+ * How a mark stands at this moment: at rest, chosen by the reader, or one
+ * of the places the chosen one is tied to — «linked» is the chart answering
+ * a selection, not a second kind of selection, so it re-inks by half.
+ */
+export type MarkState = "rest" | "active" | "linked";
+
+function markClass(base: string, state: MarkState) {
+  return state === "rest" ? base : `${base} ${base}--${state}`;
+}
+
 export function locationIcon(
   location: MapLocation,
-  active: boolean,
+  state: MarkState,
   chart: AtlasMap,
 ) {
   if (chart.markerStyle === "annotation") {
-    return annotationIcon(location, active, chart);
+    return annotationIcon(location, state, chart);
   }
   return divIcon({
     className: "atlas-pin-wrap",
-    html: `<span class="atlas-pin${active ? " atlas-pin--active" : ""}">${vignetteSvg(location.type)}<span class="atlas-pin-label">${location.name}</span></span>`,
+    html: `<span class="${markClass("atlas-pin", state)}">${vignetteSvg(location.type)}<span class="atlas-pin-label">${location.name}</span></span>`,
     iconSize: [28, 28],
     iconAnchor: [14, 14],
   });
@@ -92,7 +103,7 @@ export function locationIcon(
  * a small fix-point at the exact spot — the way the scan letters its own
  * features. Hover and selection reprint in vermilion, as everywhere.
  */
-function annotationIcon(location: MapLocation, active: boolean, chart: AtlasMap) {
+function annotationIcon(location: MapLocation, state: MarkState, chart: AtlasMap) {
   const s = 12;
   const town = location.type === "town" || location.type === "city";
   /* A name letters to the right of its fix; near the sheet's right edge it
@@ -106,7 +117,7 @@ function annotationIcon(location: MapLocation, active: boolean, chart: AtlasMap)
     : "";
   return divIcon({
     className: "atlas-pin-wrap",
-    html: `<span class="atlas-annot${active ? " atlas-annot--active" : ""}" style="width:${s}px;height:${s}px"><span class="atlas-annot-fix"></span><span class="atlas-annot-label${town ? " atlas-annot-label--town" : ""}${flip ? " atlas-annot-label--flip" : ""}">${location.name}${sub}</span></span>`,
+    html: `<span class="${markClass("atlas-annot", state)}" style="width:${s}px;height:${s}px"><span class="atlas-annot-fix"></span><span class="atlas-annot-label${town ? " atlas-annot-label--town" : ""}${flip ? " atlas-annot-label--flip" : ""}">${location.name}${sub}</span></span>`,
     iconSize: [s, s],
     iconAnchor: [s / 2, s / 2],
   });

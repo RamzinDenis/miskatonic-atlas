@@ -327,6 +327,21 @@ body {
   color: var(--ink-accent);
 }
 
+/*
+ * A mark the chosen place is tied to. It answers at half voice: the ink
+ * warms partway to vermilion and the name comes up, but the glyph does not
+ * grow — growing is what the chosen mark does, and two marks doing it would
+ * leave the reader hunting for which one he picked.
+ */
+.atlas-pin--linked {
+  color: #8f5b30;
+}
+
+.atlas-pin--linked .atlas-pin-label,
+.atlas-annot--linked .atlas-annot-label {
+  opacity: 1;
+}
+
 /* Fallback ring (picker, chart inset): the same printed treatment. */
 .atlas-pin-dot {
   position: absolute;
@@ -424,6 +439,11 @@ body {
 .leaflet-marker-icon:focus-visible .atlas-annot,
 .atlas-annot--active {
   color: var(--ink-accent);
+}
+
+/* Annotation sheets answer a choice the same way the printed marks do. */
+.atlas-annot--linked {
+  color: #8f5b30;
 }
 
 /* Keyboard focus rides the same highlight as hover — leaflet's own focus

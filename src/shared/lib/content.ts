@@ -391,6 +391,23 @@ function toMapLocation(content: AtlasContent, mapId: string) {
         .filter((c) => c.locations.some((l) => refSlug(l) === location.slug))
         .map((c) => ({ slug: c.slug, name: c.name, kind: "creatures" as const })),
     ];
+    /* Neighbours the chart can actually answer with: a connection is drawn
+       both ways (content states it on one side only, as often as not) and
+       kept to places pinned on this same sheet — a link to another chart
+       has no mark here to light up. */
+    const pinnedHere = (slug: string) => {
+      const other = content.locations.find((l) => l.slug === slug);
+      return other?.map?.mapId === mapId;
+    };
+    const connectedTo = [
+      ...new Set([
+        ...location.connectedTo.map(refSlug),
+        ...content.locations
+          .filter((other) => other.connectedTo.some((ref) => refSlug(ref) === location.slug))
+          .map((other) => other.slug),
+      ]),
+    ].filter((slug) => slug !== location.slug && pinnedHere(slug));
+
     return [
       {
         slug: location.slug,
@@ -401,6 +418,7 @@ function toMapLocation(content: AtlasContent, mapId: string) {
         type: location.type,
         summary: location.summary,
         figures,
+        connectedTo,
         prominence: location.prominence,
         x: location.map.x,
         y: location.map.y,

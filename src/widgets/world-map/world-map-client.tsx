@@ -45,6 +45,7 @@ import {
 } from "./map-utils";
 import {
   locationIcon,
+  type MarkState,
   monsterIcon,
   pickedIcon,
   routeDateIcon,
@@ -274,6 +275,17 @@ export default function WorldMapClient({
     }
   };
 
+  /* Choosing a place lights the places the stories tie it to (ADR-0006 is
+     the same idea on the page): the chart answers a choice instead of only
+     marking it. Driven by selection rather than hover, so the phone — where
+     no hover exists — gets the whole of it. */
+  const linked = useMemo(
+    () => new Set(selected?.connectedTo ?? []),
+    [selected],
+  );
+  const markState = (slug: string): MarkState =>
+    selected?.slug === slug ? "active" : linked.has(slug) ? "linked" : "rest";
+
   const selectLeg = (leg: RouteLeg) => {
     setSelected(null);
     setSelectedLeg(leg);
@@ -358,7 +370,7 @@ export default function WorldMapClient({
           <Marker
             key={location.slug}
             position={pixelToLatLng(moves[location.slug] ?? location, chart)}
-            icon={locationIcon(location, selected?.slug === location.slug, chart)}
+            icon={locationIcon(location, markState(location.slug), chart)}
             alt={location.name}
             draggable={picker}
             eventHandlers={{
