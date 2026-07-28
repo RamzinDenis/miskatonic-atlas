@@ -1,8 +1,6 @@
-import { ViewTransition } from "react";
 import { getMapLegend, getMapLocations } from "@/shared/lib/content";
 import { FRONT_CHART_ID, getAtlasMap } from "@/shared/maps";
 import { ChartImprint } from "@/shared/ui/imprint";
-import { LEAVE_CHART } from "@/shared/ui/transitions";
 import { SiteHeader } from "@/shared/ui/site-header";
 import { WorldMap } from "@/widgets/world-map";
 
@@ -13,8 +11,14 @@ import { WorldMap } from "@/widgets/world-map";
 export default function Home() {
   const chart = getAtlasMap(FRONT_CHART_ID);
   return (
-    <ViewTransition exit={LEAVE_CHART} enter="none" default="none">
-    <div className="relative h-dvh overflow-hidden">
+    <div
+      /* Held still through a page turn, like the masthead (globals.css):
+         the chart's widget mounts only in the browser, so the frame a
+         transition would slide in on arrival is the bare binding — the
+         black screen we already fixed once. Named, not animated. */
+      style={{ viewTransitionName: "chart-sheet" }}
+      className="relative h-dvh overflow-hidden"
+    >
       {/* The sheet's thumb and the overview copy are fetched with the HTML
           rather than after leaflet has loaded and mounted, so the paper is
           the first thing on screen instead of the last. The top rung is the
@@ -34,6 +38,5 @@ export default function Home() {
       <SiteHeader floating />
       <ChartImprint />
     </div>
-    </ViewTransition>
   );
 }

@@ -1430,41 +1430,34 @@ a:focus-visible > .chart-tile {
 /* --- Turning the leaves ------------------------------------------------- */
 
 /*
- * Page turns (src/shared/ui/transitions.ts). Horizontal direction carries
- * the reader's place in the book: deeper in, the leaf he leaves slides left
- * and the new one comes from the right; coming back out, the other way.
+ * Page turns. Written against the ROOT pseudo-elements rather than against
+ * the classes React assigns (`::view-transition-old(.nav-forward)`): class
+ * selectors inside view-transition pseudo-elements landed in browsers long
+ * after the API itself, and where they are missing the transition still runs
+ * — silently, with no animation attached and nothing in the console. The
+ * root snapshots are as old as the API, so the turn plays everywhere the
+ * transition plays at all.
  *
- * The timing is deliberately asymmetric — the old leaf goes quickly so it
- * stops competing for attention, the new one arrives slower and only after
- * the old one has left. 44px of travel is enough to read as direction
- * without making the eye chase anything across the sheet.
+ * The price is that both directions read the same: the leaf leaving fades
+ * and drifts left, the leaf arriving comes up from the right. Direction is
+ * still declared on the links (transitions.ts) and costs nothing to keep —
+ * the day class selectors are safe to lean on, the two directions can be
+ * split apart again without touching a single component.
+ *
+ * Timing is asymmetric on purpose: the old leaf goes quickly so it stops
+ * competing for attention, the new one arrives more slowly and only once the
+ * old one is gone.
  */
-::view-transition-old(.nav-forward) {
-  --leaf-shift: -44px;
+::view-transition-old(root) {
   animation:
-    140ms ease-in both leaf-fade reverse,
-    360ms ease-in-out both leaf-slide reverse;
+    150ms ease-in both leaf-fade reverse,
+    340ms ease-in-out both leaf-out;
 }
 
-::view-transition-new(.nav-forward) {
-  --leaf-shift: 44px;
+::view-transition-new(root) {
   animation:
-    200ms ease-out 140ms both leaf-fade,
-    360ms ease-in-out both leaf-slide;
-}
-
-::view-transition-old(.nav-back) {
-  --leaf-shift: 44px;
-  animation:
-    140ms ease-in both leaf-fade reverse,
-    360ms ease-in-out both leaf-slide reverse;
-}
-
-::view-transition-new(.nav-back) {
-  --leaf-shift: -44px;
-  animation:
-    200ms ease-out 140ms both leaf-fade,
-    360ms ease-in-out both leaf-slide;
+    210ms ease-out 130ms both leaf-fade,
+    340ms ease-in-out both leaf-in;
 }
 
 @keyframes leaf-fade {
@@ -1476,9 +1469,18 @@ a:focus-visible > .chart-tile {
   }
 }
 
-@keyframes leaf-slide {
+@keyframes leaf-out {
   from {
-    translate: var(--leaf-shift);
+    translate: 0;
+  }
+  to {
+    translate: -44px;
+  }
+}
+
+@keyframes leaf-in {
+  from {
+    translate: 44px;
   }
   to {
     translate: 0;
@@ -1509,4 +1511,19 @@ a:focus-visible > .chart-tile {
     animation-duration: 0s !important;
     animation-delay: 0s !important;
   }
+}
+
+/* The chart is held still for the same reason as the masthead: its widget
+   mounts only in the browser, so an arriving snapshot of it is bare binding
+   sliding into view. Named on the page, animated nowhere. */
+::view-transition-group(chart-sheet) {
+  animation: none;
+}
+
+::view-transition-old(chart-sheet) {
+  display: none;
+}
+
+::view-transition-new(chart-sheet) {
+  animation: none;
 }
