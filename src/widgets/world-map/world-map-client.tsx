@@ -42,6 +42,7 @@ import {
   LABEL_MIN_ZOOM,
   MapClicks,
   OpeningGesture,
+  RestingView,
   ZoomWatcher,
 } from "./map-utils";
 import {
@@ -120,6 +121,18 @@ export default function WorldMapClient({
   const inkRenderer = useMemo(() => svg({ padding: 2 }), []);
   const [selected, setSelected] = useState<MapLocation | null>(null);
   const [selectedLeg, setSelectedLeg] = useState<RouteLeg | null>(null);
+  /* A visit begins with nothing chosen, as the sheet begins laid out whole
+     (RestingView): the widget outlives its visits now, and a preview
+     cartouche left standing from the last one would greet the reader's
+     return. Adjusted during the render that brings the new epoch rather
+     than in an effect — an effect would run AFTER the children's, and
+     DeepLinkFocus is a child whose whole errand is to choose a place. */
+  const [visit, setVisit] = useState(focusEpoch);
+  if (visit !== focusEpoch) {
+    setVisit(focusEpoch);
+    setSelected(null);
+    setSelectedLeg(null);
+  }
   const [labelsShown, setLabelsShown] = useState(false);
   /* Nothing is marked on a sheet that isn't there yet: the pins, tracks and
      beasts stay unprinted until the chart's first tiles are down, or the
@@ -373,6 +386,9 @@ export default function WorldMapClient({
         />
         <MapClicks chart={chart} onClick={handleMapClick} />
         <OpeningGesture run={greeting} />
+        {/* Before DeepLinkFocus, and it must stay there — a ?focus= visit
+            lands on its pin after the sheet has been laid out afresh. */}
+        {!picker && <RestingView epoch={focusEpoch} bounds={bounds} />}
         {!picker && (
           <DeepLinkFocus
             epoch={focusEpoch}

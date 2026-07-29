@@ -97,6 +97,42 @@ export function FitZoomLimit({ bounds }: { bounds: LatLngBoundsExpression }) {
   return null;
 }
 
+/**
+ * The sheet is laid out fresh for each visit. The map now outlives the
+ * visit (chart-keeper.tsx), so without this a reader who left the chart
+ * zoomed into one harbour would find that harbour still filling the screen
+ * when he came back from a story — the atlas would have quietly become an
+ * application that remembers where you were, which is not what opening a
+ * volume does. So every staging after the first lays the sheet out the way
+ * a first coming finds it: whole in the frame, or filling a phone's screen
+ * (the same reasoning as FitZoomLimit's, which owns that choice on the
+ * first mount). Without animation — this happens under a page turn, and a
+ * flight nobody asked for competes with it.
+ *
+ * Runs before DeepLinkFocus (JSX order — effects fire child-first, in the
+ * order they are declared), so a /?focus= visit still lands on its pin
+ * instead of being pulled back to the overview after arriving.
+ */
+export function RestingView({
+  epoch,
+  bounds,
+}: {
+  epoch: number;
+  bounds: LatLngBoundsExpression;
+}) {
+  const map = useMap();
+  const laid = useRef(epoch);
+  useEffect(() => {
+    if (laid.current === epoch) return;
+    laid.current = epoch;
+    map.fitBounds(bounds, { animate: false });
+    if (!window.matchMedia("(min-width: 640px)").matches) {
+      map.setZoom(map.getBoundsZoom(bounds, true), { animate: false });
+    }
+  }, [map, bounds, epoch]);
+  return null;
+}
+
 /** How much closer the opening gesture starts, and how long it pulls back. */
 const OPENING_LIFT = 0.75;
 const OPENING_SECONDS = 1.8;

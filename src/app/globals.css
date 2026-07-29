@@ -374,13 +374,32 @@ body {
 }
 
 /*
+ * The chosen mark. Ink alone cannot carry it — the linked marks answer in
+ * warm ink too, and among a dozen of them the reader ends up hunting for the
+ * one he picked. So the choice is drawn, not tinted: the engraver's
+ * correction circle around the glyph, the way a chart rings the fix under
+ * discussion, on a clearing wide enough to hold it.
+ */
+.atlas-pin--active::after {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+}
+
+.atlas-pin--active::before {
+  inset: -11px;
+}
+
+/*
  * A mark the chosen place is tied to. It answers at half voice: the ink
- * warms partway to vermilion and the name comes up, but the glyph does not
- * grow — growing is what the chosen mark does, and two marks doing it would
- * leave the reader hunting for which one he picked.
+ * warms partway to vermilion and the name comes up, but the glyph neither
+ * grows nor takes a ring — those belong to the chosen mark alone. The warm
+ * brown stays a step short of the accent so the two never read as one ink.
  */
 .atlas-pin--linked {
-  color: #8f5b30;
+  color: #6d4526;
 }
 
 .atlas-pin--linked .atlas-pin-label,
@@ -397,9 +416,12 @@ body {
   transition: transform 0.15s ease;
 }
 
-.atlas-pin:hover .atlas-pin-dot,
-.atlas-pin--active .atlas-pin-dot {
+.atlas-pin:hover .atlas-pin-dot {
   transform: scale(1.15);
+}
+
+.atlas-pin--active .atlas-pin-dot {
+  transform: scale(1.3);
 }
 
 .atlas-pin-glyph {
@@ -410,9 +432,12 @@ body {
   transition: transform 0.15s ease;
 }
 
-.atlas-pin:hover .atlas-pin-glyph,
-.atlas-pin--active .atlas-pin-glyph {
+.atlas-pin:hover .atlas-pin-glyph {
   transform: scale(1.15);
+}
+
+.atlas-pin--active .atlas-pin-glyph {
+  transform: scale(1.3);
 }
 
 /*
@@ -490,7 +515,28 @@ body {
 
 /* Annotation sheets answer a choice the same way the printed marks do. */
 .atlas-annot--linked {
-  color: #8f5b30;
+  color: #6d4526;
+}
+
+/*
+ * The chosen fix on an annotation sheet takes the same correction circle —
+ * here it is the only mark that can grow, since the lettering must not.
+ */
+.atlas-annot--active .atlas-annot-fix::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+}
+
+/*
+ * Whatever leaflet's stacking order was, the chosen mark reads on top: its
+ * ring and name must not run under the neighbour it was picked out from.
+ */
+.leaflet-marker-icon:has(.atlas-pin--active),
+.leaflet-marker-icon:has(.atlas-annot--active) {
+  z-index: 640 !important;
 }
 
 /* Keyboard focus rides the same highlight as hover — leaflet's own focus
