@@ -142,7 +142,8 @@ export default function WorldMapClient({
   /* A cached sheet is a reader coming back, not arriving: no greeting. */
   const [startedWarm] = useState(() => chartIsWarm(chart));
   const [paperReady, setPaperReady] = useState(startedWarm);
-  /* Any chart may greet, but only the session's first (claimGreeting), and
+  /* Any chart may greet, but only the first met since the document loaded
+     (claimGreeting — a reload opens the volume afresh and greets again), and
      only a cold one met without a deep-link errand. Claimed in an effect
      with a stable owner token: StrictMode renders twice, and a claim made
      in a lazy initialiser would beat its own second pass. */

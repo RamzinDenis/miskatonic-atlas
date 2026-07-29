@@ -142,8 +142,8 @@ const OPENING_SECONDS = 1.8;
  * camera's draw-back alike. Motion stays away where it would be wrong or
  * unwelcome: a `?focus=` deep link has its own place to land and must not be
  * overruled, and a reduced-motion setting means what it says. The caller adds
- * the rest of the test — a cold sheet (see `startedWarm`) holding the
- * session's greeting (claimGreeting), since greeting a reader on every
+ * the rest of the test — a cold sheet (see `startedWarm`) holding this
+ * opening's greeting (claimGreeting), since greeting a reader on every
  * return from a location page turns a greeting into a tic.
  *
  * Touches `window`, so call it from an effect or a lazy initialiser.
@@ -156,43 +156,31 @@ export function greetingAllowed(): boolean {
 }
 
 /**
- * The atlas greets once a session, and the greeting belongs to the first
- * chart the reader meets — whether or not the ceremony actually plays
- * there. A sheet that arrives warm, or lands focused by a deep link, has
- * still been met; unrolling the *second* sheet of the journey would be the
- * misplaced ceremony this latch exists to prevent. The case is routine on
- * a phone: Regions is tapped, not hovered, so nothing warms the next sheet
- * and every switch used to qualify as a cold arrival.
+ * The atlas greets once per opening of the volume, and the greeting belongs
+ * to the first chart the reader meets — whether or not the ceremony actually
+ * plays there. A sheet that arrives warm, or lands focused by a deep link,
+ * has still been met; unrolling the *second* sheet of the journey would be
+ * the misplaced ceremony this latch exists to prevent. The case is routine
+ * on a phone: Regions is tapped, not hovered, so nothing warms the next
+ * sheet and every switch used to qualify as a cold arrival.
  *
- * The claim outlives the page in sessionStorage, because the page does not
- * always outlive the session: iOS Safari jettisons a backgrounded tab under
- * memory pressure and reloads it — module state gone — on the next visit,
- * and a mid-session walk through the book came back to a map performing its
- * whole welcome again. sessionStorage is scoped exactly to what "a visit"
- * means here: it survives those silent reloads but not a new tab. Claiming
- * is idempotent per owner token: StrictMode runs everything twice, and both
- * passes of one widget must hear the same answer.
+ * An opening is one life of the document: the latch is module state and
+ * nothing else, so every full load — the reader's own reload included —
+ * unwraps the chart again, and a walk through the book and back does not.
+ * The claim was once kept in sessionStorage so that a tab iOS jettisons
+ * under memory pressure and silently reloads would not perform the whole
+ * welcome mid-visit; that costs the reader the ceremony they came for on a
+ * deliberate reload, which is the commoner event and the one they asked to
+ * see. So the silent reload greets again, and is left to.
+ *
+ * Claiming is idempotent per owner token: StrictMode runs everything twice,
+ * and both passes of one widget must hear the same answer.
  */
 let greetingOwner: unknown = null;
 
-const GREETED_KEY = "atlas-greeted";
-
 export function claimGreeting(owner: unknown): boolean {
-  if (greetingOwner === null) {
-    try {
-      if (window.sessionStorage.getItem(GREETED_KEY)) return false;
-    } catch {
-      /* Storage refused (private mode quirks): module state alone. */
-    }
-  }
   greetingOwner ??= owner;
-  if (greetingOwner !== owner) return false;
-  try {
-    window.sessionStorage.setItem(GREETED_KEY, "1");
-  } catch {
-    /* Same: the latch just won't survive a reload. */
-  }
-  return true;
+  return greetingOwner === owner;
 }
 
 /**
