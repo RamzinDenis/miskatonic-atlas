@@ -165,6 +165,35 @@ body {
   );
 }
 
+/* On a leaf the strip stays with the reader down the page, and the veil
+   alone cannot hold it: its tail is transparent by design, so the print
+   scrolling beneath would read straight through the letters. Frosted glass
+   answers that without thickening the veil — but the frosting is laid on a
+   pseudo-element and masked with the veil's own fall, because a
+   backdrop-filter over the whole box ends on a straight seam along the
+   lower edge, and a seam across engraved paper is more conspicuous than
+   the sharp print it was meant to hide. */
+.site-header-strip--sticky::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000,
+    rgba(0, 0, 0, 0.55) 60%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000,
+    rgba(0, 0, 0, 0.55) 60%,
+    transparent
+  );
+}
+
 /* The imprint at the chart's foot answers the masthead's scrim with its
    own: the sheet runs full-bleed, and a printer's line set straight on the
    engraving drowns in it — the Miskatonic sheet's harbour took this one.
