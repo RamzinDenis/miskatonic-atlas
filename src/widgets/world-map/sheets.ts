@@ -67,6 +67,25 @@ export function chartIsWarm(chart: AtlasMap): boolean {
 }
 
 /**
+ * Whether the widget's own chunk has been evaluated in this session —
+ * recorded by world-map-client at module scope, so evaluation itself is the
+ * fact. The wrapper reads it to choose between two mounts: a first coming
+ * defers past the page turn (the evaluation burst would hang the turn on
+ * WebKit), a return mounts straight into the navigation's commit, where the
+ * freeze absorbs the build and the paper is under the dissolving leaf from
+ * its first frame — no loader over a chart the reader has already seen.
+ */
+let widgetEvaluated = false;
+
+export function markWidgetEvaluated(): void {
+  widgetEvaluated = true;
+}
+
+export function widgetIsEvaluated(): boolean {
+  return widgetEvaluated;
+}
+
+/**
  * Pull a chart's paper before the reader asks for it — from a link that
  * leads to it, on hover or focus. An overview lands with the sheet fitted
  * to the frame, so the copy it will want is the one sized to the viewport;

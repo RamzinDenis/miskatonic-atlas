@@ -35,7 +35,14 @@ export function ChartLink({
   return (
     <Link
       href={focus ? `${chartPath(chartId)}?focus=${focus}` : chartPath(chartId)}
-      onMouseEnter={warm}
+      /* Mouse only: an iOS tap synthesizes a mouseenter right before the
+         click, which would drop the widget's evaluation into the middle of
+         the page turn — the very burst ChartBoundary keeps out of it. A
+         hover that truly precedes the click is worth warming for; a tap has
+         no such head start. */
+      onPointerEnter={(e) => {
+        if (e.pointerType === "mouse") warm();
+      }}
       onFocus={warm}
       /* The chart is where a reader comes back to, never deeper in: the leaf
          he is on leaves to the right, the way a page turns back. */

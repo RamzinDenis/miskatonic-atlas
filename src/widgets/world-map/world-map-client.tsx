@@ -57,7 +57,7 @@ import {
 } from "./marks";
 import { MONSTERS, type MapMonster } from "./monsters";
 import { PickerPanel } from "./picker-panel";
-import { chartIsWarm } from "./sheets";
+import { chartIsWarm, markWidgetEvaluated } from "./sheets";
 import { LocationPreview, TrackPreview } from "./previews";
 import { RegionsNav } from "./regions-nav";
 import { legLabelPlacement, legShipPlacement, routeLegs, shipFits, type RouteLeg } from "./routes";
@@ -68,6 +68,10 @@ import { legLabelPlacement, legShipPlacement, routeLegs, shipFits, type RouteLeg
  * live in marks.ts, the panels in legend-panel / regions-nav / previews /
  * picker-panel, the map-instance helpers in map-utils.
  */
+
+/* Running this module IS the expensive part of a first mount; telling the
+   wrapper it has already run is what lets a return skip the deferral. */
+markWidgetEvaluated();
 
 interface Props {
   /** The chart this widget draws — an entry of the MAPS registry. */

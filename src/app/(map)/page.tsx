@@ -1,9 +1,9 @@
-import { ViewTransition } from "react";
 import { getMapLegend, getMapLocations } from "@/shared/lib/content";
 import { FRONT_CHART_ID, getAtlasMap } from "@/shared/maps";
 import { ChartImprint } from "@/shared/ui/imprint";
 import { SiteHeader } from "@/shared/ui/site-header";
 import { WorldMap } from "@/widgets/world-map";
+import { ChartBoundary } from "@/widgets/world-map/chart-boundary";
 
 /**
  * The atlas frontispiece: the front chart (FRONT_CHART_ID) full-bleed under
@@ -15,18 +15,14 @@ import { WorldMap } from "@/widgets/world-map";
  * this one, switching sheets under Regions swaps instantly. The looks live
  * in globals.css: the departing sheet dissolves, the arriving side is held
  * still (its widget prints the paper itself — a snapshot of it would be
- * bare binding, the black screen we already fixed once).
+ * bare binding, the black screen we already fixed once). ChartBoundary is
+ * that boundary, and it also holds the widget back until the turn is over —
+ * leaflet's mounting burst used to hang the turn on WebKit.
  */
 export default function Home() {
   const chart = getAtlasMap(FRONT_CHART_ID);
   return (
-    <ViewTransition
-      name="chart-sheet"
-      share="auto"
-      enter="auto"
-      exit="auto"
-      default="none"
-    >
+    <ChartBoundary>
       <div className="relative h-dvh overflow-hidden">
         {/* The sheet's thumb and the overview copy are fetched with the HTML
             rather than after leaflet has loaded and mounted, so the paper is
@@ -50,6 +46,6 @@ export default function Home() {
         <SiteHeader floating />
         <ChartImprint />
       </div>
-    </ViewTransition>
+    </ChartBoundary>
   );
 }
