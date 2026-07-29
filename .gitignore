@@ -40,3 +40,4 @@ next-env.d.ts
 # одноразовые превью генераторов износа (--preview)
 scripts/.wear-preview.jpg
 scripts/.page-wear-preview.jpg
+scripts/.map-wear-preview.jpg

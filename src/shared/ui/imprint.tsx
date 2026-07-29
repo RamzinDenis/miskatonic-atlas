@@ -12,9 +12,7 @@ import { getAtlasTally } from "@/shared/lib/content";
 export function ChartImprint() {
   const tally = getAtlasTally();
   return (
-    /* bottom-3 = the passe-partout's foot (globals.css): the line prints
-       along the plate's own lower edge, inside the frame. */
-    <p className="pointer-events-none absolute inset-x-0 bottom-3 z-[1000] hidden px-6 pb-3 text-center text-[11px] uppercase tracking-[0.2em] text-muted/80 sm:block">
+    <p className="pointer-events-none absolute inset-x-0 bottom-0 z-[1000] hidden px-6 pb-3 text-center text-[11px] uppercase tracking-[0.2em] text-muted/80 sm:block">
       {tally.locations} places · {tally.characters} persons · {tally.creatures} beasts
       <span className="mx-2">—</span>
       {tally.quotations} quotations from {tally.stories} tales

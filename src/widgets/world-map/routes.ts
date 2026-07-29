@@ -126,7 +126,9 @@ const PACIFIC_ROUTE_LEGS: RouteLeg[] = [
     ],
     labelSegment: 0,
     fixes: [
-      { x: 840, y: 820, label: "Mch. 23", dx: -40, dy: -14 },
+      /* Pushed well clear to the lower left: Cthulhu's own lettering
+         stands just right of this fix, and the date used to lap it. */
+      { x: 840, y: 820, label: "Mch. 23", dx: -58, dy: 4 },
     ],
   },
   {

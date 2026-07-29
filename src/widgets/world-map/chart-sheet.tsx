@@ -81,6 +81,17 @@ export function ChartSheet({
         zIndex={1}
         eventHandlers={{ load: handleLoad }}
       />
+      {/* The sheet's biography (scripts/generate-map-wear.mjs): folds,
+          grimed rim, damp, foxing — multiplied over the paper. On the
+          sheet's own bounds, so the wear rides pan and zoom with it and
+          the binding around stays clean; pins live in the marker pane,
+          well above it. */}
+      <ImageOverlay
+        url="/paper/map-wear.webp"
+        bounds={bounds}
+        className="atlas-wear"
+        zIndex={2}
+      />
     </>
   );
 }

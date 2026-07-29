@@ -109,9 +109,11 @@ export const MAPS: Record<string, AtlasMap> = {
       { width: 1024, url: "/maps/new-england-1024.webp" },
       { width: 1448, url: "/maps/new-england-1448.webp" },
     ],
-    // ~1450px is ChatGPT's native output ceiling — cap the close-up at
-    // ×1.4 so the engraving never dissolves into upscale blur.
-    maxZoom: 0.5,
+    // ~1450px is ChatGPT's native output ceiling. ×2 is as far as the
+    // engraving upscales before dissolving into blur — checked by eye on
+    // a 2× crop; the old ×1.4 cap left desktops with almost no zoom at
+    // all (a 1600px frame already sits at ~×1.1 when the sheet fits).
+    maxZoom: 1,
     tone: "art",
     // A close-up sheet lives on its landmarks: sub-locations pin publicly.
     pins: "all",
@@ -137,9 +139,8 @@ export const MAPS: Record<string, AtlasMap> = {
       { width: 1024, url: "/maps/pacific-1024.webp" },
       { width: 1448, url: "/maps/pacific-1448.webp" },
     ],
-    // Same generator ceiling as new-england (~1450px source): cap the
-    // close-up so the engraving never dissolves into upscale blur.
-    maxZoom: 0.5,
+    // Same generator ceiling as new-england (~1450px source): ×2 close-up.
+    maxZoom: 1,
     tone: "art",
     markerStyle: "annotation",
   },
@@ -164,8 +165,8 @@ export const MAPS: Record<string, AtlasMap> = {
       { width: 1024, url: "/maps/desert-1024.webp" },
       { width: 1448, url: "/maps/desert-1448.webp" },
     ],
-    // Same generator ceiling as the other sheets (~1450px source).
-    maxZoom: 0.5,
+    // Same generator ceiling as the other sheets (~1450px source): ×2.
+    maxZoom: 1,
     tone: "art",
     markerStyle: "annotation",
   },

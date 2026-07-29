@@ -108,7 +108,9 @@ export const MONSTERS: MapMonster[] = [
     name: "The Meteorite",
     storySlug: "the-colour-out-of-space",
     mapId: "new-england",
-    at: { x: 300, y: 690 },
+    /* Below the well, not beside it: at the fit zoom the sketch used to
+       lie right on the well's lettering, which runs to the right. */
+    at: { x: 220, y: 635 },
     art: { w: 46, h: 39 },
   },
   {
@@ -116,7 +118,7 @@ export const MONSTERS: MapMonster[] = [
     name: "Hybrid Winged Things",
     storySlug: "the-festival",
     mapId: "new-england",
-    at: { x: 1240, y: 955 },
+    at: { x: 1140, y: 855 },
     art: { w: 72, h: 63 },
   },
 ];

@@ -340,9 +340,7 @@ export default function WorldMapClient({
 
   return (
     <div
-      /* Position only: the frame's geometry — the passe-partout inset —
-         lives in globals.css («The passe-partout»). */
-      className={`world-map absolute${labelsShown ? " world-map--labels" : ""}${paperReady ? " world-map--printed" : ""}${greeting && !opened ? " world-map--unrolling" : ""}`}
+      className={`world-map absolute inset-0${labelsShown ? " world-map--labels" : ""}${paperReady ? " world-map--printed" : ""}${greeting && !opened ? " world-map--unrolling" : ""}`}
     >
       <MapContainer
         ref={mapRef}
@@ -472,7 +470,6 @@ export default function WorldMapClient({
         )}
       </MapContainer>
 
-      <div className="world-map-grain" aria-hidden="true" />
       <div className="world-map-vignette" aria-hidden="true" />
 
       <ChartUnroll run={greeting} onDone={handleOpened} />
