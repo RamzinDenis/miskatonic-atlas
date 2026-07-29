@@ -1655,3 +1655,22 @@ a:focus-visible > .chart-tile {
     opacity: 0;
   }
 }
+
+/* Leaving the atlas for the book (ChartBoundary marks the root on its way
+   out; an arriving chart cancels the mark, so chart-to-chart keeps its
+   cross-fade). The map's own pair has nothing arriving inside it, so every
+   frame it spends dissolving alone is a frame of the reader staring at the
+   binding — and WebKit's freeze on leaflet's teardown already stretches
+   the start. So the map goes quickly, and the quire arrives without the
+   130ms courtesy delay it grants a departing leaf: here the departing side
+   is *under* it (the quire's z 50), not beside it, and the delay only
+   bares the map longer. */
+:root.chart-leaving::view-transition-old(chart-sheet) {
+  animation: 200ms ease-out both chart-dissolve;
+}
+
+:root.chart-leaving::view-transition-new(quire) {
+  animation:
+    240ms ease-out both leaf-fade,
+    340ms ease-in-out both leaf-in;
+}

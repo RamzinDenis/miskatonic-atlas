@@ -60,6 +60,11 @@ const TURN_GRACE_MS = 250;
 /* Covers the 340ms turn of globals.css with room for a slow capture. */
 const TURN_CAP_MS = 1600;
 
+/* How long the departure mark may outlive the boundary — enough for the
+   turn to finish under the worst freeze, short enough not to colour a
+   navigation that follows right after. */
+const CHART_LEAVE_MS = 1200;
+
 export function ChartBoundary({ children }: { children: React.ReactNode }) {
   const [settled, setSettled] = useState(false);
   const entered = useRef(false);
@@ -73,10 +78,30 @@ export function ChartBoundary({ children }: { children: React.ReactNode }) {
      once the turn is over, and on unmount — a reader leaving mid-turn must
      not bequeath the mark to the next turn's styles. */
   useLayoutEffect(() => {
+    /* A chart arriving right after another left (Regions, chart to chart)
+       cancels the departure mark in the same commit — the two sheets keep
+       their cross-fade; the quickened exit below is for leaving the atlas
+       for the book, where nothing map-shaped arrives. */
+    document.documentElement.classList.remove("chart-leaving");
     if (widgetIsEvaluated()) {
       document.documentElement.classList.add("chart-arriving");
     }
-    return () => document.documentElement.classList.remove("chart-arriving");
+    return () => {
+      document.documentElement.classList.remove("chart-arriving");
+      /* The departing chart marks the root in the navigation's own commit
+         (unmount cleanups run before the transition computes animations),
+         so globals.css can hurry the map's dissolve and lift the arriving
+         quire's delay: inside the chart's own pair nothing arrives under
+         it, and every frame the map lingers alone reads as a hang — the
+         teardown of leaflet's nodes freezes WebKit long enough already.
+         Nobody map-side is left mounted to take the mark down, so a timer
+         does, safely past the 340ms turn even if a slow commit delays it. */
+      document.documentElement.classList.add("chart-leaving");
+      setTimeout(
+        () => document.documentElement.classList.remove("chart-leaving"),
+        CHART_LEAVE_MS,
+      );
+    };
   }, []);
   useEffect(() => {
     if (settled) document.documentElement.classList.remove("chart-arriving");

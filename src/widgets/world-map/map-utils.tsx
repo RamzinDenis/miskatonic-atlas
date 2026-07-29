@@ -128,15 +128,35 @@ export function greetingAllowed(): boolean {
  * a phone: Regions is tapped, not hovered, so nothing warms the next sheet
  * and every switch used to qualify as a cold arrival.
  *
- * Module state, so a hard reload — a new visit — starts the claim afresh.
- * Claiming is idempotent per owner token: StrictMode runs everything
- * twice, and both passes of one widget must hear the same answer.
+ * The claim outlives the page in sessionStorage, because the page does not
+ * always outlive the session: iOS Safari jettisons a backgrounded tab under
+ * memory pressure and reloads it — module state gone — on the next visit,
+ * and a mid-session walk through the book came back to a map performing its
+ * whole welcome again. sessionStorage is scoped exactly to what "a visit"
+ * means here: it survives those silent reloads but not a new tab. Claiming
+ * is idempotent per owner token: StrictMode runs everything twice, and both
+ * passes of one widget must hear the same answer.
  */
 let greetingOwner: unknown = null;
 
+const GREETED_KEY = "atlas-greeted";
+
 export function claimGreeting(owner: unknown): boolean {
+  if (greetingOwner === null) {
+    try {
+      if (window.sessionStorage.getItem(GREETED_KEY)) return false;
+    } catch {
+      /* Storage refused (private mode quirks): module state alone. */
+    }
+  }
   greetingOwner ??= owner;
-  return greetingOwner === owner;
+  if (greetingOwner !== owner) return false;
+  try {
+    window.sessionStorage.setItem(GREETED_KEY, "1");
+  } catch {
+    /* Same: the latch just won't survive a reload. */
+  }
+  return true;
 }
 
 /**
