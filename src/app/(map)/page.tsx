@@ -2,28 +2,30 @@ import { getMapLegend, getMapLocations } from "@/shared/lib/content";
 import { FRONT_CHART_ID, getAtlasMap } from "@/shared/maps";
 import { ChartImprint } from "@/shared/ui/imprint";
 import { SiteHeader } from "@/shared/ui/site-header";
-import { WorldMap } from "@/widgets/world-map";
-import { ChartBoundary } from "@/widgets/world-map/chart-boundary";
+import { ChartStage } from "@/widgets/world-map/chart-stage";
 
 /**
  * The atlas frontispiece: the front chart (FRONT_CHART_ID) full-bleed under
  * a floating masthead. No footer here.
  *
- * The sheet is a real <ViewTransition> boundary, not just a named element:
- * a name alone only rides along when some other boundary starts a
- * transition, and between two charts there is no other boundary — without
- * this one, switching sheets under Regions swaps instantly. The looks live
- * in globals.css: the departing sheet dissolves, the arriving side is held
- * still (its widget prints the paper itself — a snapshot of it would be
- * bare binding, the black screen we already fixed once). ChartBoundary is
- * that boundary, and it also holds the widget back until the turn is over —
- * leaflet's mounting burst used to hang the turn on WebKit.
+ * The map itself is not rendered here: the page stages its sheet through
+ * ChartStage and the keeper in the root layout (chart-keeper.tsx) turns the
+ * one long-lived map toward the reader — tearing leaflet down in a
+ * navigation's commit was the freeze WebKit showed as the map hanging. The
+ * page contributes the chrome above the sheet, and since that chrome stands
+ * over the keeper's map in paint order, it must not stand between the
+ * reader and the map in hit-testing — pointer-events pass through except
+ * where something real (the masthead) takes them back.
  */
 export default function Home() {
   const chart = getAtlasMap(FRONT_CHART_ID);
   return (
-    <ChartBoundary>
-      <div className="relative h-dvh overflow-hidden">
+    <ChartStage
+      chart={chart}
+      locations={getMapLocations(chart.id)}
+      legend={getMapLegend(chart.id)}
+    >
+      <div className="pointer-events-none relative h-dvh overflow-hidden">
         {/* The sheet's thumb and the overview copy are fetched with the HTML
             rather than after leaflet has loaded and mounted, so the paper is
             the first thing on screen instead of the last. The top rung is the
@@ -37,15 +39,9 @@ export default function Home() {
           href={chart.sheets[chart.sheets.length - 1].url}
         />
 
-        <WorldMap
-          chart={chart}
-          locations={getMapLocations(chart.id)}
-          legend={getMapLegend(chart.id)}
-        />
-
         <SiteHeader floating />
         <ChartImprint />
       </div>
-    </ChartBoundary>
+    </ChartStage>
   );
 }

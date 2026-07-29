@@ -6,6 +6,7 @@ import {
   SITE_URL,
   UMAMI_WEBSITE_ID,
 } from "@/shared/site";
+import { ChartKeeper } from "@/widgets/world-map/chart-keeper";
 import "./globals.css";
 
 // Period faces: Old Standard follows the "modern" text types of XIX-century
@@ -65,6 +66,9 @@ export default function RootLayout({
       className={`${oldStandard.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full">
+        {/* Before the pages, so the long-lived map paints under whatever
+            page stands above it (chart-keeper.tsx tells the whole story). */}
+        <ChartKeeper />
         {children}
         <script
           type="application/ld+json"

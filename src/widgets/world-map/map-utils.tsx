@@ -220,22 +220,28 @@ export function ZoomWatcher({ onZoom }: { onZoom: (zoom: number) => void }) {
 /**
  * Deep link from entity pages: /?focus=slug lands the chart on that pin.
  * Read client-side (and inside the map, where the instance is guaranteed),
- * so the page itself stays fully static.
+ * so the page itself stays fully static. Once per VISIT, not per mount:
+ * the widget outlives its visits under the keeper, so a fresh epoch —
+ * bumped by every staging — is what says the URL is worth reading again;
+ * a visit without ?focus= then simply leaves the sheet as the reader had
+ * it.
  */
 export function DeepLinkFocus({
+  epoch,
   chart,
   locations,
   onSelect,
 }: {
+  epoch: number;
   chart: AtlasMap;
   locations: MapLocation[];
   onSelect: (location: MapLocation) => void;
 }) {
   const map = useMap();
-  const handled = useRef(false);
+  const handled = useRef(0);
   useEffect(() => {
-    if (handled.current) return;
-    handled.current = true;
+    if (handled.current === epoch) return;
+    handled.current = epoch;
     const slug = new URLSearchParams(window.location.search).get("focus");
     const target = slug ? locations.find((l) => l.slug === slug) : undefined;
     if (!target) return;
@@ -243,7 +249,7 @@ export function DeepLinkFocus({
     map.setView(pixelToLatLng(target, chart), focusZoom(map, chart), {
       animate: false,
     });
-  }, [map, chart, locations, onSelect]);
+  }, [map, chart, locations, onSelect, epoch]);
   return null;
 }
 

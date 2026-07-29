@@ -14,7 +14,10 @@ export function SiteHeader({ floating = false }: { floating?: boolean }) {
       style={{ viewTransitionName: "site-header" }}
       className={
         floating
-          ? "site-header-floating absolute inset-x-0 top-0 z-[1100]"
+          ? /* pointer-events-auto: the chart pages' chrome is a pass-through
+               layer over the keeper's map, and the masthead is the one thing
+               in it that takes the pointer back. */
+            "site-header-floating pointer-events-auto absolute inset-x-0 top-0 z-[1100]"
           : "border-b border-line"
       }
     >

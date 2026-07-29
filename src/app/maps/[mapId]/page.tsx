@@ -4,14 +4,14 @@ import { getMapLegend, getMapLocations } from "@/shared/lib/content";
 import { FRONT_CHART_ID, MAPS } from "@/shared/maps";
 import { ChartImprint } from "@/shared/ui/imprint";
 import { SiteHeader } from "@/shared/ui/site-header";
-import { WorldMap } from "@/widgets/world-map";
-import { ChartBoundary } from "@/widgets/world-map/chart-boundary";
+import { ChartStage } from "@/widgets/world-map/chart-stage";
 
 /**
  * A chart of the atlas — any MAPS entry besides the front chart, which is
- * the front page. Same full-bleed presentation as the frontispiece; the
- * chart-bound layers (voyage tracks, marginalia beasts) key themselves by
- * chart id inside the widget.
+ * the front page. Same full-bleed presentation as the frontispiece — and
+ * the same arrangement: the sheet is staged for the keeper, not rendered
+ * here (the frontispiece explains why). The chart-bound layers (voyage
+ * tracks, marginalia beasts) key themselves by chart id inside the widget.
  */
 
 export const dynamicParams = false;
@@ -36,10 +36,12 @@ export default async function RegionalMapPage({ params }: PageProps<"/maps/[mapI
   if (!chart || mapId === FRONT_CHART_ID) notFound();
 
   return (
-    /* The same boundary as the frontispiece's — the frontispiece explains
-       why. One sheet leaving pairs with the next arriving. */
-    <ChartBoundary>
-      <div className="relative h-dvh overflow-hidden">
+    <ChartStage
+      chart={chart}
+      locations={getMapLocations(chart.id)}
+      legend={getMapLegend(chart.id)}
+    >
+      <div className="pointer-events-none relative h-dvh overflow-hidden">
         {/* Thumb + overview copy with the HTML, as on the frontispiece. */}
         <link rel="preload" as="image" href={chart.lqipUrl} />
         <link
@@ -48,15 +50,9 @@ export default async function RegionalMapPage({ params }: PageProps<"/maps/[mapI
           href={chart.sheets[chart.sheets.length - 1].url}
         />
 
-        <WorldMap
-          chart={chart}
-          locations={getMapLocations(chart.id)}
-          legend={getMapLegend(chart.id)}
-        />
-
         <SiteHeader floating />
         <ChartImprint />
       </div>
-    </ChartBoundary>
+    </ChartStage>
   );
 }

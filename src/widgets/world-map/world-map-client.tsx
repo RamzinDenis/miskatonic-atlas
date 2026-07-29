@@ -83,6 +83,9 @@ interface Props {
   picker?: boolean;
   /** Picker only: the placement queue — locations with no `map` yet. */
   unplaced?: UnplacedLocation[];
+  /** The keeper's visit counter: the widget outlives its visits now, so
+      per-visit errands (?focus=) re-run on this changing, not on mount. */
+  focusEpoch?: number;
 }
 
 export default function WorldMapClient({
@@ -91,6 +94,7 @@ export default function WorldMapClient({
   legend,
   picker = false,
   unplaced = [],
+  focusEpoch = 1,
 }: Props) {
   const router = useRouter();
   const mapRef = useRef<LeafletMap | null>(null);
@@ -371,6 +375,7 @@ export default function WorldMapClient({
         <OpeningGesture run={greeting} />
         {!picker && (
           <DeepLinkFocus
+            epoch={focusEpoch}
             chart={chart}
             locations={locations}
             onSelect={(location) => {
