@@ -380,6 +380,24 @@ export default function WorldMapClient({
         maxZoom={chart.maxZoom ?? 1}
         zoomSnap={0.25}
         zoomDelta={0.5}
+        /* One notch of the wheel, half a level of zoom: two turns of approach
+           on a wide monitor and three on a laptop, the last one short where
+           maxZoom cuts it off. A chart has only 0.75–1.5 levels between "the
+           sheet fits the frame" and its close-up ceiling, depending on how
+           wide the window is, so the notch has to divide that — not tile-map
+           distances, which is what Leaflet's default 60 is written for: at 60
+           the notch computes to 0.75 and a wide monitor reached the ceiling in
+           a single turn.
+
+           Calibrated, not derived, and the number looks smaller than it is:
+           the handler is a sigmoid over the accumulated delta, and Leaflet
+           first divides deltaY by wheelPxFactor (2 × devicePixelRatio on
+           Windows), so an ordinary notch of deltaY 100–120 arrives as 50–60.
+           At 120 that lands on 0.5; 240 and 400 both fall back to 0.25 — five
+           to six turns, more than a sheet with one close-up deserves. On a
+           2× display the same notch halves again and gives 0.25, which no
+           setting here can even out. */
+        wheelPxPerZoomLevel={120}
         zoomControl={false}
         attributionControl={false}
         className="h-full w-full"
