@@ -1528,6 +1528,26 @@ a:focus-visible > .chart-tile {
     340ms ease-in-out both leaf-out;
 }
 
+/* …except when the chart is already printed under the turn. A return to a
+   chart this tab has built before mounts it in the navigation's own commit
+   (ChartBoundary marks the root), and then the half-dissolved leaf hangs
+   over a finished map — text and plates smeared across the sheet. With the
+   paper there from the first frame, the arriving side can carry the turn
+   at last: the sheet rises over the resting leaf and prints itself in,
+   and the leaf below neither fades nor slides — it is simply covered. */
+:root.chart-arriving::view-transition-old(quire) {
+  animation: none;
+}
+
+:root.chart-arriving::view-transition-group(chart-sheet) {
+  /* Over the quire's 50, under the masthead's 100. */
+  z-index: 60;
+}
+
+:root.chart-arriving::view-transition-new(chart-sheet) {
+  animation: 340ms ease-in-out both leaf-fade;
+}
+
 ::view-transition-new(leaf),
 ::view-transition-new(quire) {
   animation:
