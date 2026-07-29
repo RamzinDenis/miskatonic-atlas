@@ -1512,10 +1512,19 @@ a:focus-visible > .chart-tile {
 /* The quire — the whole block of leaves ((pages)/layout.tsx) — turns with
    the same gesture as a single leaf: it leaves when the reader goes to the
    chart, arrives when he comes back. Within the book only the leaf moves. */
-::view-transition-old(leaf),
-::view-transition-old(quire) {
+::view-transition-old(leaf) {
   animation:
     150ms ease-in both leaf-fade reverse,
+    340ms ease-in-out both leaf-out;
+}
+
+/* The quire's exit is the one turn with nothing arriving under it: the
+   chart is held still by design, so a 150ms blink of the old leaf reads
+   as a flicker, not a turn. It dissolves at the chart-sheet's own pace
+   instead, sliding as it goes — the book drawn off the map. */
+::view-transition-old(quire) {
+  animation:
+    340ms ease-in-out both chart-dissolve,
     340ms ease-in-out both leaf-out;
 }
 
