@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { FRONT_CHART_ID } from "@/shared/maps";
 import { chartPath, latLngToPixel, pixelToLatLng, type AtlasMap } from "./geometry";
 
 /* Content stores map positions in image pixels (y down); leaflet CRS.Simple
@@ -31,7 +32,7 @@ describe("latLngToPixel", () => {
 
 describe("chartPath", () => {
   it("routes the front chart to the site root and the rest to /maps", () => {
-    expect(chartPath("pacific")).toBe("/");
-    expect(chartPath("new-england")).toBe("/maps/new-england");
+    expect(chartPath(FRONT_CHART_ID)).toBe("/");
+    expect(chartPath("pacific")).toBe("/maps/pacific");
   });
 });
