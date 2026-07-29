@@ -2,8 +2,16 @@ import Link from "next/link";
 import { ChartLink } from "@/widgets/world-map/chart-link";
 
 /**
- * The atlas masthead. Inner pages render it as a normal document header;
- * the map page floats it as a thin strip over the full-bleed chart.
+ * The atlas masthead — one strip, the chart's, wherever it stands. The map
+ * page floats it over the full-bleed sheet; the inner leaves keep it in the
+ * document's flow. Nothing else about it changes: it is the reader's fixed
+ * point across a turn (held still by name in globals.css), so a masthead
+ * that were a few pixels taller on one side of the turn than the other
+ * would jump under a gaze that is resting on it.
+ *
+ * Hence the scrim rather than a rule under the strip: on the chart it lifts
+ * the letters off the engraving, and on a leaf it deepens the head of the
+ * page into the same shadow — the sheet below is what draws the line there.
  */
 export function SiteHeader({ floating = false }: { floating?: boolean }) {
   return (
@@ -12,20 +20,16 @@ export function SiteHeader({ floating = false }: { floating?: boolean }) {
          it: named here, held still in globals.css. A masthead that slides
          with the content reads as the whole viewport moving. */
       style={{ viewTransitionName: "site-header" }}
-      className={
+      className={`site-header-strip ${
         floating
           ? /* pointer-events-auto: the chart pages' chrome is a pass-through
                layer over the keeper's map, and the masthead is the one thing
                in it that takes the pointer back. */
-            "site-header-floating pointer-events-auto absolute inset-x-0 top-0 z-[1100]"
-          : "border-b border-line"
-      }
+            "pointer-events-auto absolute inset-x-0 top-0 z-[1100]"
+          : ""
+      }`}
     >
-      <div
-        className={`flex w-full items-baseline justify-between gap-4 px-4 sm:px-6 ${
-          floating ? "py-3" : "py-4"
-        }`}
-      >
+      <div className="flex w-full items-baseline justify-between gap-4 px-4 py-3 sm:px-6">
         {/* Both ways back to the chart warm it on the way: the masthead is
             on every page, and most of those pages have never loaded the map
             widget. */}

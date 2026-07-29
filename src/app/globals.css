@@ -151,9 +151,12 @@ body {
   color: var(--muted);
 }
 
-/* --- Floating masthead over the full-bleed map ------------------------- */
+/* --- The masthead's strip --------------------------------------------- */
 
-.site-header-floating {
+/* The same veil on every page: over the chart it lifts the letters off the
+   engraving, and on a leaf it is the head of the sheet darkening. Floating
+   or in the flow is the only difference the masthead knows. */
+.site-header-strip {
   background: linear-gradient(
     to bottom,
     rgba(8, 6, 2, 0.88),
