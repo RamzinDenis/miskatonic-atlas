@@ -6,8 +6,8 @@
   "description": "Lavinia Whateley was a somewhat deformed, unattractive albino woman of thirty-five when Wilbur was born, living with her aged and half-insane father about whom frightful tales of wizardry had long been whispered. She had no known husband but did not disavow her child, and seemed strangely proud of his unusual powers; she was a lone creature given to wandering the hills in thunderstorms, trying to read the great odorous books her father had inherited, though she had never been to school and knew only the disjointed lore he taught her. Her own mother had died by unexplained violence when Lavinia was twelve.\n\nAs Wilbur grew, he came to treat her with mounting contempt, at last forbidding her to accompany him to the hills on May Eve and Hallowmass; by 1926 she confessed to Mamie Bishop that she was afraid of him and did not know what he wanted or was trying to do. That Hallowe'en she disappeared and was never seen again.",
   "locations": [
     "dunwich",
-    "dunwich/whateley-farmhouse",
-    "dunwich/sentinel-hill"
+    "whateley-farmhouse",
+    "sentinel-hill"
   ],
   "appearsIn": [
     "the-dunwich-horror"

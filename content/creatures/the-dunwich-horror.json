@@ -6,10 +6,10 @@
   "description": "Left behind by Wilbur Whateley at his death, the entity burst forth within hours to become the memorable Dunwich horror: an invisible, mountainous blasphemy that lumbered by night, wrecking the Elmer Frye farm and family so completely that nothing living or dead could be found among the ruins, mauling Seth Bishop's cattle, and eventually assaulting the Bishop house and yard itself, leaving broad swaths of crushed vegetation, barrel-sized tracks, and a tarry, ineffable stench in its wake. It was tracked at last up the slopes of Sentinel Hill, its passage visible only as trembling, creeping grass and bushes moving toward the altar-stone.\n\nWhen Dr. Armitage, Professor Rice, and Dr. Morgan intercepted it near the summit, Rice's chemical spray gave it a moment's visibility: witnesses glimpsed an instant's flash of gray cloud the size of a building, and Curtis Whateley, watching through a telescope, described something bigger than a barn, made of squirming ropes, shaped like a monstrous hen's egg, jelly-like, with dozens of hogshead-sized legs, bulging eyes, and ten or twenty stovepipe-sized mouths, gray with blue or purple rings — crowned by a grotesque half-face with red eyes and crinkly albino hair, resembling old Wizard Whateley himself, yards and yards across. As the three scholars chanted their incantation, the creature's own raucous, half-human croaking rose to a climax and burst into an anguished cry of 'FATHER! FATHER! YOG-SOTHOTH!' before a single lightning bolt struck the altar-stone and a tidal wave of viewless force and stench swept down the hill.\n\nArmitage declared that the thing had gone forever, split back into what it was originally made of — an impossibility in a normal world, only the least fraction of it ever truly matter — with most of its substance returning to its father, Yog-Sothoth, in some vague realm or dimension outside the material universe. It was later revealed to have been Wilbur Whateley's twin brother, raised by the Whateleys for a terrible part in the doings that were to come, growing fast and huge for the same reason as Wilbur but surpassing him because it carried a far greater share of that same cosmic 'outsideness.'",
   "locations": [
     "dunwich",
-    "dunwich/cold-spring-glen",
-    "dunwich/sentinel-hill",
-    "dunwich/whateley-farmhouse",
-    "dunwich/frye-place"
+    "cold-spring-glen",
+    "sentinel-hill",
+    "whateley-farmhouse",
+    "frye-place"
   ],
   "appearsIn": [
     "the-dunwich-horror"

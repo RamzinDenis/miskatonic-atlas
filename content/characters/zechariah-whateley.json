@@ -6,7 +6,7 @@
   "description": "Zechariah Whateley, of the undecayed Whateleys, was one of only two persons to see Wilbur Whateley during the first month of the infant's life. He came to the farmhouse to lead away a pair of Alderney cows that Old Whateley had purchased from his own son, Curtis.",
   "locations": [
     "dunwich",
-    "dunwich/whateley-farmhouse"
+    "whateley-farmhouse"
   ],
   "appearsIn": [
     "the-dunwich-horror"

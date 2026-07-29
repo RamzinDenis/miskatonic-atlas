@@ -6,7 +6,7 @@
   "description": "Dr. Houghton of Aylesbury was hastily summoned by Wilbur Whateley on Lammas Night, 1924, and found Old Whateley in a very grave state, with cardiac action and stertorous breathing signaling an end not far off; he was chiefly disturbed by the uncanny, unnatural chattering of whippoorwills timed to the dying man's breath, and drew shrunken lids over the old man's eyes as the birds fell silent.\n\nYears later Dr. Armitage got in communication with Houghton, who had attended Old Whateley in his last illness, and found much to ponder in the grandfather's dying words as quoted by the physician.",
   "locations": [
     "dunwich",
-    "dunwich/whateley-farmhouse",
+    "whateley-farmhouse",
     "aylesbury"
   ],
   "appearsIn": [

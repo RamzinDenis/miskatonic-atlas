@@ -5,10 +5,10 @@
   "summary": "Henry Armitage, the erudite Miskatonic University librarian, uncovered the truth of Wilbur Whateley's monstrous nature through the boy's forbidden diary and, with Professor Rice and Dr. Morgan, destroyed the invisible horror atop Sentinel Hill.",
   "description": "Henry Armitage (A.M. Miskatonic, Ph.D. Princeton, Litt.D. Johns Hopkins) was the Miskatonic University librarian who had once called at the Whateley farm; when the towering Wilbur Whateley arrived seeking the Necronomicon in 1927, Armitage politely questioned him and, glimpsing the monstrous formula he sought, refused to lend him the book. After Wilbur's death and the horrifying discovery of his non-human body, Armitage spent months decoding Wilbur's cipher diary, working himself into collapse before recognizing the danger the world faced from the 'Elder Things' and the entity Wilbur had left behind.\n\nIn September 1928, Armitage traveled to Dunwich with Professor Rice and Dr. Morgan, studied the sinister altar-stone on Sentinel Hill, and led the vigil that tracked the invisible horror to its lair. Armed with memorized formulae and a chemical sprayer, he directed the climactic incantation that revealed and destroyed the creature, afterward explaining to the terrified townsfolk that 'the thing' had been split back into the otherworldly substance from which it came, its greater part returning to its monstrous father in a realm outside the material universe. He resolved to burn Wilbur's diary and urged that the altar-stone and standing stone circles of the region be dynamited and pulled down.",
   "locations": [
-    "arkham/miskatonic-university",
+    "miskatonic-university",
     "arkham",
     "dunwich",
-    "dunwich/sentinel-hill",
+    "sentinel-hill",
     "boston"
   ],
   "appearsIn": [

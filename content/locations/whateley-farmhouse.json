@@ -9,8 +9,8 @@
     "the-dunwich-horror"
   ],
   "connectedTo": [
-    "dunwich/sentinel-hill",
-    "dunwich/cold-spring-glen"
+    "sentinel-hill",
+    "cold-spring-glen"
   ],
   "sources": [
     {

@@ -6,7 +6,7 @@
   "description": "Amid the wreckage of the Frye farmstead, Selina Frye tottered to the telephone and spread what news she could of the second phase of the horror that had struck her family.",
   "locations": [
     "dunwich",
-    "dunwich/frye-place"
+    "frye-place"
   ],
   "appearsIn": [
     "the-dunwich-horror"

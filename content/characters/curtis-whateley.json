@@ -6,8 +6,8 @@
   "description": "Curtis Whateley, of the undecayed branch, was holding the telescope when Dr. Armitage's party detoured from the monster's swath toward the altar-stone. Straining his vision as Professor Rice sprayed the creature, he glimpsed it fully before dropping the instrument into the mud with a piercing shriek, gasping out a fragmented description: something bigger than a barn, made of squirming ropes, shaped like a monstrous hen's egg, jelly-like, with dozens of legs like hogsheads, bulging eyes, and ten or twenty mouths like stovepipes, all gray with blue or purple rings.\n\nAs his senses returned after the creature's destruction, Curtis recalled one final, more terrible detail — a half-shaped face atop the thing, with red eyes and crinkly albino hair and no chin, resembling old Wizard Whateley himself, only yards and yards across. This final memory proved too much for him, and he collapsed completely, unable to say more; Fred Farr and Will Hutchins carried him to the roadside.",
   "locations": [
     "dunwich",
-    "dunwich/sentinel-hill",
-    "dunwich/whateley-farmhouse"
+    "sentinel-hill",
+    "whateley-farmhouse"
   ],
   "appearsIn": [
     "the-dunwich-horror"

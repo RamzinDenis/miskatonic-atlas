@@ -45,13 +45,6 @@ export interface AtlasMap {
    */
   tone?: "scan" | "art";
   /**
-   * Which placed locations get a public pin. The default "top-level" hides
-   * sub-locations (ADR-0003): on an overview sheet a landmark inside a town
-   * is noise. A close-up regional sheet is the opposite — its whole point
-   * is the landmarks — so it declares "all" and pins children too.
-   */
-  pins?: "top-level" | "all";
-  /**
    * The stories of this chart's theatre (ADR-0004). When declared, the
    * legend groups only these; without it every story with a placed major
    * location shows. The gate exists for shared locations: Irem stands on
@@ -68,11 +61,6 @@ export interface AtlasMap {
    * the feature in the margin-annotator's ink and letters the name beside.
    */
   markerStyle?: "vignette" | "annotation";
-}
-
-/** True when the chart pins sub-locations too (pins: "all"). */
-export function chartShowsChildren(mapId: string): boolean {
-  return MAPS[mapId]?.pins === "all";
 }
 
 /** The sheet the front page opens on — chartPath maps it to "/". */
@@ -115,16 +103,13 @@ export const MAPS: Record<string, AtlasMap> = {
     // all (a 1600px frame already sits at ~×1.1 when the sheet fits).
     maxZoom: 1,
     tone: "art",
-    // A close-up sheet lives on its landmarks: sub-locations pin publicly.
-    pins: "all",
     markerStyle: "annotation",
   },
   /**
    * The sea sheet of the southern theatre (docs/pacific-map.md, ADR-0004):
    * generated open-ocean chart drawn strictly after "The Call of Cthulhu"
    * and "Dagon". The sheet is uncalibrated — R'lyeh's canonical degrees are
-   * a fact of its annotation, not of the chart. Top-level pins only: the
-   * theatre has no sub-locations.
+   * a fact of its annotation, not of the chart.
    */
   pacific: {
     id: "pacific",
@@ -149,7 +134,7 @@ export const MAPS: Record<string, AtlasMap> = {
    * chart drawn strictly after "The Nameless City" (plus Irem's one Castro
    * sentence in "The Call of Cthulhu"). Uncalibrated like every generated
    * sheet; the underworld (the mummy corridor, the abyss) is interior and
-   * stays on the location's own page. Top-level pins only.
+   * stays on the location's own page.
    */
   desert: {
     id: "desert",

@@ -6,9 +6,9 @@
   "description": "Old Whateley was the aged, half-insane father of Lavinia Whateley, about whom the most frightful tales of wizardry had been whispered in his youth; the remote farmhouse had always been feared for his reputation in black magic, deepened by the unexplained violent death of his wife when Lavinia was twelve. He taught Lavinia disjointed scraps of ancient lore, paid for cattle in ancient gold without ever increasing his herd, boarded up the farmhouse's reclaimed upper story, and through long, hushed afternoons instructed and catechized his grandson Wilbur — sometimes making him repeat the Dho formula until the boy believed he glimpsed the inner city at the magnetic poles.\n\nOn Lammas Night, 1924, Old Whateley — noticing a growing, ominous flock of whippoorwills gathering under his window from Cold Spring Glen — fell into a grave cardiac decline. Dying, he addressed his bearded young grandson as 'Willy,' telling him he would need 'more space,' and instructed him to open the gates to Yog-Sothoth with a long chant on page 751 of 'the complete edition' and then burn 'the prison,' since fire from earth could not destroy it. Years later, when the horror he had helped conceive was finally destroyed atop Sentinel Hill, a witness recognized its grotesque half-face as the very image of 'Wizard' Whateley, 'only yards and yards acrost.'",
   "locations": [
     "dunwich",
-    "dunwich/whateley-farmhouse",
-    "dunwich/sentinel-hill",
-    "dunwich/cold-spring-glen"
+    "whateley-farmhouse",
+    "sentinel-hill",
+    "cold-spring-glen"
   ],
   "appearsIn": [
     "the-dunwich-horror"

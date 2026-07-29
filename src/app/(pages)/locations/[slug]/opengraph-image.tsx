@@ -1,4 +1,4 @@
-import { getLocation, getTopLocations } from "@/shared/lib/content";
+import { getLocation, getLocations } from "@/shared/lib/content";
 import { capFirst, ogCard, OG_CONTENT_TYPE, OG_SIZE } from "@/shared/og-card";
 import { SITE_NAME } from "@/shared/site";
 
@@ -7,7 +7,7 @@ import { SITE_NAME } from "@/shared/site";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return getTopLocations().map(({ slug }) => ({ slug }));
+  return getLocations().map(({ slug }) => ({ slug }));
 }
 
 export const alt = SITE_NAME;

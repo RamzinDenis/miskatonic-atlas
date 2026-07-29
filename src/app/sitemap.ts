@@ -3,7 +3,7 @@ import {
   getCharacters,
   getCreatures,
   getStories,
-  getTopLocations,
+  getLocations,
 } from "@/shared/lib/content";
 import { chartPath, MAPS } from "@/shared/maps";
 import { SITE_URL } from "@/shared/site";
@@ -32,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${SITE_URL}/stories/${slug}`,
       priority: 0.7,
     })),
-    ...major(getTopLocations()).map(({ slug }) => ({
+    ...major(getLocations()).map(({ slug }) => ({
       url: `${SITE_URL}/locations/${slug}`,
       priority: 0.6,
     })),

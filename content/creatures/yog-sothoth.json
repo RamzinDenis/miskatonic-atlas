@@ -5,7 +5,7 @@
   "summary": "Yog-Sothoth is the cosmic Old One who is the gate, the key, and the guardian of the gate whereby the spheres meet, in whom past, present, and future are one; Old Whateley groomed his grandson Wilbur to open the gates to Yog-Sothoth, whose own offspring was unleashed upon Dunwich as Wilbur's monstrous twin.",
   "description": "The Necronomicon declares that Yog-Sothoth knows the gate, is the gate, and is the key and guardian of the gate, in whom past, present, and future are all one; it knows where the Old Ones broke through of old and where they shall break through again. Wilbur, as a child, once shrieked its dreadful name within a circle of stones with a great book open before him, and the hills shook.\n\nOn his deathbed, Old Whateley instructed his grandson to 'open up the gates to Yog-Sothoth' with a long chant to be found on page 751 of 'the complete edition,' and Wilbur later traveled to Arkham and Cambridge in search of exactly such a formula. When the horror born of this design was finally destroyed atop Sentinel Hill, its dying, croaking voice called out in agony, 'FATHER! FATHER! YOG-SOTHOTH!' — revealing Yog-Sothoth as the true, otherworldly father of both Wilbur and his monstrous twin.",
   "locations": [
-    "dunwich/sentinel-hill",
+    "sentinel-hill",
     "dunwich"
   ],
   "appearsIn": [

@@ -191,20 +191,15 @@ export function validateDraft(
     if (!known.stories.has(s)) errors.push(`appearsIn → unknown slug "${s}"`);
   }
 
-  // A (possibly composite `parentSlug/slug`) location reference, mirroring
-  // scripts/check-drafts.mts: file must exist, a sub-location must be cited by
-  // its composite id, and the prefix must match its actual parent (ADR-0003).
+  // A location reference is the target's own bare slug, mirroring
+  // src/shared/lib/content.ts: the composite `parentSlug/slug` id is retired
+  // (ADR-0007), and a leftover one is named rather than quietly accepted.
   const locationRefError = (ref: string): string | null => {
-    const i = ref.lastIndexOf("/");
-    const slug = i === -1 ? ref : ref.slice(i + 1);
-    if (!known.locations.has(slug)) return `unknown location "${ref}"`;
-    const parent = known.locations.get(slug);
-    if (i === -1) {
-      return parent ? `"${ref}" is a sub-location — use "${parent}/${slug}"` : null;
+    if (ref.includes("/")) {
+      const slug = ref.slice(ref.lastIndexOf("/") + 1);
+      return `"${ref}" is a retired composite id — use "${slug}" (ADR-0007)`;
     }
-    return ref.slice(0, i) === parent
-      ? null
-      : `"${ref}" — parent mismatch (expected "${parent ?? "—"}/${slug}")`;
+    return known.locations.has(ref) ? null : `unknown location "${ref}"`;
   };
   for (const field of ["connectedTo", "locations"] as const) {
     for (const ref of (entity[field] as string[]) ?? []) {

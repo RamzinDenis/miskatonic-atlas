@@ -62,21 +62,17 @@ const storySlugs = new Set(
 );
 
 /**
- * Validate a location reference that may be a composite id `parentSlug/slug`
- * (ADR-0003). Returns an error message, or null if the reference is valid.
- * A sub-location must always be referenced by its composite id, never bare.
+ * Validate a location reference: the target's own bare slug, every location
+ * being a page of its own (ADR-0007). Returns an error message, or null if the
+ * reference is valid. The composite `parentSlug/slug` id of ADR-0003 is retired
+ * and is reported as such — silently accepting one would let it reach a href.
  */
 function locationRefError(ref: string): string | null {
-  const i = ref.lastIndexOf("/");
-  const slug = i === -1 ? ref : ref.slice(i + 1);
-  if (!locationSlugs.has(slug)) return `unknown location "${ref}"`;
-  const parent = locationParent.get(slug);
-  if (i === -1) {
-    return parent ? `"${ref}" is a sub-location — use composite id "${parent}/${slug}"` : null;
+  if (ref.includes("/")) {
+    const slug = ref.slice(ref.lastIndexOf("/") + 1);
+    return `"${ref}" is a retired composite id — use "${slug}" (ADR-0007)`;
   }
-  return ref.slice(0, i) === parent
-    ? null
-    : `"${ref}" — parent mismatch (expected "${parent ?? "—"}/${slug}")`;
+  return locationSlugs.has(ref) ? null : `unknown location "${ref}"`;
 }
 
 let files = 0;

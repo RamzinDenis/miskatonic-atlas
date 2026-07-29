@@ -5,10 +5,10 @@
   "summary": "Professor Warren Rice of Miskatonic University assisted Dr. Armitage in researching Wilbur Whateley's diary and stood beside him in the final incantation atop Sentinel Hill that destroyed the horror.",
   "description": "Professor Warren Rice and Dr. Francis Morgan were among the men Armitage had confided his conjectures to; both saw Wilbur Whateley's body on the library floor and later, along with Armitage, tortured their brains in speculation and debate over what to do. On the day of the confrontation, Rice took a metal insect-sprayer from a valise and, from a vantage point above and behind the invisible entity, had an excellent chance of spreading the potent powder that revealed it. He declared afterward that he had wholly lost consciousness for an instant during the incantation, though he did not stumble or fall.",
   "locations": [
-    "arkham/miskatonic-university",
+    "miskatonic-university",
     "arkham",
     "dunwich",
-    "dunwich/sentinel-hill"
+    "sentinel-hill"
   ],
   "appearsIn": [
     "the-dunwich-horror"

@@ -6,7 +6,7 @@
   "description": "An aged, dumb man who greeted the narrator at the door of the ancestral house on Green Lane, communicating only by stylus and wax tablet. His bland, unmoving face and flabby, gloved hands unsettled the narrator from the first, who came to suspect it was not a face at all but a cunningly wrought mask.\n\nAt eleven o'clock he led the narrator and a silent old spinning woman, both now cloaked, through the frozen town and down into caverns beneath Kingsport's Great White Church, carrying the narrator's borrowed Necronomicon. In the underground rite he directed the ceremony from beside the pillar of flame, held the book aloft to draw the throng's obeisance, and signaled the hidden flute-player to change its drone — precipitating an unnamable horror.\n\nWhen the narrator refused to mount one of the hybrid winged beasts and flee with the rest, the old man remained behind and wrote that he was the true deputy of the narrator's own ancestors, who had founded the Yule worship in that place, producing a seal ring and a watch bearing the family arms — the latter known to have been buried with the narrator's great-great-great-great-grandfather in 1698 — as proof of kinship. When he threw back his hood to show a claimed family resemblance, and later moved suddenly to stop an escaping winged thing, the motion dislodged a waxen mask from what should have been his head, revealing a horror that sent the narrator fleeing into an underground river.",
   "locations": [
     "kingsport",
-    "kingsport/the-great-white-church"
+    "the-great-white-church"
   ],
   "appearsIn": [
     "the-festival"

@@ -6,7 +6,7 @@
   "description": "Little is recorded of Mrs. Whateley beyond her death: she was the wife of Old Whateley and mother of Lavinia, and her unexplained, violent death when Lavinia was twelve years old only added to the ill repute the remote farmhouse already held because of her husband's reputation for black magic.",
   "locations": [
     "dunwich",
-    "dunwich/whateley-farmhouse"
+    "whateley-farmhouse"
   ],
   "appearsIn": [
     "the-dunwich-horror"

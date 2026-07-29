@@ -4,7 +4,7 @@ import {
   getCharacters,
   getCreatures,
   getStories,
-  getTopLocations,
+  getLocations,
   majorOnly,
 } from "@/shared/lib/content";
 
@@ -54,7 +54,7 @@ export default function IndexPage() {
     name: s.title,
     note: String(s.year),
   }));
-  const locations: IndexEntry[] = majorOnly(getTopLocations()).map((l) => ({
+  const locations: IndexEntry[] = majorOnly(getLocations()).map((l) => ({
     href: `/locations/${l.slug}`,
     name: l.name,
     note: l.type,

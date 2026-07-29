@@ -5,10 +5,10 @@
   "summary": "Dr. Francis Morgan of Miskatonic University joined Armitage and Rice in confronting Wilbur Whateley's monstrous legacy, arming himself with a rifle before the climactic vigil on Sentinel Hill.",
   "description": "Dr. Francis Morgan was among the men Armitage confided his conjectures to, and he saw Wilbur Whateley's body on the library floor. On the day of the confrontation he uncased a big-game rifle, relying on it despite Armitage's warning that no material weapon would help; earlier, meeting arriving policemen in the vestibule, he had urged them to postpone entering the stench-filled reading-room until the medical examiner arrived.",
   "locations": [
-    "arkham/miskatonic-university",
+    "miskatonic-university",
     "arkham",
     "dunwich",
-    "dunwich/sentinel-hill"
+    "sentinel-hill"
   ],
   "appearsIn": [
     "the-dunwich-horror"

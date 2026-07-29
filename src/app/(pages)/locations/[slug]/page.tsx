@@ -6,12 +6,12 @@ import {
   getCharactersAt,
   getCreaturesAt,
   getLocation,
+  getLocations,
   getStory,
-  getTopLocations,
   locationHref,
 } from "@/shared/lib/content";
 import { metaDescription } from "@/shared/lib/meta";
-import { chartPath, chartShowsChildren } from "@/shared/maps";
+import { chartPath } from "@/shared/maps";
 import type { Location } from "@/shared/schemas";
 import { ChipSection, Description, SourcesSection } from "@/shared/ui/sections";
 import { ChartLink } from "@/widgets/world-map/chart-link";
@@ -21,8 +21,8 @@ import { MapInset } from "@/widgets/world-map/map-inset";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  // Sub-locations are sections of their parent's page, not their own routes.
-  return getTopLocations().map(({ slug }) => ({ slug }));
+  // A leaf for every location, sub-location or not (ADR-0007).
+  return getLocations().map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -35,35 +35,18 @@ export async function generateMetadata({
     : {};
 }
 
-/** Deep link of a location's inset onto the full chart. Majors only; a
-    sub-location links out only when its chart pins children (pins: "all") —
-    elsewhere it has no public pin to focus (ADR-0003) and its inset alone
-    shows where it lies. */
+/** Deep link of a location's inset onto the full chart. Majors only — a minor
+    place has no public pin to focus, and its inset alone shows where it lies
+    (ADR-0005). Containment says nothing here: every charted place is pinned in
+    its own right (ADR-0007). */
 function insetChartHref(location: Location): string | undefined {
-  return location.map &&
-    location.prominence === "major" &&
-    (!location.parentSlug || chartShowsChildren(location.map.mapId))
+  return location.map && location.prominence === "major"
     ? `${chartPath(location.map.mapId)}?focus=${location.slug}`
     : undefined;
 }
 
-/** The shared body of a location, rendered for the parent article and for each
-    sub-location section alike. */
-function LocationBody({
-  location,
-  inset = true,
-  lead = false,
-}: {
-  location: Location;
-  /** Sub-location sections drop their inset when the parent already printed
-      one — a town and its landmarks are the same crop of the same sheet,
-      and one page needs it once. */
-  inset?: boolean;
-  /** The body that opens the page: its plate is the first engraving a
-      reader sees, so it is worth preloading. A sub-location's plate is
-      somewhere below the fold and stays lazy. */
-  lead?: boolean;
-}) {
+/** The body of a location's leaf, below its heading. */
+function LocationBody({ location }: { location: Location }) {
   const connected = location.connectedTo.flatMap((ref) => {
     const loc = getLocation(ref);
     return loc ? [{ href: locationHref(ref), label: loc.name }] : [];
@@ -75,11 +58,12 @@ function LocationBody({
     <>
       <p className="mt-6 text-lg leading-relaxed">{location.summary}</p>
 
-      {getPlate("locations", location.slug, lead)}
+      {/* The leaf's own opening engraving, so it is worth preloading. */}
+      {getPlate("locations", location.slug, true)}
 
       <Description text={location.description} />
 
-      {inset && location.map && (
+      {location.map && (
         <MapInset
           map={location.map}
           name={location.name}
@@ -118,6 +102,7 @@ export default async function LocationPage({ params }: PageProps<"/locations/[sl
   if (!location) notFound();
 
   const children = getChildLocations(location.slug);
+  const parent = location.parentSlug ? getLocation(location.parentSlug) : undefined;
   const appearsIn = location.appearsIn.flatMap((s) => getStory(s) ?? []);
   // Back to the sheet this place is charted on — an unplaced parent borrows
   // its first placed child's; only a theatre-less location falls back to the
@@ -145,14 +130,24 @@ export default async function LocationPage({ params }: PageProps<"/locations/[sl
           {location.realWorld && (
             <p className="mt-2 text-sm text-muted">Real-world: {location.realWorld}</p>
           )}
+          {/* The containment line, printed under the heading where a
+              gazetteer prints it: this leaf stands on its own, and the town
+              it lies in is a fact about it, not the page that holds it. */}
+          {parent && (
+            <p className="mt-2 text-sm text-muted">
+              Part of{" "}
+              <Link
+                href={locationHref(parent.slug)}
+                className="text-accent transition-colors hover:text-foreground"
+              >
+                {parent.name}
+              </Link>
+            </p>
+          )}
           <div className="parchment-rule mt-5" />
         </header>
 
-        {/* One inset serves the whole page (a town and its landmarks are the
-            same crop of the same sheet). With sub-locations it closes the
-            article instead of opening it, so the chart excerpt arrives once
-            every place it covers has been read — not before the first. */}
-        <LocationBody location={location} inset={children.length === 0} lead />
+        <LocationBody location={location} />
 
         {children.length > 0 && (
           <section className="mt-12">
@@ -161,7 +156,7 @@ export default async function LocationPage({ params }: PageProps<"/locations/[sl
               {children.map((child) => (
                 <li key={child.slug}>
                   <Link
-                    href={`#${child.slug}`}
+                    href={locationHref(child.slug)}
                     className="cap-first inline-block rounded-md border border-line bg-surface px-4 py-2 text-sm transition-colors hover:border-accent"
                   >
                     {child.name}
@@ -170,36 +165,6 @@ export default async function LocationPage({ params }: PageProps<"/locations/[sl
               ))}
             </ul>
           </section>
-        )}
-
-        {children.map((child) => (
-          <section
-            key={child.slug}
-            id={child.slug}
-            className="mt-14 scroll-mt-24 border-t border-line pt-10"
-          >
-            <header>
-              <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-                <h2 className="font-display text-3xl">{child.name}</h2>
-                <span className="text-xs uppercase tracking-widest text-muted">{child.type}</span>
-              </div>
-              {child.subtitle && (
-                <p className="mt-2 text-sm italic text-muted">{child.subtitle}</p>
-              )}
-              {child.realWorld && (
-                <p className="mt-1 text-sm text-muted">Real-world: {child.realWorld}</p>
-              )}
-            </header>
-            <LocationBody location={child} inset={!location.map} />
-          </section>
-        ))}
-
-        {children.length > 0 && location.map && (
-          <MapInset
-            map={location.map}
-            name={location.name}
-            chartHref={insetChartHref(location)}
-          />
         )}
 
         {appearsIn.length > 0 && (

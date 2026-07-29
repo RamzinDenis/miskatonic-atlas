@@ -6,7 +6,7 @@
   "description": "Old Zebulon Whateley, of a branch hovering half-way between soundness and decadence, made darkly wild suggestions about rites that ought to be practised on the hilltops; his memories of chantings in the great stone circles were not altogether connected only with Wilbur and his grandfather. He was absent from the group that ascended Sentinel Hill, and only he could have done justice to the situation or offered a plausible explanation.\n\nWhen the horror was finally destroyed, old Zebulon — silent until then — spoke aloud, wanderingly recalling that fifteen years before he had heard Old Whateley say that some day they would hear a child of Lavinny's calling its father's name atop Sentinel Hill.",
   "locations": [
     "dunwich",
-    "dunwich/sentinel-hill"
+    "sentinel-hill"
   ],
   "appearsIn": [
     "the-dunwich-horror"

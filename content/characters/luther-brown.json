@@ -6,7 +6,7 @@
   "description": "About 7 o'clock one morning, Luther Brown, hired boy at George Corey's between Cold Spring Glen and the village, rushed frenziedly back from Ten-Acre Meadow with the cows, almost convulsed with fright as he stumbled into the kitchen, faltering as he tried to describe strange tracks and smells near the glen.\n\nOn a later stormy night, driving in the cows, Luther saw the trees bending at the mouth of the glen, smelled the same awful smell as before, and heard swishing, lapping sounds and creaking on the bridge over Bishop's Brook, though he saw nothing but the bending underbrush; he had the nerve to step up and examine the ground, finding it churned mud and water still bearing prints as big as barrels, like those he had found the previous Monday.",
   "locations": [
     "dunwich",
-    "dunwich/cold-spring-glen"
+    "cold-spring-glen"
   ],
   "appearsIn": [
     "the-dunwich-horror"

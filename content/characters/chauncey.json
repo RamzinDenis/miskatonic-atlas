@@ -6,8 +6,8 @@
   "description": "Chauncey, who slept poorly, had gone up on the hill toward Whateley's and dashed back in terror after one look at the place and the pasturage where his stepfather Seth Bishop's cows had been left out all night. He reported that Old Whateley's house was all blown up, its timbers scattered as if by dynamite, the bottom floor covered in a foul tarlike substance, and awful round marks bigger than a hogshead in the yard leading in a wide matted swath toward the meadows, with the cows found half-devoured and drained of blood near the Devil's Hop Yard.\n\nToward morning, Chauncey had heard the whippoorwills so loud in Cold Spring Glen that he could not sleep, and a faint ripping or tearing sound of wood, like a great box being opened far off.",
   "locations": [
     "dunwich",
-    "dunwich/cold-spring-glen",
-    "dunwich/whateley-farmhouse"
+    "cold-spring-glen",
+    "whateley-farmhouse"
   ],
   "appearsIn": [
     "the-dunwich-horror"

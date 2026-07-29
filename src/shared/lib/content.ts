@@ -11,7 +11,7 @@ import {
   type Location,
   type Story,
 } from "../schemas.ts"; // relative + extension so Node can run this file directly (scripts/validate.mts)
-import { FRONT_CHART_ID, MAPS, chartShowsChildren, getAtlasMap } from "../maps.ts"; // relative + extension for the same reason
+import { FRONT_CHART_ID, MAPS, getAtlasMap } from "../maps.ts"; // relative + extension for the same reason
 import type {
   MapFigure,
   MapLegendGroup,
@@ -98,34 +98,24 @@ function checkRefs(
   }
 }
 
-/** The file slug behind a location reference — the segment after any parent
-    prefix, so a composite id `parentSlug/slug` resolves to its file. */
-function refSlug(ref: string): string {
-  const i = ref.lastIndexOf("/");
-  return i === -1 ? ref : ref.slice(i + 1);
-}
-
 function checkIntegrity(content: AtlasContent, errors: string[]) {
   const storySlugs = new Set(content.stories.map((s) => s.slug));
   const locationSlugs = new Set(content.locations.map((l) => l.slug));
   const locationParent = new Map(content.locations.map((l) => [l.slug, l.parentSlug]));
 
-  // A (possibly composite `parentSlug/slug`) location reference: the file must
-  // exist, a sub-location must be referenced by its composite id, and the
-  // prefix must match the target's actual parent (ADR-0003).
+  // Every location is referenced by its own bare slug (ADR-0007). The composite
+  // `parentSlug/slug` id of ADR-0003 is retired, and a leftover one is named as
+  // such rather than quietly resolving: it would resolve to the same file here
+  // and then travel into a href that no longer has a route.
   const checkLocationRefs = (from: string, field: string, refs: readonly string[]) => {
     for (const ref of refs) {
-      const slug = refSlug(ref);
-      if (!locationSlugs.has(slug)) {
+      if (ref.includes("/")) {
+        const slug = ref.slice(ref.lastIndexOf("/") + 1);
+        errors.push(
+          `${from}: ${field} → "${ref}" is a retired composite id; use "${slug}" (ADR-0007)`,
+        );
+      } else if (!locationSlugs.has(ref)) {
         errors.push(`${from}: ${field} → unknown location "${ref}"`);
-        continue;
-      }
-      const parent = locationParent.get(slug);
-      const i = ref.lastIndexOf("/");
-      if (i === -1) {
-        if (parent) errors.push(`${from}: ${field} → "${ref}" is a sub-location; use "${parent}/${slug}"`);
-      } else if (ref.slice(0, i) !== parent) {
-        errors.push(`${from}: ${field} → "${ref}" parent mismatch (expected "${parent ?? "—"}/${slug}")`);
       }
     }
   };
@@ -216,34 +206,21 @@ export function getLocations(): Location[] {
   return loadContent().locations;
 }
 
-/** Top-level locations only — sub-locations render as sections of their parent
-    page, so they are not their own routes (ADR-0003). */
-export function getTopLocations(): Location[] {
-  return loadContent().locations.filter((l) => !l.parentSlug);
-}
-
-/** The sub-locations of a location, A→Z — the sections of its fandom page. */
+/** The sub-locations of a location, A→Z — the places charted inside it, each
+    with a page of its own; the parent's page lists them (ADR-0007). */
 export function getChildLocations(parentSlug: string): Location[] {
   return loadContent()
     .locations.filter((l) => l.parentSlug === parentSlug)
     .sort((a, b) => a.name.localeCompare(b.name, "en"));
 }
 
-/** Resolves a location reference, accepting a composite id `parentSlug/slug`. */
-export function getLocation(ref: string): Location | undefined {
-  return loadContent().locations.find((l) => l.slug === refSlug(ref));
+export function getLocation(slug: string): Location | undefined {
+  return loadContent().locations.find((l) => l.slug === slug);
 }
 
-/** The canonical id of a location: `parentSlug/slug` for a sub-location, else `slug`. */
-export function locationId(location: Pick<Location, "slug" | "parentSlug">): string {
-  return location.parentSlug ? `${location.parentSlug}/${location.slug}` : location.slug;
-}
-
-/** Href for a location reference: a sub-location deep-links to its section
-    (`#slug`) on its parent's page; a top-level location gets its own page. */
-export function locationHref(ref: string): string {
-  const i = ref.lastIndexOf("/");
-  return i === -1 ? `/locations/${ref}` : `/locations/${ref.slice(0, i)}#${ref.slice(i + 1)}`;
+/** Every location is a page of its own, sub-location or not (ADR-0007). */
+export function locationHref(slug: string): string {
+  return `/locations/${slug}`;
 }
 
 export function getCharacters(): Character[] {
@@ -328,8 +305,7 @@ export function getCompany(
   return entity.locations.flatMap((ref) => {
     const location = getLocation(ref);
     if (!location) return [];
-    const here = (e: { locations: string[] }) =>
-      e.locations.some((l) => refSlug(l) === location.slug);
+    const here = (e: { locations: string[] }) => e.locations.includes(location.slug);
     const isSelf = (kind: string, slug: string) => kind === self && slug === entity.slug;
 
     const figures: CompanyFigure[] = [
@@ -369,11 +345,11 @@ export function getAtlasTally() {
 }
 
 export function getCharactersAt(locationSlug: string): Character[] {
-  return loadContent().characters.filter((c) => c.locations.some((l) => refSlug(l) === locationSlug));
+  return loadContent().characters.filter((c) => c.locations.includes(locationSlug));
 }
 
 export function getCreaturesAt(locationSlug: string): Creature[] {
-  return loadContent().creatures.filter((c) => c.locations.some((l) => refSlug(l) === locationSlug));
+  return loadContent().creatures.filter((c) => c.locations.includes(locationSlug));
 }
 
 function toMapLocation(content: AtlasContent, mapId: string) {
@@ -385,10 +361,10 @@ function toMapLocation(content: AtlasContent, mapId: string) {
     // only major figures are listed (minor ones stay on the location page).
     const figures: MapFigure[] = [
       ...majorOnly(content.characters)
-        .filter((c) => c.locations.some((l) => refSlug(l) === location.slug))
+        .filter((c) => c.locations.includes(location.slug))
         .map((c) => ({ slug: c.slug, name: c.name, kind: "characters" as const })),
       ...majorOnly(content.creatures)
-        .filter((c) => c.locations.some((l) => refSlug(l) === location.slug))
+        .filter((c) => c.locations.includes(location.slug))
         .map((c) => ({ slug: c.slug, name: c.name, kind: "creatures" as const })),
     ];
     /* Neighbours the chart can actually answer with: a connection is drawn
@@ -401,9 +377,9 @@ function toMapLocation(content: AtlasContent, mapId: string) {
     };
     const connectedTo = [
       ...new Set([
-        ...location.connectedTo.map(refSlug),
+        ...location.connectedTo,
         ...content.locations
-          .filter((other) => other.connectedTo.some((ref) => refSlug(ref) === location.slug))
+          .filter((other) => other.connectedTo.includes(location.slug))
           .map((other) => other.slug),
       ]),
     ].filter((slug) => slug !== location.slug && pinnedHere(slug));
@@ -411,9 +387,7 @@ function toMapLocation(content: AtlasContent, mapId: string) {
     return [
       {
         slug: location.slug,
-        href: locationHref(
-          location.parentSlug ? `${location.parentSlug}/${location.slug}` : location.slug,
-        ),
+        href: locationHref(location.slug),
         name: location.name,
         type: location.type,
         summary: location.summary,
@@ -478,8 +452,7 @@ export function getSeedPlacements(
   const connAnchor = (
     l: Location,
   ): { at: { mapId: string; x: number; y: number }; key: string } | null => {
-    for (const ref of l.connectedTo) {
-      const s = refSlug(ref);
+    for (const s of l.connectedTo) {
       const target = bySlug.get(s);
       if (originalPlaced.has(s) && target && sharesStory(l, target))
         return { at: placed.get(s)!, key: s };
@@ -514,14 +487,12 @@ export function getSeedPlacements(
 
 /**
  * Major locations pinned on the given chart, shaped for the WorldMap widget.
- * Sub-locations never pin publicly (ADR-0003 — their anchor is a section of
- * the parent's page); placing one in the picker only feeds its page inset.
+ * Containment no longer decides this (ADR-0007): a landmark inside a town is
+ * charted in its own right, on its own coordinates, exactly like the town.
  */
 export function getMapLocations(mapId: string): MapLocation[] {
   const content = loadContent();
-  return majorOnly(content.locations)
-    .filter((l) => !l.parentSlug || chartShowsChildren(mapId))
-    .flatMap(toMapLocation(content, mapId));
+  return majorOnly(content.locations).flatMap(toMapLocation(content, mapId));
 }
 
 /**
@@ -562,7 +533,7 @@ export function getMapLegend(mapId: string): MapLegendGroup[] {
       title: story.title,
       year: story.year,
       locations: majorOnly(content.locations)
-        .filter((l) => (!l.parentSlug || chartShowsChildren(mapId)) && l.appearsIn.includes(story.slug))
+        .filter((l) => l.appearsIn.includes(story.slug))
         .flatMap(toMapLocation(content, mapId))
         .sort((a, b) => a.name.localeCompare(b.name, "en")),
     }))

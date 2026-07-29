@@ -9,8 +9,8 @@
     "the-dunwich-horror"
   ],
   "connectedTo": [
-    "dunwich/sentinel-hill",
-    "dunwich/frye-place"
+    "sentinel-hill",
+    "frye-place"
   ],
   "sources": [
     {
