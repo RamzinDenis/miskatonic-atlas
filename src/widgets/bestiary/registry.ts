@@ -87,7 +87,7 @@ export const BESTIARY: BestiaryPlate[] = [
     epithet: "Nightmare itself; to see it is to die",
     art: {
       mask: "/bestiary/white-polypous-thing.webp",
-      thumb: "/bestiary/white-polypous-thing-thumb.png",
+      thumb: "/bestiary/white-polypous-thing-thumb.webp",
       aspect: 0.953,
       effects: ["breath", "gaze-tilt"],
     },
@@ -134,7 +134,7 @@ export const BESTIARY: BestiaryPlate[] = [
     epithet: "Lying in wait for the souls of the dying",
     art: {
       mask: "/bestiary/whippoorwills.webp",
-      thumb: "/bestiary/whippoorwills-thumb.png",
+      thumb: "/bestiary/whippoorwills-thumb.webp",
       aspect: 0.643,
       effects: ["ink-shiver", "gaze-tilt"],
     },
@@ -156,7 +156,7 @@ export const BESTIARY: BestiaryPlate[] = [
     epithet: "Piping noisomely beyond the light",
     art: {
       mask: "/bestiary/amorphous-flute-player.webp",
-      thumb: "/bestiary/amorphous-flute-player-thumb.png",
+      thumb: "/bestiary/amorphous-flute-player-thumb.webp",
       aspect: 0.748,
       effects: ["breath", "ink-shiver"],
     },

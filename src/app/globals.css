@@ -1208,10 +1208,11 @@ a:focus-visible > .chart-tile {
 }
 
 /*
- * All seven beasts are mounted at once, stacked in one square box: a mask
- * inside display:none is never fetched, so hiding the others outright would
- * make every turn of the sheet a download. Crossfading a stack also keeps
- * the sheet from jumping as figures of different heights succeed each other.
+ * Every plate keeps a mount in one square box, stacked and crossfaded: the
+ * sheet then never jumps as figures of different heights succeed each other,
+ * and the turn has both sheets to fade between. The mounts are empty until
+ * the press reaches them, though — hidden by opacity, a mask is fetched all
+ * the same, and eleven plates at once are 2.5 MB (see showcase.tsx).
  */
 .bestiary-stack {
   position: relative;

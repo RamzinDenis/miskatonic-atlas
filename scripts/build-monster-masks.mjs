@@ -134,11 +134,14 @@ for (const slug of [...MONSTERS, ...BESTIARY_ONLY]) {
   );
 }
 
-/* Ribbon thumbnails of the beasts that have no chart mark to borrow one from. */
+/* Ribbon thumbnails of the beasts that have no chart mark to borrow one from.
+   Webp like the marks they stand beside: as lossless png these three weighed
+   more than twice what a borrowed mark does, and the ribbon prints them at
+   the same 3 rem. */
 for (const slug of BESTIARY_ONLY) {
   await buildMask(
     path.join(SRC, `monster-${slug}.png`),
-    path.join(bestiaryDir, `${slug}-thumb.png`),
+    path.join(bestiaryDir, `${slug}-thumb.webp`),
     MONSTER_SIZE,
   );
 }
