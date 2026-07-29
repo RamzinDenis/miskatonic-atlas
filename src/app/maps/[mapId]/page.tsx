@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getMapLegend, getMapLocations } from "@/shared/lib/content";
 import { FRONT_CHART_ID, MAPS } from "@/shared/maps";
+import { ChartImprint } from "@/shared/ui/imprint";
 import { SiteHeader } from "@/shared/ui/site-header";
 import { WorldMap } from "@/widgets/world-map";
 import { ChartBoundary } from "@/widgets/world-map/chart-boundary";
@@ -54,6 +55,7 @@ export default async function RegionalMapPage({ params }: PageProps<"/maps/[mapI
         />
 
         <SiteHeader floating />
+        <ChartImprint />
       </div>
     </ChartBoundary>
   );

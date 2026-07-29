@@ -162,6 +162,23 @@ body {
   );
 }
 
+/* The imprint at the chart's foot answers the masthead's scrim with its
+   own: the sheet runs full-bleed, and a printer's line set straight on the
+   engraving drowns in it — the Miskatonic sheet's harbour took this one.
+   The same ink-dark veil, drawn up from the lower edge; the halo under the
+   letters holds them where the veil has already thinned. */
+.chart-imprint {
+  background: linear-gradient(
+    to top,
+    rgba(8, 6, 2, 0.92),
+    rgba(8, 6, 2, 0.6) 60%,
+    transparent
+  );
+  text-shadow:
+    0 1px 3px rgba(8, 6, 2, 0.9),
+    0 0 8px rgba(8, 6, 2, 0.7);
+}
+
 /* --- World map widget ------------------------------------------------- */
 
 /*
