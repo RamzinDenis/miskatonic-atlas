@@ -1498,6 +1498,17 @@ a:focus-visible > .chart-tile {
   animation: none;
 }
 
+/* The quire rides above the chart in the pseudo-tree. Groups paint in
+   capture order, new after old, so on a return to the chart the arriving
+   sheet — opaque and animation-free — used to print straight over the
+   quire's exit: the whole turn played underneath it, invisibly. Above the
+   sheet, the leaving book slides off and *bares* the chart; the arriving
+   direction reads the same as before, since there the quire belongs on
+   top anyway. Below the masthead's 100. */
+::view-transition-group(quire) {
+  z-index: 50;
+}
+
 /* The quire — the whole block of leaves ((pages)/layout.tsx) — turns with
    the same gesture as a single leaf: it leaves when the reader goes to the
    chart, arrives when he comes back. Within the book only the leaf moves. */
