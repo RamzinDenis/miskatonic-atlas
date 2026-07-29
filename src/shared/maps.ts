@@ -76,7 +76,7 @@ export function chartShowsChildren(mapId: string): boolean {
 }
 
 /** The sheet the front page opens on — chartPath maps it to "/". */
-export const FRONT_CHART_ID = "pacific";
+export const FRONT_CHART_ID = "new-england";
 
 /*
  * Content stores map positions as pixels of the chart's source image

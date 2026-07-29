@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { FRONT_CHART_ID } from "./src/shared/maps";
 
 /**
  * Everything under public/ is served with `Cache-Control: public, max-age=0`
@@ -37,6 +38,22 @@ const nextConfig: NextConfig = {
     process.env.NODE_ENV === "production"
       ? ["ts", "tsx"]
       : ["dev.ts", "dev.tsx", "ts", "tsx"],
+  /**
+   * The front chart lives at "/", and /maps/<front> is not generated
+   * (dynamicParams=false 404s it before any page code could redirect).
+   * The sheet has already been promoted once (pacific → new-england) on a
+   * live site, so the old address must keep leading to the chart. Derived
+   * from FRONT_CHART_ID: promote a sheet and its region URL follows.
+   */
+  async redirects() {
+    return [
+      {
+        source: `/maps/${FRONT_CHART_ID}`,
+        destination: "/",
+        permanent: false,
+      },
+    ];
+  },
   async headers() {
     return ["maps", "plates", "bestiary", "paper"].map((dir) => ({
       source: `/${dir}/:path*`,
