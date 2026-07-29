@@ -339,8 +339,13 @@ export default function WorldMapClient({
     }
   };
 
-  /** Legend click on a beast: fly to where the annotator drew it. */
+  /** Legend click on a beast: fly to where the annotator drew it. A beast
+      carries no cartouche of its own — its mark opens the creature's leaf —
+      so any card left standing belongs to the previous errand and would sit
+      over the flight explaining a place the reader has just left. */
   const focusMonster = (monster: MapMonster) => {
+    setSelected(null);
+    setSelectedLeg(null);
     const map = mapRef.current;
     if (!map) return;
     const zoom = focusZoom(map, chart);
