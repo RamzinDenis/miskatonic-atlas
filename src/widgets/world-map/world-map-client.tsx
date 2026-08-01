@@ -13,6 +13,7 @@ import { useRouter } from "next/navigation";
 import {
   Fragment,
   useCallback,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -58,7 +59,7 @@ import {
 } from "./marks";
 import { MONSTERS, type MapMonster } from "./monsters";
 import { PickerPanel } from "./picker-panel";
-import { chartIsWarm, markWidgetEvaluated } from "./sheets";
+import { chartIsWarm, markWidgetEvaluated, smallViewport } from "./sheets";
 import { LocationPreview, TrackPreview } from "./previews";
 import { RegionsNav } from "./regions-nav";
 import { legLabelPlacement, legShipPlacement, routeLegs, shipFits, type RouteLeg } from "./routes";
@@ -87,6 +88,9 @@ interface Props {
   /** The keeper's visit counter: the widget outlives its visits now, so
       per-visit errands (?focus=) re-run on this changing, not on mount. */
   focusEpoch?: number;
+  /** True while the keeper has display:none'd the host (long parked under
+      a book page). Waking re-measures the map. */
+  dormant?: boolean;
 }
 
 export default function WorldMapClient({
@@ -96,6 +100,7 @@ export default function WorldMapClient({
   picker = false,
   unplaced = [],
   focusEpoch = 1,
+  dormant = false,
 }: Props) {
   const router = useRouter();
   const mapRef = useRef<LeafletMap | null>(null);
@@ -112,13 +117,22 @@ export default function WorldMapClient({
       [0, 0],
       [chart.height, chart.width],
     ],
-    [chart],
+    /* Keyed to the dims, not the chart: every sheet shares 1448×1086, so a
+       region switch keeps the reference and FitZoomLimit, RestingView and
+       the overlays' setBounds all stand unmoved. */
+    [chart.height, chart.width],
   );
   /* Leaflet's svg pane only covers the viewport plus 10% by default, so a
-     pan past that edge visibly reprints the voyage tracks — constant on a
-     phone, where the cover zoom shows half the sheet. Two viewports of
-     padding keep the whole chart's ink drawn at once. */
-  const inkRenderer = useMemo(() => svg({ padding: 2 }), []);
+     pan past that edge visibly reprints the voyage tracks. Two viewports of
+     padding keep the whole chart's ink drawn at once on a desktop — but the
+     pane's raster grows as (1+2·padding)², and on a phone at 3× DPR that
+     25×-viewport surface was memory WebKit could not spare (the jetsam
+     behind the mid-visit reloads). Half a viewport is the phone's
+     compromise: a long pan may reprint the tracks, the tab stops dying. */
+  const inkRenderer = useMemo(
+    () => svg({ padding: smallViewport() ? 0.5 : 2 }),
+    [],
+  );
   const [selected, setSelected] = useState<MapLocation | null>(null);
   const [selectedLeg, setSelectedLeg] = useState<RouteLeg | null>(null);
   /* A visit begins with nothing chosen, as the sheet begins laid out whole
@@ -135,13 +149,26 @@ export default function WorldMapClient({
   }
   const [labelsShown, setLabelsShown] = useState(false);
   /* Nothing is marked on a sheet that isn't there yet: the pins, tracks and
-     beasts stay unprinted until the chart's first tiles are down, or the
-     small marks arrive first and hover for a moment over the dark binding.
-     A chart already in the cache starts printed, so a reader coming back
-     from a location page doesn't sit through the marks fading up again. */
+     beasts stay unprinted until the chart's paper is down. They wait by not
+     existing, which also keeps a region switch's commit to removals only —
+     the new marks mount after the new sheet's own onload, outside the
+     turn's freeze. A chart already in the cache starts printed, so a reader
+     coming back from a location page doesn't sit through the marks fading
+     up again. */
   /* A cached sheet is a reader coming back, not arriving: no greeting. */
   const [startedWarm] = useState(() => chartIsWarm(chart));
   const [paperReady, setPaperReady] = useState(startedWarm);
+  /* The widget outlives its chart too (the keeper holds it unkeyed, so a
+     region switch swaps the sheet under the live map instead of rebuilding
+     leaflet inside the turn's commit): meeting another sheet resets the
+     per-sheet state in the render that brings it, the visit reset's own
+     pattern. */
+  const [heldChartId, setHeldChartId] = useState(chart.id);
+  if (heldChartId !== chart.id) {
+    setHeldChartId(chart.id);
+    setPaperReady(chartIsWarm(chart));
+    setLabelsShown(false);
+  }
   /* Any chart may greet, but only the first met since the document loaded
      (claimGreeting — a reload opens the volume afresh and greets again), and
      only a cold one met without a deep-link errand. Claimed in an effect
@@ -149,7 +176,14 @@ export default function WorldMapClient({
      in a lazy initialiser would beat its own second pass. */
   const [arrival, setArrival] = useState(false);
   const greetingOwner = useRef({});
+  /* Decided once for the instance's whole life: startedWarm records the
+     first chart met, and the ref bars a second pass outright — the widget
+     persists across region switches now, and a later switch to a cold
+     sheet is a switch, not an arrival. */
+  const greetingDecided = useRef(false);
   useEffect(() => {
+    if (greetingDecided.current) return;
+    greetingDecided.current = true;
     if (
       !picker &&
       claimGreeting(greetingOwner.current) &&
@@ -198,6 +232,22 @@ export default function WorldMapClient({
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, []);
+
+  /* MapContainer reads its options once, at creation, and the map now
+     outlives the chart it was created for: anything per-chart must be
+     applied imperatively. All three sheets agree on every option today;
+     this keeps a future, different one honest. */
+  useEffect(() => {
+    mapRef.current?.setMaxZoom(chart.maxZoom ?? 1);
+  }, [chart]);
+
+  /* Waking from the keeper's display:none: the container had no box, and
+     leaflet's own resize listener may have measured that nothing. Re-measure
+     in a LAYOUT effect — before RestingView's and DeepLinkFocus's passive
+     effects lay the returning visit out, so they work from the true size. */
+  useLayoutEffect(() => {
+    if (!dormant) mapRef.current?.invalidateSize({ animate: false, pan: false });
+  }, [dormant]);
 
   const snippet = picked
     ? `"map": { "mapId": "${chart.id}", "x": ${picked.x}, "y": ${picked.y} }`
@@ -402,7 +452,14 @@ export default function WorldMapClient({
         attributionControl={false}
         className="h-full w-full"
       >
-        <ChartSheet chart={chart} bounds={bounds} onReady={handlePaperReady} />
+        {/* Keyed by sheet: a region switch remounts three ImageOverlays —
+            cheap DOM work, no map teardown — and resets the ladder state. */}
+        <ChartSheet
+          key={chart.id}
+          chart={chart}
+          bounds={bounds}
+          onReady={handlePaperReady}
+        />
         <ZoomControl position="topright" />
         <FitZoomLimit bounds={bounds} />
         <ZoomWatcher
@@ -426,39 +483,40 @@ export default function WorldMapClient({
             }}
           />
         )}
-        {locations.map((location) => (
-          <Marker
-            key={location.slug}
-            position={pixelToLatLng(moves[location.slug] ?? location, chart)}
-            icon={locationIcon(location, markState(location.slug), chart)}
-            alt={location.name}
-            draggable={picker}
-            eventHandlers={{
-              click: () => {
-                /* Annotation sheets: the first tap/click highlights the mark
-                   and opens its preview, the second opens the page — the
-                   hover-highlight contract of docs/pacific-map.md №3. */
-                if (
-                  !picker &&
-                  chart.markerStyle === "annotation" &&
-                  selected?.slug === location.slug
-                ) {
-                  router.push(location.href);
-                  return;
-                }
-                setSelectedLeg(null);
-                setSelected(location);
-              },
-              dragend: (e) => {
-                const at = (e.target as LeafletMarker).getLatLng();
-                setMoves((prev) => ({
-                  ...prev,
-                  [location.slug]: latLngToPixel(at.lat, at.lng, chart),
-                }));
-              },
-            }}
-          />
-        ))}
+        {(picker || paperReady) &&
+          locations.map((location) => (
+            <Marker
+              key={location.slug}
+              position={pixelToLatLng(moves[location.slug] ?? location, chart)}
+              icon={locationIcon(location, markState(location.slug), chart)}
+              alt={location.name}
+              draggable={picker}
+              eventHandlers={{
+                click: () => {
+                  /* Annotation sheets: the first tap/click highlights the
+                     mark and opens its preview, the second opens the page —
+                     the hover-highlight contract of docs/pacific-map.md №3. */
+                  if (
+                    !picker &&
+                    chart.markerStyle === "annotation" &&
+                    selected?.slug === location.slug
+                  ) {
+                    router.push(location.href);
+                    return;
+                  }
+                  setSelectedLeg(null);
+                  setSelected(location);
+                },
+                dragend: (e) => {
+                  const at = (e.target as LeafletMarker).getLatLng();
+                  setMoves((prev) => ({
+                    ...prev,
+                    [location.slug]: latLngToPixel(at.lat, at.lng, chart),
+                  }));
+                },
+              }}
+            />
+          ))}
         {/* Mounted with the paper, not faded in with it: the tracks are svg,
             and leaflet needs sole ownership of that element's transitions
             (see globals.css) — so they wait by not existing yet. */}
@@ -503,6 +561,7 @@ export default function WorldMapClient({
             );
           })}
         {!picker &&
+          paperReady &&
           chartMonsters.map((monster) => (
             <Marker
               key={monster.slug}

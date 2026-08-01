@@ -39,6 +39,9 @@ export function WorldMap(props: {
   unplaced?: UnplacedLocation[];
   /** The keeper's visit counter — per-visit errands key off it. */
   focusEpoch?: number;
+  /** The keeper's long-parked flag: display:none'd host, re-measure on
+      waking (the widget itself never unmounts). */
+  dormant?: boolean;
 }) {
   /* The first coming waits out the page turn: not rendering the widget is
      what holds back its chunk, and the evaluation of leaflet is a

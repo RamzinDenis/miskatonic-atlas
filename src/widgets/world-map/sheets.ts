@@ -14,6 +14,19 @@ import type { AtlasMap, MapSheet } from "./geometry";
 export const MAX_DENSITY = 2;
 
 /**
+ * A viewport small in EITHER dimension is a phone (a rotated one is still a
+ * phone — width alone would mistake landscape for a desktop). The phone is
+ * where WebKit jettisons the tab under memory pressure, so the map sheds
+ * its compositing luxuries there: the deep svg pane, the wear sheet, the
+ * scan filters, the 55px shadow (globals.css keys off the same widths).
+ * Touches `window` — call from an effect, an initialiser, or render of an
+ * ssr:false component.
+ */
+export function smallViewport(): boolean {
+  return window.matchMedia("(max-width: 639px), (max-height: 639px)").matches;
+}
+
+/**
  * An overview never pulls the full scan, even where the density would
  * justify it: the reader has asked to see the whole chart, which is the one
  * view where detail is invisible by definition. It arrives on the first

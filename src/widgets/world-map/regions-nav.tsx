@@ -55,8 +55,11 @@ export function RegionsNav({
                     /* The widget's chunk is here already — this nav is
                        drawn by it. What the next sheet still needs is its
                        paper, and pointing at a tile buys the time to
-                       fetch it. */
+                       fetch it. A phone has no pointing: the touch itself
+                       is the earliest signal there is, a beat before its
+                       click commits the navigation. */
                     onMouseEnter={() => warmChart(m)}
+                    onTouchStart={() => warmChart(m)}
                     onFocus={() => warmChart(m)}
                     className="group flex flex-col items-center gap-1"
                   >

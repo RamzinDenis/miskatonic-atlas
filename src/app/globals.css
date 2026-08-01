@@ -227,6 +227,15 @@ body {
     0 18px 55px rgba(0, 0, 0, 0.55);
 }
 
+/* The phone forgoes the pool of soft shadow: a 55px blur is a full-sheet
+   offscreen surface re-rastered on every zoom, and WebKit pays for it in
+   jettisoned tabs. The 1px rim stays — the sheet keeps its edge. */
+@media (max-width: 639px), (max-height: 639px) {
+  .world-map .leaflet-overlay-pane img.atlas-scan:first-child {
+    box-shadow: 0 0 0 1px rgba(8, 6, 2, 0.9);
+  }
+}
+
 /* Keep leaflet's top-anchored controls clear of the floating masthead. */
 .world-map .leaflet-top {
   top: 3.25rem;
@@ -264,6 +273,17 @@ body {
    light touch to sit them in the dark binding, not the full scan tint. */
 .world-map .atlas-scan--art {
   filter: sepia(0.15) saturate(0.88) brightness(0.95) contrast(1.03);
+}
+
+/* On a phone even the light touch is a luxury: a filter forces a full-sheet
+   offscreen buffer per overlay, and there are two of them stacked. The art
+   sheets are aged at birth — dropping a near-neutral tint is invisible next
+   to a tab that dies. (The full "scan" tint stays everywhere: it carries
+   the look, and no current sheet wears it.) */
+@media (max-width: 639px), (max-height: 639px) {
+  .world-map .atlas-scan--art {
+    filter: none;
+  }
 }
 
 /* The wear sheet (scripts/generate-map-wear.mjs), multiplied over the

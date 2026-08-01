@@ -59,6 +59,12 @@ const TURN_CAP_MS = 1600;
    navigation that follows right after. */
 const CHART_LEAVE_MS = 1200;
 
+/* One departure mark, one timer — module scope, since the instance that set
+   it is gone by the time it matters. The next mount clears it before the
+   mark: a stale timer from a quick leave→return must not strip
+   `chart-leaving` off the departure that follows. */
+let leaveTimer: ReturnType<typeof setTimeout> | undefined;
+
 export function ChartStage({
   chart,
   locations,
@@ -73,6 +79,7 @@ export function ChartStage({
   const entered = useRef(false);
 
   useLayoutEffect(() => {
+    clearTimeout(leaveTimer);
     document.documentElement.classList.remove("chart-leaving");
     if (widgetIsEvaluated()) {
       document.documentElement.classList.add("chart-arriving");
@@ -84,7 +91,8 @@ export function ChartStage({
     return () => {
       document.documentElement.classList.remove("chart-arriving");
       document.documentElement.classList.add("chart-leaving");
-      setTimeout(
+      clearTimeout(leaveTimer);
+      leaveTimer = setTimeout(
         () => document.documentElement.classList.remove("chart-leaving"),
         CHART_LEAVE_MS,
       );

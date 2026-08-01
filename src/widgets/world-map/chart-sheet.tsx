@@ -1,10 +1,16 @@
 "use client";
 
 import type { LatLngBoundsExpression } from "leaflet";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { ImageOverlay, useMap, useMapEvents } from "react-leaflet";
 import type { AtlasMap } from "./geometry";
-import { OVERVIEW_CEILING, fetched, pickSheet, warmSheet } from "./sheets";
+import {
+  OVERVIEW_CEILING,
+  fetched,
+  pickSheet,
+  smallViewport,
+  warmSheet,
+} from "./sheets";
 
 /**
  * The chart itself: one bitmap, swapped for a larger copy when a close-up
@@ -32,6 +38,7 @@ export function ChartSheet({
   });
   const shown = useRef(sheet);
   const fetching = useRef<string | null>(null);
+  const inFlight = useRef<HTMLImageElement | null>(null);
 
   const considerUpgrade = useCallback(
     (zoom: number) => {
@@ -40,7 +47,9 @@ export function ChartSheet({
       if (fetching.current === wanted.url) return;
       fetching.current = wanted.url;
       const copy = new Image();
+      inFlight.current = copy;
       copy.onload = () => {
+        inFlight.current = null;
         fetched.add(wanted.url);
         shown.current = wanted;
         setSheet(wanted);
@@ -48,6 +57,20 @@ export function ChartSheet({
       copy.src = wanted.url;
     },
     [chart],
+  );
+
+  /* A switch to another sheet mid-upgrade (this component is keyed by
+     chart) must not leave the closure — and the decoded copy it holds —
+     tied to a component that is gone; the fetch may finish for the HTTP
+     cache, but nobody listens. */
+  useEffect(
+    () => () => {
+      if (inFlight.current) {
+        inFlight.current.onload = null;
+        inFlight.current = null;
+      }
+    },
+    [],
   );
 
   const handleLoad = useCallback(() => {
@@ -85,13 +108,20 @@ export function ChartSheet({
           grimed rim, damp, foxing — multiplied over the paper. On the
           sheet's own bounds, so the wear rides pan and zoom with it and
           the binding around stays clean; pins live in the marker pane,
-          well above it. */}
-      <ImageOverlay
-        url="/paper/map-wear.webp"
-        bounds={bounds}
-        className="atlas-wear"
-        zIndex={2}
-      />
+          well above it. Not on a phone: `multiply` rasterizes the whole
+          overlay pane as a group, and that surface — under every page the
+          keeper hides behind — is memory WebKit reclaims by killing the
+          tab. Read once per sheet, not live: wear appearing mid-visit on
+          a desktop window squeezed narrow would be stranger than its
+          absence. */}
+      {!smallViewport() && (
+        <ImageOverlay
+          url="/paper/map-wear.webp"
+          bounds={bounds}
+          className="atlas-wear"
+          zIndex={2}
+        />
+      )}
     </>
   );
 }
