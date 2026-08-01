@@ -84,11 +84,22 @@ unknown keys at read time).
   the file name.
 - **type / role / classification** — majority of non-null `typeGuess`es; any
   disagreement or all-null → best guess + `needsReview` entry.
-- **summary** (1–2 sentences) and **description** (2–3 paragraphs, `\n\n`
-  separated; a parent that absorbed parts may run longer, one `## ` section
-  per absorbed part) — synthesized **only from the merged facts**, every claim
-  traceable to a source quote. Match the register of the existing M0 files in
+- **summary** (1–2 sentences) and **description** (`\n\n` separated; a parent
+  that absorbed parts may run longer, one `## ` section per absorbed part) —
+  synthesized **only from the merged facts**, every claim traceable to a
+  source quote. Match the register of the existing M0 files in
   `content/locations/` — encyclopedic, in-world, no editorializing.
+  - Both fields are printed one after the other on the entity page, so they
+    must not tell the same thing twice. The summary carries the identifying
+    fact — who or what this is, and why it is in the record. The description
+    starts from what the summary has **not** said: how the fact reached the
+    record, whose testimony carries it, what stands beside it, what the
+    account does not say. A description whose first paragraph could be cut
+    without losing anything is wrong.
+  - Length follows the facts, not a quota. One fact means **one paragraph** —
+    do not pad to two or three by restating the summary or by appending an
+    empty line like «The record preserves nothing further of him.» Two or
+    three paragraphs only when there are two or three distinct things to tell.
 - **sources** — the 2–3 strongest quotes covering the main claims, keep
   `paragraph`; drop duplicates covering the same claim. Quotes must already
   have passed `npm run verify-quotes`.
