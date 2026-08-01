@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ChartLink } from "@/widgets/world-map/chart-link";
+import { MastheadNav } from "./masthead-nav";
 
 /**
  * The atlas masthead — one strip, the chart's, wherever it stands. The map
@@ -45,32 +45,7 @@ export function SiteHeader({ floating = false }: { floating?: boolean }) {
         <ChartLink className="whitespace-nowrap font-display text-base tracking-wide text-accent sm:text-lg">
           Miskatonic Atlas
         </ChartLink>
-        <nav className="flex gap-3 text-xs uppercase tracking-widest sm:gap-6">
-          {/* The masthead itself opens the chart, so the phone drops the
-              duplicate item; on wide screens Map stays as the plain word
-              a first-time reader looks for. */}
-          <ChartLink className="hidden text-muted transition-colors hover:text-accent sm:inline">
-            Map
-          </ChartLink>
-          <Link
-            href="/creatures"
-            className="text-muted transition-colors hover:text-accent"
-          >
-            Bestiary
-          </Link>
-          <Link
-            href="/contents"
-            className="text-muted transition-colors hover:text-accent"
-          >
-            Index
-          </Link>
-          <Link
-            href="/about"
-            className="text-muted transition-colors hover:text-accent"
-          >
-            About
-          </Link>
-        </nav>
+        <MastheadNav />
       </div>
     </header>
   );
