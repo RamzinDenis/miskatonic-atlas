@@ -180,11 +180,13 @@ export function BestiaryShowcase({ entries }: { entries: BestiaryEntry[] }) {
           >
             {item.art ? (
               /* The mark waits for the plate: until then the mount holds its
-                 3 rem of the ribbon and the name is already there. Without
-                 JavaScript the marks never come — the ribbon is then a row
-                 of names, which is what it is for. */
+                 3 rem of the ribbon and the name is already there. The ink
+                 class comes only with the mask — without it the fill would
+                 print as a bare square of currentColor. Without JavaScript
+                 the marks never come — the ribbon is then a row of names,
+                 which is what it is for. */
               <span
-                className="bestiary-thumb-ink mask-ink"
+                className={`bestiary-thumb-ink${ribbonInked ? " mask-ink" : ""}`}
                 style={
                   ribbonInked
                     ? ({ "--ink-mask": `url('${item.art.thumb}')` } as CSSProperties)
