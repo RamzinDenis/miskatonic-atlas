@@ -9,6 +9,8 @@ const eslintConfig = defineConfig([
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
+    // stashed builds of scripts/deploy-skew-probe.mjs
+    ".next-skew-*/**",
     "out/**",
     "build/**",
     "next-env.d.ts",

@@ -3,6 +3,8 @@
 
 # next.js
 /.next/
+# deploy-skew-probe's stashed builds (scripts/deploy-skew-probe.mjs)
+/.next-skew-*/
 /out/
 
 # production

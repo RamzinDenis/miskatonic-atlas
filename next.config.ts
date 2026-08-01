@@ -55,8 +55,14 @@ const nextConfig: NextConfig = {
     ];
   },
   async headers() {
+    /* Image files only — never `:path*`: the region PAGES live in the same
+       /maps namespace, and an hour of browser cache on their HTML and RSC
+       payloads meant every post-deploy navigation met a stale build, fell
+       back to a full document load and replayed the unroll ceremony on
+       every region click (scripts/deploy-skew-probe.mjs is the repro;
+       scripts/next-config-headers.test.mts holds the line). */
     return ["maps", "plates", "bestiary", "paper"].map((dir) => ({
-      source: `/${dir}/:path*`,
+      source: `/${dir}/:path(.*\\.webp)`,
       headers: [{ key: "Cache-Control", value: ART_CACHE }],
     }));
   },
